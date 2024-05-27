@@ -1,0 +1,186 @@
+{
+  "Hiring": {
+    "Add a Candidate": {
+      "Actions": {
+        "Save and Close": [],
+        "Cancel": []
+      },
+      "Create Candidate": {
+        "Basic Info": {
+          "Last Name": {},
+          "Title": {
+            "Dr.": [],
+            "Miss": [],
+            "Mr.": [],
+            "Mrs.": [],
+            "Ms.": []
+          },
+          "First Name": {},
+          "Middle Name": {},
+          "Email": {},
+          "Source": {
+            "LinkedIn": [],
+            "Facebook": [],
+            "Email": [],
+            "Phone": [],
+            "Resume Handed in Person": [],
+            "Stepstone": [],
+            "Indeed": []
+          },
+          "Phone Number": {},
+          "Display Data to Candidate": {
+            "Yes": [],
+            "No": []
+          }
+        },
+        "Attachments": {
+          "Add File": [],
+          "Add Link": []
+        }
+      }
+    },
+    "Create Job Requisition": {
+      "Actions": {
+        "Save and Close": [],
+        "Cancel": []
+      },
+      "How": {
+        "Use": {
+          "Existing Requisition": [],
+          "Blank Requisition": []
+        },
+        "Recruiting Type": {
+          "Campus": [],
+          "Contingent": [],
+          "Executive": [],
+          "Hourly": [],
+          "Professional": []
+        },
+        "Primary Location": {},
+        "Requisition Template": {}
+      },
+      "Provide Details": {
+        "Requisition Title": {},
+        "Number of Openings": {
+          "Limited": [],
+          "Unlimited": []
+        },
+        "Hiring Manager": {},
+        "Recruiter": {}
+      }
+    },
+    "Manage Shared Interview Schedules": {
+      "Shared Schedules": {
+        "Actions": {
+          "Search bar": []
+        },
+        "ADD": {
+          "Actions": {
+            "Save and Close": [],
+            "Cancel": []
+          },
+          "Create Shared Interview Schedule": {
+            "How": {
+              "Use": {
+                "Blank Schedule": [],
+                "Template": []
+              },
+              "Schedule Type": {
+                "Hiring Team Managed": []
+              },
+              "Template": {},
+              "Schedule Title": {},
+              "Schedule Code": {},
+              "Schedule Owner": {},
+              "Interview Title": {}
+            },
+            "Location Details": {},
+            "Settings": {},
+            "Candidate Info": {},
+            "Interviewer Documents": {},
+            "Candidate Notifications": {}
+          }
+        },
+        "Show Filters": {
+          "Filters": {
+            "Expand All": [],
+            "Collapse All": []
+          },
+          "Status": {
+            "Active": [],
+            "Published": [],
+            "Unpublished": [],
+            "Inactive": []
+          },
+          "Schedule Type": {
+            "Candidate Managed": [],
+            "Hiring Team Managed": []
+          },
+          "Format": {
+            "In Person": [],
+            "Phone": [],
+            "Web Conference": []
+          },
+          "Owner": {},
+          "Sort By": {
+            "Schedule Title - A to Z": [],
+            "Schedule Title - Z to A": [],
+            "Last Modified Date - Ascending": [],
+            "Last Modified Date - Descending": []
+          }
+        }
+      }
+    },
+    "Recruiting Activity Center": {
+      "Activity Center": {
+        "Applications": {
+          "items": [],
+          "High Priority": []
+        },
+        "Requisitions": {
+          "items": [],
+          "High Priority": []
+        },
+        "offers": {
+          "items": [],
+          "High Priority": []
+        }
+      }
+    },
+    "Recruiting QR Codes": {
+      "Actions": {
+        "Search bar": []
+      },
+      "Show Filters": {
+        "Filters": {
+          "Expand All": [],
+          "Collapse All": []
+        },
+        "Created On": {},
+        "Validity period": {},
+        "Created By": {},
+        "Create": {
+          "Create QR Code": {
+            "Actions": {
+              "Save and Close": [],
+              "Cancel": []
+            },
+            "QR Short Code": [],
+            "QR Short Code Name": [],
+            "Site URL": [],
+            "Valid From": [],
+            "Valid To": []
+          }
+        },
+        "Sort By": {
+          "Updated Date - Latest to Oldest": [],
+          "Updated Date - Oldest to Latest": [],
+          "Valid from - Latest to Oldest": [],
+          "Valid from - Oldest to Latest": [],
+          "Valid to - Latest to Oldest": [],
+          "Valid to - Oldest to Latest": []
+        }
+      }
+    }
+  }
+}

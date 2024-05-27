@@ -1,0 +1,558 @@
+{
+  "Hiring": {
+    "Job Requisition": {
+      "Requisition": {
+        "Add": {
+          "Create Job Requisition": {
+            "How": {
+              "Requisition Type": {
+                "Standard": [],
+                "Pipeline": []
+              },
+              "Use": {
+                "Template": [],
+                "Position": [],
+                "Job": [],
+                "Existing Requisition": [],
+                "Blank Requisition": []
+              },
+              "Recruiting Type": {
+                "Apprentice": [],
+                "Board Member": [],
+                "Contract": [],
+                "Contractor Permanent": [],
+                "Fixed Term Contract": [],
+                "Graduate": [],
+                "Permanent": [],
+                "Relief Worker": [],
+                "Secondment": [],
+                "Volunteers": []
+              },
+              "Primary Location": [],
+              "Job Family": []
+            },
+            "Requisition Template": []
+          },
+          "Basic Info": {},
+          "Hiring Manager & Talent Partner": {},
+          "Requisition Structure": {},
+          "Details": {},
+          "Posting Description": {},
+          "Offer Info": {},
+          "Attachments": {},
+          "Configuration": {},
+          "Questionnaires": {},
+          "Screening Services": {}
+        }
+      },
+      "Show Filters": {
+        "Saved Search": {
+          "Requisitions I Own": [],
+          "Manage Saved Searches": []
+        },
+        "Sort By": {
+          "Campaign Name - A to Z": [],
+          "Campaign Name - Z to A": [],
+          "Campaign Date - New to Old": [],
+          "Campaign Date - Old to New": [],
+          "Conversion Rate - High to Low": [],
+          "Conversion Rate - Low to High": [],
+          "Application Count - High to Low": [],
+          "Application Count - Low to High": [],
+          "Referral Count - High to Low": []
+        },
+        "Filters/Configure for Self": {
+          "Expand All": [],
+          "Collapse All": []
+        },
+        "Hiring Team Role": {
+          "Actions": {
+            "Clear": []
+          },
+          "Recruiter, Hiring Manager": [],
+          "Collaborator": [],
+          "Recruiter, Hiring Manager, Collaborator": []
+        },
+        "Recruiting Type": {
+          "Actions": {
+            "Clear": []
+          },
+          "Apprentice": [],
+          "Board Member": [],
+          "Contract": [],
+          "Contractor Permanent": [],
+          "Fixed Term Contract": [],
+          "Graduate": [],
+          "Permanent": [],
+          "Relief Worker": [],
+          "Secondment": [],
+          "Volunteers": []
+        },
+        "Inactive Requisitions": {
+          "Actions": {
+            "Clear": []
+          },
+          "Include Inactive Requisitions": []
+        },
+        "Phase": {
+          "Actions": {
+            "Clear": []
+          },
+          "Draft": [],
+          "Approval": [],
+          "Job formatting": [],
+          "Posting": [],
+          "Open": []
+        },
+        "State": {
+          "Canceled": [],
+          "Expired": [],
+          "Filled": [],
+          "Not Posted": [],
+          "Posted": [],
+          "Scheduled": [],
+          "Suspended": [],
+          "Unposted": []
+        },
+        "Hiring Manager": {
+          "Search bar": []
+        },
+        "Organization": [],
+        "Type": {
+          "Legal Employer": [],
+          "Enterprise": []
+        },
+        "Primary Location": [],
+        "Requisition Type": {
+          "Standard": [],
+          "Pipeline": []
+        },
+        "Related to Pipeline": {
+          "Search bar": []
+        }
+      },
+      "Keyword Search": {
+        "Search Bar": []
+      }
+    },
+    "Candidates Pools": {
+      "Pools": {
+        "Add": {
+          "Action": {
+            "Save And Close": [],
+            "Cancel": []
+          },
+          "Pool Name": [],
+          "Description": [],
+          "Ownership Type": {
+            "Only visible to me": [],
+            "Shared": [],
+            "Global": []
+          },
+          "Talent Community Pool": {
+            "Location": []
+          },
+          "Job Family": []
+        },
+        "Candidates Type": {
+          "All": {
+            "External": [],
+            "Employee": [],
+            "Contingent": [],
+            "Ex-Employee": [],
+            "Ex-Contingent": []
+          }
+        }
+      }
+    },
+    "Show Filters": {},
+    "Actions": {
+      "Activate": [],
+      "Inactivate": [],
+      "Create Campaign": [],
+      "Sort By": {
+        "Campaign Name - A to Z": [],
+        "Campaign Name - Z to A": [],
+        "Campaign Date - New to Old": [],
+        "Campaign Date - Old to New": [],
+        "Conversion Rate - High to Low": [],
+        "Conversion Rate - Low to High": [],
+        "Application Count - High to Low": [],
+        "Application Count - Low to High": [],
+        "Referral Count - High to Low": []
+      }
+    },
+    "Global Talent Community Pool": {
+      "Actions": {
+        "Edit Candidate Pool": [],
+        "Activate": [],
+        "Inactivate": [],
+        "Add a Candidate": []
+      },
+      "Candidates": {
+        "Search Bar": [],
+        "Show Filters": {
+          "Filters/Configure for Self": {
+            "Actions": {
+              "Expand All": [],
+              "Collapse All": []
+            }
+          },
+          "Candidate Name": {
+            "Actions": {
+              "Search Bar": []
+            }
+          },
+          "Candidate Number": {
+            "Actions": {
+              "Search Bar": []
+            }
+          },
+          "Candidate Type": {
+            "Actions": {
+              "External": [],
+              "Employee": [],
+              "Contingent": [],
+              "Ex-Employee": [],
+              "Ex-Contingent": []
+            }
+          },
+          "Phase": {
+            "Not Contacted": [],
+            "Reviewed": [],
+            "Engaged": [],
+            "Nurture": []
+          },
+          "State": {
+            "Contacted": [],
+            "Interested": [],
+            "Meets Qualifications": [],
+            "Needs Attention": [],
+            "New": [],
+            "Ready To Be Placed Now": [],
+            "Ready in 12 months": [],
+            "Ready in 6 months": [],
+            "Rejected by Employer": [],
+            "Withdrawn by Candidate": []
+          },
+          "Label": {
+            "Actions": {
+              "All": {
+                "Accounts Payable": [],
+                "Administration": [],
+                "Analyst": [],
+                "Anti Social Behaviour": [],
+                "Apprentice": [],
+                "Area Manager": [],
+                "Asset": [],
+                "Benefits": [],
+                "Business Development": [],
+                "Business Readiness": [],
+                "Buyer": [],
+                "Call Centre": [],
+                "Care Assistant": [],
+                "Care Manager": [],
+                "Care Officer": [],
+                "Caretaker": [],
+                "Clean Team Operative": []
+              }
+            }
+          },
+          "Interaction Type": {
+            "Called": [],
+            "LinkedIn InMail": [],
+            "LinkedIn Notes": [],
+            "Message Not Sent": [],
+            "Met In Person": [],
+            "Request For More Info": [],
+            "Sent E-Mail": [],
+            "Sent SMS": [],
+            "Sent Text Message": [],
+            "Virtual Event": []
+          },
+          "Interaction Date": {
+            "Last 7 days": [],
+            "Last 30 days": [],
+            "Last 3 months": [],
+            "Last 6 months": [],
+            "Range (specify)": []
+          },
+          "Talent Community Location": {
+            "Primary Location": []
+          },
+          "Talent Community Job Family": {
+            "Job Family": []
+          },
+          "Talent Community Site": {
+            "Actions": {
+              "All": {
+                "Riverside(CX_1)": []
+              }
+            }
+          },
+          "Organization": [],
+          "Job": {},
+          "Follow-Up Tasks": {
+            "Overdue": [],
+            "Today": [],
+            "Future": [],
+            "Range (Specify)": []
+          }
+        }
+      }
+    }
+  },
+  "Job Offers": {
+    "Offers": {
+      "Search Bar Keywords": {},
+      "Show Filters": {
+        "Filters/Configure for Self": {
+          "Actions": {
+            "Reset": [],
+            "Expand All": [],
+            "Collapse All": []
+          }
+        },
+        "Job Offer Team Role": {
+          "Actions": {
+            "Collaborator": [],
+            "Recruiter, Hiring Manager": [],
+            "Recruiter, Hiring Manager, Collaborator": []
+          }
+        },
+        "Candidate Type": {
+          "Actions": {
+            "External": [],
+            "Employee": [],
+            "Contingent": [],
+            "Ex-Employee": [],
+            "Ex-Contingent": []
+          }
+        },
+        "State": {
+          "All": {
+            "Draft": [],
+            "Pending Approval": [],
+            "Approved": [],
+            "Extended": [],
+            "Accepted": [],
+            "Approval Rejected": [],
+            "Rejected by Employer": [],
+            "Withdrawn by Candidate": []
+          }
+        },
+        "Hire Date": {
+          "Actions": {
+            "Next 30 days": [],
+            "Next 7 days": [],
+            "Last 7 days": [],
+            "Last 30 days": [],
+            "No Date Yet": [],
+            "Range (specify)": []
+          }
+        },
+        "Business Unit": {
+          "Business Unit Name": {
+            "Irvine": [],
+            "Prospect": [],
+            "The Riverside Group Ltd": []
+          }
+        },
+        "Department": {},
+        "Work Location": {},
+        "Requisition": {},
+        "Batch Offer Process": {},
+        "Sort By": {
+          "Campaign Name - A to Z": [],
+          "Campaign Name - Z to A": [],
+          "Campaign Date - New to Old": [],
+          "Campaign Date - Old to New": [],
+          "Conversion Rate - High to Low": [],
+          "Conversion Rate - Low to High": [],
+          "Application Count - High to Low": [],
+          "Application Count - Low to High": [],
+          "Referral Count - High to Low": []
+        }
+      }
+    }
+  },
+  "Events": {
+    "ADD": {
+      "Create Event": {
+        "Actions": {
+          "Save and Close": [],
+          "Submit": [],
+          "Cancel": []
+        },
+        "Event Information": {
+          "Use": {
+            "Blank": [],
+            "Existing Event": []
+          },
+          "Event Category": {
+            "Commercial Hiring": [],
+            "Diversity Hiring": [],
+            "University Hiring": []
+          },
+          "Event Name": {},
+          "Event Visibility": {
+            "Private": [],
+            "Public": []
+          },
+          "Languages": {}
+        },
+        "Event Dates": {},
+        "Location Details": {},
+        "Event Team": {},
+        "Attachments": {}
+      }
+    },
+    "Search bar": {},
+    "Hide Filters": {
+      "Filters/Configure for Self": {
+        "Expand All": [],
+        "Collapse All": []
+      },
+      "Phase": {
+        "Canceled": [],
+        "Completed": [],
+        "Draft": [],
+        "Event Set-Up": [],
+        "Open for Registration": [],
+        "Posted": [],
+        "Scheduled": [],
+        "Unposted": []
+      },
+      "Event Date": {
+        "Next 30 Days": [],
+        "Next 7 Days": [],
+        "Last 7 Days": [],
+        "Last 30 Days": [],
+        "Range (specify)": []
+      },
+      "Event Category": {},
+      "Event Format": {
+        "In Person": [],
+        "Virtual": []
+      }
+    }
+  },
+  "Recruit to Hire": {
+    "Overview": {
+      "Year": {},
+      "Quarter": {},
+      "Month": {},
+      "Business Unit": {},
+      "Legal Employer": {},
+      "Location": {},
+      "Department": {},
+      "Grade": {},
+      "Job Family": {},
+      "Job": {},
+      "Recruiting Type": {},
+      "Requisition Hiring Manager": {},
+      "Requisition Recruiter": {},
+      "Actions": {
+        "Apply": [],
+        "Reset": []
+      }
+    },
+    "Campaign & Source Tracking": {
+      "Year": {},
+      "Quarter": {},
+      "Month": {},
+      "Business Unit": {},
+      "Legal Employer": {},
+      "Location": {},
+      "Department": {},
+      "Grade": {},
+      "Job Family": {},
+      "Job": {},
+      "Campaign": {},
+      "Campaign Status": {},
+      "Campaign Purpose": {},
+      "Actions": {
+        "Apply": [],
+        "Reset": []
+      }
+    },
+    "Requisitions": {
+      "Year": {},
+      "Quarter": {},
+      "Month": {},
+      "Business Unit": {},
+      "Legal Employer": {},
+      "Location": {},
+      "Department": {},
+      "Grade": {},
+      "Job Family": {},
+      "Job": {},
+      "Recruiting Type": {},
+      "Requisition Hiring Manager": {},
+      "Requisition Recruiter": {},
+      "Actions": {
+        "Apply": [],
+        "Reset": []
+      }
+    },
+    "Applications": {
+      "Year": {},
+      "Quarter": {},
+      "Month": {},
+      "Business Unit": {},
+      "Legal Employer": {},
+      "Location": {},
+      "Department": {},
+      "Grade": {},
+      "Job Family": {},
+      "Job": {},
+      "Recruiting Type": {},
+      "Requisition Hiring Manager": {},
+      "Requisition Recruiter": {},
+      "Actions": {
+        "Apply": [],
+        "Reset": []
+      }
+    },
+    "Selection & Offer": {
+      "Year": {},
+      "Quarter": {},
+      "Month": {},
+      "Business Unit": {},
+      "Legal Employer": {},
+      "Location": {},
+      "Department": {},
+      "Grade": {},
+      "Job Family": {},
+      "Job": {},
+      "Recruiting Type": {},
+      "Requisition Hiring Manager": {},
+      "Requisition Recruiter": {},
+      "Offer Hiring Manager": {},
+      "Offer Recruiter": {},
+      "Actions": {
+        "Apply": [],
+        "Reset": []
+      }
+    },
+    "Hires": {
+      "Year": {},
+      "Quarter": {},
+      "Month": {},
+      "Business Unit": {},
+      "Legal Employer": {},
+      "Location": {},
+      "Department": {},
+      "Grade": {},
+      "Job Family": {},
+      "Job": {},
+      "Recruiting Type": {},
+      "Requisition Hiring Manager": {},
+      "Requisition Recruiter": {},
+      "Actions": {
+        "Apply": [],
+        "Reset": []
+      }
+    }
+  }
+}
