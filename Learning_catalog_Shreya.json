@@ -1,0 +1,989 @@
+{
+  "Specializations": {
+    "Search by Specialization Attributes": {
+      "Search": {
+        "Basic": {
+          "Specialization Title": {
+            "Contains": [],
+            "Equals": []
+          },
+          "Publish Start Date": {
+            "On or before": [],
+            "On or after": [],
+            "Between": []
+          },
+          "Actions": {
+            "Search": [],
+            "Reset": [],
+            "Save": {
+              "Create Saved Search": {
+                "Name": [],
+                "Set as Default": [],
+                "Run Automatically": [],
+                "Actions": {
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            }
+          }
+        },
+        "Advanced": {
+          "Learning Outcome Keyword": {
+            "Contains": []
+          },
+          "Learning Prerequisite Keyword": {
+            "Contains": []
+          },
+          "Specialization Title": {
+            "Contains": [],
+            "Equals": []
+          },
+          "Publish Start Date": {
+            "On or before": [],
+            "On or after": [],
+            "Between": []
+          },
+          "Featured": {
+            "Equals": []
+          },
+          "Featured On": {
+            "On or before": [],
+            "On or after": [],
+            "Between": []
+          },
+          "Context Segment": [
+            "Starts with",
+            "Ends with",
+            "Equals",
+            "Does not equal",
+            "Less than",
+            "Less than or equal to",
+            "Greater than",
+            "Greater than or equal to",
+            "Between",
+            "Not between",
+            "Contains",
+            "Does not contain",
+            "Is blank",
+            "Is not blank"
+          ],
+          "Actions": {
+            "Search": [],
+            "Reset": [],
+            "Save": {
+              "Create Saved Search": {
+                "Name": [],
+                "Set as Default": [],
+                "Run Automatically": [],
+                "Actions": {
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            },
+            "Add Fields": [
+              "Activity Title",
+              "Context Segment",
+              "Description",
+              "Featured",
+              "Featured On",
+              "Learning Outcome Keyword",
+              "Learning Prerequisite Keyword",
+              "Publish End Date",
+              "Publish Start Date",
+              "Result Keyword",
+              "Section Description",
+              "Section Title",
+              "Short Description",
+              ""
+            ],
+            "Reorder": {
+              "Reorder Search Fields": {
+                "Search Fields": [
+                  "Learning Outcome Keyword",
+                  "Learning Prerequisite Keyword",
+                  "Specialization Title",
+                  "Publish Start Date",
+                  "Featured",
+                  "Featured On",
+                  "Section Title",
+                  "Context Segment"
+                ],
+                "Actions": {
+                  "Close": [],
+                  "Move selected item to the top of the list": [],
+                  "Move selected item up one the list": [],
+                  "Move selected item down one the list": [],
+                  "Move selected item to the bottom of the list": [],
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            }
+          }
+        },
+        "Saved Search": []
+      }
+    },
+    "Search by Learning Profiles": {
+      "Search": {
+        "Learning Prerequisites": {
+          "Competencies": {
+            "View": {
+              "About This Record": [],
+              "Columns": [
+                "Show All",
+                "Critical",
+                "Maximum Proficiency Rating Level",
+                "Minimum Proficiency",
+                "Competency",
+                "Manage Columns"
+              ],
+              "Reorder Columns": {
+                "Visible Columns": [
+                  "Critical",
+                  "Maximum Proficiency Rating Level",
+                  "Minimum Proficiency",
+                  "Competency"
+                ],
+                "Actions": {
+                  "Close": [],
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            },
+            "Add": {
+              "Competency": [],
+              "Minimum Proficiency": [],
+              "Maximum Proficiency Rating Level": [],
+              "Critical": []
+            },
+            "Remove": []
+          },
+          "Licenses and Certifications": {
+            "View": {
+              "About This Record": [],
+              "Columns": [
+                "Show All",
+                "State",
+                "Country",
+                "Name",
+
+                "Manage Columns"
+              ],
+              "Reorder Columns": {
+                "Visible Columns": ["State", "Country", "Name"],
+                "Actions": {
+                  "Close": [],
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            },
+            "Add": {
+              "Name": [],
+              "Country": [],
+              "State": []
+            },
+            "Remove": []
+          }
+        },
+        "Learning Outcomes": {
+          "Licenses and Certifications": {
+            "View": {
+              "About This Record": [],
+              "Columns": [
+                "Show All",
+                "Verified",
+                "Renewal in Progress",
+                "State",
+                "Country",
+                "Name",
+
+                "Manage Columns"
+              ],
+              "Reorder Columns": {
+                "Visible Columns": [
+                  "Verified",
+                  "Renewal in Progress",
+                  "State",
+                  "Country",
+                  "Name"
+                ],
+                "Actions": {
+                  "Close": [],
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            },
+            "Add": {
+              "Name": [],
+              "Country": [],
+              "State": [],
+              "Renewal in Progress": [],
+              "Verified": []
+            },
+            "Remove": []
+          },
+          "Competencies": {
+            "View": {
+              "About This Record": [],
+              "Columns": [
+                "Show All",
+                "Personal Interest Level",
+                "Proficiency",
+                "Competency",
+
+                "Manage Columns"
+              ],
+              "Reorder Columns": {
+                "Visible Columns": [
+                  "Personal Interest Level",
+                  "Proficiency",
+                  "Competency"
+                ],
+                "Actions": {
+                  "Close": [],
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            },
+            "Add": {
+              "Competency": [],
+              "Proficiency": [],
+              "Personal Interest Level": []
+            },
+            "Remove": []
+          }
+        },
+        "Actions": {
+          "Search": [],
+          "Add Outcomes": ["Competencies", "Licenses abd Certifications"],
+          "Add Prerequisites": ["Competencies", "Licenses abd Certifications"],
+          "Reset": []
+        }
+      }
+    },
+    "Search Results": {
+      "View": {
+        "About This Record": [],
+        "Columns": {
+          "Show All": [],
+          "Learning Specialization Additional Attributes": ["Context Segment"],
+          "Learning Item Additional Attributes": ["Title"],
+          "Specialization Number": [],
+          "Last Update Date": [],
+          "Publish End Date": [],
+          "Publish Start Date": [],
+          "Completed Learners": [],
+          "Active Learners": [],
+          "Sections and Activities": [],
+          "Specialization Title": [],
+          "Manage Columns": []
+        },
+        "Sort": {
+          "Ascending": [],
+          "Descending": [],
+          "Advanced": {
+            "Advanced Sort": {
+              "Sort By": {
+                "Input": [],
+                "Ascending": [],
+                "Descending": []
+              },
+              "Then By": {
+                "Input": [],
+                "Ascending": [],
+                "Descending": []
+              },
+              "Actions": {
+                "OK": [],
+                "Cancel": []
+              }
+            }
+          }
+        },
+        "Reorder Columns": {
+          "Reorder Columns": {
+            "Visible Columns": [
+              "Learning Specialization Additional Attributes",
+              "Learning Item Additional Attributes",
+              "Specialization Number",
+              "Last Update Date",
+              "Publish End Date",
+              "Publish Start Date",
+
+              "Sections and Activities",
+              "Specialization Title"
+            ],
+            "Actions": {
+              "OK": [],
+              "Cancel": []
+            }
+          }
+        }
+      },
+      "Format": {
+        "Resize Columns": []
+      },
+      "Export to Excel": [],
+      "Create": {
+        "Create Specialization": {
+          "General Information": {
+            "Basic Information": {
+              "Title": [],
+              "Desription": [],
+              "Short Description": [],
+              "Publish Start Date": [],
+              "Publish End Date": [],
+              "Specialization Number": [],
+              "Branding Image": [],
+              "Trailer": [],
+              "Mimimum Expected Effort": [],
+              "Maximum Expected Effort": []
+            },
+            "Comments": {
+              "Override conversation system setup configuration": []
+            },
+            "Related Materials": {
+              "Administrators": {
+                "Attachments": {
+                  "Actions": {
+                    "Add": [],
+                    "Delete": []
+                  },
+                  "View": {
+                    "Columns": [
+                      "Show All",
+                      "Attached Date",
+                      "Attached By",
+                      "Description",
+                      "Title",
+                      "File Name or URL",
+                      "Category",
+                      "Type",
+                      "Manage Columns"
+                    ],
+                    "Reorder Columns": ["File", "URL"],
+                    "File Name or URL": [],
+                    "Title": [],
+                    "Description": [],
+                    "Attached By": [],
+                    "Attached Date": [],
+                    "Actions": {
+                      "OK": [],
+                      "Cancel": []
+                    }
+                  },
+                  "Add": [],
+                  "Delete": [],
+                  "Type": []
+                }
+              },
+              "Administrators and Self-Service": {
+                "Attachments": {
+                  "Actions": {
+                    "Add": [],
+                    "Delete": []
+                  },
+                  "View": {
+                    "Columns": [
+                      "Show All",
+                      "Attached Date",
+                      "Attached By",
+                      "Description",
+                      "Title",
+                      "File Name or URL",
+                      "Category",
+                      "Type",
+                      "Manage Columns"
+                    ],
+                    "Reorder Columns": ["File", "URL"],
+                    "File Name or URL": [],
+                    "Title": [],
+                    "Description": [],
+                    "Attached By": [],
+                    "Attached Date": [],
+                    "Actions": {
+                      "OK": [],
+                      "Cancel": []
+                    }
+                  },
+                  "Add": [],
+                  "Delete": [],
+                  "Type": []
+                }
+              },
+              "Administrators and Enrollees": {
+                "Attachments": {
+                  "Actions": {
+                    "Add": [],
+                    "Delete": []
+                  },
+                  "View": {
+                    "Columns": [
+                      "Show All",
+                      "Attached Date",
+                      "Attached By",
+                      "Description",
+                      "Title",
+                      "File Name or URL",
+                      "Category",
+                      "Type",
+                      "Manage Columns"
+                    ],
+                    "Reorder Columns": ["File", "URL"],
+                    "File Name or URL": [],
+                    "Title": [],
+                    "Description": [],
+                    "Attached By": [],
+                    "Attached Date": [],
+                    "Actions": {
+                      "OK": [],
+                      "Cancel": []
+                    }
+                  },
+                  "Add": [],
+                  "Delete": [],
+                  "Type": []
+                }
+              }
+            },
+            "Learning Specialization Additional Attributes": {
+              "Context Segment": []
+            },
+            "Learning Item Additional Attributes": {
+              "Topic": []
+            }
+          },
+          "Communities": {
+            "Community Usages": {
+              "View": {
+                "About This Record": [],
+                "Columns": [
+                  "Show All",
+                  "Community Relation Number",
+                  "Community Number",
+                  "Description",
+                  "Title",
+                  "Manage Columns"
+                ],
+                "Reorder": {
+                  "Visible Columns": [
+                    "Title",
+                    "Community Number",
+                    "Community Relation Number"
+                  ],
+                  "Actions": {
+                    "Close": [],
+                    "Move selected item to the top of the list": [],
+                    "Move selected item up one the list": [],
+                    "Move selected item down one the list": [],
+                    "Move selected item to the bottom of the list": [],
+                    "OK": [],
+                    "Cancel": []
+                  }
+                }
+              },
+              "Add": {
+                "Select and Search Community": {
+                  "Search": {
+                    "Basic": {
+                      "Match": ["All", "Any"],
+                      "Community Title": {
+                        "Equals": [],
+                        "Contains": []
+                      },
+                      "Visibility": ["All", "Closed", "Open", "Secret"],
+                      "Community Type": [
+                        "Category Community",
+                        "Official Community",
+                        "Self-Service Community",
+                        "Topic Community"
+                      ],
+                      "Status": [],
+                      "Actions": {
+                        "Search": [],
+                        "Reset": [],
+                        "Save": {
+                          "Create Saved Search": {
+                            "Name": [],
+                            "Set as Default": [],
+                            "Run Automatically": [],
+                            "Actions": {
+                              "OK": [],
+                              "Cancel": []
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Advanced": {
+                      "Match": ["All", "Any"],
+                      "Community Title": {
+                        "Equals": [],
+                        "Contains": []
+                      },
+                      "Visibility": ["All", "Closed", "Open", "Secret"],
+                      "Community Type": [
+                        "Category Community",
+                        "Official Community",
+                        "Self-Service Community",
+                        "Topic Community"
+                      ],
+                      "Status": [],
+                      "Actions": {
+                        "Search": [],
+                        "Reset": [],
+                        "Save": {
+                          "Create Saved Search": {
+                            "Name": [],
+                            "Set as Default": [],
+                            "Run Automatically": [],
+                            "Actions": {
+                              "OK": [],
+                              "Cancel": []
+                            }
+                          }
+                        },
+                        "Add Fields": [],
+                        "Reorder": {
+                          "Reorder Search Fields": {
+                            "Actions": {
+                              "Close": [],
+                              "Move selected item to the top of the list": [],
+                              "Move selected item up one the list": [],
+                              "Move selected item down one the list": [],
+                              "Move selected item to the bottom of the list": [],
+                              "OK": [],
+                              "Cancel": []
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Saved Search": [],
+                  "Search Results": {}
+                }
+              }
+            }
+          }
+        }
+      },
+      "Edit": [],
+      "Copy": [],
+      "Learners": []
+    }
+  },
+  "eLearning Items": {
+    "eLearning Items": {
+      "Search": {
+        "Basic": {
+          "Match": ["All", "Any"],
+          "Status": {
+            "Equals": []
+          },
+          "eLearning Type": {
+            "Equals": []
+          },
+          "Title": {
+            "Contains": [],
+            "Equal": []
+          },
+          "Actions": {
+            "Search": [],
+            "Reset": [],
+            "Save": []
+          }
+        },
+        "Advanced": {
+          "Match": ["All", "Any"],
+          "Status": {
+            "Equals": []
+          },
+          "eLearning Type": {
+            "Equals": []
+          },
+          "Title": {
+            "Contains": [],
+            "Equal": []
+          },
+
+          "Actions": {
+            "Search": [],
+            "Reset": [],
+            "Save": [],
+            "Add Fields": [
+              "Attribution Type",
+              "Created By",
+              "Creation Date",
+              "Deleted By",
+              "Deleted Date",
+              "Description",
+              "Effective Start Date",
+              "End Date",
+              "Keyword",
+              "Language",
+              "Last Update Date",
+              "Last Update By",
+              "Learning Item ID",
+              "Learning Item Number",
+              "Location",
+              "Start Date",
+              "Thumbnail ID",
+              "Title",
+              "Visibility"
+            ],
+            "Reorder": {
+              "Reorder Search Fields": {
+                "Actions": {
+                  "Close": [],
+                  "Move selected item to the top of the list": [],
+                  "Move selected item up one the list": [],
+                  "Move selected item down one the list": [],
+                  "Move selected item to the bottom of the list": [],
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            }
+          }
+        },
+        "Saved Search": []
+      },
+      "Search Results": {
+        "View": {
+          "About This Record": [],
+          "Columns": [
+            "Show All",
+            "Deleted By",
+            "Visibility",
+            "Language",
+            "Deleted Date",
+            "Learning Item ID",
+            "Desription",
+            "Learning Item Number",
+            "Attribution Type",
+            "Last Update Date",
+            "Creation Date",
+            "Created By",
+            "Status",
+            "eLearning Type",
+            "Title",
+            "Manage Columns"
+          ],
+          "Sort": {
+            "Ascending": [],
+            "Descending": [],
+            "Advanced": {
+              "Advanced Sort": {
+                "Sort By": {
+                  "Input": [],
+                  "Ascending": [],
+                  "Descending": []
+                },
+                "Then By": {
+                  "Input": [],
+                  "Ascending": [],
+                  "Descending": []
+                },
+                "Actions": {
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            }
+          },
+          "Reorder Columns": {
+            "Reorder Columns": {
+              "Visible Columns": [
+                "eLearning Type",
+                "Status",
+                "Created By",
+                "Creation Date",
+                "Last Update Date",
+                "Attribution Type",
+                "Learning Item Number"
+              ],
+              "Actions": {
+                "OK": [],
+                "Cancel": []
+              }
+            }
+          },
+          "Format": ["Resize Columns"],
+
+          "Export to Excel": [],
+
+          "Actions": {
+            "Delete": [],
+            "Preview": []
+          }
+        }
+      }
+    }
+  },
+  "Communities": {
+    "Communities": {
+      "Search": {
+        "Basic": {
+          "Match": ["All", "Any"],
+          "Community Title": ["Contains", "Equals"],
+          "Visibility": ["All", "Closed", "Open", "Secret"],
+          "Community Type": [
+            "Category Community",
+            "Official Community",
+            "Self-Service Community",
+            "Topic Community"
+          ],
+          "Status": [
+            "Draft",
+            "Published",
+            "Active",
+            "Create Pending Approval",
+            "Update Pending Approval",
+            "Delete Pending Approval",
+            "Rejected",
+            "Deleted",
+            "Canceled",
+            "Error",
+            "New",
+            "Ready for Processing",
+            "Currently Being Processed",
+            "Processing Complete",
+            "Processing Fail",
+            "Processing Canceled",
+            "Pending Active",
+            "Inactive"
+          ],
+          "Actions": {
+            "Search": [],
+            "Reset": [],
+            "Save": []
+          }
+        },
+        "Advanced": {
+          "Match": ["All", "Any"],
+          "Community Title": ["Contains", "Equals"],
+          "Visibility": ["All", "Closed", "Open", "Secret"],
+          "Community Type": [
+            "Category Community",
+            "Official Community",
+            "Self-Service Community",
+            "Topic Community"
+          ],
+          "Status": [
+            "Draft",
+            "Published",
+            "Active",
+            "Create Pending Approval",
+            "Update Pending Approval",
+            "Delete Pending Approval",
+            "Rejected",
+            "Deleted",
+            "Canceled",
+            "Error",
+            "New",
+            "Ready for Processing",
+            "Currently Being Processed",
+            "Processing Complete",
+            "Processing Fail",
+            "Processing Canceled",
+            "Pending Active",
+            "Inactive"
+          ],
+          "Actions": {
+            "Search": [],
+            "Reset": [],
+            "Save": [],
+            "Add Fields": [
+              "Catalog Item Count",
+              "Community Keyword",
+              "Community Number",
+              "Community Type",
+              "Created By",
+              "Creation Date",
+              "Deleted By",
+              "Deleted Date",
+              "Description",
+              "Featured",
+              "Featured On",
+              "Last Update Date",
+              "Short Description",
+              "Status",
+              "Visibility"
+            ],
+            "Reorder": {
+              "Reorder Search Fields": {
+                "Actions": {
+                  "OK": [],
+                  "Cancel": []
+                }
+              }
+            }
+          }
+        },
+        "Saved Search": []
+      },
+      "Search Results": {
+        "View": {
+          "About This Record": [],
+          "Columns": [
+            "Show All",
+            "Deleted Date",
+            "Deleted By",
+            "Creation Date",
+            "Created By",
+            "Last Update Date",
+            "Status",
+            "Visibility",
+            "Short Description",
+            "Catalog Item Count",
+            "Assignment Creation Date",
+            "Upcoming Assignment Count",
+            "Completed Assignment Count",
+            "Active Assignment Count",
+            "Overdue Assignment Count",
+            "Total Assignment Count",
+            "Volutary Member Count",
+            "Required Member Count",
+            "Manager Count",
+            "Total Member Count",
+            "Featured On"
+          ],
+          "Detach": {
+            "Detached Table": {
+              "View": {
+                "About This Record": [],
+                "Columns": [
+                  "Show All",
+                  "Deleted Date",
+                  "Deleted By",
+                  "Creation Date",
+                  "Created By",
+                  "Last Update Date",
+                  "Status",
+                  "Visibility",
+                  "Short Description",
+                  "Catalog Item Count",
+                  "Assignment Creation Date",
+                  "Upcoming Assignment Count",
+                  "Completed Assignment Count",
+                  "Active Assignment Count",
+                  "Overdue Assignment Count",
+                  "Total Assignment Count",
+                  "Volutary Member Count",
+                  "Required Member Count",
+                  "Manager Count",
+                  "Total Member Count",
+                  "Featured On",
+                  "Community Number",
+                  "Community Type",
+                  "Commuity Title",
+                  "Manage Columns"
+                ],
+                "Detach": [],
+                "Reorder Columns": []
+              },
+              "Export to Excel": [],
+              "Create": [
+                "Category Community",
+                "Topic Community",
+                "Official Community"
+              ],
+              "Edit": [],
+              "Actions": {
+                "Members": [],
+                "Stop Featuring": [],
+                "Delete": [],
+                "Detach": []
+              }
+            }
+          },
+          "Reorder Columns": {
+            "Reorder Columns": {
+              "Visible Columns": [
+                "Community Title",
+                "Community Type",
+                "Community Number",
+                "Catalog Item Count",
+                "Visibility",
+                "Status"
+              ],
+              "Actions": {
+                "OK": [],
+                "Cancel": []
+              }
+            }
+          }
+        },
+        "Export to Excel": [],
+        "Create": [
+          "Category Community",
+          "Topic Community",
+          "Official Community"
+        ],
+        "Edit": [],
+        "Actions": {
+          "Members": [],
+          "Stop Featuring": [],
+          "Delete": [],
+          "Detach": {
+            "Detached Table": {
+              "View": {
+                "About This Record": [],
+                "Columns": [
+                  "Show All",
+                  "Deleted Date",
+                  "Deleted By",
+                  "Creation Date",
+                  "Created By",
+                  "Last Update Date",
+                  "Status",
+                  "Visibility",
+                  "Short Description",
+                  "Catalog Item Count",
+                  "Assignment Creation Date",
+                  "Upcoming Assignment Count",
+                  "Completed Assignment Count",
+                  "Active Assignment Count",
+                  "Overdue Assignment Count",
+                  "Total Assignment Count",
+                  "Volutary Member Count",
+                  "Required Member Count",
+                  "Manager Count",
+                  "Total Member Count",
+                  "Featured On",
+                  "Community Number",
+                  "Community Type",
+                  "Commuity Title",
+                  "Manage Columns"
+                ],
+                "Detach": [],
+                "Reorder Columns": []
+              },
+              "Export to Excel": [],
+              "Create": [
+                "Category Community",
+                "Topic Community",
+                "Official Community"
+              ],
+              "Edit": [],
+              "Actions": {
+                "Members": [],
+                "Stop Featuring": [],
+                "Delete": [],
+                "Detach": []
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
