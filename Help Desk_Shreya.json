@@ -1,0 +1,828 @@
+{
+  "Help Desk": {
+    "Apps": {
+      "Activities": {
+        "My Calendar": {
+          "Actions": {
+            "Print": [],
+            "Create Appointment": {
+              "Create Apointment": {
+                "Subject": [],
+                "Private": [],
+                "Location": [],
+                "Type": [
+                  "Call",
+                  "Chat",
+                  "Corporate Visit",
+                  "Demo",
+                  "E-mail",
+                  "Event",
+                  "Internal",
+                  "Meeting"
+                ],
+                "Time Zone": [],
+                "All Day": [],
+                "Start Date": [],
+                "Start Time": [],
+                "End Date": [],
+                "End Time": [],
+                "Account": [],
+                "Partner": [],
+                "Opportunity": [],
+                "Lead": [],
+                "Show Time As": ["Busy", "Free", "Tentative"],
+                "Set Remainder": [
+                  "None",
+                  "When the appointment starts",
+                  "5 minutes before",
+                  "15 minutes before",
+                  "30 minutes before",
+                  "1 hour before",
+                  "2 hours before",
+                  "1 day before",
+                  "2 days before"
+                ],
+                "Description": {
+                  "Description": []
+                },
+
+                "Actions": {
+                  "Recurrence": [],
+                  "Save and Continue": [],
+                  "Save and Close": [],
+                  "Cancel": []
+                }
+              }
+            },
+            "Appointments": [],
+            "Calendar": [],
+            "Timeline": [],
+            "Day": [],
+            "Week": [],
+            "Month": [],
+            "List": [],
+            "Previous": [],
+            "Next": [],
+            "Today": []
+          },
+          "Next 7 days": []
+        },
+        "Activities": {
+          "Actions": {
+            "My Team's Tasks": [
+              "Appointments this Month",
+              "Appointments this Week",
+              "My Appointments",
+              "My Call Reports",
+              "My Calls to Log",
+              "My Open Tasks",
+              "My Overdue Tasks",
+              "My Team's Tasks",
+              "My Team's Upcoming Appointments",
+              "Tasks Due in the Next 30 Days",
+              "Upcoming Appointments",
+              "Manage Saved Searches"
+            ],
+            "Show Filters": [],
+            "Save As": [],
+            "Refresh": [],
+            "Create": {
+              "Create Appointment": {
+                "Create Apointment": {
+                  "Subject": [],
+                  "Private": [],
+                  "Location": [],
+                  "Type": [
+                    "Call",
+                    "Chat",
+                    "Corporate Visit",
+                    "Demo",
+                    "E-mail",
+                    "Event",
+                    "Internal",
+                    "Meeting"
+                  ],
+                  "Time Zone": [],
+                  "All Day": [],
+                  "Start Date": [],
+                  "Start Time": [],
+                  "End Date": [],
+                  "End Time": [],
+                  "Account": [],
+                  "Partner": [],
+                  "Opportunity": [],
+                  "Lead": [],
+                  "Show Time As": ["Busy", "Free", "Tentative"],
+                  "Set Remainder": [
+                    "None",
+                    "When the appointment starts",
+                    "5 minutes before",
+                    "15 minutes before",
+                    "30 minutes before",
+                    "1 hour before",
+                    "2 hours before",
+                    "1 day before",
+                    "2 days before"
+                  ],
+                  "Description": {
+                    "Description": []
+                  },
+
+                  "Actions": {
+                    "Recurrence": [],
+                    "Save and Continue": [],
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                }
+              },
+              "Create Call Report": {
+                "Create Call Report": {
+                  "Subject": [],
+                  "Private": [],
+                  "Outcome": [
+                    "At risk",
+                    "Call answered",
+                    "Call transferred",
+                    "Captured isuue",
+                    "Customer undecided",
+                    "Failed",
+                    "Incomplete",
+                    "Left message",
+                    "No answer",
+                    "Not available",
+                    "Provided information",
+                    "Resolved issue",
+                    "Successful",
+                    "Wrong number"
+                  ],
+                  "Start Date": [],
+                  "Start Time": [],
+                  "End Date": [],
+                  "End Time": [],
+                  "Location": [],
+                  "Type": [
+                    "Call",
+                    "Chat",
+                    "Corporate Visit",
+                    "Demo",
+                    "E-mail",
+                    "Event",
+                    "Internal",
+                    "Meeting"
+                  ],
+                  "Account": [],
+                  "Partner": [],
+                  "Opportunity": [],
+                  "Lead": [],
+                  "Attachments": {
+                    "Attachments": {
+                      "Actions": {
+                        "OK": [],
+                        "Cancel": [],
+                        "Add Attachments": {
+                          "Type": ["File", "URL"],
+                          "Actions": {
+                            "Browse": []
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Objectives": {
+                    "Objectives": [],
+                    "Demo product": [],
+                    "Determine next steps": [],
+                    "Discuss proposal": [],
+                    "Identify stakeholders": [],
+                    "Review RFP or RFI": [],
+                    "Additional Objectives": {
+                      "Actions": {
+                        "Add": {
+                          "Objective": []
+                        }
+                      }
+                    },
+                    "Actions": {
+                      "OK": [],
+                      "Cancel": []
+                    }
+                  },
+                  "Contacts": {
+                    "Add: Contacts": {
+                      "Record Set": {
+                        "Equals": [
+                          "All records I can see",
+                          "Records I own",
+                          "Records in accounts that I own",
+                          "Records in accounts where I am on the account team or territory",
+                          "Records my subordinates own",
+                          "Records where I am on the team",
+                          "Records where my subordinates are on the team"
+                        ],
+                        "Does not equals": [
+                          "All records I can see",
+                          "Records I own",
+                          "Records in accounts that I own",
+                          "Records in accounts where I am on the account team or territory",
+                          "Records my subordinates own",
+                          "Records where I am on the team",
+                          "Records where my subordinates are on the team"
+                        ],
+                        "Is blank": [],
+                        "Is not blank": []
+                      },
+                      "First Name": {
+                        "Starts with": [],
+                        "Equals": [],
+                        "Is blank": [],
+                        "Is not blank": []
+                      },
+                      "Last Name": {
+                        "Starts with": [],
+                        "Equals": [],
+                        "Is blank": [],
+                        "Is not blank": []
+                      },
+                      "Account": {
+                        "Starts with": [],
+                        "Equals": []
+                      },
+                      "Email": {
+                        "Starts with": [],
+                        "Equals": [],
+                        "Contains": []
+                      },
+                      "Phone": {
+                        "Starts with": [],
+                        "Ends with": [],
+                        "Equals": [],
+                        "Contains": []
+                      },
+                      "Job Title": {
+                        "Starts with": [],
+                        "Equals": [],
+                        "Is blank": [],
+                        "Is not blank": []
+                      },
+                      "Favorite": {
+                        "Equals": ["Yes", "No"],
+                        "Does not equal": ["Yes", "No"]
+                      },
+                      "Owner": {
+                        "Starts with": [],
+                        "Equals": [],
+                        "Contains": []
+                      }
+                    },
+                    "Search Results": {
+                      "Actions": {
+                        "Create": {
+                          "Create Contact": {
+                            "Prefix": [
+                              "Mr.",
+                              "Mrs.",
+                              "Ms.",
+                              "Miss",
+                              "Dr.",
+                              "Sir"
+                            ],
+                            "First Name": [],
+                            "Last Name": [],
+                            "Middle Name": [],
+                            "Favorite": [],
+                            "Account": [],
+                            "Job Title": [],
+                            "Mobile Phone": [],
+                            "Work Phone": [],
+                            "Do Not Contact": [],
+                            "Email": [],
+                            "Address": {
+                              "Country": [],
+                              "Address Line 1": [],
+                              "Address Line 2": [],
+                              "City": [],
+                              "State": [],
+                              "Postal Code": [],
+                              "County": [],
+                              "Actions": {
+                                "Verify": []
+                              }
+                            },
+
+                            "Actions": {
+                              "Save and Close": [],
+                              "Cancel": []
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Actions": {
+                      "Search": [],
+                      "Apply": [],
+                      "OK": [],
+                      "Cancel": []
+                    }
+                  },
+                  "Resources": {
+                    "Add: Resources": {
+                      "Search Fields": {
+                        "First Name": {
+                          "Starts with": [],
+                          "Equals": [],
+                          "Contains": []
+                        },
+                        "Last Name": {
+                          "Starts with": [],
+                          "Equals": [],
+                          "Contains": []
+                        },
+                        "Email": {
+                          "Starts with": [],
+                          "Equals": [],
+                          "Contains": []
+                        },
+                        "Role": {
+                          "Equals": []
+                        },
+                        "Organization": {
+                          "Equals": []
+                        },
+                        "Manager First Name": {
+                          "Starts with": [],
+                          "Equals": [],
+                          "Contains": []
+                        },
+                        "Manager Last Name": {
+                          "Starts with": [],
+                          "Equals": [],
+                          "Contains": []
+                        },
+                        "Registry ID": {
+                          "Starts with": [],
+                          "Equals": [],
+                          "Contains": []
+                        },
+                        "Actions": {
+                          "Search": []
+                        }
+                      },
+                      "Search Results": {
+                        "No results found": []
+                      },
+                      "Actions": {
+                        "Apply": [],
+                        "OK": [],
+                        "Cancel": []
+                      }
+                    }
+                  }
+                },
+                "Meeting Minutes": {
+                  "Meeting Minutes": []
+                }
+              },
+              "Log a Call": {
+                "Log a Call": {
+                  "Subject": [],
+                  "Due Date": [],
+                  "Type": [
+                    "Call",
+                    "Chat",
+                    "Demo",
+                    "E-mail",
+                    "Event",
+                    "Internal",
+                    "Meeting"
+                  ],
+                  "Owner": [],
+                  "Priority": ["High", "Low", "Medium"],
+                  "Account": [],
+                  "Partner": [],
+                  "Primary Contact": [],
+                  "Opportunity": [],
+                  "Lead": [],
+                  "Started": [
+                    "Not started",
+                    "Complete",
+                    "On hold",
+                    "Canceled",
+                    "In progress"
+                  ],
+
+                  "Description": {
+                    "Description": []
+                  },
+                  "Actions": {
+                    "Save and Continue": [],
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                }
+              },
+              "Create Task": {
+                "Create Task": {
+                  "Subject": [],
+                  "Due Date": [],
+                  "Type": [
+                    "Call",
+                    "Chat",
+                    "Demo",
+                    "E-mail",
+                    "Event",
+                    "Internal",
+                    "Meeting"
+                  ],
+                  "Owner": [],
+                  "Priority": ["High", "Low", "Medium"],
+                  "Account": [],
+                  "Partner": [],
+                  "Primary Contact": [],
+                  "Opportunity": [],
+                  "Lead": [],
+                  "Status": [
+                    "Not started",
+                    "Complete",
+                    "On hold",
+                    "Canceled",
+                    "In progress"
+                  ],
+                  "Description": {
+                    "Description": []
+                  },
+                  "Actions": {
+                    "Save and Continue": [],
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                }
+              }
+            },
+            "Sort": [
+              "Subject",
+              "Owner",
+              "Status",
+              "Due Date",
+              "Priority",
+              "Type",
+              "Account",
+              "Relevance"
+            ],
+            "Sort Descending": [],
+            "Edit Columns": [
+              "Edit Columns",
+              "Manage Group By",
+              "Resize Columns to Fit Screen"
+            ]
+          },
+          "Search": []
+        },
+        "Activity Overview": {
+          "Analytics": {}
+        }
+      },
+      "Cases": {
+        "All Cases Any Status": {
+          "Search Bar": [
+            "All Cases",
+            "All Cases Any Status",
+            "Cases Created by Me",
+            "My Cases",
+            "Open Cases for My Team",
+            "Manage Saved Searches"
+          ],
+          "Actions": {
+            "Refresh": [],
+            "Create Case": [],
+            "Actions": {
+              "Save": [],
+              "Export": {
+                "Export to Excel": [],
+                "Export to CSV": []
+              },
+              "Manage Columns": [],
+              "Sort by Relevance": []
+            },
+            "Add Filter": []
+          },
+          "Results": {
+            "Data List": [
+              "Case Number",
+              "Title",
+              "Status",
+              "Last Updated Date",
+              "Assigned To",
+              "Actions"
+            ],
+            "Group By": {
+              "Actions": {
+                "Dropdown": [
+                  "None",
+                  "Assigned To",
+                  "Case Type",
+                  "Created By",
+                  "Last Updated By",
+                  "Primary Contact",
+                  "Priority",
+                  "Reported By",
+                  "Status"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "Quick Actions": {
+      "My Signature": {
+        "My Signature": {
+          "Signature Name": [],
+          "Description": [],
+          "Actions": {
+            "Save": [],
+            "Cancel": [],
+            "Save and Close": {
+              "Actions": {
+                "Actions": {
+                  "Delete": {
+                    "Delete signature": {
+                      "Message": "You won't be able to recover it",
+                      "Actions": {
+                        "Close": [],
+                        "Yes": [],
+                        "No": []
+                      }
+                    }
+                  },
+                  "Save and Close": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "HR Help Desk Queues": {
+        "Queues": {
+          "Time Interval": [
+            "Today",
+            "Last 30 Minutes",
+            "Last 2 Hours",
+            "Last 4 Hours",
+            "Last 8 Hours"
+          ],
+          "Actions": {
+            "Capacities": {
+              "Edit Capacities": {
+                "Actions": {
+                  "Select all": [],
+                  "Save": [],
+                  "Save and Close": [],
+                  "Cancel": [],
+                  "Agents": {
+                    "Select Individuals": {
+                      "Add Agents": {
+                        "First Name": [],
+                        "Last Name": [],
+                        "E-Mail": [],
+                        "Role": [],
+                        "Organization": [],
+                        "Manager First Name": [],
+                        "Manager Last Name": [],
+                        "Registry ID": [],
+                        "Actions": {
+                          "Apply": [],
+                          "OK": [],
+                          "Cancel": []
+                        }
+                      },
+                      "Search Results": {
+                        "Actions": {
+                          "Search": []
+                        }
+                      }
+                    },
+                    "Select Teams": {
+                      "Add Teams": {
+                        "Team Name": [],
+                        "Team Description": [],
+                        "Resource First Name": [],
+                        "Resource Last Name": [],
+                        "Actions": {
+                          "Apply": [],
+                          "OK": [],
+                          "Cancel": [],
+                          "Search": []
+                        }
+                      },
+                      "Search Results": {
+                        "Select All": [],
+                        "Actions": {
+                          "Create Resource Team": {
+                            "Create Resource Team": {
+                              "Team Name": [],
+                              "Team Description": [],
+                              "Actions": {
+                                "Save and Continue": [],
+                                "Save and Close": [],
+                                "Cancel": []
+                              }
+                            },
+                            "Resources": {
+                              "Add Resource": []
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Remove": [],
+                  "Edit": [],
+                  "Set to Default": []
+                }
+              }
+            },
+            "Create Queue": {
+              "Create Queue": {
+                "Name": [],
+                "Activation": [],
+                "Distribution": [],
+                "Overflow Criteria": {
+                  "Assign pending interactions to overflow resources": {
+                    "When no human agent is immediately available": [],
+                    "When actual wait time exceeds threshold": {
+                      "Real-Time": [],
+                      "Non-Real-Time": []
+                    },
+                    "When number of pending interactions exceeds threshold": {
+                      "Real-Time": [],
+                      "Non-Real-Time": []
+                    }
+                  }
+                },
+                "Description": [],
+                "Actions": {
+                  "Save and Continue": {
+                    "Summary: ABC": {
+                      "Name": [],
+                      "Activation": [],
+                      "Distribution": [],
+                      "Overflow Criteria": {
+                        "Assign pending interactions to overflow resources": {
+                          "When no human agent is immediately available": [],
+                          "When actual wait time exceeds threshold": {
+                            "Real-Time": [],
+                            "Non-Real-Time": []
+                          },
+                          "When number of pending interactions exceeds threshold": {
+                            "Real-Time": [],
+                            "Non-Real-Time": []
+                          }
+                        }
+                      }
+                    },
+                    "Resources: ABC": {
+                      "Add Resources": {
+                        "Add Agents": {
+                          "First Name": [],
+                          "Last Name": [],
+                          "E-Mail": [],
+                          "Role": [],
+                          "Organization": [],
+                          "Manager First Name": [],
+                          "Manager Last Name": [],
+                          "Registry ID": [],
+                          "Actions": {
+                            "Apply": [],
+                            "OK": [],
+                            "Cancel": []
+                          }
+                        },
+                        "Search Results": {
+                          "Actions": {
+                            "Search": []
+                          }
+                        }
+                      }
+                    },
+                    "Resources Teams: ABC": {
+                      "Actions": {
+                        "Add Resource Teams": {
+                          "Add: Resource Teams": {
+                            "Team Name": [],
+                            "Team Description": [],
+                            "Resource First Name": [],
+                            "Resource Last Name": []
+                          },
+                          "Search Results": {
+                            "Actions": {
+                              "Select All": [],
+                              "Create Resource Team": {
+                                "Create Resource Team": {
+                                  "Team Name": [],
+                                  "Team Description": [],
+                                  "Actions": {
+                                    "Save and Continue": [],
+                                    "Save and Close": [],
+                                    "Cancel": []
+                                  }
+                                },
+                                "Resources": {
+                                  "Add Resource": []
+                                }
+                              }
+                            }
+                          },
+                          "Actions": {
+                            "Apply": [],
+                            "OK": [],
+                            "Cancel": []
+                          }
+                        }
+                      }
+                    },
+                    "Overflow Resources: ABC": {
+                      "Actions": {
+                        "Add": []
+                      }
+                    },
+                    "Actions": {
+                      "Actions": {
+                        "Delete Queue": []
+                      },
+                      "Save": [],
+                      "Save and Continue": [],
+                      "Cancel": []
+                    }
+                  },
+                  "save and Close": [],
+                  "Cancel": []
+                }
+              }
+            }
+          },
+          "All Queues": {
+            "Show statistics": [],
+            "View": {
+              "Columns": [
+                "Show All",
+                "Resource Teams",
+                "Resources",
+                "Created",
+                "Distribution",
+                "Enabled",
+                "Description",
+                "Name",
+                "Manage Columns"
+              ],
+              "Detach": [],
+              "Reorder Columns": [],
+              "Query By Example": []
+            },
+            "Detach": []
+          }
+        }
+      },
+      "Create Internal Help Desk Request": {
+        "New Help Desk Request": {
+          "Subject": [],
+          "Severity": ["High", "Medium", "Low"],
+          "Category": [],
+          "Product Group": [
+            "Network Operations / Parent Group: Internal Help Desk",
+            "Computer Hardware / Parent Group: Internal Help Desk",
+            "Software Related / Parent Group: Internal Help Desk",
+            "Internal Help Desk / Parent Group: Internal Help Desk"
+          ],
+          "Primary Point of Contact": [],
+          "Installed Base Asset": [],
+          "Detailed Description": [],
+          "Attachments": {
+            "Category": ["Internal", "Miscellaneous", "Inline Attachments"],
+            "Drag and Drop": [],
+            "URL": [],
+            "Actions": {
+              "Add URL": []
+            }
+          },
+          "Actions": {
+            "Cancel": [],
+            "Save": []
+          }
+        }
+      },
+      "My Messages": {
+        "Try searching by subject or sender name": [],
+        "Data": {
+          "Subject": [],
+          "Sender": [],
+          "Date Received": [],
+          "Other Correspondents": [],
+          "Status": [],
+          "Message Count": [],
+          "Recommended Action": []
+        }
+      }
+    }
+  }
+}
