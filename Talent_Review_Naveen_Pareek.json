@@ -1,0 +1,146 @@
+{
+    "TalentReviewMeetings": {
+        "SearchFilters": {
+            "Actions": {
+                "Search":[],
+            },
+            "Filters": {
+              
+                    "MeetingName": {
+                        "Actions": {
+                            "Search": []
+                        }
+                    },
+                    "MeetingDateRange": {
+                        "StartDate": [],
+                        "EndDate": [],
+                        "Actions": {
+                            "OK": []
+                        }
+                    },
+                    "MeetingStatus": {
+                        "NotStarted": [],
+                        "InProgress": [],
+                        "Complete": [],
+                        "ProcessJobInProgress": [],
+                        "ProcessJobError": []
+                    },
+                    "DataSubmissionStatus": {
+                        "NotStarted": [],
+                        "PreparationInProgress": [],
+                        "Complete": [],
+                        "SubmissionProcessInProgress": [],
+                        "SubmissionProcessError": []
+                    },  
+                    "Actions": {
+                        "Cancel": [],
+                         "See Results": []
+                    }
+        },
+           
+        "Add": {
+                    
+                            "TalentReviewMeeting": [],
+                            "TemplateName":  {
+                                    "GSE Matrix Mgr in Talent Review Meeting Template",
+                                    "GSE Talent Review Meeting Template",
+                                    "High Performers Talent Review Meeting Template",
+                                    "Standard Talent Review Meeting Template",
+                                    "Talent Review Prior Rating",
+                                    "WE Talent Review Meeting Template"
+                        
+                        },
+                            "BusinessLeader": [],
+                            "Organization": [],
+                            "MeetingDate": [],
+                            "DataSubmissionDeadline": [],
+                            "MeetingStatus": {
+                                "Options": {
+                                    "NotStarted": [],
+                                    "InProgress": [],
+                                    "Canceled": [],
+                                   
+                                }
+                            },
+                            "Facilitators": {
+                                "AddFacilitator": []
+                            },
+                            "MeetingPurpose": [],
+                        
+                        "Actions": {
+                            "Continue": []
+                        },
+                        "ReviewContent": {
+                            "ReviewContent": {
+                                "SelectRatingsForReviewer": {
+                                    "TalentScore": [],
+                                    "RiskOfLoss": [],
+                                    "Potential": [],
+                                    "EnablePotentialAssessment": {
+                                        "PotentialRating": []
+                                    },
+                                    "Performance": [],
+                                    "ImpactOfLoss": []
+                                },
+                                "PriorRatings": {
+                                    "StartDate": [],
+                                    "EndDate": []
+                                },
+                                "DataValidityGuideline": [],
+                            },
+                                "SuccessionPlans": {
+                                    "PlanName": []
+                                },
+                                "TalentPools": {
+                                    "PoolName": []
+                                },
+                               
+                        
+                            "Actions": {
+                                "Continue": []
+                            },
+                        },
+                        "ReviewParticipants": {
+                           
+                                "IncludeMatrixManagersAsReviewers": [],
+                                "SearchForPeople": [],
+                                "MeetingInstructions": [],
+                        
+                            "Actions": {
+                                "Continue": []
+                            }
+                        },
+                        "PopulationSelection": {
+                            "Actions": {
+                                "EmployeesTOInclude": []
+                            }
+                        },
+                        "ReviewPopulation": {
+                            "Actions": {
+                                "Edit": []
+                            },
+                        },
+                        "Actions": {
+                            "SaveAndClose": [],
+                            "Submit": [],
+                            "Cancel": []
+                      
+                    } 
+                 
+                },
+           
+        "SortBy": {
+                "Meeting Name - A to Z": [],
+                "Meeting Name - Z to A": [],
+                "Meeting Date - Latest to Oldest": [],
+                "Meeting Date - Oldest to Latest": [],
+                "Meeting Status": [],
+                "Data Submission Deadline - Latest to Oldest": [],
+                "Data Submission Deadline - Oldest to Latest": [],
+                "Business Leader - A to Z": [],
+                "Business Leader - Z to A": [],
+                "Data Submission Status": []
+            },
+            
+        }
+}
