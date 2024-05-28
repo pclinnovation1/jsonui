@@ -410,9 +410,217 @@
             "Review Period": [
                 "2024 Annual Cycle"
             ],
-            "Performance Document": [
-                "Competency Asssesssment"
-            ],
+            "Performance Document": {
+                "Competency Asssesssment":{
+                    "sort By":{
+                        "Name ascending": [],
+                        "Name descending": [],
+                        "Business Title ascending": [],
+                        "Business Title descending": [],
+                        "Worker type ascending": [],
+                        "Worker type descending": []
+                    },
+                    "Context": [
+                        "All Statueses","Not Available","Available to Evaluate","Completed"
+                    ],
+                    "Table":{
+                        "Name": [],
+                        "Evalution Status": [],
+                        "Reted":[],
+                        "Commented":[],
+                        "Adherence to Quality Standards":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Adherence to Security Standards":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Business Ethics":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Communication":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Customer Focus":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Data Dissemintation":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Decision Making":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Deliver Quality":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Employment Legislation":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "HR Expertise":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Influencing and Negotiating":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Initative":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Innovation":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Personal Drive":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Planning and Organizing":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Problem Solving":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Result Orientation":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Team Work":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        },
+                        "Calculating Ratings":{
+                            "Worker":{
+                                "Proficiency": [],
+                                "Comments": []
+                            },
+                            "Manager":{
+                                "Proficiency": [],
+                                "Comments": []
+                            }
+                        }
+                    }
+                }
+            },
             "Action": {
                 "cancel": [],
                 "Submit": []
