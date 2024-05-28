@@ -1,0 +1,1285 @@
+{
+    "Quick Actions":{
+        "Create HR Help Desk Request":{
+            "Subject": [],
+            "Primary Point of Contact": [],
+            "Queue": [
+                "Benefits Queue",
+                "Canada - HR Default",
+                "Default",
+                "Disciplinary Actions",
+                "Disciplinary Actions Supremo",
+                "Grievances",
+                "Grievances Supremo",
+                "HR Administration",
+                "HR UK Queue",
+                "Health and Safety Queue",
+                "Health and Safety Supremo",
+                "Labor Relations",
+                "Payroll Queue"
+            ],
+            "Severity":[
+                "High",
+                "Medium",
+                "Low"
+            ],
+            "Assigned To":[],
+            "Category":{
+                "Benefits": {
+                  "subcategories": []
+                },
+                "Deductions": {
+                  "subcategories": [
+                    "Payroll > Deductions"
+                  ]
+                },
+                "Disciplinary Actions": {
+                  "subcategories": []
+                },
+                "Employment": {
+                  "subcategories": [
+                    "HR Administration > Employment"
+                  ]
+                },
+                "Ergonomic Problem": {
+                  "subcategories": [
+                    "Benefits > Ergonomic Problem"
+                  ]
+                },
+                "Grievances": {
+                  "subcategories": []
+                },
+                "Health and Safety": {
+                  "subcategories": []
+                },
+                "HR Administration": {
+                  "subcategories": []
+                },
+                "Long Term Absence": {
+                  "subcategories": [
+                    "Benefits > Long Term Absence"
+                  ]
+                },
+                "Maternity": {
+                  "subcategories": [
+                    "Benefits > Maternity"
+                  ]
+                },
+                "Pay Check": {
+                  "subcategories": [
+                    "Payroll > Pay Check"
+                  ]
+                },
+                "Payroll": {
+                  "subcategories": []
+                },
+                "Personal Information": {
+                  "subcategories": [
+                    "HR Administration > Personal Information"
+                  ]
+                },
+                "Property Damage": {
+                  "subcategories": [
+                    "Health and Safety > Property Damage"
+                  ]
+                },
+                "Sick Leave": {
+                  "subcategories": [
+                    "Benefits > Sick Leave"
+                  ]
+                },
+                "Tax Calculation": {
+                  "subcategories": [
+                    "Payroll > Tax Calculation"
+                  ]
+                },
+                "Union Contract": {
+                  "subcategories": [
+                    "HR Administration > Union Contract"
+                  ]
+                },
+                "Vehicle incident": {
+                  "subcategories": [
+                    "Health and Safety > Vehicle incident"
+                  ]
+                },
+                "Virus or Illness, Injury": {
+                  "subcategories": [
+                    "Health and Safety > Virus or Illness, Injury"
+                  ]
+                }
+              },
+
+            "Product Group": [],
+            "Channel Type": [
+                "Chat",
+                "Co-browse",
+                "E-Mail",
+                "Microsoft Teams",
+                "None",
+                "loT",
+                "Slack",
+                "SMS",
+                "Social",
+                "Digital Audio and Video",
+                "Web",
+                "Web Conference",
+                "Phone"
+            ],
+            "Details Description":[],
+            "Attachments":{
+                "Category":[
+                    "Internal",
+                    "Miscellaneous",
+                    "Inline Attachments"
+                ],
+                "Drag and Drop":[
+                    "Select or drop files here."
+                ],
+                "URL":[],
+                "Actions":{
+                    "Add URL":[]
+                }
+            },
+            "Action":{
+                "Critical":[],
+                "info":{
+                    "details":{
+                        "Email":[],
+                        "Uniqueid":[],
+                        "Person number":[],
+                        "working type":[]
+                    },
+                    "search":[],
+                    "action":{
+                        "close":[]
+                    }
+                },
+                "cancel":[],
+                "Save":[]
+            }
+        },
+        "Internal Service Request Queues":{
+            "Time Interval":[
+                "Today",
+                "Last 30 Minutes",
+                "Last 2 Hours",
+                "Last 4 Hours",
+                "Last 8 Hours"
+            ],
+            "All Queues":{
+                "Show statistics":[],
+                "View": {
+                    
+                    "Columns": {
+                        "Show All":[],
+                        "Resource Teams":[],
+                        "Resources":[],
+                        "Created":[],
+                        "Distribution":[],
+                        "Enabled":[],
+                        "Description":[],
+                        "Name":[],
+                        "Manage Columns":[]
+                    },
+                    "Detach":[],
+                    "Reorder Columns":{
+                        "visible Columns":[
+                            "Created",
+                            "Name",
+                            "Description",
+                            "Enabled",
+                            "Distribution",
+                            "Resources",
+                            "Resource Teams"
+                        ],
+                        "Action":{
+                            "Ok":[],
+                            "cancel":[]
+                        }
+                    },
+                    "Query by Example":[]
+                },
+                "table":{
+                    "Create":[],
+                    "Name":[],
+                    "Description":[],
+                    "Enabled":[],
+                    "Distribution":[],
+                    "Resources Resource Teams":[]
+                },
+               
+                "Action":{
+                    "Query by example":[],
+                    "Detach":[],
+                    "Name":{
+                        "Channel Summary":{
+                            "Real-Time Channel": [],
+                            "Waiting": [],
+                            "Assigned": [],
+                            "Average Wait": [],
+                            "Received": [],
+                            "Abandoned": []
+                        },
+                        "Interactions":{
+                           
+                            "Show Non-Real-Time Objects":[],
+                            "Move out":[],
+                            "Assign To":[],
+                            "Interaction": [],
+                            "Channel": [],
+                            "Reference I": [],
+                            "customer": [],
+                            "Account": [],
+                            "Wait Time": [],
+                            "Number of Queues": [],
+                            "Rules": [],
+                            "Time": [],
+                            "Trace": [],
+                            "Actions":{
+                                "Move":[],
+                                "Assign":[],
+                                "reroute":[]
+                            }
+    
+                            
+                        }    
+                    }
+                        
+                }
+
+            },
+            "Action":{
+                "capacities":{
+
+                    "Select":[],
+                    "Agent Name":[],
+                    "Teams":[],
+                    "Queues":[],
+                    "Internal Service Request (2000)":[],
+                    "Chat (10)":[],
+                    "Last Updated":[],
+                    "Action":{
+                        "Agents": {
+                            "Select Individuals":{
+                                "Add Agents":{
+                                    "First Name": [],
+                                    "Last Name": [],
+                                    "E-Mail": [],
+                                    "Role": [],
+                                    "Organization": [
+                                        "Cheif HR Officer",
+                                        "Black Creek Consulting, Ltd.",
+                                        "Imercon Services, Inc.",
+                                        "Inuit, Inc.",
+                                        "Isis Consulting Group, Inc.",
+                                        "Puma Technology, Inc.",
+                                        "Total Software Solutions, Inc.",
+                                        "APAC Direct Sales",
+                                        "APAC Sales Consulting",
+                                        "APEX Communications",
+                                        "APEX Communications - Miles Dunn"
+                                    ],
+                                    "Manager First Name": [],
+                                    "Manager Last Name": [],
+                                    "Registry ID": [],
+                                    "action":{
+                                        "search":[]
+                                    }
+                                },
+                                "Search Results":{
+                                    "Name": [],
+                                    "Registry ID": [],
+                                    "Role": [],
+                                    "E-Mail": [],
+                                    "Organization": [],
+                                    "Manager": []
+                                },
+                                "Action":{
+                                    "Apply":[],
+                                    "Ok":[],
+                                    "cancel":[],
+                                    "Search":[]
+                                }
+
+                            },
+                            "Select Teams":{
+                                "Add Teams":{
+                                    "Team Name":[],
+                                    "Team Description":[],
+                                    "Resource First Name":[],
+                                    "Resource Last Name":[],
+                                    "Action":{
+                                        "Search":[]
+                                    }
+                                },
+                                "Search Results":{
+                                    "team name":[],
+                                    "team Description":[]
+                                },
+                                "Action":{
+                                    "Apply":[],
+                                    "Ok":[],
+                                    "Cancel":[],
+                                    "Create Resource Team":{
+                                        "team name":[],
+                                        "team Description":[],
+                                        "action":{
+                                            "Save and Continue":[],
+                                            "Save and Close":[],
+                                            "Cancel":[],
+                                            "Add Resource":[]
+                                        }
+
+                                    }
+                                }
+                            }
+                        },
+                        "Save": [],
+                        "Save and Close": [],
+                        "Cancel": [],
+                        "Remove": [],
+                        "Edit...": [],
+                        "Set to Default": []
+                    }
+
+                },
+                "Create Queue":{
+                    "Name": [],
+                    "Activation": [],
+                    "Distribution": [
+                        "Automatic (Push)",
+                        "Manual"
+                    ],
+                    "Overflow Criteria": {
+                        "Assign pending interactions to overflow resources":{
+
+                   
+                        
+                        "When no human agent is immediately available": [],
+                        "When actual wait time exceeds threshold":{
+                                    "Real-Time": [],
+                                    "Non-Real-Time": []
+                                },
+                            "When number of pending interactions exceeds threshold": {
+                                
+                                    "Real-Time": [],
+                                    "Non-Real-Time": []
+                            }
+                        }
+                        
+                    },
+                    "Description": [],
+                    "Actions": {
+                        "Save and Continue":[],
+                        "Save and Close":[],
+                        "Cancel":[]
+                    }
+                }
+            }
+
+
+        },
+        "Employee Search":{
+            "Search":[],
+            "table":{
+                "Status": [],
+                "Name": [],
+                "Assignment Name": [],
+                "Assignment Number": [],
+                "Assignment Type": [],
+                "Email": [],
+                "Action": []
+            }
+        },
+        "My New Messages":{
+            "Search":[],
+            "Table":{
+                "Subject": [],
+                "Sender": [],
+                "Date Received": [],
+                "Other Correspondents": [],
+                "Status": [],
+                "Message Count": [],
+                "Recommended Action": []
+            }
+        }
+    },
+    "Apps":{
+        "HR Queues":{
+        "Time Interval":[
+            "Today",
+            "Last 30 Minutes",
+            "Last 2 Hours",
+            "Last 4 Hours",
+            "Last 8 Hours"
+        ],
+        "All Queues":{
+            "Show statistics":[],
+            "View": {
+                
+                "Columns": {
+                    "Show All":[],
+                    "Resource Teams":[],
+                    "Resources":[],
+                    "Created":[],
+                    "Distribution":[],
+                    "Enabled":[],
+                    "Description":[],
+                    "Name":[],
+                    "Manage Columns":[]
+                },
+                "Detach":[],
+                "Reorder Columns":{
+                    "visible Columns":[
+                        "Created",
+                        "Name",
+                        "Description",
+                        "Enabled",
+                        "Distribution",
+                        "Resources",
+                        "Resource Teams"
+                    ],
+                    "Action":{
+                        "Ok":[],
+                        "cancel":[]
+                    }
+                },
+                "Query by Example":[]
+            },
+            "table":{
+                "Create":[],
+                "Name":[],
+                "Description":[],
+                "Enabled":[],
+                "Distribution":[],
+                "Resources Resource Teams":[]
+            },
+           
+            "Action":{
+                "Query by example":[],
+                "Detach":[],
+                "Name":{
+                    "Channel Summary":{
+                        "Real-Time Channel": [],
+                        "Waiting": [],
+                        "Assigned": [],
+                        "Average Wait": [],
+                        "Received": [],
+                        "Abandoned": []
+                    },
+                    "Interactions":{
+                       
+                        "Show Non-Real-Time Objects":[],
+                        "Move out":[],
+                        "Assign To":[],
+                        "Interaction": [],
+                        "Channel": [],
+                        "Reference I": [],
+                        "customer": [],
+                        "Account": [],
+                        "Wait Time": [],
+                        "Number of Queues": [],
+                        "Rules": [],
+                        "Time": [],
+                        "Trace": [],
+                        "Actions":{
+                            "Move":[],
+                            "Assign":[],
+                            "reroute":[]
+                        }
+
+                        
+                    },
+                    "Action":{
+                        "Name Action":{
+                            "Summary":{
+                                "Name": [],
+                                "Activation": [],
+                                "Distribution": [
+                                    "Automatic (Push)",
+                                    "Manual"
+                                ],
+                                "Overflow Criteria": {
+                                    "Assign pending interactions to overflow resources":{
+
+                                    
+                                    
+                                    "When no human agent is immediately available": [],
+                                    "When actual wait time exceeds threshold":{
+                                                "Real-Time": [],
+                                                "Non-Real-Time": []
+                                            },
+                                        "When number of pending interactions exceeds threshold": {
+                                            
+                                                "Real-Time": [],
+                                                "Non-Real-Time": []
+                                        }
+                                      }
+                                    
+                                },
+                                "Description": [],
+                                "Created":[]
+
+                            },
+                            "Resources":{
+                                "Name":[],
+                                "A Phone":[],
+                                "Email":[],
+                                "Action":{
+                                    "Add Resources":{
+                                    "Add Resources":{
+                                        "First Name": [],
+                                        "Last Name": [],
+                                        "E-Mail": [],
+                                        "Role": [],
+                                        "Organization": [],
+                                        "Manager First Name": [],
+                                        "Manager Last Name": [],
+                                        "Registry ID": [],
+                                        "Actions": {
+                                            
+                                            "Search":[]
+                                        }
+                                    },
+                                    "Search Results":{
+                                        "name":[],
+                                        "Registry ID":[],
+                                        "role":[],
+                                        "E-Mail":[],
+                                        "Organization":[],
+                                        "Manager":[]
+                                    },
+                                    "Action":{
+                                    "Apply":[],
+                                    "OK":[],
+                                    "Cancel":[]
+                                } 
+                            }
+
+
+                                }
+                            },
+                            "Resource Teams":{
+                                "name":[],
+                                "Description":[],
+                                "Action":{
+                                    "Add Resource Teams":{
+                                        "Add: Resource Teams":{
+                                            "Team Name":[],
+                                            "Team Description":[],
+                                            "Resource First Name":[],
+                                            "Resource Last Name":[],
+                                            "Action":{
+                                                "Search":[]
+                                            }
+                                        },
+                                        "Search Results":{
+                                            "Team Name":[],
+                                            "Team Description":[]
+                                           
+                                        },
+                                        "Action":{
+                                        "Apply":[],
+                                        "OK":[],
+                                        "Cancel":[],
+                                        "Create Resource Team":{
+                                            "team name":[],
+                                            "team Description":[],
+                                            "action":{
+                                                "Save and Continue":[],
+                                                "Save and Close":[],
+                                                "Cancel":[],
+                                                "Add Resource":[]
+                                            },
+                                            "Resource":{
+                                                "Name":[],
+                                                "Role":[],
+                                                "E-Mail":[],
+                                                "Organization":[],
+                                                "Manager":[]
+                                            }
+    
+                                        }
+                                    } 
+                                    }
+                                }
+
+                            },
+                            "Overflow Resources":{
+                                "Overflow Queue Name":[],
+                                "A Priority":[],
+                                "Action":{
+                                    "Add":[]
+                                }
+                            },
+                            "Actions": {
+                                "Save and Continue":[],
+                                "Save and Close":[],
+                                "Cancel":[],
+                                "Actions":["delete queue"]
+                            }
+
+                        }
+                    }    
+                }
+                    
+            }
+
+        },
+        "Action":{
+            "capacities":{
+
+                "Select":[],
+                "Agent Name":[],
+                "Teams":[],
+                "Queues":[],
+                "Service Request (2000)":[],
+                "Chat (10)":[],
+                "Last Updated":[],
+                "Action":{
+                    "Agents": {
+                        "Select Individuals":{
+                            "Add Agents":{
+                                "First Name": [],
+                                "Last Name": [],
+                                "E-Mail": [],
+                                "Role": [],
+                                "Organization": [],
+                                "Manager First Name": [],
+                                "Manager Last Name": [],
+                                "Registry ID": [],
+                                "action":{
+                                    "search":[]
+                                }
+                            },
+                            "Search Results":{
+                                "Name": [],
+                                "Registry ID": [],
+                                "Role": [],
+                                "E-Mail": [],
+                                "Organization": [],
+                                "Manager": []
+                            },
+                            "Action":{
+                                "Apply":[],
+                                "Ok":[],
+                                "cancel":[],
+                                "Search":[]
+                            }
+
+                        },
+                        "Select Teams":{
+                            "Add Teams":{
+                                "Team Name":[],
+                                "Team Description":[],
+                                "Resource First Name":[],
+                                "Resource Last Name":[],
+                                "Action":{
+                                    "Search":[]
+                                }
+                            },
+                            "Search Results":{
+                                "team name":[],
+                                "team Description":[]
+                            },
+                            "Action":{
+                                "Apply":[],
+                                "Ok":[],
+                                "Cancel":[],
+                                "Create Resource Team":{
+                                    "team name":[],
+                                    "team Description":[],
+                                    "action":{
+                                        "Save and Continue":[],
+                                        "Save and Close":[],
+                                        "Cancel":[],
+                                        "Add Resource":[]
+                                    }
+
+                                }
+                            }
+                        }
+                    },
+                    "Save": [],
+                    "Save and Close": [],
+                    "Cancel": [],
+                    "Remove": [],
+                    "Edit...": [],
+                    "Set to Default": []
+                }
+
+            },
+            "Create Queue":{
+                "Name": [],
+                "Activation": [],
+                "Distribution": [
+                    "Automatic (Push)",
+                    "Manual"
+                ],
+                "Overflow Criteria": {
+                    "Assign pending interactions to overflow resources":{
+                    
+                    "When no human agent is immediately available": [],
+                    "When actual wait time exceeds threshold":{
+                                "Real-Time": [],
+                                "Non-Real-Time": []
+                            },
+                        "When number of pending interactions exceeds threshold": {
+                            
+                                "Real-Time": [],
+                                "Non-Real-Time": []
+                        }
+                      }
+                    
+                },
+                "Description": [],
+                "Actions": {
+                    "Save and Continue":[],
+                    "Save and Close":[],
+                    "Cancel":[]
+                }
+            },
+            "Auto Refresh":[
+                "Disabled",
+                "30 Seconds",
+                "1 Minute"
+            ]
+
+            
+        }
+        },
+        "My Help":{
+            "content":"What do you want to do today?",
+            "search":[],
+            "Browse Popular Articles":{
+                "card":{
+                    "title":"HCM SOLUTIONS",
+                    "Question":[],
+                     "name":[],
+                     "dateupdate":"Last Update Date",
+                     "date":[]
+                }
+            },
+            "View My Requests":{
+                "Open":[],
+                "Subject":[],
+                "Request no":[],
+                "Lastupdatedate":[],
+                "Action":{
+                    "Create Request":{
+                       "internal":{
+                        "Subject": [],
+                        "Primary Point of Contact": [],
+                        "Severity":[
+                            "High",
+                            "Medium",
+                            "Low"
+                        ],
+                        "Category":{
+                            "Benefits": {
+                              "subcategories": []
+                            },
+                            "Deductions": {
+                              "subcategories": [
+                                "Payroll > Deductions"
+                              ]
+                            },
+                            "Disciplinary Actions": {
+                              "subcategories": []
+                            },
+                            "Employment": {
+                              "subcategories": [
+                                "HR Administration > Employment"
+                              ]
+                            },
+                            "Ergonomic Problem": {
+                              "subcategories": [
+                                "Benefits > Ergonomic Problem"
+                              ]
+                            },
+                            "Grievances": {
+                              "subcategories": []
+                            },
+                            "Health and Safety": {
+                              "subcategories": []
+                            },
+                            "HR Administration": {
+                              "subcategories": []
+                            },
+                            "Long Term Absence": {
+                              "subcategories": [
+                                "Benefits > Long Term Absence"
+                              ]
+                            },
+                            "Maternity": {
+                              "subcategories": [
+                                "Benefits > Maternity"
+                              ]
+                            },
+                            "Pay Check": {
+                              "subcategories": [
+                                "Payroll > Pay Check"
+                              ]
+                            },
+                            "Payroll": {
+                              "subcategories": []
+                            },
+                            "Personal Information": {
+                              "subcategories": [
+                                "HR Administration > Personal Information"
+                              ]
+                            },
+                            "Property Damage": {
+                              "subcategories": [
+                                "Health and Safety > Property Damage"
+                              ]
+                            },
+                            "Sick Leave": {
+                              "subcategories": [
+                                "Benefits > Sick Leave"
+                              ]
+                            },
+                            "Tax Calculation": {
+                              "subcategories": [
+                                "Payroll > Tax Calculation"
+                              ]
+                            },
+                            "Union Contract": {
+                              "subcategories": [
+                                "HR Administration > Union Contract"
+                              ]
+                            },
+                            "Vehicle incident": {
+                              "subcategories": [
+                                "Health and Safety > Vehicle incident"
+                              ]
+                            },
+                            "Virus or Illness, Injury": {
+                              "subcategories": [
+                                "Health and Safety > Virus or Illness, Injury"
+                              ]
+                            }
+                          },
+            
+                        "Product Group": {
+                            "Network Operations":[],
+
+                            "Computer Hardware":[],
+
+                            "Software Related":[],
+
+                            "Internal Help Desk":[]
+
+                        },
+                        "Install Base Asset":{
+                            "Asset Number":[],
+
+                            "Description":[],
+
+                            "Item Number":[],
+
+                            "Asset Serial Number":[]
+
+                        },
+                        "Details Description":[],
+                        "Attachments":{
+                            "Category":[
+                                "Internal",
+                                "Miscellaneous",
+                                "Inline Attachments"
+                            ],
+                            "Drag and Drop":[
+                                "Select or drop files here."
+                            ],
+                            "URL":[],
+                            "Actions":{
+                                "Add URL":[]
+                            }
+                        },
+                        "Action":{
+                            "Cancel":[],
+                            "Save":[]
+                        }
+                    },
+                    "HR":{
+                      "Subject": [],
+                      "Primary Point of Contact": [],
+                      "Severity":[
+                          "High",
+                          "Medium",
+                          "Low"
+                      ],
+                      "Category":{
+                          "Benefits": {
+                            "subcategories": []
+                          },
+                          "Deductions": {
+                            "subcategories": [
+                              "Payroll > Deductions"
+                            ]
+                          },
+                          "Disciplinary Actions": {
+                            "subcategories": []
+                          },
+                          "Employment": {
+                            "subcategories": [
+                              "HR Administration > Employment"
+                            ]
+                          },
+                          "Ergonomic Problem": {
+                            "subcategories": [
+                              "Benefits > Ergonomic Problem"
+                            ]
+                          },
+                          "Grievances": {
+                            "subcategories": []
+                          },
+                          "Health and Safety": {
+                            "subcategories": []
+                          },
+                          "HR Administration": {
+                            "subcategories": []
+                          },
+                          "Long Term Absence": {
+                            "subcategories": [
+                              "Benefits > Long Term Absence"
+                            ]
+                          },
+                          "Maternity": {
+                            "subcategories": [
+                              "Benefits > Maternity"
+                            ]
+                          },
+                          "Pay Check": {
+                            "subcategories": [
+                              "Payroll > Pay Check"
+                            ]
+                          },
+                          "Payroll": {
+                            "subcategories": []
+                          },
+                          "Personal Information": {
+                            "subcategories": [
+                              "HR Administration > Personal Information"
+                            ]
+                          },
+                          "Property Damage": {
+                            "subcategories": [
+                              "Health and Safety > Property Damage"
+                            ]
+                          },
+                          "Sick Leave": {
+                            "subcategories": [
+                              "Benefits > Sick Leave"
+                            ]
+                          },
+                          "Tax Calculation": {
+                            "subcategories": [
+                              "Payroll > Tax Calculation"
+                            ]
+                          },
+                          "Union Contract": {
+                            "subcategories": [
+                              "HR Administration > Union Contract"
+                            ]
+                          },
+                          "Vehicle incident": {
+                            "subcategories": [
+                              "Health and Safety > Vehicle incident"
+                            ]
+                          },
+                          "Virus or Illness, Injury": {
+                            "subcategories": [
+                              "Health and Safety > Virus or Illness, Injury"
+                            ]
+                          }
+                        },
+          
+                      "Product Group": {
+                          "Network Operations":[],
+
+                          "Computer Hardware":[],
+
+                          "Software Related":[],
+
+                          "Internal Help Desk":[]
+
+                      },
+                      "Details Description":[],
+                      "Attachments":{
+                          "Category":[
+                              "Internal",
+                              "Miscellaneous",
+                              "Inline Attachments"
+                          ],
+                          "Drag and Drop":[
+                              "Select or drop files here."
+                          ],
+                          "URL":[],
+                          "Actions":{
+                              "Add URL":[]
+                          }
+                      },
+                      "Action":{
+                          "Cancel":[],
+                          "Save":[]
+                      }
+                     }
+                    
+                  }
+                }
+
+
+            },
+            "Journeys":{
+                "Card":{
+                    "Image":[],
+                    "Subject":[],
+                    "Assignable":[],
+                    "Category":[]
+                }
+            },
+            "Actions":{
+                "Browse Popular Articles button":{
+                    "Title":[],
+                    "Question":[],
+                    "Answer":[],
+                    "Tags":[],
+                    "Category":[],
+                    "User group":[],
+                    "Rate this Article":[],
+                    "Action":{
+                        "Suggest a Change":[],
+                        "Add to Favorites":[],
+                        "Back":[],
+                        "Create Request":{
+                            "Subject": [],
+                            "Primary Point of Contact": [],
+                            "Severity":[
+                                "High",
+                                "Medium",
+                                "Low"
+                            ],
+                            "Category":{
+                                "Benefits": {
+                                  "subcategories": []
+                                },
+                                "Deductions": {
+                                  "subcategories": [
+                                    "Payroll > Deductions"
+                                  ]
+                                },
+                                "Disciplinary Actions": {
+                                  "subcategories": []
+                                },
+                                "Employment": {
+                                  "subcategories": [
+                                    "HR Administration > Employment"
+                                  ]
+                                },
+                                "Ergonomic Problem": {
+                                  "subcategories": [
+                                    "Benefits > Ergonomic Problem"
+                                  ]
+                                },
+                                "Grievances": {
+                                  "subcategories": []
+                                },
+                                "Health and Safety": {
+                                  "subcategories": []
+                                },
+                                "HR Administration": {
+                                  "subcategories": []
+                                },
+                                "Long Term Absence": {
+                                  "subcategories": [
+                                    "Benefits > Long Term Absence"
+                                  ]
+                                },
+                                "Maternity": {
+                                  "subcategories": [
+                                    "Benefits > Maternity"
+                                  ]
+                                },
+                                "Pay Check": {
+                                  "subcategories": [
+                                    "Payroll > Pay Check"
+                                  ]
+                                },
+                                "Payroll": {
+                                  "subcategories": []
+                                },
+                                "Personal Information": {
+                                  "subcategories": [
+                                    "HR Administration > Personal Information"
+                                  ]
+                                },
+                                "Property Damage": {
+                                  "subcategories": [
+                                    "Health and Safety > Property Damage"
+                                  ]
+                                },
+                                "Sick Leave": {
+                                  "subcategories": [
+                                    "Benefits > Sick Leave"
+                                  ]
+                                },
+                                "Tax Calculation": {
+                                  "subcategories": [
+                                    "Payroll > Tax Calculation"
+                                  ]
+                                },
+                                "Union Contract": {
+                                  "subcategories": [
+                                    "HR Administration > Union Contract"
+                                  ]
+                                },
+                                "Vehicle incident": {
+                                  "subcategories": [
+                                    "Health and Safety > Vehicle incident"
+                                  ]
+                                },
+                                "Virus or Illness, Injury": {
+                                  "subcategories": [
+                                    "Health and Safety > Virus or Illness, Injury"
+                                  ]
+                                }
+                              },
+                
+                            "Product Group": {
+                                "Network Operations":[],
+    
+                                "Computer Hardware":[],
+    
+                                "Software Related":[],
+    
+                                "Internal Help Desk":[]
+    
+                            },
+
+                            "Details Description":[],
+                            "Attachments":{
+                                "Category":[
+                                    "Internal",
+                                    "Miscellaneous",
+                                    "Inline Attachments"
+                                ],
+                                "Drag and Drop":[
+                                    "Select or drop files here."
+                                ],
+                                "URL":[],
+                                "Actions":{
+                                    "Add URL":[]
+                                }
+                            },
+                            "Action":{
+                                "Cancel":[],
+                                "Save":[]
+                            }
+                        }
+                    }
+                },
+                "Journey card button":{
+                    "title":[],
+                    "Journey info":{
+                        "Display Name":[],
+                        "Category":[],
+                        "Description":[]
+
+                    },
+                    "Tasks in this journey":{
+                        "title":{
+                            "Task": [],
+                            "Owner": [],
+        
+                            "Description": [],
+                            "Performer": [],
+                            "Duration": [],
+                            "Performer Responsibility Type": [],
+                            "Time Unit": [],
+                            "Task Type": [],
+                            "Enable comments":[],
+                            "Save to my personal task library":[],
+                            "Make this task mandatory":[],
+                            "Enable attachments":[]
+                        }
+                    },
+                    "Actions":{
+                        "Start this Journey":[],
+                        "Action":{
+                            "Assign":{
+                                "title":[],
+                                "When to assign journey?":[],
+                                "comments":[],
+                                "Whom is this journey for?":{
+                                    "Selection Type":[
+                                        "Directs",
+                                        "Person"
+                                    ],
+                                    "Select a Person":[]
+
+                                    
+                                },
+                                "Action":{
+                                    "cancel":[],
+                                    "assign":[]
+                                }
+                            },
+                            "Manage Assigned Journeys":{
+
+                                "Search":[],
+                                "Filter":{
+                                    "status":[],
+                                    "Submission date":[],
+                                    "Action":{
+                                        "clear":[]
+                                    }
+                                },
+                                "Table":{
+                                    "Journey": [],
+                                    "Status": [],
+                                    "Assignees": [],
+                                    "Requested By": [],
+                                    "Assigned Date": [],
+                                    "End Date": [],
+                                    "Submission Date": []
+                                },
+                                "Action":{
+                                    "Column":{
+                                        "Search":[],
+                                        "Show":{
+                                            "Status": [],
+                                            "Assignees": [],
+                                            "Requested By": [],
+                                            "Assigned Date": [],
+                                            "End Date": [],
+                                            "Submission Date": [],
+                                            "Journey": []
+                                        },
+                                        "Hide":{
+                                            "Status": [],
+                                            "Assignees": [],
+                                            "Requested By": [],
+                                            "Assigned Date": [],
+                                            "End Date": [],
+                                            "Submission Date": [],
+                                            "Journey": []
+                                        },
+                                        "action":{
+                                            "Restore Defaults":[]
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }   
+
+                }
+
+            }
+        
+        }
+    }
+}
