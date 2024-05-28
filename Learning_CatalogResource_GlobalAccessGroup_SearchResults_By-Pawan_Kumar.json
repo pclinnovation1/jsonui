@@ -1,0 +1,205 @@
+{
+    "Search Results": {
+      "View": {
+        "Abouts This Record":{
+            "Warning": {
+                "Message": "Please select a single row to show About This Record",
+                "Actions": {
+                  "OK": []
+                }
+              }
+        },
+        "Columns": {
+            
+                "Columns": {
+                  "Show All": [],
+                  "Processed Date": [],
+                  "Run As": [],
+                  "Allow Learners to Bypass Prerequisites": [],
+                  "Allow Managers to Bypass Prerequisites": [],
+                  "Withdraw Learner Self Assignments with This Pending Prerequisite Limit": [],
+                  "Withdraw Manager Assignments with This Pending Prerequisite Limit": [],
+                  "Learner Initial Assignment Status": [],
+                  "Manager Initial Assignment Status": [],
+                  "Learner Self-Service View Mode": [],
+                  "Access Group Created On": [],
+                  "Global Access Group Number": [],
+                  "Global Access Group Name": [],
+                  "Manage Columns...": []
+                }
+        },
+            "Reorder Columns": {
+              "Visible Columns": [
+                "Global Access Group Name",
+                "Global Access Group Number",
+                "Access Group Created On",
+                "Learner Self-Service View Mode",
+                "Manager Initial Assignment Status",
+                "Learner Initial Assignment Status",
+                "Withdraw Manager Assignments with This Pending Prerequisite Limit",
+                "Withdraw Learner Self Assignments with This Pending Prerequisite Limit",
+                "Allow Managers to Bypass Prerequisites",
+                "Allow Learners to Bypass Prerequisites",
+                "Run As",
+                 "Processed Date"
+              ],
+              "Actions": {
+                "Move Up": [],
+                "Move Down": [],
+                "Move to Top": [],
+                "Move to Bottom": [],
+                "OK": [],
+                "Cancel": []
+              }
+            }
+      },
+      "Export To Excel":[],
+      "Remove": [],
+      "Create":{
+        "Create Global Access Group": {
+         "General Information": {
+          "Basic Information": {
+            "Name": [],
+            "Description": [],
+            "View Mode": [
+                "Summary View",
+                "Details View"
+            ]
+          },
+          "Members": {
+            "Add Members to Access Group": {
+              "View": {
+                "Columns": {
+                    "Show All": [],
+                    "Owner": [],
+                    "Usage Type": [],
+                    "Position": [],
+                    "Business Unit": [],
+                    "Manager Name": [],
+                    "Country": [],
+                    "Location": [],
+                    "Job Name": [],
+                    "Primary Email": [],
+                    "Department": [],
+                    "Learning Item Number Prompt Value": [],
+                    "Person Number": [],
+                    "Selection Method": [],
+                    "Name": [],
+                    "Manage Columns...": []
+                  },
+                "Reorder Columns":{
+                    "Visible Columns": [
+                      "Name",
+                      "Selection Method",
+                      "Person Number",
+                      "Learning Item Number Prompt Value",
+                      "Department",
+                      "Primary Email",
+                      "Job Name",
+                      "Location",
+                      "Country",
+                      "Manager Name",
+                      "Business Unit",
+                       "Position",
+                      "Usage Type",
+                      "Owner"
+                    ],
+                    "Actions": {
+                      "Move Up": [],
+                      "Move Down": [],
+                      "Move to Top": [],
+                      "Move to Bottom": [],
+                      "OK": [],
+                      "Cancel": []
+                    }
+                  }
+              },
+              "Add": [
+                "Person Number List",
+                "Analysis Report Criteria",
+                "Learning Assignment Criteria",
+                "Organization Chart Criteria",
+                "Person Criteria"
+              ],
+              "Add a Person": [],
+              "Search": [],
+              "Actions": {
+                "Remove": [],
+                "Edit": []
+              }
+            },
+            "Columns": {
+              "Name": [],
+              "Selection Method": [],
+              "Person Number": [],
+              "Learning Item Number Prompt Value": [],
+              "Department": []
+            }
+          },
+          "Related Materials": {
+              "Visibility": [],
+              "Attachment": []
+          },
+          "Actions": {
+            "Save": [],
+            "Save and Close": [],
+            "Cancel": []
+          }
+        }
+    },
+    "Access Details": {
+        "Enrollment Questionnaire": {
+          "Description": "",
+          "Show Enrollment Questionnaire": [
+            "Don't enable enrollment questionnaires",
+             "Enable enrollment questionnaire creation"
+          ]
+        },
+        "Learner Self-Service Settings": {
+          "Enrollment Settings": {
+            "Initial Learning Record Status": {
+                 "Active":[],
+                 "Requested": [],
+                 "None": []
+            },
+            "Show Enrollment Form": [],
+            "Allow enrollment when required prerequisites aren't achieved": []
+          }
+        },
+        "Manager Self-Service Settings": {
+            "Enrollment Settings": {
+              "Initial Learning Record Status": {
+                "Active":[],
+                "Request Approved": [],
+                "Requested": [],
+                "None": []
+              },
+              "Withdraw enrollments in the pending prerequisite status": [],
+              "Number of days a learner has to complete prerequisites before they're withdrawn": []
+            },
+            "Learning Record Completion Settings": {
+              "Allow a Manager to Mark Enrollments as Complete": []
+            }
+          }
+      }
+      ,
+    "Advanced Rules": {
+        "Run as User Definition": {
+          "Run As": [],
+          "Required Run As": []
+        }
+      }      
+      },
+      "Edit": [],
+      "Reconcile": [],
+      "Columns": {
+        "Global Access Group Name": [],
+        "Global Access Group Number": [],
+        "Access Group Created On": [],
+        "Learner Self-Service View Mode": [],
+        "Manager Initial Assignment Status": [],
+        "Learner Initial Assignment Status": []
+      }
+    }
+  }
+  
