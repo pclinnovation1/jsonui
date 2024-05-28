@@ -1,0 +1,422 @@
+{
+    "Performance": {
+        "My Performance": {
+            "Check-Ins": {
+                "Add": {}
+            },
+            "Performance Documents": {
+                "Add": {}
+            }
+        },
+        "Evaluate Performance": {
+            "Search": [],
+            "Document Status": {
+                "In progress": [],
+                "Completed": [],
+                "Canceled": []
+            },
+            "Current Task Owner": {
+                "Me": []
+            },
+            "Assignment Status": {
+                "Active": [],
+                "Inactive": [],
+                "Suspended": []
+            },
+            "Business Title": {
+                "Manager": []
+            },
+            "Review Period": {
+                "2024 Annual Cycle": []
+            },
+            "Document Type": {
+                "Standard": [],
+                "Anytime": []
+            },
+            "Employees": {
+                "All Evaluatees": [],
+                "Directs Only": []
+            },
+            "Assignment Type": {
+                "Primary": [],
+                "Nonprimary": []
+            },
+            "Actions": {
+                "Transfer": {
+                    "New Manager": [],
+                    "Actions": {
+                        "Transfer": [],
+                        "Close": []
+                    }
+                },
+                "Print": []
+            },
+            "Sort By": [
+                "End date, new to old",
+                "End date, old to new",
+                "Document name, A to Z",
+                "Document name, Z to A"
+            ],
+            "Profile": {
+                "Document name": {
+                    "Competencies": {
+                        "Communication": {
+                            "Rating": [],
+                            "Comments": [],
+                            "Show competency info": {
+                                "Actions": {
+                                    "Close": []
+                                }
+                            },
+                            "Manager Proficiency": [],
+                            "Manager Comment": [],
+                            "Actions": {
+                                "Close": []
+                            }
+                        },
+                        "Data Dissemination": {
+                            "Rating": [],
+                            "Comments": [],
+                            "Show competency info": {
+                                "Actions": {
+                                    "Close": []
+                                }
+                            },
+                            "Manager Proficiency": [],
+                            "Manager Comment": [],
+                            "Actions": {
+                                "Close": []
+                            }
+                        },
+                        "Problem Solving": {
+                            "Rating": [],
+                            "Comments": [],
+                            "Show competency info": {
+                                "Actions": {
+                                    "Close": []
+                                }
+                            },
+                            "Manager Proficiency": [],
+                            "Manager Comment": [],
+                            "Actions": {
+                                "Close": []
+                            }
+                        },
+                        "Result Orientation": {
+                            "Rating": [],
+                            "Comments": [],
+                            "Show competency info": {
+                                "Actions": {
+                                    "Close": []
+                                }
+                            },
+                            "Manager Proficiency": [],
+                            "Manager Comment": [],
+                            "Actions": {
+                                "Close": []
+                            }
+                        },
+                        "Team Work": {
+                            "Rating": [],
+                            "Comments": [],
+                            "Show competency info": {
+                                "Actions": {
+                                    "Close": []
+                                }
+                            },
+                            "Manager Proficiency": [],
+                            "Manager Comment": [],
+                            "Actions": {
+                                "Close": []
+                            }
+                        },
+                        "Summary": {
+                            "Actions": {
+                                "Close": []
+                            }
+                        }
+                    },
+                    "Additional info": {
+                        "_FLEX_ValidationDate": [],
+                        "_FLEX_NumOfsegments": [],
+                        "_FLEX_NumOfVisiblesegments": [],
+                        "Context Value": []
+                    },
+                    "Document dates": {
+                        "Review Period": [],
+                        "Start Date": [],
+                        "End Date": []
+                    },
+                    "Actions": {
+                        "Bypass Employee self-Evalution": []
+                    }
+                },
+                "Employee Name": {
+                    "New Check-in": {
+                        "Select the employee business title": [
+                            "Consultant"
+                        ],
+                        "Review Period": [
+                            "2024 Annual Cycle",
+                            "2023 Annual Cycle",
+                            "2022 Annual Cycle",
+                            "2021 Annual Cycle",
+                            "Default Review Period - Vision Corporation",
+                            "2025 Annual Cycle"
+                        ],
+                        "Template": {
+                            "Check-in 1:1": {
+                                "Date": [],
+                                "Build your agenda": {
+                                    "Enter a discussion topic": [],
+                                    "View Recommended Topics": {
+                                        "Goals": {
+                                            "Performance goals": [],
+                                            "Development goals": []
+                                        },
+                                        "Feedback": {
+                                            "Anytime feedback": [],
+                                            "requested feedback": []
+                                        },
+                                        "Competencies": [],
+                                        "Skills": {
+                                            "Attained": [],
+                                            "developing": []
+                                        },
+                                        "Actions": {
+                                            "Close": []
+                                        }
+                                    },
+                                    "Questionnaire for Employer": {
+                                        "View Questionnaire": {
+                                            "Actions": {
+                                                "Cancel": [],
+                                                "Save": []
+                                            }
+                                        }
+                                    },
+                                    "Actions": {
+                                        "Add": []
+                                    }
+                                }
+                            },
+                            "Disciplinary Action Discussion": {
+                                "Date": [],
+                                "Build your agenda": {
+                                    "View Recommended Topics": {},
+                                    "Questionnaire for Employer": {
+                                        "View Questionnaire": {
+                                            "Actions": {
+                                                "Cancel": [],
+                                                "Save": []
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "Actions": {
+                            "Cancel": [],
+                            "Schedule": []
+                        }
+                    },
+                    "Performance Documents": {
+                        "Add": {
+                            "Review Period": [
+                                "2024 Annual Cycle",
+                                "2023 Annual Cycle"
+                            ],
+                            "Performance Document Name": [
+                                "2024 Annual Performance Discussion",
+                                "2024 inidividual Development Plan (IDP)",
+                                "Anytime Progress Review",
+                                "Dev Plan for Retail",
+                                "Project Evalution"
+                            ],
+                            "Manager": [],
+                            "Start Date": [],
+                            "End Date": [],
+                            "Document Description": [],
+                            "Actions": {
+                                "Cancel": [],
+                                "Submit": []
+                            }
+                        },
+                        "Actions": {
+                            "Transfer": []
+                        },
+                        "Sort By": [
+                            "Document status",
+                            "End date, new to old",
+                            "End date, old to new",
+                            "Document name, A to Z",
+                            "Document name, Z to A"
+                        ],
+                        "Document": {
+                            "Document Name": {
+                                "Competencies": {
+                                    "Communication": {
+                                        "Rating": [],
+                                        "Comments": [],
+                                        "Show competency info": {
+                                            "Actions": {
+                                                "Close": []
+                                            }
+                                        },
+                                        "Manager Proficiency": [],
+                                        "Manager Comment": [],
+                                        "Actions": {
+                                            "Close": []
+                                        }
+                                    },
+                                    "Data Dissemination": {
+                                        "Rating": [],
+                                        "Comments": [],
+                                        "Show competency info": {
+                                            "Actions": {
+                                                "Close": []
+                                            }
+                                        },
+                                        "Manager Proficiency": [],
+                                        "Manager Comment": [],
+                                        "Actions": {
+                                            "Close": []
+                                        }
+                                    },
+                                    "Problem Solving": {
+                                        "Rating": [],
+                                        "Comments": [],
+                                        "Show competency info": {
+                                            "Actions": {
+                                                "Close": []
+                                            }
+                                        },
+                                        "Manager Proficiency": [],
+                                        "Manager Comment": [],
+                                        "Actions": {
+                                            "Close": []
+                                        }
+                                    },
+                                    "Result Orientation": {
+                                        "Rating": [],
+                                        "Comments": [],
+                                        "Show competency info": {
+                                            "Actions": {
+                                                "Close": []
+                                            }
+                                        },
+                                        "Manager Proficiency": [],
+                                        "Manager Comment": [],
+                                        "Actions": {
+                                            "Close": []
+                                        }
+                                    },
+                                    "Team Work": {
+                                        "Rating": [],
+                                        "Comments": [],
+                                        "Show competency info": {
+                                            "Actions": {
+                                                "Close": []
+                                            }
+                                        },
+                                        "Manager Proficiency": [],
+                                        "Manager Comment": [],
+                                        "Actions": {
+                                            "Close": []
+                                        }
+                                    },
+                                    "Summary": {
+                                        "Actions": {
+                                            "Close": []
+                                        }
+                                    }
+                                },
+                                "Additional info": {
+                                    "_FLEX_ValidationDate": [],
+                                    "_FLEX_NumOfsegments": [],
+                                    "_FLEX_NumOfVisiblesegments": [],
+                                    "Context Value": []
+                                },
+                                "Document dates": {
+                                    "Review Period": [],
+                                    "Start Date": [],
+                                    "End Date": []
+                                },
+                                "Actions": {
+                                    "Bypass Employee self-Evalution": []
+                                }
+                            },
+                            "Review Period": [],
+                            "Status": [],
+                            "Document Progress": [],
+                            "Current Task": [],
+                            "Actions": {
+                                "Print": {
+                                    "Format": [
+                                        "PDF",
+                                        "HTML"
+                                    ],
+                                    "Feedback Contributors": {
+                                        "Worker": [],
+                                        "Manager": []
+                                    },
+                                    "Evalution Topics": {
+                                        "Competencies": []
+                                    },
+                                    "Actions": {
+                                        "Print": [],
+                                        "Close": []
+                                    }
+                                },
+                                "Bypass Self-Evaluation": {},
+                                "Transfer Document": {},
+                                "Cancel Document": {}
+                            }
+                        }
+                    }
+                },
+                "Profile picture": [],
+                "Review Period": [],
+                "Status": [],
+                "Document Porgess": [],
+                "Current Task": [],
+                "Employee Rating": [],
+                "Manager Rating": [],
+                "Actions": {
+                    "Bypass Self-Evaluation": {},
+                    "Cancel Document": {},
+                    "Transfer Document": {},
+                    "Print": {
+                        "Format": [
+                            "PDF",
+                            "HTML"
+                        ],
+                        "Feedback Contributors": {
+                            "Worker": [],
+                            "Manager": []
+                        },
+                        "Evalution Topics": {
+                            "Competencies": []
+                        },
+                        "Actions": {
+                            "Print": [],
+                            "Close": []
+                        }
+                    }
+                }
+            }
+        },
+        "All-in-One Evaluations": {
+            "Review Period": [
+                "2024 Annual Cycle"
+            ],
+            "Performance Document": [
+                "Competency Asssesssment"
+            ],
+            "Action": {
+                "cancel": [],
+                "Submit": []
+            }
+        }
+    }
+}
