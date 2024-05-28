@@ -1,0 +1,1562 @@
+{
+    "Career Development": {
+      "Development Goals": {
+        "Search Bar": [],
+        "Actions": {
+          "Worker": [],
+          "Manager": [],
+          "Department": [],
+          "Business Unit": [],
+          "Location": [],
+          "Goal Status": []
+        }
+      },
+      "Setup of Development Goals Mass Assignment": {
+        "Search Bar": [],
+        "Actions": {
+          "Requester": [],
+          "Add": {
+            "Details": {
+              "Process Name": [],
+              "Requester": []
+            },
+            "Eligibility profiles": [],
+            "Who do you want to include?": [],
+            "Who do you want to exclude?": []
+          },
+          "Sort By": {
+            "Last Updated - Latest to Oldest": [],
+            "Last Updated - Oldest to Latest": [],
+            "Process Name - A to Z": [],
+            "Process Name - Z to A": []
+          }
+        }
+      },
+      "Development Goal Library": {
+        "Search Bar": [],
+        "Actions": {
+          "Add": {
+            "Library info": {
+              "Status": [
+                "Inactive",
+                "Active"
+            ],
+              "Business Unit": [],
+              "Type": [
+                "Development",
+                "Performance"],
+              "Department": [],
+              "Available To": [
+                "HR specialist, manager, and worker",
+                "HR specialist",
+                "HR specialist and manager"
+            ],
+              "Job Family": [],
+              "Legal Employer": []
+            },
+            "Basic info": {
+              "Goal Name": [],
+              "Description": [],
+              "Start Date": [],
+              "Target Date": [],
+              "Priority": [],
+              "Category": [],
+              "Related Link": []
+            },
+            "Success Criteria": [],
+            "Comments": [],
+            "This is a measurable goal": [],
+            "Tasks": []
+          },
+          "Filters": {
+            "Goal Type": ["Development"],
+            "Status": ["Active"],
+            "Available To": ["HR specialist"],
+            "Legal Employer": [],
+            "Business Unit": [],
+            "Department": [],
+            "Job Family": [],
+            "Clear": []
+          }
+        }
+      },
+        "Eligibility Profiles": {
+          "Advanced Search": {
+            "Name": [
+              "Contains",
+              "Starts with",
+              "Ends with",
+              "Equals",
+              "Does not equal",
+              "Less than",
+              "Less than or equal to",
+              "Greater than",
+              "Greater than or equal to",
+              "Between",
+              "Not between",
+              "Does not contain",
+              "Is blank",
+              "Is not blank"
+            ],
+            "Assignment to Use": [
+              "Contains",
+              "Starts with",
+              "Ends with",
+              "Equals",
+              "Does not equal",
+              "Less than",
+              "Less than or equal to",
+              "Greater than",
+              "Greater than or equal to",
+              "Between",
+              "Not between",
+              "Does not contain",
+              "Is blank",
+              "Is not blank"
+            ],
+            "Profile Usage": [
+              "Contains",
+              "Starts with",
+              "Ends with",
+              "Equals",
+              "Does not equal",
+              "Less than",
+              "Less than or equal to",
+              "Greater than",
+              "Greater than or equal to",
+              "Between",
+              "Not between",
+              "Does not contain",
+              "Is blank",
+              "Is not blank"
+            ],
+            "Profile Type": [
+              "Contains",
+              "Starts with",
+              "Ends with",
+              "Equals",
+              "Does not equal",
+              "Less than",
+              "Less than or equal to",
+              "Greater than",
+              "Greater than or equal to",
+              "Between",
+              "Not between",
+              "Does not contain",
+              "Is blank",
+              "Is not blank"
+            ],
+            "Actions": {
+              "Search": [],
+              "Reset": [],
+              "Save": {
+                "Create Saved Search": {
+                  "Name": [],
+                  "Set as Default": [],
+                  "Run Automatically": [],
+                  "Actions": {
+                    "ok": [],
+                    "cancel": []
+                  }
+                }
+              },
+              "Add Fields": [
+                "Assignment to Use",
+                "Description",
+                "Name",
+                "Profile Type",
+                "Profile Usage",
+                "Status"
+              ],
+              "Reorder": {
+                "Search Fields": [
+                  "Name",
+                  "Assignment to Use",
+                  "Profile Type",
+                  "Profile Usage"
+                ]
+              }
+            }
+          },
+          "Basic": {
+            "Name": [],
+            "Assignment to Use": [
+              "Any assignment - benefit relationship",
+              "Any assignment - enterprise",
+              "Any assignment - legal employer",
+              "Any assignment exclude inactive - enterprise",
+              "Benefit nonworker assignment - benefit relationship",
+              "Employee assignment only - benefit relationship",
+              "Employee assignment only - enterprise",
+              "Employee assignment only - legal employer",
+              "Primary employee assignment only - benefit relationship",
+              "Primary employee assignment only - enterprise",
+              "Primary employee assignment only - legal employer",
+              "Specific assignment"
+            ],
+            "Profile Usage": [
+              "Benefits",
+              "Checklist",
+              "Compensation",
+              "Employee Communications",
+              "Employee Wellness",
+              "Global",
+              "Goals Management",
+              "Opportunity Marketplace",
+              "Performance",
+              "Personal Brand"
+            ],
+            "Profile Type": [
+              "Dependent",
+              "Participant"
+            ],
+            "Actions": {
+              "Search": [],
+              "Reset": [],
+              "Save": []
+            }
+          },
+          "Saved Search": []
+        },
+        "Search Results": {
+          "Create": {
+            "Eligibility Profile Definition": {
+              "Name": [],
+              "Description": [],
+              "Profile Type": ["Participant"],
+              "Profile Usage": [
+                "Benefits",
+                "Checklist",
+                "Compensation",
+                "Employee Communications",
+                "Employee Wellness",
+                "Global",
+                "Goals Management",
+                "Opportunity Marketplace",
+                "Performance",
+                "Personal Brand"
+              ],
+              "Assignment to Use": ["Specific assignment"],
+              "Status": [
+                "Active",
+                "Closed",
+                "Inactive",
+                "Pending"
+              ],
+              "Actions": {
+                "View Hierarchy": []
+              },
+              "Eligibility Criteria": {
+                "Personal": {
+                  "Gender": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Gender",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Person Type": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Sequence",
+                        "Person Type"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Disabled": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Sequence",
+                        "Disability Type"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Uses Tobacco": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Sequence",
+                        "Tobacco Use"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Service Areas": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Sequence",
+                        "Service Area"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Home Location": {
+                    "Actions": [
+                      "Create",
+                      "Edit",
+                      "Export to Excel"
+                    ],
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Primary",
+                        "Type",
+                        "City",
+                        "State",
+                        "Country",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Postal Code Ranges": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Postal Code Range",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Opted for Medicare": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Opted for Medicare"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Leave of Absence": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Absence Reason",
+                        "Absence Type",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Termination Reason": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Termination Reason",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Qualification": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Qualification Title",
+                        "Qualification Type",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Competency": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Rating Level",
+                        "Name",
+                        "Competency",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Marital Status": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Marital Status"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Religion": {
+                    "Actions": {
+                      "Create": [],
+                      "Edit": [],
+                      "Export to Excel": []
+                    },
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Religion",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  }
+                },
+                "Employment": {
+                  "Assignment Status": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Assignment Status",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Hourly or Salaried": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Hourly or Salaried",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Assignment Category": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Sequence",
+                        "Full Time or Part Time"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Grade": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Grade Set Name",
+                        "Grade",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Job": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Job Set Name",
+                        "Job Name",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Position": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Business Unit",
+                        "Position Code",
+                        "Position",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Payroll": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Legislative Data Group",
+                        "Payroll Name"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Salary Basis": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Salary Basis",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Department": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Name",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Legal Entities": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Legal Employer",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Performance Rating": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Rating Level",
+                        "Timing",
+                        "Name",
+                        "Template Name",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Quartile in Range": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Quartile",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Work Location": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Location Set Name",
+                        "Location Code",
+                        "Location Name",
+                        "Sequence",
+                        "Manage Columns..."
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Range of Scheduled Hours": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Use Work Schedule",
+                        "Rounding",
+                        "Determination",
+                        "Exclude",
+                        "Range of Hours Formula",
+                        "Scheduled Enrollment Periods",
+                        "Maximum Hours",
+                        "Minimum Hours",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Help": [],
+                    "Detach": []
+                  },
+                  "People Manager": {
+                    "Actions": [
+                      "Create",
+                      "Edit"
+                    ],
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "People Manager",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Job Function": {
+                    "Actions": [
+                      "Create",
+                      "Edit"
+                    ],
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Job Function",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Job Family": {
+                    "Actions": [
+                      "Create",
+                      "Edit"
+                    ],
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Job Family",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Hire Date": {
+                    "Actions": [
+                      "Create",
+                      "Edit"
+                    ],
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Unit of Measure",
+                        "Value",
+                        "Day",
+                        "Month",
+                        "Year",
+                        "Operator",
+                        "Date Determination Rule",
+                        "Sequence",
+                        "Manage Columns..."
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Probation Period": {
+                    "Actions": [
+                      "Create",
+                      "Edit"
+                    ],
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Unit of Measure",
+                        "Value",
+                        "Day",
+                        "Month",
+                        "Year",
+                        "Operator",
+                        "Sequence",
+                        "Manage Columns..."
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Business Unit": {
+                    "Actions": [
+                      "Create",
+                      "Edit"
+                    ],
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Business Unit",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  }
+                },
+                "Derived Factors": {
+                  "Age": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Age",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Length of Service": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Length of Service",
+                        "Sequence",
+                        "Manage Columns..."
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Compensation": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Compensation Level",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Hours Worked": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Hours Worked in Period",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Full-Time Equivalent": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Percentage of Full Time",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Combined Age and Length of Service": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Combined Age Length of Service",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": {
+                        "Visible Columns": [
+                          "Process ID",
+                          "Status",
+                          "Scheduled Time",
+                          "Submission Time"
+                        ],
+                        "Actions": {
+                          "OK": [],
+                          "Cancel": []
+                        }
+                    }
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  }
+                },
+                "Other": {
+                  "Benefit Groups": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Enable range validation",
+                        "Lookup",
+                        "Set 2",
+                        "Set 1",
+                        "Exclude",
+                        "User-Defined Criteria",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Health Coverage Selected": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Plan Name",
+                        "Plan Type and Option Name",
+                        "Sequence",
+                        "Manage Columns..."
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Participation in Another Plan": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Plan",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Formula": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Derived Factors Apply",
+                        "Legislative Data Group",
+                        "Formula",
+                        "Sequence",
+                        "Manage Columns..."
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": [],
+                    "Help": []
+                  },
+                  "User-Defined Criteria": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Enable range validation",
+                        "Lookup",
+                        "Set 2",
+                        "Set 1",
+                        "Exclude",
+                        "User-Defined Criteria",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": [],
+                    "Help": []
+                  }
+                },
+                "Labor Relations": {
+                  "Bargaining Unit": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Bargaining Unit",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Labor Union Member": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Labor member",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Union": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Union",
+                        "Sequence"
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  },
+                  "Collective Agreement": {
+                    "View": {
+                      "About This Record": [],
+                      "Columns": [
+                        "End Date",
+                        "Start Date",
+                        "Exclude",
+                        "Bargaining Unit",
+                        "Identification Code",
+                        "Collective Agreement Name",
+                        "Sequence",
+                        "Manage Columns..."
+                      ],
+                      "Detach": [],
+                      "Reorder Columns...": []
+                    },
+                    "Create": [],
+                    "Edit": [],
+                    "Export to Excel": [],
+                    "Delete": [],
+                    "Detach": []
+                  }
+                }
+              }
+            },
+            "Actions": {
+              "Save": [],
+              "Save and Close": [],
+              "Cancel": []
+            }
+          }
+        }
+      
+      },
+      
+      "Scheduled Processes for Development Goals": {
+        "Name": "Manage Goal Scheduled Process",
+        "Description": "Initiates the scheduled process for assigning or updating worker goals.",
+        "Schedule": "As soon as possible",
+        "Submission Notes": [],
+        "Notify me when this process ends": [],
+        "Basic Options": {
+          "Parameters": {
+            "Process Type": {
+              "Assign goal plans": {
+                "Process Name": [],
+                "Goal Plan Start Date": [],
+                "Goal Plan End Date": [],
+                "Effective Date": []
+              },
+            
+              "Mass assign or share goals": {
+                "Process Name": []
+              }
+            }
+          }
+        },
+        "Advanced Options": {
+          "Parameters": {
+            "Process Type": {
+              "Assign goal plans": {
+                "Process Name": [],
+                "Goal Plan Start Date": [],
+                "Goal Plan End Date": [],
+                "Effective Date": []
+              },
+              "Assign goal plan sets": {
+                "Process Name": [],
+                "Start Date": [],
+                "End Date": [],
+                "Effective Date": []
+              },
+              "Mass assign or share goals": {
+                "Process Name": []
+              }
+            }
+          },
+          "Schedule": {
+            "Run": {
+              "As soon as possible": [],
+              "Using a schedule": {
+                "Frequency": [
+                  "Once",
+                  {
+                    "Hourly/Minute": {
+                      "Time Between Runs": {
+                        "Hours": [],
+                        "Minutes": []
+                      },
+                      "Start Date": [],
+                      "End Date": [],
+                      "Manage Times": []
+                    }
+                  },
+                  {
+                    "Daily": {
+                      "Days Between Runs": [],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Manage Times": []
+                    }
+                  },
+                  {
+                    "Weekly": {
+                      "Weeks Between Runs": [],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Manage Times": []
+                    }
+                  },
+                  {
+                    "Monthly": {
+                      "Repeat": ["By day", "By date"],
+                      "Week of the Month": ["First", "Second", "Third", "Fourth", "Last"],
+                      "Day of the Week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Manage Times": []
+                    }
+                  },
+                  {
+                    "Yearly": {
+                      "Month": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                      "Repeat": ["By day", "By date"],
+                      "Date": [
+                        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+                        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, "Last day of month"
+                      ],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Manage Times": []
+                    }
+                  },
+                  {
+                    "User-Defined": {
+                      "Schedule Time": {
+                        "Add Time": [],
+                        "Remove Time": [],
+                        "Type": []
+                      }
+                    }
+                  },
+                  "Use a Saved Schedule"
+                ],
+                "Start Date": [],
+                "End Date": []
+              }
+            }
+          }
+        },
+        "Notification": {
+          "View": {
+            "Columns": {
+              "Show All": [],
+              "Address Type": [],
+              "Condition": [],
+              "Recipient": [],
+              "Manage Columns": []
+            },
+            "Reorder Columns": []
+          },
+          "Create": {
+            "Address Type": [
+              "User ID",
+              "Email Address"
+            ],
+            "Recipient": [],
+            "Condition": [
+              "All",
+              "On Success",
+              "On Warning",
+              "On Error"
+            ],
+            "Buttons": {
+              "OK": [],
+              "Cancel": []
+            }
+          },
+          "Delete": []
+        },
+        "Actions": {
+          "Process Options": {
+            "Language": [],
+            "Territory": [],
+            "Time Zone": [],
+            "Number Format": [],
+            "Time Format": [],
+            "Date Format": [],
+            "Currency": [],
+            "Actions": {
+              "OK": [],
+              "Cancel": []
+            }
+          },
+          "Submit": [],
+          "Cancel": [],
+          "Monitor Process": {
+            "Manage Scheduled Processes": {
+                "Search": {
+                  "Fields": {
+                    "Name": [],
+                    "Process ID": [],
+                    "Status": [],
+                    "Submission Time": {
+                      "Operator": ["Before", "After", "Between", "Not Between"],
+                      "Value": []
+                    },
+                    "Submission Notes": {
+                      "Operator": ["Equals", "Ends With", "Starts With", "Contains"],
+                      "Value": []
+                    },
+                    "Submitted By": []
+                  },
+                  "Saved Search": ["Last hour", "Cancelable Processes", "Last 12 hours", "Last 24 hours", "Last 48 hours", "Last 72 hours"],
+                  "Actions": {
+                    "Search": [],
+                    "Reset": [],
+                    "Download Results": []
+                  }
+                },
+                "View": {
+                  "Flat List": {
+                    "Actions": {
+                      "Schedule New Process": {
+                        "Type": {
+                          "Job": {
+                            "Name": [],
+                            "Description": []
+                          },
+                          "Job Set": {
+                            "Name": [],
+                            "Description": []
+                          }
+                        },
+                        "Buttons": {
+                          "OK": [],
+                          "Cancel": []
+                        }
+                      },
+                      "Resubmit": [],
+                      "Put On Hold": [],
+                      "Cancel Process": [],
+                      "Release Process": [],
+                      "Edit Schedule": [],
+                      "Edit Output": [],
+                      "Force Cancel": [],
+                      "Refresh": [],
+                      "Cancel Processes in Bulk": []
+                    },
+                    "View": {
+                      "Columns": [
+                        "Show All",
+                        "Start Time",
+                        "Submission Notes",
+                        "Submitted By",
+                        "Completion Time",
+                        "Submission Time",
+                        "Scheduled Time",
+                        "Status",
+                        "Process ID",
+                        "Metadata Name",
+                        "Name",
+                        "Manage Columns"
+                      ],
+                      "Reorder Columns": []
+                    }
+                  },
+                  "Hierarchy": {
+                    "Actions": {
+                      "Schedule New Process": {
+                        "Type": {
+                          "Job": {
+                            "Name": [],
+                            "Description": []
+                          },
+                          "Job Set": {
+                            "Name": [],
+                            "Description": []
+                          }
+                        },
+                        "Buttons": {
+                          "OK": [],
+                          "Cancel": []
+                        }
+                      },
+                      "Resubmit": [],
+                      "Put On Hold": [],
+                      "Cancel Process": [],
+                      "Release Process": [],
+                      "Edit Schedule": [],
+                      "Edit Output": [],
+                      "Force Cancel": [],
+                      "Refresh": [],
+                      "Cancel Processes in Bulk": []
+                    },
+                    "View": {
+                      "Columns": [
+                        "Show All",
+                        "Name",
+                        "Start Time",
+                        "Submission Notes",
+                        "Submitted By",
+                        "Completion Time",
+                        "Submission Time",
+                        "Scheduled Time",
+                        "Status",
+                        "Process ID",
+                        "Metadata Name",
+                        "Manage Columns"
+                      ],
+                      "Expand": [],
+                      "Expand All Below": [],
+                      "Collapse All Below": [],
+                      "Expand All": [],
+                      "Collapse All": [],
+                      "Scroll to First": [],
+                      "Scroll to Last": [],
+                      "Reorder Columns...": []
+                    }
+                  }
+                },
+                "Saved Search": [
+                  "Last hour",
+                  "Cancelable Processes",
+                  "Last 12 hours",
+                  "Last 24 hours",
+                  "Last 48 hours",
+                  "Last 72 hours"
+                ]
+              }
+          }
+        }
+      }
+    }
+        
+      
