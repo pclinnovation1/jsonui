@@ -1,0 +1,791 @@
+{
+    "Learners":{
+        "Learning Assingment": {
+              "Search Learners": {
+                    "Search Learners": {
+                        "Advanced Filters": {
+                      "Match": {
+                        "All": [],
+                        "Any": []
+                      },
+                      "Fields": {
+                        "Name": [],
+                        "Person Keyword": [],
+                        "Assignment Status": [],
+                        "Initiative Name": [],
+                        "Learning Item Title": []
+                      },
+                      "Actions": {
+                        "Saved Search": [],
+                        "Search": [],
+                        "Reset": [],
+                        "Save": []
+                      }
+                    },
+                    "Basic Filters": {
+                                "Basic Filters":{
+                              "Match": {
+                                "All": [],
+                                "Any": []
+                              },
+                              "Fields": {
+                                "Name": [],
+                                "Primary Email": [],
+                                "Person Keyword": [],
+                                "Location": [],
+                                "Department": [],
+                                "Job": [],
+                                "Manager": [],
+                                "Include Terminated or Canceled Work Relationships": [],
+                                "Business Unit": [],
+                                "Learning Item Type": [],
+                                "Assignment Status": [],
+                                "Completion Date": [],
+                                "Initiative Name": [],
+                                "Learning Item Title": [],
+                                "Assignment Type": [],
+                                "Plan Name": [],
+                                "Net Amount Paid": [],
+                                "Plan Record Status": [],
+                                "Assignment Date": [],
+                                "Context Segment_1": [],
+                                "Context Segment_2": []
+                              },
+                              "Actions": {
+                                "Saved Search": [],
+                                "Search": [],
+                                "Reset": [],
+                                "Save": [],
+                                "Add Fields": [],
+                                "Reorder": []
+                              }
+                            }
+                },
+                    "Learner Results": {
+                      "View": {
+                        "About This Record": [],	
+                       "Columns": [
+                            "Show All",
+                            "Learning Item Additional Attributes",
+                            "Learning Specialization Additional Attributes",
+                            "Learning Request Additional Attributes",
+                            "Request Comments",
+                            "Purchase Order Number",
+                            "Complete By",
+                            "Start on or After",
+                            "Net Amount Paid",
+                            "Current Waitlist Position",
+                            "Plan Record Status",
+                            "Plan Name",
+                            "Person Number",
+                            "Initiative Number",
+                            "Assignment Number",
+                            "Assignment Profile Number",
+                            "Actual Score",
+                            "Actual Effort in Units",
+                            "Actual Effort",
+                            "Learning Item Type",
+                            "Recommendation Category",
+                            "Assignment Comments",
+                            "Initiative Name",
+                             "Due Date",
+                            "Completion Date",
+                            "Evaluation",
+                            "Assignment Date",
+                            "Manager",
+                            "Progress",
+                             "Assignment Type",
+                            "Status",
+                             "Learning Item Title",
+                             "Name"
+                       ],	
+                       "Sort": {
+                        "Ascending":[],
+                        "Descending":[],
+                        "Advanced": {
+                            "Advanced Sort": {
+                              "Sort By": [],
+                              "Then By": [
+                                {
+                                  "First": [],
+                                  "Order": ["Ascending", "Descending"]
+                                },
+                                {
+                                  "Second": [],
+                                  "Order": ["Ascending", "Descending"]
+                                },
+                                {
+                                  "Third": [],
+                                  "Order": ["Ascending", "Descending"]
+                                }
+                              ],
+                              "Actions": {
+                                "OK": [],
+                                "Cancel": []
+                              }
+                            }
+                          }
+                          
+                       },	
+                       "Reorder Columns...": {
+                        "Reorder Columns": {
+                            "Visible Columns": [
+                              "Name",
+                              "Learning Item Title",
+                              "Status",
+                              "Assignment Type",
+                              "Progress",
+                              "Manager",
+                              "Assignment Date",
+                              "Evaluation",
+                             "Completion Date",
+                                 "Due Date",
+                                "Initiative Name",
+                                "Assignment Comments",
+                                    "Recommendation Category",
+                                   "Learning Item Type",
+                                   "Actual Effort",
+                                     "Actual Effort in Units",
+                                    "Actual Score",
+                                   "Assignment Profile Number",
+                                     "Assignment Number",
+                                        "Initiative Number",
+                                        "Person Number"
+                            ],
+                            "Actions": {
+                              "Move Up": [],
+                              "Move Down": [],
+                              "Move to Top": [],
+                              "Move to Bottom": [],
+                              "OK": [],
+                              "Cancel": []
+                            }
+                          }
+                       }
+
+                      },
+                      "Format": [],
+                      "Export To Excel":[],
+                      "Add Learners": {
+                        "Voluntary Assignment": [],	
+                        "Required Assignment": [],	
+                        "Recommendation": []
+                      },
+                      "Change Status": [
+                        "Bypass and Approve",
+                        "Activate Assignment",	
+                          "Bypass and Complete",	
+                         "Withdraw Learners",
+                         "Waive Prerequisites",	
+                           "Delete Assignment",	
+                           "Bypass and Reject",	
+                           "Waitlisted",
+                          "Pending Active",	
+                          "Undo Complete",	
+                         "Undo Bypass Complete"	
+                      ],
+                      "Edit Assignment": [],
+                      "Manage Activities": [],
+                      "More Actions": [
+                        "View Approval Task",
+                         "Email Learner",
+                         "Email Line Manager",	
+                          "Email Learner and Line Manager",	
+                          "Send Alert"
+                      ],
+                      "Columns": {
+                        "Name": [],
+                        "Learning Item Title": [],
+                        "Status": [],
+                        "Assignment Type": [],
+                        "Progress": [],
+                        "Manager": [],
+                        "Assignment Date": [],
+                        "Completion Date": [],
+                        "Recommendation Category": [],
+                        "Learning Item Type": [],
+                        "Person Number": []
+                      }
+                    }
+                },
+              "Search Placeholder Seats": {
+                    "Search": {
+                        "Advanced": {
+                      "Match": {
+                        "All": [],
+                        "Any": []
+                      },
+                      "Fields": {
+                        "Name": [],
+                        "Learning Item Type": [],
+                        "Learning Item": [],
+                        "Plan Record Status": [],
+                        "Plan Name": []
+                      },
+                      "Actions": {
+                        "Saved Search": [],
+                        "Search": [],
+                        "Reset": [],
+                        "Save": []
+                      }
+                    },
+                         "Basic Filters": {
+                            "Match": {
+                              "All": [],
+                              "Any": []
+                            },
+                            "Fields": {
+                              "Name": [],
+                              "Learning Item Type": [],
+                              "Due Date": [],
+                              "Assignment Date": [],
+                              "Learning Item": [],
+                              "Assignment Type": [],
+                              "Assigned By": [],
+                              "Plan Record Status": [],
+                              "Plan Name": [],
+                              "Context Segment 1": [],
+                              "Context Segment 2": []
+                            },
+                            "Actions": {
+                              "Saved Search": [],
+                              "Search": [],
+                              "Reset": [],
+                              "Save": [],
+                              "Add Fields": [],
+                              "Reorder": []
+                            }
+                          }
+                    },
+                    "Search Results": {
+                      "View": {
+                        "About This Record": [],	
+                            "Columns": [],	
+                             "Sort": [],	
+                           "Reorder Columns...":[]
+                      },
+                      "Format": {
+                        "Resize Columns": []
+                      },
+                      "Export To Excel": [],
+                      "Assign Placeholder Seat": {
+                            "Person Search": {
+                              "Search": {
+                                "Advanced":{
+                                "Match": {
+                                  "All": [],
+                                  "Any": []
+                                },
+                                "Fields": {
+                                  "Business Unit": [],
+                                  "Legal Employer": [],
+                                  "Job Family": [],
+                                  "Worker Category": [],
+                                  "Location": [],
+                                  "Hire Date": [],
+                                  "Manager": [],
+                                  "System Person Type": [],
+                                  "User Person Type": []
+                                },
+                                "Actions": {
+                                  "Saved Search": [],
+                                  "Search": [],
+                                  "Reset": []
+                                }
+                              },
+                              "Basic":{
+                                "Match": {
+                                  "All": [],
+                                  "Any": []
+                                },
+                                "Fields": {
+                                  "Business Unit": [],
+                                  "Legal Employer": [],
+                                  "Job Family": [],
+                                  "Worker Category": [],
+                                  "Location": [],
+                                  "Hire Date": [],
+                                  "Manager": [],
+                                  "System Person Type": [],
+                                  "User Person Type": []
+                                },
+                                "Actions": {
+                                  "Saved Search": [],
+                                  "Search": [],
+                                  "Reset": [],
+                                  "Add Fields": [
+                                    "Business Unit",	
+                                    "Country",	
+                                     "Department",	
+                                     "Effective End Date",	
+                                      "Effective Start Date",	
+                                     "Hire Date",
+                                      "Include Terminated or Canceled Work Relationships",	
+                                     "Job"
+                                  ],
+                                  "Reorder": []
+                                }
+                              },
+                              "Search Results": {
+                                "View": { 
+                                    "About This Record":[],
+                                "Columns":[],	
+                                "Sort":{
+                                    "Ascending":[],
+                                    "Descending":[]
+                                },	
+                                "Reorder Columns...":[]
+                              },
+                                "Format": [],
+                                "Columns": {
+                                  "Name": [],
+                                  "Person Number": [],
+                                  "Department": [],
+                                  "Columns Hidden": []
+                                },
+                                "Actions": {
+                                  "Submit": [],
+                                  "Cancel": []
+                                }
+                              }
+                            },
+                              "Search Results": {
+                                "View":{ 
+                                    "About This Record":[],
+                                "Columns":[],	
+                                "Sort":[],	
+                                "Reorder Columns...":[]
+                              },
+                                "Format": [],
+                                "Columns": {
+                                  "Name": [],
+                                  "Person Number": [],
+                                  "Department": [],
+                                  "Columns Hidden": []
+                                },
+                                "Actions": {
+                                  "Submit": [],
+                                  "Cancel": []
+                                }
+                              }
+                            } 
+                      },
+                      "Columns": {
+                        "Placeholder Name": [],
+                        "Learning Item": [],
+                        "Status": [],
+                        "Assignment Type": [],
+                        "Assignment Date": [],
+                        "Completion Date": [],
+                        "Due Date": [],
+                        "Learning Item Type": []
+                      }
+                    } 
+              },
+              "Search Skipped Assingments": {
+                    "Search": {
+                        "Advanced Filters":{
+                      "Match": {
+                        "All": [],
+                        "Any": []
+                      },
+                      "Fields": {
+                        "Learner Name": [],
+                        "Reason Code": [],
+                        "Learning Item Title": [],
+                        "Assignment Profile Number": []
+                      },
+                      "Actions": {
+                        "Saved Search": [],
+                        "Search": [],
+                        "Reset": [],
+                        "Save": []
+                      }
+                    },
+
+                    "Basic Filters": {
+                        "Match": {
+                          "All": [],
+                          "Any": []
+                        },
+                        "Fields": {
+                          "Learner Name": [],
+                          "Reason Code": [],
+                          "Learning Item Title": [],
+                          "Assignment Profile Number": []
+                        },
+                        "Actions": {
+                          "Saved Search": [],
+                          "Search": [],
+                          "Reset": [],
+                          "Save": [],
+                          "Add Fields": [],
+                          "Reorder": []
+                        }
+                      }
+                      },
+                    "Search Results": {
+                      "View": {
+                        "About This Record":[],	
+                         "Columns": {
+                            "Show All": [],
+                            "Person ID": [],
+                            "Person Number": [],
+                            "Learning Item Number": [],
+                            "Learning Item Title": [],
+                            "Assignment Profile Number": [],
+                            "Assignment Record Number": [],
+                            "Assignment Type": [],
+                            "Reason Code": [],
+                            "Learner Name": [],
+                            "Manage Columns...": []
+                          },	
+                          "Sort": {
+                            "Ascending":[],
+                            "Descending":[]
+                          },	
+                          "Reorder Columns...":[]	
+                      },
+                      "Export To Excel":[],
+                      "Mass Action": {
+                        "Purge Assignments": {
+                            "Records to Use": {
+                              "Use the 0 selected records": [],
+                              "Use all 0 results of the search criteria": []
+                            },
+                            "Submission Notes": [],
+                            "Start date": [],
+                            "Actions": {
+                              "Submit": [],
+                              "Cancel": []
+                            }
+                          }
+                      },
+                      "Columns": {
+                        "Learner Name": [],
+                        "Reason Code": [],
+                        "Assignment Type": [],
+                        "Assignment Record Number": [],
+                        "Assignment Profile Number": [],
+                        "Learning Item Title": [],
+                        "Learning Item Number": [],
+                        "Person Number": []
+                      }
+                    }
+                  }
+        },
+        "Learning Initiatives": {
+                "Search Learning Initiatives": {
+                    "Advanced Filters": {
+                  "Match": {
+                    "All": [],
+                    "Any": []
+                  },
+                  "Fields": {
+                    "Keyword": [],
+                    "Learning Item": [],
+                    "Initiative Type": []
+                  },
+                  "Actions": {
+                    "Saved Search": [],
+                    "Search": [],
+                    "Reset": [],
+                    "Save": []
+                  }
+                }
+                },
+                "Learning Initiative Results": {
+                  "View": {
+                    "About This Record":[],	
+                      "Columns": {
+                        "Show All": [],
+                        "Learning Item Additional Attributes": [],
+                        "Learning Specialization Additional Attributes": [],
+                        "Processed Date": [],
+                        "Run As": [],
+                        "Initiative Number": [],
+                        "Person Number": [],
+                        "Learning Item Type": [],
+                        "Learning Item Title": [],
+                        "Initiative Start Date": [],
+                        "Initiative Type": [],
+                        "Initiative Status": [],
+                        "Initiative Name": []
+                      },	
+                       "Sort":{
+                        "Ascending":[],
+                        "Descending":[]
+                       },	
+                       "Reorder Columns...":[]
+                  },
+                  "Format": [],
+                  "Export To Excel":[],
+                  "Add Initiative": {
+                    "Voluntary": {
+                        "Voluntary Learning Initiative": {
+                          "Fields": {
+                            "Initiative Name": [],
+                            "Initiative Number": [],
+                            "Description": [],
+                            "Initiative Start Date": [],
+                            "Initiative Stop Date": []
+                          },
+                          "Request Type": {
+                            "Catalog Learning Item": [],
+                            "Noncatalog Item": []
+                          },
+                          "Assign": {
+                            "Select Item": [],
+                            "Assign As": [],
+                            "With this note": []
+                          },
+                          "Learning Request Details": {
+                            "Fields": {
+                              "Start on or After": [],
+                              "Complete By": [],
+                              "Purchase Order Number": [],
+                              "Justification": [],
+                              "Context Segment": []
+                            }
+                          },
+                          "Related Materials": {
+                            "Columns": {
+                              "Visibility": [],
+                              "Attachment": []
+                            },
+                            "Rows": [
+                              {
+                                "Visibility": "",
+                                "Attachment": ""
+                              },
+                              {
+                                "Visibility": "",
+                                "Attachment": ""
+                              }
+                            ]
+                          },
+                          "Actions": {
+                            "Next": [],
+                            "Cancel": []
+                          }
+                        }
+                      },	
+                   "Required":{
+                    "Required Learning Initiative":{
+                            "Fields": {
+                              "Initiative Name": [],
+                              "Initiative Number": [],
+                              "Description": [],
+                              "Initiative Start Date": [],
+                              "Initiative Stop Date": []
+                            },
+                            "Request Type": {
+                              "Catalog Learning Item": [],
+                              "Noncatalog Item": []
+                            },
+                            "Assign": {
+                              "Select Item": [],
+                              "Assign As": [],
+                              "With this note": [],
+                              "Initial Due Date Option": [],
+                              "Initial Due Date": [],
+                              "Ongoing Due Date": []
+                            }
+                           
+                          },
+                          "Learning Request Details": {
+                            "Fields": {
+                              "Start on or After": [],
+                              "Complete By": [],
+                              "Purchase Order Number": [],
+                              "Justification": [],
+                              "Context Segment": []
+                            }
+                          },
+                          "Related Materials": {
+                            "Columns": {
+                              "Visibility": [],
+                              "Attachment": []
+                            },
+                            "Rows": [
+                              {
+                                "Visibility": "",
+                                "Attachment": ""
+                              },
+                              {
+                                "Visibility": "",
+                                "Attachment": ""
+                              }
+                            ]
+                          },
+                        "Actions":{
+                            "Next":[],
+                            "Cancel":[]
+                        }
+                    
+                   },	
+                   "Recommend":{
+                    "Recommended Learning Initiative": {
+                        "Fields": {
+                          "Initiative Name": [],
+                          "Initiative Number": [],
+                          "Description": [],
+                          "Initiative Stop Date": []
+                        },
+                        "Assign": {
+                          "Select Item": [],
+                          "Assign As": [],
+                          "Recommendation Category": [],
+                          "With this note": []
+                        },
+                        "Actions": {
+                          "Next": [],
+                          "Cancel": []
+                        }
+                      }
+                   }
+                  },
+                  "Edit Initiative": [],
+                  "Cancel Initiative": [],
+                  "Reconcile": [],
+                  "Columns": {
+                    "Initiative Name": [],
+                    "Initiative Status": [],
+                    "Initiative Type": [],
+                    "Initiative Start Date": [],
+                    "Learning Item Title": [],
+                    "Learning Item Type": [],
+                    "Person Number": []
+                  }
+                }
+        },
+        "Programs": {
+            "Search": {
+                "Advanced Filters": {
+                "Match": {
+                  "All": [],
+                  "Any": []
+                },
+                "Fields": {
+                  "Keyword": [],
+                  "Program Participant Size": []
+                },
+                "Actions": {
+                  "Saved Search": [],
+                  "Search": [],
+                  "Reset": [],
+                  "Save": []
+                }
+              },
+              "Basic Filters": {
+                "Match": {
+                  "All": [],
+                  "Any": []
+                },
+                "Fields": {
+                  "Keyword": [],
+                  "Program Participant Size": []
+                },
+                "Actions": {
+                  "Advanced": [],
+                  "Saved Search": [],
+                  "Search": [],
+                  "Reset": [],
+                  "Save": []
+                }
+              },
+              "Search Results": {
+                "View": [],
+                "Format": [],
+                "Create": [],
+                "Edit": [],
+                "Columns": {
+                  "Title": [],
+                  "Program Participant Size": [],
+                  "Assignment Count by Status": {
+                    "Requested": [],
+                    "Request Approved": [],
+                    "Active": []
+                  },
+                  "Plan Records in Final Status": []
+                }
+              }
+            },
+              "Search Results": {
+                "View": {
+                    "About This Record":[],	
+                    "Columns":[],	
+                     "Sort":{
+                        "Ascending":[],
+                        "Descending":[]
+                     },	
+                     "Reorder Columns...":[]
+                },
+                "Format": [],
+                "Export To Excel":[],
+                "Create": {
+                        "Create Learning Program": {
+                          "Basic Information": {
+                            "Name": [],
+                            "Description": []
+                          },
+                          "Program Participants": {
+                            "Synchronize Learners": {
+                              "Automatically": [],
+                              "Manually": []
+                            },
+                            "Actions": {
+                              "View": [],
+                              "Add": [
+                                "Person",	
+                               "Person Number List",	
+                                  "Analysis Report Criteria",	
+                                 "Learning Assignment Criteria",	
+                                "Organization Chart Criteria",	
+                                 "Person Criteria"
+                              ],
+                              "Add a Person": [],
+                              "Remove": [],
+                              "Edit": []
+                            },
+                            "Columns": {
+                              "Name": [],
+                              "Selection Method": [],
+                              "Person Number": [],
+                              "Learning Item Number Prompt Value": [],
+                              "Department": [],
+                              "Primary Email": [],
+                              "Job Name": [],
+                              "Location": [],
+                              "Country": [],
+                              "Manager Name": [],
+                              "Business Unit": [],
+                              "Position": [],
+                              "Usage Type": [],
+                              "Owner": []
+                            }
+                          },
+                          "Actions": {
+                            "Save and Close": [],
+                            "Cancel": []
+                          }
+                        }
+                      
+                },
+                "Edit": [],
+                "Columns": {
+                  "Title": [],
+                  "Program Participant Size": [],
+                  "Assignment Count by Status": {
+                    "Requested": [],
+                    "Request Approved": [],
+                    "Active": []
+                  },
+                  "Plan Records in Final Status": []
+                }
+              }
+        }
+              }
+              }
+              }
+            
