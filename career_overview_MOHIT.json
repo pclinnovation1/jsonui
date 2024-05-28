@@ -1,0 +1,93 @@
+{
+    "Review Period":[],
+    "My Team": {
+      "Search Person":[],
+      "Filters":{
+        "Show Filters":{
+            "Display":{
+                "All Report":[],
+                "Direct":[],
+                "Actions" :{
+                   "Clear":[]
+                }
+            },
+            "Manager Type":{
+                "Line Manager":[],
+                "Project Manager":[],
+                "Regional Manager":[],
+                "Mentor / Mentee Relationship":[],
+                "Resource Manager":[],
+                "Legal Relationship":[],
+                "Actions": {
+                    "Clear":[]
+                }
+            },
+            "Worker Type":{
+                "Contingent worker":[],
+                "Employee":[],
+                "Nonworker":[],
+                "Pending worker":[],
+                "Actions": {
+                    "Clear":[]
+                }
+            },
+          
+            "Assignment Type":{
+                "Nonprimar":[],
+                "Primary":[],
+                "Actions": {
+                    "Clear":[]
+                }
+            },
+            "Assignment Status":{
+                "Active":[],
+                "Suspended":[],
+                "Actions": {
+                    "Clear":[]
+                }
+            },
+          "Job":{
+            "Name":[],
+            "Code":[],
+            "Job Family Name":[]
+          },
+          "Personalize Filters":{
+            "Actions":{
+              "Display":[],
+              "Manager Type":[],
+              "Worker Type":[],
+              "Assignment Type":[],
+              "Assignment Status":[],
+              "Job":[],
+              "Grade":[],
+              "Position":[],
+              "Actions":{
+                "OK":[],
+                "Cancel":[]
+              }
+            }
+          }, 
+          "Actions": {
+            "Collapse All":[],
+            "Expand All":[],
+            "Reset":[]
+          }
+        },
+        "Hide Filters":{}
+      },
+    "Sort By": {
+        "Business title ascending":[],
+        "Business title descending":[],
+        "Name ascending":[],
+        "Name descending":[],
+        "Worker type ascending":[],
+        "Worker type descending":[]
+      }
+  }
+}  
+
+
+
+
+
+
