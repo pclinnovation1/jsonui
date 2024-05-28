@@ -1,0 +1,1262 @@
+{
+    "Catalog Resources":{
+      "Content": {
+        "Filters": {
+            "Content Type": [	
+                "Assessment",
+                "Document",
+                "HACP",
+                "Library Cover Art",
+                "Observation Checklist",
+                "PDF File",
+                "SCORM 1.2",
+                "SCORM 2004",
+                "Unknown",
+                "Video",
+                "Web Link"],
+            "Status": [
+                "Active",
+                "Inactive",
+                "Deleted",
+                "Ready for Processing",
+                "Processing Failed",
+                "New",
+                "Currently Being Processed",
+                "Archived"
+                ],
+            "Start Date": {
+                "Date": [],
+                "Action":{
+                    "Clear": [],
+                    "OK": []
+                }
+            },
+            "Created By": [],
+            "Personalize Filters": {
+                "Personalize Saved Search":{
+                    "Content Type": {},
+                    "Status": {},
+                    "Refresh Status": {},
+                    "Start Date": {},
+                    "End Date": {},
+                    "Author": {},
+                    "Created By": {},
+                    "Creation Date": {},
+                    "External Identifier": {},
+                    "Actions":{
+                        "OK": [],
+                        "Cancel": []
+                    }
+                }
+            },
+            "Actions":{
+                "Reset": [],
+                "Expand All": [],
+                "Collapse All": []
+            }
+        },
+       "Content Title": [],
+       "Content Number": [],
+       "Content Type": [],
+       "Status": [],
+       "Add":{
+        "Add Online Content":{
+            "General Information":{
+                "Title": [],
+                "Start Date": [],
+                "End Date": []
+            },
+            "Contents":{},
+            "Actions":{
+                "Submit": [],
+                "Cancel": []
+            }
+        },
+        "Add Video":{
+            "General Information":{
+                "Title": [],
+                "Description": [],
+                "Start Date": [],
+                "End Date": []
+            },
+            "Contents":{},
+            "Actions":{
+                "Submit": [],
+                "Cancel": []
+            }
+        },
+        "Add Web Link":{
+            "General Information":{
+                "Title": [],
+                "Status": [
+                    "Active",
+                    "Inactive"
+                ],
+                "Description": [],
+                "Start Date": [],
+                "End Date": []
+            },
+            "Contents":{
+                "URL": []
+            },
+            "Advanced":{
+                "Mark as complete when learner opens the web link": []
+            },
+            "Actions":{
+                "Submit": [],
+                "Cancel": []
+            }
+        },
+        "Add PDF File":{
+            "General Information":{
+                "Title": [],
+                "Description": [],
+                "Start Date": [],
+                "End Date": []
+            },
+            "Contents":{},
+            "Actions":{
+                "Submit": [],
+                "Cancel": []
+            }
+        },
+        "Add Assessment": {
+            "General Information":{
+                "Title": [],
+                "Status": [
+                    "Active",
+                    "Inactive"
+                ],
+                "Description": [],
+                "Start Date": [],
+                "End Date": []
+            },
+            "Contents":{
+                "Assessment": []
+            },
+            "Advanced": {
+                "Enable time limit": [],
+                "Enable Scoring": [],
+                "Mastery Score": [],
+                "Recorded Attempts": [
+                    "Single",
+                    "Unlimited",
+                    "Limited Number"
+                ],
+                "Recorded Attempt Review": [
+                    "Not allowed",
+                    "Most recent only"
+                ],
+                "Only allow reviews for passed attempts": [],
+                "Enable learner to view response feedback": [],
+                "Enable learning administrator to view the score": [],
+                "Enable learner to view the score": []
+                },
+            "Actions":{
+                "Submit": [],
+                "Cancel": []
+            }
+        },
+        "Add Observation Checklist": {
+            "General Information":{
+                "Title": [],
+                "Status": [
+                    "Active",
+                    "Inactive"
+                ],
+                "Description": [],
+                "Start Date": [],
+                "End Date": []
+            },
+            "Contents":{
+                "Observation Checklist":{
+                    "Observation Checklist":[],
+                    "Version": [],
+                    "Folder": [],
+                    "Scored": []
+                }
+            },
+            "Observation Checklist":{
+                "Observer Type": [
+                    "Individuals",
+                    "Management Hierarchy",
+                    "Representative"
+                ]
+            },
+            "Advanced": {
+             "Observer Checklist":{
+                "Recorded Attempts": [
+                    "Single",
+                    "Unlimited",
+                    "Limited Number"
+                ],
+                "Recorded Attempt Review": [
+                    "Not allowed",
+                    "Most recent only"
+                ],
+                "Only allow reviews for passed attempts": [],
+                "Let observers reassign to anyone": []
+                },
+                "Self-Assessment Checklist":{
+                    "Require self-assessment by learner": []
+                }
+            },
+            "Actions":{
+                "Submit": [],
+                "Cancel": []
+            }
+        },
+        "Add Cover Art": {
+            "General Information":{
+                "Title": [],
+                "Description": [],
+                "Start Date": [],
+                "End Date": []
+            },
+            "Contents":{},
+            "Actions":{
+                "Submit": [],
+                "Cancel": []
+            }
+       },
+       "View":{
+        "About This Record":[],
+        "Columns":[	
+         "Items Where Used",	
+         "External Identifier",	
+         "Version",	
+         "Creation Date",	
+         "Created By",	
+         "Author",	
+         "End Date",	
+         "Start Date",	
+         "Refresh Status",	
+         "Status",	
+         "Content Type",	
+         "Content Number",	
+         "Content Title"],
+         "Freeze": [],
+         "Sort": [],
+         "Reorder Columns": []
+        },
+       "Format":[
+        "Resize Columns"
+    ],
+       "Actions":[
+        "Enable for Refresh",
+        "Disable for Refresh",
+        "Process"
+        ],
+       "Action button": {
+            "Search":{},
+            "Hide Filters": [],
+            "Delete": [],
+            "Refresh": [],
+            "Freeze": [],
+            "Export to excel": []
+        }
+        }
+     },
+      "Instructors": {
+                "Filters": {
+                        "Department": [],
+                        "City": [],
+                        "Country": [],
+                        "Training Supplier":[],
+                        "Actions":{
+                            "Cancel": [],
+                            "See Results": []
+                        }
+                },
+                "Name": {},
+                "Instructor Resource Number": {},
+                "Person Number": {},
+                "Department": {},
+                "City": {},
+                "Country": {},
+                "Training Supplier": {},
+                "Address Line 1": {},
+                "Virtual Classroom Provider": {},
+                "Actions": {},
+                "Add": {
+                    "New Instructor":{
+                        "Person Details": {
+                        "Search": {
+                          "Name": [],
+                          "Person Number": [],
+                          "Department": [],
+                          "Job": [],
+                          "Business Unit": []
+                    }
+                },
+                    "Actions": {
+                        "Cancel": [],
+                        "Add": []
+                    }
+                }
+            },
+                "Action Button":{
+                    "Export": []
+                },
+                "Columns":{
+                    "Show/Hide":[
+                        "Name",
+                        "Instructor Resorce Number",
+                        "Person Number",
+                        "Department",
+                        "City",
+                        "Country",
+                        "Training Supplier",
+                        "Address Line 1",
+                        "Virtual Classroom Provider",
+                        "Postal Code",
+                        "Contact Person Primary Email Address",
+                        "Creation Date",
+                        "Created By"
+                    ],
+                    "Actions":{
+                        "Search": [],
+                        "Restore Defaults": []
+                    }
+                }
+        },
+      "Classroms": {
+            "Filters": {
+                "City": [],
+                "Country": [],
+                "Contact Person": [],
+                "Training Supplier":[],
+                "Status": {
+                    "Active": [],
+                    "Inactive": []
+                },
+                "Creation Date": {
+                    "Start Date": [],
+                    "End Date": []
+                },
+                "Created By": [],
+                "Actions":{
+                    "Cancel": [],
+                    "See Results": []
+                }
+        },
+        "Name": {},
+        "Classroom Resource Number": {},
+        "Capacity": {},
+        "Status": {},
+        "Contact Person": {},
+        "Address Line 1": {},
+        "City": {},
+        "Country": {},
+        "Trainer Supplier": {},
+        "Actions": {},
+        "Add": {
+            "New Classroom":{
+                "Classroom Details": {},
+                "Location Details":{
+                    "Select an existing location": [],
+                    "Add a new location": []
+                },
+                    "Related materials":{ 
+                      "Visible To":[
+                        "Administrators only",
+                        "Administrators and enrollees"
+                       ],
+                       "Drag and Drop": [],
+                       "URL":[],
+                       "Actions":{
+                        "Add URL": []
+                       }
+                }
+        },
+            "Action Buttons": {
+                "Cancel": [],
+                "Add": []
+            }
+        },
+        "Action Buttons":{
+            "Export": []
+        },
+        "Columns":{
+            "Show/Hide":[
+                "Name",
+                "Classroom Resource Number",
+                "Capacity",
+                "Status",
+                "Contact Person",
+                "Address Line 1",
+                "City",
+                "Country",
+                "Trainer Supplier",
+                "Postal Code",
+                "Contact Person Primary Email Address",
+                "Creation Date",
+                "Created By"
+            ],
+            "Actions":{
+                "Search": [],
+                "Restore Defaults": []
+            }
+        }    
+      },
+      "Training Suppliers": {
+        "Filters": {
+            "Status": {
+                "Active": [],
+                "Inactive": []
+            },
+            "Actions":{
+                "Cancel": [],
+                "See Results": []
+            }
+    },
+    "Name": {},
+    "Supplier Resource Number": {},
+    "Contact Person": {},
+    "Status": {},
+    "Creation Date": {},
+    "Created By": {},
+    "Add": {
+        "New Training Supplier":{
+            "Details": {
+                "Name":[],
+                "Description":[],
+                "Contact":[],
+                "Context Segment":[]
+            },
+                "Related materials":{ 
+                  "Visible To":[
+                    "Administrators only",
+                    "Administrators and enrollees"
+                   ],
+                   "Drag and Drop": [],
+                   "URL":[],
+                   "Actions":{
+                    "Add URL": []
+                   }
+            }
+    },
+        "Action Buttons": {
+            "Cancel": [],
+            "Add": []
+        }
+    },
+    "Action Buttons":{
+        "Export": []
+    },
+    "Columns":{
+        "Show/Hide":[
+            "Name",
+            "Supplier Resource Number",
+            "Contact Person",
+            "Status",
+            "Contact Person",
+            "Creation Date",
+            "Created By"
+        ],
+        "Actions":{
+            "Search": [],
+            "Restore Defaults": []
+        }
+    } 
+      },
+      "Global Access Groups": {
+        "Search":{
+            "Match":[
+                "All",
+                "Any"
+            ],
+            "Basic filters":{
+                "Global Access Group Name": [],
+                "Global Access Group Number": [],
+                "Learner Self-Service View Mode": [
+                    "ALL",
+                    "Summary View",
+                    "Details View"
+                ],
+                "Manager Initial Assignment Status": [
+                    "All",
+                    "Active",
+                    "Request Approved",
+                    "Requested",
+                    "None"
+                ],
+                "Learner Initial Assignment Status": [
+                    "All",
+                    "Active",
+                    "Requested",
+                    "None"
+                ],
+                "Access Group Created On": [],
+                "Actions":{
+                    "Saved Search": {
+                        "Search": [],
+                        "Personalize":{
+                            "Personalize Saved Searches":{
+                                "Saved Searches": [],
+                                "Set as Default": [],
+                                "Run Automatically": [],
+                                "Show in Search List": [],
+                                "Actions": {
+                                    "Delete": [],
+                                    "Apply": [],
+                                    "OK": [],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                    },
+                    "Search": [],
+                    "Reset": [],
+                    "Save": []
+                }
+            },
+            "Advanced filters":{
+                "Global Access Group Name": {
+                    "Dropdown":[
+                        "Equals",
+                        "Less than or equal to",
+                        "Greater than or equal to",
+                        "Contains"
+                    ],
+                    "Textbox":[]
+                },
+                "Global Access Group Number": {
+                    "Dropdown":[
+                        "Does not equal",
+                        "Less than",
+                        "Greater than or equal to",
+                        "Is not blank"
+                    ],
+                    "Textbox":[]
+
+                },
+                "Learner Self-Service View Mode": {
+                    "Dropdown1":[],
+                    "Dropdown2": [
+                        "All",
+                        "Summary View",
+                        "Details View"
+                    ]
+            },
+                "Manager Initial Assignment Status": {
+                    "Dropdown1":[],
+                    "Dropdown2": [
+                        "All",
+                        "Active",
+                        "Request Approved",
+                        "Requested",
+                        "None"
+                    ]
+            },
+                "Learner Initial Assignment Status": {
+                    "Dropdown1":[],
+                    "Dropdown2": [
+                        "All",
+                        "Active",
+                        "Requested",
+                        "None"
+                    ],
+                    "Withdraw Manager Assignments with This Pending Prerequisite Limit":{
+                        "Dropdown":[],
+                        "Textbox":[]
+
+                    },
+                    "Withdraw Learner Self Assignments with This Pending Prerequisite Limit":{
+                        "Dropdown":[],
+                        "Textbox":[]
+
+                    } 
+            },
+                "Access Group Created On": {
+                    "Dropdown1": [],
+                    "Date": [],
+                    "Dropdown2": [],
+                    "Allow Managers to Bypass Prerequisites": [],
+                    "Dropdown3": [],
+                    "Allow Learners to Bypass Prerequisites": []
+
+
+                },
+                "Analysis Object Name":{
+                    "Dropdown":[],
+                    "Textbox":[]
+
+                },
+                "Learner Criteria Name":{
+                    "Dropdown":[],
+                    "Textbox":[]
+
+                },
+                "Actions":{
+                    "Saved Search": {
+                        "Search": [],
+                        "Personalize":{
+                            "Personalize Saved Searches":{
+                                "Saved Searches": [],
+                                "Set as Default": [],
+                                "Run Automatically": [],
+                                "Show in Search List": [],
+                                "Actions": {
+                                    "Delete": [],
+                                    "Apply": [],
+                                    "OK": [],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                    },
+                    "Search": [],
+                    "Reset": [],
+                    "Save": [],
+                    "Add fields":[
+                        "Access Group Created On",
+                        "Allow Learners to Bypass Prerequisites",
+                        "Allow Managers to Bypass Prerequisites",
+                        "Analysis Object Name",
+                        "Global Access Group Name",
+                        "Global Access Group Number",
+                        "LastUpdateDate",
+                        "LastUpdatedBy",
+                        "Learner Criteria Name",
+                        "Processed Date",
+                        "Run As",
+                        "Withdraw Learner Self Assignments with This Pending Prerequisite Limit",
+                        "Withdraw Manager Assignments with This Pending Prerequisite Limit"
+                    ],
+                    "Reorder":[]
+                }
+            }
+        }
+      }
+
+    },
+    "Setup": {
+      "Configure Evaluations": {
+            "Enable evaluation":{
+                "Instructor-Led": {
+                    "Enable evaluation": {
+                      "Add Evaluation": {
+                        "Search": {
+                            "Name": [],
+                            "Actions": {
+                                "Search": [],
+                                "Reset": [],
+                                "Cancel": []
+                            }
+                        }
+                    }
+                },
+                    "Preview": {
+                        "Actions": {
+                        "Ok":[],
+                        "Cancel":[]
+                    }
+                    },
+                    "Required for Completion": [
+                        "Yes",
+                        "No"
+                    ]
+                },
+                "Self-Paced": {
+                    "Enable evaluation": {
+                    "Add Evaluation": {
+                        "Search": {
+                            "Name": [],
+                            "Actions": {
+                                "Search": [],
+                                "Reset": [],
+                                "Cancel": []
+                            }
+                        }
+                    }
+                },
+                    "Preview": {
+                        "Actions": {
+                            "Ok":[],
+                            "Cancel":[]
+                    }
+                },
+                    "Required for Completion": [
+                        "Yes",
+                        "No"
+                    ]
+                },
+                "Blended": {
+                    "enable evaluation": {
+                    "Add Evaluation": {
+                        "Search": {
+                            "Name": [],
+                            "Actions": {
+                                "Search": [],
+                                "Reset": [],
+                                "Cancel": []
+                            }
+                        }
+                    }
+                },
+                    "Preview": {
+                        "Actions": {
+                            "Ok":[],
+                            "Cancel":[]
+                        }
+                    },
+                    "Required for Completion":[
+                        "Yes",
+                        "No"
+                    ]
+                },
+                "Actions": {
+                    "Edit": [],
+                    "Save": [],
+                    "Cancel": []
+                }
+            }
+    },
+      "Configure Comment Defaults": {
+            "Comments": {
+                "Enable social conversations in self-service": {}
+            },
+            "Catalog learning items": {
+                "Course": {
+                    "Enable conversations for self-service users on the catalog page": {}
+                },
+                "Instructor-Led Offering": {
+                    "Enable conversations for active and completed enrollees on the enrollment page": {}
+                },
+                "Blended Offering": {
+                    "Enable conversations for active and completed enrollees on the enrollment page": {}
+                },
+                "Self-Paced Offering": {
+                    "Enable conversations for active and completed enrollees on the enrollment page": {}
+                },
+                "Specialization": {
+                    "Enable conversations for self-service users on the catalog page": {},
+                    "Enable conversations for active and completed enrollees on the enrollment page": {}
+                },
+                "Learning Community": {
+                    "Enable conversations for self-service users on the catalog page": {}
+                }
+            },
+            "Self Service Learning Items": {
+                "Video and Learning Journey": {
+                "Enable conversations for learning item types on video and learning journey": {}
+                },
+                "Learning Community": {
+                "Enable conversations for self-service users on learning communities": {},
+                "Enable conversations for managers on learning communities": {}
+                }
+            },
+        "Actions":{
+            "Edit": [],
+            "Save and Close": [],
+            "Cancel": []
+        }
+    },
+      "Configure External Providers": {
+            "Rich Media Service": {
+            "Provider": {},
+            "Description": {},
+            "Status": {},
+            "Actions": {
+                "Validate": []
+            }
+        },
+        "Translation Service": {
+            "Provider": {},
+            "Description": {},
+            "Status":{},
+            "Actions": {
+                "Configure": []
+            }
+        },
+        "Virtual Instructor-Led Training": {
+            "Provider": {},
+            "Description": {},
+            "Status": {},
+            "Actions": {
+                "Configure": []
+            }
+        },
+        "Content": {
+            "Provider": {},
+            "Description": {},
+            "Status": {},
+            "Actions": {
+                "Configure": []
+            }
+        },
+        "Learning Calendar": {
+            "Provider": {},
+            "Description": {},
+            "Status": {},
+            "Actions": {
+                "Configure": []
+            }
+        }
+    },
+      "Configure Catalog Defaults": {
+            "Default Access Attributes":{
+                    "Enrollment Questionnaire": {
+                        "Show Enrollment Questionnaire": [
+                            "Don't enable enrollment questionnaires",
+                            "Enable enrollment questionnaires creation"]
+                    },
+                    "Administrator Settings": {
+                        "Created by Learning Administrator": "Active",
+                        "For Courses in a Specialization": [
+                            "Active",
+                            "Inherit from activity",
+                            "Inherit from Specialization",
+                            "Requested"]
+                    },
+                    "Self-Service Settings": {
+                        "View Mode": 
+                        ["Details View",
+                        "No Access", 
+                        "Summary View"]
+                    },
+                    "Learner Self-Service Settings": {
+                        "Enrollment Settings": {
+                            "Initial Learning Record Status": [
+                                 "Active",
+                                 "None",
+                                 "Requested"],
+                            "Show Enrollment Form": {},
+                            "Allow enrollment when required prerequisites aren't achieved": {},
+                            "Number of days a learner has to complete prerequisites before they're withdrawn":{}
+                        }
+                    },
+                    "Manager Self-Service Settings": {
+                        "Enrollment Settings": {
+                            "Initial Learning Record Status":[
+                                "Active",
+                                "None",
+                                "Requested",
+                                "Request Approved"],
+                            "Withdraw enrollments in the pending prerequisite status":{},
+                            "Number of days a learner has to complete prerequisites before they're withdrawn": {}
+                        }
+                    },
+                    "Learning Record Completion Settings": {
+                        "Allow a Manager to Mark Enrollments as Complete": {}
+                    },
+                    "Manager Created Assignments from Self-Service Defaults": {
+                        "Learners with Successfully Completed Course Assignments": {
+                            "Learners with Existing Completions and Bypassed Completions":[ 
+                                "Must retake the learning",
+                                "Exempted from retaking the learning"],
+                            "Impact on Completed Course Assignments": {}
+                        },
+                       
+                        "Learners with Successfully Completed Specialization Assignments": {
+                            "Learners with Existing Completions and Bypassed Completions": [ 
+                                "Skip creating a new assignment and leave existing completed",
+                                "Create a new assignment and automatically mark it as completed"]
+                        },
+                        "Learners with Active Assignments": {
+                            "Learners with Required Existing Assignments in Requested, Request Approved, Pending Active, Waitlisted, Pending Payment, Pending Prerequisites or Active Status": {
+                                "Skip creating a new assignment and leave the existing assignment as is": {}
+                            }
+                        },
+                        "Learners with Other Assignments": {
+                            "Learners with All Other Existing Assignments in Completed Expired, Completed Not Passed, Withdrawn, Deleted and Request Rejected Status": {
+                                "Create a new assignment": {}
+                            }
+                        },
+                        "Virtual Instructor Led Training Activity Completion Rules": {
+                            "Enable virtual instructor led activity completion rules": {},
+                            "Percent of virtual activity duration the learner must participate in to be marked complete":{},
+                            "Allow completion rules to be overridden at offering level":{},
+                            "Initial Learning Record Status": [
+                                "Active",
+                                "None",
+                                "Pending Prerequisite",
+                                "Requested",
+                                "Waitlisted"]
+                        }
+                    },
+                    "Actions":{
+                        "Edit": [],
+                        "Save":[],
+                        "Cancel":[]
+                    }
+        },
+            "Completion Certificate Defaults": {
+                    "Course and Legacy": {
+                        "Certificate Selection": [
+                            "Certificate",
+                            "No Certificate"],
+                        "Preview": {
+                            "Link":{}
+                        },
+                        "Certificate Title": {},
+                        "Description":{}
+                    },
+                    "Specialization": {
+                        "Certificate Selection": [
+                            "Certificate",
+                            "No Certificate"],
+                        "Preview": {
+                            "Link":{}
+                        },
+                        "Certificate Title": {},
+                        "Description": {}
+                    },
+               
+                "Actions": {
+                    "Edit": [],
+                    "Save": [],
+                    "Cancel": []
+        }
+    },
+        "Payment Refund Rules":{
+                "Expiration": {
+                    "Expire assignments in pending payment status": {}
+                },
+                "Default Refund Rule": {
+                    "Enable refunds on withdrawal from instructor-led and blended offerings": {},
+                    "Enable refunds on withdrawal from self-paced offerings": {},
+                    "Days after the assignment start date, the assignment will no longer be eligible for a refund": {}
+                },
+                "Actions": {
+                    "Edit": [],
+                    "Save": [],
+                    "Cancel": []
+        }
+    },
+        "Default Cover Art":{
+                    "Courses":{
+                        "Actions":{
+                            "Select Cover Art":{
+                                "Actions":{}
+                            }                                         
+                        }
+                    },
+                    "Specializations":{
+                        "Actions":{
+                            "Select Cover Art":{
+                                "Actions":{}
+                            }                                         
+                        }
+                    },
+                    "Topic Communities":{
+                        "Actions":{
+                            "Select Cover Art":{
+                                "Actions":{}
+                            }                                          
+                        }
+                    },
+                    "Category Communities":{
+                        "Actions":{
+                            "Select Cover Art":{
+                                "Actions":{}
+                            }                                         
+                        }
+                    },
+                    "Official Communities":{
+                        "Actions":{
+                            "Select Cover Art":{
+                                "Actions":{}
+                            }                                         
+                        }
+                    },
+                    "Self-Service Communities":{
+                        "Actions":{
+                            "Select Cover Art":{
+                                "Actions":{}
+                            }                                          
+                        }
+                    },
+                    "Actions":{
+                        "Edit": [],
+                        "Save":[],
+                        "Cancel":[]
+            }
+        }
+    },
+      "Configure Alerts": {
+                        "Enable alerts to instructors when instructor-led activities change": {},
+                        "Enable alerts to assignees for added or removed activities": {},
+                        "Days before the start of training to send instructors an alert reminder":{},
+                        "Enable alerts to assignees for classroom changes": {},
+                        "Enable alerts to assignees for changes to activity dates": {},
+                        "Calendar Invites": {
+                        "Default Organizer for Calendar Meeting Invites": {},
+                        "When Available, Use Primary Offering Coordinator as the Organizer for Calendar Meeting Invites": {}
+                    },
+                        "Actions": {
+                          "Edit": [],
+                          "Save and Close": [],
+                          "Cancel": []
+                    }
+    },
+      "Configure Learner Defaults": {
+            "Learning Assignment":{
+                        "Assign as":[
+                            "Human Resources Department",
+                            "Legal Department",
+                            "Office of the CEO",
+                            "Organizational Development",
+                            "Security Team",
+                            "Self",
+                            "Workplace Safety Department"],
+                        "Due Date":{},
+                        "With this note":{},
+                        "Actions":{
+                            "Edit": [],
+                            "Save": [],
+                            "Cancel": []
+                        }
+            },
+        "Community Created Assignments Defaults": {
+             "Learners with Successfully Completed Course Assignments": {
+                "Learners with Existing Completions and Bypassed Completions": [
+                  "Must retake the learning",
+                  "Exempted from retaking the learning"],
+
+                "Impact on Completed Course Assignments":{}
+                    },
+             "Learners with Successfully Completed Specialization Assignments": {
+                "Learners with Existing Completions and Bypassed Completions": [
+                    "Skip creating a new assignment and leave existing completed",
+                    "Create a new assignment and automatically mark it as completed"
+            ]
+                    },
+             "Learners with Active Assignments": {
+                "Learners with Required Existing Assignments in Requested, Request Approved, Pending Active, Waitlisted, Pending Payment, Pending Prerequisites or Active Status": {
+                "Skip creating a new assignment and leave the existing assignment as is": []
+                 }
+                    },
+             "Learners with Other Assignments": {
+                "Learners with All Other Existing Assignments in Completed Expired, Completed Not Passed, Withdrawn, Deleted and Request Rejected Status": {
+                "Create a new assignment": []
+                        }
+                    },
+             "Actions": {
+                "Edit": [],
+                "Save": [],
+                "Cancel": []
+                    }
+                },
+        "Learner Selection Criteria":{
+            "Enable Learner Selection by Workforce Structure Hierarchy": [],
+            "Actions":{
+                "Edit": [],
+                "Save": [],
+                "Cancel": []
+            }
+        },
+        "Summary Metrics":{
+            "Summary":{
+              "Distinct Learners":[],
+              "Effort(Hours)": [],
+              "Assignment Status": [],
+              "Assignment Type": [],
+              "Delivery mode": []
+            },
+            "Actions":{
+                "Edit": [],
+                "Save": [],
+                "Cancel": []
+            }
+        }
+    },
+      "Configure Planning": {
+        "Learner Wage Rate Formula": {},
+        "Plan Profile Default Values": {
+            "Plan Record Status": [
+                "Draft",
+                "Final"
+            ],
+            "Assign As": [
+            "Human Resources Department",
+            "Legal Department",
+            "Office of the CEO",
+            "Organizational Development",
+            "Security Team",
+            "Self",
+            "Workplace Safety Department"
+            ],
+            "Assignment Status": [
+                "Active",
+                "Pending Fulfillment"
+            ],
+            "Assignment Type": [
+              "Voluntary assignment",
+              "Required Assignment"
+             ],
+            "Due Date": [],
+            "With this note": []
+        },
+        "Plan Profiles for New Assignments": {
+            "When the learners are no longer eligible for this profile, update or delete the assignment records and plan records": []
+        },
+        "Plan Profiles for Existing Assignments": {
+            "When the assignment no longer meets the selection criteria update or delete the plan records": []
+        },
+        "Summary Metrics": {
+           "Summary":[
+            "Distinct Learners",
+            "Count of Rows",
+            "Target Budget",
+            "Target Hours",
+            "Total Hours",
+            "Self-Service Cost",
+            "Self-Service and Wage Costs",
+            "Toatal Costs",
+            "Learner Wage Cost"
+           ]
+        },
+        "Actions": {
+            "Edit": [],
+            "Save and Close": [],
+            "Cancel": []
+        }
+    },
+      "Configure Self-Service": {
+        "Configure Browse Learning Catalog": {
+            "New Browse Catalog By": [
+                "Featured Learning",
+                "Highest Rated",
+                "Categories"
+            ],
+            "Disable Browse": []
+        },
+        "Available Offerings": {
+            "Set the language filter to a user's preferred language when they're in the available offerings list view": []
+        },
+        "Include Flexfields in Search Filters":
+            {
+                "Name": [],
+                "Segment Code": [],
+                "Flexfield Name": [],
+                "Flexfield Code": [],
+                "Enabled": []
+            },
+        "HCM Cloud Mobile Related Profile Options": {
+            "HCM Mobile Active Learning Cache Expiration (HCM_MOBILE_ACTIVE_LEARNING_CACHE_EXPIRATION)": [],
+            "HCM Mobile Completed Learning Cache Expiration (HCM_MOBILE_COMPLETED_LEARNING_CACHE_EXPIRATION)": [],
+            "HCM Mobile Enable Native App (HCM_MOBILE_ENABLE_NATIVE_APP)": [],
+            "HCM Mobile Idle Timeout (HCM_MOBILE_IDLE_TIMEOUT)": [],
+            "HCM Mobile Offline Learn (HCM_MOBILE_OFFLINE_LEARN)": [],
+            "HCM Mobile Session Timeout (HCM_MOBILE_SESSION_TIMEOUT)": [],
+            "HCM Mobile Learn Sync Interval (HCM_MOBILE_LEARN_SYNC_INTERVAL)": [],
+            "HCM Mobile Enable Offline Web Clock (HCM_MOBILE_ENABLE_OFFLINE_WEB_CLOCK)": [],
+            "HCM Mobile Enable Wellness Health Sync (HCM_MOBILE_ENABLE_WELLNESS_HEALTH_SYNC)": []
+        },
+        "Actions": {
+            "Edit": [],
+            "Save and Close": [],
+            "Cancel": []
+        }
+    },
+      "Configure Catalog Search Tuning": {
+            "Catalog Search Tuning": {
+            "General Search Configurations": {
+                "Enable Seeded Learning Item Title Stop Words": [],
+                "Automatically append the wildcard to the end of the search term when searching against the title": []
+            },
+            "Language Specific Search Configurations": {
+                "Language":[],
+                "Override the default 3 character minimum search string requirement": [],
+                "Enable User Defined Learning Item Title Stop Words": [],
+                "Enable User Defined Learning Item Description Stop Words": []
+            
+        },
+            "Actions": {
+                "Edit": [],
+                "Save and Close": [],
+                "Cancel": []
+            }
+        }
+    },
+      "Configure Background Processing": {
+            "Concurrency Details": {
+                "Learning Assignments Processing": {
+                    "Maximum Number of Parallel Bulk Scheduled Jobs": [],
+                    "Maximum Number of Parallel Ad Hoc UI Jobs": [],
+                    "Process immediately after user saves changes": [],
+                    "Advanced": {
+                        "Maximum Number of Parallel Threads per Bulk Scheduled Job": [],
+                        "Maximum Number of Parallel Threads per Ad Hoc UI Job": []
+                        }
+                    },
+                "Learning Recommendation Processing": {
+                    "Maximum Number of Parallel Bulk Scheduled Jobs": [],
+                    "Maximum Number of Parallel Ad Hoc UI Jobs": [],
+                    "Process immediately after user saves changes": [],
+                    "Advanced": {
+                        "Maximum Number of Parallel Threads per Bulk Scheduled Job": [],
+                        "Maximum Number of Parallel Threads per Ad Hoc UI Job": []
+                        }
+                    },
+                "Learning Access Processing": {
+                    "Maximum Number of Parallel Bulk Scheduled Jobs": [],
+                    "Maximum Number of Parallel Ad Hoc UI Jobs": [],
+                    "Process immediately after user saves changes": [],
+                    "Advanced": {
+                        "Maximum Number of Parallel Threads per Bulk Scheduled Job": [],
+                        "Maximum Number of Parallel Threads per Ad Hoc UI Job": []
+                        }
+                    },
+                "Learning Program Plan Records Processing": {
+                     "Maximum Number of Parallel Bulk Scheduled Jobs": [],
+                     "Maximum Number of Parallel Ad Hoc UI Jobs": [],
+                     "Process immediately after user saves changes": [],
+                    "Advanced": {
+                        "Maximum Number of Parallel Threads per Bulk Scheduled Job": [],
+                        "Maximum Number of Parallel Threads per Ad Hoc UI Job": []
+                        }
+                    },
+                "Learning Organizations Processing": {
+                    "Maximum Number of Jobs": [],
+                    "Maximum Number of Parallel Threads per Jobs": []
+                       
+                    },
+                "Rebuild Learning Item Indexes":{
+                    "Maximum Number of Concurrent ESS Processes": []
+                },
+                "Reconcile Learning Catalog Item Activity Changes":{
+                    "Number of Concurrent ESS Processes": []
+                },
+                "Video Transcoding": {
+                    "Run Video Transcoding Job Immediately After Users Upload Video": [],
+                    "Maximum Number of Concurrent Video Transcoding Jobs": []
+                    },
+                "Cover Art Process": {
+                    "Run Cover Art Processing Job Immediately After Users Upload Cover Art": [],
+                    "Maximum Number of Concurrent Cover Art Processing Jobs": []
+                    },
+                "Process eLearning Package": {
+                    "Run eLearning Package Processing Job Immediately After Users Upload eLearning Packages": [],
+                    "Maximum Number of Concurrent eLearning Package Processing Jobs": []
+                    }
+                 },
+            "Execution Details": {
+                "Override Default Expansion and Reconciliation - Run as User": []
+                },
+            "Video Transcoding": {
+                "Select Video Transcoding Strategy": [
+                    "Highest Visual Quality and bit rate",
+                    "Balanced Visual Quality and bit rate",
+                    "Reduced bit rate"]
+                },
+            "Actions":{
+                "Edit":[],
+                "Save and Close": [],
+                "Cancel": []
+            }         
+    }
+    }
+}
+
+
+
+  
+
+
+
+
+    
+
