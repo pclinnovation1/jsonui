@@ -1,0 +1,39 @@
+{
+    "Talent Review Meetings": {
+      "Search": [],
+      "Filters": {
+        "Meeting Name": [],
+        "Meeting Status": {     
+     "Not started": [],
+     "In progress": [],
+     "Complete": [],
+      "Process job in progress": [],
+       "Process job error": []
+        },
+        "Meeting Date Range": {
+            "On Or After":[],
+            "On Or Before":[]
+        },
+        "Data Submission Status": {
+            "Not started": [],
+    "Preparation in progress": [],
+    "Complete": [],
+     "Submission process in progress": [],
+      "Submission process error": []
+        },
+        "Actions": {
+            "Cancel": [],
+            "See Results": []
+          }
+      },
+      "Sort By": [
+        "Meeting Name A to Z",
+    "Meeting Date Latest To Oldest",
+    "Meeting Status",
+    "Business Leader A to Z",
+    "Ratings Submission Deadline Latest To Oldest",
+    "Data Submission Status"
+      ]
+    }
+  }
+  
