@@ -1,1223 +1,621 @@
 {
-    "Career and Performance": {
-        "Skills and Qualifications": {
-            "Add Section": {
-                "Accomplishments": [],
-                "Areas of Study": [],
-                "Career Preferences": [],
-                "Competencies": [],
-                "Degrees": [],
-                "Education Levels": [],
-                "Faculty Information HE US": [],
-                "Honors and Awards": [],
-                "Languages": [],
-                "Licenses and Certifications": [],
-                "Memberships": [],
-                "Prescribed Responsibilities": [],
-                "Previous Employment": [],
-                "Special Projects": [],
-                "Work Requirements": []
-            },
-            "Profile Strength": [],
-            "Career Statement": {
-                "Edit Career Statement": {
-                    "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                    }
+  "Career and Performance": {
+    "Skills and Qualifications": {
+      "Add Section": {
+        "Accomplishments": [],
+        "Areas of Study": [],
+        "Career Preferences": [],
+        "Competencies": [],
+        "Degrees": [],
+        "Education Levels": [],
+        "Faculty Information HE US": [],
+        "Honors and Awards": [],
+        "Languages": [],
+        "Licenses and Certifications": [],
+        "Memberships": [],
+        "Prescribed Responsibilities": [],
+        "Previous Employment": [],
+        "Special Projects": [],
+        "Work Requirements": []
+      },
+      "Profile Strength": [],
+      "Career Statement": {
+        "Edit Career Statement": {
+          "Actions": {
+            "Save": [],
+            "Cancel": []
+          }
+        }
+      },
+      "Skills": {
+        "Visit Skills Center": {
+          "Enter a skill here": []
+        }
+      },
+      "Attachments": {
+        "Edit Attachments": {
+          "URL": [],
+          "Actions": {
+            "Drag and Drop": [],
+            "Add URL": [],
+            "Save": [],
+            "Cancel": []
+          }
+        }
+      },
+      "Actions": {
+        "Import LinkedIn Data": [],
+        "Print": []
+      }
+    },
+    "Goals Center": {
+      "My Goals": {
+        "Performance": {
+          "Review Period": [],
+          "View Plan Details": {
+            "Plan details": {
+              "Start Date": [],
+              "End Date": []
+            }
+          },
+          "Actions": {
+            "Add": []
+          }
+        },
+        "Development": {
+          "Add": {
+            "What's your goal?": [],
+            "Any additional info you want to add?": [],
+            "How will you know you have achieved your goal?": [],
+            "Comments": [],
+            "Why do you want to pursue this goal?": {
+              "Development Intent": {
+                "Action": {
+                  "Systems Support": []
                 }
-            },
-            "Skills": {
-                "Visit Skills Center": {
-                    "Enter a skill here": []
+              },
+              "Add": {
+                "Personal Development Intent": [],
+                "Actions": {
+                  "Delete": []
                 }
+              },
+              "Start Date": [],
+              "Target Date": [],
+              "Priority": {
+                "High": [],
+                "Medium": [],
+                "Low": []
+              },
+              "Level": {
+                "Stretch": [],
+                "Target": []
+              },
+              "Category": {
+                "Short-term": [],
+                "Medium-term": [],
+                "Long-term": []
+              },
+              "Actions": {
+                "This is a measurable goal": []
+              }
             },
-            "Attachments": {
-                "Edit Attachments": {
-                    "URL": [],
-                    "Actions": {
-                        "Drag and Drop": [],
-                        "Add URL": [],
-                        "Save": [],
-                        "Cancel": []
-                    }
-                }
+            "What can help you achieve this goal?": {
+              "Add": {
+                "Task": [],
+                "Learning Item": []
+              }
             },
             "Actions": {
-                "Import LinkedIn Data": [],
-                "Print": []
+              "Add": [],
+              "Cancel": []
             }
+          },
+          "Actions": {
+            "Active": [],
+            "Inactive": []
+          }
+        }
+      }
+    },
+    "Performance": {
+      "CheckIns": {
+        "Add": {
+          "NewCheckIn": {
+            "Select the employee business title": [],
+            "ReviewPeriod": [],
+            "Template": {
+              "Check-in 1:1": [],
+              "Disciplinary Action Discussion": []
+            },
+            "Date": [],
+            "Build your agenda": {
+              "Enter a discussion topic": [],
+              "Actions": {
+                "Add": [],
+                "View Recommended Topics": []
+              }
+            },
+            "Actions": {
+              "Cancel": [],
+              "Schedule": []
+            }
+          }
+        }
+      },
+      "PerformanceDocuments": {
+        "Add": {
+          "NewPerformanceDocument": {
+            "ReviewPeriod": [],
+            "PerformanceDocumentName": [],
+            "Manager": [],
+            "StartDate": [],
+            "EndDate": [],
+            "DocumentDescription": [],
+            "Actions": {
+              "Cancel": [],
+              "Submit": []
+            }
+          }
         },
-        "Goals Center": {
-            "My Goals": {
-                "Performance": {
-                    "Review Period": [],
-                    "View Plan Details": {
-                        "Plan details": {
-                            "Start Date": [],
-                            "End Date": []
-                        }
-                    },
-                    "Actions": {
-                        "Add": []
-                    }
-                },
-                "Development": {
-                    "Add": {
-                        "What's your goal?": [],
-                        "Any additional info you want to add?": [],
-                        "How will you know you have achieved your goal?": [],
-                        "Comments": [],
-                        "Why do you want to pursue this goal?": {
-                            "Development Intent": {
-                                "Action": {
-                                    "Systems Support": []
-                                }
+        "SortBy": {
+          "Document status": [],
+          "End date, new to old": [],
+          "End date, old to new": [],
+          "Document name, A to Z": [],
+          "Document name, Z to A": []
+        },
+        "Actions": {
+          "Close": []
+        }
+      }
+    },
+    "Career Development": {
+      "Guide me": {
+        "Understand Career Development": []
+      },
+      "Career Statement": {
+        "Guide me": {
+          "What is a career statement?": []
+        },
+        "Add": {
+          "Actions": {
+            "Save": [],
+            "Cancel": []
+          }
+        }
+      },
+      "Career Outlook": {
+        "CurrentRole": {
+          "Systems Support": {
+            "CompetenciesCount": [],
+            "DegreesCount": [],
+            "Competencies": {
+              "Problem Solving": {
+                "Optional": {
+                  "Minimum Proficiency Level": [],
+                  "Target Proficiency Level": [],
+                  "Current Proficiency Level": [],
+                  "See related learning": {
+                    "Related Learning": {
+                      "Critical Thinking and Problem Solving": {
+                        "Course Details": {
+                          "Overview": {
+                            "Published": [],
+                            "Learning Item Number": [],
+                            "Expected Effort": [],
+                            "Topic": []
+                          },
+                          "Details": {
+                            "Related Materials": []
+                          },
+                          "Learning Outcomes": {
+                            "Competencies": [
+                              {
+                                "Decision Making": [],
+                                "Proficiency Level": []
+                              },
+                              {
+                                "Analytical Thinking": [],
+                                "Proficiency Level": []
+                              },
+                              {
+                                "Problem Solving": [],
+                                "Proficiency Level": []
+                              },
+                              {
+                                "Adherence to Quality Standards": [],
+                                "Proficiency Level": []
+                              }
+                            ],
+                            "Skills": [
+                              {
+                                "Collaboration": []
+                              },
+                              {
+                                "Business Requirements Analysis": []
+                              },
+                              {
+                                "Coaching": []
+                              },
+                              {
+                                "Customer Satisfaction": []
+                              },
+                              {
+                                "Problem Solving": []
+                              }
+                            ]
+                          },
+                          "Related Learning": [],
+                          "Available Offerings": {
+                            "Course": {
+                              "View Details": []
                             },
-                            "Add": {
-                                "Personal Development Intent": [],
+                            "Actions": {
+                              "Enroll": []
+                            }
+                          },
+                          "Actions": {
+                            "Enroll": [],
+                            "Actions": [
+                              "Recommend",
+                              "Ratings",
+                              "Copy Link",
+                              "Comments",
+                              "Report",
+                              "Enroll in Course"
+                            ]
+                          }
+                        }
+                      },
+                      "Customer Service Success": {
+                        "Course Details": {
+                          "Overview": {
+                            "Published": [],
+                            "Learning Item Number": [],
+                            "Expected Effort": [],
+                            "Price": [],
+                            "Topic": []
+                          },
+                          "Details": {
+                            "Related Materials": []
+                          },
+                          "Learning Outcomes": {
+                            "Competencies": [
+                              {
+                                "Problem Solving": [],
+                                "Proficiency Level": []
+                              },
+                              {
+                                "Influencing and Negotiating": [],
+                                "Proficiency Level": []
+                              },
+                              {
+                                "Building Relationships": [],
+                                "Proficiency Level": []
+                              }
+                            ],
+                            "Skills": [
+                              {
+                                "Collaboration": []
+                              },
+                              {
+                                "Customer Retention": []
+                              },
+                              {
+                                "Customer Satisfaction": []
+                              }
+                            ]
+                          },
+                          "Related Learning": {
+                            "Service Desk": {
+                              "Topic Community": {
+                                "Overview": [],
+                                "LearningCatalog": {
+                                  "Search": [],
+                                  "ShowFilters": {
+                                    "Filters": {
+                                      "Learning Item Type": {
+                                        "Learning Journey": [],
+                                        "Course": [],
+                                        "Learning Community": [],
+                                        "Specialization": [],
+                                        "Video": [],
+                                        "Actions": {
+                                          "Clear": []
+                                        }
+                                      },
+                                      "Average Rating": {
+                                        "4 Stars and Up": [],
+                                        "3 Stars and Up": [],
+                                        "2 Stars and Up": [],
+                                        "1 Star and Up": [],
+                                        "Actions": {
+                                          "Clear": []
+                                        }
+                                      },
+                                      "Language": {
+                                        "Japanese": [],
+                                        "French": [],
+                                        "American English": [],
+                                        "Spanish": [],
+                                        "German": [],
+                                        "Swedish": [],
+                                        "Actions": {
+                                          "Clear": []
+                                        }
+                                      },
+                                      "Offering Dates": {
+                                        "Start Date": [],
+                                        "End Date": [],
+                                        "Actions": {
+                                          "Ok": []
+                                        }
+                                      },
+                                      "Offering Delivery Mode": {
+                                        "Blended": [],
+                                        "SelfPaced": [],
+                                        "InstructorLed": [],
+                                        "Actions": {
+                                          "Clear": []
+                                        }
+                                      },
+                                      "Published Dates": {
+                                        "Start Date": [],
+                                        "End Date": [],
+                                        "Actions": {
+                                          "Ok": []
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "Sort": {
+                                    "Rating - Highest to Lowest": [],
+                                    "Published - Date Newest to Oldest": [],
+                                    "Title - A to Z": [],
+                                    "Title - Z to A": []
+                                  }
+                                },
+                                "RelatedMaterials": [],
                                 "Actions": {
-                                    "Delete": []
+                                  "Join": [],
+                                  "Actions": [
+                                    "Recommend",
+                                    "Ratings",
+                                    "Copy Link",
+                                    "Comments",
+                                    "Report"
+                                  ]
                                 }
-                            },
-                            "Start Date": [],
-                            "Target Date": [],
-                            "Priority": {
-                                "High": [],
-                                "Medium": [],
-                                "Low": []
-                            },
-                            "Level": {
-                                "Stretch": [],
-                                "Target": []
-                            },
-                            "Category": {
-                                "Short-term": [],
-                                "Medium-term": [],
-                                "Long-term": []
+                              }
+                            }
+                          },
+                          "Available Offerings": {
+                            "Course": {
+                              "View Details": {
+                                "Course Offering Details": {
+                                  "Overview": {
+                                    "Type": [],
+                                    "Language": [],
+                                    "Price": []
+                                  },
+                                  "OfferingDetails": [],
+                                  "Activities": [],
+                                  "Actions": {
+                                    "Enroll": [],
+                                    "Actions": [
+                                      "Recommend",
+                                      "Ratings",
+                                      "Copy Link",
+                                      "Comments",
+                                      "Report"
+                                    ]
+                                  }
+                                }
+                              },
+                              "Actions": {
+                                "Enroll": []
+                              }
                             },
                             "Actions": {
-                                "This is a measurable goal": []
+                              "Enroll": []
                             }
-                        },
-                        "What can help you achieve this goal?": {
-                            "Add": {
-                                "Task": [],
-                                "Learning Item": []
-                            }
-                        },
-                        "Actions": {
-                            "Add": [],
-                            "Cancel": []
+                          },
+                          "Actions": {
+                            "Enroll": [],
+                            "Actions": [
+                              "Recommend",
+                              "Ratings",
+                              "Copy Link",
+                              "Comments",
+                              "Report",
+                              "Enroll in Course"
+                            ]
+                          }
                         }
+                      }
+                    }
+                  }
+                },
+                "Add Goal": {
+                  "Basic Info": {
+                    "Library Goal": [],
+                    "Goal Name": [],
+                    "Private": [],
+                    "Description": [],
+                    "Status": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Category": [],
+                    "Completion Percentage": [],
+                    "Source": [],
+                    "Success Criteria": [],
+                    "Development Intent": {
+                      "Systems Support": []
                     },
-                    "Actions": {
-                        "Active": [],
-                        "Inactive": []
-                    }
-                }
-            }
-        },
-        "Performance": {
-            "CheckIns": {
-                "Add": {
-                    "NewCheckIn": {
-                        "Select the employee business title": [],
-                        "ReviewPeriod": [],
-                        "Template": {
-                            "Check-in 1:1": [],
-                            "Disciplinary Action Discussion": []
-                        },
-                        "Date": [],
-                        "Build your agenda": {
-                            "Enter a discussion topic": [],
-                            "Actions": {
-                                "Add": [],
-                                "View Recommended Topics": []
-                            }
-                        },
-                        "Actions": {
-                            "Cancel": [],
-                            "Schedule": []
-                        }
-                    }
-                }
-            },
-            "PerformanceDocuments": {
-                "Add": {
-                    "NewPerformanceDocument": {
-                        "ReviewPeriod": [],
-                        "PerformanceDocumentName": [],
-                        "Manager": [],
-                        "StartDate": [],
-                        "EndDate": [],
-                        "DocumentDescription": [],
-                        "Actions": {
-                            "Cancel": [],
-                            "Submit": []
-                        }
-                    }
-                },
-                "SortBy": {
-                    "Document status": [],
-                    "End date, new to old": [],
-                    "End date, old to new": [],
-                    "Document name, A to Z": [],
-                    "Document name, Z to A": []
-                },
-                "Actions": {
-                    "Close": []
-                }
-            }
-        },
-        "Career Development": {
-            "Guide me": {
-                "Understand Career Development": []
-            },
-            "Career Statement": {
-                "Guide me": {
-                    "What is a career statement?": []
-                },
-                "Add": {
-                    "Actions": {
+                    "Personal Development Intent": [],
+                    "Add Another Personal Development Intent": []
+                  },
+                  "Target Outcomes": {
+                    "Competencies": [
+                      "Licenses and Certifications",
+                      "Competencies",
+                      "Languages",
+                      "Skills"
+                    ],
+                    "Add": {
+                      "Competency": [],
+                      "Review Date": [],
+                      "Proficiency Rating": [],
+                      "Current Proficiency Level": [],
+                      "Years of Experience": [],
+                      "Personal Interest Level": [],
+                      "Year Last Used": [],
+                      "Reviewer": [],
+                      "Comments": [],
+                      "Actions": {
                         "Save": [],
                         "Cancel": []
+                      }
                     }
+                  },
+                  "Measurement": {
+                    "Add": {
+                      "Measurement Name": [],
+                      "Unit of Measure": [],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Description": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Tasks": {
+                    "Add": {
+                      "Name": [],
+                      "Completion Percentage": [],
+                      "Type": [],
+                      "Status": [],
+                      "Priority": [],
+                      "Start Date": [],
+                      "Target Completion Date": [],
+                      "Related Link": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Learning": {
+                    "Add": {
+                      "Select Learning Item": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Actions": {
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
                 }
-            },
-            "Career Outlook": {
-                "CurrentRole": {
-                    "Systems Support": {
-                        "CompetenciesCount": [],
-                        "DegreesCount": [],
-                        "Competencies": {
-                            "Problem Solving": {
-                                "Optional": {
-                                    "Minimum Proficiency Level": [],
-                                    "Target Proficiency Level": [],
-                                    "Current Proficiency Level": [],
-                                    "See related learning": {
-                                        "Related Learning": {
-                                            "Critical Thinking and Problem Solving": {
-                                                "Course Details": {
-                                                    "Overview": {
-                                                        "Published": [],
-                                                        "Learning Item Number": [],
-                                                        "Expected Effort": [],
-                                                        "Topic": []
-                                                    },
-                                                    "Details": {
-                                                        "Related Materials": []
-                                                    },
-                                                    "Learning Outcomes": {
-                                                        "Competencies": [
-                                                            {
-                                                                "Decision Making": [],
-                                                                "proficiency Level": []
-                                                            },
-                                                            {
-                                                                "Analytical Thinking": [],
-                                                                "proficiency Level": []
-                                                            },
-                                                            {
-                                                                "Problem Solving": [],
-                                                                "proficiency Level": []
-                                                            },
-                                                            {
-                                                                "Adherence to Quality Standards": [],
-                                                                "proficiency Level": []
-                                                            }
-                                                        ],
-                                                        "Skills": [
-                                                            {
-                                                                "Collaboration": []
-                                                            },
-                                                            {
-                                                                "Business Requirements Analysis": []
-                                                            },
-                                                            {
-                                                                "Coaching": []
-                                                            },
-                                                            {
-                                                                "Customer Satisfaction": []
-                                                            },
-                                                            {
-                                                                "Problem Solving": []
-                                                            }
-                                                        ]
-                                                    },
-                                                    "Related Learning": [],
-                                                    "Available Offerings": {
-                                                        "Course": {
-                                                            "View Details": []
-                                                        },
-                                                        "Actions": {
-                                                            "Enroll": []
-                                                        }
-                                                    },
-                                                    "Actions": {
-                                                        "Enroll": [],
-                                                        "Actions": [
-                                                            "Recommend",
-                                                            "Ratings",
-                                                            "Copy Link",
-                                                            "Comments",
-                                                            "Report",
-                                                            "Enroll in Course"
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "Customer Service Success": {
-                                                "Course Details": {
-                                                    "Overview": {
-                                                        "Published": [],
-                                                        "Learning Item Number": [],
-                                                        "Expected Effort": [],
-                                                        "Price": [],
-                                                        "Topic": []
-                                                    },
-                                                    "Details": {
-                                                        "Related Materials": []
-                                                    },
-                                                    "Learning Outcomes": {
-                                                        "Competencies": [
-                                                            {
-                                                                "Problem Solving": [],
-                                                                "proficiency Level": []
-                                                            },
-                                                            {
-                                                                "Influencing and Negotiating": [],
-                                                                "proficiency Level": []
-                                                            },
-                                                            {
-                                                                "Building Relationships": [],
-                                                                "proficiency Level": []
-                                                            }
-                                                        ],
-                                                        "Skills": [
-                                                            {
-                                                                "Collaboration": []
-                                                            },
-                                                            {
-                                                                "Customer Retention": []
-                                                            },
-                                                            {
-                                                                "Customer Satisfaction": []
-                                                            }
-                                                        ]
-                                                    },
-                                                    "Related Learning": {
-                                                        "Service Desk": {
-                                                            "Topic Community": {
-                                                                "Overview": [],
-                                                                "LearningCatalog": {
-                                                                    "Search": [],
-                                                                    "ShowFilters": {
-                                                                        "Filters": {
-                                                                            "Learning Item Type": {
-                                                                                "Learning Journey": [],
-                                                                                "Course": [],
-                                                                                "Learning Community": [],
-                                                                                "Specialization": [],
-                                                                                "Video": [],
-                                                                                "Actions": {
-                                                                                    "Clear": []
-                                                                                }
-                                                                            },
-                                                                            "Average Rating": {
-                                                                                "4 Stars and Up": [],
-                                                                                "3 Stars and Up": [],
-                                                                                "2 Stars and Up": [],
-                                                                                "1 Star and Up": [],
-                                                                                "Actions": {
-                                                                                    "Clear": []
-                                                                                }
-                                                                            },
-                                                                            "Language": {
-                                                                                "Japanese": [],
-                                                                                "French": [],
-                                                                                "American English": [],
-                                                                                "Spanish": [],
-                                                                                "German": [],
-                                                                                "Swedish": [],
-                                                                                "Actions": {
-                                                                                    "Clear": []
-                                                                                }
-                                                                            },
-                                                                            "Offering Dates": {
-                                                                                "Start Date": [],
-                                                                                "End Date": [],
-                                                                                "Actions": {
-                                                                                    "Ok": []
-                                                                                }
-                                                                            },
-                                                                            "Offering Delivery Mode": {
-                                                                                "Blended": [],
-                                                                                "SelfPaced": [],
-                                                                                "InstructorLed": [],
-                                                                                "Actions": {
-                                                                                    "Clear": []
-                                                                                }
-                                                                            },
-                                                                            "Published Dates": {
-                                                                                "Start Date": [],
-                                                                                "End Date": [],
-                                                                                "Actions": {
-                                                                                    "Ok": []
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    },
-                                                                    "Sort": {
-                                                                        "Rating - Highest to Lowest": [],
-                                                                        "Published - Date Newest to Oldest": [],
-                                                                        "Title - A to Z": [],
-                                                                        "Title - Z to A": []
-                                                                    }
-                                                                },
-                                                                "RelatedMaterials": [],
-                                                                "Actions": {
-                                                                    "Join": [],
-                                                                    "Actions": [
-                                                                        "Recommend",
-                                                                        "Ratings",
-                                                                        "Copy Link",
-                                                                        "Comments",
-                                                                        "Report"
-                                                                    ]
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "Available Offerings": {
-                                                        "Course": {
-                                                            "View Details": {
-                                                                "Course Offering Details": {
-                                                                    "Overview": {
-                                                                        "Type": [],
-                                                                        "Language": [],
-                                                                        "Price": []
-                                                                    },
-                                                                    "OfferingDetails": [],
-                                                                    "Activities": [],
-                                                                    "Actions": {
-                                                                        "Enroll": [],
-                                                                        "Actions": [
-                                                                            "Recommend",
-                                                                            "Ratings",
-                                                                            "Copy Link",
-                                                                            "Comments",
-                                                                            "Report"
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            },
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        },
-                                                        "Actions": {
-                                                            "Enroll": []
-                                                        }
-                                                    },
-                                                    "Actions": {
-                                                        "Enroll": [],
-                                                        "Actions": [
-                                                            "Recommend",
-                                                            "Ratings",
-                                                            "Copy Link",
-                                                            "Comments",
-                                                            "Report",
-                                                            "Enroll in Course"
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                },
-                                "Add Goal": {
-                                    "Basic Info": {
-                                        "Library Goal": [],
-                                        "Goal Name": [],
-                                        "Private": [],
-                                        "Description": [],
-                                        "Status": [],
-                                        "Start Date": [],
-                                        "Target Completion Date": [],
-                                        "Category": [],
-                                        "Completion Percentage": [],
-                                        "Source": [],
-                                        "Success Criteria": [],
-                                        "Development Intent": {
-                                            "Systems Support": []
-                                        },
-                                        "Personal Development Intent": [],
-                                        "Add Another Personal Development Intent": []
-                                    },
-                                    "Target Outcomes": {
-                                        "Competencies": [
-                                            "Licenses and Certifications",
-                                            "Competencies",
-                                            "Languages",
-                                            "Skills"
-                                        ],
-                                        "Add": {
-                                            "Competency": [],
-                                            "Review Date": [],
-                                            "Proficiency Rating": [],
-                                            "Current Proficiency Level": [],
-                                            "Years of Experience": [],
-                                            "Personal Interest Level": [],
-                                            "Year Last Used": [],
-                                            "Reviewer": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Measurement": {
-                                        "Add": {
-                                            "Measurement Name": [],
-                                            "Unit of Measure": [],
-                                            "Start Date": [],
-                                            "End Date": [],
-                                            "Description": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Tasks": {
-                                        "Add": {
-                                            "Name": [],
-                                            "Completion Percentage": [],
-                                            "Type": [],
-                                            "Status": [],
-                                            "Priority": [],
-                                            "Start Date": [],
-                                            "Target Completion Date": [],
-                                            "Related Link": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Learning": {
-                                        "Add": {
-                                            "Select Learning Item": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Actions": {
-                                        "Save and Close": [],
-                                        "Cancel": []
-                                    }
-                                }
+              },
+              "Results Orientation": {
+                "Optional": {
+                  "Minimum Proficiency Level": [],
+                  "Target Proficiency Level": [],
+                  "Current Proficiency Level": [],
+                  "See related learning": {
+                    "Related Learning": {
+                      "Leadership in Crisis": [
+                        "Leadership, decision making, results orientation"
+                      ],
+                      "Leadership By Example": [
+                        "Modeling Strong Leadership"
+                      ],
+                      "Show More": {
+                        "Learning Items That Meet the Prerequisite": {
+                          "Course": {
+                            "Closing More Sales": {
+                              "Actions": {
+                                "Enroll": []
+                              }
                             },
-                            "Results Orientation": {
-                                "Optional": {
-                                    "Minimum Proficiency Level": [],
-                                    "Target Proficiency Level": [],
-                                    "Current Proficiency Level": [],
-                                    "See related learning": {
-                                        "Related Learning": {
-                                            "Leadership in Crisis": [
-                                                "Leadership, decision making, results orientation"
-                                            ],
-                                            "Leadership By Example": [
-                                                "Modeling Strong Leadership"
-                                            ],
-                                            "Show More": {
-                                                "Learning Items That Meet the Prerequisite": {
-                                                    "course": {
-                                                        "Closing More Sales": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        },
-                                                        "Getting Down to Business": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        },
-                                                        "Leadership By Example": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        },
-                                                        "Leadership in Crisis": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        },
-                                                        "Professional Selling Skills": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                },
-                                "Add Goal": {
-                                    "Basic Info": {
-                                        "Library Goal": [],
-                                        "Goal Name": [],
-                                        "Private": [],
-                                        "Description": [],
-                                        "Status": [],
-                                        "Start Date": [],
-                                        "Target Completion Date": [],
-                                        "Category": [],
-                                        "Completion Percentage": [],
-                                        "Source": [],
-                                        "Success Criteria": [],
-                                        "Development Intent": {
-                                            "Systems Support": []
-                                        },
-                                        "Personal Development Intent": [],
-                                        "Add Another Personal Development Intent": []
-                                    },
-                                    "Target Outcomes": {
-                                        "Competencies": [
-                                            "Licenses and Certifications",
-                                            "Competencies",
-                                            "Languages",
-                                            "Skills"
-                                        ],
-                                        "Add": {
-                                            "Competency": [],
-                                            "Review Date": [],
-                                            "Proficiency Rating": [],
-                                            "Current Proficiency Level": [],
-                                            "Years of Experience": [],
-                                            "Personal Interest Level": [],
-                                            "Year Last Used": [],
-                                            "Reviewer": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Measurement": {
-                                        "Add": {
-                                            "Measurement Name": [],
-                                            "Unit of Measure": [],
-                                            "Start Date": [],
-                                            "End Date": [],
-                                            "Description": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Tasks": {
-                                        "Add": {
-                                            "Name": [],
-                                            "Completion Percentage": [],
-                                            "Type": [],
-                                            "Status": [],
-                                            "Priority": [],
-                                            "Start Date": [],
-                                            "Target Completion Date": [],
-                                            "Related Link": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Learning": {
-                                        "Add": {
-                                            "Select Learning Item": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Actions": {
-                                        "Save and Close": [],
-                                        "Cancel": []
-                                    }
-                                }
+                            "Getting Down to Business": {
+                              "Actions": {
+                                "Enroll": []
+                              }
                             },
-                            "Adherence to Security Standards": {
-                                "Optional": {
-                                    "Minimum Proficiency Level": [],
-                                    "Target Proficiency Level": [],
-                                    "Current Proficiency Level": []
-                                },
-                                "Add Goal": {
-                                    "Basic Info": {
-                                        "Library Goal": [],
-                                        "Goal Name": [],
-                                        "Private": [],
-                                        "Description": [],
-                                        "Status": [],
-                                        "Start Date": [],
-                                        "Target Completion Date": [],
-                                        "Category": [],
-                                        "Completion Percentage": [],
-                                        "Source": [],
-                                        "Success Criteria": [],
-                                        "Development Intent": {
-                                            "Systems Support": []
-                                        },
-                                        "Personal Development Intent": [],
-                                        "Add Another Personal Development Intent": []
-                                    },
-                                    "Target Outcomes": {
-                                        "Competencies": [
-                                            "Licenses and Certifications",
-                                            "Competencies",
-                                            "Languages",
-                                            "Skills"
-                                        ],
-                                        "Add": {
-                                            "Competency": [],
-                                            "Review Date": [],
-                                            "Proficiency Rating": [],
-                                            "Current Proficiency Level": [],
-                                            "Years of Experience": [],
-                                            "Personal Interest Level": [],
-                                            "Year Last Used": [],
-                                            "Reviewer": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Measurement": {
-                                        "Add": {
-                                            "Measurement Name": [],
-                                            "Unit of Measure": [],
-                                            "Start Date": [],
-                                            "End Date": [],
-                                            "Description": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Tasks": {
-                                        "Add": {
-                                            "Name": [],
-                                            "Completion Percentage": [],
-                                            "Type": [],
-                                            "Status": [],
-                                            "Priority": [],
-                                            "Start Date": [],
-                                            "Target Completion Date": [],
-                                            "Related Link": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Learning": {
-                                        "Add": {
-                                            "Select Learning Item": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Actions": {
-                                        "Save and Close": [],
-                                        "Cancel": []
-                                    }
-                                }
+                            "Leadership By Example": {
+                              "Actions": {
+                                "Enroll": []
+                              }
                             },
-                            "Deliver Quality": {
-                                "Optional": {
-                                    "Minimum Proficiency Level": [],
-                                    "Target Proficiency Level": [],
-                                    "Current Proficiency Level": []
-                                },
-                                "Add Goal": {
-                                    "Basic Info": {
-                                        "Library Goal": [],
-                                        "Goal Name": [],
-                                        "Private": [],
-                                        "Description": [],
-                                        "Status": [],
-                                        "Start Date": [],
-                                        "Target Completion Date": [],
-                                        "Category": [],
-                                        "Completion Percentage": [],
-                                        "Source": [],
-                                        "Success Criteria": [],
-                                        "Development Intent": {
-                                            "Systems Support": []
-                                        },
-                                        "Personal Development Intent": [],
-                                        "Add Another Personal Development Intent": []
-                                    },
-                                    "Target Outcomes": {
-                                        "Competencies": [
-                                            "Licenses and Certifications",
-                                            "Competencies",
-                                            "Languages",
-                                            "Skills"
-                                        ],
-                                        "Add": {
-                                            "Competency": [],
-                                            "Review Date": [],
-                                            "Proficiency Rating": [],
-                                            "Current Proficiency Level": [],
-                                            "Years of Experience": [],
-                                            "Personal Interest Level": [],
-                                            "Year Last Used": [],
-                                            "Reviewer": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Measurement": {
-                                        "Add": {
-                                            "Measurement Name": [],
-                                            "Unit of Measure": [],
-                                            "Start Date": [],
-                                            "End Date": [],
-                                            "Description": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Tasks": {
-                                        "Add": {
-                                            "Name": [],
-                                            "Completion Percentage": [],
-                                            "Type": [],
-                                            "Status": [],
-                                            "Priority": [],
-                                            "Start Date": [],
-                                            "Target Completion Date": [],
-                                            "Related Link": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Learning": {
-                                        "Add": {
-                                            "Select Learning Item": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Actions": {
-                                        "Save and Close": [],
-                                        "Cancel": []
-                                    }
-                                }
+                            "Leadership in Crisis": {
+                              "Actions": {
+                                "Enroll": []
+                              }
                             },
-                            "Team Work": {
-                                "Optional": {
-                                    "Minimum Proficiency Level": [],
-                                    "Target Proficiency Level": [],
-                                    "Current Proficiency Level": [],
-                                    "See related learning": {
-                                        "Related Learning": {
-                                            "Strong Managers and Strong Teams - HACP - OpenSesame": [
-                                                "Strong Leaders"
-                                            ],
-                                            "Motivating Your Team": [
-                                                "As a manager, your goal is to keep your team members motivated and enthusiastic about their work."
-                                            ],
-                                            "Show More": {
-                                                "Learning Items That Meet the Prerequisite": {
-                                                    "course": {
-                                                        "Management 201: New Manager Fundamentals": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        },
-                                                        "Motivating Your Team": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        },
-                                                        "Strong Managers and Strong Teams - HACP - OpenSesame": {
-                                                            "Actions": {
-                                                                "Enroll": []
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                },
-                                "Add Goal": {
-                                    "Basic Info": {
-                                        "Library Goal": [],
-                                        "Goal Name": [],
-                                        "Private": [],
-                                        "Description": [],
-                                        "Status": [],
-                                        "Start Date": [],
-                                        "Target Completion Date": [],
-                                        "Category": [],
-                                        "Completion Percentage": [],
-                                        "Source": [],
-                                        "Success Criteria": [],
-                                        "Development Intent": {
-                                            "Systems Support": []
-                                        },
-                                        "Personal Development Intent": [],
-                                        "Add Another Personal Development Intent": []
-                                    },
-                                    "Target Outcomes": {
-                                        "Competencies": [
-                                            "Licenses and Certifications",
-                                            "Competencies",
-                                            "Languages",
-                                            "Skills"
-                                        ],
-                                        "Add": {
-                                            "Competency": [],
-                                            "Review Date": [],
-                                            "Proficiency Rating": [],
-                                            "Current Proficiency Level": [],
-                                            "Years of Experience": [],
-                                            "Personal Interest Level": [],
-                                            "Year Last Used": [],
-                                            "Reviewer": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Measurement": {
-                                        "Add": {
-                                            "Measurement Name": [],
-                                            "Unit of Measure": [],
-                                            "Start Date": [],
-                                            "End Date": [],
-                                            "Description": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Tasks": {
-                                        "Add": {
-                                            "Name": [],
-                                            "Completion Percentage": [],
-                                            "Type": [],
-                                            "Status": [],
-                                            "Priority": [],
-                                            "Start Date": [],
-                                            "Target Completion Date": [],
-                                            "Related Link": [],
-                                            "Comments": [],
-                                            "Actions": {
-                                                "Ok": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Learning": {
-                                        "Add": {
-                                            "Select Learning Item": [],
-                                            "Actions": {
-                                                "Save": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    },
-                                    "Actions": {
-                                        "Save and Close": [],
-                                        "Cancel": []
-                                    }
-                                }
+                            "Professional Selling Skills": {
+                              "Actions": {
+                                "Enroll": []
+                              }
                             }
-                        },
-                        "Degrees": {
-                            "Add Goal": {
-                                "Basic Info": {
-                                    "Library Goal": [],
-                                    "Goal Name": [],
-                                    "Private": [],
-                                    "Description": [],
-                                    "Status": {
-                                        "Note Started": [],
-                                        "In progress": [],
-                                        "Completed": []
-                                    },
-                                    "Start Date": [],
-                                    "Target Completion Date": [],
-                                    "Category": {
-                                        "Select a value": [],
-                                        "Short-term": [],
-                                        "Medium-term": [],
-                                        "Long-term": []
-                                    },
-                                    "Completion Percentage": [],
-                                    "Source": [],
-                                    "Success Criteria": {
-                                        "Actions": {
-                                            "Font Family": [],
-                                            "Font Size": [],
-                                            "Bold": [],
-                                            "Italic": [],
-                                            "Underline": [],
-                                            "Numbered List": [],
-                                            "Bulleted List": [],
-                                            "Link": [],
-                                            "Undo": [],
-                                            "Redo": [],
-                                            "Remove Format": []
-                                        }
-                                    },
-                                    "Development Intent": [],
-                                    "Personal Development Intent": {
-                                        "Actions": {
-                                            "Add Another Personal Development Intent": {
-                                                "Personal Development Intent": [],
-                                                "Delete": []
-                                            }
-                                        }
-                                    },
-                                    "Actions": {
-                                        "Save and Close": [],
-                                        "Cancel": []
-                                    }
-                                },
-                                "Target Outcomes": {
-                                    "Licenses and Certifications": {
-                                        "Licenses and Certifications": [],
-                                        "Competencies": [],
-                                        "Language": [],
-                                        "Skills": []
-                                    },
-                                    "Actions": {
-                                        "Add": {
-                                            "TargetOutcomes": {
-                                                "LicenseOrCertificate": [],
-                                                "Country": [],
-                                                "State": [],
-                                                "IssueDate": [],
-                                                "ExpirationDate": [],
-                                                "IssuedBy": [],
-                                                "CertificateNumber": [],
-                                                "RenewalDate": [],
-                                                "RenewalRequired": [],
-                                                "Verified": [],
-                                                "Title": [],
-                                                "Attachments": [],
-                                                "Actions": {
-                                                    "Save": [],
-                                                    "Cancel": []
-                                                }
-                                            },
-                                            "Collapse": []
-                                        }
-                                    }
-                                },
-                                "Measurement": {
-                                    "Add": {
-                                        "Measurement": {
-                                            "MeasurementName": [],
-                                            "UnitOfMeasure": [],
-                                            "StartDate": [],
-                                            "EndDate": [],
-                                            "Description": {
-                                                "Actions": {
-                                                    "Actions": {
-                                                        "Font Family": [],
-                                                        "Font Size": [],
-                                                        "Bold": [],
-                                                        "Italic": [],
-                                                        "Underline": [],
-                                                        "Numbered List": [],
-                                                        "Bulleted List": [],
-                                                        "Link": [],
-                                                        "Undo": [],
-                                                        "Redo": [],
-                                                        "Remove Format": []
-                                                    }
-                                                }
-                                            },
-                                            "Actions": {
-                                                "OK": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    }
-                                },
-                                "Tasks": {
-                                    "Add": {
-                                        "Tasks": {
-                                            "Name": [],
-                                            "Type": [],
-                                            "Status": [],
-                                            "Priority": [],
-                                            "Completion Percentage": [],
-                                            "Start Date": [],
-                                            "Target Completion Date": [],
-                                            "Related Link": [],
-                                            "Comments": {
-                                                "Actions": {
-                                                    "Actions": {
-                                                        "Font Family": [],
-                                                        "Font Size": [],
-                                                        "Bold": [],
-                                                        "Italic": [],
-                                                        "Underline": [],
-                                                        "Numbered List": [],
-                                                        "Bulleted List": [],
-                                                        "Link": [],
-                                                        "Undo": [],
-                                                        "Redo": [],
-                                                        "Remove Format": []
-                                                    }
-                                                }
-                                            },
-                                            "Actions": {
-                                                "OK": [],
-                                                "Cancel": []
-                                            }
-                                        }
-                                    }
-                                },
-                                "Learning": {
-                                    "Add": {
-                                        "Select Learning Item": {
-                                            "Search the learning catalog": []
-                                        }
-                                    }
-                                },
-                                "Actions": {
-                                    "Save and Close": [],
-                                    "Cancel": []
-                                }
-                            }
-                        },
-                        "OpenJobs": []
-                    }
-                },
-                "ExploreCareers": {
-                    "Careers": {
-                        "Search for careers": []
-                    }
-                }
-            }
-        },
-        "Feedback": {
-            "Know before you start": {
-                "Tutorials": []
-            },
-            "Why is taking feedback important": [],
-            "Feedback given to me": {
-                "Authors": {
-                    "ALL": [],
-                    "Me": []
-                },
-                "Date Range": {
-                    "All": [],
-                    "Past Month": [],
-                    "Past 6 Months": [],
-                    "Past 12 Months": [],
-                    "Past 5 Years": []
-                },
-                "Add Note About Me": {
-                    "Profile": [],
-                    "Who can see this": {
-                        "Everyone": [],
-                        "Managers Only": [],
-                        "Managers and Alberto Perez": [],
-                        "Only Me": []
-                    },
-                    "What do you want to  say": [],
-                    "Drag and Drop": [],
-                    "URL": [],
-                    "Actions": {
-                        "Add URL": [],
-                        "Cancel": [],
-                        "Save": []
-                    }
-                }
-            },
-            "Feedback request about me": {
-                "Status": {
-                    "All": [],
-                    "New": [],
-                    "In Progress": [],
-                    "Complete": []
-                },
-                "Date Range": {
-                    "All": [],
-                    "Past Month": [],
-                    "Past 6 Months": [],
-                    "Past 12 Months": [],
-                    "Past 5 Years": []
-                },
-                "Request Feedback": {
-                    "What type of feedback do you want to request?": {
-                        "General feedback": [],
-                        "Feedback on goals": []
-                    },
-                    "What questions do you want to ask?": {
-                        "Questionnaire": {
-                            "Team collaboration": [],
-                            "Start, Stop, Continue": []
+                          }
                         }
-                    },
-                    "Who do you want to ask": {
-                        "RequestFeedbackFrom": {
-                            "Anyone": []
-                        },
-                        "Person": []
-                    },
-                    "When do you need it": {
-                        "Provide feedback by": [],
-                        "Your message to the feedback provider": [],
-                        "Share feedback with (Admin)": [],
-                        "Share feedback with you": []
-                    },
-                    "Actions": {
-                        "Cancel": [],
-                        "Submit": []
+                      }
                     }
-                }
-            }
-        }
-    }
-}
+                  }
+                },
+                "Add Goal": {
+                  "Basic Info": {
+                    "Library Goal": [],
+                    "Goal Name": [],
+                    "Private": [],
+                    "Description": [],
+                    "Status": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Category": [],
+                    "Completion Percentage": [],
+                    "Source": [],
+                    "Success Criteria": [],
+                    "Development Intent": {
+                      "Systems Support": []
+                    },
+                    "Personal Development Intent": [],
+                    "Add Another Personal Development Intent": []
+                  },
+                  "Target Outcomes": {
+                    "Competencies": [
+                      "Licenses and Certifications",
+                      "Competencies",
+                      "Languages",
+                      "Skills"
+                    ],
+                    "Add": {
+                      "Competency": [],
+                      "Review Date": [],
+                      "Proficiency Rating": [],
+                      "Current Proficiency Level": [],
+                      "Years of Experience": [],
+                      "Personal Interest Level": [],
+                      "Year Last Used": [],
+                      "Reviewer": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Measurement": {
+                    "Add": {
+                      "Measurement Name": [],
+                      "Unit of Measure": [],
+                      "Start Date": [],
+                      "End Date
