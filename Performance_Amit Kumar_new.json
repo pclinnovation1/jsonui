@@ -1,971 +1,214 @@
 {
-    "Performance": {
-        "Search for tasks": [],
-        "Administration": {
-            "Performance Documents": {
-                "Search Performance Documents": {
-                    "Find person from results": [],
-                    "Show Filters": {
-                        "Saved Search": [],
-                        "Sort By": [],
-                        "Filters": {
-                            "Actions": {
-                                "Expand All": {
-                                    "Review Period": [],
-                                    "Performance Document": [],
-                                    "Employee": [],
-                                    "Manager": [],
-                                    "Department": [],
-                                    "Assignment Status": {
-                                        "Active": [],
-                                        "Inactive": [],
-                                        "Suspended": [],
-                                        "Actions": {
-                                            "Clear": []
-                                        }
-                                    },
-                                    "Current Task": [],
-                                    "Overdue Task": [],
-                                    "Document Status": {
-                                        "Actions": {
-                                            "In progress": [],
-                                            "Completed": [],
-                                            "Cancel": [],
-                                            "Clear": []
-                                        }
-                                    }
-                                },
-                                "Collapse All": {
-                                    "Review Period": [],
-                                    "Performance Document": [],
-                                    "Employee": [],
-                                    "Manager": [],
-                                    "Department": [],
-                                    "Assignment Status": [],
-                                    "Current Task": [],
-                                    "Overdue Task": [],
-                                    "Document Status": []
-                                },
-                                "Reset": [],
-                                "Personalize Filters": []
-                            }
-                        }
-                    }
-                },
-                "Actions": {
-                    "Create Document": {
-                        "Continue": [],
-                        "Cancel": []
-                    },
-                    "Send Email Notification": {
-                        "Select Population": {
-                            "Department": [
-                                "Name",
-                                "Location Name"
-                            ],
-                            "Review Period": [
-                                "Review Period Name",
-                                "Start Date",
-                                "End Date"
-                            ],
-                            "Performance Document": [
-                                "Performance Document",
-                                "From Date",
-                                "To Date"
-                            ],
-                            "Performance Document Dates": {
-                                "Hire Date Start Range": [],
-                                "Hire Date End Range": []
-                            }
-                        },
-                        "Email": {
-                            "Email Subject": [],
-                            "Email Text": []
-                        },
-                        "Actions": {
-                            "Send": [],
-                            "Cancel": []
-                        }
-                    }
-                }
+  "Performance": {
+    "SearchForTasks": [],
+    "Administration": {
+      "PerformanceDocuments": {
+        "SearchPerformanceDocuments": {
+          "FindPersonFromResults": [],
+          "ShowFilters": {
+            "SavedSearch": [],
+            "SortBy": [],
+            "Filters": {
+              "ReviewPeriod": [],
+              "PerformanceDocument": [],
+              "Employee": [],
+              "Manager": [],
+              "Department": [],
+              "AssignmentStatus": ["Active", "Inactive", "Suspended"],
+              "CurrentTask": [],
+              "OverdueTask": [],
+              "DocumentStatus": ["In progress", "Completed", "Cancel"]
             },
-            "Participant Feedback": {
-                "Search Participant Feedback": {
-                    "Find person from results": [],
-                    "Show Filters": {
-                        "Saved Search": [],
-                        "Sort By": [],
-                        "Filters": {
-                            "Actions": {
-                                "Expand All": {
-                                    "Review Period": [],
-                                    "Performance Document": [],
-                                    "Participant": [],
-                                    "Employee": [],
-                                    "Manager": [],
-                                    "Department": [],
-                                    "Document Status": {
-                                        "Actions": {
-                                            "In progress": [],
-                                            "Completed": [],
-                                            "Cancel": [],
-                                            "Clear": []
-                                        }
-                                    },
-                                    "Feedback Status": {
-                                        "Actions": {
-                                            "In progress": [],
-                                            "Completed": [],
-                                            "Request not sent": [],
-                                            "Awaiting reply": []
-                                        }
-                                    },
-                                    "Assignment Status": {
-                                        "Active": [],
-                                        "Inactive": [],
-                                        "Suspended": [],
-                                        "Clear": []
-                                    }
-                                },
-                                "Collapse All": {
-                                    "Review Period": [],
-                                    "Performance Document": [],
-                                    "Employee": [],
-                                    "Participant": [],
-                                    "Manager": [],
-                                    "Department": [],
-                                    "Document Status": [],
-                                    "Feedback Status": [],
-                                    "Assignment Status": []
-                                },
-                                "Reset": [],
-                                "Personalize Filters": []
-                            }
-                        }
-                    }
-                }
-            },
-            "Performance Eligibility": {
-                "Search Eligible Employees": {
-                    "Find person from results": [],
-                    "Show Filters": {
-                        "Saved Search": [],
-                        "Sort By": [],
-                        "Filters": {
-                            "Actions": {
-                                "Expand All": {
-                                    "Employee": [],
-                                    "Manager": [],
-                                    "Department": []
-                                },
-                                "Collapse All": {
-                                    "Employee": [],
-                                    "Manager": [],
-                                    "Department": []
-                                },
-                                "Personalize Filters": []
-                            }
-                        }
-                    }
-                }
-            },
-            "Process Mass Actions for Performance Documents": {
-                "Submitted Mass Action Processes": {
-                    "Search process name": [],
-                    "Add": {
-                        "Cancel Performance Documents": [],
-                        "Complete Performance Documents": [],
-                        "Create Performance Documents": [],
-                        "Delete Performance Documents": [],
-                        "Mass Print Performance Documents": [],
-                        "Change Current Task": [],
-                        "Change Task Due Dates": [],
-                        "Update Model Profile Competency Sections": []
-                    },
-                    "Show Filters": {
-                        "Sort By": [],
-                        "Actions": {
-                            "Refresh": []
-                        },
-                        "Filters": {
-                            "Actions": {
-                                "Expand All": {
-                                    "Submission Date": {
-                                        "Actions": {
-                                            "All": [],
-                                            "Today": [],
-                                            "Last 7 Days": [],
-                                            "Last 30 Days": [],
-                                            "Range (specify)": []
-                                        }
-                                    },
-                                    "Completion Date": {
-                                        "Actions": {
-                                            "All": [],
-                                            "Today": [],
-                                            "Last 7 Days": [],
-                                            "Last 30 Days": [],
-                                            "Range (specify)": []
-                                        }
-                                    }
-                                },
-                                "Collapse All": {
-                                    "Submission Date": [],
-                                    "Completion Date": []
-                                },
-                                "Personalize Filters": []
-                            }
-                        }
-                    }
-                }
-            }
+            "Actions": ["ExpandAll", "CollapseAll", "Reset", "PersonalizeFilters"]
+          }
         },
-        "Setup Maintenance": {
-            "Review Periods": {
-                "Search by review period name": [],
-                "Filters": {
-                    "Status": [],
-                    "Start Date": [],
-                    "End Date": [],
-                    "In Use": []
-                },
-                "Add": {
-                    "New Review Period": {
-                        "Name": [],
-                        "Description": [],
-                        "Start Date": [],
-                        "End Date": [],
-                        "Status": {
-                            "Active": [],
-                            "Inactive": []
-                        },
-                        "Action": {
-                            "Cancel": [],
-                            "Create": []
-                        }
-                    }
-                }
+        "Actions": {
+          "CreateDocument": ["Continue", "Cancel"],
+          "SendEmailNotification": {
+            "SelectPopulation": {
+              "Department": ["Name", "Location Name"],
+              "ReviewPeriod": ["Review Period Name", "Start Date", "End Date"],
+              "PerformanceDocument": ["Performance Document", "From Date", "To Date"],
+              "PerformanceDocumentDates": ["Hire Date Start Range", "Hire Date End Range"]
             },
-            "Questions": {
-                "Folders": {
-                    "Subscriber": [
-                        "Cybersecurity Incidents",
-                        "Employee Wellness",
-                        "General Surveys",
-                        "Guided Journeys",
-                        "HR Checklists",
-                        "Journey Surveys",
-                        "Learning Assessments",
-                        "Learning Enrollments",
-                        "Learning Evaluations",
-                        "Learning Observation Checklist",
-                        "Performance 360",
-                        "Personal Brand Survey",
-                        "Recruiting",
-                        "Team Brand Meeting Survey",
-                        "Time and Labor Time Card",
-                        "Touchpoints",
-                        "Volunteering",
-                        "Workforce Health and Safety Incidents",
-                        "Workforce Health and Safety Inspections"
-                    ],
-                    "View": {
-                        "Actions": {
-                            "Collapse": [],
-                            "Expand All Below": [],
-                            "Collapse All Below": [],
-                            "Expand All": [],
-                            "Collapse All": [],
-                            "Scroll to First": [],
-                            "Scroll to Last": []
-                        }
-                    },
-                    "Create": {
-                        "Create Folder": {
-                            "Folder": [],
-                            "Actions": {
-                                "OK": [],
-                                "Cancel": []
-                            }
-                        }
-                    },
-                    "Actions": {
-                        "Edit": [],
-                        "Cancel": []
-                    }
-                },
-                "Question Library": {
-                    "Search": {
-                        "Basic": {
-                            "Keywords": [],
-                            "Actions": {
-                                "Search": [],
-                                "Reset": []
-                            }
-                        },
-                        "Advanced": {
-                            "Keywords": [],
-                            "Question Code": [],
-                            "Question Text": [],
-                            "Question Type": [],
-                            "Creation Date": [],
-                            "Score Question": [],
-                            "Actions": {
-                                "Add Fields": {
-                                    "Candidate Types": [],
-                                    "Creation Date": [],
-                                    "Job Families": [],
-                                    "Job Functions": [],
-                                    "Keywords": [],
-                                    "Last Updated Date": [],
-                                    "Question Classification": [],
-                                    "Question Code": [],
-                                    "Question Text": [],
-                                    "Question Type": [],
-                                    "Recruiting Locations": [],
-                                    "Recruiting Organizations": [],
-                                    "Score Question": [],
-                                    "Status": []
-                                },
-                                "Reorder": {
-                                    "Search Fields": {
-                                        "Keywords": [],
-                                        "Question Code": [],
-                                        "Question Text": [],
-                                        "Question Type": [],
-                                        "Creation Date": [],
-                                        "Score Question": []
-                                    },
-                                    "Actions": {
-                                        "Move selected items to the top of the list": [],
-                                        "Move selected item up one in the list": [],
-                                        "Move selected item down one in the list": [],
-                                        "Move selected items to the down of the list": []
-                                    }
-                                },
-                                "Actions": {
-                                    "OK": [],
-                                    "Cancel": []
-                                },
-                                "Search": [],
-                                "Reset": []
-                            }
-                        }
-                    },
-                    "Search Reasults": {
-                        "Actions": {
-                            "Create Question": {
-                                "Question Code": [],
-                                "Subscriber": [],
-                                "Owner": [],
-                                "Folder": [],
-                                "Status": [],
-                                "Question Version Number": [],
-                                "Privacy": [],
-                                "Details": {
-                                    "Question": {
-                                        "Question Text": [],
-                                        "Image": [],
-                                        "Instructions": [],
-                                        "Question Type": []
-                                    },
-                                    "Response": {
-                                        "Response Type": [],
-                                        "Minimum Length": [],
-                                        "Maximum Length": []
-                                    }
-                                },
-                                "Actions": {
-                                    "Save and Close": [],
-                                    "Cancel": []
-                                }
-                            },
-                            "Copy": {},
-                            "Edit": {},
-                            "Delete": {}
-                        }
-                    }
-                }
-            },
-            "Questionnaire Templates": {
-                "Search": {
-                    "Basic": {
-                        "Subscriber": [],
-                        "Keywords": []
-                    },
-                    "Advanced": {
-                        "Subscriber": [],
-                        "Keywords": [],
-                        "Name": [],
-                        "Description": [],
-                        "Status": [],
-                        "Creation Date": [],
-                        "Score Questionnaire": []
-                    },
-                    "Actions": {
-                        "Search": [],
-                        "Reset": []
-                    }
-                },
-                "Search Reasults": {
-                    "Actions": {
-                        "View": [],
-                        "Format": [],
-                        "Create": {
-                            "Name": [],
-                            "Subscriber": [],
-                            "Status": [],
-                            "Owner": [],
-                            "Status Owner": [],
-                            "Creation Date": [],
-                            "Score Question": [],
-                            "Actions": {
-                                "Sort Ascending": [],
-                                "Sort Descending": []
-                            }
-                        },
-                        "Copy": {},
-                        "Edit": {},
-                        "Delete": {}
-                    }
-                }
-            },
-            "Questionnaires": {
-                "Folders": {
-                    "Subscriber": {
-                        "Subscriber": [],
-                        "Actions": {
-                            "View": {
-                                "Actions": {
-                                    "Collapse": [],
-                                    "Expand All Below": [],
-                                    "Collapse All Below": [],
-                                    "Expand All": [],
-                                    "Collapse All": [],
-                                    "Scroll to First": [],
-                                    "Scroll to Last": []
-                                }
-                            },
-                            "Create": {
-                                "Create Folder": {
-                                    "Folder": [],
-                                    "Actions": {
-                                        "OK": [],
-                                        "Cancel": []
-                                    }
-                                }
-                            },
-                            "Edit": {},
-                            "Cancel": {}
-                        }
-                    },
-                    "Question Library": {
-                        "Search": {
-                            "Basic": {
-                                "Keywords": [],
-                                "Actions": {
-                                    "Search": [],
-                                    "Reset": []
-                                }
-                            },
-                            "Advanced": {
-                                "Keywords": [],
-                                "Questionnaire Code": [],
-                                "Questionnaire Name": [],
-                                "Description": [],
-                                "Template": [],
-                                "Owner": [],
-                                "Creation Date": [],
-                                "Score Questionnaire": [],
-                                "Actions": {
-                                    "Search": [],
-                                    "Reset": []
-                                }
-                            }
-                        },
-                        "Search Reasults": {
-                            "Actions": {
-                                "View": [],
-                                "Format": [],
-                                "Create": {
-                                    "Create Questionnaire": {
-                                        "Search and Select": {
-                                            "Questionnaire Template": {
-                                                "Questionnaire Template ID": [],
-                                                "Name": [],
-                                                "Actions": {
-                                                    "Search": [],
-                                                    "Reset": []
-                                                }
-                                            }
-                                        }
-                                    },
-                                    "Search Results": {
-                                        "Actions": {
-                                            "View": [],
-                                            "Format": []
-                                        }
-                                    },
-                                    "Actions": {
-                                        "OK": [],
-                                        "Cancel": []
-                                    }
-                                }
-                            },
-                            "Copy": [],
-                            "Edit": [],
-                            "Delete": [],
-                            "Preview": []
-                        }
-                    }
-                }
-            },
-            "Performance Roles": {
-                "Search by role name": [],
-                "Filters": {
-                    "Role Type": [],
-                    "Status": [],
-                    "From Date": [],
-                    "To Date": [],
-                    "In Use": []
-                },
-                "Add": {
-                    "Name": [],
-                    "Description": [],
-                    "Role Type": [],
-                    "Status": [],
-                    "In Use": [],
-                    "From Date": [],
-                    "To Date": [],
-                    "Actions": {
-                        "Cancel": [],
-                        "Submit": []
-                    }
-                }
-            },
-            "Eligibility Profiles": {
-                "Search": {
-                    "Name": [],
-                    "Assignment to Use": [],
-                    "Profile Usage": [],
-                    "Profile Type": [],
-                    "Actions": {
-                        "Search": [],
-                        "Reset": [],
-                        "Save...": []
-                    },
-                    "Advanced": {
-                        "Name": [],
-                        "Assignment to Use": [],
-                        "Profile Usage": [],
-                        "Profile Type": [],
-                        "Actions": {
-                            "Search": [],
-                            "Reset": [],
-                            "Save...": [],
-                            "Reorder": {
-                                "Search Fields": {
-                                    "Name": [],
-                                    "Assignment to Use": [],
-                                    "Profile Usage": [],
-                                    "Profile Type": []
-                                },
-                                "Actions": {
-                                    "Move selected items to the top of the list": [],
-                                    "Move selected item up one in the list": [],
-                                    "Move selected item down one in the list": [],
-                                    "Move selected items to the down of the list": [],
-                                    "OK": [],
-                                    "Cancel": []
-                                }
-                            },
-                            "Add Field": {
-                                "Name": [],
-                                "Assignment to Use": [],
-                                "Profile Usage": [],
-                                "Profile Type": [],
-                                "Status": [],
-                                "Description": []
-                            }
-                        }
-                    },
-                    "Saved Search": []
-                },
-                "Search Results": {
-                    "Actions": {
-                        "View": [],
-                        "Create": [],
-                        "Delete": [],
-                        "Detach": []
-                    }
-                }
-            },
-            "Performance Document Types": {
-                "Search by document type name": [],
-                "Filters": {
-                    "Status": [],
-                    "From Date": [],
-                    "To Date": [],
-                    "In Use": []
-                },
-                "Add": {
-                    "Name": [],
-                    "Status": [],
-                    "In Use": [],
-                    "From Date": [],
-                    "To Date": [],
-                    "Actions": {
-                        "Cancel": [],
-                        "Submit": []
-                    }
-                }
-            },
-            "Performance Template Sections": {
-                "Search": {
-                    "Basic": {
-                        "Name": [],
-                        "Actions": {
-                            "Search": [],
-                            "Reset": []
-                        }
-                    },
-                    "Advanced": {
-                        "Name": [],
-                        "From Date": [],
-                        "To Date": [],
-                        "Status": [],
-                        "In Use": [],
-                        "Actions": {
-                            "Search": [],
-                            "Reset": [],
-                            "Add Fields": {
-                                "Name": [],
-                                "From Date": [],
-                                "To Date": [],
-                                "Status": [],
-                                "In Use": [],
-                                "SctionDefId": []
-                            },
-                            "Reorder": {
-                                "Search Fields": {
-                                    "Name": [],
-                                    "From Date": [],
-                                    "To Date": [],
-                                    "Status": [],
-                                    "In Use": [],
-                                    "Actions": {
-                                        "Move selected items to the top of the list": [],
-                                        "Move selected item up one in the list": [],
-                                        "Move selected item down one in the list": [],
-                                        "Move selected items to the down of the list": [],
-                                        "OK": [],
-                                        "Cancel": []
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "Search Results": {
-                    "Actions": {
-                        "View": [],
-                        "Format": [],
-                        "Create": [],
-                        "Edit": [],
-                        "Query By Example": [],
-                        "Freeze": [],
-                        "Wrap": []
-                    }
-                }
-            },
-            "Performance Process Flows": {
-                "Search": {
-                    "Basic": {
-                        "Name": [],
-                        "Actions": {
-                            "Search": [],
-                            "Reset": []
-                        }
-                    },
-                    "Advanced": {
-                        "Name": [],
-                        "From Date": [],
-                        "To Date": [],
-                        "Status": [],
-                        "In Use": [],
-                        "Actions": {
-                            "Search": [],
-                            "Reset": [],
-                            "Add Fields": {
-                                "Name": [],
-                                "From Date": [],
-                                "To Date": [],
-                                "Status": [],
-                                "In Use": [],
-                                "SctionDefId": []
-                            },
-                            "Reorder": {
-                                "Search Fields": {
-                                    "Name": [],
-                                    "From Date": [],
-                                    "To Date": [],
-                                    "Status": [],
-                                    "In Use": [],
-                                    "Actions": {
-                                        "Move selected items to the top of the list": [],
-                                        "Move selected item up one in the list": [],
-                                        "Move selected item down one in the list": [],
-                                        "Move selected items to the down of the list": [],
-                                        "OK": [],
-                                        "Cancel": []
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "Search Results": {
-                    "Actions": {
-                        "View": [],
-                        "Format": [],
-                        "Create": {},
-                        "Edit": [],
-                        "Query By Example": [],
-                        "Freeze": [],
-                        "Wrap": []
-                    }
-                }
-            },
-            "Performance Templates": {
-                "Search": {
-                    "Basic": {
-                        "Name": [],
-                        "Actions": {
-                            "Search": [],
-                            "Reset": []
-                        }
-                    },
-                    "Advanced": {
-                        "Name": [],
-                        "From Date": [],
-                        "To Date": [],
-                        "Document Type": [],
-                        "Status": [],
-                        "In Use": [],
-                        "Actions": {
-                            "Search": [],
-                            "Reset": [],
-                            "Add Fields": {
-                                "Name": [],
-                                "From Date": [],
-                                "To Date": [],
-                                "Status": [],
-                                "In Use": [],
-                                "Document Type": []
-                            },
-                            "Reorder": {
-                                "Search Fields": {
-                                    "Name": [],
-                                    "From Date": [],
-                                    "To Date": [],
-                                    "Status": [],
-                                    "In Use": [],
-                                    "Actions": {
-                                        "Move selected items to the top of the list": [],
-                                        "Move selected item up one in the list": [],
-                                        "Move selected item down one in the list": [],
-                                        "Move selected items to the down of the list": [],
-                                        "OK": [],
-                                        "Cancel": []
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "Search Results": {
-                    "Actions": {
-                        "View": [],
-                        "Format": [],
-                        "Create": {},
-                        "Edit": [],
-                        "Query By Example": [],
-                        "Freeze": [],
-                        "Wrap": []
-                    }
-                }
-            },
-            "Check-In Templates": {
-                "Search by template name": [],
-                "Filters": {
-                    "Status": [],
-                    "In Use": []
-                },
-                "Actions": {
-                    "Add": {
-                        "New Check-in Template": {
-                            "Name": [],
-                            "Template Type": [],
-                            "Status": [],
-                            "Comments": [],
-                            "From Date": [],
-                            "To Date": [],
-                            "Review Period": [],
-                            "Check-in content": [],
-                            "Eligibility Profiles": {
-                                "Actions": {
-                                    "Add Eligibility Profile": []
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "Feedback Templates": {
-                "Search": {
-                    "Name": [],
-                    "Status": [],
-                    "Actions": {
-                        "Search": [],
-                        "Reset": []
-                    }
-                },
-                "Search Results": {
-                    "Actions": {
-                        "View": {},
-                        "Format": [],
-                        "Create": {
-                            "Create Feedback Template": {
-                                "Fields": {
-                                    "Name": [],
-                                    "Comments": [],
-                                    "Status": [],
-                                    "Template Type": [],
-                                    "Questionnaire": []
-                                },
-                                "Actions": {
-                                    "Save and Close": [],
-                                    "Cancel": []
-                                }
-                            }
-                        },
-                        "Edit": [],
-                        "Copy": [],
-                        "Cancel": []
-                    }
-                }
-            },
-            "Eligibility Batch Process": {
-                "Actions": {
-                    "Monitor Process": {
-                        "Manage Scheduled Processes": {
-                            "Search": {
-                                "Name": [],
-                                "Process ID": [],
-                                "Status": [],
-                                "Submission Time": [],
-                                "Submission Notes": [],
-                                "Submitted By": [],
-                                "Actions": {
-                                    "Search": [],
-                                    "Reset": [],
-                                    "Download Results": []
-                                }
-                            },
-                            "Search Results": {
-                                "View": {
-                                    "Actions": {
-                                        "Flat List": {
-                                            "Actions": {
-                                                "Actions": [],
-                                                "View": [],
-                                                "Schedule New Process": [],
-                                                "Resubmit": [],
-                                                "Put On Hold": [],
-                                                "Cancel Process": [],
-                                                "Release Process": [],
-                                                "View Log": []
-                                            }
-                                        },
-                                        "Hierarchy": {
-                                            "Actions": [],
-                                            "View": [],
-                                            "Schedule New Process": {
-                                                "Type": {
-                                                    "Job": [],
-                                                    "Job Set": []
-                                                },
-                                                "Name": [],
-                                                "Description": [],
-                                                "Actions": {
-                                                    "OK": [],
-                                                    "Cancel": []
-                                                }
-                                            },
-                                            "Resubmit": [],
-                                            "Put On Hold": [],
-                                            "Cancel Process": [],
-                                            "Release Process": [],
-                                            "View Log": []
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "Process Options": {
-                        "Language": [],
-                        "Territory": [],
-                        "Time Zone": [],
-                        "Number Format": [],
-                        "Time Format": [],
-                        "Date Format": [],
-                        "Currency": [],
-                        "Actions": {
-                            "OK": [],
-                            "Cancel": []
-                        }
-                    },
-                    "Advanced": [],
-                    "Basic": [],
-                    "Submit": [],
-                    "Cancel": []
-                },
-                "Basic Options": {
-                    "Parameters": {
-                        "Batch Process Type": []
-                    }
-                },
-                "Advanced Options": {
-                    "Actions": {
-                        "Parameters": {
-                            "Batch Process Type": []
-                        },
-                        "Schedule": {
-                            "As soon as possible": [],
-                            "Using a schedule": []
-                        },
-                        "Notification": {
-                            "Actions": {
-                                "View": [],
-                                "Create": [],
-                                "Delete": []
-                            }
-                        }
-                    }
-                },
-                "Submission Notes": []
-            },
-            "Talent Notifications": {
-                "Actions": {
-                    "Goal Management": [],
-                    "Performance Management": [],
-                    "Profile Management": [],
-                    "Talent Review": [],
-                    "Save and Close": [],
-                    "Cancel": []
-                }
-            }
+            "Email": ["Email Subject", "Email Text"],
+            "Actions": ["Send", "Cancel"]
+          }
         }
+      },
+      "ParticipantFeedback": {
+        "SearchParticipantFeedback": {
+          "FindPersonFromResults": [],
+          "ShowFilters": {
+            "SavedSearch": [],
+            "SortBy": [],
+            "Filters": {
+              "ReviewPeriod": [],
+              "PerformanceDocument": [],
+              "Participant": [],
+              "Employee": [],
+              "Manager": [],
+              "Department": [],
+              "DocumentStatus": ["In progress", "Completed", "Cancel"],
+              "FeedbackStatus": ["In progress", "Completed", "Request not sent", "Awaiting reply"],
+              "AssignmentStatus": ["Active", "Inactive", "Suspended"]
+            },
+            "Actions": ["ExpandAll", "CollapseAll", "Reset", "PersonalizeFilters"]
+          }
+        }
+      },
+      "PerformanceEligibility": {
+        "SearchEligibleEmployees": {
+          "FindPersonFromResults": [],
+          "ShowFilters": {
+            "SavedSearch": [],
+            "SortBy": [],
+            "Filters": ["Employee", "Manager", "Department"],
+            "Actions": ["ExpandAll", "CollapseAll", "PersonalizeFilters"]
+          }
+        }
+      },
+      "ProcessMassActionsForPerformanceDocuments": {
+        "SubmittedMassActionProcesses": {
+          "SearchProcessName": [],
+          "Add": ["CancelPerformanceDocuments", "CompletePerformanceDocuments", "CreatePerformanceDocuments", "DeletePerformanceDocuments", "MassPrintPerformanceDocuments", "ChangeCurrentTask", "ChangeTaskDueDates", "UpdateModelProfileCompetencySections"],
+          "ShowFilters": {
+            "SortBy": [],
+            "Actions": ["Refresh"],
+            "Filters": {
+              "SubmissionDate": ["All", "Today", "Last 7 Days", "Last 30 Days", "Range (specify)"],
+              "CompletionDate": ["All", "Today", "Last 7 Days", "Last 30 Days", "Range (specify)"]
+            },
+            "Actions": ["ExpandAll", "CollapseAll", "PersonalizeFilters"]
+          }
+        }
+      }
+    },
+    "SetupMaintenance": {
+      "ReviewPeriods": {
+        "SearchByReviewPeriodName": [],
+        "Filters": ["Status", "StartDate", "EndDate", "InUse"],
+        "Add": {
+          "NewReviewPeriod": ["Name", "Description", "StartDate", "EndDate", "Status": ["Active", "Inactive"], "Actions": ["Cancel", "Create"]]
+        }
+      },
+      "Questions": {
+        "Folders": {
+          "Subscriber": ["Cybersecurity Incidents", "Employee Wellness", "General Surveys", "Guided Journeys", "HR Checklists", "Journey Surveys", "Learning Assessments", "Learning Enrollments", "Learning Evaluations", "Learning Observation Checklist", "Performance 360", "Personal Brand Survey", "Recruiting", "Team Brand Meeting Survey", "Time and Labor Time Card", "Touchpoints", "Volunteering", "Workforce Health and Safety Incidents", "Workforce Health and Safety Inspections"],
+          "View": {
+            "Actions": ["Collapse", "ExpandAllBelow", "CollapseAllBelow", "ExpandAll", "CollapseAll", "ScrollToFirst", "ScrollToLast"]
+          },
+          "Create": {
+            "CreateFolder": ["Folder", "Actions": ["OK", "Cancel"]]
+          },
+          "Actions": ["Edit", "Cancel"]
+        },
+        "QuestionLibrary": {
+          "Search": {
+            "Basic": ["Keywords", "Actions": ["Search", "Reset"]],
+            "Advanced": ["Keywords", "QuestionCode", "QuestionText", "QuestionType", "CreationDate", "ScoreQuestion", "Actions": ["Search", "Reset", "AddFields", "Reorder"]]
+          },
+          "SearchResults": {
+            "Actions": ["CreateQuestion", "Copy", "Edit", "Delete"]
+          }
+        }
+      },
+      "QuestionnaireTemplates": {
+        "Search": {
+          "Basic": ["Subscriber", "Keywords"],
+          "Advanced": ["Subscriber", "Keywords", "Name", "Description", "Status", "CreationDate", "ScoreQuestionnaire"],
+          "Actions": ["Search", "Reset"]
+        },
+        "SearchResults": {
+          "Actions": ["View", "Format", "Create", "Copy", "Edit", "Delete"]
+        }
+      },
+      "Questionnaires": {
+        "Folders": {
+          "Subscriber": {
+            "Subscriber": [],
+            "Actions": {
+              "View": ["Collapse", "ExpandAllBelow", "CollapseAllBelow", "ExpandAll", "CollapseAll", "ScrollToFirst", "ScrollToLast"],
+              "CreateFolder": ["Folder", "Actions": ["OK", "Cancel"]],
+              "Edit": [],
+              "Cancel": []
+            }
+          },
+          "QuestionLibrary": {
+            "Search": {
+              "Basic": ["Keywords", "Actions": ["Search", "Reset"]],
+              "Advanced": ["Keywords", "QuestionnaireCode", "QuestionnaireName", "Description", "Template", "Owner", "CreationDate", "ScoreQuestionnaire", "Actions": ["Search", "Reset"]]
+            },
+            "SearchResults": {
+              "Actions": ["View", "Format", "Create", "Copy", "Edit", "Delete", "Preview"]
+            }
+          }
+        }
+      },
+      "PerformanceRoles": {
+        "SearchByRoleName": [],
+        "Filters": ["RoleType", "Status", "FromDate", "ToDate", "InUse"],
+        "Add": ["Name", "Description", "RoleType", "Status", "InUse", "FromDate", "ToDate", "Actions": ["Cancel", "Submit"]]
+      },
+      "EligibilityProfiles": {
+        "Search": {
+          "Name": [],
+          "AssignmentToUse": [],
+          "ProfileUsage": [],
+          "ProfileType": [],
+          "Actions": ["Search", "Reset", "Save", "AddFields", "Reorder"]
+        },
+        "SearchResults": {
+          "Actions": ["View", "Create", "Delete", "Detach"]
+        }
+      },
+      "PerformanceDocumentTypes": {
+        "SearchByDocumentTypeName": [],
+        "Filters": ["Status", "FromDate", "ToDate", "InUse"],
+        "Add": ["Name", "Status", "InUse", "FromDate", "ToDate", "Actions": ["Cancel", "Submit"]]
+      },
+      "PerformanceTemplateSections": {
+        "Search": {
+          "Basic": ["Name", "Actions": ["Search", "Reset"]],
+          "Advanced": ["Name", "FromDate", "ToDate", "Status", "InUse", "Actions": ["Search", "Reset", "AddFields", "Reorder"]]
+        },
+        "SearchResults": {
+          "Actions": ["View", "Format", "Create", "Edit", "QueryByExample", "Freeze", "Wrap"]
+        }
+      },
+      "PerformanceProcessFlows": {
+        "Search": {
+          "Basic": ["Name", "Actions": ["Search", "Reset"]],
+          "Advanced": ["Name", "FromDate", "ToDate", "Status", "InUse", "Actions": ["Search", "Reset", "AddFields", "Reorder"]]
+        },
+        "SearchResults": {
+          "Actions": ["View", "Format", "Create", "Edit", "QueryByExample", "Freeze", "Wrap"]
+        }
+      },
+      "PerformanceTemplates": {
+        "Search": {
+          "Basic": ["Name", "Actions": ["Search", "Reset"]],
+          "Advanced": ["Name", "FromDate", "ToDate", "DocumentType", "Status", "InUse", "Actions": ["Search", "Reset", "AddFields", "Reorder"]]
+        },
+        "SearchResults": {
+          "Actions": ["View", "Format", "Create", "Edit", "QueryByExample", "Freeze", "Wrap"]
+        }
+      },
+      "CheckInTemplates": {
+        "SearchByTemplateName": [],
+        "Filters": ["Status", "InUse"],
+        "Actions": ["Add"]
+      },
+      "FeedbackTemplates": {
+        "Search": ["Name", "Status", "Actions": ["Search", "Reset"]],
+        "SearchResults": ["View", "Format", "Create", "Edit", "Copy", "Cancel"]
+      },
+      "EligibilityBatchProcess": {
+        "Actions": ["MonitorProcess", "ProcessOptions", "BasicOptions", "AdvancedOptions", "SubmissionNotes"]
+      },
+      "TalentNotifications": {
+        "Actions": ["GoalManagement", "PerformanceManagement", "ProfileManagement", "TalentReview", "SaveAndClose", "Cancel"]
+      }
     }
+  }
 }
