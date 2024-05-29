@@ -1,525 +1,183 @@
 {
-    "Learning": {
-        "Team Learning": {
-            "Search by learning items": [],
-            "Filters": {
-                "Reports": {
-                    "Direct Reports": [],
-                    "All Reports": []
+  "Learning": {
+    "ObjectCreation": {
+      "AssignLearning": {
+        "AssignmentDetails": {
+          "AssignmentType": ["Voluntary", "Required"],
+          "StartDate": [],
+          "DueDate": [],
+          "ContextSegment": []
+        },
+        "LearningItems": {
+          "Title": [],
+          "Type": []
+        },
+        "Learners": {
+          "SelectionType": ["Directs", "Organisation", "Person"],
+          "SelectAPerson": {},
+          "NoteToLearners": []
+        },
+        "Justification": [],
+        "Actions": ["Cancel", "Assign"]
+      },
+      "RecordExternalLearning": {
+        "CompletionDetails": {
+          "StartDate": [],
+          "CompletionDate": [],
+          "ActualEffortInHours": [],
+          "ScoreAchieved": [],
+          "ContextSegment": []
+        },
+        "LearningItemDetails": {
+          "Title": [],
+          "URL": [],
+          "ExpectedTrainingHours": [],
+          "Cost": [],
+          "Currency": ["AFN", "ALL", "DZD", "AOA", "ARS", "AMD", "AWG", "AUD", "AZN", "BSD", "BHD", "BDT", "BBD", "BYN", "BEF", "BZD", "BMD", "BTN", "BOB", "BAM", "BWP", "BRL", "BND", "BGN", "BIF", "XOF", "XAF", "XPF", "KHR", "CAD", "CVE", "KYD", "CLP", "CNY", "COP", "KMF", "CDF", "CRC", "HRK", "CUC", "CUP", "CZK", "DKK", "DJF", "DOP", "XCD", "ECS", "EGP", "SVC", "GQE", "ERN", "EEK", "ETB", "EUR", "FJD", "GMD", "GEL", "DEM", "GHS", "GIP", "GRD", "GTQ", "GNF", "GYD", "HTG", "HNL", "HKD", "HUF", "ISK", "INR", "IDR", "IRR", "IQD", "ILS", "ITL", "JMD", "JPY", "JOD", "KZT", "KES", "KWD", "KGS", "LAK", "LVL", "LBP", "LSL", "LRD", "LYD", "LTL", "MOP", "MKD", "MGA", "MWK", "MYR", "MVR", "MRO", "MUR", "MXN", "MDL", "MNT", "MAD", "MZN", "MMK", "NAD", "NPR", "ANG", "TWD", "NZD", "NIO", "NGN", "KPW", "NOK", "OMR", "PKR", "PAB", "PGK", "PYG", "PEN", "PHP", "PLN", "PTE", "QAR", "RON", "RUB", "RWF", "SHP", "WST", "STD", "SAR", "RSD", "SCR", "SLL", "SGD", "SKK", "SBD", "SOS", "ZAR", "KRW", "SSP", "ESP", "LKR", "SDG", "SRD", "SZL", "SEK", "CHF", "SYP", "TJS", "TZS", "THB", "TOP", "TTD", "TND", "TRY", "TMT", "UGX", "UAH", "AED", "UYU", "UZS", "VUV", "VEF", "VND", "YER", "ZMW", "ZWL"],
+          "Topic": ["Career Development", "Compliance", "Finance", "Human Resources", "IT", "Industry", "Leadership", "Marketing", "Sales", "Security"],
+          "ContextSegment": {},
+          "Description": []
+        },
+        "Learners": {
+          "SelectionType": ["Directs", "Organisation", "Person"],
+          "SelectAPerson": {},
+          "NoteToLearners": []
+        },
+        "Justification": [],
+        "Actions": ["Cancel", "Record"]
+      },
+      "PublishVideo": {
+        "VideoDetails": {
+          "Video": [],
+          "Title": [],
+          "Description": []
+        },
+        "Visibility": {
+          "Privacy": ["Everyone", "Secret"]
+        },
+        "RelatedMaterials": [],
+        "Actions": ["SaveAndClose", "Publish", "Cancel"]
+      },
+      "AuthorLearningJourney": {
+        "LearningJourneyDetails": {
+          "Title": [],
+          "CoverArt": [],
+          "Description": []
+        },
+        "TableOfContents": {
+          "Add": {
+            "SectionDetails": {
+              "SectionTitle": [],
+              "SelectMedia": {
+                "SelectFromLearningCatalog": {
+                  "Filters": {
+                    "LearningItemType": ["Learning Journey", "Course", "Learning Community", "Specialization", "Video"],
+                    "Rating": ["4 Stars and Up", "3 Stars and Up", "2 Stars and Up", "1 Star and Up"],
+                    "DeliveryMode": ["Blended", "Self Paced", "Instructor-Led"],
+                    "StartOnOrAfter": {
+                      "Date": [],
+                      "Actions": ["OK"]
+                    },
+                    "City": {
+                      "CityName": [],
+                      "Actions": ["Search"]
+                    },
+                    "EndOnOrBefore": {
+                      "Date": [],
+                      "Actions": ["OK"]
+                    },
+                    "Language": {},
+                    "Topic": {},
+                    "PersonalizeFilters": {
+                      "PersonalizeSavedSearch": {
+                        "LearningItemType": {},
+                        "Rating": {},
+                        "DeliveryMode": {},
+                        "StartOnOrAfter": {},
+                        "City": {},
+                        "EndOnOrBefore": {},
+                        "Language": {},
+                        "Country": {},
+                        "LearningOutcome": {},
+                        "PublishedDates": {},
+                        "Title": {},
+                        "Price": {},
+                        "Currency": {},
+                        "Topic": {},
+                        "Actions": ["MoveUp", "MoveDown", "OK", "Cancel"]
+                      }
+                    },
+                    "Actions": ["ExpandAll", "CollapseAll"]
+                  },
+                  "Actions": ["HideFilters", "Search"]
                 },
-                "Enrollments": {
-                    "Current": [],
-                    "Completed": [],
-                    "All": []
+                "AddAnImage": {
+                  "SelectMedia": []
                 },
-                "Enrollment Status": {
-                    "Deleted": [],
-                    "Withdrawn": [],
-                    "No Active Offering": [],
-                    "Completed": [],
-                    "Bypass Completed": [],
-                    "Waitlisted": [],
-                    "Pending Active": [],
-                    "Not Passed": [],
-                    "Not Started": [],
-                    "In Progress": []
-                },
-                "Enrollment Type": {
-                    "Required": [],
-                    "Voluntary": []
-                },
-                "Enrolled By": [],
-                "Due Date": {
-                    "Next 30 days": [],
-                    "Next 12 months": [],
-                    "Last 30 days": [],
-                    "Last 12 months": [],
-                    "All time": []
-                },
-                "Enrolled on Date": {
-                    "Last 30 days": [],
-                    "Last 3 months": [],
-                    "Last 12 months": [],
-                    "Year to date": [],
-                    "All time": []
-                },
-                "Completed Date": {
-                    "Last 30 days": [],
-                    "Last 3 months": [],
-                    "Last 12 months": [],
-                    "Year to date": [],
-                    "All time": []
-                },
-                "Expiration Date": {
-                    "Next 30 days": [],
-                    "Next 12 months": [],
-                    "Last 30 days": [],
-                    "Last 12 months": [],
-                    "All time": []
-                },
-                "Learning Item Type": {
-                    "Course": [],
-                    "Offering": [],
-                    "Noncatalog Item": [],
-                    "Specialization": [],
-                    "Learning Journey": []
-                },
-                "Manager Type": {
-                    "Line Manager": []
-                },
-                "Business Title": [],
-                "Actions": {
-                    "Cancel": [],
-                    "See Results": []
+                "AddAWebLink": {
+                  "SelectMedia": ["Web Link", "Attachment"]
                 }
+              },
+              "SectionDescription": []
             },
-            "Actions": {
-                "Assign Learning": {
-                    "Assignment Details": {
-                        "Assignment Type": {
-                            "Voluntary": [],
-                            "Required": []
-                        },
-                        "Start Date": [],
-                        "Due Date": [],
-                        "Context Segment": []
-                    },
-                    "Learning Items": {
-                        "Title": [],
-                        "Type": []
-                    },
-                    "Learners": {
-                        "Selection Type": {
-                            "Directs": [],
-                            "Organisation": [],
-                            "Person": []
-                        },
-                        "Select a Person": {},
-                        "Note to Learners": []
-                    },
-                    "Justification": [],
-                    "Actions": {
-                        "Cancel": [],
-                        "Assign": []
-                    }
-                },
-                "Record External Learning": {
-                    "Completion Details": {
-                        "Start Date": [],
-                        "Completion Date": [],
-                        "Actual Effort in Hours": [],
-                        "Score Achieved": [],
-                        "Context Segment": []
-                    },
-                    "Learning Item Details": {
-                        "Title": [],
-                        "URL": [],
-                        "Expected Training Hours": [],
-                        "Cost": [],
-                        "Currency": {
-                            "Afghan Afghani [AFN]": [],
-                            "Albanian Lek [ALL]": [],
-                            "Algerian Dinar [DZD]": [],
-                            "Angolan Kwanza [AOA]": [],
-                            "Argentine Peso [ARS]": [],
-                            "Armenian Dram [AMD]": [],
-                            "Aruban Florin [AWG]": [],
-                            "Australian Dollar [AUD]": [],
-                            "Azerbaijani Manat [AZN]": [],
-                            "Bahamian Dollar [BSD]": [],
-                            "Bahraini Dinar [BHD]": [],
-                            "Bangladeshi Taka [BDT]": [],
-                            "Barbadian Dollar [BBD]": [],
-                            "Belarusian Ruble [BYN]": [],
-                            "Belgian Franc [BEF]": [],
-                            "Belize Dollar [BZD]": [],
-                            "Bermudian Dollar [BMD]": [],
-                            "Bhutanese Ngultrum [BTN]": [],
-                            "Bolivian Boliviano [BOB]": [],
-                            "Bosnia-Herzegovina Convertible Mark [BAM]": [],
-                            "Botswana Pula [BWP]": [],
-                            "Brazilian Real [BRL]": [],
-                            "Brunei Dollar [BND]": [],
-                            "Bulgarian Lev [BGN]": [],
-                            "Burundi Franc [BIF]": [],
-                            "CFA Franc BCEAO [XOF]": [],
-                            "CFA Franc BEAC [XAF]": [],
-                            "CFP Franc [XPF]": [],
-                            "Cambodian Riel [KHR]": [],
-                            "Canadian Dollar [CAD]": [],
-                            "Cape Verdean Escudo [CVE]": [],
-                            "Cayman Islands Dollar [KYD]": [],
-                            "Chilean Peso [CLP]": [],
-                            "Chinese Yuan [CNY]": [],
-                            "Colombian Peso [COP]": [],
-                            "Comorian Franc [KMF]": [],
-                            "Congolese Franc [CDF]": [],
-                            "Costa Rican Colón [CRC]": [],
-                            "Croatian Kuna [HRK]": [],
-                            "Cuban Convertible Peso [CUC]": [],
-                            "Cuban Peso [CUP]": [],
-                            "Czech Republic Koruna [CZK]": [],
-                            "Danish Krone [DKK]": [],
-                            "Djiboutian Franc [DJF]": [],
-                            "Dominican Peso [DOP]": [],
-                            "East Caribbean Dollar [XCD]": [],
-                            "Ecuadorian Sucre [ECS]": [],
-                            "Egyptian Pound [EGP]": [],
-                            "El Salvadoran Colón [SVC]": [],
-                            "Equatorial Guinean Ekwele [GQE]": [],
-                            "Eritrean Nakfa [ERN]": [],
-                            "Estonian Kroon [EEK]": [],
-                            "Ethiopian Birr [ETB]": [],
-                            "Euro [EUR]": [],
-                            "Fijian Dollar [FJD]": [],
-                            "Gambian Dalasi [GMD]": [],
-                            "Georgian Lari [GEL]": [],
-                            "German Mark [DEM]": [],
-                            "Ghanaian Cedi [GHS]": [],
-                            "Gibraltar Pound [GIP]": [],
-                            "Greek Drachma [GRD]": [],
-                            "Guatemalan Quetzal [GTQ]": [],
-                            "Guinean Franc [GNF]": [],
-                            "Guyanese Dollar [GYD]": [],
-                            "Haitian Gourde [HTG]": [],
-                            "Honduran Lempira [HNL]": [],
-                            "Hong Kong Dollar [HKD]": [],
-                            "Hungarian Forint [HUF]": [],
-                            "Icelandic Króna [ISK]": [],
-                            "Indian Rupee [INR]": [],
-                            "Indonesian Rupiah [IDR]": [],
-                            "Iranian Rial [IRR]": [],
-                            "Iraqi Dinar [IQD]": [],
-                            "Israeli New Sheqel [ILS]": [],
-                            "Italian Lira [ITL]": [],
-                            "Jamaican Dollar [JMD]": [],
-                            "Japanese Yen [JPY]": [],
-                            "Jordanian Dinar [JOD]": [],
-                            "Kazakhstani Tenge [KZT]": [],
-                            "Kenyan Shilling [KES]": [],
-                            "Kuwaiti Dinar [KWD]": [],
-                            "Kyrgystani Som [KGS]": [],
-                            "Laotian Kip [LAK]": [],
-                            "Latvian Lats [LVL]": [],
-                            "Lebanese Pound [LBP]": [],
-                            "Lesotho Loti [LSL]": [],
-                            "Liberian Dollar [LRD]": [],
-                            "Libyan Dinar [LYD]": [],
-                            "Lithuanian Litas [LTL]": [],
-                            "Macanese Pataca [MOP]": [],
-                            "Macedonian Denar [MKD]": [],
-                            "Malagasy Ariary [MGA]": [],
-                            "Malawian Kwacha [MWK]": [],
-                            "Malaysian Ringgit [MYR]": [],
-                            "Maldivian Rufiyaa [MVR]": [],
-                            "Mauritanian Ouguiya [MRO]": [],
-                            "Mauritian Rupee [MUR]": [],
-                            "Mexican Peso [MXN]": [],
-                            "Moldovan Leu [MDL]": [],
-                            "Mongolian Tugrik [MNT]": [],
-                            "Moroccan Dirham [MAD]": [],
-                            "Mozambican Metical [MZN]": [],
-                            "Myanmar Kyat [MMK]": [],
-                            "Namibian Dollar [NAD]": [],
-                            "Nepalese Rupee [NPR]": [],
-                            "Netherlands Antillean Guilder [ANG]": [],
-                            "New Taiwan Dollar [TWD]": [],
-                            "New Zealand Dollar [NZD]": [],
-                            "Nicaraguan Córdoba [NIO]": [],
-                            "Nigerian Naira [NGN]": [],
-                            "North Korean Won [KPW]": [],
-                            "Norwegian Krone [NOK]": [],
-                            "Omani Rial [OMR]": [],
-                            "Pakistani Rupee [PKR]": [],
-                            "Panamanian Balboa [PAB]": [],
-                            "Papua New Guinean Kina [PGK]": [],
-                            "Paraguayan Guarani [PYG]": [],
-                            "Peruvian Nuevo Sol [PEN]": [],
-                            "Philippine Peso [PHP]": [],
-                            "Polish Zloty [PLN]": [],
-                            "Portuguese Escudo [PTE]": [],
-                            "Qatari Rial [QAR]": [],
-                            "Romanian Leu [RON]": [],
-                            "Russian Ruble [RUB]": [],
-                            "Rwandan Franc [RWF]": [],
-                            "Saint Helena Pound [SHP]": [],
-                            "Samoan Tala [WST]": [],
-                            "Sao Tome and Principe Dobra [STD]": [],
-                            "Saudi Riyal [SAR]": [],
-                            "Serbian Dinar [RSD]": [],
-                            "Seychellois Rupee [SCR]": [],
-                            "Sierra Leonean Leone [SLL]": [],
-                            "Singapore Dollar [SGD]": [],
-                            "Slovak Koruna [SKK]": [],
-                            "Solomon Islands Dollar [SBD]": [],
-                            "Somali Shilling [SOS]": [],
-                            "South African Rand [ZAR]": [],
-                            "South Korean Won [KRW]": [],
-                            "South Sudanese Pound [SSP]": [],
-                            "Spanish Peseta [ESP]": [],
-                            "Sri Lankan Rupee [LKR]": [],
-                            "Sudanese Pound [SDG]": [],
-                            "Surinamese Dollar [SRD]": [],
-                            "Swazi Lilangeni [SZL]": [],
-                            "Swedish Krona [SEK]": [],
-                            "Swiss Franc [CHF]": [],
-                            "Syrian Pound [SYP]": [],
-                            "Tajikistani Somoni [TJS]": [],
-                            "Tanzanian Shilling [TZS]": [],
-                            "Thai Baht [THB]": [],
-                            "Tongan Pa'anga [TOP]": [],
-                            "Trinidad and Tobago Dollar [TTD]": [],
-                            "Tunisian Dinar [TND]": [],
-                            "Turkish Lira [TRY]": [],
-                            "Turkmenistani Manat [TMT]": [],
-                            "Ugandan Shilling [UGX]": [],
-                            "Ukrainian Hryvnia [UAH]": [],
-                            "United Arab Emirates Dirham [AED]": [],
-                            "Uruguayan Peso [UYU]": [],
-                            "Uzbekistan Som [UZS]": [],
-                            "Vanuatu Vatu [VUV]": [],
-                            "Venezuelan Bolívar [VEF]": [],
-                            "Vietnamese Dong [VND]": [],
-                            "Yemeni Rial [YER]": [],
-                            "Zambian Kwacha [ZMW]": [],
-                            "Zimbabwean Dollar [ZWL]": []
-                        },
-                        "Topic": {
-                            "Career Development": [],
-                            "Compliance": [],
-                            "Finance": [],
-                            "Human Resources": [],
-                            "IT": [],
-                            "Industry": [],
-                            "Leadership": [],
-                            "Marketing": [],
-                            "Sales": [],
-                            "Security": []
-                        },
-                        "Context Segment": {},
-                        "Description": []
-                    },
-                    "Learners": {
-                        "Selection Type": {
-                            "Directs": [],
-                            "Organisation": [],
-                            "Person": []
-                        },
-                        "Select a Person": {},
-                        "Note to Learners": []
-                    },
-                    "Justification": [],
-                    "Actions": {
-                        "Cancel": [],
-                        "Record": []
-                    }
-                },
-                "Publish Video": {
-                    "Video Details": {
-                        "Video": [],
-                        "Title": [],
-                        "Description": []
-                    },
-                    "Visibility": {
-                        "Privacy": {
-                            "Everyone": [],
-                            "Secret": {
-                                "Viewers": {}
-                            }
-                        }
-                    },
-                    "Related Materials": [],
-                    "Actions": {
-                        "Save and Close": [],
-                        "Publish": [],
-                        "Cancel": []
-                    }
-                },
-                "Author Learning Journey": {
-                    "Learning Journey Details": {
-                        "Title": [],
-                        "Cover Art": [],
-                        "Description": []
-                    },
-                    "Table of Contents": {
-                        "Add": {
-                            "Section Details": {
-                                "Section Title": [],
-                                "Select Media": {
-                                    "Select from Learning Catalog": {
-                                        "Filters": {
-                                            "Learning Item Type": {
-                                                "Learning Journey": [],
-                                                "Course": [],
-                                                "Learning Community": [],
-                                                "Specialization": [],
-                                                "Video": []
-                                            },
-                                            "Rating": {
-                                                "4 Stars and Up": [],
-                                                "3 Stars and Up": [],
-                                                "2 Stars and Up": [],
-                                                "41 Stars and Up": []
-                                            },
-                                            "Delivery Mode": {
-                                                "Blended": [],
-                                                "Self Paced": [],
-                                                "Instructor-Led": []
-                                            },
-                                            "Start on or After": {
-                                                "Date": [],
-                                                "Actions": {
-                                                    "OK": []
-                                                }
-                                            },
-                                            "City": {
-                                                "City Name": [],
-                                                "Actions": {
-                                                    "Search": []
-                                                }
-                                            },
-                                            "End on or Before": {
-                                                "Date": [],
-                                                "Actions": {
-                                                    "OK": []
-                                                }
-                                            },
-                                            "Language": {},
-                                            "Topic": {},
-                                            "Personalize Filters": {
-                                                "Personalize Saved Search": {
-                                                    "Learning Item Type": {},
-                                                    "Rating": {},
-                                                    "Delivery Mode": {},
-                                                    "Start on or After": {},
-                                                    "City": {},
-                                                    "End on or Before": {},
-                                                    "Language": {},
-                                                    "Country": {},
-                                                    "Learning Outcome": {},
-                                                    "Published Dates": {},
-                                                    "Title": {},
-                                                    "Price": {},
-                                                    "Currency": {},
-                                                    "Topic": {},
-                                                    "Actions": {
-                                                        "Move Up": [],
-                                                        "Move Down": [],
-                                                        "OK": [],
-                                                        "Cancel": []
-                                                    }
-                                                }
-                                            },
-                                            "Actions": {
-                                                "Expand All": [],
-                                                "Collapse All": []
-                                            }
-                                        },
-                                        "Actions": {
-                                            "Hide Filters": [],
-                                            "Search": []
-                                        }
-                                    },
-                                    "Add an Image": {
-                                        "Select Media": []
-                                    },
-                                    "Add a Web Link": {
-                                        "Select Media": {
-                                            "Web Link": [],
-                                            "Attachment": []
-                                        }
-                                    }
-                                },
-                                "Section Description": []
-                            },
-                            "Actions": {
-                                "Save and Close": [],
-                                "Cancel": []
-                            }
-                        }
-                    },
-                    "Set Learning Journey Privacy": {
-                        "Privacy": {
-                            "Everyone": [],
-                            "Secret": {
-                                "Viewers": {}
-                            }
-                        }
-                    },
-                    "Related Materials": [],
-                    "Actions": {
-                        "Save and Close": [],
-                        "Publish": [],
-                        "Cancel": []
-                    }
-                },
-                "Create Learning Community": {
-                    "Community Details": {
-                        "Community Title": [],
-                        "Branding Image": [],
-                        "Description": [],
-                        "Trailer": []
-                    },
-                    "Visibility": {
-                        "Privacy": {
-                            "Open": [],
-                            "Closed": [],
-                            "Secret": []
-                        },
-                        "Member Contributions": {
-                            "Disable": [],
-                            "Enable": []
-                        }
-                    },
-                    "Related Materials": [],
-                    "Actions": {
-                        "Submit": [],
-                        "Cancel": []
-                    }
-                },
-                "Download for My Direct Reports": [],
-                "Download for My Organization": []
-            },
-            "Switch Team": {
-                "Actions": {
-                    "Close": []
-                }
-            },
-            "Saved Searches": {
-                "Create a Search": {
-                    "Name": [],
-                    "Enable Sharing": [],
-                    "Mark as Default": [],
-                    "Actions": {
-                        "Cancel": [],
-                        "Save and Apply": []
-                    }
-                },
-                "Type": {
-                    "All": [],
-                    "System Searches": [],
-                    "Personal Searches": [],
-                    "Personal Shared Searches": []
-                },
-                "Select Saved Search": {},
-                "Actions": {
-                    "Cancel": [],
-                    "Apply": []
-                }
-            },
-            "Sort By": {
-                "Overdue, Most to Least Recent": [],
-                "Overdue, Least to Most Recent": [],
-                "Enrollments, Most to Least": [],
-                "Enrollments, Least to Most": [],
-                "Name, A to Z": [],
-                "Name, Z to A": []
-            },
-            "Action": {
-                "Learners": [],
-                "Learning Items": [],
-                "Download": []
-            }
-        }
-    }
+            "Actions": ["SaveAndClose", "Cancel"]
+          }
+        },
+        "SetLearningJourneyPrivacy": {
+          "Privacy": ["Everyone", "Secret"]
+        },
+        "RelatedMaterials": [],
+        "Actions": ["SaveAndClose", "Publish", "Cancel"]
+      },
+      "CreateLearningCommunity": {
+        "CommunityDetails": {
+          "CommunityTitle": [],
+          "BrandingImage": [],
+          "Description": [],
+          "Trailer": []
+        },
+        "Visibility": {
+          "Privacy": ["Open", "Closed", "Secret"],
+          "MemberContributions": ["Disable", "Enable"]
+        },
+        "RelatedMaterials": [],
+        "Actions": ["Submit", "Cancel"]
+      }
+    },
+    "Operations": {
+      "SearchByLearningItems": [],
+      "Filters": {
+        "Reports": ["Direct Reports", "All Reports"],
+        "Enrollments": ["Current", "Completed", "All"],
+        "EnrollmentStatus": ["Deleted", "Withdrawn", "No Active Offering", "Completed", "Bypass Completed", "Waitlisted", "Pending Active", "Not Passed", "Not Started", "In Progress"],
+        "EnrollmentType": ["Required", "Voluntary"],
+        "EnrolledBy": [],
+        "DueDate": ["Next 30 days", "Next 12 months", "Last 30 days", "Last 12 months", "All time"],
+        "EnrolledOnDate": ["Last 30 days", "Last 3 months", "Last 12 months", "Year to date", "All time"],
+        "CompletedDate": ["Last 30 days", "Last 3 months", "Last 12 months", "Year to date", "All time"],
+        "ExpirationDate": ["Next 30 days", "Next 12 months", "Last 30 days", "Last 12 months", "All time"],
+        "LearningItemType": ["Course", "Offering", "Noncatalog Item", "Specialization", "Learning Journey"],
+        "ManagerType": ["Line Manager"],
+        "BusinessTitle": [],
+        "Actions": ["Cancel", "See Results"]
+      },
+      "SwitchTeam": {
+        "Actions": ["Close"]
+      },
+      "SavedSearches": {
+        "CreateASearch": {
+          "Name": [],
+          "EnableSharing": [],
+          "MarkAsDefault": [],
+          "Actions": ["Cancel", "Save and Apply"]
+        },
+        "Type": ["All", "System Searches", "Personal Searches", "Personal Shared Searches"],
+        "SelectSavedSearch": {},
+        "Actions": ["Cancel", "Apply"]
+      },
+      "SortBy": ["Overdue, Most to Least Recent", "Overdue, Least to Most Recent", "Enrollments, Most to Least", "Enrollments, Least to Most", "Name, A to Z", "Name, Z to A"],
+      "Action": ["Learners", "Learning Items", "Download"]
+    },
+    "Processes": {}
+  }
 }
