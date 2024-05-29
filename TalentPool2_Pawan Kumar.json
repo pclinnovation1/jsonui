@@ -1,86 +1,46 @@
 {
-    "Add To Talent Pool": {
-      "Search": [],
-      "Filters": {
-        "Reports": {
-            "Direct reports": [],
-             "All reports": [],
-             "Others and delegated": []
-        },
-        "Assignment Status": {
-                "Active - Payroll Eligible": [],
-                "Active - No Payroll": [],
-                 "Inactive - Payroll Eligible": [],
-                   "Suspended - No Payroll": [],
-                    "Inactive-Unpaid LOA": [],
-                   "Suspended - Payroll Eligible": []
-        },
-        "Manager Type": [],
-        "Show Primary Assignments Only": [],
-        "job": {
-            "Job Code": [
-                "JOB006",
-                 "JOB045",
-                 "JOB004",
-                  "JOB075",
-                   "JOB025",
-                  "JOB027", 
-                 "JOB018",
-                  "JOB054",
-                  "SPECIALIST001",
-                  "JOB076"
-            ],
-            "Job Name": {
-                "Analyst": [],
-                 "Human Resources Specialist": [],
-                 "Human Resources Administrator": [],
-                 "Human Resources Business Partner": [],
-                  "Manager": [],
-                 "Human Resources Generalist": [],
-                 "Sales Representative": [],
-                 "Consultant": [],
-                 "Specialist": [],
-                 "Director of Human Resoucres": []
-            }
-        },
-        "Worker Type": {
-             "Employee": [],
-             "Contingent worker": [],
-              "Pending worker": [],
-                 "Non worker": []
-        },
-        "Person Attribute": {
-            "Name": [],
-            "Person Number": [],
-            "Assingment Number": [],
-            "Work Email": [],
-            "Work Phone": [],
-            "Worker Number": [],
-            "User Name": []
-        },
-        "Additional Filters": [],
-        "Actions":{
-             "Cancel":[],
-             "See Results": []
-        }
+  "AddToTalentPool": {
+    "Search": [],
+    "Filters": {
+      "Reports": {
+        "DirectReports": [],
+        "AllReports": [],
+        "OthersAndDelegated": []
       },
-      "Sort By": [
-        "Relevance",
-        "Name, A To Z",
-        "Name, Z To A"
-      ],
-      "Columns": [],
-      "Table": {
-        "Columns": {
-          "Name": [],
-          "Business Title": [],
-          "Person Number": [],
-          "Assignment Number": [],
-          "Assignment Status": [],
-          "Worker Type": [],
-          "Work Email": []
-        }
+      "AssignmentStatus": {
+        "ActivePayrollEligible": [],
+        "ActiveNoPayroll": [],
+        "InactivePayrollEligible": [],
+        "SuspendedNoPayroll": [],
+        "InactiveUnpaidLOA": [],
+        "SuspendedPayrollEligible": []
+      },
+      "ManagerType": [],
+      "ShowPrimaryAssignmentsOnly": [],
+      "WorkerType": {
+        "Employee": [],
+        "ContingentWorker": [],
+        "PendingWorker": [],
+        "NonWorker": []
+      },
+      "PersonAttributes": {
+        "Name": [],
+        "PersonNumber": [],
+        "AssignmentNumber": [],
+        "WorkEmail": [],
+        "WorkPhone": [],
+        "WorkerNumber": [],
+        "UserName": []
       }
+    },
+    "Employment": {
+      "Name": [],
+      "BusinessTitle": [],
+      "PersonNumber": [],
+      "AssignmentNumber": [],
+      "AssignmentStatus": [],
+      "WorkerType": [],
+      "WorkEmail": []
     }
   }
-  
+}
