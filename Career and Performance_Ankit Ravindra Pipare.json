@@ -19,33 +19,10 @@
         "Work Requirements": []
       },
       "Profile Strength": [],
-      "Career Statement": {
-        "Edit Career Statement": {
-          "Actions": {
-            "Save": [],
-            "Cancel": []
-          }
-        }
-      },
-      "Skills": {
-        "Visit Skills Center": {
-          "Enter a skill here": []
-        }
-      },
+      "Career Statement": {},
+      "Skills": {},
       "Attachments": {
-        "Edit Attachments": {
-          "URL": [],
-          "Actions": {
-            "Drag and Drop": [],
-            "Add URL": [],
-            "Save": [],
-            "Cancel": []
-          }
-        }
-      },
-      "Actions": {
-        "Import LinkedIn Data": [],
-        "Print": []
+        "URL": []
       }
     },
     "Goals Center": {
@@ -57,116 +34,65 @@
               "Start Date": [],
               "End Date": []
             }
-          },
-          "Actions": {
-            "Add": []
           }
         },
         "Development": {
-          "Add": {
-            "What's your goal?": [],
-            "Any additional info you want to add?": [],
-            "How will you know you have achieved your goal?": [],
-            "Comments": [],
-            "Why do you want to pursue this goal?": {
-              "Development Intent": {
-                "Action": {
-                  "Systems Support": []
-                }
-              },
-              "Add": {
-                "Personal Development Intent": [],
-                "Actions": {
-                  "Delete": []
-                }
-              },
-              "Start Date": [],
-              "Target Date": [],
-              "Priority": {
-                "High": [],
-                "Medium": [],
-                "Low": []
-              },
-              "Level": {
-                "Stretch": [],
-                "Target": []
-              },
-              "Category": {
-                "Short-term": [],
-                "Medium-term": [],
-                "Long-term": []
-              },
-              "Actions": {
-                "This is a measurable goal": []
-              }
+          "What's your goal?": [],
+          "Any additional info you want to add?": [],
+          "How will you know you have achieved your goal?": [],
+          "Comments": [],
+          "Why do you want to pursue this goal?": {
+            "Development Intent": {
+              "Systems Support": []
             },
-            "What can help you achieve this goal?": {
-              "Add": {
-                "Task": [],
-                "Learning Item": []
-              }
+            "Personal Development Intent": [],
+            "Start Date": [],
+            "Target Date": [],
+            "Priority": {
+              "High": [],
+              "Medium": [],
+              "Low": []
             },
-            "Actions": {
-              "Add": [],
-              "Cancel": []
+            "Level": {
+              "Stretch": [],
+              "Target": []
+            },
+            "Category": {
+              "Short-term": [],
+              "Medium-term": [],
+              "Long-term": []
             }
           },
-          "Actions": {
-            "Active": [],
-            "Inactive": []
+          "What can help you achieve this goal?": {
+            "Task": [],
+            "Learning Item": []
           }
         }
       }
     },
     "Performance": {
       "CheckIns": {
-        "Add": {
-          "NewCheckIn": {
-            "Select the employee business title": [],
-            "ReviewPeriod": [],
-            "Template": {
-              "Check-in 1:1": [],
-              "Disciplinary Action Discussion": []
-            },
-            "Date": [],
-            "Build your agenda": {
-              "Enter a discussion topic": [],
-              "Actions": {
-                "Add": [],
-                "View Recommended Topics": []
-              }
-            },
-            "Actions": {
-              "Cancel": [],
-              "Schedule": []
-            }
+        "NewCheckIn": {
+          "Select the employee business title": [],
+          "ReviewPeriod": [],
+          "Template": {
+            "Check-in 1:1": [],
+            "Disciplinary Action Discussion": []
+          },
+          "Date": [],
+          "Build your agenda": {
+            "Enter a discussion topic": []
           }
         }
       },
       "PerformanceDocuments": {
-        "Add": {
-          "NewPerformanceDocument": {
-            "ReviewPeriod": [],
-            "PerformanceDocumentName": [],
-            "Manager": [],
-            "StartDate": [],
-            "EndDate": [],
-            "DocumentDescription": [],
-            "Actions": {
-              "Cancel": [],
-              "Submit": []
-            }
-          }
-        },
-        "SortBy": {
-          "Document status": [],
-          "End date, new to old": [],
-          "End date, old to new": [],
-          "Document name, A to Z": [],
-          "Document name, Z to A": []
-        },
-        "Actions": {
-          "Close": []
+        "NewPerformanceDocument": {
+          "ReviewPeriod": [],
+          "PerformanceDocumentName": [],
+          "Manager": [],
+          "StartDate": [],
+          "EndDate": [],
+          "DocumentDescription": []
         }
       }
     },
@@ -177,12 +103,6 @@
       "Career Statement": {
         "Guide me": {
           "What is a career statement?": []
-        },
-        "Add": {
-          "Actions": {
-            "Save": [],
-            "Cancel": []
-          }
         }
       },
       "Career Outlook": {
@@ -246,26 +166,7 @@
                               }
                             ]
                           },
-                          "Related Learning": [],
-                          "Available Offerings": {
-                            "Course": {
-                              "View Details": []
-                            },
-                            "Actions": {
-                              "Enroll": []
-                            }
-                          },
-                          "Actions": {
-                            "Enroll": [],
-                            "Actions": [
-                              "Recommend",
-                              "Ratings",
-                              "Copy Link",
-                              "Comments",
-                              "Report",
-                              "Enroll in Course"
-                            ]
-                          }
+                          "Related Learning": []
                         }
                       },
                       "Customer Service Success": {
@@ -307,131 +208,7 @@
                               }
                             ]
                           },
-                          "Related Learning": {
-                            "Service Desk": {
-                              "Topic Community": {
-                                "Overview": [],
-                                "LearningCatalog": {
-                                  "Search": [],
-                                  "ShowFilters": {
-                                    "Filters": {
-                                      "Learning Item Type": {
-                                        "Learning Journey": [],
-                                        "Course": [],
-                                        "Learning Community": [],
-                                        "Specialization": [],
-                                        "Video": [],
-                                        "Actions": {
-                                          "Clear": []
-                                        }
-                                      },
-                                      "Average Rating": {
-                                        "4 Stars and Up": [],
-                                        "3 Stars and Up": [],
-                                        "2 Stars and Up": [],
-                                        "1 Star and Up": [],
-                                        "Actions": {
-                                          "Clear": []
-                                        }
-                                      },
-                                      "Language": {
-                                        "Japanese": [],
-                                        "French": [],
-                                        "American English": [],
-                                        "Spanish": [],
-                                        "German": [],
-                                        "Swedish": [],
-                                        "Actions": {
-                                          "Clear": []
-                                        }
-                                      },
-                                      "Offering Dates": {
-                                        "Start Date": [],
-                                        "End Date": [],
-                                        "Actions": {
-                                          "Ok": []
-                                        }
-                                      },
-                                      "Offering Delivery Mode": {
-                                        "Blended": [],
-                                        "SelfPaced": [],
-                                        "InstructorLed": [],
-                                        "Actions": {
-                                          "Clear": []
-                                        }
-                                      },
-                                      "Published Dates": {
-                                        "Start Date": [],
-                                        "End Date": [],
-                                        "Actions": {
-                                          "Ok": []
-                                        }
-                                      }
-                                    }
-                                  },
-                                  "Sort": {
-                                    "Rating - Highest to Lowest": [],
-                                    "Published - Date Newest to Oldest": [],
-                                    "Title - A to Z": [],
-                                    "Title - Z to A": []
-                                  }
-                                },
-                                "RelatedMaterials": [],
-                                "Actions": {
-                                  "Join": [],
-                                  "Actions": [
-                                    "Recommend",
-                                    "Ratings",
-                                    "Copy Link",
-                                    "Comments",
-                                    "Report"
-                                  ]
-                                }
-                              }
-                            }
-                          },
-                          "Available Offerings": {
-                            "Course": {
-                              "View Details": {
-                                "Course Offering Details": {
-                                  "Overview": {
-                                    "Type": [],
-                                    "Language": [],
-                                    "Price": []
-                                  },
-                                  "OfferingDetails": [],
-                                  "Activities": [],
-                                  "Actions": {
-                                    "Enroll": [],
-                                    "Actions": [
-                                      "Recommend",
-                                      "Ratings",
-                                      "Copy Link",
-                                      "Comments",
-                                      "Report"
-                                    ]
-                                  }
-                                }
-                              },
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            },
-                            "Actions": {
-                              "Enroll": []
-                            }
-                          },
-                          "Actions": {
-                            "Enroll": [],
-                            "Actions": [
-                              "Recommend",
-                              "Ratings",
-                              "Copy Link",
-                              "Comments",
-                              "Report",
-                              "Enroll in Course"
-                            ]
-                          }
+                          "Related Learning": []
                         }
                       }
                     }
@@ -463,64 +240,36 @@
                       "Languages",
                       "Skills"
                     ],
-                    "Add": {
-                      "Competency": [],
-                      "Review Date": [],
-                      "Proficiency Rating": [],
-                      "Current Proficiency Level": [],
-                      "Years of Experience": [],
-                      "Personal Interest Level": [],
-                      "Year Last Used": [],
-                      "Reviewer": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Competency": [],
+                    "Review Date": [],
+                    "Proficiency Rating": [],
+                    "Current Proficiency Level": [],
+                    "Years of Experience": [],
+                    "Personal Interest Level": [],
+                    "Year Last Used": [],
+                    "Reviewer": [],
+                    "Comments": []
                   },
                   "Measurement": {
-                    "Add": {
-                      "Measurement Name": [],
-                      "Unit of Measure": [],
-                      "Start Date": [],
-                      "End Date": [],
-                      "Description": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Measurement Name": [],
+                    "Unit of Measure": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Description": []
                   },
                   "Tasks": {
-                    "Add": {
-                      "Name": [],
-                      "Completion Percentage": [],
-                      "Type": [],
-                      "Status": [],
-                      "Priority": [],
-                      "Start Date": [],
-                      "Target Completion Date": [],
-                      "Related Link": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Name": [],
+                    "Completion Percentage": [],
+                    "Type": [],
+                    "Status": [],
+                    "Priority": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Related Link": [],
+                    "Comments": []
                   },
                   "Learning": {
-                    "Add": {
-                      "Select Learning Item": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
-                  },
-                  "Actions": {
-                    "Save and Close": [],
-                    "Cancel": []
+                    "Select Learning Item": []
                   }
                 }
               },
@@ -540,31 +289,11 @@
                       "Show More": {
                         "Learning Items That Meet the Prerequisite": {
                           "Course": {
-                            "Closing More Sales": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            },
-                            "Getting Down to Business": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            },
-                            "Leadership By Example": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            },
-                            "Leadership in Crisis": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            },
-                            "Professional Selling Skills": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            }
+                            "Closing More Sales": [],
+                            "Getting Down to Business": [],
+                            "Leadership By Example": [],
+                            "Leadership in Crisis": [],
+                            "Professional Selling Skills": []
                           }
                         }
                       }
@@ -597,64 +326,36 @@
                       "Languages",
                       "Skills"
                     ],
-                    "Add": {
-                      "Competency": [],
-                      "Review Date": [],
-                      "Proficiency Rating": [],
-                      "Current Proficiency Level": [],
-                      "Years of Experience": [],
-                      "Personal Interest Level": [],
-                      "Year Last Used": [],
-                      "Reviewer": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Competency": [],
+                    "Review Date": [],
+                    "Proficiency Rating": [],
+                    "Current Proficiency Level": [],
+                    "Years of Experience": [],
+                    "Personal Interest Level": [],
+                    "Year Last Used": [],
+                    "Reviewer": [],
+                    "Comments": []
                   },
                   "Measurement": {
-                    "Add": {
-                      "Measurement Name": [],
-                      "Unit of Measure": [],
-                      "Start Date": [],
-                      "End Date": [],
-                      "Description": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Measurement Name": [],
+                    "Unit of Measure": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Description": []
                   },
                   "Tasks": {
-                    "Add": {
-                      "Name": [],
-                      "Completion Percentage": [],
-                      "Type": [],
-                      "Status": [],
-                      "Priority": [],
-                      "Start Date": [],
-                      "Target Completion Date": [],
-                      "Related Link": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Name": [],
+                    "Completion Percentage": [],
+                    "Type": [],
+                    "Status": [],
+                    "Priority": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Related Link": [],
+                    "Comments": []
                   },
                   "Learning": {
-                    "Add": {
-                      "Select Learning Item": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
-                  },
-                  "Actions": {
-                    "Save and Close": [],
-                    "Cancel": []
+                    "Select Learning Item": []
                   }
                 }
               },
@@ -690,64 +391,36 @@
                       "Languages",
                       "Skills"
                     ],
-                    "Add": {
-                      "Competency": [],
-                      "Review Date": [],
-                      "Proficiency Rating": [],
-                      "Current Proficiency Level": [],
-                      "Years of Experience": [],
-                      "Personal Interest Level": [],
-                      "Year Last Used": [],
-                      "Reviewer": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Competency": [],
+                    "Review Date": [],
+                    "Proficiency Rating": [],
+                    "Current Proficiency Level": [],
+                    "Years of Experience": [],
+                    "Personal Interest Level": [],
+                    "Year Last Used": [],
+                    "Reviewer": [],
+                    "Comments": []
                   },
                   "Measurement": {
-                    "Add": {
-                      "Measurement Name": [],
-                      "Unit of Measure": [],
-                      "Start Date": [],
-                      "End Date": [],
-                      "Description": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Measurement Name": [],
+                    "Unit of Measure": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Description": []
                   },
                   "Tasks": {
-                    "Add": {
-                      "Name": [],
-                      "Completion Percentage": [],
-                      "Type": [],
-                      "Status": [],
-                      "Priority": [],
-                      "Start Date": [],
-                      "Target Completion Date": [],
-                      "Related Link": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Name": [],
+                    "Completion Percentage": [],
+                    "Type": [],
+                    "Status": [],
+                    "Priority": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Related Link": [],
+                    "Comments": []
                   },
                   "Learning": {
-                    "Add": {
-                      "Select Learning Item": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
-                  },
-                  "Actions": {
-                    "Save and Close": [],
-                    "Cancel": []
+                    "Select Learning Item": []
                   }
                 }
               },
@@ -783,64 +456,36 @@
                       "Languages",
                       "Skills"
                     ],
-                    "Add": {
-                      "Competency": [],
-                      "Review Date": [],
-                      "Proficiency Rating": [],
-                      "Current Proficiency Level": [],
-                      "Years of Experience": [],
-                      "Personal Interest Level": [],
-                      "Year Last Used": [],
-                      "Reviewer": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Competency": [],
+                    "Review Date": [],
+                    "Proficiency Rating": [],
+                    "Current Proficiency Level": [],
+                    "Years of Experience": [],
+                    "Personal Interest Level": [],
+                    "Year Last Used": [],
+                    "Reviewer": [],
+                    "Comments": []
                   },
                   "Measurement": {
-                    "Add": {
-                      "Measurement Name": [],
-                      "Unit of Measure": [],
-                      "Start Date": [],
-                      "End Date": [],
-                      "Description": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Measurement Name": [],
+                    "Unit of Measure": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Description": []
                   },
                   "Tasks": {
-                    "Add": {
-                      "Name": [],
-                      "Completion Percentage": [],
-                      "Type": [],
-                      "Status": [],
-                      "Priority": [],
-                      "Start Date": [],
-                      "Target Completion Date": [],
-                      "Related Link": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Name": [],
+                    "Completion Percentage": [],
+                    "Type": [],
+                    "Status": [],
+                    "Priority": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Related Link": [],
+                    "Comments": []
                   },
                   "Learning": {
-                    "Add": {
-                      "Select Learning Item": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
-                  },
-                  "Actions": {
-                    "Save and Close": [],
-                    "Cancel": []
+                    "Select Learning Item": []
                   }
                 }
               },
@@ -860,21 +505,9 @@
                       "Show More": {
                         "Learning Items That Meet the Prerequisite": {
                           "Course": {
-                            "Management 201: New Manager Fundamentals": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            },
-                            "Motivating Your Team": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            },
-                            "Strong Managers and Strong Teams - HACP - OpenSesame": {
-                              "Actions": {
-                                "Enroll": []
-                              }
-                            }
+                            "Management 201: New Manager Fundamentals": [],
+                            "Motivating Your Team": [],
+                            "Strong Managers and Strong Teams - HACP - OpenSesame": []
                           }
                         }
                       }
@@ -907,70 +540,40 @@
                       "Languages",
                       "Skills"
                     ],
-                    "Add": {
-                      "Competency": [],
-                      "Review Date": [],
-                      "Proficiency Rating": [],
-                      "Current Proficiency Level": [],
-                      "Years of Experience": [],
-                      "Personal Interest Level": [],
-                      "Year Last Used": [],
-                      "Reviewer": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Competency": [],
+                    "Review Date": [],
+                    "Proficiency Rating": [],
+                    "Current Proficiency Level": [],
+                    "Years of Experience": [],
+                    "Personal Interest Level": [],
+                    "Year Last Used": [],
+                    "Reviewer": [],
+                    "Comments": []
                   },
                   "Measurement": {
-                    "Add": {
-                      "Measurement Name": [],
-                      "Unit of Measure": [],
-                      "Start Date": [],
-                      "End Date": [],
-                      "Description": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Measurement Name": [],
+                    "Unit of Measure": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Description": []
                   },
                   "Tasks": {
-                    "Add": {
-                      "Name": [],
-                      "Completion Percentage": [],
-                      "Type": [],
-                      "Status": [],
-                      "Priority": [],
-                      "Start Date": [],
-                      "Target Completion Date": [],
-                      "Related Link": [],
-                      "Comments": [],
-                      "Actions": {
-                        "Ok": [],
-                        "Cancel": []
-                      }
-                    }
+                    "Name": [],
+                    "Completion Percentage": [],
+                    "Type": [],
+                    "Status": [],
+                    "Priority": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Related Link": [],
+                    "Comments": []
                   },
                   "Learning": {
-                    "Add": {
-                      "Select Learning Item": [],
-                      "Actions": {
-                        "Save": [],
-                        "Cancel": []
-                      }
-                    }
-                  },
-                  "Actions": {
-                    "Save and Close": [],
-                    "Cancel": []
+                    "Select Learning Item": []
                   }
                 }
-              }
-            },
-            "Degrees": {
-              "Add Goal": {
+              },
+              "Degrees": {
                 "Basic Info": {
                   "Library Goal": [],
                   "Goal Name": [],
@@ -991,33 +594,10 @@
                   },
                   "Completion Percentage": [],
                   "Source": [],
-                  "Success Criteria": {
-                    "Actions": {
-                      "Font Family": [],
-                      "Font Size": [],
-                      "Bold": [],
-                      "Italic": [],
-                      "Underline": [],
-                      "Numbered List": [],
-                      "Bulleted List": [],
-                      "Link": [],
-                      "Undo": [],
-                      "Redo": [],
-                      "Remove Format": []
-                    }
-                  },
+                  "Success Criteria": [],
                   "Development Intent": [],
                   "Personal Development Intent": {
-                    "Actions": {
-                      "Add Another Personal Development Intent": {
-                        "Personal Development Intent": [],
-                        "Delete": []
-                      }
-                    }
-                  },
-                  "Actions": {
-                    "Save and Close": [],
-                    "Cancel": []
+                    "Personal Development Intent": []
                   }
                 },
                 "Target Outcomes": {
@@ -1027,111 +607,51 @@
                     "Language": [],
                     "Skills": []
                   },
-                  "Actions": {
-                    "Add": {
-                      "TargetOutcomes": {
-                        "LicenseOrCertificate": [],
-                        "Country": [],
-                        "State": [],
-                        "IssueDate": [],
-                        "ExpirationDate": [],
-                        "IssuedBy": [],
-                        "CertificateNumber": [],
-                        "RenewalDate": [],
-                        "RenewalRequired": [],
-                        "Verified": [],
-                        "Title": [],
-                        "Attachments": [],
-                        "Actions": {
-                          "Save": [],
-                          "Cancel": []
-                        }
-                      },
-                      "Collapse": []
-                    }
+                  "TargetOutcomes": {
+                    "LicenseOrCertificate": [],
+                    "Country": [],
+                    "State": [],
+                    "IssueDate": [],
+                    "ExpirationDate": [],
+                    "IssuedBy": [],
+                    "CertificateNumber": [],
+                    "RenewalDate": [],
+                    "RenewalRequired": [],
+                    "Verified": [],
+                    "Title": [],
+                    "Attachments": []
                   }
                 },
                 "Measurement": {
-                  "Add": {
-                    "Measurement": {
-                      "MeasurementName": [],
-                      "UnitOfMeasure": [],
-                      "StartDate": [],
-                      "EndDate": [],
-                      "Description": {
-                        "Actions": {
-                          "Font Family": [],
-                          "Font Size": [],
-                          "Bold": [],
-                          "Italic": [],
-                          "Underline": [],
-                          "Numbered List": [],
-                          "Bulleted List": [],
-                          "Link": [],
-                          "Undo": [],
-                          "Redo": [],
-                          "Remove Format": []
-                        }
-                      },
-                      "Actions": {
-                        "OK": [],
-                        "Cancel": []
-                      }
-                    }
+                  "Measurement": {
+                    "MeasurementName": [],
+                    "UnitOfMeasure": [],
+                    "StartDate": [],
+                    "EndDate": [],
+                    "Description": []
                   }
                 },
                 "Tasks": {
-                  "Add": {
-                    "Tasks": {
-                      "Name": [],
-                      "Type": [],
-                      "Status": [],
-                      "Priority": [],
-                      "Completion Percentage": [],
-                      "Start Date": [],
-                      "Target Completion Date": [],
-                      "Related Link": [],
-                      "Comments": {
-                        "Actions": {
-                          "Font Family": [],
-                          "Font Size": [],
-                          "Bold": [],
-                          "Italic": [],
-                          "Underline": [],
-                          "Numbered List": [],
-                          "Bulleted List": [],
-                          "Link": [],
-                          "Undo": [],
-                          "Redo": [],
-                          "Remove Format": []
-                        }
-                      },
-                      "Actions": {
-                        "OK": [],
-                        "Cancel": []
-                      }
-                    }
+                  "Tasks": {
+                    "Name": [],
+                    "Type": [],
+                    "Status": [],
+                    "Priority": [],
+                    "Completion Percentage": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Related Link": [],
+                    "Comments": []
                   }
                 },
                 "Learning": {
-                  "Add": {
-                    "Select Learning Item": {
-                      "Search the learning catalog": []
-                    }
+                  "Select Learning Item": {
+                    "Search the learning catalog": []
                   }
-                },
-                "Actions": {
-                  "Save and Close": [],
-                  "Cancel": []
                 }
-              }
-            },
-            "OpenJobs": []
-          }
-        },
-        "ExploreCareers": {
-          "Careers": {
-            "Search for careers": []
+              },
+              "OpenJobs": []
+            }
           }
         }
       }
@@ -1153,23 +673,16 @@
           "Past 12 Months": [],
           "Past 5 Years": []
         },
-        "Add Note About Me": {
-          "Profile": [],
-          "Who can see this": {
-            "Everyone": [],
-            "Managers Only": [],
-            "Managers and Alberto Perez": [],
-            "Only Me": []
-          },
-          "What do you want to say": [],
-          "Drag and Drop": [],
-          "URL": [],
-          "Actions": {
-            "Add URL": [],
-            "Cancel": [],
-            "Save": []
-          }
-        }
+        "Profile": [],
+        "Who can see this": {
+          "Everyone": [],
+          "Managers Only": [],
+          "Managers and Alberto Perez": [],
+          "Only Me": []
+        },
+        "What do you want to say": [],
+        "Drag and Drop": [],
+        "URL": []
       },
       "Feedback request about me": {
         "Status": {
@@ -1191,27 +704,17 @@
             "Feedback on goals": []
           },
           "What questions do you want to ask?": {
-            "Questionnaire": {
-              "Team collaboration": [],
-              "Start, Stop, Continue": []
-            }
+            "Team collaboration": [],
+            "Start, Stop, Continue": []
           },
-          "Who do you want to ask": {
-            "RequestFeedbackFrom": {
-              "Anyone": []
-            },
-            "Person": []
+          "RequestFeedbackFrom": {
+            "Anyone": []
           },
-          "When do you need it": {
-            "Provide feedback by": [],
-            "Your message to the feedback provider": [],
-            "Share feedback with (Admin)": [],
-            "Share feedback with you": []
-          },
-          "Actions": {
-            "Cancel": [],
-            "Submit": []
-          }
+          "Person": [],
+          "Provide feedback by": [],
+          "Your message to the feedback provider": [],
+          "Share feedback with (Admin)": [],
+          "Share feedback with you": []
         }
       }
     }
