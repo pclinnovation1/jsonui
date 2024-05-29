@@ -1,0 +1,107 @@
+{
+  "Hiring": {
+    "ObjectCreation": {
+      "AddCandidate": {
+        "BasicInfo": {
+          "LastName": {},
+          "Title": ["Dr.", "Miss", "Mr.", "Mrs.", "Ms."],
+          "FirstName": {},
+          "MiddleName": {},
+          "Email": {},
+          "Source": ["LinkedIn", "Facebook", "Email", "Phone", "Resume Handed in Person", "Stepstone", "Indeed"],
+          "PhoneNumber": {},
+          "DisplayDataToCandidate": ["Yes", "No"]
+        },
+        "Attachments": ["AddFile", "AddLink"],
+        "Actions": ["SaveAndClose", "Cancel"]
+      },
+      "CreateJobRequisition": {
+        "How": {
+          "Use": ["Existing Requisition", "Blank Requisition"],
+          "RecruitingType": ["Campus", "Contingent", "Executive", "Hourly", "Professional"],
+          "PrimaryLocation": {},
+          "RequisitionTemplate": {}
+        },
+        "ProvideDetails": {
+          "RequisitionTitle": {},
+          "NumberOfOpenings": ["Limited", "Unlimited"],
+          "HiringManager": {},
+          "Recruiter": {}
+        },
+        "Actions": ["SaveAndClose", "Cancel"]
+      },
+      "ManageSharedInterviewSchedules": {
+        "CreateSharedInterviewSchedule": {
+          "How": {
+            "Use": ["Blank Schedule", "Template"],
+            "ScheduleType": ["Hiring Team Managed"],
+            "Template": {},
+            "ScheduleTitle": {},
+            "ScheduleCode": {},
+            "ScheduleOwner": {},
+            "InterviewTitle": {}
+          },
+          "LocationDetails": {},
+          "Settings": {},
+          "CandidateInfo": {},
+          "InterviewerDocuments": {},
+          "CandidateNotifications": {},
+          "Actions": ["SaveAndClose", "Cancel"]
+        }
+      },
+      "CreateQRCode": {
+        "QRShortCode": {},
+        "QRShortCodeName": {},
+        "SiteURL": {},
+        "ValidFrom": {},
+        "ValidTo": {},
+        "Actions": ["SaveAndClose", "Cancel"]
+      }
+    },
+    "Operations": {
+      "Search": [],
+      "Filters": {
+        "Reports": ["DirectReports", "AllReports", "OthersAndDelegated"],
+        "AssignmentStatus": ["ActivePayrollEligible", "ActiveNoPayroll", "InactivePayrollEligible", "SuspendedNoPayroll", "InactiveUnpaidLOA", "SuspendedPayrollEligible"],
+        "ManagerType": [],
+        "ShowPrimaryAssignmentsOnly": [],
+        "WorkerType": ["Employee", "ContingentWorker", "PendingWorker", "NonWorker"],
+        "PersonAttributes": {
+          "Name": [],
+          "PersonNumber": [],
+          "AssignmentNumber": [],
+          "WorkEmail": [],
+          "WorkPhone": [],
+          "WorkerNumber": [],
+          "UserName": []
+        },
+        "SharedInterviewScheduleFilters": {
+          "Status": ["Active", "Published", "Unpublished", "Inactive"],
+          "ScheduleType": ["Candidate Managed", "Hiring Team Managed"],
+          "Format": ["In Person", "Phone", "Web Conference"],
+          "Owner": {}
+        },
+        "QRCodeFilters": {
+          "CreatedOn": {},
+          "ValidityPeriod": {},
+          "CreatedBy": {},
+          "SortBy": ["UpdatedDateLatestToOldest", "UpdatedDateOldestToLatest", "ValidFromLatestToOldest", "ValidFromOldestToLatest", "ValidToLatestToOldest", "ValidToOldestToLatest"]
+        }
+      },
+      "RecruitingActivityCenter": {
+        "Applications": {
+          "Items": [],
+          "HighPriority": []
+        },
+        "Requisitions": {
+          "Items": [],
+          "HighPriority": []
+        },
+        "Offers": {
+          "Items": [],
+          "HighPriority": []
+        }
+      }
+    }
+  }
+}
