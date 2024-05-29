@@ -1,193 +1,94 @@
 {
-    "SuccessionOverview": {
-        "Actions": {
-            "Search": [],
-            "ViewSuccessionOrganizationChart": {
-                "Actions": {
-                    "Search": []
-                }
-        },
-        "ViewExternalCandidates": {
-            "SortBy": {
-                "Name Sort Ascending": [],
-                "Name Sort Descending": [],
-            },
-            "Actions": {
-                "Search":  [],
-                "Add": {
-                    "LastName": [],
-                    "FirstName": [],
-                    "Email": [],
-                    "Phone": [],
-                    "CurrentEmployer": [],
-                    "CurrentJobTitle": [],
-                    "Country": [],
-                    "AddressLine1": [],
-                    "AddressLine2": [],
-                    "City": [],
-                    "State": [],
-                    "PostalCode": [],
-                
-                "Actions": {
-                    "Save": [],
-                    "Cancel": []
-                }
-            }
-        },
-            }},
-
-            "Add": {
-                
-                        "Name": [],
-                        "Status":{
-                            "Active": [],
-                            "Inactive": []
-                        },
-                        "Private": [],
-                        "Description": [],
-                        "PlanType":{
-                            "Incumbent": {
-                                "Incumbent": [],
-                               "Incumbent's Business title": [],
-                               "Incumbent's Department": [],
-                               
-                            "Job": {
-                             "Job": [],
-                            "BusinessUnit": [],
-                            "Department": [],
-                            "JobGrade": [],
-    
-                                "Actions": {
-                                    "Incumbent": []
-                                }
-            },
-                            "Position": {
-                                "Position": [],
-                               "BusinessUnit": [],
-                               "Department": [],
-                               "Actions": {
-                                "Incumbent": []
-                            }
-               },
-                        },
-                       
-                "Candidates": {
-                        "Actions": {
-                            "Add": {
-                                                                   
-                                        "CandidateType": {
-                                            "Options": [
-                                                "Internal Candidate",
-                                                "External Candidate",
-                                                "Talent Pool"
-                                            ]
-                                        },
-                                        "InternalCandidate": {
-                                            "Name": [],
-                                            "Status": [],
-                                            "Readiness": [],
-                                            "Ranking": [],
-                                            "IsInterimSuccessor": []
-                                        },
-                                    
-                                    "Actions": {
-                                        "Add": [],
-                                        "Cancel": []
-                                    }
-                                
-                            }
-                        },
-                        "Message": "Add a candidate to this succession plan."
-                    },
-                    "Owners": {
-                        "Actions": {
-                            "AddAnother": {
-                               
-                                        "Owner": [],
-                                        "OwnerType": {
-                                       
-                                                "Administrator": [],
-                                                "Candidate Manager": [],
-                                                "Viewer": [],
-                                        
-                                        },
-                                        "SendAlerts": {
-                                           
-                                                "Yes": [],
-                                                "No": [],
-                                        
-                                        },
-                                    
-                                    "Actions": {
-                                        "Add": [],
-                                        "Cancel": [],
-                                        "Edit" : [],
-                                    }
-                                
-                            }
-                        }
-                    },
-                    "Alerts": {
-                            "SendAlertsWhenCandidatesMoveToDifferentRoles": [],
-                            "SendAlertsWhenIncumbentChangesRoles": [],
-                            "SendAlertsWhenCandidatesMoveToPlanRole": [],
-                        }
-                    },
-                    "Actions": {
-                        "Create": [],
-                        "Cancel": []
-                    },
-                },
-
-        "Filters": {
-            "PlanType": {
-                
-                    "Incumbent": [],
-                    "Job": [],
-                    "Position": []
-            
-            },
-            "Status": {
-                "Active": [],
-                "Inactive": []
-            },
-            "Owner": {
-                "Actions": {
-                    "Search": []
-                }
+  "SuccessionOverview": {
+    "ObjectCreation": {
+      "Add": {
+        "Name": [],
+        "Status": ["Active", "Inactive"],
+        "Private": [],
+        "Description": [],
+        "PlanType": {
+          "Incumbent": {
+            "Incumbent": [],
+            "IncumbentBusinessTitle": [],
+            "IncumbentDepartment": [],
+            "Job": {
+              "Job": [],
+              "BusinessUnit": [],
+              "Department": [],
+              "JobGrade": [],
+              "Actions": ["Incumbent"]
             },
             "Position": {
-                "Actions": {
-                    "Search": []
-                }
-            },
-            "Incumbent": {
-                "Actions": {
-                    "Search": []
-                }
-            },
-            "Job": {
-                "Actions": {
-                    "Search": []
-                }
-            },
-            "PlanName": {
-                "Actions": {
-                    "Search": []
-                }
-            },
-            "Actions": {
-                "Cancel": [],
-                "SeeResults": []
+              "Position": [],
+              "BusinessUnit": [],
+              "Department": [],
+              "Actions": ["Incumbent"]
             }
+          }
         },
-        "SortBy": {
-            "Plan Name": [],
-            "Plan Type": [],
-            "Owner Name": [],
-            "Candidate Count": [],
-            "Total Interim Successors": []
+        "Candidates": {
+          "Actions": ["Add"],
+          "CandidateType": ["Internal Candidate", "External Candidate", "Talent Pool"],
+          "InternalCandidate": {
+            "Name": [],
+            "Status": [],
+            "Readiness": [],
+            "Ranking": [],
+            "IsInterimSuccessor": []
+          },
+          "Message": "Add a candidate to this succession plan."
         },
-       
+        "Owners": {
+          "Actions": ["AddAnother"],
+          "Owner": [],
+          "OwnerType": ["Administrator", "Candidate Manager", "Viewer"],
+          "SendAlerts": ["Yes", "No"],
+          "Actions": ["Add", "Cancel", "Edit"]
+        },
+        "Alerts": {
+          "SendAlertsWhenCandidatesMoveToDifferentRoles": [],
+          "SendAlertsWhenIncumbentChangesRoles": [],
+          "SendAlertsWhenCandidatesMoveToPlanRole": []
+        },
+        "Actions": ["Create", "Cancel"]
+      },
+      "ViewExternalCandidates": {
+        "Actions": ["Search", "Add"],
+        "Add": {
+          "LastName": [],
+          "FirstName": [],
+          "Email": [],
+          "Phone": [],
+          "CurrentEmployer": [],
+          "CurrentJobTitle": [],
+          "Country": [],
+          "AddressLine1": [],
+          "AddressLine2": [],
+          "City": [],
+          "State": [],
+          "PostalCode": [],
+          "Actions": ["Save", "Cancel"]
+        }
+      }
+    },
+    "Operations": {
+      "Search": [],
+      "Filters": {
+        "PlanType": ["Incumbent", "Job", "Position"],
+        "Status": ["Active", "Inactive"],
+        "Owner": ["Search"],
+        "Position": ["Search"],
+        "Incumbent": ["Search"],
+        "Job": ["Search"],
+        "PlanName": ["Search"],
+        "Actions": ["Cancel", "SeeResults"]
+      },
+      "SortBy": ["Plan Name", "Plan Type", "Owner Name", "Candidate Count", "Total Interim Successors"]
+    },
+    "Processes": {
+      "ViewSuccessionOrganizationChart": {
+        "Actions": ["Search"]
+      }
     }
+  }
 }
