@@ -618,4 +618,602 @@
                       "Measurement Name": [],
                       "Unit of Measure": [],
                       "Start Date": [],
-                      "End Date
+                      "End Date": [],
+                      "Description": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Tasks": {
+                    "Add": {
+                      "Name": [],
+                      "Completion Percentage": [],
+                      "Type": [],
+                      "Status": [],
+                      "Priority": [],
+                      "Start Date": [],
+                      "Target Completion Date": [],
+                      "Related Link": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Learning": {
+                    "Add": {
+                      "Select Learning Item": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Actions": {
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                }
+              },
+              "Adherence to Security Standards": {
+                "Optional": {
+                  "Minimum Proficiency Level": [],
+                  "Target Proficiency Level": [],
+                  "Current Proficiency Level": []
+                },
+                "Add Goal": {
+                  "Basic Info": {
+                    "Library Goal": [],
+                    "Goal Name": [],
+                    "Private": [],
+                    "Description": [],
+                    "Status": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Category": [],
+                    "Completion Percentage": [],
+                    "Source": [],
+                    "Success Criteria": [],
+                    "Development Intent": {
+                      "Systems Support": []
+                    },
+                    "Personal Development Intent": [],
+                    "Add Another Personal Development Intent": []
+                  },
+                  "Target Outcomes": {
+                    "Competencies": [
+                      "Licenses and Certifications",
+                      "Competencies",
+                      "Languages",
+                      "Skills"
+                    ],
+                    "Add": {
+                      "Competency": [],
+                      "Review Date": [],
+                      "Proficiency Rating": [],
+                      "Current Proficiency Level": [],
+                      "Years of Experience": [],
+                      "Personal Interest Level": [],
+                      "Year Last Used": [],
+                      "Reviewer": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Measurement": {
+                    "Add": {
+                      "Measurement Name": [],
+                      "Unit of Measure": [],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Description": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Tasks": {
+                    "Add": {
+                      "Name": [],
+                      "Completion Percentage": [],
+                      "Type": [],
+                      "Status": [],
+                      "Priority": [],
+                      "Start Date": [],
+                      "Target Completion Date": [],
+                      "Related Link": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Learning": {
+                    "Add": {
+                      "Select Learning Item": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Actions": {
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                }
+              },
+              "Deliver Quality": {
+                "Optional": {
+                  "Minimum Proficiency Level": [],
+                  "Target Proficiency Level": [],
+                  "Current Proficiency Level": []
+                },
+                "Add Goal": {
+                  "Basic Info": {
+                    "Library Goal": [],
+                    "Goal Name": [],
+                    "Private": [],
+                    "Description": [],
+                    "Status": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Category": [],
+                    "Completion Percentage": [],
+                    "Source": [],
+                    "Success Criteria": [],
+                    "Development Intent": {
+                      "Systems Support": []
+                    },
+                    "Personal Development Intent": [],
+                    "Add Another Personal Development Intent": []
+                  },
+                  "Target Outcomes": {
+                    "Competencies": [
+                      "Licenses and Certifications",
+                      "Competencies",
+                      "Languages",
+                      "Skills"
+                    ],
+                    "Add": {
+                      "Competency": [],
+                      "Review Date": [],
+                      "Proficiency Rating": [],
+                      "Current Proficiency Level": [],
+                      "Years of Experience": [],
+                      "Personal Interest Level": [],
+                      "Year Last Used": [],
+                      "Reviewer": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Measurement": {
+                    "Add": {
+                      "Measurement Name": [],
+                      "Unit of Measure": [],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Description": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Tasks": {
+                    "Add": {
+                      "Name": [],
+                      "Completion Percentage": [],
+                      "Type": [],
+                      "Status": [],
+                      "Priority": [],
+                      "Start Date": [],
+                      "Target Completion Date": [],
+                      "Related Link": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Learning": {
+                    "Add": {
+                      "Select Learning Item": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Actions": {
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                }
+              },
+              "Team Work": {
+                "Optional": {
+                  "Minimum Proficiency Level": [],
+                  "Target Proficiency Level": [],
+                  "Current Proficiency Level": [],
+                  "See related learning": {
+                    "Related Learning": {
+                      "Strong Managers and Strong Teams - HACP - OpenSesame": [
+                        "Strong Leaders"
+                      ],
+                      "Motivating Your Team": [
+                        "As a manager, your goal is to keep your team members motivated and enthusiastic about their work."
+                      ],
+                      "Show More": {
+                        "Learning Items That Meet the Prerequisite": {
+                          "Course": {
+                            "Management 201: New Manager Fundamentals": {
+                              "Actions": {
+                                "Enroll": []
+                              }
+                            },
+                            "Motivating Your Team": {
+                              "Actions": {
+                                "Enroll": []
+                              }
+                            },
+                            "Strong Managers and Strong Teams - HACP - OpenSesame": {
+                              "Actions": {
+                                "Enroll": []
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "Add Goal": {
+                  "Basic Info": {
+                    "Library Goal": [],
+                    "Goal Name": [],
+                    "Private": [],
+                    "Description": [],
+                    "Status": [],
+                    "Start Date": [],
+                    "Target Completion Date": [],
+                    "Category": [],
+                    "Completion Percentage": [],
+                    "Source": [],
+                    "Success Criteria": [],
+                    "Development Intent": {
+                      "Systems Support": []
+                    },
+                    "Personal Development Intent": [],
+                    "Add Another Personal Development Intent": []
+                  },
+                  "Target Outcomes": {
+                    "Competencies": [
+                      "Licenses and Certifications",
+                      "Competencies",
+                      "Languages",
+                      "Skills"
+                    ],
+                    "Add": {
+                      "Competency": [],
+                      "Review Date": [],
+                      "Proficiency Rating": [],
+                      "Current Proficiency Level": [],
+                      "Years of Experience": [],
+                      "Personal Interest Level": [],
+                      "Year Last Used": [],
+                      "Reviewer": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Measurement": {
+                    "Add": {
+                      "Measurement Name": [],
+                      "Unit of Measure": [],
+                      "Start Date": [],
+                      "End Date": [],
+                      "Description": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Tasks": {
+                    "Add": {
+                      "Name": [],
+                      "Completion Percentage": [],
+                      "Type": [],
+                      "Status": [],
+                      "Priority": [],
+                      "Start Date": [],
+                      "Target Completion Date": [],
+                      "Related Link": [],
+                      "Comments": [],
+                      "Actions": {
+                        "Ok": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Learning": {
+                    "Add": {
+                      "Select Learning Item": [],
+                      "Actions": {
+                        "Save": [],
+                        "Cancel": []
+                      }
+                    }
+                  },
+                  "Actions": {
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                }
+              }
+            },
+            "Degrees": {
+              "Add Goal": {
+                "Basic Info": {
+                  "Library Goal": [],
+                  "Goal Name": [],
+                  "Private": [],
+                  "Description": [],
+                  "Status": {
+                    "Note Started": [],
+                    "In progress": [],
+                    "Completed": []
+                  },
+                  "Start Date": [],
+                  "Target Completion Date": [],
+                  "Category": {
+                    "Select a value": [],
+                    "Short-term": [],
+                    "Medium-term": [],
+                    "Long-term": []
+                  },
+                  "Completion Percentage": [],
+                  "Source": [],
+                  "Success Criteria": {
+                    "Actions": {
+                      "Font Family": [],
+                      "Font Size": [],
+                      "Bold": [],
+                      "Italic": [],
+                      "Underline": [],
+                      "Numbered List": [],
+                      "Bulleted List": [],
+                      "Link": [],
+                      "Undo": [],
+                      "Redo": [],
+                      "Remove Format": []
+                    }
+                  },
+                  "Development Intent": [],
+                  "Personal Development Intent": {
+                    "Actions": {
+                      "Add Another Personal Development Intent": {
+                        "Personal Development Intent": [],
+                        "Delete": []
+                      }
+                    }
+                  },
+                  "Actions": {
+                    "Save and Close": [],
+                    "Cancel": []
+                  }
+                },
+                "Target Outcomes": {
+                  "Licenses and Certifications": {
+                    "Licenses and Certifications": [],
+                    "Competencies": [],
+                    "Language": [],
+                    "Skills": []
+                  },
+                  "Actions": {
+                    "Add": {
+                      "TargetOutcomes": {
+                        "LicenseOrCertificate": [],
+                        "Country": [],
+                        "State": [],
+                        "IssueDate": [],
+                        "ExpirationDate": [],
+                        "IssuedBy": [],
+                        "CertificateNumber": [],
+                        "RenewalDate": [],
+                        "RenewalRequired": [],
+                        "Verified": [],
+                        "Title": [],
+                        "Attachments": [],
+                        "Actions": {
+                          "Save": [],
+                          "Cancel": []
+                        }
+                      },
+                      "Collapse": []
+                    }
+                  }
+                },
+                "Measurement": {
+                  "Add": {
+                    "Measurement": {
+                      "MeasurementName": [],
+                      "UnitOfMeasure": [],
+                      "StartDate": [],
+                      "EndDate": [],
+                      "Description": {
+                        "Actions": {
+                          "Font Family": [],
+                          "Font Size": [],
+                          "Bold": [],
+                          "Italic": [],
+                          "Underline": [],
+                          "Numbered List": [],
+                          "Bulleted List": [],
+                          "Link": [],
+                          "Undo": [],
+                          "Redo": [],
+                          "Remove Format": []
+                        }
+                      },
+                      "Actions": {
+                        "OK": [],
+                        "Cancel": []
+                      }
+                    }
+                  }
+                },
+                "Tasks": {
+                  "Add": {
+                    "Tasks": {
+                      "Name": [],
+                      "Type": [],
+                      "Status": [],
+                      "Priority": [],
+                      "Completion Percentage": [],
+                      "Start Date": [],
+                      "Target Completion Date": [],
+                      "Related Link": [],
+                      "Comments": {
+                        "Actions": {
+                          "Font Family": [],
+                          "Font Size": [],
+                          "Bold": [],
+                          "Italic": [],
+                          "Underline": [],
+                          "Numbered List": [],
+                          "Bulleted List": [],
+                          "Link": [],
+                          "Undo": [],
+                          "Redo": [],
+                          "Remove Format": []
+                        }
+                      },
+                      "Actions": {
+                        "OK": [],
+                        "Cancel": []
+                      }
+                    }
+                  }
+                },
+                "Learning": {
+                  "Add": {
+                    "Select Learning Item": {
+                      "Search the learning catalog": []
+                    }
+                  }
+                },
+                "Actions": {
+                  "Save and Close": [],
+                  "Cancel": []
+                }
+              }
+            },
+            "OpenJobs": []
+          }
+        },
+        "ExploreCareers": {
+          "Careers": {
+            "Search for careers": []
+          }
+        }
+      }
+    },
+    "Feedback": {
+      "Know before you start": {
+        "Tutorials": []
+      },
+      "Why is taking feedback important": [],
+      "Feedback given to me": {
+        "Authors": {
+          "ALL": [],
+          "Me": []
+        },
+        "Date Range": {
+          "All": [],
+          "Past Month": [],
+          "Past 6 Months": [],
+          "Past 12 Months": [],
+          "Past 5 Years": []
+        },
+        "Add Note About Me": {
+          "Profile": [],
+          "Who can see this": {
+            "Everyone": [],
+            "Managers Only": [],
+            "Managers and Alberto Perez": [],
+            "Only Me": []
+          },
+          "What do you want to say": [],
+          "Drag and Drop": [],
+          "URL": [],
+          "Actions": {
+            "Add URL": [],
+            "Cancel": [],
+            "Save": []
+          }
+        }
+      },
+      "Feedback request about me": {
+        "Status": {
+          "All": [],
+          "New": [],
+          "In Progress": [],
+          "Complete": []
+        },
+        "Date Range": {
+          "All": [],
+          "Past Month": [],
+          "Past 6 Months": [],
+          "Past 12 Months": [],
+          "Past 5 Years": []
+        },
+        "Request Feedback": {
+          "What type of feedback do you want to request?": {
+            "General feedback": [],
+            "Feedback on goals": []
+          },
+          "What questions do you want to ask?": {
+            "Questionnaire": {
+              "Team collaboration": [],
+              "Start, Stop, Continue": []
+            }
+          },
+          "Who do you want to ask": {
+            "RequestFeedbackFrom": {
+              "Anyone": []
+            },
+            "Person": []
+          },
+          "When do you need it": {
+            "Provide feedback by": [],
+            "Your message to the feedback provider": [],
+            "Share feedback with (Admin)": [],
+            "Share feedback with you": []
+          },
+          "Actions": {
+            "Cancel": [],
+            "Submit": []
+          }
+        }
+      }
+    }
+  }
+}
