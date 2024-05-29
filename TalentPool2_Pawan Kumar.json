@@ -1,46 +1,27 @@
 {
   "AddToTalentPool": {
-    "Search": [],
-    "Filters": {
-      "Reports": {
-        "DirectReports": [],
-        "AllReports": [],
-        "OthersAndDelegated": []
-      },
-      "AssignmentStatus": {
-        "ActivePayrollEligible": [],
-        "ActiveNoPayroll": [],
-        "InactivePayrollEligible": [],
-        "SuspendedNoPayroll": [],
-        "InactiveUnpaidLOA": [],
-        "SuspendedPayrollEligible": []
-      },
-      "ManagerType": [],
-      "ShowPrimaryAssignmentsOnly": [],
-      "WorkerType": {
-        "Employee": [],
-        "ContingentWorker": [],
-        "PendingWorker": [],
-        "NonWorker": []
-      },
-      "PersonAttributes": {
+    "ObjectCreation": {
+      "Employment": {
         "Name": [],
+        "BusinessTitle": [],
         "PersonNumber": [],
         "AssignmentNumber": [],
-        "WorkEmail": [],
-        "WorkPhone": [],
-        "WorkerNumber": [],
-        "UserName": []
+        "AssignmentStatus": [],
+        "WorkerType": [],
+        "WorkEmail": []
       }
     },
-    "Employment": {
-      "Name": [],
-      "BusinessTitle": [],
-      "PersonNumber": [],
-      "AssignmentNumber": [],
-      "AssignmentStatus": [],
-      "WorkerType": [],
-      "WorkEmail": []
-    }
+    "Operations": {
+      "Search": [],
+      "Filters": {
+        "Reports": ["DirectReports", "AllReports", "OthersAndDelegated"],
+        "AssignmentStatus": ["ActivePayrollEligible", "ActiveNoPayroll", "InactivePayrollEligible", "SuspendedNoPayroll", "InactiveUnpaidLOA", "SuspendedPayrollEligible"],
+        "ManagerType": [],
+        "ShowPrimaryAssignmentsOnly": [],
+        "WorkerType": ["Employee", "ContingentWorker", "PendingWorker", "NonWorker"],
+        "PersonAttributes": ["Name", "PersonNumber", "AssignmentNumber", "WorkEmail", "WorkPhone", "WorkerNumber", "UserName"]
+      }
+    },
+    "Processes": {}
   }
 }
