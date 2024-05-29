@@ -1,0 +1,27 @@
+{
+  "Help Desk": {
+    "Apps": {
+      "Activities": {
+        "My Calendar": {
+          "Actions": ["Print", "Create Appointment", "Appointments", "Calendar", "Timeline", "Day", "Week", "Month", "List", "Previous", "Next", "Today"],
+          "Next 7 days": []
+        },
+        "Activities": {
+          "Actions": ["My Team's Tasks", "Show Filters", "Save As", "Refresh", "Create", "Sort", "Sort Descending", "Edit Columns"],
+          "Search": []
+        },
+        "Activity Overview": {
+          "Analytics": {}
+        }
+      },
+      "Cases": {
+        "All Cases Any Status": {
+          "Search Bar": ["All Cases", "All Cases Any Status", "Cases Created by Me", "My Cases", "Open Cases for My Team", "Manage Saved Searches"],
+          "Actions": ["Refresh", "Create Case", "Save", "Export", "Manage Columns", "Sort by Relevance", "Add Filter"],
+          "Results": ["Case Number", "Title", "Status", "Last Updated Date", "Assigned To", "Actions"],
+          "Group By": ["None", "Assigned To", "Case Type", "Created By", "Last Updated By", "Primary Contact", "Priority", "Reported By", "Status"]
+        }
+      }
+    }
+  }
+}
