@@ -1,184 +1,105 @@
 {
   "Hiring": {
-    "Add a Candidate": {
-      "Actions": {
-        "Save and Close": [],
-        "Cancel": []
-      },
-      "Create Candidate": {
-        "Basic Info": {
-          "Last Name": {},
-          "Title": {
-            "Dr.": [],
-            "Miss": [],
-            "Mr.": [],
-            "Mrs.": [],
-            "Ms.": []
-          },
-          "First Name": {},
-          "Middle Name": {},
+    "ObjectCreation": {
+      "AddCandidate": {
+        "BasicInfo": {
+          "LastName": {},
+          "Title": ["Dr.", "Miss", "Mr.", "Mrs.", "Ms."],
+          "FirstName": {},
+          "MiddleName": {},
           "Email": {},
-          "Source": {
-            "LinkedIn": [],
-            "Facebook": [],
-            "Email": [],
-            "Phone": [],
-            "Resume Handed in Person": [],
-            "Stepstone": [],
-            "Indeed": []
-          },
-          "Phone Number": {},
-          "Display Data to Candidate": {
-            "Yes": [],
-            "No": []
-          }
+          "Source": ["LinkedIn", "Facebook", "Email", "Phone", "Resume Handed in Person", "Stepstone", "Indeed"],
+          "PhoneNumber": {},
+          "DisplayDataToCandidate": ["Yes", "No"]
         },
-        "Attachments": {
-          "Add File": [],
-          "Add Link": []
-        }
-      }
-    },
-    "Create Job Requisition": {
-      "Actions": {
-        "Save and Close": [],
-        "Cancel": []
+        "Attachments": ["AddFile", "AddLink"],
+        "Actions": ["SaveAndClose", "Cancel"]
       },
-      "How": {
-        "Use": {
-          "Existing Requisition": [],
-          "Blank Requisition": []
+      "CreateJobRequisition": {
+        "How": {
+          "Use": ["Existing Requisition", "Blank Requisition"],
+          "RecruitingType": ["Campus", "Contingent", "Executive", "Hourly", "Professional"],
+          "PrimaryLocation": {},
+          "RequisitionTemplate": {}
         },
-        "Recruiting Type": {
-          "Campus": [],
-          "Contingent": [],
-          "Executive": [],
-          "Hourly": [],
-          "Professional": []
+        "ProvideDetails": {
+          "RequisitionTitle": {},
+          "NumberOfOpenings": ["Limited", "Unlimited"],
+          "HiringManager": {},
+          "Recruiter": {}
         },
-        "Primary Location": {},
-        "Requisition Template": {}
+        "Actions": ["SaveAndClose", "Cancel"]
       },
-      "Provide Details": {
-        "Requisition Title": {},
-        "Number of Openings": {
-          "Limited": [],
-          "Unlimited": []
-        },
-        "Hiring Manager": {},
-        "Recruiter": {}
-      }
-    },
-    "Manage Shared Interview Schedules": {
-      "Shared Schedules": {
-        "Actions": {
-          "Search bar": []
-        },
-        "ADD": {
-          "Actions": {
-            "Save and Close": [],
-            "Cancel": []
+      "ManageSharedInterviewSchedules": {
+        "CreateSharedInterviewSchedule": {
+          "How": {
+            "Use": ["Blank Schedule", "Template"],
+            "ScheduleType": ["Hiring Team Managed"],
+            "Template": {},
+            "ScheduleTitle": {},
+            "ScheduleCode": {},
+            "ScheduleOwner": {},
+            "InterviewTitle": {}
           },
-          "Create Shared Interview Schedule": {
-            "How": {
-              "Use": {
-                "Blank Schedule": [],
-                "Template": []
-              },
-              "Schedule Type": {
-                "Hiring Team Managed": []
-              },
-              "Template": {},
-              "Schedule Title": {},
-              "Schedule Code": {},
-              "Schedule Owner": {},
-              "Interview Title": {}
-            },
-            "Location Details": {},
-            "Settings": {},
-            "Candidate Info": {},
-            "Interviewer Documents": {},
-            "Candidate Notifications": {}
-          }
-        },
-        "Show Filters": {
-          "Filters": {
-            "Expand All": [],
-            "Collapse All": []
-          },
-          "Status": {
-            "Active": [],
-            "Published": [],
-            "Unpublished": [],
-            "Inactive": []
-          },
-          "Schedule Type": {
-            "Candidate Managed": [],
-            "Hiring Team Managed": []
-          },
-          "Format": {
-            "In Person": [],
-            "Phone": [],
-            "Web Conference": []
-          },
-          "Owner": {},
-          "Sort By": {
-            "Schedule Title - A to Z": [],
-            "Schedule Title - Z to A": [],
-            "Last Modified Date - Ascending": [],
-            "Last Modified Date - Descending": []
-          }
+          "LocationDetails": {},
+          "Settings": {},
+          "CandidateInfo": {},
+          "InterviewerDocuments": {},
+          "CandidateNotifications": {},
+          "Actions": ["SaveAndClose", "Cancel"]
         }
+      },
+      "CreateQRCode": {
+        "QRShortCode": {},
+        "QRShortCodeName": {},
+        "SiteURL": {},
+        "ValidFrom": {},
+        "ValidTo": {},
+        "Actions": ["SaveAndClose", "Cancel"]
       }
     },
-    "Recruiting Activity Center": {
-      "Activity Center": {
+    "Operations": {
+      "Search": [],
+      "Filters": {
+        "Reports": ["DirectReports", "AllReports", "OthersAndDelegated"],
+        "AssignmentStatus": ["ActivePayrollEligible", "ActiveNoPayroll", "InactivePayrollEligible", "SuspendedNoPayroll", "InactiveUnpaidLOA", "SuspendedPayrollEligible"],
+        "ManagerType": [],
+        "ShowPrimaryAssignmentsOnly": [],
+        "WorkerType": ["Employee", "ContingentWorker", "PendingWorker", "NonWorker"],
+        "PersonAttributes": {
+          "Name": [],
+          "PersonNumber": [],
+          "AssignmentNumber": [],
+          "WorkEmail": [],
+          "WorkPhone": [],
+          "WorkerNumber": [],
+          "UserName": []
+        },
+        "SharedInterviewScheduleFilters": {
+          "Status": ["Active", "Published", "Unpublished", "Inactive"],
+          "ScheduleType": ["Candidate Managed", "Hiring Team Managed"],
+          "Format": ["In Person", "Phone", "Web Conference"],
+          "Owner": {}
+        },
+        "QRCodeFilters": {
+          "CreatedOn": {},
+          "ValidityPeriod": {},
+          "CreatedBy": {},
+          "SortBy": ["UpdatedDateLatestToOldest", "UpdatedDateOldestToLatest", "ValidFromLatestToOldest", "ValidFromOldestToLatest", "ValidToLatestToOldest", "ValidToOldestToLatest"]
+        }
+      },
+      "RecruitingActivityCenter": {
         "Applications": {
-          "items": [],
-          "High Priority": []
+          "Items": [],
+          "HighPriority": []
         },
         "Requisitions": {
-          "items": [],
-          "High Priority": []
+          "Items": [],
+          "HighPriority": []
         },
-        "offers": {
-          "items": [],
-          "High Priority": []
-        }
-      }
-    },
-    "Recruiting QR Codes": {
-      "Actions": {
-        "Search bar": []
-      },
-      "Show Filters": {
-        "Filters": {
-          "Expand All": [],
-          "Collapse All": []
-        },
-        "Created On": {},
-        "Validity period": {},
-        "Created By": {},
-        "Create": {
-          "Create QR Code": {
-            "Actions": {
-              "Save and Close": [],
-              "Cancel": []
-            },
-            "QR Short Code": [],
-            "QR Short Code Name": [],
-            "Site URL": [],
-            "Valid From": [],
-            "Valid To": []
-          }
-        },
-        "Sort By": {
-          "Updated Date - Latest to Oldest": [],
-          "Updated Date - Oldest to Latest": [],
-          "Valid from - Latest to Oldest": [],
-          "Valid from - Oldest to Latest": [],
-          "Valid to - Latest to Oldest": [],
-          "Valid to - Oldest to Latest": []
+        "Offers": {
+          "Items": [],
+          "HighPriority": []
         }
       }
     }
