@@ -1,6 +1,7 @@
 {
     "Quick Actions":{
         "Create HR Help Desk Request":{
+            "New request":{
             "Subject": [],
             "Primary Point of Contact": [],
             "Queue": [
@@ -158,6 +159,7 @@
                 "cancel":[],
                 "Save":[]
             }
+        }
         },
         "Internal Service Request Queues":{
             "Time Interval":[
