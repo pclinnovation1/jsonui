@@ -159,7 +159,50 @@
                 "cancel":[],
                 "Save":[]
             }
-        }
+        },
+         "All Open HR Help Desk Requests":{
+              "Filter":[],
+              "Results":{
+                "Table":{
+                  "select":[],
+                  "Request Number":[],
+                  "Subject":[],
+                  "Severity":[],
+                  "Status":[],
+                  "Last Updated Date":[],
+                  "Assigned To":[],
+                  "Actions":[]
+                },
+                "Group By":[
+                    "None",
+                    "Assigned To",
+                    "Category Name",
+                    "Created By",
+                    "Critical",
+                    "Last Updated By",
+                    "Primary Point of Contact",
+                    "Queue",
+                    "Severity",
+                    "Status"
+                ],
+                "Action":{
+                  "refresh":[],
+                  "infolets":[],
+                  "Create Request":[],
+                  "Add filter":[],
+                  "Action":{
+                    "Save":[],
+                    "Export":[
+                      "Export to Excel",
+                      "Export to CSV"
+                    ],
+                    "Manage Columns":[],
+                    "Sort by Relevance":[]
+                  }
+                } 
+      
+              }
+          }
         },
         "Internal Service Request Queues":{
             "Time Interval":[
