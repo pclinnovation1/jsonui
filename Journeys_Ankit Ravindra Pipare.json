@@ -1,0 +1,205 @@
+{
+    "My Journeys": {
+        "Search by journey name": [],
+        "Filters": {
+            "Status": {
+                "Completed": [],
+                "Overdue": [],
+                "Open": []
+            },
+            "Category": [],
+            "Actions": {
+                "Clear": []
+            }
+        },
+        "Saved Searches": [],
+        "items": [
+            {
+                "Task": [],
+                "details": []
+            }
+        ],
+        "Sort By": {
+            "Relevance": [],
+            "Last Assigned": [],
+            "Journey Name": [],
+            "Journey Status": [],
+            "Journey Category": []
+        }
+    },
+    "Explore": {
+        "Search by journey name": [],
+        "Filters": {
+            "Personal": [],
+            "Category": [
+                "Survey",
+                "Person",
+                "Talent Management",
+                "Health and Safety",
+                "Benefits",
+                "HR Administration",
+                "Enterprise onboarding",
+                "On Boarding",
+                "Absence",
+                "Learn",
+                "Off Boarding",
+                "Career Development",
+                "Compensation",
+                "Disciplinary",
+                "Recruiting"
+            ],
+            "Actions": {
+                "Clear": []
+            }
+        },
+        "Create Journey": {
+            "How do you want to create your journey?": {
+                "Select existing journey": [],
+                "New Journey": []
+            },
+            "Journey Name": [],
+            "Category": [],
+            "Display Name": [],
+            "Archive After Months": [],
+            "Actions": {
+                "Cancel": [],
+                "Save and Comtinue": []
+            }
+        }
+    },
+    "My Tasks": {
+        "Search by journey name": [],
+        "Filters": {
+            "Status": {
+                "Completed": [],
+                "Overdue": [],
+                "Open": []
+            },
+            "Category": [],
+            "Required": {
+                "Required": [],
+                "Optional": []
+            },
+            "Actions": {
+                "Clear": []
+            }
+        },
+        "Saved Searches": [],
+        "Sort By": [
+            "Relevance",
+            "Due Date",
+            "Employee Name",
+            "Task Name",
+            "Required"
+        ],
+        "Task Name": {
+            "Actions": {
+                "Reopen Task": []
+            }
+        }
+    },
+    "Team Journeys": {
+        "Search by person name": [],
+        "Filters": {
+            "Reports": [
+                "Direct Reports",
+                "All Reports"
+            ],
+            "Status": [
+                "Deferred",
+                "Completed",
+                "Overdue",
+                "Open"
+            ],
+            "Category": [],
+            "Actions": {
+                "Clear": []
+            }
+        },
+        "Saved Searches": [],
+        "Sort By": [
+            "Relevance",
+            "Assigned Date",
+            "Employee Name",
+            "Journey Name"
+        ]
+    },
+    "Organization Journeys": {
+        "Search by person name": [],
+        "Filters": {
+            "Status": [
+                "Deferred",
+                "Completed",
+                "Overdue",
+                "Open"
+            ],
+            "Category": [],
+            "Actions": {
+                "Clear": []
+            }
+        },
+        "Saved Searches": [],
+        "Sort By": [
+            "Relevance",
+            "Assigned Date",
+            "Employee Name",
+            "Journey Name"
+        ],
+        "Actions": {
+            "Export": [],
+            "Columns": {
+                "Search": [],
+                "Show": [
+                    "Person Name",
+                    "Person Number",
+                    "Business Title",
+                    "Journey Name",
+                    "Status",
+                    "Assigned Date"
+                ],
+                "Hide": [],
+                "Restore Defaults": []
+            }
+        }
+    },
+    "Activity": {
+        "Search by journey name": [],
+        "Filters": {
+            "Status": [
+                "Pending",
+                "Error",
+                "Completed"
+            ],
+            "Category": [
+                "Survey",
+                "Person",
+                "Talent Management",
+                "Health and Safety",
+                "Benefits",
+                "HR Administration"
+            ],
+            "Submission Date": [
+                "From Date",
+                "To Date"
+            ],
+            "Actions": {
+                "Clear": []
+            }
+        },
+        "Columns": {
+            "Search": [],
+            "Show": [
+                "Journey",
+                "Status",
+                "Assignees",
+                "Requested By",
+                "Assigned Date",
+                "Submission Date"
+            ],
+            "Restore Defaults": []
+        },
+        "Actions": {
+            "Refresh": []
+        }
+    }
+}
