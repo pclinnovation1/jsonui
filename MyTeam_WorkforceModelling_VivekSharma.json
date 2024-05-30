@@ -1,0 +1,778 @@
+{
+    "Workforce Models": {
+        "View": [
+            "All Models",
+            "Recently Updated",
+            "Draft",
+            "Pending",
+            "Complete",
+            "Complete with errors",
+            "Rejected",
+            "Returned"
+            ],
+
+        "Sort By":[
+            "Last Updated Date",
+            "Name",
+            "Status",
+            "Effective Date",
+            "Top Manager",
+            "Action"
+            ],
+        "Currency":{},
+        "Create Model":{
+            "Create Workforce Model": {
+                "Effective Date": [],
+                "Model Name": [],
+                "Author": [],
+                "Purpose": [],
+                "Justification": {
+                "Manage Attachments":{
+                    "Attachments": {
+                        "Type":[],
+                        "File Name or URL":[],
+                        "Title":[],
+                        "Description":[],
+                        "Attached By":[],
+                        "Attached Date":[],
+                        "Actions":[
+                            "Add",
+                            "Delete"
+                        ],
+                        "View":{
+                            "About this Record":[],
+                            "Columns":[
+                                "Show All",
+                                "Attached Date",
+                                "Attached By",
+                                "Description",
+                                "Title",
+                                "File Name or URL",
+                                "Category",
+                                "Type"
+                            ],
+                            "Reorder Columns": []
+                        },
+                        "Action buttons": {
+                            "Add": [],
+                            "Delete": [],
+                            "OK": [],
+                            "Cancel": []
+                        }
+                    }
+                    
+                    }
+                },
+                "Top Manager or Position": {
+                    "Dropdown1": [
+                        "Manager",
+                        "Position"
+                    ],
+                    "Dropdown2": [],
+                    "Open Model to Top Manager or Position": []
+                },
+                "Continue": {
+                    "Filter":{
+                        "Country":{
+                            "Textbox":[],
+                            "Search": {
+                                "Search and Select:Country":{
+                                "Search":[], 
+                                "Actions":{
+                                    "OK":[],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                        },
+                        "Location":{
+                            "Textbox":[],
+                            "Search": {
+                                "Search and Select:Location":{
+                                "Search":{
+                                    "Basic filters":{
+                                        "Name":[],
+                                        "Code":[],
+                                        "Actions":{
+                                            "Search":[],
+                                            "Reset":[]
+                                        }
+                                    },
+                                    "Advanced filters":{
+                                        "Name":{
+                                            "Dropdown":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Code":{
+                                            "Dropdown":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Town or City":{
+                                            "Dropdown":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Postal Code":{
+                                            "Dropdown":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Country":{
+                                            "Dropdown":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Actions":{
+                                            "Search": [],
+                                            "Reset": [],
+                                            "Add fields":[],
+                                            "Reorder": []
+                                        }
+                                    }
+                                }, 
+                                "Display name": [],
+                                "Actions":{
+                                    "OK":[],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                        },
+                        "Department": {
+                            "Textbox":[],
+                            "Search": {
+                                "Search and Select:Department":{
+                                "Search":{
+                                    "Basic filters":{
+                                        "Name":[],
+                                        "Actions":{
+                                            "Search":[],
+                                            "Reset":[]
+                                        }
+                                    },
+                                    "Advanced filters":{
+                                        "Name":{
+                                            "Name Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Add fields":[
+                                            "Department Set Code",
+                                            "Department Set Description",
+                                            "Department Set Name",
+                                            "Name",
+                                            "Status",
+                                            "Title"
+                                        ],
+                                        "Actions":{
+                                            "Search": [],
+                                            "Reset": [],
+                                            "Reorder": []
+                                        }
+                                    }
+                                }, 
+                                "Name": [],
+                                "Actions":{
+                                    "OK":[],
+                                    "Cancel":[]
+                                }
+                            }
+                        }
+                        },
+                        "Job": {
+                            "Textbox":[],
+                            "Search": {
+                                "Search and Select:Job":{
+                                "Search":{
+                                    "Basic filters":{
+                                        "Name":[],
+                                        "Code":[],
+                                        "Actions":{
+                                            "Search":[],
+                                            "Reset":[]
+                                        }
+                                    },
+                                    "Advanced filters":{
+                                        "Name":{
+                                            "Name Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Code":{
+                                            "Code Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Actions":{
+                                            "Search": [],
+                                            "Reset": [],
+                                            "Add fields":[],
+                                            "Reorder": []
+                                        }
+                                    }
+                                }, 
+                                "Name": [],
+                                "Actions":{
+                                    "OK":[],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                        },
+                        "Grade":{
+                            "Textbox":[],
+                            "Search": {
+                                "Search and Select:Grade":{
+                                "Search":{
+                                    "Basic filters":{
+                                        "Name":[],
+                                        "Code":[],
+                                        "Grade Set Name":[],
+                                        "Grade Set Code":[],
+                                        "Actions":{
+                                            "Search":[],
+                                            "Reset":[]
+                                        }
+                                    },
+                                    "Advanced filters":{
+                                        "Name":{
+                                            "Name Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Code":{
+                                            "Code Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Grade Set Name":{
+                                            "Grade Set Name Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Grade Set Code":{
+                                            "Grade Set Code Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Grade Set Description":{
+                                            "Grade Set Description Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Add fields":[
+                                            "Code",
+                                            "Grade Set Code",
+                                            "Grade Set Description",
+                                            "Grade Set Name",
+                                            "Name",
+                                            "Status"
+                                        ],
+                                        "Actions":{
+                                            "Search": [],
+                                            "Reset": [],                                            
+                                            "Reorder": []
+                                        }
+                                    }
+                                }, 
+                                "Name": [],
+                                "Actions":{
+                                    "OK":[],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                        },
+                        "Position": {
+                            "Textbox":[],
+                            "Search": {
+                                "Search and Select:Position":{
+                                "Search":{
+                                    "Basic filters":{
+                                        "Name":[],
+                                        "Code":[],
+                                        "Status":[
+                                            "Active",
+                                            "Inactive"
+                                        ],
+                                        "Actions":{
+                                            "Search":[],
+                                            "Reset":[]
+                                        }
+                                    },
+                                    "Advanced filters":{
+                                        "Name":[],
+                                        "Code":[],
+                                        "Status":[
+                                            "Active",
+                                            "Inactive"
+                                        ],
+                                        "Actions":{
+                                            "Search": [],
+                                            "Reset": [],
+                                            "Add fields":[],
+                                            "Reorder": []
+                                        }
+                                    }
+                                }, 
+                                "Name": [],
+                                "Actions":{
+                                    "OK":[],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                        },
+                        "Manager":{
+                            "Textbox":[],
+                            "Search": {
+                                "Search and Select:Manager":{
+                                "Search":{
+                                    "Basic filters":{
+                                        "Name":[],
+                                        "Department":[],
+                                        "Job":[],
+                                        "Email":[],
+                                        "Phone":[],
+                                        "Actions":{
+                                            "Search":[],
+                                            "Reset":[]
+                                        }
+                                    },
+                                    "Advanced filters":{
+                                        "Name":{
+                                            "Name Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Department":{
+                                            "Department Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Job":{
+                                            "Job Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Email":{
+                                            "Email Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals",
+                                                "Does not equal",
+                                                "Contains",
+                                                "Does not contain",
+                                                "Is blank",
+                                                "Is not blank"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Phone":{
+                                            "Phone Operator":[
+                                                "Starts with",
+                                                "Ends with",
+                                                "Equals"
+                                            ],
+                                            "Textbox":[]
+                                        },
+                                        "Add fields":[
+                                            "Assignment Name",
+                                            "Assignment Number",
+                                            "Assignment Type",
+                                            "Department",
+                                            "Email",
+                                            "Job",
+                                            "Location",
+                                            "Name",
+                                            "Person Number",
+                                            "Phone",
+                                            "Primary"
+                                        ],
+                                        "Actions":{
+                                            "Search": [],
+                                            "Reset": [],
+                                            "Reorder": []
+                                        }
+                                    }
+                                }, 
+                                "Name": [],
+                                "Actions":{
+                                    "OK":[],
+                                    "Cancel": []
+                                }
+                            }
+                        }
+                        },
+                        "Salary Range":[],
+                        "Performance Rating Band":[
+                            "None",
+                            "Low",
+                            "Medium",
+                            "High"
+                        ],
+                       "Future Date": [],
+                        "Changes": [],
+                        "Terminations": [],
+                        "No Security Access":[],
+                        "Alerts":[],
+                        "Positions with Openings":[],
+                        "Actions":{
+                            "Apply":[],
+                            "Clear Filters": [],
+                            "Cancel": []
+                        }
+                        },
+                    "Edit Model Properties":{
+                        "Edit Workforce Model":{
+                            "Effective Date": [],
+                            "Model Name": [],
+                            "Author": [],
+                            "Purpose": [],
+                            "Justification": {
+                            "Manage Attachments":{
+                                "Attachments": {
+                                    "Type":[],
+                                    "File Name or URL":[],
+                                    "Title":[],
+                                    "Description":[],
+                                    "Attached By":[],
+                                    "Attached Date":[],
+                                    "Actions":[
+                                        "Add",
+                                        "Delete"
+                                    ],
+                                    "View":{
+                                        "About this Record":[],
+                                        "Columns":[
+                                            "Show All",
+                                            "Attached Date",
+                                            "Attached By",
+                                            "Description",
+                                            "Title",
+                                            "File Name or URL",
+                                            "Category",
+                                            "Type"
+                                        ],
+                                        "Reorder Columns": []
+                                    },
+                                    "Action buttons": {
+                                        "Add": [],
+                                        "Delete": [],
+                                        "OK": [],
+                                        "Cancel": []
+                                    }
+                                }
+                                
+                                }
+                            },
+                            "Top Manager": {
+                                "Name": [],
+                                "Open Model to Top Manager or Position": []
+                        },
+                        "Actions":{
+                            "Save and Close": [],
+                            "Cancel": []
+                        }
+                    }  
+
+                },
+                "Synchronize": {
+                    "Synchronization Results": {
+                        "Workers": {},
+                        "Requisitions": {},
+                        "Vacancies": {},
+                        "Actions": {
+                            "Apply": [],
+                            "Cancel": []
+                        }
+                    }
+                },
+                "Hide action dialog": [],
+                "Hierarchy View": [],
+                "Table View": {
+                    "Workers": {
+                        "Actions":{
+                            "Export to Excel": []
+                        },
+                        "View":{
+                            "About This Record":[],
+                            "Columns": [],
+                            "Detach": [],
+                            "Reorder Columns": []
+                        },
+                        "Name": {},
+                        "Person Number": {},
+                        "Action": {},
+                        "Reason": {},
+                        "Business Unit": {},
+                        "Position": {},
+                        "Synchronize from Position": {},
+                        "Manager": {},
+                        "Job": {},
+                        "Department": {},
+                        "Location": {},
+                        "Country": {},
+                        "Grade Ladder": {},
+                        "Grade": {},
+                        "Grade Step": {},
+                        "Salary": {},
+                        "Salary Change Percentage": {},
+                        "Comments": {},
+                        "Working as a Manager": {},
+                        "Work from Home": {},
+                        "Floor": {},
+                        "Building": {},
+                        "Office Number": {},
+                        "Mail Stop": {},
+                        "Union Member": {},
+                        "Salary Basis": {},
+                        "Salary Review Date": {},
+                        "Assignment Name": {},
+                        "Worker Category": {},
+                        "Assignment Status": {},
+                        "Creation Date": {},
+                        "Alerts": {},
+                        "Team Salary": {},
+                        "Team Salary Change": {},
+                        "Regular or Temporary": {},
+                        "Full-Time or Part-Time": {},
+                        "Assignment Category": {},
+                        "Hourly Paid or Salaried": {},
+                        "Start Time": {},
+                        "End Time": {},
+                        "Working Hours": {},
+                        "Frequency": {},
+                        "FTE": {},
+                        "Bargaining Unit": {},
+                        "Union": {},
+                        "Collective Agreement": {},
+                        "Probation Period": {},
+                        "Probation Period Unit": {},
+                        "Action buttons":{
+                            "Export to Excel": [],
+                            "Detach": []
+                        }
+                      }
+                      ,
+                    "Terminated Workers": {
+                        "Actions":{
+                            "Export to Excel": []
+                        },
+                        "View":{
+                            "About This Record":[],
+                            "Columns": [],
+                            "Detach": [],
+                            "Reorder Columns": []
+                        },
+                        "Name":{},
+                        "Person Number":{},
+                        "Action":{},
+                        "Reason":{},
+                        "Business Unit":{},
+                        "Manager":{},
+                        "Job":{},
+                        "Department":{},
+                        "Location":{},
+                        "Notification Date":{},
+                        "Recommended for Rehire":{},
+                        "Recommendation Reason":{},
+                        "Rehire Authorizer Name":{},
+                        "Action buttons":{
+                            "Export to Excel": [],
+                            "Detach": []
+                        }
+                    },
+                    "Requisitions": {
+                        "Actions":{
+                            "Export to Excel": []
+                        },
+                        "View":{
+                            "About This Record":[],
+                            "Columns": [],
+                            "Detach": [],
+                            "Reorder Columns": []
+                        },
+                        "Name": {},
+                        "Action buttons":{
+                            "Export to Excel": [],
+                            "Detach": []
+                        }
+                    },
+                    "Vacancies": {
+                        "Actions":{
+                            "Export to Excel": []
+                        },
+                        "View":{
+                            "About This Record":[],
+                            "Columns": [],
+                            "Detach": [],
+                            "Reorder Columns": []
+                        },
+                        "Vacancy Type":{},
+                        "Name":{},
+                        "Position":{},
+                        "Manager":{},
+                        "Job":{},
+                        "Department":{},
+                        "Location":{},
+                        "Openings":{},
+                        "Hires":{},
+                        "Requisition":{},
+                        "Salary":{},
+                        "Currency":{},
+                        "Action buttons":{
+                            "Export to Excel": [],
+                            "Detach": []
+                        }
+                    }
+                    },
+                "Zoom In": [],
+                "Zoom out": [],
+                "Actions":{
+                    "Save":{
+                    "Save and Close": [],
+                    "Save As":[]
+                },
+                    "Review and Submit": [],
+                    "Cancel":[]
+                }
+            },
+                "Actions": {
+                    "Save and Close": [],
+                    "Cancel": []
+                }
+        }
+    }
+}
+}
