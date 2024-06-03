@@ -1,0 +1,260 @@
+[{
+  "_id": {
+    "$oid": "665db0b6541c32e0dd242642"
+  },
+  "Section Details": {
+    "Name": [],
+    "Description": [],
+    "Comments": [],
+    "From Date": [],
+    "To Date": [],
+    "Status": []
+  },
+  "Section Processing": {
+    "Section Type": [],
+    "Competencies Section Name": [],
+    "Ratings": {
+      "Section Rating Model": [],
+      "Calculation Rule for Section": [],
+      "Decimal Places": [],
+      "Mapping Metric": [],
+      "Fast Formula Rule": [],
+      "Decimal Rounding Rule": [],
+      "Mapping Method": [],
+      "Enable manual section rating": [],
+      "Require Manager Justification if Manual and Calculated Ratings Are Different": []
+    },
+    "Comments": {
+      "Enable section comments": []
+    },
+    "Weighting": {
+      "Weight section": {
+        "Section Weight": [],
+        "Section Minimum Weight": []
+      }
+    }
+  },
+  "Item Processing": {
+    "Enable items": [],
+    "Ratings and calculations": {
+      "Rate Items": [],
+      "Rating Type": [],
+      "Performance Rating Model": [],
+      "Item Calculation": []
+    },
+    "Comments": {
+      "Enable item comments": []
+    },
+    "Properties": {
+      "Minimum Weight": [],
+      "Weight": [],
+      "Required": []
+    }
+  },
+  "Section Content": {
+    "Populate with compentencies using profiule": [],
+    "Profile Type": [],
+    "Use specific content items": [],
+    "Content Items": {
+      "Create": {}
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665dba7a7e2d193d4012b8bd"
+  },
+  "Section Details": {
+    "Name": "Section A",
+    "Description": "Description for Section A",
+    "Comments": "Comments for Section A",
+    "From Date": {
+      "$date": "2023-01-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-01-01T00:00:00.000Z"
+    },
+    "Status": "Active"
+  },
+  "Section Processing": {
+    "Section Type": "Type A",
+    "Competencies Section Name": "Competency A",
+    "Ratings": {
+      "Section Rating Model": "Model A",
+      "Calculation Rule for Section": "Rule A",
+      "Decimal Places": 2,
+      "Mapping Metric": "Metric A",
+      "Fast Formula Rule": "Formula A",
+      "Decimal Rounding Rule": "Rounding Rule A",
+      "Mapping Method": "Method A",
+      "Enable manual section rating": "Yes",
+      "Require Manager Justification if Manual and Calculated Ratings Are Different": "Yes"
+    },
+    "Comments": {
+      "Enable section comments": "Yes"
+    },
+    "Weighting": {
+      "Weight section": {
+        "Section Weight": 50,
+        "Section Minimum Weight": 10
+      }
+    }
+  },
+  "Item Processing": {
+    "Enable items": "Yes",
+    "Ratings and calculations": {
+      "Rate Items": "Yes",
+      "Rating Type": "Type A",
+      "Performance Rating Model": "Model A",
+      "Item Calculation": "Calculation A"
+    },
+    "Comments": {
+      "Enable item comments": "Yes"
+    },
+    "Properties": {
+      "Minimum Weight": 5,
+      "Weight": 20,
+      "Required": "Yes"
+    }
+  },
+  "Section Content": {
+    "Populate with competencies using profile": "Yes",
+    "Profile Type": "Profile A",
+    "Use specific content items": "Yes",
+    "Content Items": {
+      "Create": {}
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665dba7a7e2d193d4012b8be"
+  },
+  "Section Details": {
+    "Name": "Section B",
+    "Description": "Description for Section B",
+    "Comments": "Comments for Section B",
+    "From Date": {
+      "$date": "2023-02-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-02-01T00:00:00.000Z"
+    },
+    "Status": "Inactive"
+  },
+  "Section Processing": {
+    "Section Type": "Type B",
+    "Competencies Section Name": "Competency B",
+    "Ratings": {
+      "Section Rating Model": "Model B",
+      "Calculation Rule for Section": "Rule B",
+      "Decimal Places": 1,
+      "Mapping Metric": "Metric B",
+      "Fast Formula Rule": "Formula B",
+      "Decimal Rounding Rule": "Rounding Rule B",
+      "Mapping Method": "Method B",
+      "Enable manual section rating": "No",
+      "Require Manager Justification if Manual and Calculated Ratings Are Different": "No"
+    },
+    "Comments": {
+      "Enable section comments": "No"
+    },
+    "Weighting": {
+      "Weight section": {
+        "Section Weight": 60,
+        "Section Minimum Weight": 20
+      }
+    }
+  },
+  "Item Processing": {
+    "Enable items": "No",
+    "Ratings and calculations": {
+      "Rate Items": "No",
+      "Rating Type": "Type B",
+      "Performance Rating Model": "Model B",
+      "Item Calculation": "Calculation B"
+    },
+    "Comments": {
+      "Enable item comments": "No"
+    },
+    "Properties": {
+      "Minimum Weight": 10,
+      "Weight": 30,
+      "Required": "No"
+    }
+  },
+  "Section Content": {
+    "Populate with competencies using profile": "No",
+    "Profile Type": "Profile B",
+    "Use specific content items": "No",
+    "Content Items": {
+      "Create": {}
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665dba7a7e2d193d4012b8bf"
+  },
+  "Section Details": {
+    "Name": "Section C",
+    "Description": "Description for Section C",
+    "Comments": "Comments for Section C",
+    "From Date": {
+      "$date": "2023-03-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-03-01T00:00:00.000Z"
+    },
+    "Status": "Pending"
+  },
+  "Section Processing": {
+    "Section Type": "Type C",
+    "Competencies Section Name": "Competency C",
+    "Ratings": {
+      "Section Rating Model": "Model C",
+      "Calculation Rule for Section": "Rule C",
+      "Decimal Places": 0,
+      "Mapping Metric": "Metric C",
+      "Fast Formula Rule": "Formula C",
+      "Decimal Rounding Rule": "Rounding Rule C",
+      "Mapping Method": "Method C",
+      "Enable manual section rating": "Yes",
+      "Require Manager Justification if Manual and Calculated Ratings Are Different": "No"
+    },
+    "Comments": {
+      "Enable section comments": "Yes"
+    },
+    "Weighting": {
+      "Weight section": {
+        "Section Weight": 70,
+        "Section Minimum Weight": 30
+      }
+    }
+  },
+  "Item Processing": {
+    "Enable items": "Yes",
+    "Ratings and calculations": {
+      "Rate Items": "Yes",
+      "Rating Type": "Type C",
+      "Performance Rating Model": "Model C",
+      "Item Calculation": "Calculation C"
+    },
+    "Comments": {
+      "Enable item comments": "Yes"
+    },
+    "Properties": {
+      "Minimum Weight": 15,
+      "Weight": 40,
+      "Required": "Yes"
+    }
+  },
+  "Section Content": {
+    "Populate with competencies using profile": "Yes",
+    "Profile Type": "Profile C",
+    "Use specific content items": "Yes",
+    "Content Items": {
+      "Create": {}
+    }
+  }
+}]

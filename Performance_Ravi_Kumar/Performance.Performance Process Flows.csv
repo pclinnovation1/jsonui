@@ -1,0 +1,5 @@
+_id,Details.Name,Details.Description,Details.From Date,Details.To Date,Details.Status,Tasks.Worker self-Evaluation and Manager Evaluation,Tasks.Participant Feedback,"Tasks.Approval, Review and Meetings",Task Names[0],Task Names[1],Task Names[2]
+665db11c541c32e0dd242644,,,,,,,,,,,
+665dbb2b8d660304a733bc44,Project A,Description for Project A,2023-01-01T00:00:00.000Z,2024-01-01T00:00:00.000Z,Active,Completed,Pending,Scheduled,Task A1,Task A2,Task A3
+665dbb2b8d660304a733bc45,Project B,Description for Project B,2023-02-01T00:00:00.000Z,2024-02-01T00:00:00.000Z,Inactive,Pending,Pending,Completed,Task B1,Task B2,Task B3
+665dbb2b8d660304a733bc46,Project C,Description for Project C,2023-03-01T00:00:00.000Z,2024-03-01T00:00:00.000Z,Pending,Scheduled,Completed,Pending,Task C1,Task C2,Task C3

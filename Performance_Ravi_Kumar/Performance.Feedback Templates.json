@@ -1,0 +1,53 @@
+[{
+  "_id": {
+    "$oid": "665db190541c32e0dd242648"
+  },
+  "Name": [],
+  "Comments": [],
+  "Status": [],
+  "Template type": [],
+  "Include in performance document": [],
+  "Questionnaire": []
+},
+{
+  "_id": {
+    "$oid": "665dbc7817094019ba35b673"
+  },
+  "Name": "Template A",
+  "Comments": "Comments for Template A",
+  "Status": "Active",
+  "Template type": "Type A",
+  "Include in performance document": "Yes",
+  "Questionnaire": [
+    "Question A1",
+    "Question A2"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665dbc7817094019ba35b674"
+  },
+  "Name": "Template B",
+  "Comments": "Comments for Template B",
+  "Status": "Inactive",
+  "Template type": "Type B",
+  "Include in performance document": "No",
+  "Questionnaire": [
+    "Question B1",
+    "Question B2"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665dbc7817094019ba35b675"
+  },
+  "Name": "Template C",
+  "Comments": "Comments for Template C",
+  "Status": "Pending",
+  "Template type": "Type C",
+  "Include in performance document": "Yes",
+  "Questionnaire": [
+    "Question C1",
+    "Question C2"
+  ]
+}]

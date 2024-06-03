@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "665db16a541c32e0dd242646"
+  },
+  "Template Type": [],
+  "Name": [],
+  "Comments": [],
+  "Status": [],
+  "From Date": [],
+  "To Date": [],
+  "Review Period": [],
+  "Include in performance document": [],
+  "Check-in content": [],
+  "Eligibility Profiles": []
+},
+{
+  "_id": {
+    "$oid": "665dbc2accf2d189ce255fc6"
+  },
+  "Template Type": "Type A",
+  "Name": "Template A",
+  "Comments": "Comments for Template A",
+  "Status": "Active",
+  "From Date": {
+    "$date": "2023-01-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-01-01T00:00:00.000Z"
+  },
+  "Review Period": "Annual",
+  "Include in performance document": "Yes",
+  "Check-in content": "Content A",
+  "Eligibility Profiles": [
+    "Profile A1",
+    "Profile A2"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665dbc2accf2d189ce255fc7"
+  },
+  "Template Type": "Type B",
+  "Name": "Template B",
+  "Comments": "Comments for Template B",
+  "Status": "Inactive",
+  "From Date": {
+    "$date": "2023-02-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-02-01T00:00:00.000Z"
+  },
+  "Review Period": "Semi-Annual",
+  "Include in performance document": "No",
+  "Check-in content": "Content B",
+  "Eligibility Profiles": [
+    "Profile B1",
+    "Profile B2"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665dbc2accf2d189ce255fc8"
+  },
+  "Template Type": "Type C",
+  "Name": "Template C",
+  "Comments": "Comments for Template C",
+  "Status": "Pending",
+  "From Date": {
+    "$date": "2023-03-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-03-01T00:00:00.000Z"
+  },
+  "Review Period": "Quarterly",
+  "Include in performance document": "Yes",
+  "Check-in content": "Content C",
+  "Eligibility Profiles": [
+    "Profile C1",
+    "Profile C2"
+  ]
+}]

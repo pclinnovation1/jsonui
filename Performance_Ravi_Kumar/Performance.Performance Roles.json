@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "665db010541c32e0dd24263c"
+  },
+  "Name": [],
+  "Description": [],
+  "Role Type": [],
+  "Allow role to view worker, manager and participant ratings, comments and questionnaires": [],
+  "Status": [],
+  "In Use": [],
+  "From Date": [],
+  "To Date": []
+},
+{
+  "_id": {
+    "$oid": "665db7f7295c066297f57c0f"
+  },
+  "Name": "HR Manager",
+  "Description": "Manages HR activities and personnel.",
+  "Role Type": "Managerial",
+  "Allow role to view worker, manager and participant ratings, comments and questionnaires": "Yes",
+  "Status": "Active",
+  "In Use": "Yes",
+  "From Date": {
+    "$date": "2023-01-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665db7f7295c066297f57c10"
+  },
+  "Name": "Project Supervisor",
+  "Description": "Oversees project progress and deliverables.",
+  "Role Type": "Supervisory",
+  "Allow role to view worker, manager and participant ratings, comments and questionnaires": "Yes",
+  "Status": "Active",
+  "In Use": "Yes",
+  "From Date": {
+    "$date": "2023-02-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-02-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665db7f7295c066297f57c11"
+  },
+  "Name": "Employee",
+  "Description": "Performs assigned tasks and duties.",
+  "Role Type": "Staff",
+  "Allow role to view worker, manager and participant ratings, comments and questionnaires": "No",
+  "Status": "Active",
+  "In Use": "Yes",
+  "From Date": {
+    "$date": "2023-03-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-03-01T00:00:00.000Z"
+  }
+}]

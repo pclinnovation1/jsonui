@@ -1,0 +1,5 @@
+_id,Name,Description,Start Date,End Date,Status
+665daeef541c32e0dd242634,,,,,
+665db5c146592fcd9a6ad04b,Project Alpha,Initial phase of the alpha project.,2023-01-01,2023-06-30,Completed
+665db5c146592fcd9a6ad04c,Project Beta,Development phase of the beta project.,2023-07-01,2023-12-31,In Progress
+665db5c146592fcd9a6ad04d,Project Gamma,Planning phase of the gamma project.,2023-04-01,2023-09-30,Not Started

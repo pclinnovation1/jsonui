@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "665db075541c32e0dd242640"
+  },
+  "Name": [],
+  "Description": [],
+  "Status": [],
+  "From Date": [],
+  "To Date": []
+},
+{
+  "_id": {
+    "$oid": "665db9d981dfb4580ec2bad2"
+  },
+  "Name": "Profile A",
+  "Description": "Eligibility profile for group A.",
+  "Status": "Active",
+  "From Date": {
+    "$date": "2023-01-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665db9d981dfb4580ec2bad3"
+  },
+  "Name": "Profile B",
+  "Description": "Eligibility profile for group B.",
+  "Status": "Inactive",
+  "From Date": {
+    "$date": "2023-02-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-02-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665db9d981dfb4580ec2bad4"
+  },
+  "Name": "Profile C",
+  "Description": "Eligibility profile for group C.",
+  "Status": "Pending",
+  "From Date": {
+    "$date": "2023-03-01T00:00:00.000Z"
+  },
+  "To Date": {
+    "$date": "2024-03-01T00:00:00.000Z"
+  }
+}]

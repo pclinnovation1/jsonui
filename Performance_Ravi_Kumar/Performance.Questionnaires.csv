@@ -1,0 +1,5 @@
+_id,Questionnaire Template ID,Name,Description,Score Questionnaire,Creation Date
+665daff0541c32e0dd24263a,,,,,
+665db79948969d80d6008390,QT001,Customer Satisfaction Survey,A survey to measure customer satisfaction.,Yes,2023-01-01T00:00:00.000Z
+665db79948969d80d6008391,QT002,Employee Engagement Survey,A survey to measure employee engagement levels.,No,2023-06-01T00:00:00.000Z
+665db79948969d80d6008392,QT003,Market Research Survey,A survey to gather market research data.,Yes,2023-09-01T00:00:00.000Z

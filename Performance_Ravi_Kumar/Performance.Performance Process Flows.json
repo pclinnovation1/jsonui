@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "665db11c541c32e0dd242644"
+  },
+  "Details": {
+    "Name": [],
+    "Description": [],
+    "From Date": [],
+    "To Date": [],
+    "Status": []
+  },
+  "Tasks": {
+    "Worker self-Evalution and Manager Evalution": [],
+    "Participant Feedback": [],
+    "Approval, Review and Meetings": []
+  },
+  "Task Names": []
+},
+{
+  "_id": {
+    "$oid": "665dbb2b8d660304a733bc44"
+  },
+  "Details": {
+    "Name": "Project A",
+    "Description": "Description for Project A",
+    "From Date": {
+      "$date": "2023-01-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-01-01T00:00:00.000Z"
+    },
+    "Status": "Active"
+  },
+  "Tasks": {
+    "Worker self-Evaluation and Manager Evaluation": "Completed",
+    "Participant Feedback": "Pending",
+    "Approval, Review and Meetings": "Scheduled"
+  },
+  "Task Names": [
+    "Task A1",
+    "Task A2",
+    "Task A3"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665dbb2b8d660304a733bc45"
+  },
+  "Details": {
+    "Name": "Project B",
+    "Description": "Description for Project B",
+    "From Date": {
+      "$date": "2023-02-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-02-01T00:00:00.000Z"
+    },
+    "Status": "Inactive"
+  },
+  "Tasks": {
+    "Worker self-Evaluation and Manager Evaluation": "Pending",
+    "Participant Feedback": "Pending",
+    "Approval, Review and Meetings": "Completed"
+  },
+  "Task Names": [
+    "Task B1",
+    "Task B2",
+    "Task B3"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665dbb2b8d660304a733bc46"
+  },
+  "Details": {
+    "Name": "Project C",
+    "Description": "Description for Project C",
+    "From Date": {
+      "$date": "2023-03-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-03-01T00:00:00.000Z"
+    },
+    "Status": "Pending"
+  },
+  "Tasks": {
+    "Worker self-Evaluation and Manager Evaluation": "Scheduled",
+    "Participant Feedback": "Completed",
+    "Approval, Review and Meetings": "Pending"
+  },
+  "Task Names": [
+    "Task C1",
+    "Task C2",
+    "Task C3"
+  ]
+}]

@@ -1,0 +1,5 @@
+_id,Name,Comments,Status,Template type,Include in performance document,Questionnaire[0],Questionnaire[1]
+665db190541c32e0dd242648,,,,,,,
+665dbc7817094019ba35b673,Template A,Comments for Template A,Active,Type A,Yes,Question A1,Question A2
+665dbc7817094019ba35b674,Template B,Comments for Template B,Inactive,Type B,No,Question B1,Question B2
+665dbc7817094019ba35b675,Template C,Comments for Template C,Pending,Type C,Yes,Question C1,Question C2

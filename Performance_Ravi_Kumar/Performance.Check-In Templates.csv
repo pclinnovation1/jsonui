@@ -1,0 +1,5 @@
+_id,Template Type,Name,Comments,Status,From Date,To Date,Review Period,Include in performance document,Check-in content,Eligibility Profiles[0],Eligibility Profiles[1]
+665db16a541c32e0dd242646,,,,,,,,,,,
+665dbc2accf2d189ce255fc6,Type A,Template A,Comments for Template A,Active,2023-01-01T00:00:00.000Z,2024-01-01T00:00:00.000Z,Annual,Yes,Content A,Profile A1,Profile A2
+665dbc2accf2d189ce255fc7,Type B,Template B,Comments for Template B,Inactive,2023-02-01T00:00:00.000Z,2024-02-01T00:00:00.000Z,Semi-Annual,No,Content B,Profile B1,Profile B2
+665dbc2accf2d189ce255fc8,Type C,Template C,Comments for Template C,Pending,2023-03-01T00:00:00.000Z,2024-03-01T00:00:00.000Z,Quarterly,Yes,Content C,Profile C1,Profile C2

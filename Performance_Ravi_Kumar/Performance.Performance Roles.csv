@@ -1,0 +1,5 @@
+_id,Name,Description,Role Type,"Allow role to view worker, manager and participant ratings, comments and questionnaires",Status,In Use,From Date,To Date
+665db010541c32e0dd24263c,,,,,,,,
+665db7f7295c066297f57c0f,HR Manager,Manages HR activities and personnel.,Managerial,Yes,Active,Yes,2023-01-01T00:00:00.000Z,2024-01-01T00:00:00.000Z
+665db7f7295c066297f57c10,Project Supervisor,Oversees project progress and deliverables.,Supervisory,Yes,Active,Yes,2023-02-01T00:00:00.000Z,2024-02-01T00:00:00.000Z
+665db7f7295c066297f57c11,Employee,Performs assigned tasks and duties.,Staff,No,Active,Yes,2023-03-01T00:00:00.000Z,2024-03-01T00:00:00.000Z

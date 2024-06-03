@@ -1,0 +1,330 @@
+[{
+  "_id": {
+    "$oid": "665db303541c32e0dd24264a"
+  },
+  "General": {
+    "Template Type": [],
+    "Name": [],
+    "Comments": [],
+    "From Date": [],
+    "To Date": [],
+    "Status": [],
+    "Document Type": [],
+    "Eligibility Profile": {
+      "Eligibility Profile": []
+    },
+    "Participant": {
+      "Role": [],
+      "Minimum Number of Participants Required Per Role": [],
+      "Maximum Number of Participants Required Per Role": []
+    }
+  },
+  "Process": {
+    "Process Flow": [],
+    "Rating Calculations": [],
+    "Processing Options": [],
+    "Minimum Characters Limit for Evalution Comments": [],
+    "Maximum Characters Limit for Evalution Comments": [],
+    "Participant Options": []
+  },
+  "Structure": {
+    "Sections": {
+      "Section Name": [],
+      "Sequence Number": [],
+      "Section Processing": {
+        "Ratings": [],
+        "Weighting": [],
+        "Additional Information": []
+      },
+      "Item Processing": {},
+      "Section Content": {}
+    },
+    "Processing by Role": {
+      "Role": [],
+      "Share Rating": [],
+      "Share Comments": [],
+      "Update Profile": []
+    }
+  },
+  "Content": {
+    "Section Name": [],
+    "Section Items": {
+      "Add": {}
+    }
+  },
+  "Document Periods": {
+    "Document Periods": {
+      "Name": [],
+      "Review Period": [],
+      "Performance Document Start Date": [],
+      "Performance Document End Date": [],
+      "Short Name": []
+    },
+    "Eligibility Profile for the Period": {
+      "Eligibility Profile": [],
+      "Required": []
+    },
+    "Document Types for Interim Evalutions": {
+      "Document Type": []
+    },
+    "Due Dates": {}
+  }
+},
+{
+  "_id": {
+    "$oid": "665dbbcb4f18e4d0cfeaf04a"
+  },
+  "General": {
+    "Template Type": "Type A",
+    "Name": "Template A",
+    "Comments": "Comments for Template A",
+    "From Date": {
+      "$date": "2023-01-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-01-01T00:00:00.000Z"
+    },
+    "Status": "Active",
+    "Document Type": "Type A",
+    "Eligibility Profile": {
+      "Eligibility Profile": [
+        "Profile A1",
+        "Profile A2"
+      ]
+    },
+    "Participant": {
+      "Role": "Role A",
+      "Minimum Number of Participants Required Per Role": 1,
+      "Maximum Number of Participants Required Per Role": 5
+    }
+  },
+  "Process": {
+    "Process Flow": "Flow A",
+    "Rating Calculations": "Calculation A",
+    "Processing Options": "Option A",
+    "Minimum Characters Limit for Evalution Comments": 10,
+    "Maximum Characters Limit for Evalution Comments": 200,
+    "Participant Options": "Option A"
+  },
+  "Structure": {
+    "Sections": {
+      "Section Name": "Section A",
+      "Sequence Number": 1,
+      "Section Processing": {
+        "Ratings": "Ratings A",
+        "Weighting": "Weighting A",
+        "Additional Information": "Additional Info A"
+      },
+      "Item Processing": {},
+      "Section Content": {}
+    },
+    "Processing by Role": {
+      "Role": "Role A",
+      "Share Rating": "Yes",
+      "Share Comments": "Yes",
+      "Update Profile": "Yes"
+    }
+  },
+  "Content": {
+    "Section Name": "Section A",
+    "Section Items": {
+      "Add": {}
+    }
+  },
+  "Document Periods": {
+    "Document Periods": {
+      "Name": "Period A",
+      "Review Period": "Annual",
+      "Performance Document Start Date": {
+        "$date": "2023-01-01T00:00:00.000Z"
+      },
+      "Performance Document End Date": {
+        "$date": "2023-12-31T00:00:00.000Z"
+      },
+      "Short Name": "A23"
+    },
+    "Eligibility Profile for the Period": {
+      "Eligibility Profile": [
+        "Profile A1",
+        "Profile A2"
+      ],
+      "Required": "Yes"
+    },
+    "Document Types for Interim Evaluations": {
+      "Document Type": "Type A"
+    },
+    "Due Dates": {}
+  }
+},
+{
+  "_id": {
+    "$oid": "665dbbcb4f18e4d0cfeaf04b"
+  },
+  "General": {
+    "Template Type": "Type B",
+    "Name": "Template B",
+    "Comments": "Comments for Template B",
+    "From Date": {
+      "$date": "2023-02-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-02-01T00:00:00.000Z"
+    },
+    "Status": "Inactive",
+    "Document Type": "Type B",
+    "Eligibility Profile": {
+      "Eligibility Profile": [
+        "Profile B1",
+        "Profile B2"
+      ]
+    },
+    "Participant": {
+      "Role": "Role B",
+      "Minimum Number of Participants Required Per Role": 2,
+      "Maximum Number of Participants Required Per Role": 6
+    }
+  },
+  "Process": {
+    "Process Flow": "Flow B",
+    "Rating Calculations": "Calculation B",
+    "Processing Options": "Option B",
+    "Minimum Characters Limit for Evalution Comments": 20,
+    "Maximum Characters Limit for Evalution Comments": 300,
+    "Participant Options": "Option B"
+  },
+  "Structure": {
+    "Sections": {
+      "Section Name": "Section B",
+      "Sequence Number": 2,
+      "Section Processing": {
+        "Ratings": "Ratings B",
+        "Weighting": "Weighting B",
+        "Additional Information": "Additional Info B"
+      },
+      "Item Processing": {},
+      "Section Content": {}
+    },
+    "Processing by Role": {
+      "Role": "Role B",
+      "Share Rating": "No",
+      "Share Comments": "No",
+      "Update Profile": "No"
+    }
+  },
+  "Content": {
+    "Section Name": "Section B",
+    "Section Items": {
+      "Add": {}
+    }
+  },
+  "Document Periods": {
+    "Document Periods": {
+      "Name": "Period B",
+      "Review Period": "Semi-Annual",
+      "Performance Document Start Date": {
+        "$date": "2023-02-01T00:00:00.000Z"
+      },
+      "Performance Document End Date": {
+        "$date": "2023-08-01T00:00:00.000Z"
+      },
+      "Short Name": "B23"
+    },
+    "Eligibility Profile for the Period": {
+      "Eligibility Profile": [
+        "Profile B1",
+        "Profile B2"
+      ],
+      "Required": "No"
+    },
+    "Document Types for Interim Evaluations": {
+      "Document Type": "Type B"
+    },
+    "Due Dates": {}
+  }
+},
+{
+  "_id": {
+    "$oid": "665dbbcb4f18e4d0cfeaf04c"
+  },
+  "General": {
+    "Template Type": "Type C",
+    "Name": "Template C",
+    "Comments": "Comments for Template C",
+    "From Date": {
+      "$date": "2023-03-01T00:00:00.000Z"
+    },
+    "To Date": {
+      "$date": "2024-03-01T00:00:00.000Z"
+    },
+    "Status": "Pending",
+    "Document Type": "Type C",
+    "Eligibility Profile": {
+      "Eligibility Profile": [
+        "Profile C1",
+        "Profile C2"
+      ]
+    },
+    "Participant": {
+      "Role": "Role C",
+      "Minimum Number of Participants Required Per Role": 3,
+      "Maximum Number of Participants Required Per Role": 7
+    }
+  },
+  "Process": {
+    "Process Flow": "Flow C",
+    "Rating Calculations": "Calculation C",
+    "Processing Options": "Option C",
+    "Minimum Characters Limit for Evalution Comments": 30,
+    "Maximum Characters Limit for Evalution Comments": 400,
+    "Participant Options": "Option C"
+  },
+  "Structure": {
+    "Sections": {
+      "Section Name": "Section C",
+      "Sequence Number": 3,
+      "Section Processing": {
+        "Ratings": "Ratings C",
+        "Weighting": "Weighting C",
+        "Additional Information": "Additional Info C"
+      },
+      "Item Processing": {},
+      "Section Content": {}
+    },
+    "Processing by Role": {
+      "Role": "Role C",
+      "Share Rating": "Yes",
+      "Share Comments": "No",
+      "Update Profile": "Yes"
+    }
+  },
+  "Content": {
+    "Section Name": "Section C",
+    "Section Items": {
+      "Add": {}
+    }
+  },
+  "Document Periods": {
+    "Document Periods": {
+      "Name": "Period C",
+      "Review Period": "Quarterly",
+      "Performance Document Start Date": {
+        "$date": "2023-03-01T00:00:00.000Z"
+      },
+      "Performance Document End Date": {
+        "$date": "2023-06-01T00:00:00.000Z"
+      },
+      "Short Name": "C23"
+    },
+    "Eligibility Profile for the Period": {
+      "Eligibility Profile": [
+        "Profile C1",
+        "Profile C2"
+      ],
+      "Required": "Yes"
+    },
+    "Document Types for Interim Evaluations": {
+      "Document Type": "Type C"
+    },
+    "Due Dates": {}
+  }
+}]

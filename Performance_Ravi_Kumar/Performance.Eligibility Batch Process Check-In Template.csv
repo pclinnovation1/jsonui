@@ -1,0 +1,4 @@
+_id,Effective as of Date,Review Period,Performance Document Name,Create Eligible Performance Document,Purge Historic Performance Management Eligibility Status Data,Purge Data Older Than
+665dbd00e083aad52ab2e573,2023-01-01T00:00:00.000Z,Annual,Annual Review 2023,Yes,No,2020-01-01T00:00:00.000Z
+665dbd00e083aad52ab2e574,2023-06-01T00:00:00.000Z,Semi-Annual,Mid-Year Review 2023,Yes,Yes,2021-06-01T00:00:00.000Z
+665dbd00e083aad52ab2e575,2023-09-01T00:00:00.000Z,Quarterly,Quarter 3 Review 2023,No,No,2022-09-01T00:00:00.000Z

@@ -1,0 +1,5 @@
+_id,Question Code,Subscriber,Owner,Folder,Status,Question Version Number,Privacy,Details.Question.Question Text,Details.Question.Image,Details.Question.Instructions,Details.Question.Question Type,Details.Question.Display the Question conditionally,Details.Response.Response Type,Details.Response.Allow attachments,Details.Response.Minimum Length,Details.Response.Maximum Length
+665daf4a541c32e0dd242636,,,,,,,,,,,,,,,,
+665db68712260fd8cc220dc5,Q001,Subscriber A,Owner A,Folder 1,Active,1,Public,What is your favorite color?,image_url_1,Choose one color.,Multiple Choice,No,Single Selection,No,1,50
+665db68712260fd8cc220dc6,Q002,Subscriber B,Owner B,Folder 2,Inactive,2,Private,Describe your work experience.,image_url_2,Provide a detailed description.,Open-Ended,Yes,Text,Yes,10,1000
+665db68712260fd8cc220dc7,Q003,Subscriber C,Owner C,Folder 3,Draft,3,Public,Rate your satisfaction with our service.,image_url_3,Rate from 1 to 5.,Rating Scale,No,Numeric,No,1,5

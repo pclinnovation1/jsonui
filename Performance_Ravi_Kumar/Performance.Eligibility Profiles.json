@@ -1,0 +1,1038 @@
+[{
+  "_id": {
+    "$oid": "665db032541c32e0dd24263e"
+  },
+  "Eligibility Profile Definition": {
+    "Name": [],
+    "Description": [],
+    "Profile Type": [],
+    "Assignment to use": [],
+    "Profile Usage": [],
+    "Status": []
+  },
+  "Eligibility Criteria": {
+    "Personal": {
+      "Gender": {
+        "Sequence": [],
+        "Gender": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Person Type": {
+        "Sequence": [],
+        "Person Type": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Disabled": {
+        "Sequence": [],
+        "Disabled": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Uses Tobacco": {
+        "Sequence": [],
+        "Uses Tobacco": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "service Areas": {
+        "Sequence": [],
+        "Service Area": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Home Location": {
+        "Sequence": [],
+        "Country": [],
+        "State": [],
+        "City": [],
+        "Type": [],
+        "Primary": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Postal Code Ranges": {
+        "Sequence": [],
+        "Postal Code": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Opted for Medicare": {
+        "Opted for Medicare": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Leave of Absence": {
+        "Sequence": [],
+        "Absence Type": [],
+        "Absence Reason": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Termination Reason": {
+        "Sequence": [],
+        "Termination Reason": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Qualification": {
+        "Sequence": [],
+        "Qualification Type": [],
+        "Qualification Title": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Competency": {
+        "Sequence": [],
+        "Competency": [],
+        "Name": [],
+        "Rating Level": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Marital Status": {
+        "Marital Status": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Religion": {
+        "Sequence": [],
+        "Religion": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      }
+    },
+    "Employement": {
+      "Assignment Status": {
+        "Sequence": [],
+        "Assignment Status": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Hourly or Salaried": {
+        "Sequence": [],
+        "Hourly or Salaried": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Assignment Category": {
+        "Sequence": [],
+        "Full Time or Part Time": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Grade": {
+        "Sequence": [],
+        "Grade": [],
+        "Grade Set Name": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Job": {
+        "Sequence": [],
+        "Job Name": [],
+        "Job Set Name": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Position": {
+        "Sequence": [],
+        "Position": [],
+        "Position Code": [],
+        "Business Unit": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Payroll": {
+        "Sequence": [],
+        "Payroll Name": [],
+        "Legislation Data Group": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Salary Basis": {
+        "Sequence": [],
+        "Salary Basis": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Department": {
+        "Sequence": [],
+        "Name": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Legal Entities": {
+        "Sequence": [],
+        "Legal Employer": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Performance Rating": {
+        "Sequence": [],
+        "Template Name": [],
+        "Name": [],
+        "Timig": {
+          "Most Recent or Latest Rating": [],
+          "Period Name": []
+        },
+        "Rating Level": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Quartile in Range": {
+        "Sequence": [],
+        "Quartile": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Work Location": {
+        "Sequence": [],
+        "Location Name": [],
+        "Location Code": [],
+        "Location Set Name": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Range of Scheduled Hours": {
+        "Sequence": [],
+        "Minimum Hours": [],
+        "Maximum Hours": [],
+        "Scheduled Enrollment Periods": [],
+        "Range of Hours Formula": [],
+        "Exclude": [],
+        "Determination": {
+          "Determination Rule": [],
+          "Determination Formula": []
+        },
+        "Rounding": {
+          "Rounding Rule": [],
+          "Rounding Formula": []
+        },
+        "Use Work Schedule": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "People Manager": {
+        "Sequence": [],
+        "People Manager": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Job Function": {
+        "Sequence": [],
+        "Job Function": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Job Family": {
+        "Sequence": [],
+        "Job Family": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Hire Date": {
+        "Sequence": [],
+        "Date Determination Rule": [],
+        "Operator": [],
+        "Year": [],
+        "Month": [],
+        "Day": [],
+        "Value": [],
+        "Unit of Measure": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Probation Period": {
+        "Sequence": [],
+        "Operator": [],
+        "Year": [],
+        "Month": [],
+        "Day": [],
+        "Value": [],
+        "Unit of Measure": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Business unit": {
+        "Sequence": [],
+        "Business Unit": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      }
+    },
+    "Derived Factors": {
+      "Age": {
+        "Sequence": [],
+        "Age": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Length of Service": {
+        "Sequence": [],
+        "Length of Service": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Compensation": {
+        "Sequence": [],
+        "Compensation Level": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Hours Worked": {
+        "Sequence": [],
+        "Hours Worked in Period": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Full-Time Equivalent": {
+        "Sequence": [],
+        "Percentage of Full Time": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Combined Age and Length of Service": {
+        "Sequence": [],
+        "Age": [],
+        "Combined Age Length of Service": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      }
+    },
+    "Other": {
+      "Benefit Groups": {
+        "Sequence": [],
+        "Benefit Group Name": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Health Coverage Selected": {
+        "Sequence": [],
+        "Plan Type and Option Name": [],
+        "Plan Name": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Participation in Another Plan": {
+        "Sequence": [],
+        "Plan": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Formula": {
+        "Sequence": [],
+        "Formula": [],
+        "Legislation Data Group": [],
+        "Derived Factors Apply": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "User-Defined Criteria": {
+        "Sequence": [],
+        "User-Defined Criteria": [],
+        "Exclude": [],
+        "Set 1": {
+          "Meaning": [],
+          "To Meaning": []
+        },
+        "Set 2": {
+          "Meaning": [],
+          "To Meaning": []
+        },
+        "Start Date": [],
+        "End Date": []
+      }
+    },
+    "Labor Relations": {
+      "Bargaining Unit": {
+        "Sequence": [],
+        "Bargaining Unit": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Labor Union Member": {
+        "Sequence": [],
+        "Labor Member": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Union": {
+        "Sequence": [],
+        "Union": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      },
+      "Collective Agreement": {
+        "Sequence": [],
+        "Collective Agreement Name": [],
+        "Identification Code": [],
+        "Bargaining Unit": [],
+        "Exclude": [],
+        "Start Date": [],
+        "End Date": []
+      }
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665db8f410c38549f8fa3cf3"
+  },
+  "Eligibility Profile Definition": {
+    "Name": "Profile A",
+    "Description": "Eligibility profile for group A.",
+    "Profile Type": "Type A",
+    "Assignment to use": "Assignment A",
+    "Profile Usage": "Usage A",
+    "Status": "Active"
+  },
+  "Eligibility Criteria": {
+    "Personal": {
+      "Gender": {
+        "Sequence": 1,
+        "Gender": "Male",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Person Type": {
+        "Sequence": 2,
+        "Person Type": "Employee",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Disabled": {
+        "Sequence": 3,
+        "Disabled": "No",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Uses Tobacco": {
+        "Sequence": 4,
+        "Uses Tobacco": "No",
+        "Exclude": "Yes",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Service Areas": {
+        "Sequence": 5,
+        "Service Area": "Area A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Home Location": {
+        "Sequence": 6,
+        "Country": "Country A",
+        "State": "State A",
+        "City": "City A",
+        "Type": "Primary",
+        "Primary": "Yes",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Postal Code Ranges": {
+        "Sequence": 7,
+        "Postal Code": "12345",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Opted for Medicare": {
+        "Opted for Medicare": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Leave of Absence": {
+        "Sequence": 8,
+        "Absence Type": "Sick Leave",
+        "Absence Reason": "Medical",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Termination Reason": {
+        "Sequence": 9,
+        "Termination Reason": "Resignation",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Qualification": {
+        "Sequence": 10,
+        "Qualification Type": "Degree",
+        "Qualification Title": "Bachelor's",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Competency": {
+        "Sequence": 11,
+        "Competency": "Skill A",
+        "Name": "Competency A",
+        "Rating Level": "High",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Marital Status": {
+        "Marital Status": "Single",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Religion": {
+        "Sequence": 12,
+        "Religion": "Religion A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      }
+    },
+    "Employment": {
+      "Assignment Status": {
+        "Sequence": 1,
+        "Assignment Status": "Active",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Hourly or Salaried": {
+        "Sequence": 2,
+        "Hourly or Salaried": "Salaried",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Assignment Category": {
+        "Sequence": 3,
+        "Full Time or Part Time": "Full Time",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Grade": {
+        "Sequence": 4,
+        "Grade": "Grade A",
+        "Grade Set Name": "Set A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Job": {
+        "Sequence": 5,
+        "Job Name": "Job A",
+        "Job Set Name": "Set A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Position": {
+        "Sequence": 6,
+        "Position": "Position A",
+        "Position Code": "PA001",
+        "Business Unit": "Unit A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Payroll": {
+        "Sequence": 7,
+        "Payroll Name": "Payroll A",
+        "Legislation Data Group": "Group A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Salary Basis": {
+        "Sequence": 8,
+        "Salary Basis": "Basis A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Department": {
+        "Sequence": 9,
+        "Name": "Department A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Legal Entities": {
+        "Sequence": 10,
+        "Legal Employer": "Employer A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Performance Rating": {
+        "Sequence": 11,
+        "Template Name": "Template A",
+        "Name": "Rating A",
+        "Timig": {
+          "Most Recent or Latest Rating": "Most Recent",
+          "Period Name": "Period A"
+        },
+        "Rating Level": "High",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Quartile in Range": {
+        "Sequence": 12,
+        "Quartile": "First",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Work Location": {
+        "Sequence": 13,
+        "Location Name": "Location A",
+        "Location Code": "LA001",
+        "Location Set Name": "Set A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Range of Scheduled Hours": {
+        "Sequence": 14,
+        "Minimum Hours": 40,
+        "Maximum Hours": 60,
+        "Scheduled Enrollment Periods": "Period A",
+        "Range of Hours Formula": "Formula A",
+        "Exclude": "No",
+        "Determination": {
+          "Determination Rule": "Rule A",
+          "Determination Formula": "Formula A"
+        },
+        "Rounding": {
+          "Rounding Rule": "Rule A",
+          "Rounding Formula": "Formula A"
+        },
+        "Use Work Schedule": "Yes",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "People Manager": {
+        "Sequence": 15,
+        "People Manager": "Manager A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Job Function": {
+        "Sequence": 16,
+        "Job Function": "Function A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Job Family": {
+        "Sequence": 17,
+        "Job Family": "Family A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Hire Date": {
+        "Sequence": 18,
+        "Date Determination Rule": "Rule A",
+        "Operator": "Equals",
+        "Year": 2023,
+        "Month": 1,
+        "Day": 1,
+        "Value": 1,
+        "Unit of Measure": "Days",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Probation Period": {
+        "Sequence": 19,
+        "Operator": "Less Than",
+        "Year": 1,
+        "Month": 6,
+        "Day": 0,
+        "Value": 6,
+        "Unit of Measure": "Months",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Business unit": {
+        "Sequence": 20,
+        "Business Unit": "Unit A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      }
+    },
+    "Derived Factors": {
+      "Age": {
+        "Sequence": 1,
+        "Age": 30,
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Length of Service": {
+        "Sequence": 2,
+        "Length of Service": 5,
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Compensation": {
+        "Sequence": 3,
+        "Compensation Level": "Level A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Hours Worked": {
+        "Sequence": 4,
+        "Hours Worked in Period": 160,
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Full-Time Equivalent": {
+        "Sequence": 5,
+        "Percentage of Full Time": 100,
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Combined Age and Length of Service": {
+        "Sequence": 6,
+        "Age": 35,
+        "Combined Age Length of Service": 10,
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      }
+    },
+    "Other": {
+      "Benefit Groups": {
+        "Sequence": 1,
+        "Benefit Group Name": "Group A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Health Coverage Selected": {
+        "Sequence": 2,
+        "Plan Type and Option Name": "Plan A",
+        "Plan Name": "Health Plan A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Participation in Another Plan": {
+        "Sequence": 3,
+        "Plan": "Plan B",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Formula": {
+        "Sequence": 4,
+        "Formula": "Formula A",
+        "Legislation Data Group": "Group A",
+        "Derived Factors Apply": "Yes",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "User-Defined Criteria": {
+        "Sequence": 5,
+        "User-Defined Criteria": "Criteria A",
+        "Exclude": "No",
+        "Set 1": {
+          "Meaning": "Meaning A",
+          "To Meaning": "To Meaning A"
+        },
+        "Set 2": {
+          "Meaning": "Meaning B",
+          "To Meaning": "To Meaning B"
+        },
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      }
+    },
+    "Labor Relations": {
+      "Bargaining Unit": {
+        "Sequence": 1,
+        "Bargaining Unit": "Unit A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Labor Union Member": {
+        "Sequence": 2,
+        "Labor Member": "Member A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Union": {
+        "Sequence": 3,
+        "Union": "Union A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      },
+      "Collective Agreement": {
+        "Sequence": 4,
+        "Collective Agreement Name": "Agreement A",
+        "Identification Code": "CA001",
+        "Bargaining Unit": "Unit A",
+        "Exclude": "No",
+        "Start Date": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        },
+        "End Date": {
+          "$date": "2024-01-01T00:00:00.000Z"
+        }
+      }
+    }
+  }
+}]

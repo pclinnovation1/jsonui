@@ -1,0 +1,244 @@
+[{
+  "_id": {
+    "$oid": "665dafc1541c32e0dd242638"
+  },
+  "Questionnaire Template ID": [],
+  "Score Questionnaire": [],
+  "Name": [],
+  "Owner": [],
+  "Description": [],
+  "Instructions and Help Materials": {
+    "Allow changes to instructions": [],
+    "Instructions": [],
+    "Attachments": []
+  },
+  "Section Order": [],
+  "Section Presentation": [],
+  "Allow changes to format options": [],
+  "Allow changes to sections": [],
+  "Allow Response Types": [],
+  "Sections": {
+    "Title": [],
+    "Description": [],
+    "Question Order": [],
+    "Questions": {
+      "Question Code": [],
+      "Question Text": [],
+      "Question Version Number": [],
+      "folder": [],
+      "Question Type": [],
+      "Response Type": [],
+      "Response Order": [],
+      "Sample Size": [],
+      "Required": [],
+      "Controlling Question Code": []
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665db72493bde6daf34efd85"
+  },
+  "Questionnaire Template ID": "QT001",
+  "Score Questionnaire": "Yes",
+  "Name": "Customer Satisfaction Survey",
+  "Owner": "Owner A",
+  "Description": "A survey to measure customer satisfaction.",
+  "Instructions and Help Materials": {
+    "Allow changes to instructions": "No",
+    "Instructions": "Please answer all questions honestly.",
+    "Attachments": [
+      "attachment_url_1"
+    ]
+  },
+  "Section Order": 1,
+  "Section Presentation": "Sequential",
+  "Allow changes to format options": "No",
+  "Allow changes to sections": "No",
+  "Allow Response Types": [
+    "Single Selection",
+    "Text",
+    "Numeric"
+  ],
+  "Sections": [
+    {
+      "Title": "Personal Information",
+      "Description": "This section gathers basic personal information.",
+      "Question Order": 1,
+      "Questions": [
+        {
+          "Question Code": "Q001",
+          "Question Text": "What is your age?",
+          "Question Version Number": 1,
+          "folder": "Personal Info",
+          "Question Type": "Numeric",
+          "Response Type": "Single Selection",
+          "Response Order": 1,
+          "Sample Size": 100,
+          "Required": "Yes",
+          "Controlling Question Code": null
+        },
+        {
+          "Question Code": "Q002",
+          "Question Text": "What is your gender?",
+          "Question Version Number": 1,
+          "folder": "Personal Info",
+          "Question Type": "Single Choice",
+          "Response Type": "Single Selection",
+          "Response Order": 2,
+          "Sample Size": 100,
+          "Required": "Yes",
+          "Controlling Question Code": null
+        }
+      ]
+    },
+    {
+      "Title": "Service Feedback",
+      "Description": "This section gathers feedback on the service provided.",
+      "Question Order": 2,
+      "Questions": [
+        {
+          "Question Code": "Q003",
+          "Question Text": "Rate your satisfaction with our service.",
+          "Question Version Number": 1,
+          "folder": "Service Feedback",
+          "Question Type": "Rating Scale",
+          "Response Type": "Numeric",
+          "Response Order": 1,
+          "Sample Size": 100,
+          "Required": "Yes",
+          "Controlling Question Code": null
+        },
+        {
+          "Question Code": "Q004",
+          "Question Text": "What can we do to improve?",
+          "Question Version Number": 1,
+          "folder": "Service Feedback",
+          "Question Type": "Open-Ended",
+          "Response Type": "Text",
+          "Response Order": 2,
+          "Sample Size": 100,
+          "Required": "No",
+          "Controlling Question Code": null
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665db72493bde6daf34efd86"
+  },
+  "Questionnaire Template ID": "QT002",
+  "Score Questionnaire": "No",
+  "Name": "Employee Engagement Survey",
+  "Owner": "Owner B",
+  "Description": "A survey to measure employee engagement levels.",
+  "Instructions and Help Materials": {
+    "Allow changes to instructions": "Yes",
+    "Instructions": "Please be candid in your responses.",
+    "Attachments": [
+      "attachment_url_2"
+    ]
+  },
+  "Section Order": 1,
+  "Section Presentation": "Random",
+  "Allow changes to format options": "Yes",
+  "Allow changes to sections": "Yes",
+  "Allow Response Types": [
+    "Multiple Choice",
+    "Text"
+  ],
+  "Sections": [
+    {
+      "Title": "Work Environment",
+      "Description": "This section gathers information on the work environment.",
+      "Question Order": 1,
+      "Questions": [
+        {
+          "Question Code": "Q005",
+          "Question Text": "How would you rate the work environment?",
+          "Question Version Number": 1,
+          "folder": "Work Environment",
+          "Question Type": "Rating Scale",
+          "Response Type": "Single Selection",
+          "Response Order": 1,
+          "Sample Size": 200,
+          "Required": "Yes",
+          "Controlling Question Code": null
+        },
+        {
+          "Question Code": "Q006",
+          "Question Text": "What improvements would you suggest?",
+          "Question Version Number": 1,
+          "folder": "Work Environment",
+          "Question Type": "Open-Ended",
+          "Response Type": "Text",
+          "Response Order": 2,
+          "Sample Size": 200,
+          "Required": "No",
+          "Controlling Question Code": null
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665db72493bde6daf34efd87"
+  },
+  "Questionnaire Template ID": "QT003",
+  "Score Questionnaire": "Yes",
+  "Name": "Market Research Survey",
+  "Owner": "Owner C",
+  "Description": "A survey to gather market research data.",
+  "Instructions and Help Materials": {
+    "Allow changes to instructions": "No",
+    "Instructions": "Your feedback is important to us.",
+    "Attachments": [
+      "attachment_url_3"
+    ]
+  },
+  "Section Order": 1,
+  "Section Presentation": "Sequential",
+  "Allow changes to format options": "No",
+  "Allow changes to sections": "No",
+  "Allow Response Types": [
+    "Single Selection",
+    "Text",
+    "Numeric"
+  ],
+  "Sections": [
+    {
+      "Title": "Demographics",
+      "Description": "This section gathers demographic information.",
+      "Question Order": 1,
+      "Questions": [
+        {
+          "Question Code": "Q007",
+          "Question Text": "What is your age group?",
+          "Question Version Number": 1,
+          "folder": "Demographics",
+          "Question Type": "Single Choice",
+          "Response Type": "Single Selection",
+          "Response Order": 1,
+          "Sample Size": 300,
+          "Required": "Yes",
+          "Controlling Question Code": null
+        },
+        {
+          "Question Code": "Q008",
+          "Question Text": "What is your annual income?",
+          "Question Version Number": 1,
+          "folder": "Demographics",
+          "Question Type": "Numeric",
+          "Response Type": "Single Selection",
+          "Response Order": 2,
+          "Sample Size": 300,
+          "Required": "Yes",
+          "Controlling Question Code": null
+        }
+      ]
+    }
+  ]
+}]

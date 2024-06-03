@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "665dbd00e083aad52ab2e573"
+  },
+  "Effective as of Date": {
+    "$date": "2023-01-01T00:00:00.000Z"
+  },
+  "Review Period": "Annual",
+  "Performance Document Name": "Annual Review 2023",
+  "Create Eligible Performance Document": "Yes",
+  "Purge Historic Performance Management Eligibility Status Data": "No",
+  "Purge Data Older Than": {
+    "$date": "2020-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665dbd00e083aad52ab2e574"
+  },
+  "Effective as of Date": {
+    "$date": "2023-06-01T00:00:00.000Z"
+  },
+  "Review Period": "Semi-Annual",
+  "Performance Document Name": "Mid-Year Review 2023",
+  "Create Eligible Performance Document": "Yes",
+  "Purge Historic Performance Management Eligibility Status Data": "Yes",
+  "Purge Data Older Than": {
+    "$date": "2021-06-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665dbd00e083aad52ab2e575"
+  },
+  "Effective as of Date": {
+    "$date": "2023-09-01T00:00:00.000Z"
+  },
+  "Review Period": "Quarterly",
+  "Performance Document Name": "Quarter 3 Review 2023",
+  "Create Eligible Performance Document": "No",
+  "Purge Historic Performance Management Eligibility Status Data": "No",
+  "Purge Data Older Than": {
+    "$date": "2022-09-01T00:00:00.000Z"
+  }
+}]

@@ -1,0 +1,5 @@
+_id,Name,Description,Status,From Date,To Date
+665db075541c32e0dd242640,,,,,
+665db9d981dfb4580ec2bad2,Profile A,Eligibility profile for group A.,Active,2023-01-01T00:00:00.000Z,2024-01-01T00:00:00.000Z
+665db9d981dfb4580ec2bad3,Profile B,Eligibility profile for group B.,Inactive,2023-02-01T00:00:00.000Z,2024-02-01T00:00:00.000Z
+665db9d981dfb4580ec2bad4,Profile C,Eligibility profile for group C.,Pending,2023-03-01T00:00:00.000Z,2024-03-01T00:00:00.000Z

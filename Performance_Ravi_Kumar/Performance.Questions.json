@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "665daf4a541c32e0dd242636"
+  },
+  "Question Code": [],
+  "Subscriber": [],
+  "Owner": [],
+  "Folder": [],
+  "Status": [],
+  "Question Version Number": [],
+  "Privacy": [],
+  "Details": {
+    "Question": {
+      "Question Text": [],
+      "Image": [],
+      "Instructions": [],
+      "Question Type": [],
+      "Display the Question conditionally": []
+    },
+    "Response": {
+      "Response Type": [],
+      "Allow attachments": [],
+      "Minimum Length": [],
+      "Maximum Length": []
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665db68712260fd8cc220dc5"
+  },
+  "Question Code": "Q001",
+  "Subscriber": "Subscriber A",
+  "Owner": "Owner A",
+  "Folder": "Folder 1",
+  "Status": "Active",
+  "Question Version Number": 1,
+  "Privacy": "Public",
+  "Details": {
+    "Question": {
+      "Question Text": "What is your favorite color?",
+      "Image": "image_url_1",
+      "Instructions": "Choose one color.",
+      "Question Type": "Multiple Choice",
+      "Display the Question conditionally": "No"
+    },
+    "Response": {
+      "Response Type": "Single Selection",
+      "Allow attachments": "No",
+      "Minimum Length": 1,
+      "Maximum Length": 50
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665db68712260fd8cc220dc6"
+  },
+  "Question Code": "Q002",
+  "Subscriber": "Subscriber B",
+  "Owner": "Owner B",
+  "Folder": "Folder 2",
+  "Status": "Inactive",
+  "Question Version Number": 2,
+  "Privacy": "Private",
+  "Details": {
+    "Question": {
+      "Question Text": "Describe your work experience.",
+      "Image": "image_url_2",
+      "Instructions": "Provide a detailed description.",
+      "Question Type": "Open-Ended",
+      "Display the Question conditionally": "Yes"
+    },
+    "Response": {
+      "Response Type": "Text",
+      "Allow attachments": "Yes",
+      "Minimum Length": 10,
+      "Maximum Length": 1000
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665db68712260fd8cc220dc7"
+  },
+  "Question Code": "Q003",
+  "Subscriber": "Subscriber C",
+  "Owner": "Owner C",
+  "Folder": "Folder 3",
+  "Status": "Draft",
+  "Question Version Number": 3,
+  "Privacy": "Public",
+  "Details": {
+    "Question": {
+      "Question Text": "Rate your satisfaction with our service.",
+      "Image": "image_url_3",
+      "Instructions": "Rate from 1 to 5.",
+      "Question Type": "Rating Scale",
+      "Display the Question conditionally": "No"
+    },
+    "Response": {
+      "Response Type": "Numeric",
+      "Allow attachments": "No",
+      "Minimum Length": 1,
+      "Maximum Length": 5
+    }
+  }
+}]

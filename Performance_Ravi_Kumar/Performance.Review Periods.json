@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "665daeef541c32e0dd242634"
+  },
+  "Name": [],
+  "Description": [],
+  "Start Date": [],
+  "End Date": [],
+  "Status": []
+},
+{
+  "_id": {
+    "$oid": "665db5c146592fcd9a6ad04b"
+  },
+  "Name": "Project Alpha",
+  "Description": "Initial phase of the alpha project.",
+  "Start Date": "2023-01-01",
+  "End Date": "2023-06-30",
+  "Status": "Completed"
+},
+{
+  "_id": {
+    "$oid": "665db5c146592fcd9a6ad04c"
+  },
+  "Name": "Project Beta",
+  "Description": "Development phase of the beta project.",
+  "Start Date": "2023-07-01",
+  "End Date": "2023-12-31",
+  "Status": "In Progress"
+},
+{
+  "_id": {
+    "$oid": "665db5c146592fcd9a6ad04d"
+  },
+  "Name": "Project Gamma",
+  "Description": "Planning phase of the gamma project.",
+  "Start Date": "2023-04-01",
+  "End Date": "2023-09-30",
+  "Status": "Not Started"
+}]
