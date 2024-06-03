@@ -1,2 +1,0 @@
-_id,Processed Date,Access Group Relation Number,Run As,Self-Service Price,Manager Request Activation,Manager Assignment,Learner Request Activation,Show Learner Request Form,Self-Assignment,Access Group Type,Payment Type,View Mode,Access Group Number,Access Group Name,Priority
-665d8d6f213f9430d61db425,2023-12-01,AGR123,Admin,199.99,True,John Doe,True,True,False,Type 1,Credit Card,ReadOnly,AGN123,Group A,1
