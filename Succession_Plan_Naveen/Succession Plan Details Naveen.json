@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395ad7"
+  },
+  "PlanName": "Director of Human Resources",
+  "JobTitle": "Director of Human Resources",
+  "Status": "Active",
+  "OwnedBy": "Curtis Feitty",
+  "ActiveCandidates": 3,
+  "PlanStrength": "Medium"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395ad8"
+  },
+  "PlanName": "Director Service Desk USA",
+  "JobTitle": "Director Service Desk USA",
+  "Status": "Active",
+  "OwnedBy": "Christian Berger, Curtis Feitty and 2 more",
+  "ActiveCandidates": 4,
+  "PlanStrength": "High"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395ad9"
+  },
+  "PlanName": "Director of HR Service Desk",
+  "JobTitle": "Director of HR Help Desk",
+  "Status": "Active",
+  "OwnedBy": "Curtis Feitty",
+  "ActiveCandidates": 2,
+  "PlanStrength": "Low"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395ada"
+  },
+  "PlanName": "Chief Financial Officer",
+  "JobTitle": "Chief Financial Officer (CFO)",
+  "Status": "Active",
+  "OwnedBy": "Curtis Feitty, Kendra Perry",
+  "ActiveCandidates": 3,
+  "PlanStrength": "Medium"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395adb"
+  },
+  "PlanName": "Manager of Sales",
+  "JobTitle": "Sales Manager",
+  "Status": "Active",
+  "OwnedBy": "John Doe",
+  "ActiveCandidates": 5,
+  "PlanStrength": "High"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395adc"
+  },
+  "PlanName": "Technical Lead",
+  "JobTitle": "Technical Lead",
+  "Status": "Active",
+  "OwnedBy": "Jane Smith",
+  "ActiveCandidates": 1,
+  "PlanStrength": "Low"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395add"
+  },
+  "PlanName": "Head of Marketing",
+  "JobTitle": "Marketing Head",
+  "Status": "Active",
+  "OwnedBy": "Sarah Johnson",
+  "ActiveCandidates": 4,
+  "PlanStrength": "Medium"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395ade"
+  },
+  "PlanName": "Customer Service Lead",
+  "JobTitle": "Customer Service Lead",
+  "Status": "Active",
+  "OwnedBy": "Mark Brown",
+  "ActiveCandidates": 2,
+  "PlanStrength": "Low"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395adf"
+  },
+  "PlanName": "Operations Manager",
+  "JobTitle": "Operations Manager",
+  "Status": "Active",
+  "OwnedBy": "Emily Davis",
+  "ActiveCandidates": 6,
+  "PlanStrength": "High"
+},
+{
+  "_id": {
+    "$oid": "66583e3695d3b70abc395ae0"
+  },
+  "PlanName": "Product Manager",
+  "JobTitle": "Product Manager",
+  "Status": "Active",
+  "OwnedBy": "David Wilson",
+  "ActiveCandidates": 3,
+  "PlanStrength": "Medium"
+}]

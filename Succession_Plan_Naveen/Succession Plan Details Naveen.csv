@@ -1,0 +1,11 @@
+_id,PlanName,JobTitle,Status,OwnedBy,ActiveCandidates,PlanStrength
+66583e3695d3b70abc395ad7,Director of Human Resources,Director of Human Resources,Active,Curtis Feitty,3,Medium
+66583e3695d3b70abc395ad8,Director Service Desk USA,Director Service Desk USA,Active,"Christian Berger, Curtis Feitty and 2 more",4,High
+66583e3695d3b70abc395ad9,Director of HR Service Desk,Director of HR Help Desk,Active,Curtis Feitty,2,Low
+66583e3695d3b70abc395ada,Chief Financial Officer,Chief Financial Officer (CFO),Active,"Curtis Feitty, Kendra Perry",3,Medium
+66583e3695d3b70abc395adb,Manager of Sales,Sales Manager,Active,John Doe,5,High
+66583e3695d3b70abc395adc,Technical Lead,Technical Lead,Active,Jane Smith,1,Low
+66583e3695d3b70abc395add,Head of Marketing,Marketing Head,Active,Sarah Johnson,4,Medium
+66583e3695d3b70abc395ade,Customer Service Lead,Customer Service Lead,Active,Mark Brown,2,Low
+66583e3695d3b70abc395adf,Operations Manager,Operations Manager,Active,Emily Davis,6,High
+66583e3695d3b70abc395ae0,Product Manager,Product Manager,Active,David Wilson,3,Medium
