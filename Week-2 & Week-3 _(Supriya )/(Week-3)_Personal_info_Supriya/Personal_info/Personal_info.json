@@ -1,0 +1,35 @@
+{
+    "Personal Details": {
+        "Name":{
+            "NameChangeStartDate":[],
+            "Title": [],
+            "FirstName": [],
+            "MiddleName":[],
+            "LastName": [],
+            "Suffix":[],
+            "AliasName":[],
+            "JobDisplayName":[]
+        },
+
+        "Demographic info":{
+            "Country": [],
+            "MaritalStatus": [],
+            "Gender": [],
+            "HighestEducationLevel": [],
+            "Religion": []
+        },
+        "National identifiers":{
+            "Country": [],
+            "NationalIDType": [],
+            "NationalID": []
+        },
+        "Biographical info":{
+            "DateOfBirth": [],
+            "Age": [],
+            "BikeLicence": []
+        },
+        "Disability info":{
+            "Country": []
+        }
+    }
+}

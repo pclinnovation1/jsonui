@@ -1,0 +1,43 @@
+{
+    "IdentificationInfo": {
+      "Citizenship": {
+        "Citizenship": [],
+        "CitizenshipStatus": [],
+        "FromDate": [],
+        "ToDate": []
+      },
+
+        "Passports": {
+          "IssuingCountry": [],
+          "Type": [],
+          "Number": [],
+          "IssuingAuthority": [],
+          "IssueDate": [],
+          "ExpirationDate": [],
+          "IssuingLocation": [],
+          "Profession": []
+
+      },
+      "VisasAndPermits": {
+        "IssuingCountry": [],
+        "StartDate": [],
+        "Type": [],
+        "Category": [],
+        "Number": [],
+        "Status": [],
+        "IssuingAuthority": [],
+        "IssueDate": [],
+        "ExpirationDate": []
+      },
+      "DriversLicenses": {
+        "IssuingCountry": [],
+        "LicenseType": [],
+        "LicenseNumber": [],
+        "IssuingAuthority": [],
+        "FromDate": [],
+        "PlaceOfIssue": []
+      }
+      
+    }
+  }
+  

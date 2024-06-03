@@ -1,0 +1,55 @@
+{
+    "FamilyAndEmergencyContacts": {
+      "NewContact": {
+        "BasicInfo": {
+          "GlobalName": {
+            "LastName": [],
+            "FirstName": [],
+            "PreferredPronouns": [],
+            "Title": [],
+            "Prefix": [],
+            "Suffix": [],
+            "MiddleName": [],
+            "Honors": [],
+            "PreferredName": [],
+            "PreviousLastName": [],
+            "JobDisplayName": []
+          }
+        },
+        "Relationship": {
+          "Relationship": [],
+          "StartDate": [],
+          "Gender": [],
+          "DateOfBirth": [],
+          "EmergencyContact": [],
+          "ContactInformationCategory": []
+        },
+        "AdditionalInfo": {
+          "StudentStatus": [],
+          "DisabilityType": [],
+          "DisabilityStatus": [],
+          "TobaccoUse": [],
+          "Plan": []
+        },
+        "PhoneDetails": {
+          "Country": []
+        },
+        "EmailDetails": {
+          "Type": []
+        },
+        "Address": {
+          "UseMyAddress": [],
+          "EnterANewAddress": []
+        }
+      },
+      "SelectACoworkerAsAContact": {
+        "SearchCoworker": {
+          "StartDate": [],
+          "SearchForACoworkerToAddAsAContact": [],
+          "Relationship": [],
+          "EmergencyContact": []
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,81 @@
+{
+    "MyCompensation": {
+      "CurrentSalary": {
+        "Salary": [],
+        "EffectivePeriod": [],
+        "Action": [],
+        "SalaryBasis": [],
+        "AnnualSalary": [],
+        "LegalEmployer": []
+      },
+      "AdditionalCompensation": [],
+      "PersonalContribution": {
+        "Contributions": [
+          {
+            "Plan": [],
+            "Option": [],
+            "StartDate": [],
+            "Amount": []
+          },
+          {
+            "Plan": [],
+            "Option": [],
+            "StartDate": [],
+            "PayValue": [],
+            "TravelDate": [],
+            "DaysTraveled": []
+          },
+          {
+            "Plan": [],
+            "Option": [],
+            "StartDate": [],
+            "Amount": [],
+            "NameOfCourse": [],
+            "Grade": [],
+            "Attachment": {
+              "DragAndDrop": [],
+              "URL": []
+            }
+          }
+        ]
+      },
+      "RecurringAndOneTimePayments": []
+    },
+    "TotalSharesSummary": {
+      "TotalShares": [],
+      "VestedShares": [],
+      "UnvestedShares": []
+    },
+    "EstimateStockValue": {
+      "GrantType": [],
+      "GrantID": [],
+      "EstimatedPrice": [],
+      "VestedShares": [],
+      "UnvestedShares": [],
+      "Total": []
+    },
+    "ShareDetails": [],
+    "TotalCompensationStatements": {
+      "Statements": [
+        {
+          "Period": [],
+          "Role": [],
+          "LegalEntity": [],
+          "StartDate": [],
+          "EndDate": []
+        }
+      ]
+    },
+    "CompensationChangeStatements": {
+      "Statements": [
+        {
+          "Document": [],
+          "Plan": [],
+          "PostedOn": [],
+          "Status": []
+        }
+      ]
+    },
+    "ManagePersonalContributions": true
+  }
+  

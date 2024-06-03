@@ -1,0 +1,3 @@
+_id,scheduled_processes_for_development_goals.address_type,scheduled_processes_for_development_goals.recipient,scheduled_processes_for_development_goals.condition
+6659a1b839ed28e63e4d2b3a,Email,john.doe@example.com,Goal Completed
+6659a1b839ed28e63e4d2b3b,SMS,+1234567890,Goal Overdue

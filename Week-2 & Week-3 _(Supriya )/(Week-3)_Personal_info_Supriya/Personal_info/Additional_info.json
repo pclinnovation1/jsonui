@@ -1,0 +1,21 @@
+{
+    "AdditionalPersonInfo": {
+      "InfoGroup": {
+        "IncidentAccidentTracking": [],
+        "Appointment": [],
+        "IndiaNominationInformation": [],
+        "SentimentAnalysis": [],
+        "Tenure": [],
+        "DisciplinaryDetails": [],
+        "Assistant": [],
+        "StudentWS": [],
+        "UKHESAInformation": [],
+        "CountryOfTaxResidence": [],
+        "PerformanceImprovementPlan": [],
+        "AssignedProperty": [],
+        "IndiaMiscellaneousInformation": [],
+        "GermanApprenticeInformation": []
+      }
+    }
+  }
+  

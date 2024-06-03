@@ -1,0 +1,42 @@
+{
+   "ContactInfo": {
+    "PhoneDetails": {
+        "Country": [],
+        "Type": [],
+        "AreaCode": [],
+        "Number": [],
+        "Extension": [],
+        "FromDate": [],
+        "ToDate": []
+      },
+      "EmailDetails": {
+        "Type": [],
+        "Email": [],
+        "Primary": [],
+        "FromDate": []
+      },
+      "OtherCommunicationAccounts": {
+        "Provider": [],
+        "AccountName": [],
+        "FromDate": []
+      },
+      "Address": {
+        "Country": [],
+        "Type": [],
+        "StartDate": [],
+        "AddressLine1": [],
+        "AddressLine2": [],
+        "AddressLine3": [],
+        "ZIPCode": [],
+        "City": [],
+        "State": [],
+        "TaxDistrict": [],
+        "County": []
+      },
+      "OrderOfPreference": {
+        "PreferredOrder": [],
+        "Provider": []
+      }
+    
+    }
+  }
