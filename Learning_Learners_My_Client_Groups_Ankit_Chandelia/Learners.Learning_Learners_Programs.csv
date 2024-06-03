@@ -1,0 +1,11 @@
+_id,Title,Program Participant Size,Assignment Count by Status.Requested,Assignment Count by Status.Request Approved,Assignment Count by Status.Active,Assignment Count by Status.Completed,Assignment Count by Status.Withdrawn,Assignment Count by Status.Deleted,Plan Records in Final Status
+665994b8a952634fd635ec22,Leadership Training,20,5,4,3,6,1,1,10
+665994b8a952634fd635ec23,Data Science Workshop,25,7,6,5,7,2,0,13
+665994b8a952634fd635ec24,Customer Service Training,15,4,3,4,5,1,0,9
+665994b8a952634fd635ec25,Project Management Course,30,8,7,6,8,3,1,15
+665994b8a952634fd635ec26,Advanced Excel Training,18,6,5,4,7,1,1,11
+665994b8a952634fd635ec27,Conflict Resolution Session,22,5,4,5,6,2,0,10
+665994b8a952634fd635ec28,Cybersecurity Training,20,6,5,5,7,1,0,12
+665994b8a952634fd635ec29,Effective Communication Skills,28,7,6,6,8,2,1,14
+665994b8a952634fd635ec2a,Time Management Workshop,17,5,4,4,5,1,1,10
+665994b8a952634fd635ec2b,Team Building Activities,24,6,5,5,7,2,0,12

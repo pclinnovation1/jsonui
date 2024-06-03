@@ -1,0 +1,11 @@
+_id,Initiative Name,Initiative Status,Initiative Type,Initiative Start Date,Learning Item Title,Learning Item Type,Person Number,Initiative Number,Run As,Processed Date,Learning Specialization Additional Attributes,Learning Item Additional Attributes,Context Segment,Topic
+66588fd4657202fb53aa8693,Initiative 1,Completed,Type B,2024-04-21,Learning Item 1,Workshop,PN1000,IN2000,Admin,2024-07-21,Specialization 1,Attribute 1,Segment C,Topic A
+66588fd4657202fb53aa8694,Initiative 2,Planned,Type A,2024-03-06,Learning Item 2,Course,PN1001,IN2001,Admin,2023-04-09,Specialization 2,Attribute 2,Segment B,Topic C
+66588fd4657202fb53aa8695,Initiative 3,Planned,Type B,2023-09-28,Learning Item 3,Course,PN1002,IN2002,Admin,2023-09-15,Specialization 3,Attribute 3,Segment B,Topic C
+66588fd4657202fb53aa8696,Initiative 4,In Progress,Type A,2024-08-20,Learning Item 4,Workshop,PN1003,IN2003,Admin,2024-03-13,Specialization 4,Attribute 4,Segment B,Topic C
+66588fd4657202fb53aa8697,Initiative 5,Completed,Type C,2024-07-06,Learning Item 5,Workshop,PN1004,IN2004,User,2023-09-17,Specialization 5,Attribute 5,Segment A,Topic B
+66588fd4657202fb53aa8698,Initiative 6,Completed,Type B,2024-09-20,Learning Item 6,Workshop,PN1005,IN2005,User,2023-05-01,Specialization 6,Attribute 6,Segment C,Topic A
+66588fd4657202fb53aa8699,Initiative 7,In Progress,Type A,2024-03-26,Learning Item 7,Seminar,PN1006,IN2006,User,2024-07-30,Specialization 7,Attribute 7,Segment C,Topic A
+66588fd4657202fb53aa869a,Initiative 8,Completed,Type A,2024-09-16,Learning Item 8,Seminar,PN1007,IN2007,User,2023-07-09,Specialization 8,Attribute 8,Segment A,Topic C
+66588fd4657202fb53aa869b,Initiative 9,In Progress,Type C,2023-12-22,Learning Item 9,Seminar,PN1008,IN2008,Admin,2023-01-06,Specialization 9,Attribute 9,Segment C,Topic B
+66588fd4657202fb53aa869c,Initiative 10,Planned,Type A,2023-06-14,Learning Item 10,Workshop,PN1009,IN2009,Admin,2023-01-13,Specialization 10,Attribute 10,Segment A,Topic B

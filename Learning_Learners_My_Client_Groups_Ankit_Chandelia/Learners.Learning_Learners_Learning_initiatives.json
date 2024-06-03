@@ -1,0 +1,190 @@
+[{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa8693"
+  },
+  "Initiative Name": "Initiative 1",
+  "Initiative Status": "Completed",
+  "Initiative Type": "Type B",
+  "Initiative Start Date": "2024-04-21",
+  "Learning Item Title": "Learning Item 1",
+  "Learning Item Type": "Workshop",
+  "Person Number": "PN1000",
+  "Initiative Number": "IN2000",
+  "Run As": "Admin",
+  "Processed Date": "2024-07-21",
+  "Learning Specialization Additional Attributes": "Specialization 1",
+  "Learning Item Additional Attributes": "Attribute 1",
+  "Context Segment": "Segment C",
+  "Topic": "Topic A"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa8694"
+  },
+  "Initiative Name": "Initiative 2",
+  "Initiative Status": "Planned",
+  "Initiative Type": "Type A",
+  "Initiative Start Date": "2024-03-06",
+  "Learning Item Title": "Learning Item 2",
+  "Learning Item Type": "Course",
+  "Person Number": "PN1001",
+  "Initiative Number": "IN2001",
+  "Run As": "Admin",
+  "Processed Date": "2023-04-09",
+  "Learning Specialization Additional Attributes": "Specialization 2",
+  "Learning Item Additional Attributes": "Attribute 2",
+  "Context Segment": "Segment B",
+  "Topic": "Topic C"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa8695"
+  },
+  "Initiative Name": "Initiative 3",
+  "Initiative Status": "Planned",
+  "Initiative Type": "Type B",
+  "Initiative Start Date": "2023-09-28",
+  "Learning Item Title": "Learning Item 3",
+  "Learning Item Type": "Course",
+  "Person Number": "PN1002",
+  "Initiative Number": "IN2002",
+  "Run As": "Admin",
+  "Processed Date": "2023-09-15",
+  "Learning Specialization Additional Attributes": "Specialization 3",
+  "Learning Item Additional Attributes": "Attribute 3",
+  "Context Segment": "Segment B",
+  "Topic": "Topic C"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa8696"
+  },
+  "Initiative Name": "Initiative 4",
+  "Initiative Status": "In Progress",
+  "Initiative Type": "Type A",
+  "Initiative Start Date": "2024-08-20",
+  "Learning Item Title": "Learning Item 4",
+  "Learning Item Type": "Workshop",
+  "Person Number": "PN1003",
+  "Initiative Number": "IN2003",
+  "Run As": "Admin",
+  "Processed Date": "2024-03-13",
+  "Learning Specialization Additional Attributes": "Specialization 4",
+  "Learning Item Additional Attributes": "Attribute 4",
+  "Context Segment": "Segment B",
+  "Topic": "Topic C"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa8697"
+  },
+  "Initiative Name": "Initiative 5",
+  "Initiative Status": "Completed",
+  "Initiative Type": "Type C",
+  "Initiative Start Date": "2024-07-06",
+  "Learning Item Title": "Learning Item 5",
+  "Learning Item Type": "Workshop",
+  "Person Number": "PN1004",
+  "Initiative Number": "IN2004",
+  "Run As": "User",
+  "Processed Date": "2023-09-17",
+  "Learning Specialization Additional Attributes": "Specialization 5",
+  "Learning Item Additional Attributes": "Attribute 5",
+  "Context Segment": "Segment A",
+  "Topic": "Topic B"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa8698"
+  },
+  "Initiative Name": "Initiative 6",
+  "Initiative Status": "Completed",
+  "Initiative Type": "Type B",
+  "Initiative Start Date": "2024-09-20",
+  "Learning Item Title": "Learning Item 6",
+  "Learning Item Type": "Workshop",
+  "Person Number": "PN1005",
+  "Initiative Number": "IN2005",
+  "Run As": "User",
+  "Processed Date": "2023-05-01",
+  "Learning Specialization Additional Attributes": "Specialization 6",
+  "Learning Item Additional Attributes": "Attribute 6",
+  "Context Segment": "Segment C",
+  "Topic": "Topic A"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa8699"
+  },
+  "Initiative Name": "Initiative 7",
+  "Initiative Status": "In Progress",
+  "Initiative Type": "Type A",
+  "Initiative Start Date": "2024-03-26",
+  "Learning Item Title": "Learning Item 7",
+  "Learning Item Type": "Seminar",
+  "Person Number": "PN1006",
+  "Initiative Number": "IN2006",
+  "Run As": "User",
+  "Processed Date": "2024-07-30",
+  "Learning Specialization Additional Attributes": "Specialization 7",
+  "Learning Item Additional Attributes": "Attribute 7",
+  "Context Segment": "Segment C",
+  "Topic": "Topic A"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa869a"
+  },
+  "Initiative Name": "Initiative 8",
+  "Initiative Status": "Completed",
+  "Initiative Type": "Type A",
+  "Initiative Start Date": "2024-09-16",
+  "Learning Item Title": "Learning Item 8",
+  "Learning Item Type": "Seminar",
+  "Person Number": "PN1007",
+  "Initiative Number": "IN2007",
+  "Run As": "User",
+  "Processed Date": "2023-07-09",
+  "Learning Specialization Additional Attributes": "Specialization 8",
+  "Learning Item Additional Attributes": "Attribute 8",
+  "Context Segment": "Segment A",
+  "Topic": "Topic C"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa869b"
+  },
+  "Initiative Name": "Initiative 9",
+  "Initiative Status": "In Progress",
+  "Initiative Type": "Type C",
+  "Initiative Start Date": "2023-12-22",
+  "Learning Item Title": "Learning Item 9",
+  "Learning Item Type": "Seminar",
+  "Person Number": "PN1008",
+  "Initiative Number": "IN2008",
+  "Run As": "Admin",
+  "Processed Date": "2023-01-06",
+  "Learning Specialization Additional Attributes": "Specialization 9",
+  "Learning Item Additional Attributes": "Attribute 9",
+  "Context Segment": "Segment C",
+  "Topic": "Topic B"
+},
+{
+  "_id": {
+    "$oid": "66588fd4657202fb53aa869c"
+  },
+  "Initiative Name": "Initiative 10",
+  "Initiative Status": "Planned",
+  "Initiative Type": "Type A",
+  "Initiative Start Date": "2023-06-14",
+  "Learning Item Title": "Learning Item 10",
+  "Learning Item Type": "Workshop",
+  "Person Number": "PN1009",
+  "Initiative Number": "IN2009",
+  "Run As": "Admin",
+  "Processed Date": "2023-01-13",
+  "Learning Specialization Additional Attributes": "Specialization 10",
+  "Learning Item Additional Attributes": "Attribute 10",
+  "Context Segment": "Segment A",
+  "Topic": "Topic B"
+}]
