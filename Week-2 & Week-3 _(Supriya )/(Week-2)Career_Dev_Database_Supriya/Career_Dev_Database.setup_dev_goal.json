@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "66599f6e6921647a68c54d0c"
+  },
+  "details": {
+    "process_name": "Annual Goal Setting",
+    "requester": "John Doe",
+    "eligibility_profile": "Senior Management",
+    "add_worker": "Alice Smith",
+    "add_excluded_worker": "Charlie Brown"
+  }
+}]

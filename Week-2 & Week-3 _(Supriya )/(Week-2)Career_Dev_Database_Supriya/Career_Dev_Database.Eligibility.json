@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "66598b508313e4338ee1be10"
+  },
+  "eligibility_profiles": {
+    "advanced_search": {
+      "name": "Profile1",
+      "assignment_to_use": "Current Assignment",
+      "profile_usage": "Benefits",
+      "profile_type": "Eligibility"
+    },
+    "basic": {
+      "name": "Profile2",
+      "assignment_to_use": "Future Assignment",
+      "profile_usage": "Compensation",
+      "profile_type": "Eligibility"
+    },
+    "search_results": {
+      "create": {
+        "eligibility_profile_definition": {
+          "name": "Profile3",
+          "description": "Profile for high-level eligibility",
+          "profile_usage": "Benefits and Compensation",
+          "status": "Active"
+        }
+      }
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "66598b508313e4338ee1be11"
+  },
+  "eligibility_profiles": {
+    "advanced_search": {
+      "name": "Profile4",
+      "assignment_to_use": "Past Assignment",
+      "profile_usage": "Recruitment",
+      "profile_type": "Eligibility"
+    },
+    "basic": {
+      "name": "Profile5",
+      "assignment_to_use": "Current Assignment",
+      "profile_usage": "Learning",
+      "profile_type": "Eligibility"
+    },
+    "search_results": {
+      "create": {
+        "eligibility_profile_definition": {
+          "name": "Profile6",
+          "description": "Profile for recruitment eligibility",
+          "profile_usage": "Recruitment",
+          "status": "Inactive"
+        }
+      }
+    }
+  }
+}]

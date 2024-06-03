@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "665984c1ac8c3ad46ac09806"
+  },
+  "goals": {
+    "library_info": {
+      "status": "Inactive",
+      "business_unit": "Marketing",
+      "type": "Quarterly",
+      "department": "Finance",
+      "available_to": "Managers",
+      "job_family": "Operations",
+      "legal_employer": "Company B"
+    },
+    "basic_info": {
+      "goal_name": "Improve Customer Satisfaction",
+      "description": "Improve customer satisfaction score by 15%",
+      "start_date": "2024-04-01",
+      "target_date": "2024-06-30",
+      "priority": "Medium",
+      "category": "Customer Service",
+      "related_link": "http://example.com/customer",
+      "success_Critera": "Reach a satisfaction score of 90%",
+      "Comments": "Enhance support services"
+    },
+    "Measurements": {
+      "Measurement Name": "Customer Feedback",
+      "Start Date": "2024-04-01",
+      "End Date": "2024-06-30",
+      "Unit of Measure": "Score",
+      "Comments": "Collect feedback quarterly"
+    },
+    "Tasks": {
+      "Name": "Train support staff",
+      "Type": "Training",
+      "Status": "Not Started",
+      "Priority": "Medium",
+      "Completion_Percentage": 0,
+      "Start_Date": "2024-04-15",
+      "Target_Completion_Date": "2024-05-30",
+      "Related_Link": "http://example.com/training",
+      "Comments": "Schedule training sessions"
+    },
+    "Target Outcomes": {
+      "name": "90% customer satisfaction"
+    }
+  }
+}]
