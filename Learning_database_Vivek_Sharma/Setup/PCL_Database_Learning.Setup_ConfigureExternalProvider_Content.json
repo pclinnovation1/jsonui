@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "6659880f5eba6f20442e1325"
+  },
+  "Provider": "LinkedIn Learning",
+  "Description": "Enables importing of LinkedIn Learning courses into the learning catalog.",
+  "Status": "Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "6659880f5eba6f20442e1326"
+  },
+  "Provider": "Skillsoft",
+  "Description": "Enables importing of Skillsoft courses into the learning catalog.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "6659880f5eba6f20442e1327"
+  },
+  "Provider": "BizLibrary",
+  "Description": "Enables importing of BizLibrary courses into the learning catalog.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "6659880f5eba6f20442e1328"
+  },
+  "Provider": "Intuition",
+  "Description": "Enables importing of Intuition courses into the learning catalog.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "6659880f5eba6f20442e1329"
+  },
+  "Provider": "OpenSesame",
+  "Description": "Enables importing of OpenSesame courses into the learning catalog.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+}]

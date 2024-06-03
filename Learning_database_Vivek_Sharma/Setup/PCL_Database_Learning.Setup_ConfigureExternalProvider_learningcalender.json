@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "66598891428d9deaf5534541"
+  },
+  "Provider": "Microsoft Calendar",
+  "Description": "Enables Microsoft Outlook calendar integration",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "66598891428d9deaf5534542"
+  },
+  "Provider": "Google Calendar",
+  "Description": "Enables Google Calendar integration",
+  "Status": "Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "66598891428d9deaf5534543"
+  },
+  "Provider": "Apple Calendar",
+  "Description": "Enables Apple Calendar integration",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "66598891428d9deaf5534544"
+  },
+  "Provider": "Zoho Calendar",
+  "Description": "Enables Zoho Calendar integration",
+  "Status": "Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "66598891428d9deaf5534545"
+  },
+  "Provider": "Outlook 365",
+  "Description": "Enables Outlook 365 Calendar integration",
+  "Status": "Enabled",
+  "Actions": "Configure"
+}]

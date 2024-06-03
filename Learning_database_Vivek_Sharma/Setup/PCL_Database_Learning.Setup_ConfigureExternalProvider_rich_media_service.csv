@@ -1,0 +1,6 @@
+_id,Provider,Description,Status,Actions
+6659894027f27e01f3ab1d20,Akamai,Validates Akamai configuration,Enabled,Validate
+6659894027f27e01f3ab1d21,Cloudflare,Validates Cloudflare configuration,Not Enabled,Validate
+6659894027f27e01f3ab1d22,Amazon CloudFront,Validates Amazon CloudFront configuration,Enabled,Validate
+6659894027f27e01f3ab1d23,Microsoft Azure CDN,Validates Microsoft Azure CDN configuration,Not Enabled,Validate
+6659894027f27e01f3ab1d24,Fastly,Validates Fastly configuration,Enabled,Validate

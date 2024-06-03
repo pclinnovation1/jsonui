@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "665989868cfe62aac5d9b832"
+  },
+  "Provider": "Google Translation",
+  "Description": "Enables Google language translation.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "665989868cfe62aac5d9b833"
+  },
+  "Provider": "Microsoft Translation",
+  "Description": "Enables Microsoft language translation.",
+  "Status": "Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "665989868cfe62aac5d9b834"
+  },
+  "Provider": "Amazon Translate",
+  "Description": "Enables Amazon language translation.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "665989868cfe62aac5d9b835"
+  },
+  "Provider": "IBM Watson Translate",
+  "Description": "Enables IBM Watson language translation.",
+  "Status": "Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "665989868cfe62aac5d9b836"
+  },
+  "Provider": "DeepL Translator",
+  "Description": "Enables DeepL language translation.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+}]

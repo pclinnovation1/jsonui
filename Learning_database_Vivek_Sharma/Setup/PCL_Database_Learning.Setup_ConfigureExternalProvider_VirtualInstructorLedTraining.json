@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "66598a312baa32f02928d601"
+  },
+  "Provider": "Adobe Connect",
+  "Description": "Enables Adobe Connect hosted virtual classrooms.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "66598a312baa32f02928d602"
+  },
+  "Provider": "WebEx",
+  "Description": "Enables integration with WebEx for virtual classroom capabilities.",
+  "Status": "Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "66598a312baa32f02928d603"
+  },
+  "Provider": "Zoom",
+  "Description": "Enables Zoom hosted virtual classrooms.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+},
+{
+  "_id": {
+    "$oid": "66598a312baa32f02928d604"
+  },
+  "Provider": "Microsoft Teams",
+  "Description": "Enables integration with Microsoft Teams for virtual classroom capabilities.",
+  "Status": "Not Enabled",
+  "Actions": "Configure"
+}]

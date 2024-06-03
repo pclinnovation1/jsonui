@@ -1,0 +1,6 @@
+_id,Provider,Description,Status,Actions
+66598891428d9deaf5534541,Microsoft Calendar,Enables Microsoft Outlook calendar integration,Not Enabled,Configure
+66598891428d9deaf5534542,Google Calendar,Enables Google Calendar integration,Enabled,Configure
+66598891428d9deaf5534543,Apple Calendar,Enables Apple Calendar integration,Not Enabled,Configure
+66598891428d9deaf5534544,Zoho Calendar,Enables Zoho Calendar integration,Enabled,Configure
+66598891428d9deaf5534545,Outlook 365,Enables Outlook 365 Calendar integration,Enabled,Configure

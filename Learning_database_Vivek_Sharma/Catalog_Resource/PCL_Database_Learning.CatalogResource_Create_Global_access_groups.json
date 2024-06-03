@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "665987740421f03971afd541"
+  },
+  "Name": "Alice Johnson",
+  "Selection Method": "Automatic",
+  "Person Number": "P-1001",
+  "Learning Item Prompt Value": "Python Basics",
+  "Department": "IT",
+  "Primary Email": "alice.johnson@example.com",
+  "Job Name": "Software Developer",
+  "Location": "New York",
+  "Country": "USA",
+  "Manager Name": "John Doe",
+  "Business Unit": "Technology",
+  "Position": "Developer",
+  "Usage Type": "Mandatory",
+  "Owner": "HR Department"
+},
+{
+  "_id": {
+    "$oid": "665987740421f03971afd542"
+  },
+  "Name": "Bob Smith",
+  "Selection Method": "Manual",
+  "Person Number": "P-1002",
+  "Learning Item Prompt Value": "Data Analysis",
+  "Department": "Finance",
+  "Primary Email": "bob.smith@example.com",
+  "Job Name": "Financial Analyst",
+  "Location": "Los Angeles",
+  "Country": "USA",
+  "Manager Name": "Jane Smith",
+  "Business Unit": "Finance",
+  "Position": "Analyst",
+  "Usage Type": "Optional",
+  "Owner": "Finance Department"
+},
+{
+  "_id": {
+    "$oid": "665987740421f03971afd543"
+  },
+  "Name": "Charlie Brown",
+  "Selection Method": "Automatic",
+  "Person Number": "P-1003",
+  "Learning Item Prompt Value": "Project Management",
+  "Department": "Operations",
+  "Primary Email": "charlie.brown@example.com",
+  "Job Name": "Project Manager",
+  "Location": "Chicago",
+  "Country": "USA",
+  "Manager Name": "Alice Johnson",
+  "Business Unit": "Operations",
+  "Position": "Manager",
+  "Usage Type": "Mandatory",
+  "Owner": "Operations Department"
+},
+{
+  "_id": {
+    "$oid": "665987740421f03971afd544"
+  },
+  "Name": "David Lee",
+  "Selection Method": "Manual",
+  "Person Number": "P-1004",
+  "Learning Item Prompt Value": "Machine Learning",
+  "Department": "Research",
+  "Primary Email": "david.lee@example.com",
+  "Job Name": "Data Scientist",
+  "Location": "Houston",
+  "Country": "USA",
+  "Manager Name": "Bob Brown",
+  "Business Unit": "Research & Development",
+  "Position": "Scientist",
+  "Usage Type": "Optional",
+  "Owner": "R&D Department"
+},
+{
+  "_id": {
+    "$oid": "665987740421f03971afd545"
+  },
+  "Name": "Emma Davis",
+  "Selection Method": "Automatic",
+  "Person Number": "P-1005",
+  "Learning Item Prompt Value": "Leadership Training",
+  "Department": "Human Resources",
+  "Primary Email": "emma.davis@example.com",
+  "Job Name": "HR Manager",
+  "Location": "Phoenix",
+  "Country": "USA",
+  "Manager Name": "Charlie Davis",
+  "Business Unit": "HR",
+  "Position": "Manager",
+  "Usage Type": "Mandatory",
+  "Owner": "HR Department"
+}]

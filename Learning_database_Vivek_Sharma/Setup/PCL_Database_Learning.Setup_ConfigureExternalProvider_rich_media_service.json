@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "6659894027f27e01f3ab1d20"
+  },
+  "Provider": "Akamai",
+  "Description": "Validates Akamai configuration",
+  "Status": "Enabled",
+  "Actions": "Validate"
+},
+{
+  "_id": {
+    "$oid": "6659894027f27e01f3ab1d21"
+  },
+  "Provider": "Cloudflare",
+  "Description": "Validates Cloudflare configuration",
+  "Status": "Not Enabled",
+  "Actions": "Validate"
+},
+{
+  "_id": {
+    "$oid": "6659894027f27e01f3ab1d22"
+  },
+  "Provider": "Amazon CloudFront",
+  "Description": "Validates Amazon CloudFront configuration",
+  "Status": "Enabled",
+  "Actions": "Validate"
+},
+{
+  "_id": {
+    "$oid": "6659894027f27e01f3ab1d23"
+  },
+  "Provider": "Microsoft Azure CDN",
+  "Description": "Validates Microsoft Azure CDN configuration",
+  "Status": "Not Enabled",
+  "Actions": "Validate"
+},
+{
+  "_id": {
+    "$oid": "6659894027f27e01f3ab1d24"
+  },
+  "Provider": "Fastly",
+  "Description": "Validates Fastly configuration",
+  "Status": "Enabled",
+  "Actions": "Validate"
+}]

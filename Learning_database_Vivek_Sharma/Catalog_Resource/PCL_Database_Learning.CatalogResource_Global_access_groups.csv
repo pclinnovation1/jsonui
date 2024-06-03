@@ -1,0 +1,6 @@
+_id,Global Access Group Name,Global Access Group Number,Access Group Created On,Learner Self-Service View Mode,Manager Initial Assignment Status,Learner Initial Assignment Status,Withdraw Manager Assignments with This Pending Prerequisite Limit,Withdraw Learner Self Assignments with This Pending Prerequisite Limit,Allow Managers to Bypass Prerequisites,Allow Learners to Bypass Prerequisites,Run As,Processed Date
+665986a77af8dcb07d4189d8,Finance Team,GAG-001,2024-01-15,View Only,Assigned,Not Assigned,2,3,true,false,Admin,2024-05-01
+665986a77af8dcb07d4189d9,HR Team,GAG-002,2024-02-20,Edit,Assigned,Not Assigned,1,2,false,true,Manager,2024-05-02
+665986a77af8dcb07d4189da,IT Team,GAG-003,2024-03-10,View Only,Not Assigned,Assigned,3,4,true,true,Supervisor,2024-05-03
+665986a77af8dcb07d4189db,Marketing Team,GAG-004,2024-04-05,Edit,Assigned,Assigned,0,1,false,false,Coordinator,2024-05-04
+665986a77af8dcb07d4189dc,Sales Team,GAG-005,2024-05-01,View Only,Not Assigned,Not Assigned,2,3,true,true,Admin,2024-05-05

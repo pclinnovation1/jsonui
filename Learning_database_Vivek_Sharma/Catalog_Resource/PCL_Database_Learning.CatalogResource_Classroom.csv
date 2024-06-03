@@ -1,0 +1,6 @@
+_id,Name,Classroom Resource Number,Capacity,Status,Contact Person,Address Line 1,City,Country,Training Supplier,Contact Person Primary Email Address,Postal Code,Creation Date,Created By,Actions
+66598431cae9b403bf5d1f0e,Room A101,CR-001,30,Available,John Doe,123 Main St,New York,USA,ABC Training Co.,john.doe@example.com,10001,2024-05-01,Admin,Book
+66598431cae9b403bf5d1f0f,Room B202,CR-002,25,Occupied,Jane Smith,456 Elm St,Los Angeles,USA,XYZ Training Services,jane.smith@example.com,90001,2024-05-02,Manager,Reserve
+66598431cae9b403bf5d1f10,Room C303,CR-003,40,Available,Alice Johnson,789 Oak St,Chicago,USA,Education Plus,alice.johnson@example.com,60601,2024-05-03,Supervisor,Inquire
+66598431cae9b403bf5d1f11,Room D404,CR-004,50,Under Maintenance,Bob Brown,101 Maple St,Houston,USA,Learn & Grow,bob.brown@example.com,77001,2024-05-04,Admin,Contact
+66598431cae9b403bf5d1f12,Room E505,CR-005,20,Available,Charlie Davis,202 Pine St,Phoenix,USA,SkillUp,charlie.davis@example.com,85001,2024-05-05,Coordinator,Book

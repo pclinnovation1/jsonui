@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "6659853b3e36d8adfb90debd"
+  },
+  "Name": "ABC Training Co.",
+  "Supplier Resource Number": "SR-001",
+  "Contact Person": "John Doe",
+  "Status": "Active",
+  "Creation Date": "2024-05-01",
+  "Created By": "Admin"
+},
+{
+  "_id": {
+    "$oid": "6659853b3e36d8adfb90debe"
+  },
+  "Name": "XYZ Training Services",
+  "Supplier Resource Number": "SR-002",
+  "Contact Person": "Jane Smith",
+  "Status": "Inactive",
+  "Creation Date": "2024-05-02",
+  "Created By": "Manager"
+},
+{
+  "_id": {
+    "$oid": "6659853b3e36d8adfb90debf"
+  },
+  "Name": "Education Plus",
+  "Supplier Resource Number": "SR-003",
+  "Contact Person": "Alice Johnson",
+  "Status": "Active",
+  "Creation Date": "2024-05-03",
+  "Created By": "Supervisor"
+},
+{
+  "_id": {
+    "$oid": "6659853b3e36d8adfb90dec0"
+  },
+  "Name": "Learn & Grow",
+  "Supplier Resource Number": "SR-004",
+  "Contact Person": "Bob Brown",
+  "Status": "Pending",
+  "Creation Date": "2024-05-04",
+  "Created By": "Admin"
+},
+{
+  "_id": {
+    "$oid": "6659853b3e36d8adfb90dec1"
+  },
+  "Name": "SkillUp",
+  "Supplier Resource Number": "SR-005",
+  "Contact Person": "Charlie Davis",
+  "Status": "Active",
+  "Creation Date": "2024-05-05",
+  "Created By": "Coordinator"
+}]

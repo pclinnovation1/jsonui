@@ -1,0 +1,11 @@
+_id,Content Title,Content Number,Content Type,Status,Refresh Status,Start Date,End Date,Author,Created By,Creation Date,Version,External Identifier,Items Where Used
+665983260c9e950a7ec5461f,Balancing Work and Life,OLC453032,Web Link,Active,Disabled - Some reason,2024-04-16,,Curtis Feitty,Curtis Feitty,2024-04-16,,ca748657-02...,1
+665983260c9e950a7ec54620,Time Management Techniques,OLC453033,Video,Active,Enabled - Updated content,2024-05-01,,John Doe,John Doe,2024-05-01,1.0,ab123456-78...,2
+665983260c9e950a7ec54621,Effective Communication Skills,OLC453034,Article,Inactive,Disabled - Outdated,2023-12-10,2024-12-10,Jane Smith,Jane Smith,2023-12-10,2.1,xy987654-32...,3
+665983260c9e950a7ec54622,Leadership Principles,OLC453035,Podcast,Active,Enabled - New Series,2024-02-20,,Alice Johnson,Alice Johnson,2024-02-20,,pq876543-21...,5
+665983260c9e950a7ec54623,Project Management Basics,OLC453036,Web Link,Active,Enabled - Revised Edition,2024-03-15,,Bob Brown,Bob Brown,2024-03-15,3.0,mn456789-65...,4
+66598353c006bc55bc8aa298,Balancing Work and Life,OLC453032,Web Link,Active,Disabled - Some reason,2024-04-16,,Curtis Feitty,Curtis Feitty,2024-04-16,,ca748657-02...,1
+66598353c006bc55bc8aa299,Time Management Techniques,OLC453033,Video,Active,Enabled - Updated content,2024-05-01,,John Doe,John Doe,2024-05-01,1.0,ab123456-78...,2
+66598353c006bc55bc8aa29a,Effective Communication Skills,OLC453034,Article,Inactive,Disabled - Outdated,2023-12-10,2024-12-10,Jane Smith,Jane Smith,2023-12-10,2.1,xy987654-32...,3
+66598353c006bc55bc8aa29b,Leadership Principles,OLC453035,Podcast,Active,Enabled - New Series,2024-02-20,,Alice Johnson,Alice Johnson,2024-02-20,,pq876543-21...,5
+66598353c006bc55bc8aa29c,Project Management Basics,OLC453036,Web Link,Active,Enabled - Revised Edition,2024-03-15,,Bob Brown,Bob Brown,2024-03-15,3.0,mn456789-65...,4

@@ -1,0 +1,6 @@
+_id,Name,Selection Method,Person Number,Learning Item Prompt Value,Department,Primary Email,Job Name,Location,Country,Manager Name,Business Unit,Position,Usage Type,Owner
+665987740421f03971afd541,Alice Johnson,Automatic,P-1001,Python Basics,IT,alice.johnson@example.com,Software Developer,New York,USA,John Doe,Technology,Developer,Mandatory,HR Department
+665987740421f03971afd542,Bob Smith,Manual,P-1002,Data Analysis,Finance,bob.smith@example.com,Financial Analyst,Los Angeles,USA,Jane Smith,Finance,Analyst,Optional,Finance Department
+665987740421f03971afd543,Charlie Brown,Automatic,P-1003,Project Management,Operations,charlie.brown@example.com,Project Manager,Chicago,USA,Alice Johnson,Operations,Manager,Mandatory,Operations Department
+665987740421f03971afd544,David Lee,Manual,P-1004,Machine Learning,Research,david.lee@example.com,Data Scientist,Houston,USA,Bob Brown,Research & Development,Scientist,Optional,R&D Department
+665987740421f03971afd545,Emma Davis,Automatic,P-1005,Leadership Training,Human Resources,emma.davis@example.com,HR Manager,Phoenix,USA,Charlie Davis,HR,Manager,Mandatory,HR Department

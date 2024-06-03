@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "665983260c9e950a7ec5461f"
+  },
+  "Content Title": "Balancing Work and Life",
+  "Content Number": "OLC453032",
+  "Content Type": "Web Link",
+  "Status": "Active",
+  "Refresh Status": "Disabled - Some reason",
+  "Start Date": "2024-04-16",
+  "End Date": "",
+  "Author": "Curtis Feitty",
+  "Created By": "Curtis Feitty",
+  "Creation Date": "2024-04-16",
+  "Version": "",
+  "External Identifier": "ca748657-02...",
+  "Items Where Used": "1"
+},
+{
+  "_id": {
+    "$oid": "665983260c9e950a7ec54620"
+  },
+  "Content Title": "Time Management Techniques",
+  "Content Number": "OLC453033",
+  "Content Type": "Video",
+  "Status": "Active",
+  "Refresh Status": "Enabled - Updated content",
+  "Start Date": "2024-05-01",
+  "End Date": "",
+  "Author": "John Doe",
+  "Created By": "John Doe",
+  "Creation Date": "2024-05-01",
+  "Version": "1.0",
+  "External Identifier": "ab123456-78...",
+  "Items Where Used": "2"
+},
+{
+  "_id": {
+    "$oid": "665983260c9e950a7ec54621"
+  },
+  "Content Title": "Effective Communication Skills",
+  "Content Number": "OLC453034",
+  "Content Type": "Article",
+  "Status": "Inactive",
+  "Refresh Status": "Disabled - Outdated",
+  "Start Date": "2023-12-10",
+  "End Date": "2024-12-10",
+  "Author": "Jane Smith",
+  "Created By": "Jane Smith",
+  "Creation Date": "2023-12-10",
+  "Version": "2.1",
+  "External Identifier": "xy987654-32...",
+  "Items Where Used": "3"
+},
+{
+  "_id": {
+    "$oid": "665983260c9e950a7ec54622"
+  },
+  "Content Title": "Leadership Principles",
+  "Content Number": "OLC453035",
+  "Content Type": "Podcast",
+  "Status": "Active",
+  "Refresh Status": "Enabled - New Series",
+  "Start Date": "2024-02-20",
+  "End Date": "",
+  "Author": "Alice Johnson",
+  "Created By": "Alice Johnson",
+  "Creation Date": "2024-02-20",
+  "Version": "",
+  "External Identifier": "pq876543-21...",
+  "Items Where Used": "5"
+},
+{
+  "_id": {
+    "$oid": "665983260c9e950a7ec54623"
+  },
+  "Content Title": "Project Management Basics",
+  "Content Number": "OLC453036",
+  "Content Type": "Web Link",
+  "Status": "Active",
+  "Refresh Status": "Enabled - Revised Edition",
+  "Start Date": "2024-03-15",
+  "End Date": "",
+  "Author": "Bob Brown",
+  "Created By": "Bob Brown",
+  "Creation Date": "2024-03-15",
+  "Version": "3.0",
+  "External Identifier": "mn456789-65...",
+  "Items Where Used": "4"
+},
+{
+  "_id": {
+    "$oid": "66598353c006bc55bc8aa298"
+  },
+  "Content Title": "Balancing Work and Life",
+  "Content Number": "OLC453032",
+  "Content Type": "Web Link",
+  "Status": "Active",
+  "Refresh Status": "Disabled - Some reason",
+  "Start Date": "2024-04-16",
+  "End Date": "",
+  "Author": "Curtis Feitty",
+  "Created By": "Curtis Feitty",
+  "Creation Date": "2024-04-16",
+  "Version": "",
+  "External Identifier": "ca748657-02...",
+  "Items Where Used": "1"
+},
+{
+  "_id": {
+    "$oid": "66598353c006bc55bc8aa299"
+  },
+  "Content Title": "Time Management Techniques",
+  "Content Number": "OLC453033",
+  "Content Type": "Video",
+  "Status": "Active",
+  "Refresh Status": "Enabled - Updated content",
+  "Start Date": "2024-05-01",
+  "End Date": "",
+  "Author": "John Doe",
+  "Created By": "John Doe",
+  "Creation Date": "2024-05-01",
+  "Version": "1.0",
+  "External Identifier": "ab123456-78...",
+  "Items Where Used": "2"
+},
+{
+  "_id": {
+    "$oid": "66598353c006bc55bc8aa29a"
+  },
+  "Content Title": "Effective Communication Skills",
+  "Content Number": "OLC453034",
+  "Content Type": "Article",
+  "Status": "Inactive",
+  "Refresh Status": "Disabled - Outdated",
+  "Start Date": "2023-12-10",
+  "End Date": "2024-12-10",
+  "Author": "Jane Smith",
+  "Created By": "Jane Smith",
+  "Creation Date": "2023-12-10",
+  "Version": "2.1",
+  "External Identifier": "xy987654-32...",
+  "Items Where Used": "3"
+},
+{
+  "_id": {
+    "$oid": "66598353c006bc55bc8aa29b"
+  },
+  "Content Title": "Leadership Principles",
+  "Content Number": "OLC453035",
+  "Content Type": "Podcast",
+  "Status": "Active",
+  "Refresh Status": "Enabled - New Series",
+  "Start Date": "2024-02-20",
+  "End Date": "",
+  "Author": "Alice Johnson",
+  "Created By": "Alice Johnson",
+  "Creation Date": "2024-02-20",
+  "Version": "",
+  "External Identifier": "pq876543-21...",
+  "Items Where Used": "5"
+},
+{
+  "_id": {
+    "$oid": "66598353c006bc55bc8aa29c"
+  },
+  "Content Title": "Project Management Basics",
+  "Content Number": "OLC453036",
+  "Content Type": "Web Link",
+  "Status": "Active",
+  "Refresh Status": "Enabled - Revised Edition",
+  "Start Date": "2024-03-15",
+  "End Date": "",
+  "Author": "Bob Brown",
+  "Created By": "Bob Brown",
+  "Creation Date": "2024-03-15",
+  "Version": "3.0",
+  "External Identifier": "mn456789-65...",
+  "Items Where Used": "4"
+}]

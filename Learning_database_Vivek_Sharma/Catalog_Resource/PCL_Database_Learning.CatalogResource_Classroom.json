@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "66598431cae9b403bf5d1f0e"
+  },
+  "Name": "Room A101",
+  "Classroom Resource Number": "CR-001",
+  "Capacity": 30,
+  "Status": "Available",
+  "Contact Person": "John Doe",
+  "Address Line 1": "123 Main St",
+  "City": "New York",
+  "Country": "USA",
+  "Training Supplier": "ABC Training Co.",
+  "Contact Person Primary Email Address": "john.doe@example.com",
+  "Postal Code": "10001",
+  "Creation Date": "2024-05-01",
+  "Created By": "Admin",
+  "Actions": "Book"
+},
+{
+  "_id": {
+    "$oid": "66598431cae9b403bf5d1f0f"
+  },
+  "Name": "Room B202",
+  "Classroom Resource Number": "CR-002",
+  "Capacity": 25,
+  "Status": "Occupied",
+  "Contact Person": "Jane Smith",
+  "Address Line 1": "456 Elm St",
+  "City": "Los Angeles",
+  "Country": "USA",
+  "Training Supplier": "XYZ Training Services",
+  "Contact Person Primary Email Address": "jane.smith@example.com",
+  "Postal Code": "90001",
+  "Creation Date": "2024-05-02",
+  "Created By": "Manager",
+  "Actions": "Reserve"
+},
+{
+  "_id": {
+    "$oid": "66598431cae9b403bf5d1f10"
+  },
+  "Name": "Room C303",
+  "Classroom Resource Number": "CR-003",
+  "Capacity": 40,
+  "Status": "Available",
+  "Contact Person": "Alice Johnson",
+  "Address Line 1": "789 Oak St",
+  "City": "Chicago",
+  "Country": "USA",
+  "Training Supplier": "Education Plus",
+  "Contact Person Primary Email Address": "alice.johnson@example.com",
+  "Postal Code": "60601",
+  "Creation Date": "2024-05-03",
+  "Created By": "Supervisor",
+  "Actions": "Inquire"
+},
+{
+  "_id": {
+    "$oid": "66598431cae9b403bf5d1f11"
+  },
+  "Name": "Room D404",
+  "Classroom Resource Number": "CR-004",
+  "Capacity": 50,
+  "Status": "Under Maintenance",
+  "Contact Person": "Bob Brown",
+  "Address Line 1": "101 Maple St",
+  "City": "Houston",
+  "Country": "USA",
+  "Training Supplier": "Learn & Grow",
+  "Contact Person Primary Email Address": "bob.brown@example.com",
+  "Postal Code": "77001",
+  "Creation Date": "2024-05-04",
+  "Created By": "Admin",
+  "Actions": "Contact"
+},
+{
+  "_id": {
+    "$oid": "66598431cae9b403bf5d1f12"
+  },
+  "Name": "Room E505",
+  "Classroom Resource Number": "CR-005",
+  "Capacity": 20,
+  "Status": "Available",
+  "Contact Person": "Charlie Davis",
+  "Address Line 1": "202 Pine St",
+  "City": "Phoenix",
+  "Country": "USA",
+  "Training Supplier": "SkillUp",
+  "Contact Person Primary Email Address": "charlie.davis@example.com",
+  "Postal Code": "85001",
+  "Creation Date": "2024-05-05",
+  "Created By": "Coordinator",
+  "Actions": "Book"
+}]

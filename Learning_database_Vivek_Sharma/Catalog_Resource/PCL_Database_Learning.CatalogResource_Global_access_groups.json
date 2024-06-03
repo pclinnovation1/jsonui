@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "665986a77af8dcb07d4189d8"
+  },
+  "Global Access Group Name": "Finance Team",
+  "Global Access Group Number": "GAG-001",
+  "Access Group Created On": "2024-01-15",
+  "Learner Self-Service View Mode": "View Only",
+  "Manager Initial Assignment Status": "Assigned",
+  "Learner Initial Assignment Status": "Not Assigned",
+  "Withdraw Manager Assignments with This Pending Prerequisite Limit": 2,
+  "Withdraw Learner Self Assignments with This Pending Prerequisite Limit": 3,
+  "Allow Managers to Bypass Prerequisites": true,
+  "Allow Learners to Bypass Prerequisites": false,
+  "Run As": "Admin",
+  "Processed Date": "2024-05-01"
+},
+{
+  "_id": {
+    "$oid": "665986a77af8dcb07d4189d9"
+  },
+  "Global Access Group Name": "HR Team",
+  "Global Access Group Number": "GAG-002",
+  "Access Group Created On": "2024-02-20",
+  "Learner Self-Service View Mode": "Edit",
+  "Manager Initial Assignment Status": "Assigned",
+  "Learner Initial Assignment Status": "Not Assigned",
+  "Withdraw Manager Assignments with This Pending Prerequisite Limit": 1,
+  "Withdraw Learner Self Assignments with This Pending Prerequisite Limit": 2,
+  "Allow Managers to Bypass Prerequisites": false,
+  "Allow Learners to Bypass Prerequisites": true,
+  "Run As": "Manager",
+  "Processed Date": "2024-05-02"
+},
+{
+  "_id": {
+    "$oid": "665986a77af8dcb07d4189da"
+  },
+  "Global Access Group Name": "IT Team",
+  "Global Access Group Number": "GAG-003",
+  "Access Group Created On": "2024-03-10",
+  "Learner Self-Service View Mode": "View Only",
+  "Manager Initial Assignment Status": "Not Assigned",
+  "Learner Initial Assignment Status": "Assigned",
+  "Withdraw Manager Assignments with This Pending Prerequisite Limit": 3,
+  "Withdraw Learner Self Assignments with This Pending Prerequisite Limit": 4,
+  "Allow Managers to Bypass Prerequisites": true,
+  "Allow Learners to Bypass Prerequisites": true,
+  "Run As": "Supervisor",
+  "Processed Date": "2024-05-03"
+},
+{
+  "_id": {
+    "$oid": "665986a77af8dcb07d4189db"
+  },
+  "Global Access Group Name": "Marketing Team",
+  "Global Access Group Number": "GAG-004",
+  "Access Group Created On": "2024-04-05",
+  "Learner Self-Service View Mode": "Edit",
+  "Manager Initial Assignment Status": "Assigned",
+  "Learner Initial Assignment Status": "Assigned",
+  "Withdraw Manager Assignments with This Pending Prerequisite Limit": 0,
+  "Withdraw Learner Self Assignments with This Pending Prerequisite Limit": 1,
+  "Allow Managers to Bypass Prerequisites": false,
+  "Allow Learners to Bypass Prerequisites": false,
+  "Run As": "Coordinator",
+  "Processed Date": "2024-05-04"
+},
+{
+  "_id": {
+    "$oid": "665986a77af8dcb07d4189dc"
+  },
+  "Global Access Group Name": "Sales Team",
+  "Global Access Group Number": "GAG-005",
+  "Access Group Created On": "2024-05-01",
+  "Learner Self-Service View Mode": "View Only",
+  "Manager Initial Assignment Status": "Not Assigned",
+  "Learner Initial Assignment Status": "Not Assigned",
+  "Withdraw Manager Assignments with This Pending Prerequisite Limit": 2,
+  "Withdraw Learner Self Assignments with This Pending Prerequisite Limit": 3,
+  "Allow Managers to Bypass Prerequisites": true,
+  "Allow Learners to Bypass Prerequisites": true,
+  "Run As": "Admin",
+  "Processed Date": "2024-05-05"
+}]

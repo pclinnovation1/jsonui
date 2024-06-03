@@ -1,0 +1,6 @@
+_id,Provider,Description,Status,Actions
+665989868cfe62aac5d9b832,Google Translation,Enables Google language translation.,Not Enabled,Configure
+665989868cfe62aac5d9b833,Microsoft Translation,Enables Microsoft language translation.,Enabled,Configure
+665989868cfe62aac5d9b834,Amazon Translate,Enables Amazon language translation.,Not Enabled,Configure
+665989868cfe62aac5d9b835,IBM Watson Translate,Enables IBM Watson language translation.,Enabled,Configure
+665989868cfe62aac5d9b836,DeepL Translator,Enables DeepL language translation.,Not Enabled,Configure

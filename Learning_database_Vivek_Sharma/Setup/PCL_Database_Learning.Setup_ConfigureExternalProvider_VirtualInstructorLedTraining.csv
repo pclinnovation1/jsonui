@@ -1,0 +1,5 @@
+_id,Provider,Description,Status,Actions
+66598a312baa32f02928d601,Adobe Connect,Enables Adobe Connect hosted virtual classrooms.,Not Enabled,Configure
+66598a312baa32f02928d602,WebEx,Enables integration with WebEx for virtual classroom capabilities.,Enabled,Configure
+66598a312baa32f02928d603,Zoom,Enables Zoom hosted virtual classrooms.,Not Enabled,Configure
+66598a312baa32f02928d604,Microsoft Teams,Enables integration with Microsoft Teams for virtual classroom capabilities.,Not Enabled,Configure
