@@ -1,0 +1,2 @@
+_id,Initiative Name,Initiative Status,Initiative Type,Initiative Start Date,Initiative Stop Date,Overdue Assignments,Incomplete Assignments,Assigned By,Created by Name,Created Date,Completed Assignments,Learners with Pending Evaluation,Last Assigned Date,Person Number,Initiative Number,Run As,Processed Date,Learning Item Additional Attributes
+665d913ef0ccc82ed42a3283,AI Training Initiative,Active,Mandatory,2023-10-01,2024-10-01,2,5,John Smith,Admin,2023-09-01,20,3,2024-01-15,P12345,IN12345,Admin,2023-12-01,None

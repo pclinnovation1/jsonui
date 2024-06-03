@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "665d8d6f213f9430d61db425"
+  },
+  "Processed Date": "2023-12-01",
+  "Access Group Relation Number": "AGR123",
+  "Run As": "Admin",
+  "Self-Service Price": 199.99,
+  "Manager Request Activation": "True",
+  "Manager Assignment": "John Doe",
+  "Learner Request Activation": "True",
+  "Show Learner Request Form": "True",
+  "Self-Assignment": "False",
+  "Access Group Type": "Type 1",
+  "Payment Type": "Credit Card",
+  "View Mode": "ReadOnly",
+  "Access Group Number": "AGN123",
+  "Access Group Name": "Group A",
+  "Priority": 1
+}]

@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "66585ec7a506f73b1d5ea8cb"
+  },
+  "Part of a Specialization": "AI Specialization",
+  "Publish End Date": "2024-12-31",
+  "Publish Start Date": "2024-01-01",
+  "Number of Active Offerings": 5,
+  "Featured On": "Homepage",
+  "Featured": true,
+  "Completed Learners": 120,
+  "Active Learners": 150,
+  "Course Number": "C12345",
+  "Course Title": "Artificial Intelligence"
+}]
