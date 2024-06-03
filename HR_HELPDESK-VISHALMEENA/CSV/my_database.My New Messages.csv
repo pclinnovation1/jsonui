@@ -1,0 +1,21 @@
+_id,Subject,Sender,Date Received,Other Correspondents[0],Status,Message Count,Recommended Action
+66585d360975fcba4c6937a7,Project Update,Alice Johnson,2024-05-25,Bob Smith,Unread,3,Review
+66585d360975fcba4c6937a8,Meeting Reminder,Bob Smith,2024-05-24,Alice Johnson,Read,1,Acknowledge
+66585d360975fcba4c6937a9,Budget Report,Charlie Brown,2024-05-23,Diana Prince,Unread,2,Approve
+66585d360975fcba4c6937aa,Weekly Summary,Diana Prince,2024-05-22,Charlie Brown,Read,1,Archive
+66585d360975fcba4c6937ab,Client Feedback,Edward Nigma,2024-05-21,Felicia Hardy,Unread,4,Respond
+66585d360975fcba4c6937ac,System Update,Frank Castle,2024-05-20,Jessica Jones,Read,2,Review
+66585d360975fcba4c6937ad,Training Schedule,Gwen Stacy,2024-05-19,Peter Parker,Unread,3,Acknowledge
+66585d360975fcba4c6937ae,New Hire Orientation,Harry Osborn,2024-05-18,Mary Jane Watson,Read,1,Archive
+66585d360975fcba4c6937af,Project Deadline,Ivy Pepper,2024-05-17,Harvey Dent,Unread,2,Review
+66585d360975fcba4c6937b0,Marketing Plan,Jessica Jones,2024-05-16,Luke Cage,Read,1,Approve
+66585d360975fcba4c6937b1,Sales Report,Karen Page,2024-05-15,Matt Murdock,Unread,3,Review
+66585d360975fcba4c6937b2,Event Invitation,Logan Howlett,2024-05-14,Jean Grey,Read,2,Respond
+66585d360975fcba4c6937b3,Policy Update,Misty Knight,2024-05-13,Colleen Wing,Unread,1,Acknowledge
+66585d360975fcba4c6937b4,Team Outing,Ned Leeds,2024-05-12,Betty Brant,Read,2,Respond
+66585d360975fcba4c6937b5,Project Plan,Otto Octavius,2024-05-11,Max Dillon,Unread,4,Approve
+66585d360975fcba4c6937b6,Holiday Schedule,Peter Parker,2024-05-10,Gwen Stacy,Read,1,Archive
+66585d360975fcba4c6937b7,Budget Approval,Quentin Beck,2024-05-09,Adrian Toomes,Unread,2,Approve
+66585d360975fcba4c6937b8,Project Launch,Reed Richards,2024-05-08,Sue Storm,Read,3,Review
+66585d360975fcba4c6937b9,Performance Review,Steve Rogers,2024-05-07,Tony Stark,Unread,1,Respond
+66585d360975fcba4c6937ba,Client Meeting,Tony Stark,2024-05-06,Pepper Potts,Read,2,Acknowledge

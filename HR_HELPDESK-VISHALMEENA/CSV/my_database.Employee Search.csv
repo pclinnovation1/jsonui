@@ -1,0 +1,21 @@
+_id,Status,Name,Assignment Name,Assignment Number,Assignment Type,Email,Action
+665859f5ae76af9d5c91cc88,Active,John Doe,Project Alpha,A123,Full-Time,john.doe@oracle.com,Edit
+665859f5ae76af9d5c91cc89,Inactive,Jane Smith,Project Beta,B456,Part-Time,jane.smith@oracle.com,Edit
+665859f5ae76af9d5c91cc8a,Active,Robert Brown,Project Gamma,C789,Contractor,robert.brown@oracle.com,Edit
+665859f5ae76af9d5c91cc8b,Active,Alice Johnson,Project Delta,D101,Full-Time,alice.johnson@oracle.com,Edit
+665859f5ae76af9d5c91cc8c,Inactive,Chris Lee,Project Epsilon,E202,Part-Time,chris.lee@oracle.com,Edit
+665859f5ae76af9d5c91cc8d,Active,Patricia Brown,Project Zeta,F303,Contractor,patricia.brown@oracle.com,Edit
+665859f5ae76af9d5c91cc8e,Inactive,Michael Davis,Project Eta,G404,Full-Time,michael.davis@oracle.com,Edit
+665859f5ae76af9d5c91cc8f,Active,Sarah Wilson,Project Theta,H505,Part-Time,sarah.wilson@oracle.com,Edit
+665859f5ae76af9d5c91cc90,Inactive,David Martinez,Project Iota,I606,Contractor,david.martinez@oracle.com,Edit
+665859f5ae76af9d5c91cc91,Active,Linda Anderson,Project Kappa,J707,Full-Time,linda.anderson@oracle.com,Edit
+665859f5ae76af9d5c91cc92,Inactive,James Rodriguez,Project Lambda,K808,Part-Time,james.rodriguez@oracle.com,Edit
+665859f5ae76af9d5c91cc93,Active,Elizabeth Garcia,Project Mu,L909,Contractor,elizabeth.garcia@oracle.com,Edit
+665859f5ae76af9d5c91cc94,Inactive,Richard Hernandez,Project Nu,M010,Full-Time,richard.hernandez@oracle.com,Edit
+665859f5ae76af9d5c91cc95,Active,Susan Moore,Project Xi,N111,Part-Time,susan.moore@oracle.com,Edit
+665859f5ae76af9d5c91cc96,Inactive,Thomas Taylor,Project Omicron,O212,Contractor,thomas.taylor@oracle.com,Edit
+665859f5ae76af9d5c91cc97,Active,Barbara Martinez,Project Pi,P313,Full-Time,barbara.martinez@oracle.com,Edit
+665859f5ae76af9d5c91cc98,Inactive,Joseph Anderson,Project Rho,Q414,Part-Time,joseph.anderson@oracle.com,Edit
+665859f5ae76af9d5c91cc99,Active,Lisa Thomas,Project Sigma,R515,Contractor,lisa.thomas@oracle.com,Edit
+665859f5ae76af9d5c91cc9a,Inactive,Steven White,Project Tau,S616,Full-Time,steven.white@oracle.com,Edit
+665859f5ae76af9d5c91cc9b,Active,Karen Harris,Project Upsilon,T717,Part-Time,karen.harris@oracle.com,Edit

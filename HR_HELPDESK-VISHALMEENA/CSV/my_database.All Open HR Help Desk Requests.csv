@@ -1,0 +1,50 @@
+_id,Request Number,Subject,Severity,Status,Last Updated Date,Assigned To
+665741f107092389e0a80217,HRHD056013,Test My Earned Leave,Low,In Progress,2024-05-23T09:41:00Z,Casey Brown
+665741f107092389e0a80218,HRHD052015,Employee is consistently late,High,Waiting,2024-04-17T13:57:00Z,Elizabeth DirectorHRHD
+665741f107092389e0a80219,HRHD055014,Workplace harassment,High,New,2024-04-17T13:54:00Z,Elizabeth DirectorHRHD
+665741f107092389e0a8021a,HRHD039008,Heavier workload,Medium,New,2024-04-17T13:53:00Z,Curtis Feitty
+665741f107092389e0a8021b,HRHD052014,back pain at workplace,Low,Waiting,2024-04-17T13:47:00Z,Mike Finkle
+665741f107092389e0a8021c,HRHD046016,Tennis elbow pain,High,New,2024-04-17T13:45:00Z,AlTamimie Adel
+665741f107092389e0a8021d,HRHD054017,Tennis Elbow Pain during work,Low,New,2024-04-17T13:53:00Z,Anthony Brecek
+665741f107092389e0a8021e,HRHD052016,Mr S's Unpredictable behavior,High,In Progress,2024-04-17T15:31:00Z,Elizabeth DirectorHRHD
+665741f107092389e0a8021f,HRHD045013,Proof of address letter,Medium,Waiting,2024-04-17T15:29:00Z,Curtis Feitty
+665741f107092389e0a80220,HRHD052012,Can Employee Distribute,Low,New,2024-04-16T09:32:00Z,Janice AgentHRHD
+665741f107092389e0a80221,HRHD054013,Pay Issues,Low,New,2024-04-16T09:03:00Z,Curtis Feitty
+665741f107092389e0a80222,HRHD053014,How many days of accrued leave,Low,In Progress,2024-03-20T14:29:00Z,Curtis Feitty
+665741f107092389e0a80223,HRHD053013,Parental Leave,Low,New,2024-03-18T11:21:00Z,Curtis Feitty
+665741f107092389e0a80224,HRHD053009,Leave Donation,Low,In Progress,2024-02-21T10:48:00Z,Curtis Feitty
+665741f107092389e0a80225,HRHD053010,Parental Leave,Low,New,2024-02-21T07:41:00Z,Curtis Feitty
+665741f107092389e0a80226,HRHD051009,I am close to burn out,Low,New,2024-02-21T03:06:00Z,Elizabeth DirectorHRHD
+665741f107092389e0a80227,HRHD052017,A hostile work environment,High,Waiting,2024-02-21T15:03:00Z,Curtis Feitty
+665741f107092389e0a80228,HRHD052011,Do you offer PTO? I need,Low,New,2024-02-21T15:02:00Z,Mike Finkle
+665741f107092389e0a80229,HRHD039009,A hostile work environment,Low,New,2024-02-16T21:00:00Z,AlTamimie Adel
+665741f107092389e0a8022a,HRHD044009,Proof of address letter,Low,New,2024-02-16T20:18:00Z,AlTamimie Adel
+665741f107092389e0a8022b,HRHD045012,Salary Advance,High,New,2024-02-16T20:18:00Z,AlTamimie Adel
+665741f107092389e0a8022c,HRHD049009,Parental Leave,Low,New,2024-02-16T20:18:00Z,AlTamimie Adel
+665741f107092389e0a8022d,HRHD049010,How many days of accrued leave,Low,In Progress,2024-02-16T20:17:00Z,AlTamimie Adel
+665741f107092389e0a8022e,HRHD045017,Need Sick Leave Lower back pain,Low,New,2024-02-16T20:17:00Z,AlTamimie Adel
+665741f107092389e0a8022f,HRHD046017,Heavier workload,High,In Progress,2024-02-16T20:17:00Z,AlTamimie Adel
+665741f107092389e0a80230,HRHD048009,What is the PTO policy?,Low,New,2024-02-16T20:16:00Z,AlTamimie Adel
+665741f107092389e0a80231,HRHD048014,I still need to take time off,Low,New,2024-02-16T20:14:00Z,AlTamimie Adel
+665741f107092389e0a80232,HRHD048015,Do you offer PTO? I need,Low,New,2024-02-16T20:13:00Z,AlTamimie Adel
+665741f107092389e0a80233,HRHD044015,Glass was broken due to,Low,New,2024-02-15T17:40:00Z,AlTamimie Adel
+665741f107092389e0a80234,HRHD045016,Work injury while working,High,New,2023-07-19T09:55:00Z,Anthony Brecek
+665741f107092389e0a80235,HRHD045010,I have uploaded my ESI card,Low,New,2023-07-19T09:55:00Z,Anthony Brecek
+665741f107092389e0a80236,HRHD045011,Can I delete / End date,Low,New,2023-07-18T22:34:00Z,AlTamimie Adel
+665741f107092389e0a80237,HRHD045021,Supplemental life is still,Medium,New,2023-07-18T22:34:00Z,AlTamimie Adel
+665741f107092389e0a80238,HRHD046010,Can I delete / End date,Low,New,2023-07-18T21:42:00Z,AlTamimie Adel
+665741f107092389e0a80239,HRHD045018,Tennis Elbow Pain during work,Medium,New,2023-07-18T21:18:00Z,Anthony Brecek
+665741f107092389e0a8023a,HRHD045014,Employee is consistently late,High,New,2023-07-18T13:13:00Z,Curtis Feitty
+665741f107092389e0a8023b,HRHD045020,Employee has been absent,High,New,2023-07-17T11:05:00Z,Curtis Feitty
+665741f107092389e0a8023c,HRHD045019,Overtime calculation,High,New,2023-07-17T11:05:00Z,AlTamimie Adel
+665741f107092389e0a8023d,HRHD044008,Less Salary,Low,In Progress,2023-05-25T01:48:00Z,Curtis Feitty
+665741f107092389e0a8023e,HRHD043010,Employee is consistently late,Low,In Progress,2023-05-25T01:48:00Z,Curtis Feitty
+665741f107092389e0a8023f,HRHD043009,Mr S's Unpredictable behavior,Medium,In Progress,2023-05-25T01:45:00Z,Curtis Feitty
+665741f107092389e0a80240,HRHD043008,Heavier workload,High,In Progress,2023-05-25T01:45:00Z,Curtis Feitty
+665741f107092389e0a80241,HRHD044018,I need to take medical leave,High,Waiting,2023-05-24T19:18:00Z,Mike Finkle
+665741f107092389e0a80242,HRHD044013,Can I delete / End date,Low,New,2023-05-23T23:30:00Z,AlTamimie Adel
+665741f107092389e0a80243,HRHD044012,Can Employee Distribute,Low,New,2023-05-23T23:29:00Z,Martin Lletget
+665741f107092389e0a80244,HRHD044010,Overtime calculation,Medium,New,2023-05-23T23:29:00Z,AlTamimie Adel
+665741f107092389e0a80245,HRHD044011,Salary Advance,Medium,New,2023-05-23T23:27:00Z,Martin Lletget
+665741f107092389e0a80246,HRHD044016,Tennis Elbow Pain during work,High,New,2023-05-23T23:19:00Z,Mike Finkle
+665741f107092389e0a80247,HRHD044019,Work injury while working,High,New,2023-05-23T23:17:00Z,Mike Finkle

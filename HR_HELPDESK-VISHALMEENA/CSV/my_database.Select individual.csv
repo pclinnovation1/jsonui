@@ -1,0 +1,11 @@
+_id,Name,Registry ID,Role,E-Mail,Organization,Manager
+665d80dd5c18f5b90db3683e,Alice Johnson,001,Project Manager,alice.johnson@example.com,"Black Creek Consulting, Ltd.",Bob Smith
+665d80dd5c18f5b90db3683f,Bob Smith,002,Senior Consultant,bob.smith@example.com,"Black Creek Consulting, Ltd.",Carol White
+665d80dd5c18f5b90db36840,Carol White,003,HR Manager,carol.white@example.com,Chief HR Officer,David Brown
+665d80dd5c18f5b90db36841,David Brown,004,Developer,david.brown@example.com,"Inuit, Inc.",Eve Green
+665d80dd5c18f5b90db36842,Eve Green,005,QA Engineer,eve.green@example.com,"Isis Consulting Group, Inc.",Frank Black
+665d80dd5c18f5b90db36843,Frank Black,006,Product Owner,frank.black@example.com,"Puma Technology, Inc.",Grace Grey
+665d80dd5c18f5b90db36844,Grace Grey,007,Business Analyst,grace.grey@example.com,"Total Software Solutions, Inc.",Hank White
+665d80dd5c18f5b90db36845,Hank White,008,IT Support,hank.white@example.com,APAC Direct Sales,Ivy Blue
+665d80dd5c18f5b90db36846,Ivy Blue,009,Sales Manager,ivy.blue@example.com,APAC Sales Consulting,Jack Green
+665d80dd5c18f5b90db36847,Jack Green,010,Marketing Specialist,jack.green@example.com,APEX Communications,Karen Black
