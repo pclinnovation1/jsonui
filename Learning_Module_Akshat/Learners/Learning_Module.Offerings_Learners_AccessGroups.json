@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "6658666471f10625b4dfd752"
+  },
+  "Access Group Name": "Group A",
+  "Access Group Type": "Type 1",
+  "Learner Request Activation": true,
+  "Manager Assignment": "John Doe",
+  "Manager Request Activation": true,
+  "Payment Type": "Credit Card",
+  "Priority": 1,
+  "Run As": "Admin",
+  "Self-Assignment": false,
+  "Self-Service Price": 199.99,
+  "View Mode": "ReadOnly"
+}]

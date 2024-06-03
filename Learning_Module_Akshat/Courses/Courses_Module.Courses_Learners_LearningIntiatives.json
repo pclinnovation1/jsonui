@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "665d913ef0ccc82ed42a3283"
+  },
+  "Initiative Name": "AI Training Initiative",
+  "Initiative Status": "Active",
+  "Initiative Type": "Mandatory",
+  "Initiative Start Date": "2023-10-01",
+  "Initiative Stop Date": "2024-10-01",
+  "Overdue Assignments": 2,
+  "Incomplete Assignments": 5,
+  "Assigned By": "John Smith",
+  "Created by Name": "Admin",
+  "Created Date": "2023-09-01",
+  "Completed Assignments": 20,
+  "Learners with Pending Evaluation": 3,
+  "Last Assigned Date": "2024-01-15",
+  "Person Number": "P12345",
+  "Initiative Number": "IN12345",
+  "Run As": "Admin",
+  "Processed Date": "2023-12-01",
+  "Learning Item Additional Attributes": "None"
+}]

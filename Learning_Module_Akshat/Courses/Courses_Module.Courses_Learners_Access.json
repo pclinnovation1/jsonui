@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "665d8b351b4d188da95dde6f"
+  },
+  "Name": "Basic Access",
+  "Access Group Name": "Group A",
+  "View Mode": "ReadOnly",
+  "Self-Assignment": "False",
+  "Show Learner Request Form": "True",
+  "Learner Request Activation": "True",
+  "Manager Assignment": "John Doe",
+  "Manager Request Activation": "True"
+}]
