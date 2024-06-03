@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "66585d91e9ed8f29c935f34c"
+  },
+  "Offering Number": "O12345",
+  "Offering Title": "Advanced AI Techniques",
+  "Course Title": "Artificial Intelligence",
+  "Active Learners": 150,
+  "Completed Learners": 120,
+  "Publish Start Date": "2024-01-01",
+  "Publish End Date": "2024-12-31",
+  "Offering End Date": "2024-12-31",
+  "Offering Start Date": "2024-01-01",
+  "Maximum Capacity": 200,
+  "Minimum Capacity": 10,
+  "Payment Type": "Credit Card",
+  "Self-Service Price": 499.99,
+  "Last Update Date": "2024-05-30",
+  "Last Updated By": "Admin",
+  "Creation Date": "2023-12-01",
+  "Created By": "Admin",
+  "Language": "English",
+  "Has Evaluation": true,
+  "Offering Coordinator": "John Doe",
+  "Primary Classroom": "Room 101",
+  "Expected Effort": 40,
+  "Offered Format": "Online"
+}]
