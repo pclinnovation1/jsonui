@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "665db04141868afe4a9a3166"
+  },
+  "name": "Linda Swift",
+  "career_statement": "I have extensive management experience and an expert in the fields of Management, Talent, and HCM",
+  "career_outlook": {
+    "current_role": {
+      "title": "Vice President",
+      "description": "Directs overall strategic operations for program areas and assists in growth and development of staff as well as the overall organization."
+    },
+    "careers_of_interest": [
+      {
+        "title": "Human Resources Specialist",
+        "description": "Specializes in attracting, developing and retaining motivated employees by researching, recommending, and implementing human resource programs."
+      }
+    ]
+  },
+  "career_preferences": {
+    "next_career_move": "3 to 5 years",
+    "preferred_job_function": "Administrative",
+    "preferred_job_family": "Human Resources"
+  },
+  "work_requirements": {
+    "travel_domestically": "Yes, 50%",
+    "travel_internationally": "Yes, 50%",
+    "willing_to_relocate": "Yes",
+    "first_preferred_location": "Headquarters",
+    "willing_to_consider": "Yes, Flexible Schedule"
+  }
+}]

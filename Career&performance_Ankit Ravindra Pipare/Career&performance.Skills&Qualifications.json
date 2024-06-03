@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "6659a9ed10f8231cd1a913ea"
+  },
+  "name": "Hikari Kato",
+  "role": "Systems Analyst",
+  "profile_strength": {
+    "completed_sections": 0,
+    "total_sections": 16
+  },
+  "sections": {
+    "Career Statement": "Add Career Statement.",
+    "Skills": "List your skills here.",
+    "Qualifications": "List your qualifications here.",
+    "Areas of Study": "List areas of study here.",
+    "Career Preferences": "List career preferences here.",
+    "Competencies": "List competencies here.",
+    "Degrees": "List degrees here.",
+    "Education Levels": "List education levels here.",
+    "Faculty Information HE US": "List faculty information here.",
+    "Honors and Awards": "List honors and awards here.",
+    "Languages": "List languages here.",
+    "Licenses and Certifications": "List licenses and certifications here.",
+    "Memberships": "List memberships here.",
+    "Prescribed Responsibilities": "List prescribed responsibilities here.",
+    "Previous Employment": "List previous employment here.",
+    "Special Projects": "List special projects here.",
+    "Work Requirements": "List work requirements here."
+  }
+}]

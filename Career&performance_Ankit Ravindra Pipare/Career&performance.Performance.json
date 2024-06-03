@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "665dab80ed02da8ba16834c4"
+  },
+  "name": "Linda Swift",
+  "role": "Employee",
+  "check_ins": {
+    "check_in_with": {
+      "name": "Henry Jones",
+      "title": "Senior Vice President"
+    },
+    "business_title": "Vice President of Talent",
+    "review_period": "2024 Annual Cycle",
+    "template": "Standard Check-In Template",
+    "date": "2024-06-03",
+    "agenda": "Discussion tpoic"
+  },
+  "performance_documents": {
+    "review_period": "2024 Annual Cycle",
+    "document_name": "Mid-Year Review",
+    "manager": "Henry Jones",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "description": "Mid-year review document for assessing performance and setting goals for the rest of the year."
+  }
+}]

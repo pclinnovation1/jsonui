@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "665da60d62fcfff3bdff31ad"
+  },
+  "name": "Linda Swift",
+  "review_period": "2024 Annual Cycle",
+  "goal_plan": "Goal Plan 2024",
+  "goals": [
+    {
+      "category": "Performance",
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "title": "Managing Vision and Purpose",
+      "description": "Managers must define the team direction and develop specific objectives to ensure implementation of the desired strategy in line with the overall organizational Vision. This should be clear and communicated to all team members.",
+      "weight": 20,
+      "assigned_by": "Henry Jones",
+      "status": "In progress"
+    },
+    {
+      "category": "Development",
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "title": "Conduct HCM research project",
+      "description": "Carry out piece of research into an aspect of HCM strategy critical to the ongoing growth and success of the organization.",
+      "assigned_by": "Betty PayrollAdmin",
+      "status": "In progress"
+    }
+  ]
+}]
