@@ -1,0 +1,71 @@
+_id,requisition_id,Use,RecruitingType,PrimaryLocation,RequisitionTemplate,RequisitionTitle,NumberOfOpenings,HiringManager,Recruiter
+66585c0551ca29d97c348097,1,Existing Requisition,Professional,New York,Template A,Software Engineer,Limited,Jane Smith,Bob Johnson
+66585c0551ca29d97c348098,2,Blank Requisition,Campus,San Francisco,Template B,Intern,Unlimited,Michael Johnson,Sara Lee
+66585c0551ca29d97c348099,3,Existing Requisition,Professional,Los Angeles,Template C,Data Scientist,Limited,Alice Brown,John Green
+66585c0551ca29d97c34809a,4,Blank Requisition,Campus,Chicago,Template D,Marketing Intern,Unlimited,Laura White,David Black
+66585c0551ca29d97c34809b,5,Existing Requisition,Professional,Houston,Template E,Product Manager,Limited,Sara Blue,Nancy Grey
+66585c0551ca29d97c34809c,6,Blank Requisition,Campus,Austin,Template F,Software Intern,Unlimited,Greg Orange,Emma Yellow
+66585c0551ca29d97c34809d,7,Existing Requisition,Professional,Miami,Template G,UX Designer,Limited,Oliver Pink,Harry Red
+66585c0551ca29d97c34809e,8,Blank Requisition,Campus,Denver,Template H,Finance Intern,Unlimited,Liam Cyan,Eve Violet
+66585c0551ca29d97c34809f,9,Existing Requisition,Professional,Seattle,Template I,DevOps Engineer,Limited,Mason Magenta,Sophia Indigo
+66585c0551ca29d97c3480a0,10,Blank Requisition,Campus,Boston,Template J,Business Analyst Intern,Unlimited,Ella Burgundy,James Lime
+66585c0668f8568e8ddeaac1,1,Existing Requisition,Professional,New York,Template A,Software Engineer,Limited,Jane Smith,Bob Johnson
+66585c0668f8568e8ddeaac2,2,Blank Requisition,Campus,San Francisco,Template B,Intern,Unlimited,Michael Johnson,Sara Lee
+66585c0668f8568e8ddeaac3,3,Existing Requisition,Professional,Los Angeles,Template C,Data Scientist,Limited,Alice Brown,John Green
+66585c0668f8568e8ddeaac4,4,Blank Requisition,Campus,Chicago,Template D,Marketing Intern,Unlimited,Laura White,David Black
+66585c0668f8568e8ddeaac5,5,Existing Requisition,Professional,Houston,Template E,Product Manager,Limited,Sara Blue,Nancy Grey
+66585c0668f8568e8ddeaac6,6,Blank Requisition,Campus,Austin,Template F,Software Intern,Unlimited,Greg Orange,Emma Yellow
+66585c0668f8568e8ddeaac7,7,Existing Requisition,Professional,Miami,Template G,UX Designer,Limited,Oliver Pink,Harry Red
+66585c0668f8568e8ddeaac8,8,Blank Requisition,Campus,Denver,Template H,Finance Intern,Unlimited,Liam Cyan,Eve Violet
+66585c0668f8568e8ddeaac9,9,Existing Requisition,Professional,Seattle,Template I,DevOps Engineer,Limited,Mason Magenta,Sophia Indigo
+66585c0668f8568e8ddeaaca,10,Blank Requisition,Campus,Boston,Template J,Business Analyst Intern,Unlimited,Ella Burgundy,James Lime
+66585c078464cae3e6a67c32,1,Existing Requisition,Professional,New York,Template A,Software Engineer,Limited,Jane Smith,Bob Johnson
+66585c078464cae3e6a67c33,2,Blank Requisition,Campus,San Francisco,Template B,Intern,Unlimited,Michael Johnson,Sara Lee
+66585c078464cae3e6a67c34,3,Existing Requisition,Professional,Los Angeles,Template C,Data Scientist,Limited,Alice Brown,John Green
+66585c078464cae3e6a67c35,4,Blank Requisition,Campus,Chicago,Template D,Marketing Intern,Unlimited,Laura White,David Black
+66585c078464cae3e6a67c36,5,Existing Requisition,Professional,Houston,Template E,Product Manager,Limited,Sara Blue,Nancy Grey
+66585c078464cae3e6a67c37,6,Blank Requisition,Campus,Austin,Template F,Software Intern,Unlimited,Greg Orange,Emma Yellow
+66585c078464cae3e6a67c38,7,Existing Requisition,Professional,Miami,Template G,UX Designer,Limited,Oliver Pink,Harry Red
+66585c078464cae3e6a67c39,8,Blank Requisition,Campus,Denver,Template H,Finance Intern,Unlimited,Liam Cyan,Eve Violet
+66585c078464cae3e6a67c3a,9,Existing Requisition,Professional,Seattle,Template I,DevOps Engineer,Limited,Mason Magenta,Sophia Indigo
+66585c078464cae3e6a67c3b,10,Blank Requisition,Campus,Boston,Template J,Business Analyst Intern,Unlimited,Ella Burgundy,James Lime
+66585c10844062519ea09132,1,Existing Requisition,Professional,New York,Template A,Software Engineer,Limited,Jane Smith,Bob Johnson
+66585c10844062519ea09133,2,Blank Requisition,Campus,San Francisco,Template B,Intern,Unlimited,Michael Johnson,Sara Lee
+66585c10844062519ea09134,3,Existing Requisition,Professional,Los Angeles,Template C,Data Scientist,Limited,Alice Brown,John Green
+66585c10844062519ea09135,4,Blank Requisition,Campus,Chicago,Template D,Marketing Intern,Unlimited,Laura White,David Black
+66585c10844062519ea09136,5,Existing Requisition,Professional,Houston,Template E,Product Manager,Limited,Sara Blue,Nancy Grey
+66585c10844062519ea09137,6,Blank Requisition,Campus,Austin,Template F,Software Intern,Unlimited,Greg Orange,Emma Yellow
+66585c10844062519ea09138,7,Existing Requisition,Professional,Miami,Template G,UX Designer,Limited,Oliver Pink,Harry Red
+66585c10844062519ea09139,8,Blank Requisition,Campus,Denver,Template H,Finance Intern,Unlimited,Liam Cyan,Eve Violet
+66585c10844062519ea0913a,9,Existing Requisition,Professional,Seattle,Template I,DevOps Engineer,Limited,Mason Magenta,Sophia Indigo
+66585c10844062519ea0913b,10,Blank Requisition,Campus,Boston,Template J,Business Analyst Intern,Unlimited,Ella Burgundy,James Lime
+66585c29a8e6469122aa6717,1,Existing Requisition,Professional,New York,Template A,Software Engineer,Limited,Jane Smith,Bob Johnson
+66585c29a8e6469122aa6718,2,Blank Requisition,Campus,San Francisco,Template B,Intern,Unlimited,Michael Johnson,Sara Lee
+66585c29a8e6469122aa6719,3,Existing Requisition,Professional,Los Angeles,Template C,Data Scientist,Limited,Alice Brown,John Green
+66585c29a8e6469122aa671a,4,Blank Requisition,Campus,Chicago,Template D,Marketing Intern,Unlimited,Laura White,David Black
+66585c29a8e6469122aa671b,5,Existing Requisition,Professional,Houston,Template E,Product Manager,Limited,Sara Blue,Nancy Grey
+66585c29a8e6469122aa671c,6,Blank Requisition,Campus,Austin,Template F,Software Intern,Unlimited,Greg Orange,Emma Yellow
+66585c29a8e6469122aa671d,7,Existing Requisition,Professional,Miami,Template G,UX Designer,Limited,Oliver Pink,Harry Red
+66585c29a8e6469122aa671e,8,Blank Requisition,Campus,Denver,Template H,Finance Intern,Unlimited,Liam Cyan,Eve Violet
+66585c29a8e6469122aa671f,9,Existing Requisition,Professional,Seattle,Template I,DevOps Engineer,Limited,Mason Magenta,Sophia Indigo
+66585c29a8e6469122aa6720,10,Blank Requisition,Campus,Boston,Template J,Business Analyst Intern,Unlimited,Ella Burgundy,James Lime
+66585c3ca2f8255919fa2c5a,1,Existing Requisition,Professional,New York,Template A,Software Engineer,Limited,Jane Smith,Bob Johnson
+66585c3ca2f8255919fa2c5b,2,Blank Requisition,Campus,San Francisco,Template B,Intern,Unlimited,Michael Johnson,Sara Lee
+66585c3ca2f8255919fa2c5c,3,Existing Requisition,Professional,Los Angeles,Template C,Data Scientist,Limited,Alice Brown,John Green
+66585c3ca2f8255919fa2c5d,4,Blank Requisition,Campus,Chicago,Template D,Marketing Intern,Unlimited,Laura White,David Black
+66585c3ca2f8255919fa2c5e,5,Existing Requisition,Professional,Houston,Template E,Product Manager,Limited,Sara Blue,Nancy Grey
+66585c3ca2f8255919fa2c5f,6,Blank Requisition,Campus,Austin,Template F,Software Intern,Unlimited,Greg Orange,Emma Yellow
+66585c3ca2f8255919fa2c60,7,Existing Requisition,Professional,Miami,Template G,UX Designer,Limited,Oliver Pink,Harry Red
+66585c3ca2f8255919fa2c61,8,Blank Requisition,Campus,Denver,Template H,Finance Intern,Unlimited,Liam Cyan,Eve Violet
+66585c3ca2f8255919fa2c62,9,Existing Requisition,Professional,Seattle,Template I,DevOps Engineer,Limited,Mason Magenta,Sophia Indigo
+66585c3ca2f8255919fa2c63,10,Blank Requisition,Campus,Boston,Template J,Business Analyst Intern,Unlimited,Ella Burgundy,James Lime
+66585c4ef9bf5b5a6454a6ce,1,Existing Requisition,Professional,New York,Template A,Software Engineer,Limited,Jane Smith,Bob Johnson
+66585c4ef9bf5b5a6454a6cf,2,Blank Requisition,Campus,San Francisco,Template B,Intern,Unlimited,Michael Johnson,Sara Lee
+66585c4ef9bf5b5a6454a6d0,3,Existing Requisition,Professional,Los Angeles,Template C,Data Scientist,Limited,Alice Brown,John Green
+66585c4ef9bf5b5a6454a6d1,4,Blank Requisition,Campus,Chicago,Template D,Marketing Intern,Unlimited,Laura White,David Black
+66585c4ef9bf5b5a6454a6d2,5,Existing Requisition,Professional,Houston,Template E,Product Manager,Limited,Sara Blue,Nancy Grey
+66585c4ef9bf5b5a6454a6d3,6,Blank Requisition,Campus,Austin,Template F,Software Intern,Unlimited,Greg Orange,Emma Yellow
+66585c4ef9bf5b5a6454a6d4,7,Existing Requisition,Professional,Miami,Template G,UX Designer,Limited,Oliver Pink,Harry Red
+66585c4ef9bf5b5a6454a6d5,8,Blank Requisition,Campus,Denver,Template H,Finance Intern,Unlimited,Liam Cyan,Eve Violet
+66585c4ef9bf5b5a6454a6d6,9,Existing Requisition,Professional,Seattle,Template I,DevOps Engineer,Limited,Mason Magenta,Sophia Indigo
+66585c4ef9bf5b5a6454a6d7,10,Blank Requisition,Campus,Boston,Template J,Business Analyst Intern,Unlimited,Ella Burgundy,James Lime

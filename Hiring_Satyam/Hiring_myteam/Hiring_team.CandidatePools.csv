@@ -1,0 +1,2 @@
+_id,candidate_id,PoolName[0],Description[0],OwnershipType.Shared[0],TalentCommunityPool.Location[0],JobFamily[0],CandidatesType.External[0],CandidatesType.External[1],CandidatesType.Employee[0]
+665da8ad86bab328fa51be22,1,Engineering Pool,Pool for engineering candidates,Engineering Department,New York,Engineering,John Doe,Jane Smith,James Brown

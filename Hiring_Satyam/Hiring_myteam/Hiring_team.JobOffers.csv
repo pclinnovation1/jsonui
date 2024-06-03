@@ -1,0 +1,2 @@
+_id,candidate_id,JobOfferTeamRole.Role,CandidateType.External[0],BusinessUnit.BusinessUnitName.Irvine[0],Department.DepartmentName,WorkLocation.Location,Requisition.RequisitionTitle
+665da8ad86bab328fa51be24,1,Hiring Manager,John Doe,John Doe,Engineering,New York,Software Engineer

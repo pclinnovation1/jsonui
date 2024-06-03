@@ -1,0 +1,2 @@
+_id,candidate_id,CandidateName.FirstName,CandidateName.LastName,CandidateNumber,CandidateType.External,Phase.Reviewed[0],TalentCommunityLocation.PrimaryLocation[0],TalentCommunityJobFamily.JobFamily[0],Organization[0],Job.Position
+665da8ad86bab328fa51be23,1,John,Doe,C001,true,John Doe,New York,Engineering,Tech Corp,Software Engineer
