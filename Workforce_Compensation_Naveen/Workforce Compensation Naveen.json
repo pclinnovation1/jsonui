@@ -1,0 +1,356 @@
+[{
+  "_id": {
+    "$oid": "665da2f8518638cee3d785bd"
+  },
+  "PlanInfo": {
+    "Name of the Plan": "Annual Compensation Plan 2024",
+    "Status": {
+      "Status": "Active",
+      "ActionHistory": {
+        "Action": "Approved",
+        "ActionTakenBy": "John Doe",
+        "Comments": "Plan approved by the executive team"
+      },
+      "ManagerStatusReport": {
+        "Overview": {
+          "Status": "In Progress",
+          "Managers": 10,
+          "Percentage": "50%"
+        },
+        "CompareGroups": {
+          "Name": "Group A",
+          "PersonNumber": "12345",
+          "AssignmentNumber": "A123",
+          "ManagerStatus": "In Progress",
+          "DueDate": "31/12/24",
+          "HierarchyLevel": "Level 1",
+          "LegalEmployer": "Company A",
+          "Job": "Manager",
+          "Email": "manager@companya.com",
+          "WorkPhone": "123-456-7890",
+          "PlanAccess": "Full",
+          "ActionRequired": "None",
+          "Manager": "John Doe"
+        },
+        "Currency": "USD"
+      }
+    },
+    "LastApprovalAction": "Approved",
+    "AccessLevel": "Full",
+    "DueDate": "31/12/24"
+  },
+  "Tasks": [
+    "Reward",
+    "Promote",
+    "Communicate"
+  ],
+  "ApprovalChain": [
+    "Ajay Kumar",
+    "Danny Chow",
+    "Michelle Shannon"
+  ],
+  "Summary": {
+    "NameOfPlan": "Annual Compensation Plan 2024",
+    "Remaining": 50000,
+    "OverallBudget": 100000,
+    "PercentageUsed": "50%"
+  }
+},
+{
+  "_id": {
+    "$oid": "665da2f8518638cee3d785be"
+  },
+  "PlanInfo": {
+    "Name of the Plan": "Mid-Year Compensation Plan 2024",
+    "Status": {
+      "Status": "Pending",
+      "ActionHistory": {
+        "Action": "Reviewed",
+        "ActionTakenBy": "Jane Smith",
+        "Comments": "Plan reviewed and pending approval"
+      },
+      "ManagerStatusReport": {
+        "Overview": {
+          "Status": "Pending",
+          "Managers": 5,
+          "Percentage": "20%"
+        },
+        "CompareGroups": {
+          "Name": "Group B",
+          "PersonNumber": "67890",
+          "AssignmentNumber": "B678",
+          "ManagerStatus": "Pending",
+          "DueDate": "30/06/24",
+          "HierarchyLevel": "Level 2",
+          "LegalEmployer": "Company B",
+          "Job": "Senior Manager",
+          "Email": "seniormanager@companyb.com",
+          "WorkPhone": "987-654-3210",
+          "PlanAccess": "Restricted",
+          "ActionRequired": "Approval",
+          "Manager": "Jane Smith"
+        },
+        "Currency": "EUR"
+      }
+    },
+    "LastApprovalAction": "Reviewed",
+    "AccessLevel": "Restricted",
+    "DueDate": "30/06/24"
+  },
+  "Tasks": [
+    "Reward",
+    "Promote",
+    "Communicate",
+    "Performance Calibration"
+  ],
+  "ApprovalChain": [
+    "Jane Smith",
+    "Michael Brown",
+    "Susan Davis"
+  ],
+  "Summary": {
+    "NameOfPlan": "Mid-Year Compensation Plan 2024",
+    "Remaining": 30000,
+    "OverallBudget": 60000,
+    "PercentageUsed": "50%"
+  }
+},
+{
+  "_id": {
+    "$oid": "665da2f8518638cee3d785bf"
+  },
+  "PlanInfo": {
+    "Name of the Plan": "Q1 Compensation Plan 2024",
+    "Status": {
+      "Status": "Complete",
+      "ActionHistory": {
+        "Action": "Finalized",
+        "ActionTakenBy": "Emily Johnson",
+        "Comments": "Plan finalized and closed"
+      },
+      "ManagerStatusReport": {
+        "Overview": {
+          "Status": "Complete",
+          "Managers": 8,
+          "Percentage": "100%"
+        },
+        "CompareGroups": {
+          "Name": "Group C",
+          "PersonNumber": "11223",
+          "AssignmentNumber": "C112",
+          "ManagerStatus": "Complete",
+          "DueDate": "31/03/24",
+          "HierarchyLevel": "Level 3",
+          "LegalEmployer": "Company C",
+          "Job": "Director",
+          "Email": "director@companyc.com",
+          "WorkPhone": "321-654-9870",
+          "PlanAccess": "Full",
+          "ActionRequired": "None",
+          "Manager": "Emily Johnson"
+        },
+        "Currency": "GBP"
+      }
+    },
+    "LastApprovalAction": "Finalized",
+    "AccessLevel": "Full",
+    "DueDate": "31/03/24"
+  },
+  "Tasks": [
+    "Reward",
+    "Promote",
+    "Communicate",
+    "Performance Calibration",
+    "Models",
+    "View Reports"
+  ],
+  "ApprovalChain": [
+    "Emily Johnson",
+    "Thomas Lee",
+    "Patricia Wilson"
+  ],
+  "Summary": {
+    "NameOfPlan": "Q1 Compensation Plan 2024",
+    "Remaining": 0,
+    "OverallBudget": 200000,
+    "PercentageUsed": "100%"
+  }
+},
+{
+  "_id": {
+    "$oid": "665da4b6caf10b751359e300"
+  },
+  "PlanInfo": {
+    "Name of the Plan": "Annual Compensation Plan 2024",
+    "Status": {
+      "Status": "Active",
+      "ActionHistory": {
+        "Action": "Approved",
+        "ActionTakenBy": "John Doe",
+        "Comments": "Plan approved by the executive team"
+      },
+      "ManagerStatusReport": {
+        "Overview": {
+          "Status": "In Progress",
+          "Managers": 10,
+          "Percentage": "50%"
+        },
+        "CompareGroups": {
+          "Name": "Group A",
+          "PersonNumber": "12345",
+          "AssignmentNumber": "A123",
+          "ManagerStatus": "In Progress",
+          "DueDate": "31/12/24",
+          "HierarchyLevel": "Level 1",
+          "LegalEmployer": "Company A",
+          "Job": "Manager",
+          "Email": "manager@companya.com",
+          "WorkPhone": "123-456-7890",
+          "PlanAccess": "Full",
+          "ActionRequired": "None",
+          "Manager": "John Doe"
+        },
+        "Currency": "USD"
+      }
+    },
+    "LastApprovalAction": "Approved",
+    "AccessLevel": "Full",
+    "DueDate": "31/12/24"
+  },
+  "Tasks": [
+    "Reward",
+    "Promote",
+    "Communicate"
+  ],
+  "ApprovalChain": [
+    "Ajay Kumar",
+    "Danny Chow",
+    "Michelle Shannon"
+  ],
+  "Summary": {
+    "NameOfPlan": "Annual Compensation Plan 2024",
+    "Remaining": 50000,
+    "OverallBudget": 100000,
+    "PercentageUsed": "50%"
+  }
+},
+{
+  "_id": {
+    "$oid": "665da4b6caf10b751359e301"
+  },
+  "PlanInfo": {
+    "Name of the Plan": "Mid-Year Compensation Plan 2024",
+    "Status": {
+      "Status": "Pending",
+      "ActionHistory": {
+        "Action": "Reviewed",
+        "ActionTakenBy": "Jane Smith",
+        "Comments": "Plan reviewed and pending approval"
+      },
+      "ManagerStatusReport": {
+        "Overview": {
+          "Status": "Pending",
+          "Managers": 5,
+          "Percentage": "20%"
+        },
+        "CompareGroups": {
+          "Name": "Group B",
+          "PersonNumber": "67890",
+          "AssignmentNumber": "B678",
+          "ManagerStatus": "Pending",
+          "DueDate": "30/06/24",
+          "HierarchyLevel": "Level 2",
+          "LegalEmployer": "Company B",
+          "Job": "Senior Manager",
+          "Email": "seniormanager@companyb.com",
+          "WorkPhone": "987-654-3210",
+          "PlanAccess": "Restricted",
+          "ActionRequired": "Approval",
+          "Manager": "Jane Smith"
+        },
+        "Currency": "EUR"
+      }
+    },
+    "LastApprovalAction": "Reviewed",
+    "AccessLevel": "Restricted",
+    "DueDate": "30/06/24"
+  },
+  "Tasks": [
+    "Reward",
+    "Promote",
+    "Communicate",
+    "Performance Calibration"
+  ],
+  "ApprovalChain": [
+    "Jane Smith",
+    "Michael Brown",
+    "Susan Davis"
+  ],
+  "Summary": {
+    "NameOfPlan": "Mid-Year Compensation Plan 2024",
+    "Remaining": 30000,
+    "OverallBudget": 60000,
+    "PercentageUsed": "50%"
+  }
+},
+{
+  "_id": {
+    "$oid": "665da4b6caf10b751359e302"
+  },
+  "PlanInfo": {
+    "Name of the Plan": "Q1 Compensation Plan 2024",
+    "Status": {
+      "Status": "Complete",
+      "ActionHistory": {
+        "Action": "Finalized",
+        "ActionTakenBy": "Emily Johnson",
+        "Comments": "Plan finalized and closed"
+      },
+      "ManagerStatusReport": {
+        "Overview": {
+          "Status": "Complete",
+          "Managers": 8,
+          "Percentage": "100%"
+        },
+        "CompareGroups": {
+          "Name": "Group C",
+          "PersonNumber": "11223",
+          "AssignmentNumber": "C112",
+          "ManagerStatus": "Complete",
+          "DueDate": "31/03/24",
+          "HierarchyLevel": "Level 3",
+          "LegalEmployer": "Company C",
+          "Job": "Director",
+          "Email": "director@companyc.com",
+          "WorkPhone": "321-654-9870",
+          "PlanAccess": "Full",
+          "ActionRequired": "None",
+          "Manager": "Emily Johnson"
+        },
+        "Currency": "GBP"
+      }
+    },
+    "LastApprovalAction": "Finalized",
+    "AccessLevel": "Full",
+    "DueDate": "31/03/24"
+  },
+  "Tasks": [
+    "Reward",
+    "Promote",
+    "Communicate",
+    "Performance Calibration",
+    "Models",
+    "View Reports"
+  ],
+  "ApprovalChain": [
+    "Emily Johnson",
+    "Thomas Lee",
+    "Patricia Wilson"
+  ],
+  "Summary": {
+    "NameOfPlan": "Q1 Compensation Plan 2024",
+    "Remaining": 0,
+    "OverallBudget": 200000,
+    "PercentageUsed": "100%"
+  }
+}]
