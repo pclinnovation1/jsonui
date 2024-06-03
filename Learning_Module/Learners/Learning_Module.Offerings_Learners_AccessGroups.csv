@@ -1,2 +1,0 @@
-_id,Access Group Name,Access Group Type,Learner Request Activation,Manager Assignment,Manager Request Activation,Payment Type,Priority,Run As,Self-Assignment,Self-Service Price,View Mode
-6658666471f10625b4dfd752,Group A,Type 1,true,John Doe,true,Credit Card,1,Admin,false,199.99,ReadOnly
