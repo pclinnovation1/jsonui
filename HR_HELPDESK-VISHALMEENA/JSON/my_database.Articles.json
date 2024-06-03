@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "665d8fee16e2fcc5c7f25eff"
+  },
+  "Subject": "What is my current holiday balance?",
+  "Creator": "Mike Finkle",
+  "Problem Description": "So, you want to know what your current holiday balance is. The holiday year runs from January to December and you get a minimum of 20 days annual leave in line with the government regulations. You also get 8 bank holidays in England and Wales, 9 in Scotland, and 11 in the United States.",
+  "Resolution": "If you want to know what your current remaining balance is in real time then click below: Manage Absence Records. For additional details, please refer to these links:"
+},
+{
+  "_id": {
+    "$oid": "665d8fee16e2fcc5c7f25f00"
+  },
+  "Subject": "Leave of Absence",
+  "Creator": "Anthony Brecek",
+  "Problem Description": "How to take a leave of absence?",
+  "Resolution": "All benefits continue to be in force for the duration of your disability. You are responsible for the portion of premiums that are usually deducted from your paycheck"
+},
+{
+  "_id": {
+    "$oid": "665d8fee16e2fcc5c7f25f01"
+  },
+  "Subject": "Why has my overtime not been paid?",
+  "Creator": "Mike Finkle",
+  "Problem Description": "There are a variety of reasons why your overtime has not been paid. This could include the following: Time not entered before cut off (25th of each month) Your manager has not approved the time If these are both satisfied then please raise a ticket to the HR HelpDesk.",
+  "Resolution": ""
+}]

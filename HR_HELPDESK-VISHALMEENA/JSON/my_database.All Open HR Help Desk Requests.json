@@ -1,0 +1,539 @@
+[{
+  "_id": {
+    "$oid": "665741f107092389e0a80217"
+  },
+  "Request Number": "HRHD056013",
+  "Subject": "Test My Earned Leave",
+  "Severity": "Low",
+  "Status": "In Progress",
+  "Last Updated Date": "2024-05-23T09:41:00Z",
+  "Assigned To": "Casey Brown"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80218"
+  },
+  "Request Number": "HRHD052015",
+  "Subject": "Employee is consistently late",
+  "Severity": "High",
+  "Status": "Waiting",
+  "Last Updated Date": "2024-04-17T13:57:00Z",
+  "Assigned To": "Elizabeth DirectorHRHD"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80219"
+  },
+  "Request Number": "HRHD055014",
+  "Subject": "Workplace harassment",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2024-04-17T13:54:00Z",
+  "Assigned To": "Elizabeth DirectorHRHD"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8021a"
+  },
+  "Request Number": "HRHD039008",
+  "Subject": "Heavier workload",
+  "Severity": "Medium",
+  "Status": "New",
+  "Last Updated Date": "2024-04-17T13:53:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8021b"
+  },
+  "Request Number": "HRHD052014",
+  "Subject": "back pain at workplace",
+  "Severity": "Low",
+  "Status": "Waiting",
+  "Last Updated Date": "2024-04-17T13:47:00Z",
+  "Assigned To": "Mike Finkle"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8021c"
+  },
+  "Request Number": "HRHD046016",
+  "Subject": "Tennis elbow pain",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2024-04-17T13:45:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8021d"
+  },
+  "Request Number": "HRHD054017",
+  "Subject": "Tennis Elbow Pain during work",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-04-17T13:53:00Z",
+  "Assigned To": "Anthony Brecek"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8021e"
+  },
+  "Request Number": "HRHD052016",
+  "Subject": "Mr S's Unpredictable behavior",
+  "Severity": "High",
+  "Status": "In Progress",
+  "Last Updated Date": "2024-04-17T15:31:00Z",
+  "Assigned To": "Elizabeth DirectorHRHD"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8021f"
+  },
+  "Request Number": "HRHD045013",
+  "Subject": "Proof of address letter",
+  "Severity": "Medium",
+  "Status": "Waiting",
+  "Last Updated Date": "2024-04-17T15:29:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80220"
+  },
+  "Request Number": "HRHD052012",
+  "Subject": "Can Employee Distribute",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-04-16T09:32:00Z",
+  "Assigned To": "Janice AgentHRHD"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80221"
+  },
+  "Request Number": "HRHD054013",
+  "Subject": "Pay Issues",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-04-16T09:03:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80222"
+  },
+  "Request Number": "HRHD053014",
+  "Subject": "How many days of accrued leave",
+  "Severity": "Low",
+  "Status": "In Progress",
+  "Last Updated Date": "2024-03-20T14:29:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80223"
+  },
+  "Request Number": "HRHD053013",
+  "Subject": "Parental Leave",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-03-18T11:21:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80224"
+  },
+  "Request Number": "HRHD053009",
+  "Subject": "Leave Donation",
+  "Severity": "Low",
+  "Status": "In Progress",
+  "Last Updated Date": "2024-02-21T10:48:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80225"
+  },
+  "Request Number": "HRHD053010",
+  "Subject": "Parental Leave",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-21T07:41:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80226"
+  },
+  "Request Number": "HRHD051009",
+  "Subject": "I am close to burn out",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-21T03:06:00Z",
+  "Assigned To": "Elizabeth DirectorHRHD"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80227"
+  },
+  "Request Number": "HRHD052017",
+  "Subject": "A hostile work environment",
+  "Severity": "High",
+  "Status": "Waiting",
+  "Last Updated Date": "2024-02-21T15:03:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80228"
+  },
+  "Request Number": "HRHD052011",
+  "Subject": "Do you offer PTO? I need",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-21T15:02:00Z",
+  "Assigned To": "Mike Finkle"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80229"
+  },
+  "Request Number": "HRHD039009",
+  "Subject": "A hostile work environment",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T21:00:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8022a"
+  },
+  "Request Number": "HRHD044009",
+  "Subject": "Proof of address letter",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T20:18:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8022b"
+  },
+  "Request Number": "HRHD045012",
+  "Subject": "Salary Advance",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T20:18:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8022c"
+  },
+  "Request Number": "HRHD049009",
+  "Subject": "Parental Leave",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T20:18:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8022d"
+  },
+  "Request Number": "HRHD049010",
+  "Subject": "How many days of accrued leave",
+  "Severity": "Low",
+  "Status": "In Progress",
+  "Last Updated Date": "2024-02-16T20:17:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8022e"
+  },
+  "Request Number": "HRHD045017",
+  "Subject": "Need Sick Leave Lower back pain",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T20:17:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8022f"
+  },
+  "Request Number": "HRHD046017",
+  "Subject": "Heavier workload",
+  "Severity": "High",
+  "Status": "In Progress",
+  "Last Updated Date": "2024-02-16T20:17:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80230"
+  },
+  "Request Number": "HRHD048009",
+  "Subject": "What is the PTO policy?",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T20:16:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80231"
+  },
+  "Request Number": "HRHD048014",
+  "Subject": "I still need to take time off",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T20:14:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80232"
+  },
+  "Request Number": "HRHD048015",
+  "Subject": "Do you offer PTO? I need",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-16T20:13:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80233"
+  },
+  "Request Number": "HRHD044015",
+  "Subject": "Glass was broken due to",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2024-02-15T17:40:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80234"
+  },
+  "Request Number": "HRHD045016",
+  "Subject": "Work injury while working",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2023-07-19T09:55:00Z",
+  "Assigned To": "Anthony Brecek"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80235"
+  },
+  "Request Number": "HRHD045010",
+  "Subject": "I have uploaded my ESI card",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2023-07-19T09:55:00Z",
+  "Assigned To": "Anthony Brecek"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80236"
+  },
+  "Request Number": "HRHD045011",
+  "Subject": "Can I delete / End date",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2023-07-18T22:34:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80237"
+  },
+  "Request Number": "HRHD045021",
+  "Subject": "Supplemental life is still",
+  "Severity": "Medium",
+  "Status": "New",
+  "Last Updated Date": "2023-07-18T22:34:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80238"
+  },
+  "Request Number": "HRHD046010",
+  "Subject": "Can I delete / End date",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2023-07-18T21:42:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80239"
+  },
+  "Request Number": "HRHD045018",
+  "Subject": "Tennis Elbow Pain during work",
+  "Severity": "Medium",
+  "Status": "New",
+  "Last Updated Date": "2023-07-18T21:18:00Z",
+  "Assigned To": "Anthony Brecek"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8023a"
+  },
+  "Request Number": "HRHD045014",
+  "Subject": "Employee is consistently late",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2023-07-18T13:13:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8023b"
+  },
+  "Request Number": "HRHD045020",
+  "Subject": "Employee has been absent",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2023-07-17T11:05:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8023c"
+  },
+  "Request Number": "HRHD045019",
+  "Subject": "Overtime calculation",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2023-07-17T11:05:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8023d"
+  },
+  "Request Number": "HRHD044008",
+  "Subject": "Less Salary",
+  "Severity": "Low",
+  "Status": "In Progress",
+  "Last Updated Date": "2023-05-25T01:48:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8023e"
+  },
+  "Request Number": "HRHD043010",
+  "Subject": "Employee is consistently late",
+  "Severity": "Low",
+  "Status": "In Progress",
+  "Last Updated Date": "2023-05-25T01:48:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a8023f"
+  },
+  "Request Number": "HRHD043009",
+  "Subject": "Mr S's Unpredictable behavior",
+  "Severity": "Medium",
+  "Status": "In Progress",
+  "Last Updated Date": "2023-05-25T01:45:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80240"
+  },
+  "Request Number": "HRHD043008",
+  "Subject": "Heavier workload",
+  "Severity": "High",
+  "Status": "In Progress",
+  "Last Updated Date": "2023-05-25T01:45:00Z",
+  "Assigned To": "Curtis Feitty"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80241"
+  },
+  "Request Number": "HRHD044018",
+  "Subject": "I need to take medical leave",
+  "Severity": "High",
+  "Status": "Waiting",
+  "Last Updated Date": "2023-05-24T19:18:00Z",
+  "Assigned To": "Mike Finkle"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80242"
+  },
+  "Request Number": "HRHD044013",
+  "Subject": "Can I delete / End date",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2023-05-23T23:30:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80243"
+  },
+  "Request Number": "HRHD044012",
+  "Subject": "Can Employee Distribute",
+  "Severity": "Low",
+  "Status": "New",
+  "Last Updated Date": "2023-05-23T23:29:00Z",
+  "Assigned To": "Martin Lletget"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80244"
+  },
+  "Request Number": "HRHD044010",
+  "Subject": "Overtime calculation",
+  "Severity": "Medium",
+  "Status": "New",
+  "Last Updated Date": "2023-05-23T23:29:00Z",
+  "Assigned To": "AlTamimie Adel"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80245"
+  },
+  "Request Number": "HRHD044011",
+  "Subject": "Salary Advance",
+  "Severity": "Medium",
+  "Status": "New",
+  "Last Updated Date": "2023-05-23T23:27:00Z",
+  "Assigned To": "Martin Lletget"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80246"
+  },
+  "Request Number": "HRHD044016",
+  "Subject": "Tennis Elbow Pain during work",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2023-05-23T23:19:00Z",
+  "Assigned To": "Mike Finkle"
+},
+{
+  "_id": {
+    "$oid": "665741f107092389e0a80247"
+  },
+  "Request Number": "HRHD044019",
+  "Subject": "Work injury while working",
+  "Severity": "High",
+  "Status": "New",
+  "Last Updated Date": "2023-05-23T23:17:00Z",
+  "Assigned To": "Mike Finkle"
+}]

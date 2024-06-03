@@ -1,0 +1,152 @@
+[{
+  "_id": {
+    "$oid": "665d7699fdce0baa5a26157e"
+  },
+  "New request": {
+    "Subject": [],
+    "Primary Point of Contact": [],
+    "Queue": [
+      "Benefits Queue",
+      "Canada - HR Default",
+      "Default",
+      "Disciplinary Actions",
+      "Disciplinary Actions Supremo",
+      "Grievances",
+      "Grievances Supremo",
+      "HR Administration",
+      "HR UK Queue",
+      "Health and Safety Queue",
+      "Health and Safety Supremo",
+      "Labor Relations",
+      "Payroll Queue"
+    ],
+    "Severity": [
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "Assigned To": [],
+    "Category": {
+      "Benefits": {
+        "subcategories": []
+      },
+      "Deductions": {
+        "subcategories": [
+          "Payroll > Deductions"
+        ]
+      },
+      "Disciplinary Actions": {
+        "subcategories": []
+      },
+      "Employment": {
+        "subcategories": [
+          "HR Administration > Employment"
+        ]
+      },
+      "Ergonomic Problem": {
+        "subcategories": [
+          "Benefits > Ergonomic Problem"
+        ]
+      },
+      "Grievances": {
+        "subcategories": []
+      },
+      "Health and Safety": {
+        "subcategories": []
+      },
+      "HR Administration": {
+        "subcategories": []
+      },
+      "Long Term Absence": {
+        "subcategories": [
+          "Benefits > Long Term Absence"
+        ]
+      },
+      "Maternity": {
+        "subcategories": [
+          "Benefits > Maternity"
+        ]
+      },
+      "Pay Check": {
+        "subcategories": [
+          "Payroll > Pay Check"
+        ]
+      },
+      "Payroll": {
+        "subcategories": []
+      },
+      "Personal Information": {
+        "subcategories": [
+          "HR Administration > Personal Information"
+        ]
+      },
+      "Property Damage": {
+        "subcategories": [
+          "Health and Safety > Property Damage"
+        ]
+      },
+      "Sick Leave": {
+        "subcategories": [
+          "Benefits > Sick Leave"
+        ]
+      },
+      "Tax Calculation": {
+        "subcategories": [
+          "Payroll > Tax Calculation"
+        ]
+      },
+      "Union Contract": {
+        "subcategories": [
+          "HR Administration > Union Contract"
+        ]
+      },
+      "Vehicle incident": {
+        "subcategories": [
+          "Health and Safety > Vehicle incident"
+        ]
+      },
+      "Virus or Illness, Injury": {
+        "subcategories": [
+          "Health and Safety > Virus or Illness, Injury"
+        ]
+      }
+    },
+    "Product Group": [],
+    "Channel Type": [
+      "Chat",
+      "Co-browse",
+      "E-Mail",
+      "Microsoft Teams",
+      "None",
+      "loT",
+      "Slack",
+      "SMS",
+      "Social",
+      "Digital Audio and Video",
+      "Web",
+      "Web Conference",
+      "Phone"
+    ],
+    "Details Description": [],
+    "Attachments": {
+      "Category": [
+        "Internal",
+        "Miscellaneous",
+        "Inline Attachments"
+      ],
+      "Drag and Drop": [
+        "Select or drop files here."
+      ],
+      "URL": []
+    },
+    "Critical": [],
+    "info": {
+      "details": {
+        "Email": [],
+        "Uniqueid": [],
+        "Person number": [],
+        "working type": []
+      }
+    }
+  }
+}]

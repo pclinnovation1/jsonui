@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "66586185ed5260440105733d"
+  },
+  "name": "Benefits Queue",
+  "description": "Benefits Queue",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2017-09-26T15:02:00Z",
+  "resources": 3,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed5260440105733e"
+  },
+  "name": "Benefits Supremo",
+  "description": "Benefits Supremo",
+  "enabled": 0,
+  "distribution": "Auto",
+  "created": "2019-06-06T04:13:00Z",
+  "resources": 0,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed5260440105733f"
+  },
+  "name": "Canada - HR Default",
+  "description": "Canada Helpdesk Queue",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2020-11-23T19:19:00Z",
+  "resources": 1,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057340"
+  },
+  "name": "Disciplinary Actions",
+  "description": "Disciplinary Actions",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2017-10-27T15:03:00Z",
+  "resources": 3,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057341"
+  },
+  "name": "Disciplinary Actions Supremo",
+  "description": "Disciplinary Actions Supremo",
+  "enabled": 0,
+  "distribution": "Auto",
+  "created": "2019-06-06T04:14:00Z",
+  "resources": 0,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057342"
+  },
+  "name": "Generic Queue",
+  "description": "All Service Requests for Supremo Fitness are assigned to this queue",
+  "enabled": 0,
+  "distribution": "Auto",
+  "created": "2019-08-03T07:21:00Z",
+  "resources": 0,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057343"
+  },
+  "name": "Grievances",
+  "description": "Grievances",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2017-10-27T15:01:00Z",
+  "resources": 3,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057344"
+  },
+  "name": "Grievances Supremo",
+  "description": "Grievances Supremo",
+  "enabled": 0,
+  "distribution": "Auto",
+  "created": "2019-06-06T04:15:00Z",
+  "resources": 0,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057345"
+  },
+  "name": "HR Administration",
+  "description": "HR Administration",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2019-06-12T02:54:00Z",
+  "resources": 1,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057346"
+  },
+  "name": "HR Default",
+  "description": "Contains work items not matching any of the defined assignment rules",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2017-09-19T23:29:00Z",
+  "resources": 3,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057347"
+  },
+  "name": "HR UK Queue",
+  "description": "Service Requests for UK Business Unit",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2019-11-13T06:08:00Z",
+  "resources": 3,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057348"
+  },
+  "name": "Health and Safety Queue",
+  "description": "Health and Safety",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2020-07-10T03:48:00Z",
+  "resources": 2,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed52604401057349"
+  },
+  "name": "Labor Relations",
+  "description": "Union Labor Relations",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2020-04-03T19:04:00Z",
+  "resources": 1,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed5260440105734a"
+  },
+  "name": "Payroll Queue",
+  "description": "Payroll Queue",
+  "enabled": 1,
+  "distribution": "Auto",
+  "created": "2017-09-26T15:03:00Z",
+  "resources": 3,
+  "resource_teams": 0
+},
+{
+  "_id": {
+    "$oid": "66586185ed5260440105734b"
+  },
+  "name": "Payroll Supremo",
+  "description": "Payroll Supremo",
+  "enabled": 0,
+  "distribution": "Auto",
+  "created": "2019-06-06T04:16:00Z",
+  "resources": 0,
+  "resource_teams": 0
+}]

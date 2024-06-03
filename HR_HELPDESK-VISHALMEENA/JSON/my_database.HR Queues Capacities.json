@@ -1,0 +1,231 @@
+[{
+  "_id": {
+    "$oid": "665867ce99fb02e894558436"
+  },
+  "agent_name": "Emma Norris",
+  "teams": "None",
+  "queues": "None",
+  "service_requests": 2000,
+  "chat": 10,
+  "last_updated": "2024-05-30T17:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558437"
+  },
+  "agent_name": "John Doe",
+  "teams": "Support Team A",
+  "queues": "Queue 1",
+  "service_requests": 1500,
+  "chat": 8,
+  "last_updated": "2024-05-30T17:05:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558438"
+  },
+  "agent_name": "Jane Smith",
+  "teams": "Support Team B",
+  "queues": "Queue 2",
+  "service_requests": 1800,
+  "chat": 5,
+  "last_updated": "2024-05-30T17:10:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558439"
+  },
+  "agent_name": "Michael Johnson",
+  "teams": "Support Team C",
+  "queues": "Queue 3",
+  "service_requests": 1600,
+  "chat": 7,
+  "last_updated": "2024-05-30T17:15:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e89455843a"
+  },
+  "agent_name": "Emily Davis",
+  "teams": "Support Team A",
+  "queues": "Queue 4",
+  "service_requests": 1900,
+  "chat": 9,
+  "last_updated": "2024-05-30T17:20:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e89455843b"
+  },
+  "agent_name": "Chris Brown",
+  "teams": "Support Team B",
+  "queues": "Queue 5",
+  "service_requests": 1700,
+  "chat": 6,
+  "last_updated": "2024-05-30T17:25:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e89455843c"
+  },
+  "agent_name": "Jessica Wilson",
+  "teams": "Support Team C",
+  "queues": "Queue 6",
+  "service_requests": 2000,
+  "chat": 10,
+  "last_updated": "2024-05-30T17:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e89455843d"
+  },
+  "agent_name": "David Martinez",
+  "teams": "Support Team A",
+  "queues": "Queue 7",
+  "service_requests": 1400,
+  "chat": 4,
+  "last_updated": "2024-05-30T17:35:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e89455843e"
+  },
+  "agent_name": "Sarah Lee",
+  "teams": "Support Team B",
+  "queues": "Queue 8",
+  "service_requests": 1300,
+  "chat": 3,
+  "last_updated": "2024-05-30T17:40:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e89455843f"
+  },
+  "agent_name": "James Taylor",
+  "teams": "Support Team C",
+  "queues": "Queue 9",
+  "service_requests": 1200,
+  "chat": 2,
+  "last_updated": "2024-05-30T17:45:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558440"
+  },
+  "agent_name": "Patricia Anderson",
+  "teams": "Support Team A",
+  "queues": "Queue 10",
+  "service_requests": 1100,
+  "chat": 1,
+  "last_updated": "2024-05-30T17:50:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558441"
+  },
+  "agent_name": "Robert Thomas",
+  "teams": "Support Team B",
+  "queues": "Queue 11",
+  "service_requests": 2000,
+  "chat": 10,
+  "last_updated": "2024-05-30T17:55:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558442"
+  },
+  "agent_name": "Linda Jackson",
+  "teams": "Support Team C",
+  "queues": "Queue 12",
+  "service_requests": 1500,
+  "chat": 5,
+  "last_updated": "2024-05-30T18:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558443"
+  },
+  "agent_name": "Barbara White",
+  "teams": "Support Team A",
+  "queues": "Queue 13",
+  "service_requests": 1700,
+  "chat": 6,
+  "last_updated": "2024-05-30T18:05:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558444"
+  },
+  "agent_name": "Steven Harris",
+  "teams": "Support Team B",
+  "queues": "Queue 14",
+  "service_requests": 1800,
+  "chat": 8,
+  "last_updated": "2024-05-30T18:10:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558445"
+  },
+  "agent_name": "Karen Clark",
+  "teams": "Support Team C",
+  "queues": "Queue 15",
+  "service_requests": 1600,
+  "chat": 7,
+  "last_updated": "2024-05-30T18:15:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558446"
+  },
+  "agent_name": "Paul Robinson",
+  "teams": "Support Team A",
+  "queues": "Queue 16",
+  "service_requests": 1400,
+  "chat": 4,
+  "last_updated": "2024-05-30T18:20:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558447"
+  },
+  "agent_name": "Nancy Walker",
+  "teams": "Support Team B",
+  "queues": "Queue 17",
+  "service_requests": 1300,
+  "chat": 3,
+  "last_updated": "2024-05-30T18:25:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558448"
+  },
+  "agent_name": "Thomas Allen",
+  "teams": "Support Team C",
+  "queues": "Queue 18",
+  "service_requests": 2000,
+  "chat": 10,
+  "last_updated": "2024-05-30T18:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e894558449"
+  },
+  "agent_name": "Betty Scott",
+  "teams": "Support Team A",
+  "queues": "Queue 19",
+  "service_requests": 1100,
+  "chat": 1,
+  "last_updated": "2024-05-30T18:35:00Z"
+},
+{
+  "_id": {
+    "$oid": "665867ce99fb02e89455844a"
+  },
+  "agent_name": "Charles Adams",
+  "teams": "Support Team B",
+  "queues": "Queue 20",
+  "service_requests": 1500,
+  "chat": 5,
+  "last_updated": "2024-05-30T18:40:00Z"
+}]

@@ -1,0 +1,280 @@
+[{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937a7"
+  },
+  "Subject": "Project Update",
+  "Sender": "Alice Johnson",
+  "Date Received": "2024-05-25",
+  "Other Correspondents": [
+    "Bob Smith"
+  ],
+  "Status": "Unread",
+  "Message Count": 3,
+  "Recommended Action": "Review"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937a8"
+  },
+  "Subject": "Meeting Reminder",
+  "Sender": "Bob Smith",
+  "Date Received": "2024-05-24",
+  "Other Correspondents": [
+    "Alice Johnson"
+  ],
+  "Status": "Read",
+  "Message Count": 1,
+  "Recommended Action": "Acknowledge"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937a9"
+  },
+  "Subject": "Budget Report",
+  "Sender": "Charlie Brown",
+  "Date Received": "2024-05-23",
+  "Other Correspondents": [
+    "Diana Prince"
+  ],
+  "Status": "Unread",
+  "Message Count": 2,
+  "Recommended Action": "Approve"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937aa"
+  },
+  "Subject": "Weekly Summary",
+  "Sender": "Diana Prince",
+  "Date Received": "2024-05-22",
+  "Other Correspondents": [
+    "Charlie Brown"
+  ],
+  "Status": "Read",
+  "Message Count": 1,
+  "Recommended Action": "Archive"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937ab"
+  },
+  "Subject": "Client Feedback",
+  "Sender": "Edward Nigma",
+  "Date Received": "2024-05-21",
+  "Other Correspondents": [
+    "Felicia Hardy"
+  ],
+  "Status": "Unread",
+  "Message Count": 4,
+  "Recommended Action": "Respond"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937ac"
+  },
+  "Subject": "System Update",
+  "Sender": "Frank Castle",
+  "Date Received": "2024-05-20",
+  "Other Correspondents": [
+    "Jessica Jones"
+  ],
+  "Status": "Read",
+  "Message Count": 2,
+  "Recommended Action": "Review"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937ad"
+  },
+  "Subject": "Training Schedule",
+  "Sender": "Gwen Stacy",
+  "Date Received": "2024-05-19",
+  "Other Correspondents": [
+    "Peter Parker"
+  ],
+  "Status": "Unread",
+  "Message Count": 3,
+  "Recommended Action": "Acknowledge"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937ae"
+  },
+  "Subject": "New Hire Orientation",
+  "Sender": "Harry Osborn",
+  "Date Received": "2024-05-18",
+  "Other Correspondents": [
+    "Mary Jane Watson"
+  ],
+  "Status": "Read",
+  "Message Count": 1,
+  "Recommended Action": "Archive"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937af"
+  },
+  "Subject": "Project Deadline",
+  "Sender": "Ivy Pepper",
+  "Date Received": "2024-05-17",
+  "Other Correspondents": [
+    "Harvey Dent"
+  ],
+  "Status": "Unread",
+  "Message Count": 2,
+  "Recommended Action": "Review"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b0"
+  },
+  "Subject": "Marketing Plan",
+  "Sender": "Jessica Jones",
+  "Date Received": "2024-05-16",
+  "Other Correspondents": [
+    "Luke Cage"
+  ],
+  "Status": "Read",
+  "Message Count": 1,
+  "Recommended Action": "Approve"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b1"
+  },
+  "Subject": "Sales Report",
+  "Sender": "Karen Page",
+  "Date Received": "2024-05-15",
+  "Other Correspondents": [
+    "Matt Murdock"
+  ],
+  "Status": "Unread",
+  "Message Count": 3,
+  "Recommended Action": "Review"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b2"
+  },
+  "Subject": "Event Invitation",
+  "Sender": "Logan Howlett",
+  "Date Received": "2024-05-14",
+  "Other Correspondents": [
+    "Jean Grey"
+  ],
+  "Status": "Read",
+  "Message Count": 2,
+  "Recommended Action": "Respond"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b3"
+  },
+  "Subject": "Policy Update",
+  "Sender": "Misty Knight",
+  "Date Received": "2024-05-13",
+  "Other Correspondents": [
+    "Colleen Wing"
+  ],
+  "Status": "Unread",
+  "Message Count": 1,
+  "Recommended Action": "Acknowledge"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b4"
+  },
+  "Subject": "Team Outing",
+  "Sender": "Ned Leeds",
+  "Date Received": "2024-05-12",
+  "Other Correspondents": [
+    "Betty Brant"
+  ],
+  "Status": "Read",
+  "Message Count": 2,
+  "Recommended Action": "Respond"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b5"
+  },
+  "Subject": "Project Plan",
+  "Sender": "Otto Octavius",
+  "Date Received": "2024-05-11",
+  "Other Correspondents": [
+    "Max Dillon"
+  ],
+  "Status": "Unread",
+  "Message Count": 4,
+  "Recommended Action": "Approve"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b6"
+  },
+  "Subject": "Holiday Schedule",
+  "Sender": "Peter Parker",
+  "Date Received": "2024-05-10",
+  "Other Correspondents": [
+    "Gwen Stacy"
+  ],
+  "Status": "Read",
+  "Message Count": 1,
+  "Recommended Action": "Archive"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b7"
+  },
+  "Subject": "Budget Approval",
+  "Sender": "Quentin Beck",
+  "Date Received": "2024-05-09",
+  "Other Correspondents": [
+    "Adrian Toomes"
+  ],
+  "Status": "Unread",
+  "Message Count": 2,
+  "Recommended Action": "Approve"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b8"
+  },
+  "Subject": "Project Launch",
+  "Sender": "Reed Richards",
+  "Date Received": "2024-05-08",
+  "Other Correspondents": [
+    "Sue Storm"
+  ],
+  "Status": "Read",
+  "Message Count": 3,
+  "Recommended Action": "Review"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937b9"
+  },
+  "Subject": "Performance Review",
+  "Sender": "Steve Rogers",
+  "Date Received": "2024-05-07",
+  "Other Correspondents": [
+    "Tony Stark"
+  ],
+  "Status": "Unread",
+  "Message Count": 1,
+  "Recommended Action": "Respond"
+},
+{
+  "_id": {
+    "$oid": "66585d360975fcba4c6937ba"
+  },
+  "Subject": "Client Meeting",
+  "Sender": "Tony Stark",
+  "Date Received": "2024-05-06",
+  "Other Correspondents": [
+    "Pepper Potts"
+  ],
+  "Status": "Read",
+  "Message Count": 2,
+  "Recommended Action": "Acknowledge"
+}]

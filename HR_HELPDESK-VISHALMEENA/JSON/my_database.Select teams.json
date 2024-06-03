@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "665d818167ce31294619f0bd"
+  },
+  "Team Name": "Alpha Squad",
+  "Team Description": "A highly skilled team specializing in software development."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0be"
+  },
+  "Team Name": "Beta Team",
+  "Team Description": "Focused on quality assurance and testing."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0bf"
+  },
+  "Team Name": "Gamma Group",
+  "Team Description": "Experts in project management and coordination."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0c0"
+  },
+  "Team Name": "Delta Force",
+  "Team Description": "Specialists in cybersecurity and data protection."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0c1"
+  },
+  "Team Name": "Epsilon Engineers",
+  "Team Description": "Innovators in engineering and technical solutions."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0c2"
+  },
+  "Team Name": "Zeta Zone",
+  "Team Description": "Creative minds in marketing and advertising."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0c3"
+  },
+  "Team Name": "Theta Thinkers",
+  "Team Description": "Strategists in business analysis and planning."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0c4"
+  },
+  "Team Name": "Iota Innovators",
+  "Team Description": "Pioneers in research and development."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0c5"
+  },
+  "Team Name": "Kappa Crew",
+  "Team Description": "Team dedicated to customer service and support."
+},
+{
+  "_id": {
+    "$oid": "665d818167ce31294619f0c6"
+  },
+  "Team Name": "Lambda Leaders",
+  "Team Description": "Leadership and management experts driving company success."
+}]

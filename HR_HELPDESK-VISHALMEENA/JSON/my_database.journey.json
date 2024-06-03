@@ -1,0 +1,261 @@
+[{
+  "_id": {
+    "$oid": "665d96250a96c9503e672b83"
+  },
+  "Subject": "Termination Off Boarding Checklist",
+  "Display Name": "Termination Off Boarding Checklist",
+  "Category": "Off Boarding",
+  "Description": "Off Boarding Checklist for Termination action",
+  "Tasks in this journey": {
+    "Benefits Options Counseling": {
+      "Task": "Benefits Options Counseling",
+      "Owner": "Initiator",
+      "Task Type": "Manual Task",
+      "Description": "Counseling worker on post-employment Benefits Options.",
+      "Performer": "Area of Responsibility",
+      "Performer Responsibility Type": "Benefits Representative",
+      "Duration": 4,
+      "Time Unit": "Weeks",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Exit Interview": {
+      "Task": "Exit Interview",
+      "Owner": "Initiator",
+      "Task Type": "Questionnaire",
+      "Duration": 1,
+      "Time Unit": "Weeks",
+      "Questionnaire": "Exit Survey Questionnaire",
+      "Description": "Perform Exit Interview - face to face if appropriate and feasible.",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 1,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Return Company Property": {
+      "Task": "Return Company Property",
+      "Owner": "Initiator",
+      "Task Type": "Electronic Signature",
+      "Task Subtype": "Electronic Signature - Native",
+      "Duration": 5,
+      "Time Unit": "Days",
+      "Description": "Return all Company Property including any keys, equipment and clothing.",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Join Alumni Talent Community": {
+      "Task": "Join Alumni Talent Community",
+      "Owner": "Initiator",
+      "Task Type": "External URL",
+      "Task URL": "www.oracle.com",
+      "Description": "Join Alumni Talent Community",
+      "Instructions": "You are invited to join our corporate Alumni Network where we can stay in touch. We will host events to create social connections with reunions and “happy hours”. Please feel free to refer this site to other ex-colleagues who may be interested. You are also invited to explore future career opportunities where Alumni is always given a preference. We provide cash rewards to alumni for successful job referrals.",
+      "Performer": "Worker",
+      "Eligibility Profile": "Australia Employees",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Review Exit Survey Results": {
+      "Task": "Review Exit Survey Results",
+      "Owner": "Initiator",
+      "Task Type": "External URL",
+      "Task URL": "https://fa-etit-saasfademo1.ds-fa.oraclepdemos.com/analytics/saw.dll?Portal&PortalPath=%2Fshared%2FCustom%2FHCM%20Other%20Reports%2FJourneys%2FExit%20Survey%20Dashboard%2FExit%20Survey%20Dashboard",
+      "Description": "Review Exit Survey Results",
+      "Instructions": "Review Exit Survey Results!",
+      "Performer": "Area of Responsibility",
+      "Performer Responsibility Type": "Human Resources Representative",
+      "Enable comments": 0,
+      "Make this task mandatory": 1,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665d97162eaa7cc4b0507c22"
+  },
+  "Subject": "Grow and Develop",
+  "Display Name": "Grow and Develop",
+  "Category": "Talent Management",
+  "Description": "Take this journey to find new opportunities and challenges to grow your career.",
+  "Tasks in this journey": {
+    "Welcome": {
+      "Task": "Welcome",
+      "Owner": "Initiator",
+      "Task Type": "Video",
+      "Task URL": "https://www.youtube.com/embed/-8ADcdIUAZU",
+      "Description": "As one of our company values is transparency and engagement, we want to support you in finding your desired way to grow. Listen to this video to hear more exciting details.",
+      "Instructions": "As one of our company values is transparency and engagement, we want to support you in finding your desired way to grow. Listen to this video to hear more exciting details.",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Update your talent profile": {
+      "Task": "Update your talent profile",
+      "Owner": "Initiator",
+      "Task Type": "External URL",
+      "Task URL": "https://fa-etit-saasfademo1.ds-fa.oraclepdemos.com/fscmUI/redwood/profiles/person-profile/skills-qualification-start",
+      "Description": "Your talent profile is your tool to gain visibility in the company. Depending on your competencies and mobility you will get learning and career recommendations. So it's worth to update it regularly.",
+      "Instructions": "Your talent profile is your tool to gain visibility in the company. Depending on your competencies and mobility you will get learning and career recommendations. So it's worth to update it regularly.",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 1,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Looking for career opportunities?": {
+      "Task": "Looking for career opportunities?",
+      "Owner": "Initiator",
+      "Task Type": "External URL",
+      "Task URL": "https://fa-etit-saasfademo1.ds-fa.oraclepdemos.com/fscmUI/redwood/human-resources/career-grow/launch?tab=grow",
+      "Description": "Update your career statement to reflect your career ambition and explore new roles using the below link",
+      "Instructions": "Update your career statement to reflect your career ambition and explore new roles using the below link",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 1,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Want to Grow with Opportunity Marketplace?": {
+      "Task": "Want to Grow with Opportunity Marketplace?",
+      "Owner": "Initiator",
+      "Task Type": "External URL",
+      "Task URL": "https://fa-etit-saasfademo1.ds-fa.oraclepdemos.com/hcmUI/faces/hcm/vp/opportunitymarketplace/search",
+      "Description": "Grow your career, your network and experience by taking on a gig. Apply for a short term engagement (a few hours for a limited period of time), to offer your expertise to other parts of your organization, or try something new to develop new experiences, without changing your current job. Check out the Opportunity Marketplace and get involved!",
+      "Instructions": "Grow your career, your network and experience by taking on a gig. Apply for a short term engagement (a few hours for a limited period of time), to offer your expertise to other parts of your organization, or try something new to develop new experiences, without changing your current job. Check out the Opportunity Marketplace and get involved!",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Get input from your manager": {
+      "Task": "Get input from your manager",
+      "Owner": "Initiator",
+      "Task Type": "Application Task",
+      "Application Task": "Me.me_my_performance_redwood",
+      "Description": "Setup a meeting and have a check-in, with your manager, dedicated to discuss your career ideas and aspirations.",
+      "Instructions": "Setup a meeting and have a check-in, with your manager, dedicated to discuss your career ideas and aspirations.",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Expand your network": {
+      "Task": "Expand your network",
+      "Owner": "Initiator",
+      "Task Type": "External URL",
+      "Task URL": "https://fa-etit-saasfademo1.ds-fa.oraclepdemos.com/fscmUI/faces/deeplink?objType=HWR_MY_MENTORSHIP_PAGE&action=NONE",
+      "Description": "Lookout for a mentor using below link who can help you develop new skill set.",
+      "Instructions": "Lookout for a mentor using below link who can help you develop new skill set.",
+      "Performer": "Worker",
+      "Enable comments": 0,
+      "Make this task mandatory": 1,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "665d998fdf1110c0926cacf6"
+  },
+  "Subject": "Improving Performance",
+  "Display Name": "Improving Performance",
+  "Category": "Talent Management",
+  "Description": "Journey to improve your performance.",
+  "Tasks in this journey": {
+    "Improve Your Time Management Skills": {
+      "Task": "Improve Your Time Management Skills",
+      "Duration": 3,
+      "Time Unit": "Days",
+      "Task Type": "Video",
+      "Task URL": "https://www.youtube.com/embed/RiI1NkaDXIQ",
+      "Instructions": "Here's a video that has tips for time management. Take a look.",
+      "Performer": "Worker",
+      "Owner": "Initiator",
+      "Enable comments": 1,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Assign a Mentor": {
+      "Task": "Assign a Mentor",
+      "Duration": 2,
+      "Time Unit": "Days",
+      "Task Type": "Manual Task",
+      "Instructions": "Assign a mentor to the employee based on areas identified for improvement.",
+      "Performer": "Line Manager",
+      "Owner": "Initiator",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Set Clear Goals": {
+      "Task": "Set Clear Goals",
+      "Duration": 2,
+      "Time Unit": "Days",
+      "Task Type": "External URL",
+      "Task URL": "https://fa-etit-saasfademo1.ds-fa.oraclepdemos.com/fscmUI/redwood/goals/goal-center/goals-summary",
+      "Instructions": "Identify the goals that you would like to achieve. Discuss these goals with your manager before entering them in the application.",
+      "Performer": "Worker",
+      "Owner": "Initiator",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Split Tasks Into Milestones": {
+      "Task": "Split Tasks Into Milestones",
+      "Duration": "null",
+      "Time Unit": "null",
+      "Task Type": "Conditional Task",
+      "Instructions": "Available once task 'Improve Your Time Management Skills' is completed.",
+      "Performer": "Worker",
+      "Owner": "Initiator",
+      "Enable comments": 0,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Use the Right Tools": {
+      "Task": "Use the Right Tools",
+      "Duration": 3,
+      "Time Unit": "Days",
+      "Task Type": "Manual Task",
+      "Instructions": "In order to be more productive at the workplace, use the right tool which will help you improve your performance at work. Actionable tips: Use tools that you are already comfortable with and will allow you to focus a lot more on work which will result in an increased level of productivity at work. Implement and make use of new tools. Who knows, you may find a software that you like much better that will help you to take your work to a whole new level.",
+      "Performer": "Worker",
+      "Owner": "Initiator",
+      "Enable comments": 1,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    },
+    "Ask for Constructive Feedback": {
+      "Task": "Ask for Constructive Feedback",
+      "Duration": "null",
+      "Time Unit": "null",
+      "Task Type": "Manual Task",
+      "Instructions": "Seek constructive feedback from your supervisor or manager. This communication needs to happen consistently at a frequency decided by both you and your manager. Ensure that you participate proactively and be open to feedback in order to improve your performance and productivity at work.",
+      "Performer": "Worker",
+      "Owner": "Initiator",
+      "Enable comments": 1,
+      "Make this task mandatory": 0,
+      "Save to my personal task library": 0,
+      "Enable attachments": 0
+    }
+  }
+}]
