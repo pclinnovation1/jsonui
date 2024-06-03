@@ -1,0 +1,3 @@
+_id,Payment_name,Payment_Type,Payment_Amount,Percentage,New_Account,Existing_Account,Account_Number,Account_Holder,Bank_Code,Sort_Code
+6659b1971fe6d1ef399563f0,Salary Payment,BACS,50%,50,true,false,12345678,Amanda Avery,BANK123,SORT001
+6659b1971fe6d1ef399563f1,Bonus Payment,BACS,100%,100,false,true,87654321,Amanda Avery,BANK456,SORT002
