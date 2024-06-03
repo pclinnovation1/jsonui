@@ -1,4 +1,0 @@
-_id,Title,Description,Primary Contact,Primary Household,Status,Priority,Assigned To,Case Type,Stripe,Add Contacts.Contact[0],Add Contacts.Contact,Add Contacts.Add Team Members,Add Contacts.Add Documents,Add Contacts.Attachments,Add Contacts.Add URL
-66573d4289ec3edf2e85afa2,,,,,,,,,,,,,,,
-66597d2b5783a365fcdd7adc,Harassment Investigation,Investigation of harassment claims.,John Doe,Household A,New,High,Jane Smith,Investigation,Stripe A,contact1@example.com,,,,,
-66597d2b5783a365fcdd7add,test,Test case for system verification.,Alice Brown,Household B,New,Low,Tom White,Test,Stripe B,,,,,,http://example2.com

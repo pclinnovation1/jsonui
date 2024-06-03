@@ -1,3 +1,0 @@
-_id,Subject,Private,Location,Type,Time Zone,All Day,Start Date,Start Time,End Date,End Time,Account,Partner,Opportunity,Lead,Show Time As,Set Remainder,Description
-66586c459deb464ba4a28868,Monthly Sales Meeting,false,Conference Room B,Meeting,PST,false,2024-07-01,10:00 AM,2024-07-01,11:30 AM,Acme Corp,Tech Solutions,Q3 Sales Strategy,John Doe,Busy,true,Discussing sales strategy and goals for Q3.
-66586c459deb464ba4a28869,Product Launch Event,true,Main Auditorium,Event,EST,true,2024-07-15,09:00 AM,2024-07-15,05:00 PM,Beta Inc.,Innovatech,New Product Launch,Jane Smith,Out of Office,true,Launching the new product line and presenting to partners and clients.
