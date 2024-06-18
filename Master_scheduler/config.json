@@ -1,0 +1,19 @@
+{
+  "tasks": [
+      {
+          "name": "generate_letters",
+          "interval": "every",
+          "time": "5 seconds"
+      },
+      {
+          "name": "generate_notifications",
+          "interval": "every",
+          "time": "5 seconds"
+      },
+      {
+          "name": "assign_courses",
+          "interval": "every",
+          "time": "5 seconds"
+      }
+  ]
+}
