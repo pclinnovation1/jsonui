@@ -1,0 +1,301 @@
+{
+    "addCareerOverview": {"collection": "CD_CareerOverview", "operation": "add"},
+    "viewCareerOverview": {"collection": "CD_CareerOverview", "operation": "search"},
+    "manageCareerOverview": {"collection": "CD_CareerOverview", "operation": "manage"},
+    
+    "addCareerOverviewMT": {"collection": "CD_CareerOverview_MT", "operation": "add"},
+    "viewCareerOverviewMT": {"collection": "CD_CareerOverview_MT", "operation": "search"},
+    "manageCareerOverviewMT": {"collection": "CD_CareerOverview_MT", "operation": "manage"},
+    
+    "addEligibility": {"collection": "CD_Eligibility", "operation": "add"},
+    "viewEligibility": {"collection": "CD_Eligibility", "operation": "search"},
+    "manageEligibility": {"collection": "CD_Eligibility", "operation": "manage"},
+    
+    "addGoalLibrary": {"collection": "CD_GoalLibrary", "operation": "add"},
+    "viewGoalLibrary": {"collection": "CD_GoalLibrary", "operation": "search"},
+    "manageGoalLibrary": {"collection": "CD_GoalLibrary", "operation": "manage"},
+    
+    "addGoal": {"collection": "CD_Goal", "operation": "add"},
+    "viewGoal": {"collection": "CD_Goal", "operation": "search"},
+    "manageGoal": {"collection": "CD_Goal", "operation": "manage"},
+    
+    "addScheduledProcess": {"collection": "CD_ScheduledProcess", "operation": "add"},
+    "viewScheduledProcess": {"collection": "CD_ScheduledProcess", "operation": "search"},
+    "manageScheduledProcess": {"collection": "CD_ScheduledProcess", "operation": "manage"},
+    
+    "addSetupGoals": {"collection": "CD_SetupGoals", "operation": "add"},
+    "viewSetupGoals": {"collection": "CD_SetupGoals", "operation": "search"},
+    "manageSetupGoals": {"collection": "CD_SetupGoals", "operation": "manage"},
+    
+    "addCareerDevelopment": {"collection": "CnP_CareerDevelopment", "operation": "add"},
+    "viewCareerDevelopment": {"collection": "CnP_CareerDevelopment", "operation": "search"},
+    "manageCareerDevelopment": {"collection": "CnP_CareerDevelopment", "operation": "manage"},
+    
+    "addFeedback": {"collection": "CnP_Feedback", "operation": "add"},
+    "viewFeedback": {"collection": "CnP_Feedback", "operation": "search"},
+    "manageFeedback": {"collection": "CnP_Feedback", "operation": "manage"},
+    
+    "addGoalsAssignment": {"collection": "CnP_GoalsAssignment", "operation": "add"},
+    "viewGoalsAssignment": {"collection": "CnP_GoalsAssignment", "operation": "search"},
+    "manageGoalsAssignment": {"collection": "CnP_GoalsAssignment", "operation": "manage"},
+    
+    "addPerformance": {"collection": "CnP_Performance", "operation": "add"},
+    "viewPerformance": {"collection": "CnP_Performance", "operation": "search"},
+    "managePerformance": {"collection": "CnP_Performance", "operation": "manage"},
+    
+    "addSkillsAndQualifications": {"collection": "CnP_SkillsAndQualifications", "operation": "add"},
+    "viewSkillsAndQualifications": {"collection": "CnP_SkillsAndQualifications", "operation": "search"},
+    "manageSkillsAndQualifications": {"collection": "CnP_SkillsAndQualifications", "operation": "manage"},
+    
+    "addEligibilityProfiles": {"collection": "GOL_EligibilityProfiles", "operation": "add"},
+    "viewEligibilityProfiles": {"collection": "GOL_EligibilityProfiles", "operation": "search"},
+    "manageEligibilityProfiles": {"collection": "GOL_EligibilityProfiles", "operation": "manage"},
+    
+    "addGoalPlan": {"collection": "GOL_GoalPlan", "operation": "add"},
+    "viewGoalPlan": {"collection": "GOL_GoalPlan", "operation": "search"},
+    "manageGoalPlan": {"collection": "GOL_GoalPlan", "operation": "manage"},
+    
+    "addPerformanceGoals": {"collection": "GOL_PerformanceGoals", "operation": "add"},
+    "viewPerformanceGoals": {"collection": "GOL_PerformanceGoals", "operation": "search"},
+    "managePerformanceGoals": {"collection": "GOL_PerformanceGoals", "operation": "manage"},
+    
+    "addPerformanceGoalsLibrary": {"collection": "GOL_PerformanceGoalsLibrary", "operation": "add"},
+    "viewPerformanceGoalsLibrary": {"collection": "GOL_PerformanceGoalsLibrary", "operation": "search"},
+    "managePerformanceGoalsLibrary": {"collection": "GOL_PerformanceGoalsLibrary", "operation": "manage"},
+    
+    "addReviewPeriod": {"collection": "GOL_ReviewPeriod", "operation": "add"},
+    "viewReviewPeriod": {"collection": "GOL_ReviewPeriod", "operation": "search"},
+    "manageReviewPeriod": {"collection": "GOL_ReviewPeriod", "operation": "manage"},
+    
+    "addScheduledProcessesforPerformance": {"collection": "GOL_ScheduledProcessesforPerformance", "operation": "add"},
+    "viewScheduledProcessesforPerformance": {"collection": "GOL_ScheduledProcessesforPerformance", "operation": "search"},
+    "manageScheduledProcessesforPerformance": {"collection": "GOL_ScheduledProcessesforPerformance", "operation": "manage"},
+    
+    "addSetupofPerformance": {"collection": "GOL_SetupofPerformance", "operation": "add"},
+    "viewSetupofPerformance": {"collection": "GOL_SetupofPerformance", "operation": "search"},
+    "manageSetupofPerformance": {"collection": "GOL_SetupofPerformance", "operation": "manage"},
+    
+    "addActivitiesAppointment": {"collection": "HD_ActivitiesAppointment", "operation": "add"},
+    "viewActivitiesAppointment": {"collection": "HD_ActivitiesAppointment", "operation": "search"},
+    "manageActivitiesAppointment": {"collection": "HD_ActivitiesAppointment", "operation": "manage"},
+    
+    "addActivitiesCallReport": {"collection": "HD_ActivitiesCallReport", "operation": "add"},
+    "viewActivitiesCallReport": {"collection": "HD_ActivitiesCallReport", "operation": "search"},
+    "manageActivitiesCallReport": {"collection": "HD_ActivitiesCallReport", "operation": "manage"},
+    
+    "addActivitiesLogCall": {"collection": "HD_ActivitiesLogCall", "operation": "add"},
+    "viewActivitiesLogCall": {"collection": "HD_ActivitiesLogCall", "operation": "search"},
+    "manageActivitiesLogCall": {"collection": "HD_ActivitiesLogCall", "operation": "manage"},
+    
+    "addActivitiesTask": {"collection": "HD_ActivitiesTask", "operation": "add"},
+    "viewActivitiesTask": {"collection": "HD_ActivitiesTask", "operation": "search"},
+    "manageActivitiesTask": {"collection": "HD_ActivitiesTask", "operation": "manage"},
+    
+    "addAgent": {"collection": "HD_Agent", "operation": "add"},
+    "viewAgent": {"collection": "HD_Agent", "operation": "search"},
+    "manageAgent": {"collection": "HD_Agent", "operation": "manage"},
+    
+    "addAllOpenHRHelpDeskRequests": {"collection": "HD_AllOpenHRHelpDeskRequests", "operation": "add"},
+    "viewAllOpenHRHelpDeskRequests": {"collection": "HD_AllOpenHRHelpDeskRequests", "operation": "search"},
+    "manageAllOpenHRHelpDeskRequests": {"collection": "HD_AllOpenHRHelpDeskRequests", "operation": "manage"},
+    
+    "addArticles": {"collection": "HD_Articles", "operation": "add"},
+    "viewArticles": {"collection": "HD_Articles", "operation": "search"},
+    "manageArticles": {"collection": "HD_Articles", "operation": "manage"},
+    
+    "addCases": {"collection": "HD_Cases", "operation": "add"},
+    "viewCases": {"collection": "HD_Cases", "operation": "search"},
+    "manageCases": {"collection": "HD_Cases", "operation": "manage"},
+    
+    "addHRQueues": {"collection": "HD_HRQueues", "operation": "add"},
+    "viewHRQueues": {"collection": "HD_HRQueues", "operation": "search"},
+    "manageHRQueues": {"collection": "HD_HRQueues", "operation": "manage"},
+    
+    "addHelpDeskQueues": {"collection": "HD_HelpDeskQueues", "operation": "add"},
+    "viewHelpDeskQueues": {"collection": "HD_HelpDeskQueues", "operation": "search"},
+    "manageHelpDeskQueues": {"collection": "HD_HelpDeskQueues", "operation": "manage"},
+    
+    "addJourney": {"collection": "HD_Journey", "operation": "add"},
+    "viewJourney": {"collection": "HD_Journey", "operation": "search"},
+    "manageJourney": {"collection": "HD_Journey", "operation": "manage"},
+    
+    "addMyNewMessages": {"collection": "HD_MyNewMessages", "operation": "add"},
+    "viewMyNewMessages": {"collection": "HD_MyNewMessages", "operation": "search"},
+    "manageMyNewMessages": {"collection": "HD_MyNewMessages", "operation": "manage"},
+    "addMySignature": {"collection": "HD_MySignature", "operation": "add"},
+    "viewMySignature": {"collection": "HD_MySignature", "operation": "search"},
+    "manageMySignature": {"collection": "HD_MySignature", "operation": "manage"},
+
+    "addMyhelp": {"collection": "HD_Myhelp", "operation": "add"},
+    "viewMyhelp": {"collection": "HD_Myhelp", "operation": "search"},
+    "manageMyhelp": {"collection": "HD_Myhelp", "operation": "manage"},
+
+    "addNewRequest": {"collection": "HD_NewRequest", "operation": "add"},
+    "viewNewRequest": {"collection": "HD_NewRequest", "operation": "search"},
+    "manageNewRequest": {"collection": "HD_NewRequest", "operation": "manage"},
+
+    "addCandidates": {"collection": "HRN_MC_Candidates", "operation": "add"},
+    "viewCandidates": {"collection": "HRN_MC_Candidates", "operation": "search"},
+    "manageCandidates": {"collection": "HRN_MC_Candidates", "operation": "manage"},
+
+    "addJobRequisitions": {"collection": "HRN_MC_JobRequisitions", "operation": "add"},
+    "viewJobRequisitions": {"collection": "HRN_MC_JobRequisitions", "operation": "search"},
+    "manageJobRequisitions": {"collection": "HRN_MC_JobRequisitions", "operation": "manage"},
+
+    "addRecruitingQRCodes": {"collection": "HRN_MC_RecruitingQRCodes", "operation": "add"},
+    "viewRecruitingQRCodes": {"collection": "HRN_MC_RecruitingQRCodes", "operation": "search"},
+    "manageRecruitingQRCodes": {"collection": "HRN_MC_RecruitingQRCodes", "operation": "manage"},
+
+    "addSharedInterviewSchedules": {"collection": "HRN_MC_SharedInterviewSchedules", "operation": "add"},
+    "viewSharedInterviewSchedules": {"collection": "HRN_MC_SharedInterviewSchedules", "operation": "search"},
+    "manageSharedInterviewSchedules": {"collection": "HRN_MC_SharedInterviewSchedules", "operation": "manage"},
+
+    "addCandidatePools": {"collection": "HRN_MT_CandidatePools", "operation": "add"},
+    "viewCandidatePools": {"collection": "HRN_MT_CandidatePools", "operation": "search"},
+    "manageCandidatePools": {"collection": "HRN_MT_CandidatePools", "operation": "manage"},
+
+    "addEvents": {"collection": "HRN_MT_Events", "operation": "add"},
+    "viewEvents": {"collection": "HRN_MT_Events", "operation": "search"},
+    "manageEvents": {"collection": "HRN_MT_Events", "operation": "manage"},
+
+    "addGlobalTalentCommunityPool": {"collection": "HRN_MT_GlobalTalentCommunityPool", "operation": "add"},
+    "viewGlobalTalentCommunityPool": {"collection": "HRN_MT_GlobalTalentCommunityPool", "operation": "search"},
+    "manageGlobalTalentCommunityPool": {"collection": "HRN_MT_GlobalTalentCommunityPool", "operation": "manage"},
+
+    "addJobOffers": {"collection": "HRN_MT_JobOffers", "operation": "add"},
+    "viewJobOffers": {"collection": "HRN_MT_JobOffers", "operation": "search"},
+    "manageJobOffers": {"collection": "HRN_MT_JobOffers", "operation": "manage"},
+
+    "addJobRequisitionsMT": {"collection": "HRN_MT_JobRequisitions", "operation": "add"},
+    "viewJobRequisitionsMT": {"collection": "HRN_MT_JobRequisitions", "operation": "search"},
+    "manageJobRequisitionsMT": {"collection": "HRN_MT_JobRequisitions", "operation": "manage"},
+
+    "addRecruitToHire": {"collection": "HRN_MT_RecruitToHire", "operation": "add"},
+    "viewRecruitToHire": {"collection": "HRN_MT_RecruitToHire", "operation": "search"},
+    "manageRecruitToHire": {"collection": "HRN_MT_RecruitToHire", "operation": "manage"},
+
+    "addCatalogResourceClassroom": {"collection": "LRN_CatalogResource_Classroom", "operation": "add"},
+    "viewCatalogResourceClassroom": {"collection": "LRN_CatalogResource_Classroom", "operation": "search"},
+    "manageCatalogResourceClassroom": {"collection": "LRN_CatalogResource_Classroom", "operation": "manage"},
+
+    "addCatalogResourceContent": {"collection": "LRN_CatalogResource_Content", "operation": "add"},
+    "viewCatalogResourceContent": {"collection": "LRN_CatalogResource_Content", "operation": "search"},
+    "manageCatalogResourceContent": {"collection": "LRN_CatalogResource_Content", "operation": "manage"},
+
+    "addCatalogResourceCreateGlobalAccessGroups": {"collection": "LRN_CatalogResource_CreateGlobalAccessGroups", "operation": "add"},
+    "viewCatalogResourceCreateGlobalAccessGroups": {"collection": "LRN_CatalogResource_CreateGlobalAccessGroups", "operation": "search"},
+    "manageCatalogResourceCreateGlobalAccessGroups": {"collection": "LRN_CatalogResource_CreateGlobalAccessGroups", "operation": "manage"},
+
+    "addCatalogResourceGlobalAccessGroups": {"collection": "LRN_CatalogResource_GlobalAccessGroups", "operation": "add"},
+    "viewCatalogResourceGlobalAccessGroups": {"collection": "LRN_CatalogResource_GlobalAccessGroups", "operation": "search"},
+    "manageCatalogResourceGlobalAccessGroups": {"collection": "LRN_CatalogResource_GlobalAccessGroups", "operation": "manage"},
+
+    "addCatalogResourceInstructor": {"collection": "LRN_CatalogResource_Instructor", "operation": "add"},
+    "viewCatalogResourceInstructor": {"collection": "LRN_CatalogResource_Instructor", "operation": "search"},
+    "manageCatalogResourceInstructor": {"collection": "LRN_CatalogResource_Instructor", "operation": "manage"},
+
+    "addCatalogResourceSupplier": {"collection": "LRN_CatalogResource_Supplier", "operation": "add"},
+    "viewCatalogResourceSupplier": {"collection": "LRN_CatalogResource_Supplier", "operation": "search"},
+    "manageCatalogResourceSupplier": {"collection": "LRN_CatalogResource_Supplier", "operation": "manage"},
+
+    "addCommunities": {"collection": "LRN_Communities", "operation": "add"},
+    "viewCommunities": {"collection": "LRN_Communities", "operation": "search"},
+    "manageCommunities": {"collection": "LRN_Communities", "operation": "manage"},
+
+    "addCourses": {"collection": "LRN_Courses", "operation": "add"},
+    "viewCourses": {"collection": "LRN_Courses", "operation": "search"},
+    "manageCourses": {"collection": "LRN_Courses", "operation": "manage"},
+
+    "addCoursesLearnersAccess": {"collection": "LRN_Courses_Learners_Access", "operation": "add"},
+    "viewCoursesLearnersAccess": {"collection": "LRN_Courses_Learners_Access", "operation": "search"},
+    "manageCoursesLearnersAccess": {"collection": "LRN_Courses_Learners_Access", "operation": "manage"},
+
+    "addCoursesLearnersAccessGroups": {"collection": "LRN_Courses_Learners_AccessGroups", "operation": "add"},
+    "viewCoursesLearnersAccessGroups": {"collection": "LRN_Courses_Learners_AccessGroups", "operation": "search"},
+    "manageCoursesLearnersAccessGroups": {"collection": "LRN_Courses_Learners_AccessGroups", "operation": "manage"},
+
+    "addCoursesLearnersLearningInitiatives": {"collection": "LRN_Courses_Learners_LearningInitiatives", "operation": "add"},
+    "viewCoursesLearnersLearningInitiatives": {"collection": "LRN_Courses_Learners_LearningInitiatives", "operation": "search"},
+    "manageCoursesLearnersLearningInitiatives": {"collection": "LRN_Courses_Learners_LearningInitiatives", "operation": "manage"},
+
+    "addCreateOfferingCourse": {"collection": "LRN_Create_Offering_Course", "operation": "add"},
+    "viewCreateOfferingCourse": {"collection": "LRN_Create_Offering_Course", "operation": "search"},
+    "manageCreateOfferingCourse": {"collection": "LRN_Create_Offering_Course", "operation": "manage"},
+
+    "addLearnersLearningAssignments": {"collection": "LRN_Learners_LearningAssignments", "operation": "add"},
+    "viewLearnersLearningAssignments": {"collection": "LRN_Learners_LearningAssignments", "operation": "search"},
+    "manageLearnersLearningAssignments": {"collection": "LRN_Learners_LearningAssignments", "operation": "manage"},
+
+    "addLearnersLearningInitiatives": {"collection": "LRN_Learners_LearningInitiatives", "operation": "add"},
+    "viewLearnersLearningInitiatives": {"collection": "LRN_Learners_LearningInitiatives", "operation": "search"},
+    "manageLearnersLearningInitiatives": {"collection": "LRN_Learners_LearningInitiatives", "operation": "manage"},
+
+    "addLearnersPrograms": {"collection": "LRN_Learners_Programs", "operation": "add"},
+    "viewLearnersPrograms": {"collection": "LRN_Learners_Programs", "operation": "search"},
+    "manageLearnersPrograms": {"collection": "LRN_Learners_Programs", "operation": "manage"},
+
+    "addOfferings": {"collection": "LRN_Offerings", "operation": "add"},
+    "viewOfferings": {"collection": "LRN_Offerings", "operation": "search"},
+    "manageOfferings": {"collection": "LRN_Offerings", "operation": "manage"},
+
+    "addQuestionnaireTemplates": {"collection": "PER_QuestionnaireTemplates", "operation": "add"},
+    "viewQuestionnaireTemplates": {"collection": "PER_QuestionnaireTemplates", "operation": "search"},
+    "manageQuestionnaireTemplates": {"collection": "PER_QuestionnaireTemplates", "operation": "manage"},
+
+    "addQuestionnaires": {"collection": "PER_Questionnaires", "operation": "add"},
+    "viewQuestionnaires": {"collection": "PER_Questionnaires", "operation": "search"},
+    "manageQuestionnaires": {"collection": "PER_Questionnaires", "operation": "manage"},
+
+    "addQuestions": {"collection": "PER_Questions", "operation": "add"},
+    "viewQuestions": {"collection": "PER_Questions", "operation": "search"},
+    "manageQuestions": {"collection": "PER_Questions", "operation": "manage"},
+
+    "addReviewPeriods": {"collection": "PER_ReviewPeriods", "operation": "add"},
+    "viewReviewPeriods": {"collection": "PER_ReviewPeriods", "operation": "search"},
+    "manageReviewPeriods": {"collection": "PER_ReviewPeriods", "operation": "manage"},
+
+    "addEmployeeDetailsUK": {"collection": "S_EmployeeDetailsUK", "operation": "add"},
+    "viewEmployeeDetailsUK": {"collection": "S_EmployeeDetailsUK", "operation": "search"},
+    "manageEmployeeDetailsUK": {"collection": "S_EmployeeDetailsUK", "operation": "manage"},
+
+    "addLeaveApplications": {"collection": "S_LeaveApplications", "operation": "add"},
+    "viewLeaveApplications": {"collection": "S_LeaveApplications", "operation": "search"},
+    "manageLeaveApplications": {"collection": "S_LeaveApplications", "operation": "manage"},
+
+    "addLeaveBalances": {"collection": "S_LeaveBalances", "operation": "add"},
+    "viewLeaveBalances": {"collection": "S_LeaveBalances", "operation": "search"},
+    "manageLeaveBalances": {"collection": "S_LeaveBalances", "operation": "manage"},
+
+    "addTalentPool": {"collection": "TM_TalentPool", "operation": "add"},
+    "viewTalentPool": {"collection": "TM_TalentPool", "operation": "search"},
+    "manageTalentPool": {"collection": "TM_TalentPool", "operation": "manage"},
+
+    "addTalentReview": {"collection": "TM_TalentReview", "operation": "add"},
+    "viewTalentReview": {"collection": "TM_TalentReview", "operation": "search"},
+    "manageTalentReview": {"collection": "TM_TalentReview", "operation": "manage"},
+    
+    "addTesting": {"collection": "testing", "operation": "add"},
+    "viewTesting": {"collection": "testing", "operation": "search"},
+    "manageTesting": {"collection": "testing", "operation": "manage"},
+
+    "addrolePermission": {"collection": "rolePermission", "operation": "add"},
+    "viewrolePermission": {"collection": "rolePermission", "operation": "search"},
+    "managerolePermission": {"collection": "rolePermission", "operation": "manage"},
+
+    "adddataloadercourse": {"collection": "testing_data_loader_course", "operation": "add"},
+    "viewdataloadercourse": {"collection": "testing_data_loader_course", "operation": "search"},
+    "managedataloadercourse": {"collection": "testing_data_loader_course", "operation": "manage"},
+
+    "adddataloaderemployee": {"collection": "testing_data_loader_employee", "operation": "add"},
+    "viewdataloaderemployee": {"collection": "testing_data_loader_employee", "operation": "search"},
+    "managedataloaderemployee": {"collection": "testing_data_loader_employee", "operation": "manage"},
+
+    "adddataloaderjob": {"collection": "testing_data_loader_job", "operation": "add"},
+    "viewdataloaderjob": {"collection": "testing_data_loader_job", "operation": "search"},
+    "managedataloaderjob": {"collection": "testing_data_loader_job", "operation": "manage"},
+    "addUKdata": {"collection": "UK_PCL_TEST", "operation": "add"},
+    "viewUKdata": {"collection": "UK_PCL_TEST", "operation": "search"},
+    "manageUKdata": {"collection": "UK_PCL_TEST", "operation": "manage"}
+    
+
+}
