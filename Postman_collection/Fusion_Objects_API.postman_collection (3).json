@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "d6fc549f-7f8b-44bc-a1b8-1fe80c8a44b5",
+		"name": "Fusion_Objects_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30707499"
+	},
+	"item": [
+		{
+			"name": "processHrInfoUK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Personal_Details\": {\r\n        \"Full_Name\": \"Jane Smith1\",\r\n        \"Date_of_Birth\": \"1985-02-15\",\r\n        \"National_Insurance_Number\": \"AB123456C\",\r\n        \"Address\": {\r\n            \"House_Number_Name\": \"123\",\r\n            \"Street_Name\": \"Maple Street\",\r\n            \"Town_City\": \"Anytown\",\r\n            \"Postcode\": \"AT1 2BC\"\r\n        }\r\n    },\r\n    \"Employment_Details\": {\r\n        \"Job_Title\": \"Software Developer\",\r\n        \"Start_Date\": \"2024-06-01\",\r\n        \"Department_Cost_Center\": {\r\n            \"Select_Department\": \"IT\",\r\n            \"Enter_Department_Code\": \"IT123\"\r\n        }\r\n    },\r\n    \"Working_Hours_and_Shifts\": {\r\n        \"Standard_Working_Hours\": {\r\n            \"Enter_Standard_Daily_Working_Hours\": 8,\r\n            \"Choose_Standard_Working_Days\": \"Monday to Friday\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fusionobjects.com/processHrInfoUK",
+					"protocol": "https",
+					"host": [
+						"fusionobjects",
+						"com"
+					],
+					"path": [
+						"processHrInfoUK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applyForLeave",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Employee_Name\": \"Jane Smith1\",\r\n  \"Leave_Type\": \"Annual Vacation\",\r\n  \"Start_Date\": \"2024-12-01\",\r\n  \"End_Date\": \"2024-12-10\",\r\n  \"Duration\": 10,\r\n  \"Reason_for_Absence\": \"Family Vacation\",\r\n  \"Status\": \"Pending\",\r\n  \"Manager\": \"Jane Smith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fusionobjects.com/applyForLeave",
+					"protocol": "https",
+					"host": [
+						"fusionobjects",
+						"com"
+					],
+					"path": [
+						"applyForLeave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewLeaveApplication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Employee_Name\": \"John Doe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fusionobjects.com/viewLeaveApplication",
+					"protocol": "https",
+					"host": [
+						"fusionobjects",
+						"com"
+					],
+					"path": [
+						"viewLeaveApplication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editLeaveApplication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Employee_Name\": \"John Doe\",\r\n  \"Old_Leave_Type\": \"Sick Leave\",\r\n  \"New_Leave_Type\": \"Annual Leave\",\r\n  \"Old_Start_Date\": \"2024-06-11\",\r\n  \"New_Start_Date\": \"2024-06-21\",\r\n  \"Old_End_Date\": \"2024-06-12\",\r\n  \"New_End_Date\": \"2024-06-22\",\r\n  \"Duration\": 2,\r\n  \"New_Reason_for_Absence\": \"Family Vacation\",\r\n  \"New_Status\": \"Pending\",\r\n  \"New_Manager\": \"Jane Smith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fusionobjects.com/editLeaveApplication",
+					"protocol": "https",
+					"host": [
+						"fusionobjects",
+						"com"
+					],
+					"path": [
+						"editLeaveApplication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveBalances/view",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Employee_Name\" : \"Jane Smith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fusionobjects.com/LeaveBalances/view",
+					"protocol": "https",
+					"host": [
+						"fusionobjects",
+						"com"
+					],
+					"path": [
+						"LeaveBalances",
+						"view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveBalances/edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Employee_Name\": \"Jane Smith1\",\r\n  \"Modifications\": [\r\n    {\r\n      \"Leave_Type\": \"Annual Vacation\",\r\n      \"Change\": 24\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fusionobjects.com/LeaveBalances/edit",
+					"protocol": "https",
+					"host": [
+						"fusionobjects",
+						"com"
+					],
+					"path": [
+						"LeaveBalances",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate_leave_accruals",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"person_name\": \"John Doe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fusionobjects.com/calculate_leave_accruals",
+					"protocol": "https",
+					"host": [
+						"fusionobjects",
+						"com"
+					],
+					"path": [
+						"calculate_leave_accruals"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
