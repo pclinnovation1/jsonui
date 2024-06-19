@@ -1,0 +1,122 @@
+{
+    "letters": {
+      "OfferLetterTemplate": {     
+        "purpose": "Job Offer"
+      },
+      "AppointmentLetterTemplate": {
+        "purpose": "Appointment Confirmation"
+      },
+      "EmploymentContractTemplate": {
+        "purpose": "Employment Contract"
+      },
+      "ProbationConfirmationLetterTemplate": {
+        "purpose": "Probation Period Confirmation"
+      },
+      "WelcomeLetterTemplate": {
+        "purpose": "Welcome"
+      },
+      "OnboardingLetterTemplate": {
+        "purpose": "Onboarding Instructions"
+      },
+      "SalaryIncreaseLetterTemplate": {
+        "purpose": "Salary Increase Notification"
+      },
+      "PromotionLetterTemplate": {
+        "purpose": "Promotion Announcement"
+      },
+      "TransferLetterTemplate": {
+        "purpose": "Transfer Confirmation"
+      },
+      "WarningLetterTemplate": {
+        "purpose": "Warning Notice"
+      },
+      "CertificateOfLearningCourseCompletionLetter": {
+        "purpose": "Course Completion Certificate"
+      },
+      "TrainingInvitationLetterTemplate": {
+        "purpose": "Training Invitation"
+      },
+      "TrainingCompletionLetterTemplate": {
+        "purpose": "Training Completion Confirmation"
+      },
+      "PerformanceAppraisalLetterTemplate": {
+        "purpose": "Performance Appraisal Review"
+      },
+      "PerformanceImprovementPlanLetterTemplate": {
+        "purpose": "Performance Improvement Plan"
+      },
+      "BonusAnnouncementLetterTemplate": {
+        "purpose": "Bonus Announcement"
+      },
+      "IncentivePlanLetterTemplate": {
+        "purpose": "Incentive Plan Details"
+      },
+      "RelocationLetterTemplate": {
+        "purpose": "Relocation Assistance"
+      },
+      "WorkAnniversaryLetterTemplate": {
+        "purpose": "Work Anniversary"
+      },
+      "RecognitionLetterTemplate": {
+        "purpose": "Recognition of Achievement"
+      },
+      "AbsenceWarningLetterTemplate": {
+        "purpose": "Absence Warning Notice"
+      },
+      "LeaveApprovalLetterTemplate": {
+        "purpose": "Leave Approval"
+      },
+      "LeaveRejectionLetterTemplate": {
+        "purpose": "Leave Rejection"
+      },
+      "LeaveExtensionApprovalLetterTemplate": {
+        "purpose": "Leave Extension Approval"
+      },
+      "MaternityPaternityLeaveApprovalLetterTemplate": {
+        "purpose": "Maternity/Paternity Leave Approval"
+      },
+      "ReferenceLetterTemplate": {
+        "purpose": "Reference Letter"
+      },
+      "EmploymentVerificationLetterTemplate": {
+        "purpose": "Employment Verification"
+      },
+      "SalaryVerificationLetterTemplate": {
+        "purpose": "Salary Verification"
+      },
+      "InternshipOfferLetterTemplate": {
+        "purpose": "Internship Offer"
+      },
+      "InternshipCompletionCertificateTemplate": {
+        "purpose": "Internship Completion Certificate"
+      },
+      "JobRejectionLetterTemplate": {
+        "purpose": "Job Application Status"
+      },
+      "ThankYouLetterTemplatePostInterview": {
+        "purpose": "Thank You"
+      },
+      "ConfirmationOfEmploymentLetterTemplate": {
+        "purpose": "Confirmation of Employment"
+      },
+      "ChangeInEmploymentTermsLetterTemplate": {
+        "purpose": "Change in Employment Terms"
+      },
+      "OvertimeApprovalLetterTemplate": {
+        "purpose": "Overtime Approval"
+      },
+      "ShiftChangeLetterTemplate": {
+        "purpose": "Shift Change Notification"
+      },
+      "DataPrivacyNoticeTemplate": {
+        "purpose": "Data Privacy Notice"
+      },
+      "PolicyChangeNotificationLetterTemplate": {
+        "purpose": "Policy Change Notification"
+      },
+      "CompanyAnnouncementLetterTemplate": {
+        "purpose": "Company Announcement"
+      }
+    }
+  }
+  
