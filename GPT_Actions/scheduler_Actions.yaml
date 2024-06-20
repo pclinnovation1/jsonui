@@ -1,0 +1,129 @@
+/scheduler/actions/loadConfig:
+  post:
+    operationId: loadConfig
+    summary: Loads the configuration for scheduling tasks.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              configFile: { type: string }
+    responses:
+      "200":
+        description: Configuration successfully loaded.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                config: { type: object }
+
+/scheduler/actions/getEnvParameters:
+  post:
+    operationId: getEnvParameters
+    summary: Retrieves environment parameters for a specific task.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              taskName: { type: string }
+    responses:
+      "200":
+        description: Environment parameters successfully retrieved.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                params: { type: array, items: { type: string } }
+
+/scheduler/actions/scheduleTasks:
+  post:
+    operationId: scheduleTasks
+    summary: Schedules tasks based on the provided configuration.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              config: { type: object }
+    responses:
+      "200":
+        description: Tasks successfully scheduled.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }
+
+/scheduler/actions/runTask:
+  post:
+    operationId: runTask
+    summary: Runs a specific task with the provided parameters.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              taskFunc: { type: string }
+              params: { type: array, items: { type: string } }
+              processDetailsId: { type: string }
+              db: { type: string }
+    responses:
+      "200":
+        description: Task successfully executed.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }
+
+/scheduler/actions/runScheduler:
+  post:
+    operationId: runScheduler
+    summary: Starts the task scheduler.
+    requestBody:
+      required: false
+    responses:
+      "200":
+        description: Scheduler successfully started.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }
+
+/scheduler/actions/updateProcessDetails:
+  post:
+    operationId: updateProcessDetails
+    summary: Updates the process details for a specific task.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              processDetailsId: { type: string }
+              updates: { type: object }
+    responses:
+      "200":
+        description: Process details successfully updated.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }

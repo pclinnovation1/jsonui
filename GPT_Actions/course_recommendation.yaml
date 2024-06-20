@@ -1,0 +1,183 @@
+openapi: 3.1.0
+info:
+  title: Course Recommendation API
+  description: API for recommending courses based on job families and embeddings.
+  version: 1.0.0
+servers:
+  - url: https://fusionobjects.com
+    description: Main API server for course recommendation
+
+paths:
+  /recommend_courses:
+    post:
+      operationId: recommendCourses
+      summary: Recommends courses based on job family.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - job_family
+              properties:
+                job_family:
+                  type: string
+                  description: Job family for which to recommend courses
+                top_n:
+                  type: integer
+                  description: Number of top recommendations to return
+                  default: 5
+      responses:
+        "200":
+          description: Recommended courses retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Course_Name: { type: string }
+                  Predicted_Rating: { type: number }
+                  Cosine_Similarity: { type: number }
+                  Combined_Score: { type: number }
+                  Volatility: { type: number }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /cluster_courses:
+    post:
+      operationId: clusterCourses
+      summary: Clusters courses and returns the cluster model and embeddings.
+      responses:
+        "200":
+          description: Courses clustered successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  kmeans: { type: string } # You may need to serialize this if returning the actual model
+                  all_embeddings:
+                    {
+                      type: array,
+                      items: { type: array, items: { type: number } },
+                    }
+        "400":
+          description: Clustering failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /plot_course_clusters:
+    post:
+      operationId: plotCourseClusters
+      summary: Plots the clusters of courses.
+      responses:
+        "200":
+          description: Course clusters plotted successfully.
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Plot generated successfully."
+        "400":
+          description: Plotting failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /plot_silhouette_scores:
+    post:
+      operationId: plotSilhouetteScores
+      summary: Plots the silhouette scores for the clustered courses.
+      responses:
+        "200":
+          description: Silhouette scores plotted successfully.
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Plot generated successfully."
+        "400":
+          description: Plotting failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /plot_course_ratings_distribution:
+    post:
+      operationId: plotCourseRatingsDistribution
+      summary: Plots the distribution of course ratings.
+      responses:
+        "200":
+          description: Course ratings distribution plotted successfully.
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Plot generated successfully."
+        "400":
+          description: Plotting failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /plot_correlation_heatmap:
+    post:
+      operationId: plotCorrelationHeatmap
+      summary: Plots the correlation heatmap for the course data.
+      responses:
+        "200":
+          description: Correlation heatmap plotted successfully.
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Plot generated successfully."
+        "400":
+          description: Plotting failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /plot_embedding_similarities:
+    post:
+      operationId: plotEmbeddingSimilarities
+      summary: Plots the embedding similarities heatmap.
+      responses:
+        "200":
+          description: Embedding similarities heatmap plotted successfully.
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Plot generated successfully."
+        "400":
+          description: Plotting failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }

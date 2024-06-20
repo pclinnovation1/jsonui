@@ -1,0 +1,83 @@
+/courseRenewal/actions/assignCourses:
+  post:
+    operationId: assignCourses
+    summary: Assigns courses based on provided employee details and updates process details in the database.
+    requestBody:
+      required: false
+    responses:
+      "200":
+        description: Courses successfully assigned.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }
+
+/courseRenewal/actions/extractTimeUnits:
+  post:
+    operationId: extractTimeUnits
+    summary: Extracts numbers and time units from text.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              text: { type: string }
+    responses:
+      "200":
+        description: Successfully extracted time units.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                timeUnits: { type: array, items: { type: object } }
+
+/courseRenewal/actions/parseDueDate:
+  post:
+    operationId: parseDueDate
+    summary: Parses due date from extracted numbers and time units.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              startDate: { type: string, format: "date-time" }
+              text: { type: string }
+    responses:
+      "200":
+        description: Successfully parsed due date.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                dueDate: { type: string, format: "date-time" }
+
+/courseRenewal/actions/updateProcessDetails:
+  post:
+    operationId: updateProcessDetails
+    summary: Updates the process details for a specific task.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              processDetailsId: { type: string }
+              updates: { type: object }
+    responses:
+      "200":
+        description: Process details successfully updated.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }

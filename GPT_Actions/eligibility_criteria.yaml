@@ -1,0 +1,139 @@
+openapi: 3.1.0
+info:
+  title: Employee Details API
+  description: API to manage and check eligibility of employees from a MongoDB collection.
+  version: 1.0.0
+servers:
+  - url: https://fusionobjects.com
+    description: Main API server for employee details management
+
+paths:
+  /employees/schema:
+    post:
+      operationId: fetchSchema
+      summary: Fetches the schema from the collection.
+      requestBody:
+        required: false
+      responses:
+        "200":
+          description: Schema retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: { type: boolean }
+        "400":
+          description: Schema retrieval failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /employees/criteria/filter:
+    post:
+      operationId: filterCriteria
+      summary: Filters the criteria based on the schema.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                criteria:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    additionalProperties: { type: string }
+                schema:
+                  type: object
+                  additionalProperties: { type: boolean }
+      responses:
+        "200":
+          description: Criteria filtered successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+                  additionalProperties: { type: string }
+        "400":
+          description: Filtering criteria failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /employees/query/create:
+    post:
+      operationId: createMongoQuery
+      summary: Creates a MongoDB query from the filtered criteria.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filtered_criteria:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    additionalProperties: { type: string }
+      responses:
+        "200":
+          description: MongoDB query created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: { type: string }
+        "400":
+          description: Query creation failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /employees/eligibility/check:
+    post:
+      operationId: checkEligibility
+      summary: Checks eligibility of employees based on input data.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                input_data:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    additionalProperties: { type: string }
+      responses:
+        "200":
+          description: Eligibility check completed successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  matching_persons:
+                    type: array
+                    items: { type: string }
+        "400":
+          description: Eligibility check failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
