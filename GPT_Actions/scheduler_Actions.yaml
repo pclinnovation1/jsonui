@@ -1,0 +1,140 @@
+openapi: 3.1.0
+info:
+  title: Task Scheduler API
+  description: API for scheduling and managing tasks.
+  version: 1.0.0
+servers:
+  - url: https://fusionobjects.com
+    description: Main API server for task scheduling
+
+paths:
+  /tasks/schedule:
+    post:
+      operationId: scheduleTask
+      summary: Schedules a new task.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - interval
+                - time
+              properties:
+                name:
+                  type: string
+                  description: Name of the task to schedule (generate_letters, generate_notifications, assign_courses).
+                interval:
+                  type: string
+                  description: Interval at which to run the task (every).
+                time:
+                  type: string
+                  description: Time to run the task (in seconds, minutes, hours, or day).
+                at:
+                  type: string
+                  description: Specific time of day to run the task (if interval is day).
+      responses:
+        "200":
+          description: Task scheduled successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Task scheduled successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid task configuration.
+
+  /tasks/run:
+    post:
+      operationId: runTask
+      summary: Manually runs a task.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                  description: Name of the task to run (generate_letters, generate_notifications, assign_courses).
+      responses:
+        "200":
+          description: Task executed successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Task executed successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Task not found.
+
+  /tasks/status:
+    get:
+      operationId: getTaskStatus
+      summary: Retrieves the status of a task.
+      parameters:
+        - in: query
+          name: taskId
+          required: true
+          schema:
+            type: string
+            description: ID of the task to get status for.
+      responses:
+        "200":
+          description: Task status retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  taskId:
+                    type: string
+                  status:
+                    type: string
+                  message:
+                    type: string
+                    example: Status of the task.
+        "400":
+          description: Invalid task ID.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Task ID not found.
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
