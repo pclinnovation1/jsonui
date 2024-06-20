@@ -1,0 +1,94 @@
+openapi: 3.1.0
+info:
+  title: Employee Goal Assignment API
+  description: API for assigning goals to employees based on eligibility profiles.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for goal assignments
+
+paths:
+  /goal/assign:
+    post:
+      operationId: assignGoal
+      summary: Assigns goals to employees based on eligibility profiles.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Goal_Name:
+                  type: string
+                Eligibility_Profile_Name:
+                  type: string
+              required:
+                - Goal_Name
+                - Eligibility_Profile_Name
+      responses:
+        "200":
+          description: Goal assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Assigned {goal_name} to eligible employees.
+        "400":
+          description: Missing required fields.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Goal_Name and Eligibility_Profile_Name are required.
+        "404":
+          description: Goal or eligibility profile not found, or no eligible employees.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+components:
+  schemas:
+    Employee:
+      type: object
+      properties:
+        Person_Number:
+          type: string
+        First_Name:
+          type: string
+        Last_Name:
+          type: string
+    Goal:
+      type: object
+      properties:
+        Goal_Name:
+          type: string
+        Goal_Description:
+          type: string
+        Review_Period:
+          type: string
+        Assigned_Date:
+          type: string
+          format: date
+        Due_Date:
+          type: string
+          format: date
+
+securitySchemes:
+  bearerAuth:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+
+security:
+  - bearerAuth: []

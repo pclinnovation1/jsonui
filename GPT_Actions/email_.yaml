@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Email Notification API
+  description: API to send email notifications with dynamic templates and attachments.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for email notifications
+
+paths:
+  /send_email:
+    post:
+      operationId: sendEmail
+      summary: Sends an email notification with the provided details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                function:
+                  type: string
+                subject:
+                  type: string
+                recipient_name:
+                  type: string
+                recipient_email:
+                  type: string
+                company_email:
+                  type: string
+                event:
+                  type: string
+                dynamic_params:
+                  type: object
+                  additionalProperties:
+                    type: string
+                attachments:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      path:
+                        type: string
+                      filename:
+                        type: string
+                      content_type:
+                        type: string
+      responses:
+        "200":
+          description: Email sent successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email sent successfully.
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
