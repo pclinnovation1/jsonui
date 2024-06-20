@@ -1,0 +1,249 @@
+openapi: 3.1.0
+info:
+  title: Course Management API
+  description: API for managing course enrollments, withdrawals, recommendations, assignments, and renewals.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for course management
+
+paths:
+  /course/enroll:
+    post:
+      operationId: enrollEmployee
+      summary: Enrolls an employee in a course offering.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Offering_Title:
+                  type: string
+                Enrollment_Date:
+                  type: string
+                  format: date
+                Offering_Number:
+                  type: string
+                Person_Name:
+                  type: string
+              required:
+                - Offering_Title
+                - Enrollment_Date
+                - Person_Name
+      responses:
+        "200":
+          description: Employee enrolled successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Employee enrolled successfully.
+        "400":
+          description: Invalid input data or multiple offerings found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  offerings:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Offering_Number:
+                          type: string
+                        Offering_Title:
+                          type: string
+                        Offering_Format:
+                          type: string
+                        Active_Learners:
+                          type: integer
+                        Maximum_Learners:
+                          type: integer
+        "404":
+          description: Offering or employee not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /course/withdraw:
+    post:
+      operationId: withdrawEmployee
+      summary: Withdraws an employee from a course offering.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Offering_Title:
+                  type: string
+                Offering_Number:
+                  type: string
+                Person_Name:
+                  type: string
+              required:
+                - Offering_Title
+                - Person_Name
+      responses:
+        "200":
+          description: Employee withdrawn successfully and waitlist updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Employee withdrawn successfully and waitlist updated.
+        "400":
+          description: Invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  offerings:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Offering_Number:
+                          type: string
+                        Offering_Title:
+                          type: string
+                        Offering_Format:
+                          type: string
+                        Active_Learners:
+                          type: integer
+                        Maximum_Learners:
+                          type: integer
+        "404":
+          description: Offering or employee not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /course/recommend:
+    post:
+      operationId: recommendCourse
+      summary: Recommends courses based on job family.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Job_Family:
+                  type: string
+                Number_of_Courses:
+                  type: integer
+                  default: 5
+              required:
+                - Job_Family
+      responses:
+        "200":
+          description: Courses recommended successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    Course_Name:
+                      type: string
+                    Predicted_Rating:
+                      type: number
+                    Cosine_Similarity:
+                      type: number
+                    Combined_Score:
+                      type: number
+                    Volatility:
+                      type: number
+
+  /course/assign:
+    post:
+      operationId: assignCourse
+      summary: Assigns courses to employees based on recent changes.
+      responses:
+        "200":
+          description: Courses assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  assigned_courses:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        message:
+                          type: string
+                          example: Courses assigned successfully.
+
+  /course/renew:
+    post:
+      operationId: renewCourses
+      summary: Renews courses for employees within a specified date range.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                from_date:
+                  type: string
+                  format: date
+                to_date:
+                  type: string
+                  format: date
+              required:
+                - from_date
+                - to_date
+      responses:
+        "200":
+          description: Courses renewed successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        message:
+                          type: string
+                          example: Courses renewed successfully.
+        "400":
+          description: Invalid input data or date format.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
