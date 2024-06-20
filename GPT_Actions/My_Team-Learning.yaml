@@ -1,0 +1,700 @@
+  openapi: 3.1.0
+info:
+  title: "My Team" - Learning Management API
+  description: API to manage catalog resources within an organization.
+  version: 1.0.0
+servers:
+  - url: https://fusionobjects.com
+    description: Main API server for catalog resources management
+
+paths:
+  /learningCatalog/viewCourse:
+    post:
+      operationId: viewCourse
+      summary: Views details of a course.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                courseId:
+                  type: string
+                  description: The ID of the course to view.
+      responses:
+        "200":
+          description: Course details retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  About_This_Record: { type: array, items: { type: string } }
+                  Columns: { type: array, items: { type: string } }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learningCatalog/createCourse:
+    post:
+      operationId: createCourse
+      summary: Creates a new course in the learning catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - Publish_Start_Date
+                - Publish_End_Date
+                - Course_Number
+              properties:
+                Title: { type: string }
+                Syllabus: { type: string }
+                Short_Description: { type: string }
+                Publish_Start_Date: { type: string, format: date }
+                Publish_End_Date: { type: string, format: date }
+                Course_Number: { type: string }
+                Minimum_Expected_Effort: { type: string }
+                Maximum_Expected_Effort: { type: string }
+                Currency: { type: string }
+                Minimum_Price: { type: number }
+                Maximum_Price: { type: number }
+                Branding_Image: { type: string }
+                Trailer: { type: string }
+                Comments: { type: string }
+                Related_Materials:
+                  type: object
+                  properties:
+                    Visibility:
+                      type: object
+                      properties:
+                        Administrators: { type: array, items: { type: string } }
+                        Administrators_and_Self_Service:
+                          { type: array, items: { type: string } }
+                        Administrators_and_Enrollees:
+                          { type: array, items: { type: string } }
+                    Attachment: { type: array, items: { type: string } }
+                Learning_Item_Additional_Attributes:
+                  type: object
+                  properties:
+                    Topic: { type: string }
+                Default_Offering_Attributes:
+                  type: object
+                  properties:
+                    Training_Supplier_or_Instructor:
+                      type: object
+                      properties:
+                        Facilitator_Type: { type: string }
+                    Pricing:
+                      type: object
+                      properties:
+                        Currency: { type: string }
+                        Add_Line_Item:
+                          type: object
+                          properties:
+                            Line_Item: { type: string }
+                            Price: { type: number }
+                            Required: { type: boolean }
+                        Remove: { type: boolean }
+                    Payment:
+                      type: object
+                      properties:
+                        Payment_Type: { type: string }
+                    Capacity_Rules:
+                      type: object
+                      properties:
+                        Minimum_Capacity: { type: number }
+                        Maximum_Capacity: { type: number }
+                        Waitlist_Mode: { type: string }
+                        Waitlist_Rules:
+                          type: object
+                          properties:
+                            Allow_joining_the_waitlist_from_self_service:
+                              { type: boolean }
+                Communities:
+                  type: object
+                  properties:
+                    View:
+                      type: object
+                      properties:
+                        About_This_Record:
+                          { type: array, items: { type: string } }
+                        Columns: { type: array, items: { type: string } }
+                    Remove: { type: boolean }
+                Default_Assignment_Rules:
+                  type: object
+                  properties:
+                    Learning_Assignment_Rules:
+                      type: object
+                      properties:
+                        Initial_Assignment_Status: { type: string }
+                        Validity_Period_Starts: { type: string, format: date }
+                        Validity_Period_Expires: { type: string, format: date }
+      responses:
+        "200":
+          description: Course successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learningCatalog/editCourse:
+    post:
+      operationId: editCourse
+      summary: Edits an existing course in the learning catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Course_ID
+              properties:
+                Course_ID: { type: string }
+                Title: { type: string }
+                Syllabus: { type: string }
+                Short_Description: { type: string }
+                Publish_Start_Date: { type: string, format: date }
+                Publish_End_Date: { type: string, format: date }
+                Course_Number: { type: string }
+                Minimum_Expected_Effort: { type: string }
+                Maximum_Expected_Effort: { type: string }
+                Currency: { type: string }
+                Minimum_Price: { type: number }
+                Maximum_Price: { type: number }
+                Branding_Image: { type: string }
+                Trailer: { type: string }
+                Comments: { type: string }
+                Related_Materials:
+                  type: object
+                  properties:
+                    Visibility:
+                      type: object
+                      properties:
+                        Administrators: { type: array, items: { type: string } }
+                        Administrators_and_Self_Service:
+                          { type: array, items: { type: string } }
+                        Administrators_and_Enrollees:
+                          { type: array, items: { type: string } }
+                    Attachment: { type: array, items: { type: string } }
+                Learning_Item_Additional_Attributes:
+                  type: object
+                  properties:
+                    Topic: { type: string }
+                Default_Offering_Attributes:
+                  type: object
+                  properties:
+                    Training_Supplier_or_Instructor:
+                      type: object
+                      properties:
+                        Facilitator_Type: { type: string }
+                    Pricing:
+                      type: object
+                      properties:
+                        Currency: { type: string }
+                        Add_Line_Item:
+                          type: object
+                          properties:
+                            Line_Item: { type: string }
+                            Price: { type: number }
+                            Required: { type: boolean }
+                        Remove: { type: boolean }
+                    Payment:
+                      type: object
+                      properties:
+                        Payment_Type: { type: string }
+                    Capacity_Rules:
+                      type: object
+                      properties:
+                        Minimum_Capacity: { type: number }
+                        Maximum_Capacity: { type: number }
+                        Waitlist_Mode: { type: string }
+                        Waitlist_Rules:
+                          type: object
+                          properties:
+                            Allow_joining_the_waitlist_from_self_service:
+                              { type: boolean }
+                Communities:
+                  type: object
+                  properties:
+                    View:
+                      type: object
+                      properties:
+                        About_This_Record:
+                          { type: array, items: { type: string } }
+                        Columns: { type: array, items: { type: string } }
+                    Remove: { type: boolean }
+                Default_Assignment_Rules:
+                  type: object
+                  properties:
+                    Learning_Assignment_Rules:
+                      type: object
+                      properties:
+                        Initial_Assignment_Status: { type: string }
+                        Validity_Period_Starts: { type: string, format: date }
+                        Validity_Period_Expires: { type: string, format: date }
+      responses:
+        "200":
+          description: Course successfully edited.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learningCatalog/exportCourses:
+    post:
+      operationId: exportCourses
+      summary: Exports course details to an Excel file.
+      responses:
+        "200":
+          description: Course details exported successfully.
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        "400":
+          description: Export failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learningCatalog/addOffering:
+    post:
+      operationId: addOffering
+      summary: Adds a new offering to a course in the learning catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Course_ID
+                - Title
+                - Offering_Start_Date
+                - Offering_End_Date
+              properties:
+                Course_ID: { type: string }
+                Title: { type: string }
+                Description: { type: string }
+                Offering_Number: { type: string }
+                Offering_Type: { type: string }
+                Publish_Start_Date: { type: string, format: date }
+                Publish_End_Date: { type: string, format: date }
+                Offering_Start_Date: { type: string, format: date }
+                Offering_End_Date: { type: string, format: date }
+                Primary_Classroom: { type: string }
+                Language: { type: string }
+                Facilitator_Type: { type: string }
+                Offering_Coordinator: { type: string }
+                Comments: { type: string }
+                Related_Materials:
+                  type: object
+                  properties:
+                    Visibility:
+                      type: object
+                      properties:
+                        Administrators: { type: array, items: { type: string } }
+                        Administrators_and_Self_Service:
+                          { type: array, items: { type: string } }
+                        Administrators_and_Enrollees:
+                          { type: array, items: { type: string } }
+                    Attachment: { type: array, items: { type: string } }
+                Capacity_Rules:
+                  type: object
+                  properties:
+                    Booked_Seats: { type: number }
+                    Capacity_Rules: { type: string }
+                Pricing:
+                  type: object
+                  properties:
+                    Pricing: { type: number }
+                    Override_pricing: { type: boolean }
+                Payment:
+                  type: object
+                  properties:
+                    Override_payment_type: { type: string }
+                Learning_Offering_Additional_Attributes:
+                  type: object
+                  properties:
+                    Learning_Item_Additional_Attributes: { type: string }
+      responses:
+        "200":
+          description: Offering successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learningCatalog/editOffering:
+    post:
+      operationId: editOffering
+      summary: Edits an existing offering in the learning catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Offering_ID
+              properties:
+                Offering_ID: { type: string }
+                Title: { type: string }
+                Description: { type: string }
+                Offering_Number: { type: string }
+                Offering_Type: { type: string }
+                Publish_Start_Date: { type: string, format: date }
+                Publish_End_Date: { type: string, format: date }
+                Offering_Start_Date: { type: string, format: date }
+                Offering_End_Date: { type: string, format: date }
+                Primary_Classroom: { type: string }
+                Language: { type: string }
+                Facilitator_Type: { type: string }
+                Offering_Coordinator: { type: string }
+                Comments: { type: string }
+                Related_Materials:
+                  type: object
+                  properties:
+                    Visibility:
+                      type: object
+                      properties:
+                        Administrators: { type: array, items: { type: string } }
+                        Administrators_and_Self_Service:
+                          { type: array, items: { type: string } }
+                        Administrators_and_Enrollees:
+                          { type: array, items: { type: string } }
+                    Attachment: { type: array, items: { type: string } }
+                Capacity_Rules:
+                  type: object
+                  properties:
+                    Booked_Seats: { type: number }
+                    Capacity_Rules: { type: string }
+                Pricing:
+                  type: object
+                  properties:
+                    Pricing: { type: number }
+                    Override_pricing: { type: boolean }
+                Payment:
+                  type: object
+                  properties:
+                    Override_payment_type: { type: string }
+                Learning_Offering_Additional_Attributes:
+                  type: object
+                  properties:
+                    Learning_Item_Additional_Attributes: { type: string }
+      responses:
+        "200":
+          description: Offering successfully edited.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learningCatalog/exportOfferings:
+    post:
+      operationId: exportOfferings
+      summary: Exports offering details to an Excel file.
+      responses:
+        "200":
+          description: Offering details exported successfully.
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        "400":
+          description: Export failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learning/assign:
+    post:
+      operationId: assignLearning
+      summary: Assigns learning items to learners.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - AssignmentType
+                - StartDate
+                - DueDate
+                - LearningItems
+                - Learners
+              properties:
+                AssignmentType: { type: string }
+                StartDate: { type: string, format: date }
+                DueDate: { type: string, format: date }
+                ContextSegment: { type: string }
+                LearningItems: { type: array, items: { type: string } }
+                Learners:
+                  type: object
+                  properties:
+                    LearnersType: { type: string }
+                    SelectAPerson: { type: string }
+                    NoteToLearners: { type: string }
+                Justification: { type: string }
+      responses:
+        "200":
+          description: Learning items successfully assigned.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learning/recordExternal:
+    post:
+      operationId: recordExternalLearning
+      summary: Records external learning for learners.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - StartDate
+                - CompletionDate
+                - Learners
+              properties:
+                CompletionDetails:
+                  type: object
+                  properties:
+                    StartDate: { type: string, format: date }
+                    CompletionDate: { type: string, format: date }
+                    ActualEffortInHours: { type: number }
+                    ScoreAchieved: { type: number }
+                    ContextSegment: { type: string }
+                LearningItemDetails:
+                  type: object
+                  properties:
+                    Title: { type: string }
+                    URL: { type: string }
+                    ExpectedTrainingHours: { type: number }
+                    Cost: { type: number }
+                    Currency: { type: string }
+                    Topic: { type: string }
+                    ContextSegment: { type: string }
+                    Description: { type: string }
+                Learners:
+                  type: object
+                  properties:
+                    SelectionType: { type: string }
+                    SelectAPerson: { type: string }
+                    NoteToLearners: { type: string }
+                Justification: { type: string }
+      responses:
+        "200":
+          description: External learning successfully recorded.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learning/publishVideo:
+    post:
+      operationId: publishVideo
+      summary: Publishes a video to the learning platform.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Video
+                - Title
+              properties:
+                Video: { type: string }
+                Title: { type: string }
+                Description: { type: string }
+                Visibility: { type: array, items: { type: string } }
+                RelatedMaterials: { type: array, items: { type: string } }
+      responses:
+        "200":
+          description: Video successfully published.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learning/authorLearningJourney:
+    post:
+      operationId: authorLearningJourney
+      summary: Creates a new learning journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+              properties:
+                LearningJourneyDetails:
+                  type: object
+                  properties:
+                    Title: { type: string }
+                    CoverArt: { type: string }
+                    Description: { type: string }
+                TableOfContents:
+                  type: object
+                  properties:
+                    SectionTitle: { type: string }
+                    SelectMedia: { type: string }
+                    Description: { type: string }
+                SetLearningJourneyPrivacy: { type: string }
+                RelatedMaterials: { type: array, items: { type: string } }
+      responses:
+        "200":
+          description: Learning journey successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learning/createCommunity:
+    post:
+      operationId: createLearningCommunity
+      summary: Creates a new learning community.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - CommunityTitle
+              properties:
+                CommunityDetails:
+                  type: object
+                  properties:
+                    CommunityTitle: { type: string }
+                    BrandingImage: { type: string }
+                    Description: { type: string }
+                    Trailer: { type: string }
+                Visibility:
+                  type: object
+                  properties:
+                    Privacy: { type: string }
+                    Member_Contributions: { type: string }
+                RelatedMaterials: { type: array, items: { type: string } }
+      responses:
+        "200":
+          description: Learning community successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
