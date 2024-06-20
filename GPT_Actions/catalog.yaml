@@ -1,0 +1,424 @@
+openapi: 3.1.0
+info:
+  title: Catalog Resources Management API
+  description: API to manage catalog resources within an organization.
+  version: 1.0.0
+servers:
+  - url: https://fusionobjects.com
+    description: Main API server for catalog resources management
+
+paths:
+  /catalog/addOnlineContent:
+    post:
+      operationId: addOnlineContent
+      summary: Adds online content to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - Start_Date
+                - End_Date
+                - File
+              properties:
+                Title: { type: string }
+                Start_Date: { type: string, format: date }
+                End_Date: { type: string, format: date }
+                File: { type: string }
+      responses:
+        "200":
+          description: Online content successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addVideo:
+    post:
+      operationId: addVideo
+      summary: Adds a video to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - Start_Date
+                - End_Date
+                - Contents
+              properties:
+                Title: { type: string }
+                Description: { type: string }
+                Start_Date: { type: string, format: date }
+                End_Date: { type: string, format: date }
+                Contents: { type: array, items: { type: string } }
+      responses:
+        "200":
+          description: Video successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addWebLink:
+    post:
+      operationId: addWebLink
+      summary: Adds a web link to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - URL
+              properties:
+                Title: { type: string }
+                Status: { type: string }
+                Description: { type: string }
+                Start_Date: { type: string, format: date }
+                End_Date: { type: string, format: date }
+                URL: { type: string }
+                Mark_as_complete_when_learner_opens_the_web_link:
+                  { type: boolean }
+      responses:
+        "200":
+          description: Web link successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addPdfFile:
+    post:
+      operationId: addPdfFile
+      summary: Adds a PDF file to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - File
+              properties:
+                Title: { type: string }
+                Description: { type: string }
+                Start_Date: { type: string, format: date }
+                End_Date: { type: string, format: date }
+                File: { type: string }
+      responses:
+        "200":
+          description: PDF file successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addAssessment:
+    post:
+      operationId: addAssessment
+      summary: Adds an assessment to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - Assessment
+              properties:
+                Title: { type: string }
+                Status: { type: string }
+                Description: { type: string }
+                Start_Date: { type: string, format: date }
+                End_Date: { type: string, format: date }
+                Assessment: { type: string }
+                Enable_time_limit: { type: boolean }
+                Enable_Scoring: { type: boolean }
+                Mastery_Score: { type: number }
+                Recorded_Attempts: { type: number }
+                Recorded_Attempt_Review: { type: boolean }
+                Only_allow_reviews_for_passed_attempts: { type: boolean }
+                Enable_learner_to_view_response_feedback: { type: boolean }
+                Enable_learning_administrator_to_view_the_score:
+                  { type: boolean }
+                Enable_learner_to_view_the_score: { type: boolean }
+      responses:
+        "200":
+          description: Assessment successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addObservationChecklist:
+    post:
+      operationId: addObservationChecklist
+      summary: Adds an observation checklist to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - Observation_Checklist
+              properties:
+                Title: { type: string }
+                Status: { type: string }
+                Description: { type: string }
+                Start_Date: { type: string, format: date }
+                End_Date: { type: string, format: date }
+                Observation_Checklist: { type: string }
+                Version: { type: string }
+                Folder: { type: string }
+                Scored: { type: boolean }
+                Observer_Type: { type: string }
+                Advanced:
+                  type: object
+                  properties:
+                    Observer_Checklist:
+                      type: object
+                      properties:
+                        Recorded_Attempts: { type: number }
+                        Recorded_Attempt_Review: { type: boolean }
+                        Only_allow_reviews_for_passed_attempts:
+                          { type: boolean }
+                        Let_observers_reassign_to_anyone: { type: boolean }
+                    Self_Assessment_Checklist:
+                      type: object
+                      properties:
+                        Require_self_assessment_by_learner: { type: boolean }
+      responses:
+        "200":
+          description: Observation checklist successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addCoverArt:
+    post:
+      operationId: addCoverArt
+      summary: Adds cover art to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - Cover_Art
+              properties:
+                Title: { type: string }
+                Description: { type: string }
+                Start_Date: { type: string, format: date }
+                End_Date: { type: string, format: date }
+                Cover_Art: { type: string }
+      responses:
+        "200":
+          description: Cover art successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addInstructor:
+    post:
+      operationId: addInstructor
+      summary: Adds an instructor to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Name
+                - Person_Number
+              properties:
+                Name: { type: string }
+                Person_Number: { type: string }
+                Department: { type: string }
+                Job: { type: string }
+                Business_Unit: { type: string }
+      responses:
+        "200":
+          description: Instructor successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addClassroom:
+    post:
+      operationId: addClassroom
+      summary: Adds a new classroom to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Classroom_Details
+              properties:
+                Classroom_Details: { type: string }
+                Location_Details:
+                  type: array
+                  items:
+                    type: string
+                    enum: [Select_an_existing_location, Add_a_new_location]
+                Visible_To: { type: array, items: { type: string } }
+                Files: { type: array, items: { type: string } }
+                URL: { type: string }
+      responses:
+        "200":
+          description: Classroom successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /catalog/addTrainingSupplier:
+    post:
+      operationId: addTrainingSupplier
+      summary: Adds a new training supplier to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Name
+                - Contact
+              properties:
+                Name: { type: string }
+                Description: { type: string }
+                Contact: { type: string }
+                Context_Segment: { type: string }
+                Related_Materials:
+                  type: object
+                  properties:
+                    Visible_To: { type: array, items: { type: string } }
+                    Files: { type: array, items: { type: string } }
+                    URL: { type: string }
+      responses:
+        "200":
+          description: Training supplier successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }

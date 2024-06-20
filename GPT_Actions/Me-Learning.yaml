@@ -1,0 +1,214 @@
+  openapi: 3.1.0
+info:
+  title: "Me" Learning Management API
+  description: API to manage catalog resources within an organization.
+  version: 1.0.0
+servers:
+  - url: https://fusionobjects.com
+    description: Main API server for catalog resources management
+
+paths:
+  
+  /learning/actions/recordExternalLearning:
+    post:
+      operationId: recordExternalLearning
+      summary: Records external learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - StartDate
+                - CompletionDate
+              properties:
+                Completion_Details:
+                  type: object
+                  properties:
+                    Start_Date: { type: string, format: date }
+                    Completion_Date: { type: string, format: date }
+                    Actual_Effort_in_Hours: { type: number }
+                    Score_Achieved: { type: number }
+                    Context_Segment: { type: string }
+                Attachments: { type: array, items: { type: string } }
+                Learning_Item_Details:
+                  type: object
+                  properties:
+                    Title: { type: string }
+                    URL: { type: string }
+                    Expected_Training_Hours: { type: number }
+                    Cost: { type: number }
+                    Currency: { type: string }
+                    Description: { type: string }
+                    Topic: { type: string }
+                    Context_Segment: { type: string }
+                Justification: { type: string }
+                Actions:
+                  type: object
+                  properties:
+                    Record: { type: boolean }
+      responses:
+        "200":
+          description: External learning successfully recorded.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+     
+  /learning/actions/requestNoncatalogLearning:
+    post:
+      operationId: requestNoncatalogLearning
+      summary: Requests non-catalog learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Title
+                - StartDate
+                - DueDate
+              properties:
+                Request_Details:
+                  type: object
+                  properties:
+                    Start_Date: { type: string, format: date }
+                    Due_Date: { type: string, format: date }
+                    Context_Segment: { type: string }
+                Attachments: { type: array, items: { type: string } }
+                Learning_Item_Details:
+                  type: object
+                  properties:
+                    Title: { type: string }
+                    URL: { type: string }
+                    Expected_Training_Hours: { type: number }
+                    Cost: { type: number }
+                    Currency: { type: string }
+                    Description: { type: string }
+                    Topic: { type: string }
+                    Context_Segment: { type: string }
+                Justification: { type: string }
+                Actions:
+                  type: object
+                  properties:
+                    Submit: { type: boolean }
+      responses:
+        "200":
+          description: Non-catalog learning successfully requested.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learning/actions/createCommunity:
+    post:
+      operationId: createCommunity
+      summary: Creates a new learning community.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - CommunityTitle
+              properties:
+                Community_Details:
+                  type: object
+                  properties:
+                    Community_Title: { type: string }
+                    Branding_Image: { type: string }
+                    Description: { type: string }
+                    Trailer: { type: string }
+                Visibility:
+                  type: object
+                  properties:
+                    Privacy:
+                      type: object
+                      properties:
+                        Open: { type: boolean }
+                        Closed: { type: boolean }
+                        Secret: { type: boolean }
+                    Member_Contributions:
+                      type: object
+                      properties:
+                        Disable: { type: boolean }
+                        Enable: { type: boolean }
+                Related_Materials: { type: array, items: { type: string } }
+      responses:
+        "200":
+          description: Learning community successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string }
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error: { type: string }
+
+  /learning/viewTranscript:
+    post:
+    operationId: viewTranscript
+    summary: Views learning transcript.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - StartDate
+              - EndDate
+            properties:
+              Start_Date: { type: string, format: date }
+              End_Date: { type: string, format: date }
+              Actions:
+                type: object
+                properties:
+                  Submit: { type: boolean }
+    responses:
+      "200":
+        description: Learning transcript successfully viewed.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message: { type: string }
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error: { type: string }
