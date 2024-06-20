@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: API Documentation
+  description: API for managing various operations including course management, letter generation, and email notifications.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server
+
+paths:
+  /letters/generate:
+    post:
+      operationId: generateLetter
+      summary: Generates a letter based on input data and configuration.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                recipient_name:
+                  type: string
+                recipient_address:
+                  type: string
+                letter_body:
+                  type: string
+                letter_type:
+                  type: string
+              required:
+                - recipient_name
+                - recipient_address
+                - letter_body
+                - letter_type
+      responses:
+        "200":
+          description: Letter generated successfully.
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+        "400":
+          description: Invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string

@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: Leave Calculations API
+  description: API for calculating leave accruals.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for leave calculations
+
+paths:
+  /leave/calculate_leave_accruals:
+    post:
+      operationId: calculateLeaveAccruals
+      summary: Calculate leave accruals for employees.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Full name of the person (First and Last name).
+                business_unit:
+                  type: string
+                  description: Business unit of the person.
+                legal_entity:
+                  type: string
+                  description: Legal entity of the person.
+              required:
+                - person_name
+      responses:
+        "200":
+          description: Leave accruals calculated and stored successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Confirmation message
+        "400":
+          description: Invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message
+        "404":
+          description: No employees found for the provided criteria.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message
+
+components:
+  schemas:
+    LeaveAccrualsRequest:
+      type: object
+      properties:
+        person_name:
+          type: string
+          description: Full name of the person (First and Last name).
+        business_unit:
+          type: string
+          description: Business unit of the person.
+        legal_entity:
+          type: string
+          description: Legal entity of the person.
+      required:
+        - person_name
