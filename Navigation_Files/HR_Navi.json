@@ -1,0 +1,678 @@
+{
+    "Administrator Dashboard": {
+        "Home": []
+    },
+    "Learning Catalog": {
+        "Offerings": {
+            "View": [],
+            "Create": {
+                "Instructor-Led Offering": {
+                    "Select Course": {
+                        "Search by Course Attributes": {
+                            "Course Title": [],
+                            "Publish Start Date": []
+                        },
+                        "Search by Learning Profiles": [],
+                        "Search Results": {
+                            "Course Title": [],
+                            "Course Number": [],
+                            "Number of Active Offerings": []
+                        }
+                    }
+                },
+                "Self-Paced Offering": {
+                    "Select Course": {
+                        "Search by Course Attributes": {
+                            "Course Title": [],
+                            "Publish Start Date": []
+                        },
+                        "Search by Learning Profiles": [],
+                        "Search Results": {
+                            "Course Title": [],
+                            "Course Number": [],
+                            "Number of Active Offerings": []
+                        }
+                    }
+                },
+                "Blended Offering": {
+                    "Select Course": {
+                        "Search by Course Attributes": {
+                            "Course Title": [],
+                            "Publish Start Date": []
+                        },
+                        "Search by Learning Profiles": [],
+                        "Search Results": {
+                            "Course Title": [],
+                            "Course Number": [],
+                            "Number of Active Offerings": []
+                        }
+                    }
+                }
+            },
+            "Edit": [],
+            "Copy": [],
+            "Learners": []
+        },
+        "Courses": {
+            "General Information": {
+                "Basic Information": {
+                    "Title": [],
+                    "Syllabus": [],
+                    "Short Description": [],
+                    "Publish Start Date": [],
+                    "Publish End Date": [],
+                    "Course Number": [],
+                    "Offering Number": [],
+                    "Offering Type": [],
+                    "Language": [],
+                    "Offering Coordinator": []
+                },
+                "Other Details": {
+                    "Minimum Expected Effort": [],
+                    "Maximum Expected Effort": [],
+                    "Currency": [],
+                    "Minimum Price": [],
+                    "Maximum Price": [],
+                    "Branding Image": [],
+                    "Trailer": [],
+                    "Comments": [],
+                    "Override conversation system setup configuration": [],
+                    "Related Materials": {
+                        "Visibility": [],
+                        "Attachment": []
+                    },
+                    "Learning Course Additional Attributes": [],
+                    "Learning Item Additional Attributes": []
+                }
+            },
+            "Default Offering Attributes": {
+                "Facilitator Type": [],
+                "Pricing": {
+                    "Set Offering Default Price": {
+                        "Currency": [],
+                        "View": [],
+                        "Add Line Item": [],
+                        "Remove": [],
+                        "Line Item": [],
+                        "Price": [],
+                        "Required": [],
+                        "Use to Calculate Catalog Item Price in Self-Service": [],
+                        "Pricing Component Number": []
+                    }
+                },
+                "Payment": {
+                    "Payment Type": []
+                },
+                "Capacity Rules": {
+                    "Booked Seats": [],
+                    "Minimum Capacity": [],
+                    "Maximum Capacity": [],
+                    "Waitlist Mode": [
+                        "First In First Out"
+                    ],
+                    "Waitlist Rules": [
+                        "Allow joining the waitlist from self-service"
+                    ]
+                }
+            },
+            "Communities": [],
+            "Default Assignment Rules": []
+        },
+        "Specializations": {
+            "General Information": {
+                "Title": [],
+                "Description": [],
+                "Short Description": [],
+                "Publish Start Date": [],
+                "Publish End Date": [],
+                "Specialization Number": [],
+                "Branding Image": [],
+                "Trailer": [],
+                "Minimum Expected Effort": [],
+                "Maximum Expected Effort": [],
+                "Comments": [],
+                "Override conversation system setup configuration": [],
+                "Related Materials": {
+                    "Visibility": [],
+                    "Attachment": []
+                },
+                "Learning Specialization Additional Attributes": []
+            },
+            "Communities": []
+        },
+        "Communities": {
+            "View": [],
+            "Create": {
+                "Category Community": {
+                    "Learning Community": {
+                        "Community Name": [],
+                        "Community Type": [
+                            "Category Community"
+                        ],
+                        "Branding Image": [],
+                        "Description": [],
+                        "User Privacy Settings": {
+                            "Privacy": [
+                                "Open",
+                                "Closed",
+                                "Secret"
+                            ],
+                            "Member Contributions": [
+                                "Enable",
+                                "Disable"
+                            ]
+                        },
+                        "Comments": [],
+                        "Override conversation system setup configuration": [],
+                        "Related Materials": {
+                            "Visibility": [],
+                            "Attachment": []
+                        }
+                    }
+                },
+                "Topic Community": {
+                    "Learning Community": {
+                        "Community Name": [],
+                        "Community Type": [
+                            "Topic Community"
+                        ],
+                        "Branding Image": [],
+                        "Description": [],
+                        "Trailer": [],
+                        "User Privacy Settings": {
+                            "Privacy": [
+                                "Open",
+                                "Closed",
+                                "Secret"
+                            ],
+                            "Member Contributions": [
+                                "Enable",
+                                "Disable"
+                            ]
+                        },
+                        "Comments": [],
+                        "Override conversation system setup configuration": [],
+                        "Related Materials": {
+                            "Visibility": [],
+                            "Attachment": []
+                        }
+                    }
+                },
+                "Official Community": {
+                    "Learning Community": {
+                        "Community Name": [],
+                        "Community Type": [
+                            "Official Community"
+                        ],
+                        "Branding Image": [],
+                        "Description": [],
+                        "Trailer": [],
+                        "User Privacy Settings": {
+                            "Privacy": [
+                                "Open",
+                                "Closed",
+                                "Secret"
+                            ],
+                            "Member Contributions": [
+                                "Enable",
+                                "Disable"
+                            ]
+                        },
+                        "Comments": [],
+                        "Override conversation system setup configuration": [],
+                        "Related Materials": {
+                            "Visibility": [],
+                            "Attachment": []
+                        }
+                    }
+                }
+            },
+            "Edit": [],
+            "Members": [],
+            "Stop Featuring": [],
+            "Delete": [],
+            "Detach": [],
+            "Catalog": {
+                "Add Learning Item": {
+                    "Select Learning Item: Browse All Learning Items": {
+                        "Search Term": [],
+                        "Learning Items": []
+                    }
+                }
+            }
+        },
+        "eLearning Items": []
+    },
+    "Learning Organizations and Groups": {
+        "Learning Organizations": []
+    },
+    "Learners": {
+        "Learning Assignments": {
+            "Search Learners": {
+                "Match": ["All", "Any"],
+                "Fields": {
+                    "Name": [],
+                    "Person Keyword": [],
+                    "Assignment Status": [],
+                    "Initiative Name": [],
+                    "Learning Item Title": []
+                }
+            },
+            "Learner Results": {
+                "View": [],
+                "Format": [],
+                "Add Learners": {
+                    "Voluntary Assignment": {
+                        "Name": [],
+                        "Assignment Profile Number": [],
+                        "Description": [],
+                        "Start Date": [],
+                        "Request Type": ["Catalog Learning Item", "Noncatalog Item"],
+                        "Assign": {
+                            "Select Item": [],
+                            "Assign As": ["Self", "Office of the CEO", "Legal Department", "Security Team", "Riverside", "Riverside Role Essentials", "People Services", "Learning & Development"],
+                            "With this note": []
+                        },
+                        "Learning Request Details": {
+                            "Start on or After": [],
+                            "Complete By": [],
+                            "Purchase Order Number": [],
+                            "Justification": [],
+                            "Context Segment": []
+                        },
+                        "Related Materials": {
+                            "Visibility": [],
+                            "Attachment": []
+                        }
+                    },
+                    "Required Assignment": {
+                        "Name": [],
+                        "Assignment Profile Number": [],
+                        "Description": [],
+                        "Start Date": [],
+                        "Request Type": ["Catalog Learning Item", "Noncatalog Item"],
+                        "Assign": {
+                            "Select Item": [],
+                            "Assign As": ["Self", "Office of the CEO", "Legal Department", "Security Team", "Riverside", "Riverside Role Essentials", "People Services", "Learning & Development"],
+                            "With this note": [],
+                            "Due Date": []
+                        },
+                        "Learning Request Details": {
+                            "Start on or After": [],
+                            "Complete By": [],
+                            "Purchase Order Number": [],
+                            "Justification": [],
+                            "Context Segment": []
+                        },
+                        "Related Materials": {
+                            "Visibility": [],
+                            "Attachment": []
+                        }
+                    },
+                    "Recommendation": {
+                        "Name": [],
+                        "Recommendation Profile Number": [],
+                        "Description": [],
+                        "Assign": {
+                            "Select Item": [],
+                            "Assign As": ["Self", "Office of the CEO", "Legal Department", "Security Team", "Riverside", "Riverside Role Essentials", "People Services", "Learning & Development"],
+                            "Recommendation Category": ["Recommendations by learning department"],
+                            "With this note": []
+                        }
+                    }
+                },
+                "Change Status": [],
+                "Edit Assignment": [],
+                "Manage Activities": [],
+                "More Actions": [],
+                "Mass Action": []
+            }
+        },
+        "Learning Recommendations": {
+            "Recommendation": {
+                "Name": [],
+                "Recommendation Profile Number": [],
+                "Description": [],
+                "Assign": {
+                    "Select Item": [],
+                    "Assign As": ["Self", "Office of the CEO", "Legal Department", "Security Team", "Riverside", "Riverside Role Essentials", "People Services", "Learning & Development"],
+                    "Recommendation Category": ["Recommendations by learning department"],
+                    "With this note": []
+                }
+            }
+        },
+        "Learning Initiatives": {
+            "Voluntary Learning Initiative": {
+                "Initiative Name": [],
+                "Initiative Number": [],
+                "Description": [],
+                "Initiative Start Date": [],
+                "Initiative Stop Date": [],
+                "Request Type": ["Catalog Learning Item", "Noncatalog Item"],
+                "Assign": {
+                    "Select Item": [],
+                    "Assign As": ["Self", "Office of the CEO", "Legal Department", "Security Team", "Riverside", "Riverside Role Essentials", "People Services", "Learning & Development"],
+                    "With this note": []
+                },
+                "Learning Request Details": {
+                    "Start on or After": [],
+                    "Complete By": [],
+                    "Purchase Order Number": [],
+                    "Justification": [],
+                    "Context Segment": []
+                },
+                "Related Materials": {
+                    "Visibility": [],
+                    "Attachment": []
+                }
+            },
+            "Required Learning Initiative": {
+                "Initiative Name": [],
+                "Initiative Number": [],
+                "Description": [],
+                "Initiative Start Date": [],
+                "Initiative Stop Date": [],
+                "Request Type": ["Catalog Learning Item", "Noncatalog Item"],
+                "Assign": {
+                    "Select Item": [],
+                    "Assign As": ["Self", "Office of the CEO", "Legal Department", "Security Team", "Riverside", "Riverside Role Essentials", "People Services", "Learning & Development"],
+                    "With this note": [],
+                    "Initial Due Date Option": ["Date"],
+                    "Ongoing Due Date": []
+                },
+                "Learning Request Details": {
+                    "Start on or After": [],
+                    "Complete By": [],
+                    "Purchase Order Number": [],
+                    "Justification": [],
+                    "Context Segment": []
+                },
+                "Related Materials": {
+                    "Visibility": [],
+                    "Attachment": []
+                }
+            },
+            "Recommended Learning Initiative": {
+                "Initiative Name": [],
+                "Initiative Number": [],
+                "Description": [],
+                "Initiative Stop Date": [],
+                "Assign": {
+                    "Select Item": [],
+                    "Assign As": ["Self", "Office of the CEO", "Legal Department", "Security Team", "Riverside", "Riverside Role Essentials", "People Services", "Learning & Development"],
+                    "Recommendation Category": ["Recommendations by learning department"],
+                    "With this note": []
+                }
+            }
+        },
+        "Programs": {
+            "Create Learning Program": {
+                "Basic Information": {
+                    "Name": [],
+                    "Description": []
+                },
+                "Program Participants": {
+                    "Synchronize Learners": ["Automatically", "Manually"],
+                    "Add a Person": {
+                        "Person": {
+                            "Search": {
+                                "Match": ["All", "Any"],
+                                "Fields": {
+                                    "Name": [],
+                                    "Person Number": [],
+                                    "Department": []
+                                }
+                            },
+                            "Preview Learners": {
+                                "View": [],
+                                "Format": []
+                            }
+                        },
+                        "Person Number List": [],
+                        "Analysis Report Criteria": [],
+                        "Learning Assignment Criteria": [],
+                        "Organization Chart Criteria": [],
+                        "Person Criteria": []
+                    }
+                }
+            }
+        }
+    },
+    "Catalog Resources": {
+        "Content": {
+            "Add": {
+                "Add Online Content": {
+                    "Title": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "File": []
+                },
+                "Add Video": {
+                    "Title": [],
+                    "Description": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Contents": []
+                },
+                "Add Web Link": {
+                    "Title": [],
+                    "Status": [],
+                    "Description": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "URL": [],
+                    "Mark as complete when learner opens the web link": []
+                },
+                "Add PDF File": {
+                    "Title": [],
+                    "Description": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "File": []
+                },
+                "Add Assessment": {
+                    "Title": [],
+                    "Status": [],
+                    "Description": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Assessment": [],
+                    "Enable time limit": [],
+                    "Enable Scoring": [],
+                    "Mastery Score": [],
+                    "Recorded Attempts": [],
+                    "Recorded Attempt Review": [],
+                    "Only allow reviews for passed attempts": [],
+                    "Enable learner to view response feedback": [],
+                    "Enable learning administrator to view the score": [],
+                    "Enable learner to view the score": []
+                },
+                "Add Observation Checklist": {
+                    "Title": [],
+                    "Status": [],
+                    "Description": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Observation Checklist": [],
+                    "Version": [],
+                    "Folder": [],
+                    "Scored": [],
+                    "Observer Type": [],
+                    "Advanced": {
+                        "Observer Checklist": {
+                            "Recorded Attempts": [],
+                            "Recorded Attempt Review": [],
+                            "Only allow reviews for passed attempts": [],
+                            "Let observers reassign to anyone": []
+                        },
+                        "Self-Assessment Checklist": {
+                            "Require self-assessment by learner": []
+                        }
+                    }
+                },
+                "Add Cover Art": {
+                    "Title": [],
+                    "Description": [],
+                    "Start Date": [],
+                    "End Date": [],
+                    "Cover Art": []
+                }
+            },
+            "View": {
+                "About This Record": [],
+                "Columns": []
+            },
+            "Action button": {
+                "Delete": [],
+                "Export to excel": []
+            }
+        },
+        "Instructors": {
+            "Add": {
+                "Person Details": {
+                    "Name": [],
+                    "Person Number": [],
+                    "Department": [],
+                    "Job": [],
+                    "Business Unit": []
+                }
+            }
+        },
+        "Classrooms": {
+            "Add": {
+                "New Classroom": {
+                    "Classroom Details": {
+                        "Name": [],
+                        "Description": [],
+                        "Seating Capacity": [],
+                        "Contact": [],
+                        "Training Supplier": [],
+                        "Context Segment": []
+                    },
+                    "Location Details": {
+                        "Select an existing location": [],
+                        "Add a new location": [],
+                        "Location": []
+                    },
+                    "Related Materials": {
+                        "Visible To": [
+                            "Administrators only",
+                            "Self-Service Users"
+                        ],
+                        "Files": [],
+                        "URL": []
+                    }
+                }
+            }
+        }
+    },
+    "Training Suppliers": {
+        "Add": {
+            "New Training Supplier": {
+                "Details": {
+                    "Name": [],
+                    "Description": [],
+                    "Contact": [],
+                    "Context Segment": []
+                },
+                "Related materials": {
+                    "Visible To": [],
+                    "Files": [],
+                    "URL": []
+                }
+            }
+        },
+        "Action Buttons": {
+            "Export": [],
+            "Restore Defaults": []
+        },
+        "View": {
+            "Columns": []
+        }
+    },
+    "Global Access Groups": {
+        "Create Global Access Group": {
+            "General Information": {
+                "Name": [],
+                "Description": [],
+                "View Mode": []
+            },
+            "Members": {
+                "Add Members to Access Group": {
+                    "View": [],
+                    "Add": [],
+                    "Add a Person": []
+                }
+            },
+            "Related Materials": {
+                "Visibility": [],
+                "Attachment": []
+            }
+        },
+        "Access Details": {
+            "Enrollment Questionnaire": [],
+            "Learner Self-Service Settings": [],
+            "Manager Self-Service Settings": []
+        },
+        "Advanced Rules": {
+            "Run as User Definition": []
+        }
+    },
+    "Mass Processing": {
+        "Advisor Processes": {
+            "Run Process": {
+                "Status": [],
+                "Filtered List": [],
+                "Category": []
+            },
+            "Add": {
+                "Skills Advisor for Learning": {
+                    "Category": [],
+                    "Process Name": [],
+                    "Status": [],
+                    "Results": [],
+                    "Created By": [],
+                    "Most Recent Processed Date": []
+                },
+                "Translation Advisor for Learning": {
+                    "Category": [],
+                    "Process Name": [],
+                    "Status": [],
+                    "Results": [],
+                    "Created By": [],
+                    "Most Recent Processed Date": []
+                }
+            }
+        }
+    },
+    "Setup": {
+        "Configure Evaluations": {
+            "Instructor-Led": {
+                "Enable evaluation": [],
+                "Evaluation": [],
+                "Description": [],
+                "Required for Completion": []
+            },
+            "Self-Paced": {
+                "Enable evaluation": [],
+                "Evaluation": [],
+                "Description": [],
+                "Required for Completion": []
+            },
+            "Blended": {
+                "Enable evaluation": [],
+                "Evaluation": [],
+                "Description": [],
+                "Required for Completion": []
+            }
+        },
+        "Configure Comment Defaults": [],
+        "Configure External Providers": [],
+        "Configure Catalog Defaults": [],
+        "Configure Alerts": [],
+        "Configure Learner Defaults": [],
+        "Configure Planning": [],
+        "Configure Self-Service": [],
+        "Configure Background Processing": []
+    }
+}
