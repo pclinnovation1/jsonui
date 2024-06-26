@@ -1,0 +1,119 @@
+{
+    "Learning": {
+        "My Learning Experiences": {
+            "Search learning enrollments": ""
+        },
+        "Actions": {
+            "Assign Learning": {
+                "Assignment details": {
+                    "Assignment Type": [
+                        "Voluntary",
+                        "Required"
+                    ],
+                    "Start Date": "",
+                    "Due Date": "",
+                    "Context Segment": ""
+                },
+                "Learning items": {
+                    "Select a learning item": ""
+                },
+                "Learners": {
+                    "Selection Type": {
+                        "Person": "",
+                        "Directs": "",
+                        "Organization": ""
+                    },
+                    "Select a person": "",
+                    "Note to Learners": ""
+                },
+                "Justification": {
+                    "Note to Approvers": ""
+                }
+            },
+            "Record External Learning": {
+                "Completion details": {
+                    "Start Date": "",
+                    "Completion Date": "",
+                    "Actual Effort in Hours": "",
+                    "Score Achieved": "",
+                    "Context Segment": ""
+                },
+                "Learning Item details": {
+                    "Title": "",
+                    "URL": "",
+                    "Expected Training Hours": "",
+                    "Cost": "",
+                    "Currency": "",
+                    "Context Segment": "",
+                    "Description": ""
+                },
+                "Learners": {
+                    "Selection Type": {
+                        "Person": "",
+                        "Directs": "",
+                        "Organization": ""
+                    },
+                    "Select a person": "",
+                    "Note to Learners": ""
+                },
+                "Justification": {
+                    "Justification to Approvers": ""
+                }
+            },
+            "Publish Video": {
+                "Video Details": {
+                    "Video": "",
+                    "Title": "",
+                    "Description": ""
+                },
+                "Visibility": {
+                    "Privacy": {
+                        "Everyone": "",
+                        "Secret": ""
+                    }
+                },
+                "Related Materials": ""
+            },
+            "Author Learning Journey": {
+                "Learning Journey Details": {
+                    "Title": "",
+                    "Cover Art": "",
+                    "Description": ""
+                },
+                "Table of Contents": "",
+                "Set Learning Journey Privacy": {
+                    "Privacy": {
+                        "Everyone": "",
+                        "Secret": ""
+                    }
+                },
+                "Related Materials": ""
+            },
+            "Create Learning Community": {
+                "Community Details": {
+                    "Community Title": "",
+                    "Branding Image": "",
+                    "Description": "",
+                    "Trailer": ""
+                },
+                "Visibility": {
+                    "Privacy": {
+                        "Open": "",
+                        "Closed": "",
+                        "Secret": ""
+                    },
+                    "Member Contributions": {
+                        "Enable": "",
+                        "Disable": ""
+                    }
+                },
+                "Related Materials": ""
+            },
+            "Download for My Direct Reports": "",
+            "Download for My Organization": ""
+        },
+        "Switch Team":""
+    }
+}
+
+    
