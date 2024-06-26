@@ -1,0 +1,161 @@
+{
+    "Learning": {
+        "My Learning Experiences": {
+            "Actions": {
+                "Record External Learning": {
+                    "Completion details": {
+                        "Start Date": "",
+                        "Completion Date": "",
+                        "Actual Effort in Hours": "",
+                        "Score Achieved": "",
+                        "Context Segment": ""
+                    },
+                    "Learning Item details": {
+                        "Title": "",
+                        "URL": "",
+                        "Expected Training Hours": "",
+                        "Cost": "",
+                        "Currency": "",
+                        "Context Segment": "",
+                        "Description": ""
+                    },
+                    "Learners": {
+                        "Selection Type": ["Person", "Directs", "Organization"],
+                        "Select a person": "",
+                        "Note to Learners": ""
+                    },
+                    "Justification": "Justification to Approvers",
+                    "Attachments": "Drag and Drop files here"
+                },
+                "Request Noncatalog Learning": {
+                    "Request Details": {
+                        "Start Date": "",
+                        "Due Date": "",
+                        "Context Segment": ""
+                    },
+                    "Learning Item details": {
+                        "Title": "",
+                        "URL": "",
+                        "Expected Training Hours": "",
+                        "Cost": "",
+                        "Currency": "",
+                        "Context Segment": "",
+                        "Description": ""
+                    },
+                    "Learners": {
+                        "Selection Type": ["Person", "Directs", "Organization"],
+                        "Select a person": "",
+                        "Note to Learners": ""
+                    },
+                    "Justification": "Justification to Approvers",
+                    "Attachments": "Drag and Drop files here"
+                }
+            },
+            "My Learning": {
+                "View My Videos": {
+                    "Video Details": {
+                        "Video": "",
+                        "Title": "",
+                        "Description": ""
+                    },
+                    "Visibility": {
+                        "Privacy": ["Everyone", "Secret"]
+                    },
+                    "Related Materials": ""
+                },
+                "View My Learning Journeys": {
+                    "Learning Journey Details": {
+                        "Title": "",
+                        "Cover Art": "",
+                        "Description": ""
+                    },
+                    "Table of Contents": "",
+                    "Set Learning Journey Privacy": {
+                        "Privacy": ["Everyone", "Secret"]
+                    },
+                    "Related Materials": ""
+                },
+                "View My Learning Communities": {
+                    "Community Details": {
+                        "Community Title": "",
+                        "Branding Image": "",
+                        "Description": "",
+                        "Trailer": ""
+                    },
+                    "Visibility": {
+                        "Privacy": ["Open", "Closed", "Secret"],
+                        "Member Contributions": ["Enable", "Disable"]
+                    },
+                    "Related Materials": ""
+                },
+                "View Recommendations I Made": {
+                    "Recommendations": {
+                        "Title": "",
+                        "Description": "",
+                        "Status": ""
+                    }
+                }
+            },
+            "View Transcript":{
+                "Transcript date range": {
+                    "start date": "",
+                    "End date": ""
+                }
+
+            }
+
+        },
+        "Courses": {
+            "Actions": {
+                "View More Enrollment Details": {
+                    "Withdraw": {
+                        "Reason": "",
+                        "Comments": ""
+                    }
+                },
+                "View Learning Item Details": {
+                    "Copy Link": "",
+                    "Comments": "",
+                    "Recommend": {
+                        "Why are you recommending this learning?": {
+                            "Comments": ""
+                        },
+                        "Learners": {
+                            "Recommend to this person": ""
+                        }
+                    },
+                    "Report": {
+                        "Reason": "",
+                        "Comments": ""
+                    },
+                    "Add to Journey": {
+                        "Existing": {
+                            "Journey Name": "",
+                            "Description": "",
+                            "Task Name": "",
+                            "Task Description": ""
+                        },
+                        "New": {
+                            "Journey Name": "",
+                            "Description": "",
+                            "Task Name": "",
+                            "Task Description": ""
+                        }
+                    }
+                },
+                "Find Offering": "",
+                "Rate Learning": "",
+                "Comments": "",
+                "Report": "",
+                "Recommend": {
+                    "Why are you recommending this learning?": {
+                        "Comments": ""
+                    },
+                    "Learners": {
+                        "Recommend to this person": ""
+                    }
+                }
+            }
+        }
+    }
+}
