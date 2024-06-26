@@ -4,30 +4,47 @@ info:
   description: API to manage catalog resources within an organization.
   version: 1.0.0
 servers:
-  - url: https://fusionobjects.com
+  - url: https://app1.fusionobjects.com
     description: Main API server for catalog resources management
 
 paths:
-/catalogResources/content/add/onlineContent:
-  post:
-    operationId: addOnlineContent
-    summary: Add online content
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              Title: { type: string }
-              Start_Date: { type: string, format: date }
-              End_Date: { type: string, format: date }
-              File: { type: string, format: binary }
-    responses:
-      "200":
-        description: Online content added successfully.
-      "400":
-        description: Invalid request data.
+  /catalog/OnlineContent/add:
+    post:
+      operationId: addOnlineContent
+      summary: Add online content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - Start_Date
+                      - End_Date
+                      - File
+                    properties:
+                      Title:
+                        type: string
+                      Start_Date:
+                        type: string
+                        format: date
+                      End_Date:
+                        type: string
+                        format: date
+                      File:
+                        type: string
+                        format: binary
+      responses:
+        "200":
+          description: Online content added successfully.
+        "400":
+          description: Invalid request data.
 
   /catalogResources/content/add/video:
   post:
@@ -170,235 +187,1090 @@ paths:
       "400":
         description: Invalid request data.
 
-/catalogResources/content/add/coverArt:
-  post:
-    operationId: addCoverArt
-    summary: Add cover art
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              Title: { type: string }
-              Description: { type: string }
-              Start_Date: { type: string, format: date }
-              End_Date: { type: string, format: date }
-              Cover_Art: { type: string, format: binary }
-    responses:
-      "200":
-        description: Cover art added successfully.
-      "400":
-        description: Invalid request data.
-
-/catalogResources/content/view:
-  get:
-    operationId: viewContent
-    summary: View content
-    responses:
-      "200":
-        description: Content retrieved successfully.
+  /catalog/OnlineContent/view:
+    post:
+      operationId: viewOnlineContent
+      summary: View online content
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                About_This_Record:
-                  type: array
-                  items: { type: string }
-                Columns:
-                  type: array
-                  items: { type: string }
-      "400":
-        description: Invalid request.
-
-/catalogResources/content/action/delete:
-  post:
-    operationId: deleteContent
-    summary: Delete content
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              Content_ID: { type: string }
-    responses:
-      "200":
-        description: Content deleted successfully.
-      "400":
-        description: Invalid request.
-
-/catalogResources/content/action/export:
-  get:
-    operationId: exportContent
-    summary: Export content data
-    responses:
-      "200":
-        description: Content data exported successfully.
-        content:
-          application/octet-stream:
-            schema:
-              type: string
-              format: binary
-      "400":
-        description: Export failed.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error: { type: string }
-
-/catalogResources/classrooms/create:
-  post:
-    operationId: createClassroom
-    summary: Create a classroom
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              Title: { type: string }
-              Description: { type: string }
-              Resource_Number: { type: string }
-              Resource_Type: { type: string }
-              Capacity: { type: number }
-              Contact: { type: string }
-              Location: { type: string }
-              Training_Supplier: { type: string }
-              Related_Materials:
+                Title:
+                  type: string
+                  description: Filter by the title of the online content
+                Start_Date:
+                  type: string
+                  format: date
+                  description: Filter by the start date of the online content
+                End_Date:
+                  type: string
+                  format: date
+                  description: Filter by the end date of the online content
+      responses:
+        "200":
+          description: Online content retrieved successfully.
+          content:
+            application/json:
+              schema:
                 type: object
                 properties:
-                  Visibility:
+                  items:
                     type: array
-                    items: { type: string }
-                  Attachment:
-                    type: array
-                    items: { type: string }
-              Context_Segment: { type: string }
-    responses:
-      "200":
-        description: Classroom created successfully.
-      "400":
-        description: Invalid request data.
+                    items:
+                      type: object
+                        properties:
+                        Title:
+                          type: string
+                        Start_Date:
+                          type: string
+                          format: date
+                        End_Date:
+                          type: string
+                          format: date
+                        File:
+                          type: string
+                          format: binary
+        "400":
+          description: Invalid request data.
 
-/catalogResources/classrooms/view:
-  get:
-    operationId: viewClassrooms
-    summary: View classrooms
-    responses:
-      "200":
-        description: Classrooms retrieved successfully.
+  /catalog/CoverArt/add:
+    post:
+      operationId: addCoverArt
+      summary: Add cover art
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                About_This_Record:
+                items:
                   type: array
-                  items: { type: string }
-                Columns:
-                  type: array
-                  items: { type: string }
-      "400":
-        description: Invalid request.
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - Description
+                      - Start_Date
+                      - End_Date
+                      - Cover_Art
+                    properties:
+                      Title:
+                        type: string
+                      Description:
+                        type: string
+                      Start_Date:
+                        type: string
+                        format: date
+                      End_Date:
+                        type: string
+                        format: date
+                      Cover_Art:
+                        type: string
+                        format: binary
+      responses:
+        "200":
+          description: Cover art added successfully.
+        "400":
+          description: Invalid request data.
 
-/catalogResources/classrooms/export:
-  get:
-    operationId: exportClassrooms
-    summary: Export classrooms data
-    responses:
-      "200":
-        description: Classrooms data exported successfully.
-        content:
-          application/octet-stream:
-            schema:
-              type: string
-              format: binary
-      "400":
-        description: Export failed.
+  /catalog/CoverArt/view:
+    post:
+      operationId: viewCoverArt
+      summary: View cover art
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                error: { type: string }
-
-/catalogResources/trainingSuppliers/create:
-  post:
-    operationId: createTrainingSupplier
-    summary: Create a training supplier
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              Title: { type: string }
-              Description: { type: string }
-              Resource_Number: { type: string }
-              Resource_Type: { type: string }
-              Contact: { type: string }
-              Related_Materials:
+                Title:
+                  type: string
+                  description: Filter by the title of the cover art
+                Description:
+                  type: string
+                  description: Filter by the description of the cover art
+                Start_Date:
+                  type: string
+                  format: date
+                  description: Filter by the start date of the cover art
+                End_Date:
+                  type: string
+                  format: date
+                  description: Filter by the end date of the cover art
+      responses:
+        "200":
+          description: Cover art retrieved successfully.
+          content:
+            application/json:
+              schema:
                 type: object
                 properties:
-                  Visibility:
+                  items:
                     type: array
-                    items: { type: string }
-                  Attachment:
-                    type: array
-                    items: { type: string }
-              Context_Segment: { type: string }
-    responses:
-      "200":
-        description: Training supplier created successfully.
-      "400":
-        description: Invalid request data.
+                    items:
+                      type: object
+                      properties:
+                        Title:
+                          type: string
+                        Description:
+                          type: string
+                        Start_Date:
+                          type: string
+                          format: date
+                        End_Date:
+                          type: string
+                          format: date
+                        Cover_Art:
+                          type: string
+                          format: binary
+        "400":
+          description: Invalid request data.
 
-/catalogResources/trainingSuppliers/view:
-  get:
-    operationId: viewTrainingSuppliers
-    summary: View training suppliers
-    responses:
-      "200":
-        description: Training suppliers retrieved successfully.
+  /catalog/Video/add:
+    post:
+      operationId: addVideo
+      summary: Adds a video to the catalog.
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                About_This_Record:
+                items:
                   type: array
-                  items: { type: string }
-                Columns:
-                  type: array
-                  items: { type: string }
-      "400":
-        description: Invalid request.
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - Start_Date
+                      - End_Date
+                      - Contents
+                    properties:
+                      Title:
+                        type: string
+                      Description:
+                        type: string
+                      Start_Date:
+                        type: string
+                        format: date
+                      End_Date:
+                        type: string
+                        format: date
+                      Contents:
+                        type: array
+                        items:
+                          type: string
+      responses:
+        "200":
+          description: Video successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
 
-/catalogResources/trainingSuppliers/export:
-  get:
-    operationId: exportTrainingSuppliers
-    summary: Export training suppliers data
-    responses:
-      "200":
-        description: Training suppliers data exported successfully.
-        content:
-          application/octet-stream:
-            schema:
-              type: string
-              format: binary
-      "400":
-        description: Export failed.
+  /catalog/Video/view:
+    post:
+      operationId: viewVideo
+      summary: View videos in the catalog
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                error: { type: string }
+                Title:
+                  type: string
+                  description: Filter by the title of the video
+                Description:
+                  type: string
+                  description: Filter by the description of the video
+                Start_Date:
+                  type: string
+                  format: date
+                  description: Filter by the start date of the video
+                End_Date:
+                  type: string
+                  format: date
+                  description: Filter by the end date of the video
+      responses:
+        "200":
+          description: Videos retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Title:
+                          type: string
+                        Description:
+                          type: string
+                        Start_Date:
+                          type: string
+                          format: date
+                        End_Date:
+                          type: string
+                          format: date
+                        Contents:
+                          type: array
+                          items:
+                            type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/WebLink/add:
+    post:
+      operationId: addWebLink
+      summary: Adds a web link to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - URL
+                    properties:
+                      Title:
+                        type: string
+                      Status:
+                        type: string
+                      Description:
+                        type: string
+                      Start_Date:
+                        type: string
+                        format: date
+                      End_Date:
+                        type: string
+                        format: date
+                      URL:
+                        type: string
+                      Mark_as_complete_when_learner_opens_the_web_link:
+                        type: boolean
+      responses:
+        "200":
+          description: Web link successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/WebLink/view:
+    post:
+      operationId: viewWebLink
+      summary: View web links in the catalog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Title:
+                  type: string
+                  description: Filter by the title of the web link
+                Status:
+                  type: string
+                  description: Filter by the status of the web link
+                Description:
+                  type: string
+                  description: Filter by the description of the web link
+                Start_Date:
+                  type: string
+                  format: date
+                  description: Filter by the start date of the web link
+                End_Date:
+                  type: string
+                  format: date
+                  description: Filter by the end date of the web link
+                URL:
+                  type: string
+                  description: Filter by the URL of the web link
+                Mark_as_complete_when_learner_opens_the_web_link:
+                  type: boolean
+                  description: Filter by the completion status of the web link
+      responses:
+        "200":
+          description: Web links retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Title:
+                          type: string
+                        Status:
+                          type: string
+                        Description:
+                          type: string
+                        Start_Date:
+                          type: string
+                          format: date
+                        End_Date:
+                          type: string
+                          format: date
+                        URL:
+                          type: string
+                        Mark_as_complete_when_learner_opens_the_web_link:
+                          type: boolean
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/PdfFile/add:
+    post:
+      operationId: addPdfFile
+      summary: Adds a PDF file to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - File
+                    properties:
+                      Title:
+                        type: string
+                      Description:
+                        type: string
+                      Start_Date:
+                        type: string
+                        format: date
+                      End_Date:
+                        type: string
+                        format: date
+                      File:
+                        type: string
+      responses:
+        "200":
+          description: PDF file successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/PdfFile/view:
+    post:
+      operationId: viewPdfFile
+      summary: View PDF files in the catalog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Title:
+                  type: string
+                  description: Filter by the title of the PDF file
+                Description:
+                  type: string
+                  description: Filter by the description of the PDF file
+                Start_Date:
+                  type: string
+                  format: date
+                  description: Filter by the start date of the PDF file
+                End_Date:
+                  type: string
+                  format: date
+                  description: Filter by the end date of the PDF file
+      responses:
+        "200":
+          description: PDF files retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Title:
+                          type: string
+                        Description:
+                          type: string
+                        Start_Date:
+                          type: string
+                          format: date
+                        End_Date:
+                          type: string
+                          format: date
+                        File:
+                          type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/Assessment/add:
+    post:
+      operationId: addAssessment
+      summary: Adds an assessment to the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - Assessment
+                    properties:
+                      Title:
+                        type: string
+                      Status:
+                        type: string
+                      Description:
+                        type: string
+                      Start_Date:
+                        type: string
+                        format: date
+                      End_Date:
+                        type: string
+                        format: date
+                      Assessment:
+                        type: string
+                      Enable_time_limit:
+                        type: boolean
+                      Enable_Scoring:
+                        type: boolean
+                      Mastery_Score:
+                        type: number
+                      Recorded_Attempts:
+                        type: number
+                      Recorded_Attempt_Review:
+                        type: boolean
+                      Only_allow_reviews_for_passed_attempts:
+                        type: boolean
+                      Enable_learner_to_view_response_feedback:
+                        type: boolean
+                      Enable_learning_administrator_to_view_the_score:
+                        type: boolean
+                      Enable_learner_to_view_the_score:
+                        type: boolean
+      responses:
+        "200":
+          description: Assessment successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/Assessment/view:
+    post:
+      operationId: viewAssessment
+      summary: View assessments in the catalog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Title:
+                  type: string
+                  description: Filter by the title of the assessment
+                Status:
+                  type: string
+                  description: Filter by the status of the assessment
+                Description:
+                  type: string
+                  description: Filter by the description of the assessment
+                Start_Date:
+                  type: string
+                  format: date
+                  description: Filter by the start date of the assessment
+                End_Date:
+                  type: string
+                  format: date
+                  description: Filter by the end date of the assessment
+      responses:
+        "200":
+          description: Assessments retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Title:
+                          type: string
+                        Status:
+                          type: string
+                        Description:
+                          type: string
+                        Start_Date:
+                          type: string
+                          format: date
+                        End_Date:
+                          type: string
+                          format: date
+                        Assessment:
+                          type: string
+                        Enable_time_limit:
+                          type: boolean
+                        Enable_Scoring:
+                          type: boolean
+                        Mastery_Score:
+                          type: number
+                        Recorded_Attempts:
+                          type: number
+                        Recorded_Attempt_Review:
+                          type: boolean
+                        Only_allow_reviews_for_passed_attempts:
+                          type: boolean
+                        Enable_learner_to_view_response_feedback:
+                          type: boolean
+                        Enable_learning_administrator_to_view_the_score:
+                          type: boolean
+                        Enable_learner_to_view_the_score:
+                          type: boolean
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/ObservationChecklist/add:
+    post:
+      operationId: addObservationChecklist
+      summary: Add observation checklist
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      Title:
+                        type: string
+                      Status:
+                        type: string
+                      Description:
+                        type: string
+                      Start_Date:
+                        type: string
+                        format: date
+                      End_Date:
+                        type: string
+                        format: date
+                      Observation_Checklist:
+                        type: string
+                      Version:
+                        type: string
+                      Folder:
+                        type: string
+                      Scored:
+                        type: boolean
+                      Observer_Type:
+                        type: string
+                      Advanced:
+                        type: object
+                        properties:
+                          Observer_Checklist:
+                            type: object
+                            properties:
+                              Recorded_Attempts:
+                                type: number
+                              Recorded_Attempt_Review:
+                                type: boolean
+                              Only_allow_reviews_for_passed_attempts:
+                                type: boolean
+                              Let_observers_reassign_to_anyone:
+                                type: boolean
+                          Self_Assessment_Checklist:
+                            type: object
+                            properties:
+                              Require_self_assessment_by_learner:
+                                type: boolean
+      responses:
+        "200":
+          description: Observation checklist added successfully.
+        "400":
+          description: Invalid request data.
+
+  /catalog/ObservationChecklist/view:
+    post:
+      operationId: viewObservationChecklist
+      summary: View observation checklists in the catalog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Title:
+                  type: string
+                  description: Filter by the title of the observation checklist
+                Status:
+                  type: string
+                  description: Filter by the status of the observation checklist
+                Description:
+                  type: string
+                  description: Filter by the description of the observation checklist
+                Start_Date:
+                  type: string
+                  format: date
+                  description: Filter by the start date of the observation checklist
+                End_Date:
+                  type: string
+                format: date
+                  description: Filter by the end date of the observation checklist
+                Version:
+                  type: string
+                  description: Filter by the version of the observation checklist
+                Folder:
+                  type: string
+                  description: Filter by the folder of the observation checklist
+                Scored:
+                  type: boolean
+                  description: Filter by the scored status of the observation checklist
+                Observer_Type:
+                  type: string
+                  description: Filter by the observer type of the observation checklist
+      responses:
+        "200":
+          description: Observation checklists retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Title:
+                          type: string
+                        Status:
+                          type: string
+                        Description:
+                          type: string
+                        Start_Date:
+                          type: string
+                          format: date
+                        End_Date:
+                          type: string
+                          format: date
+                        Observation_Checklist:
+                          type: string
+                        Version:
+                          type: string
+                        Folder:
+                          type: string
+                        Scored:
+                          type: boolean
+                        Observer_Type:
+                          type: string
+                        Advanced:
+                          type: object
+                          properties:
+                            Observer_Checklist:
+                              type: object
+                              properties:
+                                Recorded_Attempts:
+                                  type: number
+                                Recorded_Attempt_Review:
+                                  type: boolean
+                                Only_allow_reviews_for_passed_attempts:
+                                  type: boolean
+                                Let_observers_reassign_to_anyone:
+                                  type: boolean
+                            Self_Assessment_Checklist:
+                              type: object
+                              properties:
+                                Require_self_assessment_by_learner:
+                                  type: boolean
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/Classroom/add:
+    post:
+      operationId: createClassroom
+      summary: Create a classroom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - Resource_Number
+                      - Resource_Type
+                      - Capacity
+                    properties:
+                      Title:
+                        type: string
+                      Description:
+                        type: string
+                      Resource_Number:
+                        type: string
+                      Resource_Type:
+                        type: string
+                      Capacity:
+                        type: number
+                      Contact:
+                        type: string
+                      Location:
+                        type: string
+                      Training_Supplier:
+                        type: string
+                      Related_Materials:
+                        type: object
+                        properties:
+                          Visibility:
+                            type: array
+                            items:
+                              type: string
+                          Attachment:
+                            type: array
+                            items:
+                              type: string
+                      Context_Segment:
+                        type: string
+      responses:
+        "200":
+          description: Classroom created successfully.
+        "400":
+          description: Invalid request data.
+
+  /catalog/Classroom/view:
+    post:
+      operationId: viewClassrooms
+      summary: View classrooms
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Filter:
+                  type: object
+                  properties:
+                    StartDate:
+                      type: string
+                      format: date
+                    EndDate:
+                      type: string
+                      format: date
+                    Location:
+                      type: string
+      responses:
+        "200":
+          description: Classrooms retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  About_This_Record:
+                    type: array
+                    items: 
+                      type: string
+                  Columns:
+                    type: array
+                    items: 
+                      type: string
+        "400":
+          description: Invalid request.
+
+  /catalog/Classroom/export:
+    post:
+      operationId: exportClassrooms
+      summary: Export classroom data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Filter:
+                  type: object
+                  properties:
+                    StartDate:
+                      type: string
+                      format: date
+                    EndDate:
+                      type: string
+                      format: date
+                    Location:
+                      type: string
+      responses:
+        "200":
+          description: Classrooms data exported successfully.
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        "400":
+          description: Export failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /catalog/TrainingSupplier/add:
+    post:
+      operationId: createTrainingSupplier
+      summary: Create a training supplier
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - Resource_Number
+                      - Resource_Type
+                    properties:
+                      Title:
+                        type: string
+                      Description:
+                        type: string
+                      Resource_Number:
+                        type: string
+                      Resource_Type:
+                        type: string
+                      Contact:
+                        type: string
+                      Related_Materials:
+                        type: object
+                        properties:
+                          Visibility:
+                            type: array
+                            items:
+                              type: string
+                          Attachment:
+                            type: array
+                            items:
+                              type: string
+                      Context_Segment:
+                        type: string
+      responses:
+        "200":
+          description: Training supplier created successfully.
+        "400":
+          description: Invalid request data.
+
+  /catalog/TrainingSupplier/view:
+    post:
+      operationId: viewTrainingSuppliers
+      summary: View training suppliers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Filter:
+                  type: object
+                  properties:
+                    SupplierName:
+                      type: string
+                    StartDate:
+                      type: string
+                      format: date
+                    EndDate:
+                      type: string
+                      format: date
+      responses:
+        "200":
+          description: Training suppliers retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  About_This_Record:
+                    type: array
+                    items:
+                      type: string
+                  Columns:
+                    type: array
+                    items:
+                      type: string
+        "400":
+          description: Invalid request.
+
+  /catalog/TrainingSupplier/export:
+    post:
+      operationId: exportTrainingSuppliers
+      summary: Export training suppliers data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Filter:
+                  type: object
+                  properties:
+                    SupplierName:
+                      type: string
+                    StartDate:
+                      type: string
+                      format: date
+                    EndDate:
+                      type: string
+                      format: date
+      responses:
+        "200":
+          description: Training suppliers data exported successfully.
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        "400":
+          description: Export failed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
