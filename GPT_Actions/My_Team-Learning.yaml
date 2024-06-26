@@ -1,0 +1,337 @@
+openapi: 3.1.0
+info:
+  title: My Team - Learning Management API
+  description: API to manage catalog resources within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for catalog resources management
+
+paths:
+  /learning/assignLearning/add:
+    post:
+      operationId: assignLearning
+      summary: Assigns learning items to learners.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - AssignmentType
+                      - StartDate
+                      - DueDate
+                      - LearningItems
+                      - Learners
+                    properties:
+                      AssignmentType:
+                        type: string
+                      StartDate:
+                        type: string
+                        format: date
+                      DueDate:
+                        type: string
+                        format: date
+                      ContextSegment:
+                        type: string
+                      LearningItems:
+                        type: array
+                        items:
+                          type: string
+                      Learners:
+                        type: object
+                        properties:
+                          LearnersType:
+                            type: string
+                          SelectAPerson:
+                            type: string
+                          NoteToLearners:
+                            type: string
+                      Justification:
+                        type: string
+      responses:
+        "200":
+          description: Learning items successfully assigned.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /learning/recordExternal/add:
+    post:
+      operationId: recordExternalLearning
+      summary: Records external learning for learners.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                      - StartDate
+                      - CompletionDate
+                      - Learners
+                    properties:
+                      CompletionDetails:
+                        type: object
+                        properties:
+                          StartDate:
+                            type: string
+                            format: date
+                          CompletionDate:
+                            type: string
+                            format: date
+                          ActualEffortInHours:
+                            type: number
+                          ScoreAchieved:
+                            type: number
+                          ContextSegment:
+                            type: string
+                      LearningItemDetails:
+                        type: object
+                        properties:
+                          Title:
+                            type: string
+                          URL:
+                            type: string
+                          ExpectedTrainingHours:
+                            type: number
+                          Cost:
+                            type: number
+                          Currency:
+                            type: string
+                          Topic:
+                            type: string
+                          ContextSegment:
+                            type: string
+                          Description:
+                            type: string
+                      Learners:
+                        type: object
+                        properties:
+                          SelectionType:
+                            type: string
+                          SelectAPerson:
+                            type: string
+                          NoteToLearners:
+                            type: string
+                      Justification:
+                        type: string
+      responses:
+        "200":
+          description: External learning successfully recorded.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /learning/publishVideo/add:
+    post:
+      operationId: publishVideo
+      summary: Publishes a video to the learning platform.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Video
+                      - Title
+                    properties:
+                      Video:
+                        type: string
+                      Title:
+                        type: string
+                      Description:
+                        type: string
+                      Visibility:
+                        type: array
+                        items:
+                          type: string
+                      RelatedMaterials:
+                        type: array
+                        items:
+                          type: string
+      responses:
+        "200":
+          description: Video successfully published.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /learning/authorLearningJourney:
+    post:
+      operationId: authorLearningJourney
+      summary: Creates a new learning journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Title
+                    properties:
+                      LearningJourneyDetails:
+                        type: object
+                        properties:
+                          Title:
+                            type: string
+                          CoverArt:
+                            type: string
+                          Description:
+                            type: string
+                      TableOfContents:
+                        type: object
+                        properties:
+                          SectionTitle:
+                            type: string
+                          SelectMedia:
+                            type: string
+                          Description:
+                            type: string
+                      SetLearningJourneyPrivacy:
+                        type: string
+                      RelatedMaterials:
+                        type: array
+                        items:
+                          type: string
+      responses:
+        "200":
+          description: Learning journey successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /learning/communities/create:
+    post:
+      operationId: createLearningCommunity
+      summary: Creates a new learning community.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - CommunityDetails
+                    properties:
+                      CommunityDetails:
+                        type: object
+                        properties:
+                          CommunityTitle:
+                            type: string
+                          BrandingImage:
+                            type: string
+                          Description:
+                            type: string
+                          Trailer:
+                            type: string
+                      Visibility:
+                        type: object
+                        properties:
+                          Privacy:
+                            type: string
+                          Member_Contributions:
+                            type: string
+                      RelatedMaterials:
+                        type: array
+                        items:
+                          type: string
+      responses:
+        "200":
+          description: Learning community successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
