@@ -1093,3 +1093,167 @@ paths:
         type: http
         scheme: bearer
         bearerFormat: JWT
+
+  /hireEmployee:
+    post:
+      operationId: hireEmployee
+      summary: Hire a new employee and assign courses
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                position:
+                  type: string
+                startDate:
+                  type: string
+                  format: date
+                department:
+                  type: string
+                courses:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        "200":
+          description: Employee hired and courses assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        "500":
+          description: Error inserting data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /reassignCourses:
+    post:
+      operationId: reassignCourses
+      summary: Reassign courses for an employee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Employee_Name:
+                  type: string
+      responses:
+        "200":
+          description: Courses reassigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Missing Employee_Name in request body.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        "500":
+          description: Error during reassignment.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /viewCourses:
+    post:
+      operationId: viewCourses
+      summary: View courses assigned to an employee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Employee_Name:
+                  type: string
+      responses:
+        "200":
+          description: Courses retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  employee_name:
+                    type: string
+                  courses:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Course_Name:
+                          type: string
+                        Assigned_Date:
+                          type: string
+                        Due_Date:
+                          type: string
+                        Status:
+                          type: string
+        "400":
+          description: Missing Employee_Name in request body.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        "404":
+          description: No employee or courses found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        "500":
+          description: Error retrieving data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
