@@ -4,7 +4,7 @@ info:
   description: API to manage catalog resources within an organization.
   version: 1.0.0
 servers:
-  - url: https://fusionobjects.com
+  - url: https://app1.fusionobjects.com
     description: Main API server for catalog resources management
 
 paths:
@@ -88,6 +88,97 @@ paths:
               schema:
                 type: object
 
+  /learning/ExternalLearning/view:
+    post:
+      operationId: viewExternalLearning
+      summary: Retrieves recorded external learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    Title:
+                      type: string
+                    Topic:
+                      type: string
+                    Start_Date:
+                      type: string
+                      format: date
+                    Completion_Date:
+                      type: string
+                      format: date
+      responses:
+        "200":
+          description: Successfully retrieved external learning.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Completion_Details:
+                          type: object
+                          properties:
+                            Start_Date:
+                              type: string
+                              format: date
+                            Completion_Date:
+                              type: string
+                              format: date
+                            Actual_Effort_in_Hours:
+                              type: number
+                            Score_Achieved:
+                              type: number
+                            Context_Segment:
+                              type: string
+                        Attachments:
+                          type: array
+                          items:
+                            type: string
+                        Learning_Item_Details:
+                          type: object
+                          properties:
+                            Title:
+                              type: string
+                            URL:
+                              type: string
+                            Expected_Training_Hours:
+                              type: number
+                            Cost:
+                              type: number
+                            Currency:
+                              type: string
+                            Description:
+                              type: string
+                            Topic:
+                              type: string
+                            Context_Segment:
+                              type: string
+                        Justification:
+                          type: string
+                        Actions:
+                          type: object
+                          properties:
+                            Record:
+                              type: boolean
+        "404":
+          description: External learning records not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
 
   /learning/NoncatalogLearning/add:
     post:
@@ -168,6 +259,94 @@ paths:
                   error:
                     type: string
 
+  /learning/NoncatalogLearning/view:
+    post:
+      operationId: viewNoncatalogLearning
+      summary: Retrieves non-catalog learning requests.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    Title:
+                      type: string
+                    Topic:
+                      type: string
+                    Start_Date:
+                      type: string
+                      format: date
+                    Due_Date:
+                      type: string
+                      format: date
+      responses:
+        "200":
+          description: Successfully retrieved non-catalog learning requests.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Request_Details:
+                          type: object
+                          properties:
+                            Start_Date:
+                              type: string
+                              format: date
+                            Due_Date:
+                              type: string
+                              format: date
+                            Context_Segment:
+                              type: string
+                        Attachments:
+                          type: array
+                          items:
+                            type: string
+                        Learning_Item_Details:
+                          type: object
+                          properties:
+                            Title:
+                              type: string
+                            URL:
+                              type: string
+                            Expected_Training_Hours:
+                              type: number
+                            Cost:
+                              type: number
+                            Currency:
+                              type: string
+                            Description:
+                              type: string
+                            Topic:
+                              type: string
+                            Context_Segment:
+                              type: string
+                        Justification:
+                          type: string
+                        Actions:
+                          type: object
+                          properties:
+                            Submit:
+                              type: boolean
+        "404":
+          description: Non-catalog learning requests not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
   /learning/community/create:
     post:
       operationId: createCommunity
@@ -240,6 +419,82 @@ paths:
                   error:
                     type: string
 
+  /learning/community/view:
+    post:
+      operationId: viewCommunity
+      summary: Retrieves existing learning communities.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    Community_Title:
+                      type: string
+                    Privacy:
+                      type: string
+                    Member_Contributions:
+                      type: string
+      responses:
+        "200":
+          description: Successfully retrieved learning communities.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Community_Details:
+                          type: object
+                          properties:
+                            Community_Title:
+                              type: string
+                            Branding_Image:
+                              type: string
+                            Description:
+                              type: string
+                            Trailer:
+                              type: string
+                        Visibility:
+                          type: object
+                          properties:
+                            Privacy:
+                              type: object
+                              properties:
+                                Open:
+                                  type: boolean
+                                Closed:
+                                  type: boolean
+                                Secret:
+                                  type: boolean
+                            Member_Contributions:
+                              type: object
+                              properties:
+                                Disable:
+                                  type: boolean
+                                Enable:
+                                  type: boolean
+                        Related_Materials:
+                          type: array
+                          items:
+                            type: string
+        "404":
+          description: Learning communities not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
 
   /learning/transcript/view:
     post:
