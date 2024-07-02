@@ -1,0 +1,406 @@
+import schedule
+import time
+import threading
+import sys
+import os
+import logging
+import signal
+from functools import partial
+from pymongo import MongoClient, DESCENDING
+from bson import ObjectId
+from datetime import datetime, timedelta, timezone
+from dateutil.relativedelta import relativedelta
+from Leave_acc_process import Leave_acc_main  # Import the letter generation function
+from Goal_assignment import goal_assignment  # Import the goal assignment function
+from fpdf import FPDF  # Import FPDF for PDF generation
+import gridfs  # Import gridfs for file storage
+import json  # Import json to read letters_config.json
+import pandas as pd  # Import pandas for Excel generation
+import psutil  # Import psutil for system resource monitoring
+import inspect
+# Database setup
+
+
+client = MongoClient('mongodb://PCL_Interns_admin:PCLinterns2050admin@172.191.245.199:27017/PCL_Interns')
+db = client['PCL_Interns']
+process_details_collection = db['results_collection']
+client_collection = db['Client_Collection2']
+processes_collection = db['Processes_Collection2']
+fs = gridfs.GridFS(db)
+ 
+# Ensure an index on Completion Time in descending order
+process_details_collection.create_index([('Completion Time', DESCENDING)])
+ 
+# Load letters configuration
+with open('letters_config.json', 'r') as file:
+    letters_config = json.load(file)
+ 
+# Map task names to functions
+TASKS = {
+    'Leave_acc_main': Leave_acc_main,
+    'goal_assignment': goal_assignment,
+    'run_letter_generation': Leave_acc_main  # Example: map to the appropriate function
+    # Add other task functions here as needed
+}
+ 
+# Get next scheduled time for the task
+def get_next_scheduled_time(interval, unit):
+    now = datetime.now(timezone.utc)
+    if unit == 'second':
+        return now + timedelta(seconds=interval)
+    elif unit == 'minute':
+        return now + timedelta(minutes=interval)
+    elif unit == 'hour':
+        return now + timedelta(hours=interval)
+    elif unit == 'day':
+        return now + timedelta(days=interval)
+    elif unit == 'week':
+        return now + timedelta(weeks=interval)
+    elif unit == 'month':
+        return now + relativedelta(months=interval)
+    elif unit == 'year':
+        return now + relativedelta(years=interval)
+    else:
+        return now
+ 
+# Load configuration from database
+def load_config_from_db():
+    return list(client_collection.find())
+ 
+# Get parameters from the PopulationFilters in the collection
+def get_parameters_from_population_filters(process_id):
+    process = client_collection.find_one({'Process ID': process_id})
+    if process and 'basic_options' in process and 'population_filters' in process['basic_options']:
+        return process['basic_options']['population_filters']
+    return {}
+ 
+# Setup logging
+def setup_logging(process_name):
+    logger = logging.getLogger(process_name)
+    log_filename = f"{process_name.replace(' ', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+    log_filepath = os.path.join('logs', log_filename)
+   
+    if not os.path.exists('logs'):
+        os.makedirs('logs')
+ 
+    logger.setLevel(logging.DEBUG)
+   
+    if logger.hasHandlers():
+        logger.handlers.clear()
+ 
+    fh = logging.FileHandler(log_filepath)
+    fh.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s: %(message)s', datefmt='%a %b %d %H:%M:%S UTC %Y')
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
+   
+    return log_filepath, logger, fh
+ 
+# Convert log file to PDF
+def convert_log_to_pdf(log_filepath):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    pdf.set_margins(10, 10, 10)
+   
+    with open(log_filepath, 'r') as file:
+        for line in file:
+            pdf.multi_cell(0, 10, txt=line, align='L')
+   
+    pdf_filepath = log_filepath.replace('.log', '.pdf')
+    pdf.output(pdf_filepath)
+   
+    return pdf_filepath
+ 
+# Read log file
+def read_log_file(log_filepath):
+    with open(log_filepath, 'r') as file:
+        return file.read()
+ 
+# Generate detailed report in both PDF and Excel formats
+def generate_detailed_report(data, process_id):
+    # Convert data to DataFrame
+    df = pd.DataFrame([data])
+   
+    # Generate Excel report
+    reports_dir = 'reports'
+    if not os.path.exists(reports_dir):
+        os.makedirs(reports_dir)
+   
+    excel_filepath = os.path.join(reports_dir, f"report_{process_id}.xlsx")
+    df.to_excel(excel_filepath, index=False)
+   
+    # Generate PDF report
+    pdf_filepath = os.path.join(reports_dir, f"report_{process_id}.pdf")
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    pdf.set_margins(10, 10, 10)
+   
+    for key, value in data.items():
+        pdf.cell(200, 10, f"{key}: {value}", ln=True, align='L')
+   
+    pdf.output(pdf_filepath)
+   
+    return excel_filepath, pdf_filepath
+ 
+# Run the task and create a new entry for each cycle
+ 
+ 
+def run_task(task_func, params, task_name, interval, unit, process_id):
+    process_details_collection = db['results_collection']
+ 
+    # Fetch all parameters from Client_Collection
+    client_data = client_collection.find_one({'Process ID': process_id})
+    all_parameters = client_data if client_data else {}
+ 
+    process_details_id = ObjectId()
+    start_time = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    next_scheduled_time = get_next_scheduled_time(interval, unit).strftime('%Y-%m-%dT%H:%M:%SZ')
+ 
+    log_filepath, logger, log_handler = setup_logging(task_name)
+   
+    final_document = {
+        "Name": task_name,
+        "Metadata Name": task_name,
+        "Status": "Running",
+        "Submitted By": "scheduler_user",
+        "Submission Notes": "Scheduled task",
+        "Start Time": start_time,
+        "Scheduled Time": start_time,
+        "Next Scheduled Time": next_scheduled_time,
+        "Submission Time": start_time,
+        "Completion Time": "",
+        "Attachment File": {
+            "log": "",
+            "report": {},
+            "log_details": ""
+        },
+        "All Parameters": all_parameters
+    }
+    process_details_collection.insert_one(final_document)
+ 
+    task_start_time = datetime.now(timezone.utc)
+    try:
+        logger.info(f"Executing {task_name} with parameters {params}")
+       
+        # Monitor system resource usage before running the task
+        cpu_usage_before = psutil.cpu_percent(interval=None)
+        memory_usage_before = psutil.virtual_memory().percent
+ 
+        # Get the expected parameters for the task function
+        func_params = inspect.signature(task_func).parameters
+        filtered_params = {k: v for k, v in params.items() if k in func_params}
+ 
+        task_func(**filtered_params, process_details_id=process_details_id, db=db)
+       
+        # Monitor system resource usage after running the task
+        cpu_usage_after = psutil.cpu_percent(interval=None)
+        memory_usage_after = psutil.virtual_memory().percent
+       
+        status = 'Completed'
+        logger.info(f"Process {task_name} completed successfully.")
+    except Exception as e:
+        status = 'Failed'
+        logger.error(f"Error running task {task_name}: {e}")
+        cpu_usage_after = 'N/A'
+        memory_usage_after = 'N/A'
+ 
+    log_details = read_log_file(log_filepath)
+ 
+    # Update the process details document with log details immediately
+    process_details_collection.update_one(
+        {'_id': final_document['_id']},
+        {'$set': {
+            'Attachment File.log_details': log_details,
+            'Status': status
+        }}
+    )
+ 
+    for handler in logger.handlers:
+        handler.flush()
+   
+    logger.removeHandler(log_handler)
+    log_handler.close()
+ 
+    pdf_filepath = convert_log_to_pdf(log_filepath)
+    pdf_filename = os.path.basename(pdf_filepath)
+    with open(pdf_filepath, 'rb') as pdf_file:
+        pdf_file_id = fs.put(pdf_file, filename=pdf_filename)
+ 
+    # Generate detailed report
+    report_data = {
+        "Process ID": str(process_id),
+        "Process Name": task_name,
+        "Scheduled Time": start_time,
+        "Start Time": task_start_time.strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "End Time": datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "Duration": str(datetime.now(timezone.utc) - task_start_time),
+        "Priority": all_parameters.get('priority', 'Normal'),
+        "Resource Utilization": {
+            "CPU Usage": f"Before: {cpu_usage_before}%, After: {cpu_usage_after}%",
+            "Memory Usage": f"Before: {memory_usage_before}%, After: {memory_usage_after}%",
+            "I/O Usage": "N/A",  # To be filled if I/O usage data is available
+            "Network Usage": "N/A"  # To be filled if network usage data is available
+        },
+        "Status and Outcome": {
+            "Status": status,
+            "Exit Code": "N/A",  # To be filled if exit code data is available
+            "Error Messages": log_details if status == 'Failed' else "",
+            "Output Data": "N/A"  # To be filled if output data is available
+        },
+        "Metadata": {
+            "User": "scheduler_user",
+            "Host": "N/A",  # To be filled if host data is available
+            "Environment Variables": "N/A",  # To be filled if environment variables data is available
+            "Dependencies": "N/A"  # To be filled if dependencies data is available
+        },
+        "Performance Metrics": {
+            "Throughput": "N/A",  # To be filled if throughput data is available
+            "Latency": "N/A",  # To be filled if latency data is available
+            "Efficiency": "N/A",  # To be filled if efficiency data is available
+            "Scalability": "N/A"  # To be filled if scalability data is available
+        },
+        "Logs and Audit Trail": {
+            "Execution Logs": log_details,
+            "Audit Trail": "N/A",  # To be filled if audit trail data is available
+            "Alerts": "N/A"  # To be filled if alerts data is available
+        }
+    }
+    excel_report, pdf_report = generate_detailed_report(report_data, process_details_id)
+ 
+    # Save reports in GridFS
+    with open(excel_report, 'rb') as file:
+        excel_report_id = fs.put(file, filename=os.path.basename(excel_report))
+    with open(pdf_report, 'rb') as file:
+        pdf_report_id = fs.put(file, filename=os.path.basename(pdf_report))
+ 
+    # Update the process details document with completion info, log file name, and reports
+    process_details_collection.update_one(
+        {'_id': final_document['_id']},
+        {'$set': {
+            'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+            'Attachment File.log': pdf_filename,
+            'Attachment File.log_details': log_details,
+            'Attachment File.report': {
+                'pdf': pdf_report_id,
+                'excel': excel_report_id
+            }
+        }}
+    )
+ 
+    logger.handlers.clear()
+ 
+   
+def schedule_task_with_end_check(task_func_with_params, end_date):
+    if datetime.now(timezone.utc) <= end_date:
+        run_in_thread(task_func_with_params)
+ 
+def run_in_thread(task_func_with_params):
+    task_thread = threading.Thread(target=task_func_with_params)
+    task_thread.start()
+    return task_thread
+ 
+def schedule_tasks_from_db(configs):
+    threads = []
+    for config in configs:
+        process_info = processes_collection.find_one({'process_name': config['process_name']})
+        if not process_info:
+            logging.warning(f"Process '{config['process_name']}' not found in Processes collection. Skipping.")
+            continue
+       
+        function_name = process_info.get('function_name')
+        task_func = TASKS.get(function_name)
+        if not task_func:
+            logging.warning(f"No task function found for '{function_name}'. Skipping.")
+            continue
+       
+        process_id = config['Process ID']
+        params = get_parameters_from_population_filters(process_id)
+       
+        schedule_data = config['advanced_options']['schedule']
+ 
+        if 'as_soon_as_possible' in schedule_data:
+            threads.append(run_in_thread(partial(run_task, task_func, params, task_name=config['process_name'], interval=0, unit='second', process_id=process_id)))
+        elif 'using_a_schedule' in schedule_data:
+            frequency = schedule_data['using_a_schedule']['frequency']
+            for freq_type, freq_details in frequency.items():
+                if freq_type == 'once':
+                    start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
+                    if datetime.now(timezone.utc) <= start_date:
+                        schedule.once().at(start_date).do(run_in_thread, partial(run_task, task_func, params, task_name=config['process_name'], interval=0, unit='second', process_id=process_id))
+                elif freq_type == 'hourly_minute':
+                    start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
+                    end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
+                    interval = int(freq_details['time_between_runs'].split()[0])
+                    unit = freq_details['time_between_runs'].split()[1].lower()
+                    if unit == 'minute':
+                        schedule.every(interval).minutes.do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=interval, unit='minute', process_id=process_id), end_date=end_date)
+                    elif unit == 'hour':
+                        schedule.every(interval).hours.do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=interval, unit='hour', process_id=process_id), end_date=end_date)
+                elif freq_type == 'daily':
+                    start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
+                    end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
+                    interval = int(freq_details['days_between_runs'])
+                    schedule.every(interval).days.do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=interval, unit='day', process_id=process_id), end_date=end_date)
+                elif freq_type == 'weekly':
+                    start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
+                    end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
+                    interval = int(freq_details['weeks_between_runs'])
+                    schedule.every(interval).weeks.do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=interval, unit='week', process_id=process_id), end_date=end_date)
+                elif freq_type == 'monthly':
+                    start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
+                    end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
+                    if 'repeat_by_day' in freq_details:
+                        week_of_month = freq_details['repeat_by_day']['week_of_the_month']
+                        day_of_week = freq_details['repeat_by_day']['day_of_the_week']
+                        schedule.every().month.at(f'{week_of_month} {day_of_week}').do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=1, unit='month', process_id=process_id), end_date=end_date)
+                    elif 'repeat_by_date' in freq_details:
+                        date = int(freq_details['repeat_by_date']['date'])
+                        schedule.every().month.at(f'{date}').do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=1, unit='month', process_id=process_id), end_date=end_date)
+                elif freq_type == 'yearly':
+                    start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
+                    end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
+                    month = int(freq_details['month'])
+                    if 'repeat_by_day' in freq_details:
+                        week_of_month = freq_details['repeat_by_day']['week_of_the_month']
+                        day_of_week = freq_details['repeat_by_day']['day_of_the_week']
+                        schedule.every().year.at(f'{month} {week_of_month} {day_of_week}').do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=1, unit='year', process_id=process_id), end_date=end_date)
+                    elif 'repeat_by_date' in freq_details:
+                        date = int(freq_details['repeat_by_date']['date'])
+                        schedule.every().year.at(f'{month}-{date}').do(schedule_task_with_end_check, partial(run_task, task_func, params, task_name=config['process_name'], interval=1, unit='year', process_id=process_id), end_date=end_date)
+    return threads
+ 
+def run_scheduler():
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+ 
+def signal_handler(signal, frame):
+    print("Received signal to shut down. Exiting...")
+    sys.exit(0)
+ 
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)  # Set logging to info level
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+ 
+    configs = load_config_from_db()
+    print(configs)
+ 
+    scheduler_threads = []
+    for config in configs:
+        scheduler_threads.extend(schedule_tasks_from_db([config]))
+ 
+    scheduler_thread = threading.Thread(target=run_scheduler)
+    scheduler_thread.start()
+ 
+    try:
+        while True:
+            time.sleep(1)
+    except (KeyboardInterrupt, SystemExit):
+        print("Shutting down...")
+        for t in scheduler_threads:
+            t.join()
+        scheduler_thread.join()
+        print("Shutdown complete.")
