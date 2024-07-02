@@ -897,7 +897,6 @@ def create_transaction():
                         'approverId': approver_id,
                         'status': 'pending',
                         #'lastUpdatedAt': datetime.utcnow(),
-                        'Action Type': approver['Action Type']
                     }
                     transaction['approvals'].append(approval_entry)
                     print("Approval entry added:", approval_entry)
