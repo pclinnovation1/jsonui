@@ -1,0 +1,121 @@
+{
+  "letters": {
+    "OfferLetterTemplate": {
+      "purpose": "To formally extend a job offer to a candidate, detailing the position, compensation, benefits, and terms of employment."
+    },
+    "AppointmentLetterTemplate": {
+      "purpose": "To officially confirm the appointment of a candidate to a specific position within the company, outlining job title, department, and start date."
+    },
+    "EmploymentContractTemplate": {
+      "purpose": "To provide a legally binding agreement between the employer and employee, specifying the terms and conditions of employment, including duties, compensation, and duration."
+    },
+    "ProbationConfirmationLetterTemplate": {
+      "purpose": "To formally acknowledge an employee's successful completion of their probation period, confirming their ongoing employment status."
+    },
+    "WelcomeLetterTemplate": {
+      "purpose": "To warmly welcome a new employee to the company, providing essential information about their first day, team, and initial tasks."
+    },
+    "OnboardingLetterTemplate": {
+      "purpose": "To guide new employees through the onboarding process, offering instructions on necessary documentation, training schedules, and company policies."
+    },
+    "SalaryIncreaseLetterTemplate": {
+      "purpose": "To notify an employee of a raise in their salary, explaining the new compensation rate, effective date, and reasons for the increase."
+    },
+    "PromotionLetterTemplate": {
+      "purpose": "To officially inform an employee of their promotion to a higher position, detailing new responsibilities, benefits, and effective date."
+    },
+    "TransferLetterTemplate": {
+      "purpose": "To confirm an employee's transfer to a different department or location within the company, specifying the new role, department, and effective date."
+    },
+    "WarningLetterTemplate": {
+      "purpose": "To formally address an employee's misconduct or performance issues, outlining the specific concerns, required improvements, and potential consequences."
+    },
+    "CertificateOfLearningCourseCompletionLetter": {
+      "purpose": "To acknowledge the successful completion of a training or learning course by an employee, providing formal recognition of their achievement."
+    },
+    "TrainingInvitationLetterTemplate": {
+      "purpose": "To invite an employee to attend a training program, including details about the training objectives, schedule, and any prerequisites."
+    },
+    "TrainingCompletionLetterTemplate": {
+      "purpose": "To confirm an employee's completion of a training program, highlighting the skills or certifications gained and their applicability to their role."
+    },
+    "PerformanceAppraisalLetterTemplate": {
+      "purpose": "To provide an employee with a review of their performance over a specific period, offering feedback, areas for improvement, and future goals."
+    },
+    "PerformanceImprovementPlanLetterTemplate": {
+      "purpose": "To outline a structured plan for an employee to improve their performance, detailing specific objectives, timelines, and support mechanisms."
+    },
+    "BonusAnnouncementLetterTemplate": {
+      "purpose": "To inform an employee about the awarding of a bonus, specifying the amount, reasons for the bonus, and any conditions attached."
+    },
+    "IncentivePlanLetterTemplate": {
+      "purpose": "To describe an incentive plan available to employees, explaining the eligibility criteria, performance metrics, and rewards."
+    },
+    "RelocationLetterTemplate": {
+      "purpose": "To provide assistance and confirmation of an employee's relocation, detailing the new work location, role, and any relocation support offered."
+    },
+    "WorkAnniversaryLetterTemplate": {
+      "purpose": "To recognize and congratulate an employee on their work anniversary, celebrating their contributions and service to the company."
+    },
+    "RecognitionLetterTemplate": {
+      "purpose": "To formally acknowledge an employee's exceptional achievements or contributions, expressing gratitude and appreciation."
+    },
+    "AbsenceWarningLetterTemplate": {
+      "purpose": "To formally warn an employee about their excessive or unauthorized absences, detailing the impact on their employment and required actions."
+    },
+    "LeaveApprovalLetterTemplate": {
+      "purpose": "To approve an employee's request for leave, confirming the leave period, any conditions, and ensuring compliance with company policies."
+    },
+    "LeaveRejectionLetterTemplate": {
+      "purpose": "To inform an employee that their request for leave has been denied, providing reasons for the rejection and any alternative options."
+    },
+    "LeaveExtensionApprovalLetterTemplate": {
+      "purpose": "To approve an employee's request for an extension of their leave, detailing the new leave period and any conditions attached."
+    },
+    "MaternityPaternityLeaveApprovalLetterTemplate": {
+      "purpose": "To approve an employee's request for maternity or paternity leave, specifying the leave period, benefits, and any related policies."
+    },
+    "ReferenceLetterTemplate": {
+      "purpose": "To provide a reference for a current or former employee, detailing their role, performance, and qualifications for future employment opportunities."
+    },
+    "EmploymentVerificationLetterTemplate": {
+      "purpose": "To verify an individual's employment status with the company, including job title, employment dates, and salary for official purposes."
+    },
+    "SalaryVerificationLetterTemplate": {
+      "purpose": "To confirm an employee's salary for purposes such as loan applications, rentals, or other official verifications."
+    },
+    "InternshipOfferLetterTemplate": {
+      "purpose": "To formally offer an internship position to a candidate, outlining the terms, responsibilities, and expectations of the internship."
+    },
+    "InternshipCompletionCertificateTemplate": {
+      "purpose": "To certify the successful completion of an internship program by an individual, acknowledging their participation and achievements."
+    },
+    "JobRejectionLetterTemplate": {
+      "purpose": "To inform a job candidate that their application was not successful, providing closure and any relevant feedback."
+    },
+    "ThankYouLetterTemplatePostInterview": {
+      "purpose": "To express gratitude to a candidate for attending an interview, acknowledging their interest and effort in the application process."
+    },
+    "ConfirmationOfEmploymentLetterTemplate": {
+      "purpose": "To officially confirm an individual's employment status with the company, often used for personal or official documentation purposes."
+    },
+    "ChangeInEmploymentTermsLetterTemplate": {
+      "purpose": "To notify an employee about changes to their employment terms, explaining the new terms and their implications."
+    },
+    "OvertimeApprovalLetterTemplate": {
+      "purpose": "To approve an employee's request to work overtime, specifying the approved hours and any conditions related to the overtime work."
+    },
+    "ShiftChangeLetterTemplate": {
+      "purpose": "To inform an employee about a change in their work shift, providing details about the new schedule and any related expectations."
+    },
+    "DataPrivacyNoticeTemplate": {
+      "purpose": "To inform employees about the company's data privacy practices, explaining how their personal information is collected, used, and protected."
+    },
+    "PolicyChangeNotificationLetterTemplate": {
+      "purpose": "To notify employees about changes to company policies, detailing the new policies, effective dates, and any required actions."
+    },
+    "CompanyAnnouncementLetterTemplate": {
+      "purpose": "To announce important information or updates about the company to employees, stakeholders, or the public."
+    }
+  }
+}
