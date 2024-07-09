@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualization Tool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .upload-container, .visualization-container, .fields-container, .filters-container {
+            width: 100%;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .iframe-container {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .checkbox-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .fields-container, .filters-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Visualization Tool</h1>
+        
+        <!-- File Upload Section -->
+        <div class="upload-container">
+            <div class="section-title">Upload Your Data</div>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" multiple class="form-control">
+                <input type="submit" value="Upload" class="btn btn-primary mt-2">
+            </form>
+        </div>
+
+        <!-- Visualizations Section -->
+        <div class="visualization-container">
+            <div class="section-title">Graph Visualization</div>
+            <iframe src="http://127.0.0.1:5000/dash/" class="iframe-container"></iframe>
+        </div>
+        
+        <!-- Fields Selection Section -->
+        <div class="fields-container">
+            <div class="section-title">Fields</div>
+            <div class="checkbox-list">
+                <label><input type="checkbox" name="field1"> Field 1</label><br>
+                <label><input type="checkbox" name="field2"> Field 2</label><br>
+                <label><input type="checkbox" name="field3"> Field 3</label><br>
+                <!-- Add more fields as needed -->
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-container">
+            <div class="section-title">Filters</div>
+            <div>Filter by:</div>
+            <select class="form-control mt-2 mb-2">
+                <option>Filter 1</option>
+                <option>Filter 2</option>
+                <option>Filter 3</option>
+                <!-- Add more filters as needed -->
+            </select>
+        </div>
+    </div>
+</body>
+</html>
