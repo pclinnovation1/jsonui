@@ -1,0 +1,17 @@
+<html>
+<body>
+    <p>You have a pending approval request.</p>
+    <p>Transaction ID: {{ transaction_id }}</p>
+    <p>Process Name: {{ process_name }}</p>
+    <p>Process Description: {{ process_description }}</p>
+    <p>Please approve or reject the request using the buttons below:</p>
+    <p>
+        <a href="{{ approve_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: green; color: white; text-decoration: none;">Approve</a>
+        <a href="{{ reject_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: red; color: white; text-decoration: none;">Reject</a>
+        <a href="{{ changes_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: orange; color: white; text-decoration: none;">Request Changes</a>
+    </p>
+    <p>
+        <a href="{{ change_approver_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: blue; color: white; text-decoration: none;">Change Approver</a>
+    </p>
+</body>
+</html>
