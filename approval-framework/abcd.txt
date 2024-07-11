@@ -1,0 +1,7 @@
+{
+  "processId": "hghtg54",
+  "fieldType": ["amount", "department", "cost center"],
+  "transaction_fields": {
+    "value": [7000, "Product", "AB0012"]
+  }
+}
