@@ -1,0 +1,13 @@
+<html>
+<body>
+    <form action="/api/transactions/{{ transaction_id }}/change_approver" method="post">
+        <p>Select new approver email:</p>
+        <select name="new_approver_email">
+            {% for approver in approvers %}
+                <option value="{{ approver.email }}">{{ approver.email }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Change Approver</button>
+    </form>
+</body>
+</html>

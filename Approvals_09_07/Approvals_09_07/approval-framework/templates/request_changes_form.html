@@ -1,0 +1,10 @@
+<html>
+<body>
+    <form action="/api/transactions/{{ transaction_id }}/request_changes" method="post">
+        <p>Approver ID: {{ approver_id }}</p>
+        <input type="hidden" name="approver_id" value="{{ approver_id }}">
+        <textarea name="change_request" rows="4" cols="50" placeholder="Enter your change request here..."></textarea>
+        <button type="submit">Submit Change Request</button>
+    </form>
+</body>
+</html>
