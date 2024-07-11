@@ -223,7 +223,7 @@ def update_graph(x_col, y_cols, graph_type, legend_col, reset_n_clicks, drilldow
     # Handle drill-down
     if triggered_id == 'drilldown-button' and click_data is not None:
         clicked_data = click_data['points'][0]['x']
-        drilldown_history.append(clicked_data)
+        drilldown_history.append((x_col, clicked_data))
         
         if drilldown_level < len(x_drilldown):
             next_x_col = x_drilldown[drilldown_level]
@@ -235,12 +235,13 @@ def update_graph(x_col, y_cols, graph_type, legend_col, reset_n_clicks, drilldow
     if triggered_id == 'drillup-button' and drilldown_level > 0:
         drilldown_level -= 1
         if drilldown_level == 0:
+            drilldown_history = []
             return generate_graph(global_df, x_col, y_cols, graph_type, legend_col, show_legend)
         else:
-            clicked_data = drilldown_history.pop()
-            previous_x_col = x_drilldown[drilldown_level - 1]
+            previous_x_col, clicked_data = drilldown_history[-1]
             drilldown_df = global_df[global_df[previous_x_col] == clicked_data]
-            return generate_graph(drilldown_df, x_col, y_cols, graph_type, legend_col, show_legend)
+            drilldown_history.pop()
+            return generate_graph(drilldown_df, previous_x_col, y_cols, graph_type, legend_col, show_legend)
     
     return generate_graph(global_df, x_col, y_cols, graph_type, legend_col, show_legend)
 
