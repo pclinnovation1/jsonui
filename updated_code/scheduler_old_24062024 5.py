@@ -10,13 +10,18 @@ from pymongo import MongoClient, DESCENDING
 from bson import ObjectId
 from datetime import datetime, timedelta, timezone
 from dateutil.relativedelta import relativedelta
+from fpdf import FPDF
+import gridfs
+import json
+
+# Importing the functions directly
 from openai_letter_generation import run_letter_generation
 from Leave_acc_process import Leave_acc_main
 from email_sending import send_email_now
 from Goals_assign import assign_goal
-from fpdf import FPDF
-import gridfs
-import json
+from course_assignment import assign_courses
+from renew_courses import check_and_renew_courses
+# from course_recommendation import recommend_courses
 
 # Database setup
 client = MongoClient('mongodb://PCL_Interns_admin:PCLinterns2050admin@172.191.245.199:27017/PCL_Interns')
@@ -32,14 +37,6 @@ process_details_collection.create_index([('Completion Time', DESCENDING)])
 # Load letters configuration
 with open('letters_config.json', 'r') as file:
     letters_config = json.load(file)
-
-# Map task names to functions
-TASKS = {
-    'run_letter_generation': run_letter_generation,
-    'Leave_acc_main': Leave_acc_main,
-    'send_email_now': send_email_now,
-    'assign_goal': assign_goal
-}
 
 
 # Get next scheduled time for the task
@@ -119,8 +116,8 @@ def read_log_file(log_filepath):
         return file.read()
 
 # Run the task and create a new entry for each cycle
-def run_task(task_func, params, task_name, interval, unit, process_id, letter_config=None, letterhead_image_path=None):
-    print("run_task")
+def run_task(task_func, params, task_name, process_name, interval, unit, process_id, letter_config=None, letterhead_image_path=None):
+    print(params, task_name)
     process_details_collection = db['Results_Collection']
 
     # Fetch all parameters from Client_Collection
@@ -132,10 +129,10 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
     next_scheduled_time = get_next_scheduled_time(interval, unit).strftime('%Y-%m-%dT%H:%M:%SZ')
 
     log_filepath, logger, log_handler = setup_logging(task_name)
-    print("run task 2")
+    
     final_document = {
-        "Name": task_name,
-        "Metadata Name": task_name,
+        "Process Name": process_name,
+        "Function Name": task_name,
         "Status": "Running",
         "Submitted By": "scheduler_user",
         "Submission Notes": "Scheduled task",
@@ -148,28 +145,30 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
         "All Parameters": all_parameters,
         "Log Details": ""
     }
-    print("run task 3")
     process_details_collection.insert_one(final_document)
-    print("run task 4")
     try:
         logger.info(f"Executing {task_name} with parameters {params}")
         # Initialize status
         status = 'Running'
-        
-        if task_name in ('Generate Letter'):
-            status = task_func(params, letter_config, letterhead_image_path, db, process_details_id)
-        elif task_name in ('Calculate Accruals and Balances', 'Goal Assign'):
-            status = task_func(params, process_details_id, db)
-            print(status)
-        elif task_name == 'Email Sending':
-            status = task_func()
-            print(status)
-        
+        print(task_name)
+        if task_name == 'run_letter_generation':
+            status = run_letter_generation(params, letter_config, letterhead_image_path, db, process_details_id)
+        elif task_name in ('Leave_acc_main'):
+            status = Leave_acc_main(params, process_details_id, db)
+        elif task_name == 'assign_goal':
+            print("Hii")
+            status = assign_goal(params, process_details_id, db)
+        elif task_name == 'send_email_now':
+            status = send_email_now()
+        elif task_name == 'assign_courses':
+            status = assign_courses()
+        elif task_name == 'check_and_renew_courses':
+            status = check_and_renew_courses(params)
+            
         logger.info(f"Task {task_name} completed with status: {status}")
 
     except Exception as e:
         status = 'Failed'
-        print("failedddddd")
         logger.error(f"Error running task {task_name}: {e}")
 
     finally:
@@ -189,7 +188,7 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
         process_details_collection.update_one(
             {'_id': final_document['_id']},
             {'$set': {
-                'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H%M%SZ'),
                 'Status': status,
                 'Log Details': read_log_file(txt_log_filepath)
             }}
@@ -213,7 +212,7 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
                 }}}
             )
 
-            # Removing these lines to avoid file deletion
+            # Uncomment these lines if you want to delete the files after upload
             # os.remove(txt_log_filepath)
             # os.remove(pdf_filepath
 
@@ -237,9 +236,8 @@ def schedule_tasks_from_db(configs):
             continue
         
         function_name = process_info.get('function_name')
-        task_func = TASKS.get(function_name)
-        if not task_func:
-            logging.warning(f"No task function found for '{function_name}'. Skipping.")
+        if function_name not in globals():
+            logging.error(f"Function '{function_name}' is not defined. Skipping.")
             continue
         
         process_id = config['Process ID']
@@ -247,12 +245,12 @@ def schedule_tasks_from_db(configs):
         print(f"Parameters for {function_name}: {params}")
         
         schedule_data = config['advanced_options']['schedule']
-
         task_func_partial = partial(
             run_task, 
-            task_func, 
+            globals()[function_name], 
             params, 
-            task_name=config['process_name'], 
+            task_name=function_name,
+            process_name = process_info.get('process_name'),
             interval=0, 
             unit='second', 
             process_id=process_id,
@@ -314,7 +312,6 @@ def schedule_tasks_from_db(configs):
     return threads
 
 def run_scheduler():
-    print("Hii")
     while True:
         schedule.run_pending()
         time.sleep(1)
