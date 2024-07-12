@@ -1,0 +1,9 @@
+{
+    "Certificate-1.png": {
+        "recipient_name": [860, 500],
+        "course_name": [850, 725],
+        "issued_by": [240, 900],
+        "completed_on": [860, 900],
+        "actual_effort": [1480, 900]
+    }
+}
