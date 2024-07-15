@@ -3,6 +3,7 @@ import time
 import threading
 import sys
 import os
+import io
 import logging
 import signal
 from functools import partial
@@ -10,12 +11,27 @@ from pymongo import MongoClient, DESCENDING
 from bson import ObjectId
 from datetime import datetime, timedelta, timezone
 from dateutil.relativedelta import relativedelta
-from openai_letter_generation import run_letter_generation
-from Leave_acc_process import Leave_acc_main
-from email_sending import send_email_now
 from fpdf import FPDF
 import gridfs
 import json
+
+# Importing the functions directly
+from openai_letter_generation import run_letter_generation
+from Leave_acc_process import Leave_acc_main
+from email_sending import send_email_now
+from Goals_assign import assign_goal
+from course_job_code import assign_courses
+from renew_courses import check_and_renew_courses
+from course_assign import assign_existing_employee_course
+from process_learning_alerts import sync_instructor_led_training_for_learning
+from process_learning_alerts import process_learning_alerts
+from process_learning_alerts import process_learning_records
+from process_learning_alerts import process_learning_recommendations
+from process_learning_alerts import mass_assign_goals
+from Calendar_Details_from_teams import fetch_calendar_events
+from course_reassign import reassign_courses
+
+# from course_recommendation import recommend_courses
 
 # Database setup
 client = MongoClient('mongodb://PCL_Interns_admin:PCLinterns2050admin@172.191.245.199:27017/PCL_Interns')
@@ -32,12 +48,6 @@ process_details_collection.create_index([('Completion Time', DESCENDING)])
 with open('letters_config.json', 'r') as file:
     letters_config = json.load(file)
 
-# Map task names to functions
-TASKS = {
-    'run_letter_generation': run_letter_generation,
-    'Leave_acc_main': Leave_acc_main,
-    'send_email_now': send_email_now
-}
 
 # Get next scheduled time for the task
 def get_next_scheduled_time(interval, unit):
@@ -94,6 +104,8 @@ def setup_logging(process_name):
     
     return log_filepath, logger, fh
 
+
+
 # Create PDF report with parameters
 def create_report_pdf(parameters, task_name, file_name):
     pdf = FPDF()
@@ -110,18 +122,21 @@ def create_report_pdf(parameters, task_name, file_name):
         os.makedirs('reports')
     pdf.output(os.path.join('reports', file_name))
 
+
+
 # Read log file
 def read_log_file(log_filepath):
     with open(log_filepath, 'r') as file:
         return file.read()
 
 # Run the task and create a new entry for each cycle
-def run_task(task_func, params, task_name, interval, unit, process_id, letter_config=None, letterhead_image_path=None):
+def run_task(task_func, params, task_name, process_name, interval, unit, process_id, letter_config=None, letterhead_image_path=None):
+    print(params, task_name)
     process_details_collection = db['Results_Collection']
 
     # Fetch all parameters from Client_Collection
     client_data = client_collection.find_one({'Process ID': process_id})
-    all_parameters = client_data if client_data else {}
+    all_parameters = client_data.get('basic_options') if client_data else {}
 
     process_details_id = ObjectId()
     start_time = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -130,8 +145,8 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
     log_filepath, logger, log_handler = setup_logging(task_name)
     
     final_document = {
-        "Name": task_name,
-        "Metadata Name": task_name,
+        "Process Name": process_name,
+        "Function Name": task_name,
         "Status": "Running",
         "Submitted By": "scheduler_user",
         "Submission Notes": "Scheduled task",
@@ -145,19 +160,43 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
         "Log Details": ""
     }
     process_details_collection.insert_one(final_document)
-
     try:
         logger.info(f"Executing {task_name} with parameters {params}")
-        # Pass additional arguments for specific tasks
-        if task_name == 'Generate Letter':
-            status = task_func(params, letter_config, letterhead_image_path, db, process_details_id)
-        elif task_name == 'Calculate Accruals and Balances':
-            status = task_func(params, process_details_id=process_details_id, db=db)
-            print(status)
-        elif task_name == 'Email Sending':
-            status = task_func()
-            print(status)
-        logger.info(f"Process {task_name} completed with status {status}.")
+        # Initialize status
+        status = 'Running'
+        print(task_name)
+        if task_name == 'run_letter_generation':
+            status = run_letter_generation(params, letter_config, letterhead_image_path, db, process_details_id)
+        elif task_name in ('Leave_acc_main'):
+            status = Leave_acc_main(params, process_details_id, db)
+        elif task_name == 'assign_goal':
+           
+            status = assign_goal(params, process_details_id, db)
+        elif task_name == 'send_email_now':
+            status = send_email_now()
+        elif task_name == 'assign_courses':
+            status = assign_courses()
+        elif task_name == 'check_and_renew_courses':
+            status = check_and_renew_courses(params)
+        elif task_name == 'sync_instructor_led_training_for_learning':
+            status = sync_instructor_led_training_for_learning()
+        elif task_name == 'process_learning_alerts':
+            status = process_learning_alerts()
+        elif task_name == 'process_learning_records':
+            status = process_learning_records()
+        elif task_name == 'process_learning_recommendations':
+            status = process_learning_recommendations()
+        elif task_name == 'mass_assign_goals':
+            status = mass_assign_goals()
+        elif task_name == 'assign_existing_employee_course':
+            status = assign_existing_employee_course(params, process_details_id, db)
+        elif task_name == 'fetch_calendar_events':
+            status = fetch_calendar_events(params)
+        elif task_name == 'reassign_courses':
+            status = reassign_courses(params,db)
+            
+        logger.info(f"Task {task_name} completed with status: {status}")
+
     except Exception as e:
         status = 'Failed'
         logger.error(f"Error running task {task_name}: {e}")
@@ -179,7 +218,7 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
         process_details_collection.update_one(
             {'_id': final_document['_id']},
             {'$set': {
-                'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H%M%SZ'),
                 'Status': status,
                 'Log Details': read_log_file(txt_log_filepath)
             }}
@@ -203,9 +242,7 @@ def run_task(task_func, params, task_name, interval, unit, process_id, letter_co
                 }}}
             )
 
-            # Removing these lines to avoid file deletion
-            # os.remove(txt_log_filepath)
-            # os.remove(pdf_filepath
+           
 
         logger.handlers.clear()
 
@@ -227,9 +264,8 @@ def schedule_tasks_from_db(configs):
             continue
         
         function_name = process_info.get('function_name')
-        task_func = TASKS.get(function_name)
-        if not task_func:
-            logging.warning(f"No task function found for '{function_name}'. Skipping.")
+        if function_name not in globals():
+            logging.error(f"Function '{function_name}' is not defined. Skipping.")
             continue
         
         process_id = config['Process ID']
@@ -237,19 +273,19 @@ def schedule_tasks_from_db(configs):
         print(f"Parameters for {function_name}: {params}")
         
         schedule_data = config['advanced_options']['schedule']
-
         task_func_partial = partial(
             run_task, 
-            task_func, 
+            globals()[function_name], 
             params, 
-            task_name=config['process_name'], 
+            task_name=function_name,
+            process_name = process_info.get('process_name'),
             interval=0, 
             unit='second', 
             process_id=process_id,
             letter_config=letters_config if function_name == 'run_letter_generation' else None,
             letterhead_image_path=r'letterhead.png' if function_name == 'run_letter_generation' else None
         )
-
+        
         if 'as_soon_as_possible' in schedule_data:
             threads.append(run_in_thread(task_func_partial))
         elif 'using_a_schedule' in schedule_data:
