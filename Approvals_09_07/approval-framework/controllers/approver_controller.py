@@ -1,27 +1,3 @@
-# from flask import Blueprint, request, jsonify, current_app
-# from bson.objectid import ObjectId
-
-# approver_bp = Blueprint('approver_bp', __name__)
-
-# @approver_bp.route('/approvers', methods=['POST'])
-# def create_approver():
-#     data = request.json
-#     approvers = current_app.mongo.db.approvers
-#     approvers.insert_one(data)
-#     return jsonify({"message": "Approver created successfully"}), 201
-
-# @approver_bp.route('/approvers/<id>', methods=['GET'])
-# def get_approver(id):
-#     approvers = current_app.mongo.db.approvers
-#     approver = approvers.find_one({"_id": ObjectId(id)})
-#     return jsonify(approver), 200
-
-
-
-
-
-
-
 
 
 from flask import Blueprint, request, jsonify, current_app

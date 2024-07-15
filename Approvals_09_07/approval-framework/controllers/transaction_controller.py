@@ -12,47 +12,60 @@ transaction_bp = Blueprint('transaction_bp', __name__)
 def create_transaction():
     data = request.get_json()
     print("Received data:", data)
-    
-    process_id = data.get('processId')
+
+    process_name = data.get('processName')
     transaction_fields = data.get('transaction_fields', {})
     field_types = data.get('fieldType', [])
     field_values = transaction_fields.get('value', [])
-    
+    print(process_name)
+    print(transaction_fields)
+    print(field_types)
+    print(field_values)
+
+    process = current_app.mongo.db.processes.find_one({"name": process_name})
+    if not process:
+        return jsonify({"error": "Process not found for the given process name"}), 404
+
+    process_id = process['processId']
+
     transaction = {
+        'processName': process_name,
         'processId': process_id,
-        'amount': transaction_fields.get('amount'),
         'fieldType': field_types,
         'status': 'pending',
         'createdAt': datetime.utcnow(),
         'updatedAt': datetime.utcnow(),
         'approvals': [],
-        'approval_actions': []  # New array for approval actions
+        'approval_actions': []
     }
 
-    approval_rules = current_app.mongo.db.approval_rules.find_one({"processId": process_id})
+    approval_rules = current_app.mongo.db.approval_rules.find_one({"processName": process_name})
     print("Approval Rules:", approval_rules)
 
     if not approval_rules:
-        print("No approval rules found for the given process ID")
-        return jsonify({"error": "No approval rules found for the given process ID"}), 404
+        print("No approval rules found for the given process name")
+        return jsonify({"error": "No approval rules found for the given process name"}), 404
+
+    approvers_set = set()  # To track distinct approvers
 
     for rule in approval_rules['rules']:
         condition = rule['condition']
         print("Evaluating condition:", condition)
 
-        if evaluate_condition(field_types, field_values, condition, approval_rules):
+        if evaluate_condition(field_types, field_values, condition):
             print("Condition matched:", condition)
             for approver_id in rule['approvers']:
-                approver = current_app.mongo.db.approvers.find_one({"approverId": approver_id})
-                if approver:
-                    approval_entry = {
-                        'approverId': approver_id,
-                        'status': 'pending',
-                        'email_approver': approver['email']
-                    }
-                    transaction['approvals'].append(approval_entry)
-                    print("Approval entry added:", approval_entry)
-            break  # Stop after finding the first matching rule
+                if approver_id not in approvers_set:
+                    approver = current_app.mongo.db.approvers.find_one({"approverId": approver_id})
+                    if approver:
+                        approval_entry = {
+                            'approverId': approver_id,
+                            'status': 'pending',
+                            'email_approver': approver['email']
+                        }
+                        transaction['approvals'].append(approval_entry)
+                        approvers_set.add(approver_id)
+                        print("Approval entry added:", approval_entry)
         else:
             print("Condition did not match:", condition)
 
@@ -65,42 +78,45 @@ def create_transaction():
 @transaction_bp.route('/reminders', methods=['POST'])
 def send_reminders():
     data = request.json
-    transaction_id = data.get("transaction_id")
-    transaction = current_app.mongo.db.transactions.find_one({"_id": ObjectId(transaction_id)})
+    process_name = data.get("processName")
 
-    if not transaction:
-        return jsonify({"error": "Transaction not found"}), 404
+    if not process_name:
+        return jsonify({"error": "Process name not provided"}), 400
 
-    for approval in transaction['approvals']:
-        if approval['status'] == 'pending':
-            approver_id = approval['approverId']
-            approver = current_app.mongo.db.approvers.find_one({"approverId": approver_id})
+    pending_transactions = current_app.mongo.db.transactions.find({"processName": process_name, "status": "pending"})
 
-            if not approver:
-                continue
+    #pending_count = pending_transactions.count()
+    pending_count = current_app.mongo.db.transactions.count_documents({"processName": process_name, "status": "pending"})
 
-            approver_emails = approver['email']
-            if not isinstance(approver_emails, list):
-                approver_emails = [approver_emails]
+    if pending_count == 0:
+        return jsonify({"message": "No pending transactions found for the given process"}), 404
 
-            process = current_app.mongo.db.processes.find_one({"processId": transaction['processId']})
-            process_name = process['name'] if process else 'N/A'
-            process_description = process['description'] if process else 'N/A'
+    for transaction in pending_transactions:
+        for approval in transaction['approvals']:
+            if approval['status'] == 'pending':
+                approver_id = approval['approverId']
+                approver_emails = approval['email_approver']
+                
+                if not isinstance(approver_emails, list):
+                    approver_emails = [approver_emails]
 
-            for approver_email in approver_emails:
-                send_email_reminder(approver_email, str(transaction['_id']), approver_id, process_name, process_description)
+                process_description = "Description of the process"  # Assuming you want to include a description
+
+                for approver_email in approver_emails:
+                    send_email_reminder(approver_email, str(transaction['_id']), approver_id, process_name, process_description)
+                
                 approval['reminder_sent'] = True
                 approval['reminder_sent_at'] = datetime.utcnow()
                 approval['reminder_sent_to'] = approver_emails  # Store all emails
 
-            current_app.mongo.db.transactions.update_one(
-                {"_id": ObjectId(transaction_id)},
-                {"$set": {"approvals": transaction['approvals'], "updated_at": datetime.utcnow()}}
-            )
-            return jsonify({"message": "Reminder sent to the first pending approver"}), 200
+                # Update the transaction with the reminder information for the first pending approver only
+                current_app.mongo.db.transactions.update_one(
+                    {"_id": ObjectId(transaction['_id'])},
+                    {"$set": {"approvals": transaction['approvals'], "updated_at": datetime.utcnow()}}
+                )
+                break  # Stop after the first pending approver
 
-    return jsonify({"message": "No pending approvals found"}), 404
-
+    return jsonify({"message": f"Reminder sent to the first pending approver in all transactions", "pending_transactions_count": pending_count}), 200
 
 def send_email_reminder(approver_email, transaction_id, approver_id, process_name, process_description):
     from_email = "piyushbirkh@gmail.com"
@@ -112,15 +128,17 @@ def send_email_reminder(approver_email, transaction_id, approver_id, process_nam
     reject_url = url_for('transaction_bp.update_approval_status', transaction_id=transaction_id, status='rejected', approver_id=approver_id, _external=True)
     changes_url = url_for('transaction_bp.request_changes_form', transaction_id=transaction_id, approver_id=approver_id, _external=True)
     change_approver_url = url_for('transaction_bp.change_approver_form', transaction_id=transaction_id, _external=True)
+    add_approver_url = url_for('transaction_bp.add_approver_form', transaction_id=transaction_id, _external=True)
 
-    body = render_template('email_reminder.html',
-                           transaction_id=transaction_id,
-                           process_name=process_name,
-                           process_description=process_description,
-                           approve_url=approve_url,
-                           reject_url=reject_url,
-                           changes_url=changes_url,
-                           change_approver_url=change_approver_url)
+    body = render_template('email_reminder.html', 
+                           transaction_id=transaction_id, 
+                           process_name=process_name, 
+                           process_description=process_description, 
+                           approve_url=approve_url, 
+                           reject_url=reject_url, 
+                           changes_url=changes_url, 
+                           change_approver_url=change_approver_url,
+                           add_approver_url=add_approver_url)
 
     msg = MIMEMultipart()
     msg['From'] = from_email
@@ -178,6 +196,7 @@ def update_approval_status(transaction_id, status):
 @transaction_bp.route('/<transaction_id>/request_changes_form', methods=['GET'])
 def request_changes_form(transaction_id):
     approver_id = request.args.get("approver_id")
+    
     return render_template('request_changes_form.html', transaction_id=transaction_id, approver_id=approver_id)
 
 @transaction_bp.route('/<transaction_id>/request_changes', methods=['POST'])
@@ -225,8 +244,7 @@ def request_changes(transaction_id):
 @transaction_bp.route('/<transaction_id>/change_approver_form', methods=['GET'])
 def change_approver_form(transaction_id):
     approvers = current_app.mongo.db.approvers.find()
-    approvers_list = list(approvers)
-    return render_template('change_approver_form.html', transaction_id=transaction_id, approvers=approvers_list)
+    return render_template('change_approver_form.html', transaction_id=transaction_id, approvers=approvers)
 
 @transaction_bp.route('/<transaction_id>/change_approver', methods=['POST'])
 def change_approver(transaction_id):
@@ -262,3 +280,49 @@ def change_approver(transaction_id):
     send_email_reminder(new_approver_email, transaction_id, new_approver_id, "Change Department", "Process to change Department")
 
     return jsonify({"message": "New approver assigned and reminder sent", "transaction": str(transaction['_id'])}), 200
+
+##############################
+@transaction_bp.route('/<transaction_id>/add_approver', methods=['POST'])
+def add_approver(transaction_id):
+    new_approver_id = request.form.get("new_approver_id")
+
+    if not new_approver_id:
+        return jsonify({"error": "New approver ID is required"}), 400
+
+    transaction = current_app.mongo.db.transactions.find_one({"_id": ObjectId(transaction_id)})
+
+    if not transaction:
+        return jsonify({"error": "Transaction not found"}), 404
+
+    new_approver = current_app.mongo.db.approvers.find_one({"approverId": new_approver_id})
+
+    if not new_approver:
+        return jsonify({"error": "New approver not found"}), 404
+
+    new_approver_email = new_approver['email'][0] if isinstance(new_approver['email'], list) else new_approver['email']
+
+    approval_entry = {
+        'approverId': new_approver_id,
+        'status': 'pending',
+        'email_approver': [new_approver_email],
+    }
+    transaction['approvals'].append(approval_entry)
+
+    current_app.mongo.db.transactions.update_one(
+        {"_id": ObjectId(transaction_id)},
+        {"$set": {"approvals": transaction['approvals'], "updated_at": datetime.utcnow()}}
+    )
+
+    send_email_reminder(new_approver_email, transaction_id, new_approver_id, "Process Name", "Process Description")
+
+    return jsonify({"message": "New approver added and reminder sent", "transaction": str(transaction['_id'])}), 200
+
+
+
+@transaction_bp.route('/<transaction_id>/add_approver_form', methods=['GET'])
+def add_approver_form(transaction_id):
+    approvers = current_app.mongo.db.approvers.find()
+    return render_template('add_approver_form.html', transaction_id=transaction_id, approvers=approvers)
+
+
+
