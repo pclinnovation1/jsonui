@@ -10,7 +10,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from manager_approval.api.transaction_controller import transaction_bp
 from manager_approval.api.manager_controller import manager_bp
 from manager_approval.api.employee_controller import employee_bp
-from manager_approval.api.condition_controller import condition_bp
 from manager_approval.api.approver_controller import approval_bp
 
 app = Flask(__name__)
@@ -32,7 +31,6 @@ app.mongo = mongo
 app.register_blueprint(manager_bp, url_prefix='/api/managers')
 app.register_blueprint(employee_bp, url_prefix='/api/employees')
 app.register_blueprint(approval_bp, url_prefix='/api/approvals')
-app.register_blueprint(condition_bp, url_prefix='/api/conditions')
 app.register_blueprint(transaction_bp, url_prefix='/api/transactions')
 
 if __name__ == '__main__':

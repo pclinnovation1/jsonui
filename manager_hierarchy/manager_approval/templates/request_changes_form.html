@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Changes</title>
+</head>
+<body>
+    <form action="/api/transactions/{{ transaction_id }}/request_changes" method="post">
+        <input type="hidden" name="manager_name" value="{{ manager_name }}">
+        <label for="change_request">Enter your change request:</label>
+        <textarea name="change_request" placeholder="Enter your change request"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
