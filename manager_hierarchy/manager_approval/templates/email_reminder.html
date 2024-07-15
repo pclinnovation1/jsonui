@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approval Reminder</title>
+</head>
+<body>
+    <p>You have a pending approval request for {{ employee_name }} from {{ department }} department.</p>
+    <p>Use the buttons below to take action:</p>
+    <p>
+        <a href="{{ approve_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: green; color: white; text-decoration: none;">Approve</a>
+        <a href="{{ reject_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: red; color: white; text-decoration: none;">Reject</a>
+        <a href="{{ changes_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: orange; color: white; text-decoration: none;">Request Changes</a>
+    </p>
+</body>
+</html>
