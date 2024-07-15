@@ -1,17 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approval Reminder</title>
+</head>
 <body>
     <p>You have a pending approval request.</p>
     <p>Transaction ID: {{ transaction_id }}</p>
     <p>Process Name: {{ process_name }}</p>
     <p>Process Description: {{ process_description }}</p>
     <p>Please approve or reject the request using the buttons below:</p>
-    <p>
-        <a href="{{ approve_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: green; color: white; text-decoration: none;">Approve</a>
-        <a href="{{ reject_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: red; color: white; text-decoration: none;">Reject</a>
-        <a href="{{ changes_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: orange; color: white; text-decoration: none;">Request Changes</a>
-    </p>
-    <p>
-        <a href="{{ change_approver_url }}" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: blue; color: white; text-decoration: none;">Change Approver</a>
-    </p>
+    <a href="{{ approve_url }}"><button style="background-color: green;">Approve</button></a>
+    <a href="{{ reject_url }}"><button style="background-color: red;">Reject</button></a>
+    <a href="{{ changes_url }}"><button style="background-color: orange;">Request Changes</button></a>
+    <a href="{{ change_approver_url }}"><button style="background-color: blue;">Change Approver</button></a>
+    <a href="{{ add_approver_url }}"><button style="background-color: purple;">Add Approver</button></a>
 </body>
 </html>
