@@ -5,5 +5,12 @@
         "issued_by": [240, 900],
         "completed_on": [860, 900],
         "actual_effort": [1480, 900]
+    }, 
+    "course_completion_certificate_template-1.png": {
+        "recipient_name": [860, 780],
+        "course_name": [850, 1000],
+        "issued_by": [240, 1230],
+        "completed_on": [810, 1200],
+        "actual_effort": [1410, 1200]
     }
 }
