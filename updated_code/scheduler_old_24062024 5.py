@@ -3,7 +3,6 @@ import time
 import threading
 import sys
 import os
-import io
 import logging
 import signal
 from functools import partial
@@ -194,9 +193,8 @@ def run_task(task_func, params, task_name, process_name, interval, unit, process
         elif task_name == 'course_recommendation':
             status = course_recommendation()
         elif task_name == 'approval':
-            status = approval()    
-        
-            
+            status = approval() 
+              
         logger.info(f"Task {task_name} completed with status: {status}")
 
     except Exception as e:
@@ -220,7 +218,7 @@ def run_task(task_func, params, task_name, process_name, interval, unit, process
         process_details_collection.update_one(
             {'_id': final_document['_id']},
             {'$set': {
-                'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H%M%SZ'),
+                'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                 'Status': status,
                 'Log Details': read_log_file(txt_log_filepath)
             }}
@@ -289,7 +287,7 @@ def schedule_tasks_from_db(configs):
         
         if 'as_soon_as_possible' in schedule_data:
             job = schedule.every().second.do(run_in_thread, task_func_partial)
-            scheduled_jobs[config['process_name']] = job
+            scheduled_jobs[process_id] = job
             threads.append(run_in_thread(task_func_partial))
         elif 'using_a_schedule' in schedule_data:
             frequency = schedule_data['using_a_schedule']['frequency']
@@ -298,7 +296,7 @@ def schedule_tasks_from_db(configs):
                     start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
                     if datetime.now(timezone.utc) <= start_date:
                         job = schedule.every().second.at(start_date).do(run_in_thread, task_func_partial)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
                 elif freq_type == 'hourly_minute':
                     start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
                     end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
@@ -306,25 +304,25 @@ def schedule_tasks_from_db(configs):
                     unit = freq_details['time_between_runs'].split()[1].lower()
                     if unit == 'minute':
                         job = schedule.every(interval).minutes.do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
                     elif unit == 'second':
                         job = schedule.every(interval).seconds.do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
                     elif unit == 'hour':
                         job = schedule.every(interval).hours.do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
                 elif freq_type == 'daily':
                     start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
                     end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
                     interval = int(freq_details['days_between_runs'])
                     job = schedule.every(interval).days.do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                    scheduled_jobs[config['process_name']] = job
+                    scheduled_jobs[process_id] = job
                 elif freq_type == 'weekly':
                     start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
                     end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
                     interval = int(freq_details['weeks_between_runs'])
                     job = schedule.every(interval).weeks.do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                    scheduled_jobs[config['process_name']] = job
+                    scheduled_jobs[process_id] = job
                 elif freq_type == 'monthly':
                     start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
                     end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
@@ -332,11 +330,11 @@ def schedule_tasks_from_db(configs):
                         week_of_month = freq_details['repeat_by_day']['week_of_the_month']
                         day_of_week = freq_details['repeat_by_day']['day_of_the_week']
                         job = schedule.every().month.at(f'{week_of_month} {day_of_week}').do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
                     elif 'repeat_by_date' in freq_details:
                         date = int(freq_details['repeat_by_date']['date'])
                         job = schedule.every().month.at(f'{date}').do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
                 elif freq_type == 'yearly':
                     start_date = datetime.fromisoformat(freq_details['start_date']).replace(tzinfo=timezone.utc)
                     end_date = datetime.fromisoformat(freq_details['end_date']).replace(tzinfo=timezone.utc)
@@ -345,30 +343,33 @@ def schedule_tasks_from_db(configs):
                         week_of_month = freq_details['repeat_by_day']['week_of_the_month']
                         day_of_week = freq_details['repeat_by_day']['day_of_the_week']
                         job = schedule.every().year.at(f'{month} {week_of_month} {day_of_week}').do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
                     elif 'repeat_by_date' in freq_details:
                         date = int(freq_details['repeat_by_date']['date'])
                         job = schedule.every().year.at(f'{month}-{date}').do(schedule_task_with_end_check, task_func_partial, end_date=end_date)
-                        scheduled_jobs[config['process_name']] = job
+                        scheduled_jobs[process_id] = job
     return threads
 
 def update_scheduled_tasks():
     global scheduled_jobs
     while True:
         configs = load_config_from_db()
-        current_job_names = set(scheduled_jobs.keys())
-        new_job_names = {config['process_name'] for config in configs}
+        current_job_ids = set(scheduled_jobs.keys())
+        new_job_ids = {config['Process ID'] for config in configs}
 
         # Remove jobs that are no longer needed
-        for job_name in current_job_names - new_job_names:
-            schedule.cancel_job(scheduled_jobs[job_name])
-            del scheduled_jobs[job_name]
+        for job_id in current_job_ids - new_job_ids:
+            schedule.cancel_job(scheduled_jobs[job_id])
+            del scheduled_jobs[job_id]
 
-        # Add new jobs
-        schedule_tasks_from_db(configs)
+        # Add new or updated jobs
+        for config in configs:
+            process_id = config['Process ID']
+            if process_id not in scheduled_jobs:
+                schedule_tasks_from_db([config])
 
         # Check for updates every 30 seconds
-        time.sleep(30)
+        time.sleep(5)
 
 def run_scheduler():
     while True:
