@@ -1,0 +1,37 @@
+{
+  "Performance": {
+    "Goals Management": {
+      "Create Personal Goals": "",
+      "View Assigned Goals": "",
+      "My Goals": {
+        "Update Goal": "",
+        "Delete Goal": "",
+        "Add Comment": ""
+      }
+    },
+    "Development Plan Managemnent": {
+      "Development Plans": {
+        "Create Plan": "",
+        "View My Plans": "",
+        "Update Plan": "",
+        "Delete Plan": ""
+      }
+    },
+    "Performance Reviews": {
+      "Self-Assessment": "",
+      "View Reviews": "",
+      "Appraisal Status": ""
+    },
+    "Feedback": {
+      "Request Feedback": "",
+      "View Feedback": "",
+      "Give Feedback": ""
+    },
+    "Report and Analytics": {
+      "Performance Reports": ""
+    },
+    "Advanced Options": {
+      "Align Personal Goals with Team Goals": ""
+    }
+  }
+}

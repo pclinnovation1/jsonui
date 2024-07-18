@@ -1,0 +1,37 @@
+{
+  "Performance and Goals Management": {
+    "Team Goal Management": {
+      "Team Goals": {
+        "Assign Goal": "",
+        "View Goals": "",
+        "Update Goal": "",
+        "Delete Goal": ""
+      }
+    },
+    "Team Development Plan Management": {
+      "Team Development Plans": {
+        "Create Plan": "",
+        "View Plans": "",
+        "Update Plan": "",
+        "Delete Plan": ""
+      }
+    },
+    "Performance Reviews": {
+      "Conduct Review": "",
+      "Review Self-Assessments": "",
+      "Manager Assessment": "",
+      "Submit Appraisal": "",
+      "Track Appraisals": ""
+    },
+    "Feedback": {
+      "Give Feedback": "",
+      "Feedback History": "",
+      "Approve Goals": "",
+      "Reject Goals": ""
+    },
+    "Reports and Analytics": {
+      "Team Performance Analytics": "",
+      "Generate Report": ""
+    }
+  }
+}
