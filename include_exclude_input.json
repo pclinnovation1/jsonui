@@ -1,0 +1,240 @@
+{
+    "info": {
+      "name": "Goal Plans Collection",
+      "description": "Collection to import multiple goal plans into MongoDB",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Goal Plan 1",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 1\", \"include\": [\"employeeId1\", \"employeeId2\", \"employeeId3\"], \"exclude\": [\"employeeId4\", \"employeeId5\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 2",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 2\", \"include\": [\"employeeId6\", \"employeeId7\", \"employeeId8\"], \"exclude\": [\"employeeId9\", \"employeeId10\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 3",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 3\", \"include\": [\"employeeId11\", \"employeeId12\", \"employeeId13\"], \"exclude\": [\"employeeId14\", \"employeeId15\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 4",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 4\", \"include\": [\"employeeId16\", \"employeeId17\", \"employeeId18\"], \"exclude\": [\"employeeId19\", \"employeeId20\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 5",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 5\", \"include\": [\"employeeId21\", \"employeeId22\", \"employeeId23\"], \"exclude\": [\"employeeId24\", \"employeeId25\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 6",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 6\", \"include\": [\"employeeId26\", \"employeeId27\", \"employeeId28\"], \"exclude\": [\"employeeId29\", \"employeeId30\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 7",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 7\", \"include\": [\"employeeId31\", \"employeeId32\", \"employeeId33\"], \"exclude\": [\"employeeId34\", \"employeeId35\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 8",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 8\", \"include\": [\"employeeId36\", \"employeeId37\", \"employeeId38\"], \"exclude\": [\"employeeId39\", \"employeeId40\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 9",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 9\", \"include\": [\"employeeId41\", \"employeeId42\", \"employeeId43\"], \"exclude\": [\"employeeId44\", \"employeeId45\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal Plan 10",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"goal_plan_name\": \"Annual Performance Plan 10\", \"include\": [\"employeeId46\", \"employeeId47\", \"employeeId48\"], \"exclude\": [\"employeeId49\", \"employeeId50\"]}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goal_plans",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goal_plans"]
+          }
+        }
+      }
+    ]
+  }
+  

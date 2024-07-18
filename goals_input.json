@@ -1,0 +1,240 @@
+{
+    "info": {
+      "name": "Goals Collection",
+      "description": "Collection to import multiple goals into MongoDB",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Goal 1",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Increase Sales\",\"Description\":\"Increase sales by 25% in the next quarter\",\"Start Date\":\"2024-01-01\",\"Target Completion Date\":\"2024-03-31\",\"Category\":\"Sales\",\"Success Criteria\":\"Achieve 25% increase in sales\",\"Status\":\"In Progress\",\"Level\":\"Company\",\"Subtype\":\"Quarterly Goal\"},\"Measurements\":{\"Measurement Name\":\"Sales Growth\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-01-01\",\"End Date\":\"2024-03-31\",\"Comments\":\"Monitor monthly\",\"Target Type\":\"Threshold\",\"Target Value\":\"25\",\"Actual Value\":\"15\"},\"Tasks\":{\"Name\":\"Identify new markets\",\"Type\":\"Research\",\"Status\":\"Pending\",\"Priority\":\"High\",\"Comments\":\"Focus on emerging markets\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-01-10\",\"Target Completion Date\":\"2024-01-31\",\"Related Link\":\"http://example.com/market-research\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 2",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Increase Website Traffic\",\"Description\":\"Increase website traffic by 30% in the next quarter\",\"Start Date\":\"2024-01-01\",\"Target Completion Date\":\"2024-03-31\",\"Category\":\"Marketing\",\"Success Criteria\":\"Achieve 30% increase in website traffic\",\"Status\":\"In Progress\",\"Level\":\"Department\",\"Subtype\":\"Quarterly Goal\"},\"Measurements\":{\"Measurement Name\":\"Traffic Growth\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-01-01\",\"End Date\":\"2024-03-31\",\"Comments\":\"Monitor weekly\",\"Target Type\":\"Threshold\",\"Target Value\":\"30\",\"Actual Value\":\"10\"},\"Tasks\":{\"Name\":\"Optimize SEO\",\"Type\":\"Optimization\",\"Status\":\"Pending\",\"Priority\":\"High\",\"Comments\":\"Focus on on-page SEO\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-01-05\",\"Target Completion Date\":\"2024-02-28\",\"Related Link\":\"http://example.com/seo-guide\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 3",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Reduce Customer Churn\",\"Description\":\"Reduce customer churn by 15% over the next six months\",\"Start Date\":\"2024-01-01\",\"Target Completion Date\":\"2024-06-30\",\"Category\":\"Customer Retention\",\"Success Criteria\":\"Achieve 15% reduction in customer churn\",\"Status\":\"Not Started\",\"Level\":\"Company\",\"Subtype\":\"Biannual Goal\"},\"Measurements\":{\"Measurement Name\":\"Churn Rate\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-01-01\",\"End Date\":\"2024-06-30\",\"Comments\":\"Monitor monthly\",\"Target Type\":\"Threshold\",\"Target Value\":\"15\",\"Actual Value\":\"0\"},\"Tasks\":{\"Name\":\"Improve Customer Support\",\"Type\":\"Service Improvement\",\"Status\":\"Pending\",\"Priority\":\"Medium\",\"Comments\":\"Hire and train more support staff\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-01-15\",\"Target Completion Date\":\"2024-05-31\",\"Related Link\":\"http://example.com/support-training\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 4",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Launch New Product\",\"Description\":\"Launch a new product by the end of Q3\",\"Start Date\":\"2024-02-01\",\"Target Completion Date\":\"2024-09-30\",\"Category\":\"Product Development\",\"Success Criteria\":\"Successfully launch the new product\",\"Status\":\"Planning\",\"Level\":\"Project\",\"Subtype\":\"Annual Goal\"},\"Measurements\":{\"Measurement Name\":\"Launch Readiness\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-02-01\",\"End Date\":\"2024-09-30\",\"Comments\":\"Review progress bi-weekly\",\"Target Type\":\"Completion\",\"Target Value\":\"100\",\"Actual Value\":\"20\"},\"Tasks\":{\"Name\":\"Finalize Product Design\",\"Type\":\"Design\",\"Status\":\"In Progress\",\"Priority\":\"High\",\"Comments\":\"Collaborate with design team\",\"Completion Percentage\":\"50\",\"Start Date\":\"2024-02-15\",\"Target Completion Date\":\"2024-04-30\",\"Related Link\":\"http://example.com/design-doc\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 5",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Improve Employee Engagement\",\"Description\":\"Increase employee engagement score by 25% in the next year\",\"Start Date\":\"2024-01-01\",\"Target Completion Date\":\"2024-12-31\",\"Category\":\"HR\",\"Success Criteria\":\"Achieve 25% increase in engagement score\",\"Status\":\"In Progress\",\"Level\":\"Department\",\"Subtype\":\"Annual Goal\"},\"Measurements\":{\"Measurement Name\":\"Engagement Score\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-01-01\",\"End Date\":\"2024-12-31\",\"Comments\":\"Conduct quarterly surveys\",\"Target Type\":\"Threshold\",\"Target Value\":\"25\",\"Actual Value\":\"5\"},\"Tasks\":{\"Name\":\"Develop Engagement Programs\",\"Type\":\"Initiative\",\"Status\":\"Not Started\",\"Priority\":\"Medium\",\"Comments\":\"Focus on team-building activities\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-01-10\",\"Target Completion Date\":\"2024-03-31\",\"Related Link\":\"http://example.com/engagement-programs\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 6",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Enhance Cybersecurity\",\"Description\":\"Enhance cybersecurity measures by Q4\",\"Start Date\":\"2024-01-01\",\"Target Completion Date\":\"2024-12-31\",\"Category\":\"IT\",\"Success Criteria\":\"Implement advanced cybersecurity protocols\",\"Status\":\"Planning\",\"Level\":\"Department\",\"Subtype\":\"Annual Goal\"},\"Measurements\":{\"Measurement Name\":\"Security Breaches\",\"Unit of Measure\":\"Number\",\"Start Date\":\"2024-01-01\",\"End Date\":\"2024-12-31\",\"Comments\":\"Review quarterly\",\"Target Type\":\"Threshold\",\"Target Value\":\"0\",\"Actual Value\":\"1\"},\"Tasks\":{\"Name\":\"Implement Multi-Factor Authentication\",\"Type\":\"Implementation\",\"Status\":\"Not Started\",\"Priority\":\"High\",\"Comments\":\"Integrate MFA across all systems\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-01-15\",\"Target Completion Date\":\"2024-06-30\",\"Related Link\":\"http://example.com/mfa-guide\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 7",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Reduce Operational Costs\",\"Description\":\"Reduce operational costs by 10% in the next fiscal year\",\"Start Date\":\"2024-04-01\",\"Target Completion Date\":\"2025-03-31\",\"Category\":\"Finance\",\"Success Criteria\":\"Achieve 10% reduction in operational costs\",\"Status\":\"Planning\",\"Level\":\"Company\",\"Subtype\":\"Annual Goal\"},\"Measurements\":{\"Measurement Name\":\"Cost Savings\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-04-01\",\"End Date\":\"2025-03-31\",\"Comments\":\"Monitor quarterly\",\"Target Type\":\"Threshold\",\"Target Value\":\"10\",\"Actual Value\":\"0\"},\"Tasks\":{\"Name\":\"Audit Operational Expenses\",\"Type\":\"Audit\",\"Status\":\"Pending\",\"Priority\":\"High\",\"Comments\":\"Identify cost-saving opportunities\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-04-15\",\"Target Completion Date\":\"2024-07-31\",\"Related Link\":\"http://example.com/audit-guide\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 8",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Increase Customer Satisfaction\",\"Description\":\"Improve customer satisfaction score by 20% within the next year\",\"Start Date\":\"2024-01-01\",\"Target Completion Date\":\"2024-12-31\",\"Category\":\"Customer Service\",\"Success Criteria\":\"Achieve 20% improvement in customer satisfaction score\",\"Status\":\"In Progress\",\"Level\":\"Company\",\"Subtype\":\"Annual Goal\"},\"Measurements\":{\"Measurement Name\":\"Satisfaction Score\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-01-01\",\"End Date\":\"2024-12-31\",\"Comments\":\"Monitor bi-monthly\",\"Target Type\":\"Threshold\",\"Target Value\":\"20\",\"Actual Value\":\"5\"},\"Tasks\":{\"Name\":\"Enhance Customer Feedback System\",\"Type\":\"System Upgrade\",\"Status\":\"Pending\",\"Priority\":\"High\",\"Comments\":\"Implement new feedback tools\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-01-20\",\"Target Completion Date\":\"2024-06-30\",\"Related Link\":\"http://example.com/feedback-system\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 9",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Expand International Presence\",\"Description\":\"Open new offices in 3 different countries by end of the year\",\"Start Date\":\"2024-02-01\",\"Target Completion Date\":\"2024-12-31\",\"Category\":\"Expansion\",\"Success Criteria\":\"Successfully open offices in 3 countries\",\"Status\":\"Planning\",\"Level\":\"Company\",\"Subtype\":\"Annual Goal\"},\"Measurements\":{\"Measurement Name\":\"Office Openings\",\"Unit of Measure\":\"Number\",\"Start Date\":\"2024-02-01\",\"End Date\":\"2024-12-31\",\"Comments\":\"Review progress monthly\",\"Target Type\":\"Completion\",\"Target Value\":\"3\",\"Actual Value\":\"0\"},\"Tasks\":{\"Name\":\"Market Analysis\",\"Type\":\"Research\",\"Status\":\"In Progress\",\"Priority\":\"High\",\"Comments\":\"Identify potential locations\",\"Completion Percentage\":\"20\",\"Start Date\":\"2024-02-15\",\"Target Completion Date\":\"2024-04-30\",\"Related Link\":\"http://example.com/market-analysis\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      },
+      {
+        "name": "Create Goal 10",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Goals\":{\"Basic Info\":{\"Goal Name\":\"Enhance Product Quality\",\"Description\":\"Reduce product defects by 50% in the next year\",\"Start Date\":\"2024-01-01\",\"Target Completion Date\":\"2024-12-31\",\"Category\":\"Quality Control\",\"Success Criteria\":\"Achieve 50% reduction in product defects\",\"Status\":\"In Progress\",\"Level\":\"Department\",\"Subtype\":\"Annual Goal\"},\"Measurements\":{\"Measurement Name\":\"Defect Rate\",\"Unit of Measure\":\"Percentage\",\"Start Date\":\"2024-01-01\",\"End Date\":\"2024-12-31\",\"Comments\":\"Monitor monthly\",\"Target Type\":\"Threshold\",\"Target Value\":\"50\",\"Actual Value\":\"15\"},\"Tasks\":{\"Name\":\"Implement Quality Checks\",\"Type\":\"Process Improvement\",\"Status\":\"Pending\",\"Priority\":\"High\",\"Comments\":\"Introduce new quality check processes\",\"Completion Percentage\":\"0\",\"Start Date\":\"2024-01-15\",\"Target Completion Date\":\"2024-06-30\",\"Related Link\":\"http://example.com/quality-checks\"}}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/goals",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["goals"]
+          }
+        }
+      }
+    ]
+  }
+  

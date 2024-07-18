@@ -1,0 +1,240 @@
+{
+    "info": {
+      "name": "Review Periods Collection",
+      "description": "Collection to import multiple review periods into MongoDB",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Review Period 1",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 1\",\"Description\":\"Performance review for the first half of the year 1\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 2",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 2\",\"Description\":\"Performance review for the first half of the year 2\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 3",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 3\",\"Description\":\"Performance review for the first half of the year 3\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 4",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 4\",\"Description\":\"Performance review for the first half of the year 4\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 5",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 5\",\"Description\":\"Performance review for the first half of the year 5\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 6",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 6\",\"Description\":\"Performance review for the first half of the year 6\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 7",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 7\",\"Description\":\"Performance review for the first half of the year 7\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 8",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 8\",\"Description\":\"Performance review for the first half of the year 8\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 9",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 9\",\"Description\":\"Performance review for the first half of the year 9\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      },
+      {
+        "name": "Create Review Period 10",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"Create Review Period\":{\"Review Period Name\":\"Mid-Year Review 10\",\"Description\":\"Performance review for the first half of the year 10\",\"Status\":\"Active\",\"Period Start Date\":\"2024-01-01\",\"Period End Date\":\"2024-06-30\"}}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/review_periods",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["review_periods"]
+          }
+        }
+      }
+    ]
+  }
+  

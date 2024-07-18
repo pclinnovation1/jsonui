@@ -1,10 +1,9 @@
-import os
+# config.py
 
-class Config:
-    SECRET_KEY = os.environ.get('33cbfb8f083dd79b16ef4dcf9445968adfa74d6a03ca657e') or 'you-will-never-guess'
-    MONGO_URI = 'mongodb://localhost:27017/pdk'
-    MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT = 587
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get('piyushbirkh@gmail.com')
-    MAIL_PASSWORD = os.environ.get('teaz yfbj jcie twrt')
+MONGODB_URI = "mongodb://PCL_Interns_admin:PCLinterns2050admin@172.191.245.199:27017/PCL_Interns"
+DATABASE_NAME = "PCL_Interns"
+GOALS_COLLECTION_NAME = "GOL_PerformanceGoals"
+ELIGIBILITY_PROFILES_COLLECTION_NAME = "EligibilityProfiles"
+REVIEW_PERIOD_COLLECTION_NAME = "GOL_ReviewPeriod"
+INCLUDE_EXCLUDE_COLLECTION_NAME = "GOL_include_exclude"
+GOAL_PLAN_COLLECTION_NAME = "GOL_GoalPlans"

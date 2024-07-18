@@ -1,0 +1,308 @@
+{
+  "info": {
+    "name": "eligibility_profiles_collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "create_eligibility_profile_11",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_11\",\"description\":\"eligibility_criteria_example_1\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"male\",\"disabled\":\"no\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"n/a\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"n/a\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"mid\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"n/a\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_12",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_12\",\"description\":\"eligibility_criteria_example_2\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"female\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"no\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"n/a\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"n/a\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"hr\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_13",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_13\",\"description\":\"eligibility_criteria_example_3\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"all\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"n/a\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"n/a\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"n/a\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"weekly\",\"department\":\"n/a\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"it\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_14",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_14\",\"description\":\"eligibility_criteria_example_4\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"female\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"n/a\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"n/a\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"junior\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"hr\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_15",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_15\",\"description\":\"eligibility_criteria_example_5\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"male\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"yes\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"n/a\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"senior\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"development\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_16",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_16\",\"description\":\"eligibility_criteria_example_6\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"male\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"n/a\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"yes\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"senior\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"development\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_17",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_17\",\"description\":\"eligibility_criteria_example_7\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"female\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"n/a\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"yes\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"junior\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"sales\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_18",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_18\",\"description\":\"eligibility_criteria_example_8\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"all\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"n/a\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"no\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"senior\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"marketing\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_19",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_19\",\"description\":\"eligibility_criteria_example_9\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"male\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"no\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"no\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"n/a\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"hr\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    },
+    {
+      "name": "create_eligibility_profile_20",
+      "request": {
+        "method": "post",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"create_participant_profile\":{\"eligibility_profile_definition\":{\"name\":\"eligibility_profile_20\",\"description\":\"eligibility_criteria_example_10\",\"assignment_to_use\":\"primary\",\"status\":\"active\",\"view_hierarchy\":\"flat\",\"profile_type\":\"employee\",\"profile_usage\":\"performance_management\"},\"eligibility_criteria\":{\"personal\":{\"gender\":\"male\",\"disabled\":\"n/a\",\"postal_code_ranges\":\"n/a\",\"opted_for_medicare\":\"n/a\",\"leave_of_absence\":\"n/a\",\"termination_reason\":\"n/a\",\"qualification\":\"n/a\",\"competency\":\"n/a\",\"marital_status\":\"n/a\",\"religion\":\"n/a\",\"home_location\":\"n/a\",\"person_type\":\"n/a\",\"service_areas\":\"n/a\",\"uses_tobacco\":\"yes\"},\"employment\":{\"assignment_status\":\"n/a\",\"hourly_or_salaried\":\"n/a\",\"assignment_category\":\"n/a\",\"grade\":\"senior\",\"job\":\"n/a\",\"position\":\"n/a\",\"payroll\":\"n/a\",\"salary_basis\":\"n/a\",\"department\":\"learning\",\"legal_entities\":\"n/a\",\"performance_rating\":\"n/a\",\"quartile_in_range\":\"n/a\",\"work_location\":\"n/a\",\"range_of_scheduled_hours\":\"n/a\",\"people_manager\":\"n/a\",\"job_function\":\"n/a\",\"job_family\":\"n/a\",\"hire_date\":\"n/a\",\"probation_period\":\"n/a\",\"business_unit\":\"n/a\"},\"derived_factors\":{\"age\":\"n/a\",\"length_of_service\":\"n/a\",\"compensation\":\"n/a\",\"hours_worked\":\"n/a\",\"full-time_equivalent\":\"n/a\",\"combined_age_and_length_of_service\":\"n/a\"},\"other\":{\"benefit_groups\":\"n/a\",\"health_coverage_selected\":\"n/a\",\"participation_in_another_plan\":\"n/a\",\"formula\":\"n/a\",\"user-defined_criteria\":\"n/a\"},\"labor_relations\":{\"bargaining_unit\":\"n/a\",\"labor_union_member\":\"n/a\",\"union\":\"n/a\",\"collective_agreement\":\"n/a\"}}}}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/eligibility_profiles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "eligibility_profiles"
+          ]
+        }
+      }
+    }
+  ]
+}

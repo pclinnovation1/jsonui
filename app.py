@@ -1,42 +1,20 @@
-# app.py
+
+
 from flask import Flask
-from flask_pymongo import PyMongo
-from controllers.process_controller import process_bp
-from controllers.approver_controller import approver_bp
-from controllers.condition_controller import condition_bp
-from controllers.approval_rule_controller import approval_rule_bp
-from controllers.transaction_controller import transaction_bp
-from routes.api import api_bp
+from controllers.goals_controller import goals_bp
+from controllers.eligibility_profile_controller import eligibility_profile_bp
+from controllers.review_period_controller import review_period_bp
+from controllers.include_exclude_controller import include_exclude_bp
+from controllers.goal_plan_controller import goal_plan_bp
 
 app = Flask(__name__)
-app.config.from_object('config.Config')
 
-# Initialize PyMongo
-mongo = PyMongo(app)
-
-# Make `mongo` available globally
-app.mongo = mongo
-
-# Register blueprints
-app.register_blueprint(process_bp, url_prefix='/api/processes')
-app.register_blueprint(approver_bp, url_prefix='/api/approvers')
-app.register_blueprint(condition_bp, url_prefix='/api')
-app.register_blueprint(approval_rule_bp, url_prefix='/api')
-app.register_blueprint(transaction_bp, url_prefix='/api')
-app.register_blueprint(api_bp, url_prefix='/api')
+# Register Blueprints
+app.register_blueprint(goals_bp, url_prefix='/goals')
+app.register_blueprint(eligibility_profile_bp, url_prefix='/eligibility_profiles')
+app.register_blueprint(review_period_bp, url_prefix='/review_periods')
+app.register_blueprint(include_exclude_bp, url_prefix='/include_exclude')
+app.register_blueprint(goal_plan_bp, url_prefix='/goal_plans')
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
-
-
-
-
-
-
-
-####
