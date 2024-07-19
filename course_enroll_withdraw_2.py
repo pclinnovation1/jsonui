@@ -4,8 +4,8 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['company2']
+client = MongoClient('mongodb://dev1_user:dev1_pass@172.191.245.199:27017/dev1')
+db = client['dev1']
 
 @app.route('/enroll', methods=['POST'])
 def enroll_employee():
@@ -21,6 +21,7 @@ def enroll_employee():
 
     # Find offerings by title
     offerings = list(db['course_offerings'].find({"Offering Title": offering_title}))
+    print('offerings1',offerings)
     
     if len(offerings) > 1 and not offering_number:
         multiple_offerings = []
@@ -40,15 +41,47 @@ def enroll_employee():
     if not offerings:
         return jsonify({"error": "Offering not found."}), 404
 
+    print('offering_number1',offering_number)
     # Use the Offering Number if provided
     if offering_number:
         offering = db['course_offerings'].find_one({"Offering Number": offering_number})
     else:
         offering = offerings[0]
 
+     # Check if offering was found
+    if offering is None:
+        return jsonify({"error": f"No course offering found with Offering Number '{offering_number}'."}), 400
+    
+    print('Offering2',offering)
+    print('Offered_format1',offering["Offered Format"])
     # Check if the course is Instructor-Led
     if offering["Offered Format"] != "Instructor-Led":
         return jsonify({"error": f"The course offering with title '{offering_title}' is not Instructor-Led."}), 400
+    
+    # Split Person Name into First Name and Last Name
+    try:
+        first_name, last_name = person_name.split(" ", 1)
+    except ValueError:
+        return jsonify({"error": "Invalid Person Name format"}), 400
+
+    # Find Person Number from EmployeeDetails_UK
+    employee = db['EmployeeDetails_UK'].find_one({"First_Name": first_name, "Last_Name": last_name})
+    if not employee:
+        return jsonify({"error": "Employee not found"}), 404
+
+    person_number = employee["Person_Number"]
+    
+      # Check if the employee is already enrolled or has withdrawn from the course offering
+    existing_enrollment = db['employee_offering_details'].find_one({
+        "Person Number": person_number,
+        "Offering Number": offering["Offering Number"],
+        "Current Status": {"$in": ["in-progress", "completed", "withdrawn"]}
+    })
+    
+    if existing_enrollment:
+        current_status = existing_enrollment["Current Status"]
+        return jsonify({"error": f"Employee is already enrolled in this course offering with status '{current_status}'."}), 400
+
 
     # Count the number of active learners for this offering number
     active_learners_count = db['employee_offering_details'].count_documents(
