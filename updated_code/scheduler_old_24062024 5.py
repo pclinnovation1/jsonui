@@ -10,9 +10,10 @@ from pymongo import MongoClient, DESCENDING
 from bson import ObjectId
 from datetime import datetime, timedelta, timezone
 from dateutil.relativedelta import relativedelta
-from fpdf import FPDF
 import gridfs
 import json
+import io
+import traceback
 
 # Importing the functions directly
 from openai_letter_generation import run_letter_generation
@@ -27,10 +28,13 @@ from process_learning_alerts import process_learning_alerts
 from process_learning_alerts import process_learning_records
 from process_learning_alerts import process_learning_recommendations
 from process_learning_alerts import mass_assign_goals
-from Calendar_Details_from_teams import fetch_calendar_events
+# from Calendar_Details_from_teams import fetch_calendar_events
 from course_reassign import reassign_courses
 from process_learning_alerts import course_recommendation
 from process_learning_alerts import approval
+
+# Import the create_report_pdf function from report_generator.py
+from report_generator import create_report_pdf
 
 # Database setup
 client = MongoClient('mongodb://PCL_Interns_admin:PCLinterns2050admin@172.191.245.199:27017/PCL_Interns')
@@ -38,7 +42,10 @@ db = client['PCL_Interns']
 process_details_collection = db['Results_Collection']
 client_collection = db['Client_Collection2']
 processes_collection = db['Processes_Collection2']
-fs = gridfs.GridFS(db)
+
+# Custom GridFS for logs and reports
+log_fs = gridfs.GridFS(db, collection='generated_log')
+report_fs = gridfs.GridFS(db, collection='generated_report')
 
 # Ensure an index on Completion Time in descending order
 process_details_collection.create_index([('Completion Time', DESCENDING)])
@@ -86,45 +93,30 @@ def get_parameters_from_population_filters(process_id):
 # Setup logging
 def setup_logging(process_name):
     logger = logging.getLogger(process_name)
-    log_filename = f"{process_name.replace(' ', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
-    log_filepath = os.path.join('logs', log_filename)
-    
-    if not os.path.exists('logs'):
-        os.makedirs('logs')
+    log_stream = io.StringIO()
 
     logger.setLevel(logging.DEBUG)
     
     if logger.hasHandlers():
         logger.handlers.clear()
 
-    fh = logging.FileHandler(log_filepath)
-    fh.setLevel(logging.DEBUG)
-    formatter = logging.Formatter('%(asctime)s: %(message)s', datefmt='%a %b %d %H:%M:%S UTC %Y')
-    fh.setFormatter(formatter)
-    logger.addHandler(fh)
-    
-    return log_filepath, logger, fh
+    sh = logging.StreamHandler(log_stream)
+    sh.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(name)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S UTC')
+    sh.setFormatter(formatter)
+    logger.addHandler(sh)
 
-# Create PDF report with parameters
-def create_report_pdf(parameters, task_name, file_name):
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font("Arial", size=12)
-    pdf.set_margins(10, 10, 10)
+    return log_stream, logger, sh
 
-    pdf.cell(200, 10, f"Task: {task_name}", ln=True)
-    pdf.cell(200, 10, "Parameters:", ln=True)
-    for key, value in parameters.items():
-        pdf.cell(200, 10, f"{key}: {value}", ln=True)
-
-    if not os.path.exists('reports'):
-        os.makedirs('reports')
-    pdf.output(os.path.join('reports', file_name))
-
-# Read log file
-def read_log_file(log_filepath):
-    with open(log_filepath, 'r') as file:
-        return file.read()
+def convert_objectid_to_str(data):
+    if isinstance(data, dict):
+        return {k: convert_objectid_to_str(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [convert_objectid_to_str(i) for i in data]
+    elif isinstance(data, ObjectId):
+        return str(data)
+    else:
+        return data
 
 # Run the task and create a new entry for each cycle
 def run_task(task_func, params, task_name, process_name, interval, unit, process_id, letter_config=None, letterhead_image_path=None):
@@ -139,7 +131,7 @@ def run_task(task_func, params, task_name, process_name, interval, unit, process
     start_time = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     next_scheduled_time = get_next_scheduled_time(interval, unit).strftime('%Y-%m-%dT%H:%M:%SZ')
 
-    log_filepath, logger, log_handler = setup_logging(task_name)
+    log_stream, logger, log_handler = setup_logging(task_name)
     
     final_document = {
         "Process Name": process_name,
@@ -159,6 +151,7 @@ def run_task(task_func, params, task_name, process_name, interval, unit, process
     process_details_collection.insert_one(final_document)
     try:
         logger.info(f"Executing {task_name} with parameters {params}")
+        start_exec_time = datetime.now()
         # Initialize status
         status = 'Running'
         print(task_name)
@@ -196,49 +189,63 @@ def run_task(task_func, params, task_name, process_name, interval, unit, process
             status = approval() 
               
         logger.info(f"Task {task_name} completed with status: {status}")
-
+        end_exec_time = datetime.now()
+        exec_duration = (end_exec_time - start_exec_time).total_seconds()
+        logger.info(f"Process {task_name} completed with status {status}. Execution time: {exec_duration:.2f} seconds.")
     except Exception as e:
         status = 'Failed'
-        logger.error(f"Error running task {task_name}: {e}")
+        error_details = traceback.format_exc()
+        logger.error(f"Error running task {task_name}: {e}\n{error_details}")
 
     finally:
-        for handler in logger.handlers:
-            handler.flush()
-
+        end_time = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+        duration = datetime.strptime(end_time, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(start_time, '%Y-%m-%dT%H:%M:%SZ')
+        
         logger.removeHandler(log_handler)
         log_handler.close()
 
-        # Convert log file to txt and pdf
-        txt_log_filepath = log_filepath.replace('.log', '.txt')
-        os.rename(log_filepath, txt_log_filepath)
+        log_content = log_stream.getvalue()
         
         pdf_filename = f"{task_name.replace(' ', '_')}_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
-        create_report_pdf(all_parameters, task_name, pdf_filename)
+        
+        # Convert parameters to JSON serializable format
+        all_parameters = convert_objectid_to_str(all_parameters)
+
+        pdf_output = create_report_pdf(all_parameters, task_name, pdf_filename, start_time, end_time, str(duration), status, log_content)
 
         process_details_collection.update_one(
             {'_id': final_document['_id']},
             {'$set': {
-                'Completion Time': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                'Completion Time': end_time,
                 'Status': status,
-                'Log Details': read_log_file(txt_log_filepath)
+                'Log Details': log_content
             }}
         )
 
         final_document = process_details_collection.find_one({'_id': final_document['_id']})
 
         if status in ['Completed', 'Failed']:
-            # Upload to GridFS
-            with open(txt_log_filepath, 'rb') as log_file:
-                fs.put(log_file, filename=os.path.basename(txt_log_filepath))
-            with open(os.path.join('reports', pdf_filename), 'rb') as pdf_file:
-                fs.put(pdf_file, filename=os.path.basename(pdf_filename))
-            
+            # Ensure logs and reports are correctly stored
+            try:
+                log_id = log_fs.put(log_content.encode('utf-8'), filename=f"{task_name.replace(' ', '_')}_log.txt")
+            except Exception as e:
+                logger.error(f"Failed to store log in generated_log: {e}")
+                log_id = None
+
+            try:
+                with report_fs.new_file(filename=pdf_filename) as fp:
+                    fp.write(pdf_output)
+                    report_id = fp._id
+            except Exception as e:
+                logger.error(f"Failed to store report in generated_report: {e}")
+                report_id = None
+
             process_details_collection.update_one(
                 {'_id': final_document['_id']},
                 {'$set': {'Attachment File': {
-                    "log": txt_log_filepath,
-                    "report": os.path.join('reports', pdf_filename),
-                    "log_details": read_log_file(txt_log_filepath)
+                    "log": log_id,
+                    "report": report_id,
+                    "log_details": log_content
                 }}}
             )
 
