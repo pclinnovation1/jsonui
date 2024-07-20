@@ -1,10 +1,9 @@
 import pandas as pd
-import base64
-import io
 from dash import Dash, dcc, html, Input, Output, State, callback_context
 import plotly.express as px
 import plotly.graph_objects as go
 from flask_caching import Cache
+from pymongo import MongoClient
 
 # Initialize the Dash app
 app = Dash(__name__)
@@ -13,41 +12,29 @@ cache = Cache(app.server, config={'CACHE_TYPE': 'simple'})
 
 TIMEOUT = 600  # Cache timeout in seconds
 
+# MongoDB connection
+client = MongoClient('mongodb://dev1_user:dev1_pass@172.191.245.199:27017/dev1')
+db = client['dev1']
+
 # Helper function to parse uploaded files
-def parse_contents(contents, filename):
-    content_type, content_string = contents.split(',')
-    decoded = base64.b64decode(content_string)
-    try:
-        if 'csv' in filename:
-            df = pd.read_csv(io.StringIO(decoded.decode('utf-8')))
-        elif 'xls' in filename:
-            df = pd.read_excel(io.BytesIO(decoded))
-        else:
-            return html.Div(['There was an error processing this file.'])
-    except Exception as e:
-        return html.Div(['There was an error processing this file.'])
-    return df, filename
+def fetch_collection_data(collection_name):
+    collection = db[collection_name]
+    df = pd.DataFrame(list(collection.find()))
+    return df
 
 # App layout
 app.layout = html.Div([
     html.H1("Data Visualization Tool", style={'text-align': 'center', 'margin-bottom': '20px'}),
 
-    # File upload
-    dcc.Upload(
-        id='upload-data',
-        children=html.Div(['Drag and Drop or ', html.A('Select Files')]),
-        style={
-            'width': '100%',
-            'height': '60px',
-            'lineHeight': '60px',
-            'borderWidth': '1px',
-            'borderStyle': 'dashed',
-            'borderRadius': '5px',
-            'textAlign': 'center',
-            'margin-bottom': '20px'
-        },
-        multiple=True
+    # MongoDB collection dropdown
+    html.Label("Select MongoDB Collection(s):"),
+    dcc.Dropdown(
+        id='collection-dropdown',
+        options=[{'label': col, 'value': col} for col in db.list_collection_names()],
+        style={'width': '50%'},
+        multi=True
     ),
+
     html.Div(id='output-file-upload'),
 
     # Layout adjustment
@@ -132,43 +119,31 @@ drilldown_level = 0
 drilldown_history = []
 
 @cache.memoize(timeout=TIMEOUT)
-def get_dataframe(contents, filename):
-    return parse_contents(contents, filename)
+def get_combined_dataframe(collections):
+    combined_df = pd.DataFrame()
+    for collection_name in collections:
+        df = fetch_collection_data(collection_name)
+        combined_df = pd.concat([combined_df, df], ignore_index=True)
+    return combined_df
 
-# Callback to handle file upload and update columns
+# Callback to handle collection selection and update columns
 @app.callback(
     [Output('output-file-upload', 'children'),
      Output('columns-checklist', 'options')],
-    [Input('upload-data', 'contents')],
-    [State('upload-data', 'filename')]
+    [Input('collection-dropdown', 'value')]
 )
-def update_output(list_of_contents, list_of_names):
+def update_output(selected_collections):
     global global_df
-    if list_of_contents is not None:
-        dfs = []
-        filenames = []
-        for contents, name in zip(list_of_contents, list_of_names):
-            parsed_result = get_dataframe(contents, name)
-            if isinstance(parsed_result, tuple):
-                df, filename = parsed_result
-                dfs.append(df)
-                filenames.append(filename)
-            else:
-                return parsed_result, []
-
-        # Combine dataframes if multiple files are uploaded
-        if len(dfs) > 1:
-            combined_df = pd.concat(dfs, ignore_index=True)
-        else:
-            combined_df = dfs[0]
+    if selected_collections:
+        df = get_combined_dataframe(selected_collections)
 
         # Update the global dataframe
-        global_df = combined_df
+        global_df = df
 
-        options = [{'label': col, 'value': col} for col in combined_df.columns]
-        return html.Div([html.H5(filenames)]), options
+        options = [{'label': col, 'value': col} for col in df.columns]
+        return html.Div([html.H5(', '.join(selected_collections))]), options
 
-    return html.Div("No files uploaded"), []
+    return html.Div("No collection selected"), []
 
 # Callback to update the fields for X-axis, Y-axis, legend, and X-axis drilldown selection
 @app.callback(
@@ -188,6 +163,10 @@ def update_fields(selected_columns):
     dropdown_options = [{'label': col, 'value': col} for col in selected_columns]
 
     return x_axis_options, y_axis_options, legend_options, dropdown_options
+
+# Function to check if column is numeric
+def is_numeric_column(df, col):
+    return pd.api.types.is_numeric_dtype(df[col])
 
 # Callback to update the graph and handle drill-down
 @app.callback(
@@ -246,6 +225,10 @@ def update_graph(x_col, y_cols, graph_type, legend_col, reset_n_clicks, drilldow
     return generate_graph(global_df, x_col, y_cols, graph_type, legend_col, show_legend)
 
 def generate_graph(dataframe, x_col, y_cols, graph_type, legend_col, show_legend):
+    if not is_numeric_column(dataframe, y_cols[0]):
+        dataframe['count'] = 1
+        y_cols = ['count']
+    
     if graph_type == 'bar':
         fig = px.bar(dataframe, x=x_col, y=y_cols, color=legend_col)
     elif graph_type == 'column':
