@@ -1,0 +1,210 @@
+
+1. http://127.0.0.1:5000/goals
+
+{
+  "Goals": {
+    "Basic Info": {
+      "Goal Name": "Increase Sales",
+      "Description": "Increase sales by 25% in the next quarter",
+      "Start Date": "2024-01-01",
+      "Target Completion Date": "2024-03-31",
+      "Category": "Sales",
+      "Success Criteria": "Achieve 25% increase in sales",
+      "Status": "In Progress",
+      "Level": "Company",
+      "Subtype": "Quarterly Goal"
+    },
+    "Measurements": {
+      "Measurement Name": "Sales Growth",
+      "Unit of Measure": "Percentage",
+      "Start Date": "2024-01-01",
+      "End Date": "2024-03-31",
+      "Comments": "Monitor monthly",
+      "Target Type": "Threshold",
+      "Target Value": "25",
+      "Actual Value": "15"
+    },
+    "Tasks": {
+      "Name": "Identify new markets",
+      "Type": "Research",
+      "Status": "Pending",
+      "Priority": "High",
+      "Comments": "Focus on emerging markets",
+      "Completion Percentage": "0",
+      "Start Date": "2024-01-10",
+      "Target Completion Date": "2024-01-31",
+      "Related Link": "http://example.com/market-research"
+    }
+  }
+}
+
+
+
+
+
+2.  http://127.0.0.1:5000/eligibility_profiles
+
+
+{
+  "Create Participant Profile": {
+    "Eligibility Profile Definition": {
+      "Name": "Standard Eligibility",
+      "Description": "Eligibility criteria for performance management",
+      "Assignment to Use": "Primary",
+      "Status": "Active",
+      "View Hierarchy": "Flat",
+      "Profile_Type": "Employee",
+      "Profile_Usage": "Performance Management"
+    },
+    "Eligibility Criteria": {
+      "Personal": {
+        "Gender": "Male",
+        "Disabled": "No",
+        "Postal Code Ranges": "All",
+        "Opted for Medicare": "No",
+        "Leave of Absence": "No",
+        "Termination Reason": "N/A",
+        "Qualification": "N/A",
+        "Competency": "All",
+        "Marital Status": "All",
+        "Religion": "All",
+        "Home_Location": "Global",
+        "Person_Type": "Employee",
+        "Service_Areas": "All",
+        "Uses_Tobacco": "No"
+      },
+      "Employment": {
+        "Assignment Status": "Active",
+        "Hourly or Salaried": "Both",
+        "Assignment Category": "All",
+        "Grade": "Senior",
+        "Job": "All",
+        "Position": "All",
+        "Payroll": "All",
+        "Salary Basis": "All",
+        "Department": "Development",
+        "Legal Entities": "All",
+        "Performance Rating": "All",
+        "Quartile in Range": "All",
+        "Work Location": "All",
+        "Range of Scheduled Hours": "All",
+        "People Manager": "Yes",
+        "Job Function": "All",
+        "Job Family": "All",
+        "Hire Date": "All",
+        "Probation Period": "N/A",
+        "Business unit": "IT"
+      },
+      "Derived Factors": {
+        "Age": "All",
+        "Length of Service": "All",
+        "Compensation": "All",
+        "Hours Worked": "All",
+        "Full-Time Equivalent": "All",
+        "Combined Age and Length of Service": "All"
+      },
+      "Other": {
+        "Benefit Groups": "All",
+        "Health Coverage Selected": "N/A",
+        "Participation in Another Plan": "N/A",
+        "Formula": "N/A",
+        "User-Defined Criteria": "N/A"
+      },
+      "Labor Relations": {
+        "Bargaining Unit": "N/A",
+        "Labor Union Member": "N/A",
+        "Union": "N/A",
+        "Collective Agreement": "N/A"
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. http://127.0.0.1:5000/review_periods
+
+{
+  "Create Review Period": {
+    "Review Period Name": "Mid-Year Review",
+    "Description": "Performance review for the first half of the year",
+    "Status": "Active",
+    "Period Start Date": "2024-01-01",
+    "Period End Date": "2024-06-30"
+  }
+}
+
+
+
+
+4. http://127.0.0.1:5000/include_exclude
+
+
+
+
+
+{
+  "goal_plan_name": "Annual Performance Plan",
+  "include": ["employeeId1", "employeeId2", "employeeId3"],
+  "exclude": ["employeeId4", "employeeId5"]
+}
+
+
+
+
+
+5.   http://127.0.0.1:5000/goal_plans
+
+
+
+{
+  "details": {
+    "Goal Plan Name": "Annual Performance Plan",
+    "Review Period": "2024",
+    "Description": "Yearly performance goals",
+    "Allow Updates to Goals By": "Employee, Manager",
+    "Actions for Workers and Managers on HR-Assigned Goals": "Review, Comment",
+    "Performance Document Types": "Annual Review",
+    "Evaluation Type": "360 Review",
+    "Goal Weights": "Weight by priority",
+    "Maximum Goals for This Goal Plan": "10"
+  },
+  "goals": [
+    {
+      "goal_name": "Increase Sales"
+    },
+    {
+      "goal_name": "Improve Customer Satisfaction"
+    }
+  ],
+  "eligibility_profiles": [
+    {
+      "Name": "Standard Eligibility 9"
+    }
+  ]
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 6.   POST http://localhost:5000/my_goals
+ 
+ 
+    {
+  "goal_plan_name": "Annual Performance Goals 2024"
+}
+
