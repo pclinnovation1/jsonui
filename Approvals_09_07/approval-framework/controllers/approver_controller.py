@@ -45,9 +45,9 @@ def setup_hierarchy():
     except Exception as e:
         return jsonify({'error': 'Invalid JSON data', 'message': str(e)}), 400
     
-    print("*" * 25)
-    print("data from mongodb: ", data)
-    print("*" * 25)
+    # print("*" * 25)
+    # print("data from mongodb: ", data)
+    # print("*" * 25)
 
     department = data['department']
 
@@ -76,12 +76,12 @@ def setup_hierarchy():
         lavel.add(i)
         i += 1
 
-    print('lavel : ', lavel)
+    #print('lavel : ', lavel)
 
     emails = []
     for manager in managers:
-        print('manager : ', manager)
-        print('lavel', lavel)
+        #print('manager : ', manager)
+        #print('lavel', lavel)
 
         if int(manager['lavels']) in lavel:
             emails.append(manager['email'])
@@ -99,9 +99,9 @@ def setup_hierarchy():
         'email': emails
     }
 
-    print("*" * 25)
-    print("hierarchy_data ", hierarchy_data)
-    print("*" * 25)
+    # print("*" * 25)
+    # print("hierarchy_data ", hierarchy_data)
+    # print("*" * 25)
 
     # Insert data into MongoDB
     result = db.approvers.insert_one(hierarchy_data)
