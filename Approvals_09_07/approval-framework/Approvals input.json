@@ -1,0 +1,130 @@
+http://127.0.0.1:5000/api/processes/
+
+{
+  "name": "Change Manager 11",
+  "description": "Process to change manager"
+}
+
+http://127.0.0.1:5000/api/approvers/group
+
+{
+  "group": "Product developer Team",
+  "allowEmptyGroups": true,
+  "email": ["piyushbirkh@gmail.com", "piyush@payrollcloudcorp.com"]
+}
+
+http://127.0.0.1:5000/api/approvers/hierarchy
+
+{
+  "department": "product",
+  "route_using": "4",
+  "approval_chain_of": "Requestor",
+  "start_with": "2",
+  "number_of_levels": 3,
+  "top_approver": "5"
+}
+
+
+http://127.0.0.1:5000/api/approvers/representative
+
+{
+  "representativeType": "HR",
+  "representativeOf": "Employee",
+  "email": ["shailesh@payrollcloudcorp.com"]
+}
+
+// Conditions
+
+Enter the number of conditions: 5
+Enter the process name: Change Manager
+
+Enter condition 1: experience >= 5
+Is condition 1 nested (N) or not nested (NN)?: NN
+Enter the condition type operator (or, all, in, na): na
+
+Enter condition 2: current_position == "Team Lead"
+Is condition 2 nested (N) or not nested (NN)?: NN
+Enter the condition type operator (or, all, in, na): na
+
+Enter condition 2: current_position == "Team Lead"
+Is condition 2 nested (N) or not nested (NN)?: NN
+Enter the condition type operator (or, all, in, na): na
+
+Enter condition 3: department in ["HR", "Finance", "IT"]
+Is condition 3 nested (N) or not nested (NN)?: N
+Enter the condition type operator (or, all, in, na): in
+
+Enter condition 4: manager_approval == true AND department == "IT"
+Is condition 4 nested (N) or not nested (NN)?: N
+Enter the condition type operator (or, all, in, na): all
+
+Enter condition 5: promotion_due == true OR department == "HR"
+Is condition 5 nested (N) or not nested (NN)?: N
+Enter the condition type operator (or, all, in, na): or
+
+
+
+
+http://127.0.0.1:5000/api/approval_rules
+
+{
+  "processName": "Change Manager 11",
+  "conditions": [
+    {
+      "conditionId": "condition[0]",
+      "approvers": [
+        "669e2a640f3dc88495de4f14",
+        "669e2b1302e33be8efdfa363"
+      ]
+    },
+    {
+      "conditionId": "condition[1]",
+      "approvers": [
+        "669e2a640f3dc88495de4f14",
+        "669e28e1d09fac9dcdeff1ae"
+      ]
+    },
+    {
+      "conditionId": "condition[2]",
+      "approvers": [
+        "669e2a640f3dc88495de4f14",
+        "669e2b1302e33be8efdfa364"
+      ]
+    },
+    {
+      "conditionId": "condition[3]",
+      "approvers": [
+        "669e2a640f3dc88495de4f14",
+        "669e28e1d09fac9dcdeff1ae"
+      ]
+    },
+    {
+      "conditionId": "condition[4]",
+      "approvers": [
+        "669e2b1302e33be8efdfa364",
+        "669e2a640f3dc88495de4f14"
+      ]
+    }
+  ]
+}
+
+
+
+
+http://127.0.0.1:5000/api/transactions
+
+{
+  "processName": "Change Manager 11",
+  "transaction_fields": {
+    "value": ["6", "Team Lead", "IT"]
+  },
+  "fieldType": ["experience", "current_position", "department"]
+}
+
+
+http://127.0.0.1:5000/api/transactions/reminders
+
+{
+  "processName": "Change Manager 11"
+}
+
