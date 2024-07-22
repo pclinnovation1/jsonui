@@ -1,0 +1,220 @@
+
+1.  http://127.0.0.1:5000/goals
+
+{
+    "goals": {
+        "basic_info": {
+            "goal_name": "Increase Sales",
+            "description": "Increase sales by 25% in the next quarter",
+            "start_date": "2024-01-01",
+            "target_completion_date": "2024-03-31",
+            "category": "Sales",
+            "success_criteria": "Achieve 25% increase in sales",
+            "status": "In Progress",
+            "level": "Company",
+            "subtype": "Quarterly Goal"
+        },
+        "measurements": {
+            "measurement_name": "Sales Growth",
+            "unit_of_measure": "Percentage",
+            "start_date": "2024-01-01",
+            "end_date": "2024-03-31",
+            "comments": "Monitor monthly",
+            "target_type": "Threshold",
+            "target_value": "25",
+            "actual_value": "15"
+        },
+        "tasks": {
+            "name": "Identify new markets",
+            "type": "Research",
+            "status": "Pending",
+            "priority": "High",
+            "comments": "Focus on emerging markets",
+            "completion_percentage": "0",
+            "start_date": "2024-01-10",
+            "target_completion_date": "2024-01-31",
+            "related_link": "http://example.com/market-research"
+        },
+        "library_info": {
+            "status": "Published",
+            "type": "Public",
+            "available_to": "All employees",
+            "legal_employer": "ABC Corp",
+            "business_unit": "Sales",
+            "department": "Sales Department",
+            "external_id": "GOAL12345"
+        },
+        "eligibility_criteria": {
+            "personal": {
+                "gender": "All",
+                "currency": "GBP",
+                "disabled": "No",
+                "uses_tobacco": "No",
+                "grade": "Junior"
+            },
+            "employment": {
+                "salary_basis": "Hourly",
+                "department": "Development",
+                "business_unit": "Marketing"
+            }
+        }
+    }
+}
+
+
+
+
+
+2.  http://127.0.0.1:5000/eligibility_profiles
+
+
+{
+  "create_participant_profile": {
+    "eligibility_profile_definition": {
+      "name": "Standard Eligibility",
+      "description": "Eligibility criteria for performance management",
+      "assignment_to_use": "Primary",
+      "status": "Active",
+      "view_hierarchy": "Flat",
+      "profile_type": "Employee",
+      "profile_usage": "Performance Management"
+    },
+    "eligibility_criteria": {
+      "personal": {
+        "gender": "Male",
+        "disabled": "No",
+        "postal_code_ranges": "All",
+        "opted_for_medicare": "No",
+        "leave_of_absence": "No",
+        "termination_reason": "N/A",
+        "qualification": "N/A",
+        "competency": "All",
+        "marital_status": "All",
+        "religion": "All",
+        "home_location": "Global",
+        "person_type": "Employee",
+        "service_areas": "All",
+        "uses_tobacco": "No"
+      },
+      "employment": {
+        "assignment_status": "Active",
+        "hourly_or_salaried": "Both",
+        "assignment_category": "All",
+        "grade": "Senior",
+        "job": "All",
+        "position": "All",
+        "payroll": "All",
+        "salary_basis": "All",
+        "department": "Development",
+        "legal_entities": "All",
+        "performance_rating": "All",
+        "quartile_in_range": "All",
+        "work_location": "All",
+        "range_of_scheduled_hours": "All",
+        "people_manager": "Yes",
+        "job_function": "All",
+        "job_family": "All",
+        "hire_date": "All",
+        "probation_period": "N/A",
+        "business_unit": "IT"
+      },
+      "derived_factors": {
+        "age": "All",
+        "length_of_service": "All",
+        "compensation": "All",
+        "hours_worked": "All",
+        "full_time_equivalent": "All",
+        "combined_age_and_length_of_service": "All"
+      },
+      "other": {
+        "benefit_groups": "All",
+        "health_coverage_selected": "N/A",
+        "participation_in_another_plan": "N/A",
+        "formula": "N/A",
+        "user_defined_criteria": "N/A"
+      },
+      "labor_relations": {
+        "bargaining_unit": "N/A",
+        "labor_union_member": "N/A",
+        "union": "N/A",
+        "collective_agreement": "N/A"
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+3. http://127.0.0.1:5000/review_periods
+
+{
+  "create_review_period": {
+    "review_period_name": "Mid-Year Review",
+    "description": "Performance review for the first half of the year",
+    "status": "Active",
+    "period_start_date": "2024-01-01",
+    "period_end_date": "2024-06-30"
+  }
+}
+
+
+
+4.   http://127.0.0.1:5000/goal_plans
+
+
+
+{
+  "details": {
+      "goal_plan_name": "Annual Performance Plan",
+      "review_period": "2024",
+      "description": "Yearly performance goals",
+      "allow_updates_to_goals_by": "Employee, Manager",
+      "actions_for_workers_and_managers_on_hr_assigned_goals": "Review, Comment",
+      "performance_document_types": "Annual Review",
+      "evaluation_type": "360 Review",
+      "goal_weights": "Weight by priority",
+      "maximum_goals_for_this_goal_plan": "10"
+  },
+  "goals": [
+      {
+          "goal_name": "Increase Sales"
+      },
+      {
+          "goal_name": "Improve Customer Satisfaction"
+      }
+  ],
+  "eligibility_profiles": [
+      {
+          "name": "Eligibility profile 12"
+      },
+      {
+          "name": "Eligibility profile 14"
+      },
+      {
+          "name": "Eligibility profile 19"
+      },
+      {
+          "name": "Eligibility profile 18"
+      }
+  ],
+  "included_workers": ["Joe Leonard", "Grant Moore","Lisa Rivas"],
+  "excluded_workers": ["Brian Pearson", "Kenneth Green"]
+}
+
+
+ 
+ 
+ 
+ 
+ 5.   POST http://localhost:5000/my_goals
+ 
+ 
+    {
+  "goal_plan_name": "Annual Performance Goals 1"
+}
+
