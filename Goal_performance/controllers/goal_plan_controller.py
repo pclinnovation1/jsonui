@@ -1,7 +1,8 @@
 
+
 from flask import Blueprint, request, jsonify
 from pymongo import MongoClient
-from bson.objectid import ObjectId
+from datetime import datetime
 import config
 
 goal_plan_bp = Blueprint('goal_plan_bp', __name__)
@@ -12,13 +13,12 @@ db = client[config.DATABASE_NAME]
 goal_plan_collection = db[config.GOAL_PLAN_COLLECTION_NAME]
 goals_collection = db[config.GOALS_COLLECTION_NAME]
 eligibility_profile_collection = db[config.ELIGIBILITY_PROFILES_COLLECTION_NAME]
-employee_collection = db['s_employeedetails_2']  # Updated to the correct collection
-include_exclude_collection = db[config.INCLUDE_EXCLUDE_COLLECTION_NAME]
+employee_collection = db['s_employeedetails_2']
 
-# Helper function to convert keys to lowercase
+# Helper function to convert keys to lowercase and replace spaces with underscores
 def lowercase_keys(data):
     if isinstance(data, dict):
-        return {k.lower(): lowercase_keys(v) for k, v in data.items()}
+        return {k.lower().replace(' ', '_'): lowercase_keys(v) for k, v in data.items()}
     elif isinstance(data, list):
         return [lowercase_keys(item) for item in data]
     else:
@@ -31,14 +31,12 @@ def get_matching_employees(eligibility_profiles):
         criteria = profile["create_participant_profile"]["eligibility_criteria"]
         query = {}
 
-        # Construct query based on non-null criteria fields in personal section
         personal_criteria = criteria.get("personal", {})
         for key, value in personal_criteria.items():
             if value and value.lower() not in ["n/a", "all", "N/A", "All"]:
                 field_name = key.replace(' ', '_')
                 query[field_name] = value
 
-        # Construct query based on non-null criteria fields in employment section
         employment_criteria = criteria.get("employment", {})
         for key, value in employment_criteria.items():
             if value and value.lower() not in ["n/a", "all", "N/A", "All"]:
@@ -54,7 +52,6 @@ def get_matching_employees(eligibility_profiles):
 
 # Function to validate employee full names
 def validate_employee_full_names(employee_names):
-    # Retrieve all valid employee full names from the collection
     valid_employees = set(
         f"{employee.get('first_name', '')} {employee.get('last_name', '')}".strip()
         for employee in employee_collection.find({}, {"first_name": 1, "last_name": 1})
@@ -65,51 +62,45 @@ def validate_employee_full_names(employee_names):
 @goal_plan_bp.route('/', methods=['POST'])
 def create_goal_plan():
     data = lowercase_keys(request.json)
+    print(f"Received data for goal plan creation: {data}")
 
-    # Extract the details from the input
     goal_plan_details = data.get("details", {})
     goals = data.get("goals", [])
     eligibility_profile_names = [profile["name"] for profile in data.get("eligibility_profiles", [])]
-    goal_plan_name = goal_plan_details.get("goal_plan_name", "")
-    goal_plan_name = goal_plan_details["goal plan name"]
+    included_workers = data.get("included_workers", [])
+    excluded_workers = data.get("excluded_workers", [])
 
-    # Retrieve corresponding eligibility profiles from the eligibility profile collection by name
+    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    updated_by = goal_plan_details.get("updated_by", "Unknown")
+    goal_plan_details["updated_date"] = current_time
+    goal_plan_details["updated_by"] = updated_by
+
     eligibility_profiles = []
-    
-    matched_employees = {}  # Change to dictionary to map profile names to matched employees
+    matched_employees = {}
 
     for profile_name in eligibility_profile_names:
+        print(f"Fetching eligibility profile: {profile_name}")
         profile_data = eligibility_profile_collection.find_one({"create_participant_profile.eligibility_profile_definition.name": profile_name})
         if profile_data:
             profile_data['_id'] = str(profile_data['_id'])
             eligibility_profiles.append(profile_data)
             matched_employees[profile_name] = get_matching_employees([profile_data])
+        else:
+            print(f"Profile not found: {profile_name}")
 
-    # Retrieve include/exclude information based on goal plan name
-    include_exclude = include_exclude_collection.find_one({'goal_plan_name': goal_plan_name})
-
-    include_names = []
-    exclude_names = []
-
-    if include_exclude:
-        include_names = include_exclude.get("include", [])
-        exclude_names = include_exclude.get("exclude", [])
-
-    included_workers = validate_employee_full_names(include_names)
-    excluded_workers = validate_employee_full_names(exclude_names)
-
-    # Remove excluded employees from matched employees
+    # Combine matched employees with included workers, ensuring no duplicates
+    combined_workers = set(included_workers)
     for profile_name in matched_employees:
-        matched_employees[profile_name] = [emp for emp in matched_employees[profile_name] if emp not in excluded_workers]
+        combined_workers.update(matched_employees[profile_name])
+    combined_workers.difference_update(excluded_workers)
 
-    # Create the goal plan document without include/exclude fields
     goal_plan_document = {
         "details": goal_plan_details,
-        "goals": goals,  # Directly insert the provided goals
+        "goals": goals,
         "eligibility_profiles": [
             {
                 "name": ep["create_participant_profile"]["eligibility_profile_definition"]["name"],
-                "employees_name": list(matched_employees[ep["create_participant_profile"]["eligibility_profile_definition"]["name"]])
+                "employees_name": list(combined_workers)  # Include combined workers
             }
             for ep in eligibility_profiles
         ],
@@ -117,41 +108,62 @@ def create_goal_plan():
         "excluded_workers": excluded_workers
     }
 
-    # Insert the goal plan into MongoDB
+    print(f"Inserting goal plan document: {goal_plan_document}")
     goal_plan_id = goal_plan_collection.insert_one(goal_plan_document).inserted_id
-    new_goal_plan = goal_plan_collection.find_one({'_id': ObjectId(goal_plan_id)})
+    new_goal_plan = goal_plan_collection.find_one({'_id': goal_plan_id})
     new_goal_plan['_id'] = str(new_goal_plan['_id'])
 
-    # Return the newly created goal plan
     return jsonify(new_goal_plan), 201
 
 @goal_plan_bp.route('/', methods=['GET'])
 def get_goal_plans():
-    # Retrieve all goal plans from the database
     goal_plans = list(goal_plan_collection.find())
     for goal_plan in goal_plans:
         goal_plan['_id'] = str(goal_plan['_id'])
     return jsonify(goal_plans), 200
 
-@goal_plan_bp.route('/<goal_plan_id>', methods=['GET'])
-def get_goal_plan(goal_plan_id):
-    # Retrieve a specific goal plan by ID
-    goal_plan = goal_plan_collection.find_one({'_id': ObjectId(goal_plan_id)})
+@goal_plan_bp.route('/<goal_plan_name>', methods=['GET'])
+def get_goal_plan(goal_plan_name):
+    print(f"Fetching goal plan: {goal_plan_name}")
+    goal_plan = goal_plan_collection.find_one({'details.goal_plan_name': goal_plan_name})
     if goal_plan:
         goal_plan['_id'] = str(goal_plan['_id'])
         return jsonify(goal_plan), 200
     else:
+        print(f"Goal plan not found: {goal_plan_name}")
         return jsonify({'error': 'Goal plan not found'}), 404
 
-@goal_plan_bp.route('/<goal_plan_id>', methods=['PUT'])
-def update_goal_plan(goal_plan_id):
+@goal_plan_bp.route('/<goal_plan_name>', methods=['PUT'])
+def update_goal_plan(goal_plan_name):
     data = lowercase_keys(request.json)
-    result = goal_plan_collection.update_one({'_id': ObjectId(goal_plan_id)}, {'$set': data})
+    print(f"Received data for updating goal plan: {data}")
+
+    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    updated_by = data.get("details", {}).get("updated_by", "Unknown")
+    data["details"]["updated_date"] = current_time
+    data["details"]["updated_by"] = updated_by
+
+    print(f"Updating goal plan: {goal_plan_name}")
+    result = goal_plan_collection.update_one({'details.goal_plan_name': goal_plan_name}, {'$set': data})
     if result.matched_count:
-        updated_goal_plan = goal_plan_collection.find_one({'_id': ObjectId(goal_plan_id)})
+        updated_goal_plan = goal_plan_collection.find_one({'details.goal_plan_name': goal_plan_name})
         updated_goal_plan['_id'] = str(updated_goal_plan['_id'])
         return jsonify(updated_goal_plan), 200
     else:
+        print(f"Goal plan not found for update: {goal_plan_name}")
         return jsonify({'error': 'Goal plan not found'}), 404
+
+@goal_plan_bp.route('/<goal_plan_name>', methods=['DELETE'])
+def delete_goal_plan(goal_plan_name):
+    print(f"Deleting goal plan: {goal_plan_name}")
+    result = goal_plan_collection.delete_one({'details.goal_plan_name': goal_plan_name})
+    if result.deleted_count:
+        return jsonify({'message': 'Goal plan deleted successfully'}), 200
+    else:
+        print(f"Goal plan not found for deletion: {goal_plan_name}")
+        return jsonify({'error': 'Goal plan not found'}), 404
+
+
+
 
 
