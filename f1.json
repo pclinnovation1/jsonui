@@ -1,0 +1,246 @@
+{
+    "weekend_days": [5, 6],
+    "nic_tax_employee": {
+        "A_F_H_M_N_V": {
+            "categories": ["A", "F", "H", "M", "N", "V"],
+            "threshold1": 1048,
+            "rate1": 0,
+            "threshold2": 4189,
+            "rate2": 0.08,
+            "rate3": 0.02
+        },
+        "B_E_I": {
+            "categories": ["B", "E", "I"],
+            "threshold1": 1048,
+            "rate1": 0,
+            "threshold2": 4189,
+            "rate2": 0.0185,
+            "rate3": 0.02
+        },
+        "D_J_L_Z": {
+            "categories": ["D", "J", "L", "Z"],
+            "threshold1": 1048,
+            "rate1": 0,
+            "threshold2": 4189,
+            "rate2": 0.02,
+            "rate3": 0.02
+        },
+        "C_K_S": {
+            "categories": ["C", "K", "S"],
+            "rate": 0
+        }
+    },
+    "nic_tax_employer": {
+        "A_B_C_J": {
+            "categories": ["A", "B", "C", "J"],
+            "threshold": 758,
+            "rate": 0.138
+        },
+        "F_I_L_S_D_E": {
+            "categories": ["F", "I", "L", "S", "D", "E"],
+            "threshold": 2083,
+            "rate": 0.138
+        },
+        "H_M_V_Z": {
+            "categories": ["H", "M", "V", "Z"],
+            "threshold": 4189,
+            "rate": 0.138
+        }
+    },
+    "pension": {
+        "employee": {
+            "name": "Employee Pension Plan",
+            "pension_contribution_rate": 0.05,
+            "minimum_limit": 0,
+            "maximum_limit": 0
+        },
+        "employer": {
+            "name": "Employer Pension Plan",
+            "pension_contribution_rate": 0.03,
+            "minimum_limit": 0,
+            "maximum_limit": 0
+        }
+    },
+    "student_loan": {
+        "thresholds": {
+            "Plan 1": 1834,
+            "Plan 2": 2274,
+            "Plan 4": 2305,
+            "Plan 5": 2083,
+            "Postgraduate loan": 1750
+        },
+        "rates": {
+            "Plan 1": 0.09,
+            "Plan 2": 0.09,
+            "Plan 4": 0.09,
+            "Plan 5": 0.09,
+            "Postgraduate loan": 0.06
+        }
+    },
+    "tax_normal": {
+        "slabs": [
+            {
+                "threshold": 1048,
+                "rate": 0
+            },
+            {
+                "threshold": 4189,
+                "rate": 0.2
+            },
+            {
+                "threshold": 12500,
+                "rate": 0.4
+            },
+            {
+                "threshold": "inf",
+                "rate": 0.45
+            }
+        ]
+    },
+    "tax_normal_with_codes": {
+        "S": [
+            {
+                "threshold": 1228,
+                "rate": 0.19
+            },
+            {
+                "threshold": 2141,
+                "rate": 0.2
+            },
+            {
+                "threshold": 3639,
+                "rate": 0.21
+            },
+            {
+                "threshold": 10429,
+                "rate": 0.42
+            },
+            {
+                "threshold": "inf",
+                "rate": 0.47
+            }
+        ],
+        "L": [
+            {
+                "threshold": 4189,
+                "rate": 0.2
+            },
+            {
+                "threshold": 12500,
+                "rate": 0.4
+            },
+            {
+                "threshold": "inf",
+                "rate": 0.45
+            }
+        ]
+    },
+    "special_tax_codes": {
+        "BR": 0.2,
+        "D0": 0.4,
+        "D1": 0.45,
+        "K": 0.2
+    },
+    "tax_not_normal": {
+        "slabs": [
+            {
+                "threshold": 4189,
+                "rate": 0.2
+            },
+            {
+                "threshold": 12500,
+                "rate": 0.4
+            },
+            {
+                "threshold": "inf",
+                "rate": 0.45
+            }
+        ]
+    },
+    "monthly_thresholds": {
+        "S": [
+            {
+                "threshold": 1228,
+                "rate": 0.19
+            },
+            {
+                "threshold": 2141,
+                "rate": 0.2
+            },
+            {
+                "threshold": 3639,
+                "rate": 0.21
+            },
+            {
+                "threshold": 10429,
+                "rate": 0.42
+            },
+            {
+                "threshold": "inf",
+                "rate": 0.47
+            }
+        ],
+        "general": [
+            {
+                "base_threshold": 4170.486,
+                "subtraction_value": 1027.92,
+                "rate": 0.2
+            },
+            {
+                "base_threshold": 12500,
+                "subtraction_value": 4170.486,
+                "rate": 0.4
+            },
+            {
+                "threshold": "inf",
+                "rate": 0.45
+            }
+        ]
+    },
+    "salary_period": {
+        "total_days_in_period": 30
+    },
+    "UK_PS_SAP_SMP_FINAL_NEW": {
+            "thresholds": {
+                "standard_rate_2019": 172.48,
+                "standard_rate_2024": 184.03,
+                "weeks_threshold": 6
+            },
+            "calculation_factors": {
+                "gross_pay_multiplier": 0.9,
+                "weeks_in_year": 52,
+                "months_in_year": 12
+         }
+    },
+    "UK_PS_SPP_FINAL": {
+        "thresholds": {
+            "standard_rate": 172.48,
+            "new_standard_rate_2024": 184.03
+        },
+        "calculation_factors": {
+            "gross_pay_multiplier": 0.9,
+            "weeks_in_year": 52,
+            "months_in_year": 12
+        }
+    },    
+    "UK_PS_SSP_FINAL": {
+        "calculation_factors": {
+            "ssp_rate": 109.4,
+            "workdays_in_week": 5
+        }
+    },
+    "UK_PS_SSP_FINAL_2024": {
+        "calculation_factors": {
+            "ssp_rate": 116.75,
+            "workdays_in_week": 5,
+            "weekend_days": [5, 6] 
+        }
+    },
+    "general": {
+        "days_in_year": 260
+    }
+    
+    
+
+  }
+  

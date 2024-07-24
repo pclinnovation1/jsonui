@@ -9,7 +9,7 @@ setup_routes(app)
 load_dotenv()
 
 # Load the configuration file
-with open('chatapp/test/operations_config.json', 'r') as config_file:
+with open('/Users/vishalmeena/Downloads/Code_wrap_Latest 4 copy/test/operations_config.json', 'r') as config_file:
     config = json.load(config_file)
 
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
