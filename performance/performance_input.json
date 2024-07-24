@@ -1,0 +1,90 @@
+http://127.0.0.1:5000/add_role
+
+{
+  "name": "Employee",
+  "description": "Performs assigned tasks and duties.",
+  "role_type": "Staff",
+  "allow_role_to_view_worker_manager_and_participant_ratings_comments_and_questionnaires": "No",
+  "status": "Active",
+  "in_use": "Yes",
+  "from_date": "2023-03-01T00:00:00.000Z",
+  "to_date": "2024-03-01T00:00:00.000Z"
+}
+
+http://127.0.0.1:5000/add_check_in_template
+
+{
+  "template_type": "Type A",
+  "name": "Template A",
+  "comments": "Comments for Template A",
+  "status": "Active",
+  "from_date": "2023-01-01T00:00:00.000Z",
+  "to_date": "2024-01-01T00:00:00.000Z",
+  "review_period": "Annual",
+  "include_in_performance_document": "Yes",
+  "check_in_content": ["Content A"],
+  "eligibility_profiles": ["Standard Eligibility 1", "Standard Eligibility 2"]
+}
+
+
+
+http://127.0.0.1:5000/add_performance_template_section
+
+
+{
+  "name": "Performance Section Name",
+  "description": "Description of the section",
+  "comments": "comment",
+  "from_date": "2024-07-24T00:00:00.000Z",
+  "to_date": "2025-07-24T00:00:00.000Z",
+  "status": "Active",
+  "section_processing": {
+    "section_type": "Profile Content",
+    "competencies_section_name": "Competencies Section Name",
+    "ratings": {
+      "section_rating_model": "Rating Model Name",
+      "rating_calculations": {
+        "calculation_rule_for_section": "Rule Name",
+        "decimal_places": 2,
+        "mapping_metric": "Metric Name",
+        "fast_formula_rule": "Fast Formula Rule",
+        "decimal_rounding_rule": "Rounding Rule",
+        "mapping_method": "Mapping Method"
+      },
+      "enable_manual_section_rating": true,
+      "require_manager_justification_if_manual_and_calculated_ratings_are_different": false
+    },
+    "comments": {
+      "enable_section_comments": true
+    },
+    "weighting": {
+      "weight_section": true,
+      "section_weight": 50,
+      "section_minimum_weight": 10
+    }
+  },
+  "item_processing": {
+    "enable_items": true,
+    "ratings_and_calculations": {
+      "rate_items": true,
+      "rating_type": "Rating Type",
+      "use_section_rating_model_for_performance_rating": true,
+      "performance_rating_model": "Performance Rating Model",
+      "item_calculation": "Item Calculation"
+    },
+    "comments": {
+      "enable_item_comments": true
+    },
+    "properties": {
+      "minimum_weight": true,
+      "weight": true,
+      "required": true
+    }
+  },
+  "section_content": {
+    "populate_with_competencies_using_profile": true,
+    "profile_type": "Profile Type",
+    "use_specific_content_items": true,
+    "content_items": ["Item 1", "Item 2"]
+  }
+}
