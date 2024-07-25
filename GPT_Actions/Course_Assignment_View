@@ -1,0 +1,64 @@
+/Course/Assigned/view:
+    post:
+      operationId: viewCourseAssignments
+      summary: View course assignments based on a query or view all if no query is specified.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  description: Query to filter course assignments (optional).
+                  properties:
+                    person_name:
+                      type: string
+                      description: Name of the person
+                  additionalProperties: false
+      responses:
+        "200":
+          description: List of course assignments based on the query or all if no query is specified.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    course_name:
+                      type: string
+                      description: Name of the course
+                    person_name:
+                      type: string
+                      description: Name of the person
+                    date_assignment:
+                      type: string
+                      format: date
+                      description: Date of assignment
+                    due_date:
+                      type: string
+                      format: date
+                      description: Due date of the assignment
+                    completion_date:
+                      type: string
+                      format: date
+                      description: Completion date of the assignment
+                    timestamp:
+                      type: string
+                      format: date-time
+                      description: Timestamp of the record
+                    assignment_type:
+                      type: string
+                      description: Type of assignment
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid query in request body.
