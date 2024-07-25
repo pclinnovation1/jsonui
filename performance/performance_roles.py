@@ -9,7 +9,7 @@ db = client['PCL_Interns']
 collection = db['P_PerformanceRoles']
 
 @app.route('/add_role', methods=['POST'])
-def add_role():
+def add_performance_role():
     data = request.get_json()
 
     # Insert new role into the database
@@ -28,7 +28,7 @@ def add_role():
     return jsonify({"msg": "Role added successfully", "id": str(result.inserted_id)}), 201
 
 @app.route('/update_role', methods=['POST'])
-def update_role():
+def update_performance_role():
     data = request.get_json()
 
     # Update role in the database
@@ -49,7 +49,7 @@ def update_role():
         return jsonify({"msg": "Role not found"}), 404
 
 @app.route('/get_roles', methods=['POST'])
-def get_roles():
+def get_performance_roles():
     data = request.get_json()
 
     query = {}

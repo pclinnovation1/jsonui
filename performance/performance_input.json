@@ -59,8 +59,8 @@ http://127.0.0.1:5000/add_performance_template_section
     },
     "weighting": {
       "weight_section": true,
-      "section_weight": 50,
-      "section_minimum_weight": 10
+      "section_weight": 10,
+      "section_minimum_weight": 5
     }
   },
   "item_processing": {
@@ -88,3 +88,48 @@ http://127.0.0.1:5000/add_performance_template_section
     "content_items": ["Item 1", "Item 2"]
   }
 }
+
+
+http://127.0.0.1:5000/add_questionnaire
+
+{
+  "questionnaire_template_id": "QT002",
+  "name": "Employee Engagement Survey",
+  "description": "A survey to measure employee engagement levels.",
+  "creation_date": "2023-06-01T00:00:00.000Z",
+  "questions": [
+      {
+          "question_name": "Job Satisfaction",
+          "question_description": "How satisfied are you with your current job?"
+      },
+      {
+          "question_name": "Work-Life Balance",
+          "question_description": "How do you rate your work-life balance?"
+      }
+  ]
+}
+
+
+
+http://127.0.0.1:5000/send_feedback_request
+
+{
+  "request_name": "Employee Engagement Feedback",
+  "template_name": "Template A",
+  "sender_name": "John Doe",
+  "receiver_names": ["Jane Smith", "Alice Johnson"]
+}
+
+
+
+http://127.0.0.1:5000/update_feedback_request
+
+{
+  "request_name": "Employee Engagement Feedback",
+  "receiver_name": "Jane Smith",
+  "question_name": "Question A1",
+  "response": "This is the response for Question A1."
+}
+
+
+
