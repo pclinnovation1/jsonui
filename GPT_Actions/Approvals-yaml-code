@@ -1,623 +1,836 @@
 openapi: 3.1.0
 info:
-  title: Learning Catalog Management API
-  description: API to manage learning communities within an organization.
+  title: Learning Journey Management API
+  description: API for managing learning journeys.
   version: 1.0.0
 servers:
   - url: https://app1.fusionobjects.com
-    description: Main API server for communities management
-paths:
-  openapi: 3.1.0
+    description: Main API server for learning journey management
 
 paths:
-  /processes/create:
-   post:
-    operationId: createProcess
-    summary: Creates a new process to the catalog.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              name:
-                type: string
-                description: The name of the process.
-                example: "Change Manager 11"
-              description:
-                type: string
-                description: The description of the process.
-                example: "Process to change manager"
-    responses:
-      "200":
-        description: Process created successfully.
+  /add_user_to_journey:
+    post:
+      operationId: addUserToJourney
+      summary: Add a user to a specified learning journey.
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                message:
+                name:
                   type: string
-                  example: Process created successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-  /processes/view:
-   post:
-    operationId: viewProcesses
-    summary: View process details from the catalog.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              query:
-                type: object
-    responses:
-      "200":
-        description: Processes retrieved successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                items:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      name:
-                        type: string
-                        description: The name of the process.
-                      description:
-                        type: string
-                        description: The description of the process.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-      "404":
-        description: Process not found.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Process not found.
-
-
-  /approvers/group/create:
-   post:
-    operationId: addApproversGroup
-    summary: Adds a new approvers group.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              approver_name:
-                type: string
-                description: The name of the approver.
-                example: "Demo group"
-              group:
-                type: string
-                description: The name of the approvers group.
-                example: "Product developer Team"
-              allow_empty_groups:
-                type: boolean
-                description: A flag indicating whether empty groups are allowed.
-                example: true
-              approver_member:
-                type: array
-                items:
-                  type: string
-                description: A list of person names for the approvers group.
-                example:
-                  - "Courtney Allison"
-                  - "Cindy Wright"
-    responses:
-      "200":
-        description: Approvers group added successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Approvers group added successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-  /approvers/hierarchy/create:
-   post:
-    operationId: addApproversHierarchy
-    summary: Adds a new approvers hierarchy.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              approver_name:
-                type: string
-                description: The name of the approver.
-              department:
-                type: string
-                description: The name of the department.
-              route_using:
-                type: integer
-                description: The method or criteria used for routing.
-              approval_chain_of:
-                type: string
-                description: The entity for which the approval chain is defined.
-              start_with:
-                type: integer
-                description: The starting point of the approval chain.
-              number_of_levels:
-                type: integer
-                description: The number of levels in the approval chain.
-              top_approver:
-                type: integer
-                description: The top-level approver number in the hierarchy.
-    responses:
-      "200":
-        description: Approvers hierarchy added successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Approvers hierarchy added successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-  /approvers/representative/create:
-   post:
-    operationId: createApproverRepresentative
-    summary: Creates a new approver representative.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              approver_name:
-                type: string
-                description: The name of the approver.
-              representative_type:
-                type: string
-                description: The type of representative.
-                example: "HR"
-              representative_of:
-                type: string
-                description: The entity the representative is associated with.
-                example: "Employee"
-              approver_member:
-                type: array
-                items:
-                  type: string
-                description: The list of approvers' name.
-                example: "John Doe"
-    responses:
-      "200":
-        description: Approver representative created successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Approver representative created successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-  /approvers/view:
-   post:
-    operationId: viewApprovers
-    summary: View approvers details from the catalog.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              query:
-                type: object
-    responses:
-      "200":
-        description: Approver details retrieved successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                items:
-                  type: array
-                  items:
-                    type: object
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-      "404":
-        description: Approver not found.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Approver not found.
-
-  /conditions/create:
-   post:
-    operationId: createConditions
-    summary: Create conditions for a specified process.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              process_name:
-                type: string
-                description: The name of the process for which the conditions are being created.
-                example: "Course Approval"
-              conditions:
-                type: array
-                items:
+                  description: The title of the learning journey.
+                  example: "Advanced Data Science"
+                users:
                   type: object
                   properties:
-                    condition:
+                    person_name:
                       type: string
-                      description: The condition to be evaluated.
-                    condition_type:
+                      description: Name of the user.
+                      example: "John Doe"
+                    start_date:
                       type: string
-                      description: The type of the condition.
-                      enum:
-                        - 'all'
-                        - 'na'
-                        - 'or'
-                        - 'in'
-                    condition_operator:
+                      format: date
+                      description: Start date of the journey.
+                      example: "2024-01-01"
+                    end_date:
                       type: string
-                      description: The operator for the condition.
-                      enum:
-                        - '<'
-                        - '>'
-                        - '<='
-                        - '>='
-                        - 'between'
-                        - '=='
-                        - '!='
-                        - 'in'
-    responses:
-      "200":
-        description: Conditions created successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Conditions created successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-
-  /conditions/view:
-   post:
-    operationId: viewConditions
-    summary: View conditions for a specified process.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              query:
-                type: object
-    responses:
-      "200":
-        description: Conditions retrieved successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                conditions:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      process_name:
-                        type: string
-                        description: The name of the process.
-                      condition:
-                        type: string
-                        description: The condition to be evaluated.
-                      condition_type:
-                        type: string
-                        description: The type of the condition.
-                      condition_operator:
-                        type: string
-                        description: The operator for the condition.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-      "404":
-        description: Conditions not found.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Conditions not found.
-
-  /approval_rules/create:
-   post:
-    operationId: addApprovalRules
-    summary: Add approval rules for a process.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              process_name:
-                type: string
-                description: The name of the process for which approval rules are being added.
-                example: "Change Manager 11"
-              conditions:
-                type: array
-                description: List of conditions with their respective approvers.
-                items:
-                  type: object
-                  properties:
-                    condition_id:
-                      type: integer
-                      description: The ID of the condition(always starts from 1).
-                      example: "1"
-                    approvers:
-                      type: array
-                      description: List of approver names for the condition.
-                      items:
-                        type: string
-                      example: ["John Doe", "Demo representative"]
-    responses:
-      "200":
-        description: Approval rules added successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Approval rules added successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-
-  /transactions/create:
-   post:
-    operationId: addTransaction
-    summary: Add a transaction for a specified process.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              process_name:
-                type: string
-                description: The name of the process for which the transaction is being added.
-                example: "Change Manager 11"
-              transaction_fields:
+                      format: date
+                      description: End date of the journey.
+                      example: "2024-12-31"
+                    status:
+                      type: string
+                      description: Status of the journey.
+                      example: "In Progress"
+                    tasks_completed:
+                      type: object
+                      description: Details of the tasks completed by the user.
+                      properties: {}  # Specify details as necessary
+                    feedback:
+                      type: object
+                      description: Feedback for the user.
+                      properties: {}  # Specify details as necessary
+      responses:
+        "200":
+          description: User added to the journey successfully.
+          content:
+            application/json:
+              schema:
                 type: object
                 properties:
-                  value:
-                    type: array
-                    description: List of values for the transaction fields.
-                    items:
-                      type: string
-                    example: ["6", "Team Lead", "IT"]
-              field_type:
-                type: array
-                description: List of field types corresponding to the values.
-                items:
-                  type: string
-                example: ["experience", "current_position", "department"]
-    responses:
-      "200":
-        description: Transaction added successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Transaction added successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-  /transactions/reminders:
-   post:
-    operationId: sendTransactionReminders
-    summary: Send reminders for a specified process.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              process_name:
-                type: string
-                description: The name of the process for which the reminders are being sent.
-                example: "Change Manager 11"
-    responses:
-      "200":
-        description: Reminders sent successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Reminders sent successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-
-  /transactions/view:
-   post:
-    operationId: viewTransactions
-    summary: View transaction details from the catalog.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              query:
+                  message:
+                    type: string
+                    example: User added to the journey successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
                 type: object
-    responses:
-      "200":
-        description: Transactions details retrieved successfully.
+                properties:
+                  error:
+                    type: string
+                    example: Missing journey_title or user in request body.
+
+  /journey/create:
+    post:
+      operationId: createJourney
+      summary: Create a new learning journey.
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                items:
+                name:
+                  type: string
+                  description: Journey name
+                  example: "Advanced Data Science Journey"
+                category:
+                  type: string
+                  description: Category of the journey
+                  example: "Data Science"
+                description:
+                  type: string
+                  description: Description of the journey
+                  example: "A comprehensive journey to master advanced data science concepts."
+                tasks:
                   type: array
+                  description: Array of tasks in the journey
                   items:
                     type: object
-      "400":
-        description: Invalid request data.
+                    properties:
+                      title:
+                        type: string
+                        description: Task title
+                        example: "Introduction to Machine Learning"
+                users:
+                  type: array
+                  description: Array of users associated with the journey
+                  items:
+                    type: object
+                    additionalProperties: true
+                teams:
+                  type: array
+                  description: Array of teams associated with the journey
+                  items:
+                    type: object
+                    additionalProperties: true
+      responses:
+        "200":
+          description: Journey created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Journey created successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /journey/add_user_to_team:
+    post:
+      operationId: addUserToTeamInJourney
+      summary: Add a user to a team in a specified learning journey.
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                error:
+                journey_title:
                   type: string
-                  example: Invalid request data.
-      "404":
-        description: Transaction not found.
+                  description: Title of the journey
+                  example: "Advanced Data Science Journey"
+                team_name:
+                  type: string
+                  description: Name of the team
+                  example: "Data Science Team"
+                member_name:
+                  type: string
+                  description: Name of the member
+                  example: "John Doe"
+                task_status:
+                  type: object
+                  description: Object containing task names as keys and their status as values
+                  additionalProperties:
+                    type: string
+                  example: 
+                    "Introduction to Machine Learning": "Completed"
+                    "Advanced Data Analysis Techniques": "In Progress"
+      responses:
+        "200":
+          description: User added to the team in the journey successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User added to the team in the journey successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing journey_title, team_name, or member_name in request body.
+  
+  /journey/view_user_journeys:
+    post:
+      operationId: viewJourneysOfUser
+      summary: View all journeys of a specified user.
+      requestBody:
+        required: true
         content:
           application/json:
             schema:
               type: object
               properties:
-                error:
+                query:
+                  type: object
+      responses:
+        "200":
+          description: List of journeys for the specified user.
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    journey_title:
+                      type: string
+                      description: The title of the journey
+                      example: "Advanced Data Science Journey"
+                    category:
+                      type: string
+                      description: The category of the journey
+                      example: "Data Science"
+                    description:
+                      type: string
+                      description: Description of the journey
+                      example: "A comprehensive journey to master advanced data science concepts."
+                    start_date:
+                      type: string
+                      format: date
+                      description: Start date of the journey
+                      example: "2024-01-01"
+                    end_date:
+                      type: string
+                      format: date
+                      description: End date of the journey
+                      example: "2024-12-31"
+                    status:
+                      type: string
+                      description: Status of the journey
+                      example: "In Progress"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid user in request body.
+  
+  /journey/view_all_journeys:
+    post:
+      operationId: viewAllJourneys
+      summary: View all journeys of a specified user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
                   type: string
-                  example: Transaction not found.
+                  description: Name of the user
+                  example: "John Doe"
+      responses:
+        "200":
+          description: List of all journeys for the specified user.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the journey
+                      example: "Database Development"
+                    category:
+                      type: string
+                      description: The category of the journey
+                      example: "Development"
+                    description:
+                      type: string
+                      description: Description of the journey
+                      example: "Complete development of the database for the new project."
+                    tasks:
+                      type: array
+                      description: Array of tasks in the journey
+                      items:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            description: Task title
+                            example: "Design Database Schema"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid user in request body.
+
+  /journey/update:
+    post:
+      operationId: updateJourney
+      summary: Update a specified learning journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Journey name
+                  example: "Advanced Data Science Journey"
+                update_data:
+                  type: object
+                  description: Object containing updated fields
+                  properties:
+                    description:
+                      type: string
+                      description: Updated description
+                      example: "Updated comprehensive journey to master advanced data science concepts."
+      responses:
+        "200":
+          description: Journey updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Journey updated successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid name or update_data in request body.
+
+  /journey/delete:
+    post:
+      operationId: deleteJourney
+      summary: Delete a specified learning journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Journey name
+                  example: "Advanced Data Science Journey"
+      responses:
+        "200":
+          description: Journey deleted successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Journey deleted successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid name in request body.
+
+  /journey/view_my_journeys:
+    post:
+      operationId: viewMyJourneys
+      summary: View all journeys of a specified person.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Name of the person
+                  example: "John Doe"
+      responses:
+        "200":
+          description: List of all journeys for the specified person.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the journey
+                      example: "Database Development"
+                    category:
+                      type: string
+                      description: The category of the journey
+                      example: "Development"
+                    description:
+                      type: string
+                      description: Description of the journey
+                      example: "Complete development of the database for the new project."
+                    tasks:
+                      type: array
+                      description: Array of tasks in the journey
+                      items:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            description: Task title
+                            example: "Design Database Schema"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid person_name in request body.
+  /journey/track_progress:
+    post:
+      operationId: trackJourneyProgress
+      summary: Track the progress of a journey for a specified person.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Name of the person
+                  example: "John Doe"
+      responses:
+        "200":
+          description: Journey progress tracked successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  journey_name:
+                    type: string
+                    description: The name of the journey
+                    example: "Database Development"
+                  progress:
+                    type: object
+                    description: Progress details
+                    properties:
+                      completed_tasks:
+                        type: array
+                        description: List of completed tasks
+                        items:
+                          type: string
+                          example: "Design Database Schema"
+                      pending_tasks:
+                        type: array
+                        description: List of pending tasks
+                        items:
+                          type: string
+                          example: "Develop Database Backup Strategy"
+                      overall_status:
+                        type: string
+                        description: Overall status of the journey
+                        example: "In Progress"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid person_name in request body.
+  /journey/mark_task_completed:
+    post:
+      operationId: markTaskCompleted
+      summary: Mark a task as completed for a specified person in a journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Name of the person
+                  example: "John Doe"
+                journey_title:
+                  type: string
+                  description: Title of the journey
+                  example: "Advanced Data Science Journey"
+                task_name:
+                  type: string
+                  description: Name of the task
+                  example: "Introduction to Machine Learning"
+      responses:
+        "200":
+          description: Task marked as completed successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Task marked as completed successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid person_name, journey_title, or task_name in request body.
+  
+  /journey/submit_feedback:
+    post:
+      operationId: submitFeedback
+      summary: Submit feedback for a specified task in a journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Name of the person
+                  example: "John Doe"
+                journey_title:
+                  type: string
+                  description: Title of the journey
+                  example: "Advanced Data Science Journey"
+                task_name:
+                  type: string
+                  description: Name of the task
+                  example: "Introduction to Machine Learning"
+                feedback:
+                  type: string
+                  description: Feedback text
+                  example: "Great job on completing the task!"
+      responses:
+        "200":
+          description: Feedback submitted successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Feedback submitted successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid person_name, journey_title, task_name, or feedback in request body.
+
+  /journey/view_team_journeys:
+    post:
+      operationId: viewTeamJourneys
+      summary: View all journeys of a specified team.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                team_name:
+                  type: string
+                  description: Name of the team
+                  example: "Data Science Team"
+      responses:
+        "200":
+          description: List of all journeys for the specified team.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the journey
+                      example: "Database Development"
+                    category:
+                      type: string
+                      description: The category of the journey
+                      example: "Development"
+                    description:
+                      type: string
+                      description: Description of the journey
+                      example: "Complete development of the database for the new project."
+                    tasks:
+                      type: array
+                      description: Array of tasks in the journey
+                      items:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            description: Task title
+                            example: "Design Database Schema"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid team_name in request body.
+  
+  /journey/track_team_member_progress:
+    post:
+      operationId: trackTeamMemberProgress
+      summary: Track the progress of a team member in a specified team.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                team_name:
+                  type: string
+                  description: Name of the team
+                  example: "Data Science Team"
+                member_name:
+                  type: string
+                  description: Name of the team member
+                  example: "John Doe"
+      responses:
+        "200":
+          description: Team member progress tracked successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  journey_name:
+                    type: string
+                    description: The name of the journey
+                    example: "Database Development"
+                  progress:
+                    type: object
+                    description: Progress details
+                    properties:
+                      completed_tasks:
+                        type: array
+                        description: List of completed tasks
+                        items:
+                          type: string
+                          example: "Design Database Schema"
+                      pending_tasks:
+                        type: array
+                        description: List of pending tasks
+                        items:
+                          type: string
+                          example: "Develop Database Backup Strategy"
+                      overall_status:
+                        type: string
+                        description: Overall status of the journey
+                        example: "In Progress"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid team_name or member_name in request body.
+
+  /journey/track_team_member_progress:
+    post:
+      operationId: trackTeamMemberProgress
+      summary: Track the progress of a team member in a specified team.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                team_name:
+                  type: string
+                  description: Name of the team
+                  example: "Data Science Team"
+                member_name:
+                  type: string
+                  description: Name of the team member
+                  example: "John Doe"
+      responses:
+        "200":
+          description: Team member progress tracked successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  journey_name:
+                    type: string
+                    description: The name of the journey
+                    example: "Database Development"
+                  progress:
+                    type: object
+                    description: Progress details
+                    properties:
+                      completed_tasks:
+                        type: array
+                        description: List of completed tasks
+                        items:
+                          type: string
+                          example: "Design Database Schema"
+                      pending_tasks:
+                        type: array
+                        description: List of pending tasks
+                        items:
+                          type: string
+                          example: "Develop Database Backup Strategy"
+                      overall_status:
+                        type: string
+                        description: Overall status of the journey
+                        example: "In Progress"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid team_name or member_name in request body.
+
+  /journey/provide_feedback_on_team_member_task:
+    post:
+      operationId: provideFeedbackOnTeamMemberTask
+      summary: Provide feedback on a team member's task in a specified journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                team_name:
+                  type: string
+                  description: Name of the team
+                  example: "Data Science Team"
+                member_name:
+                  type: string
+                  description: Name of the team member
+                  example: "John Doe"
+                journey_title:
+                  type: string
+                  description: Title of the journey
+                  example: "Advanced Data Science Journey"
+                task_name:
+                  type: string
+                  description: Name of the task
+                  example: "Introduction to Machine Learning"
+                feedback:
+                  type: string
+                  description: Feedback text
+                  example: "Great job on completing the task!"
+      responses:
+        "200":
+          description: Feedback provided successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Feedback provided successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing or invalid data in request body.
