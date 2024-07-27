@@ -1,0 +1,450 @@
+openapi: 3.1.0
+info:
+  title: Learning Journey Management API
+  description: API for managing learning journeys.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for learning journey management
+
+paths:
+  /view_journeys_of_user:
+   post:
+    operationId: viewUserJourney
+    summary: View journey details of a specific user.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              users:
+                type: string
+                description: The name of the user to query journeys by.
+            required:
+              - users
+    responses:
+      "200":
+        description: Successful response with journey details.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                    description: The ID of the journey.
+                  category:
+                    type: string
+                    description: The category of the journey.
+                  description:
+                    type: string
+                    description: The description of the journey.
+                  name:
+                    type: string
+                    description: The name of the journey.
+                  tasks.title:
+                    type: array
+                    items:
+                      type: string
+                      description: The title of the task.
+                  teams.journey_due_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The due date of the journey for the team.
+                  teams.journey_start_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The start date of the journey for the team.
+                  teams.status:
+                    type: array
+                    items:
+                      type: string
+                      description: The status of the journey for the team.
+                  teams.team_name:
+                    type: array
+                    items:
+                      type: string
+                      description: The name of the team.
+                  teams.teammembers.person_name:
+                    type: array
+                    items:
+                      type: string
+                      description: The name of the team member.
+                  teams.teammembers.status:
+                    type: array
+                    items:
+                      type: string
+                      description: The status of the team member in the journey.
+                  teams.teammembers.tasks.feedback:
+                    type: array
+                    items:
+                      type: string
+                      description: The feedback on the task.
+                  teams.teammembers.tasks.status:
+                    type: array
+                    items:
+                      type: string
+                      description: The status of the task.
+                  teams.teammembers.tasks.task_due_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The due date of the task.
+                  teams.teammembers.tasks.task_name:
+                    type: array
+                    items:
+                      type: string
+                      description: The name of the task.
+                  teams.teammembers.tasks.task_start_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The start date of the task.
+                  teams.teammembers.tasks.time_status:
+                    type: array
+                    items:
+                      type: string
+                      description: The time status of the task.
+                  users.journey_due_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The due date of the journey for the user.
+                  users.journey_start_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The start date of the journey for the user.
+                  users.person_name:
+                    type: array
+                    items:
+                      type: string
+                      description: The name of the user.
+                  users.status:
+                    type: array
+                    items:
+                      type: string
+                      description: The status of the user in the journey.
+                  users.tasks.feedback:
+                    type: array
+                    items:
+                      type: string
+                      description: The feedback on the task.
+                  users.tasks.status:
+                    type: array
+                    items:
+                      type: string
+                      description: The status of the task.
+                  users.tasks.task_due_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The due date of the task.
+                  users.tasks.task_name:
+                    type: array
+                    items:
+                      type: string
+                      description: The name of the task.
+                  users.tasks.task_start_date:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: The start date of the task.
+                  users.tasks.time_status:
+                    type: array
+                    items:
+                      type: string
+                      description: The time status of the task.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /track_journey_progress:
+   post:
+    operationId: trackJourneyProgress
+    summary: Track journey Progress of a specific user.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              person_name:
+                type: string
+                description: The name of the user to query journeys by.
+            required:
+              - person_name
+    responses:
+      "200":
+        description: Successful response with journey details.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  completed_tasks:
+                    type: integer
+                    description: The number of tasks completed by the user.
+                  journey:
+                    type: string
+                    description: The name of the journey.
+                  progress:
+                    type: number
+                    format: float
+                    description: The progress of the journey as a percentage.
+                  total_tasks:
+                    type: integer
+                    description: The total number of tasks in the journey.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /complete_task:
+   post:
+    operationId: markTaskCompleted
+    summary: Mark a task as completed for a specific user in a journey.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              person_name:
+                type: string
+                description: The name of the user.
+              journey_title:
+                type: string
+                description: The title of the journey.
+              task_name:
+                type: string
+                description: The name of the task to be marked as completed.
+            required:
+              - person_name
+              - journey_title
+              - task_name
+    responses:
+      "200":
+        description: Successful response indicating task completion.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message indicating task completion.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /show_my_tasks:
+   post:
+    operationId: viewMyTasks
+    summary: View tasks of a specific user.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              person_name:
+                type: string
+                description: The name of the user.
+            required:
+              - person_name
+    responses:
+      "200":
+        description: Successful response with the user's tasks.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  description:
+                    type: string
+                    description: The context of the task (e.g., Team or Individual).
+                  journey_name:
+                    type: string
+                    description: The name of the journey.
+                  status:
+                    type: string
+                    description: The status of the task.
+                  task_name:
+                    type: string
+                    description: The name of the task.
+                  time_status:
+                    type: string
+                    description: The time status of the task.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /show_team_journey_tasks_and_report:
+   post:
+    operationId: viewTeamTasksandReport
+    summary: View the team journey's tasks and report.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              team_name:
+                type: string
+                description: The name of the team.
+              member_name:
+                type: string
+                description: The name of the team member.
+            required:
+              - team_name
+              - member_name
+    responses:
+      "200":
+        description: Successful response with the team's status and member report.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                member_report:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    properties:
+                      completed_tasks:
+                        type: integer
+                        description: The number of tasks completed by the team member.
+                      pending_tasks:
+                        type: integer
+                        description: The number of pending tasks for the team member.
+                tasks:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      journey_name:
+                        type: string
+                        description: The name of the journey.
+                      task_name:
+                        type: string
+                        description: The name of the task.
+                      time_status:
+                        type: string
+                        description: The time status of the task.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /show_journey_activities:
+   post:
+    operationId: viewJourneyActivities
+    summary: View the journey activities of a specific member.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              person_name:
+                type: string
+                description: The name of the member.
+            required:
+              - person_name
+    responses:
+      "200":
+        description: Successful response with the journey activities of the member.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  assignees:
+                    type: integer
+                    description: The number of assignees for the journey.
+                  due_date:
+                    type: string
+                    format: date
+                    description: The due date of the journey.
+                  journey_name:
+                    type: string
+                    description: The name of the journey.
+                  start_date:
+                    type: string
+                    format: date
+                    description: The start date of the journey.
+                  status:
+                    type: string
+                    description: The status of the journey.
+                  time_status:
+                    type: string
+                    description: The time status of the journey.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
