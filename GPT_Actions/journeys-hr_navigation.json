@@ -1,0 +1,88 @@
+{
+  "navigation": [
+    {
+      "section": "Journey Management",
+      "functions": [
+        {
+          "name": "Create Journey",
+          "description": "Allows a manager to create a new journey, defining its objectives, tasks, and participants."
+        },
+        {
+          "name": "View Journey",
+          "description": "Enables a manager to view details of existing journeys, including progress and participant information."
+        },
+        {
+          "name": "Update Journey",
+          "description": "Allows a manager to update the details of an existing journey, such as modifying tasks, dates, or participants."
+        },
+        {
+          "name": "Delete Journey",
+          "description": "Enables a manager to delete a journey that is no longer needed, removing all associated tasks and data."
+        }
+      ]
+    },
+    {
+      "section": "Task Management",
+      "functions": [
+        {
+          "name": "Create Task",
+          "description": "Allows a manager to create new tasks within a journey, specifying task details and assignments."
+        },
+        {
+          "name": "View Task",
+          "description": "Enables a manager to view details of tasks within a journey, including their status and assigned users."
+        },
+        {
+          "name": "Update Task",
+          "description": "Allows a manager to update the details of existing tasks, such as changing the task description or deadlines."
+        },
+        {
+          "name": "Delete Task",
+          "description": "Enables a manager to delete tasks that are no longer relevant or required within a journey."
+        }
+      ]
+    },
+    {
+      "section": "User Management",
+      "functions": [
+        {
+          "name": "Add User to Team in Journey",
+          "description": "Allows a manager to add a user to a team within a journey, integrating them into team-specific tasks and roles."
+        },
+        {
+          "name": "Add User to Journey",
+          "description": "Allows a manager to add a user to a journey, assigning them specific tasks and responsibilities."
+        }
+      ]
+    },
+    {
+      "section": "Progress and Feedback",
+      "functions": [
+        {
+          "name": "View Journeys of User",
+          "description": "Allows a manager to view all journeys a specific user is part of, providing an overview of their involvement and progress."
+        },
+        {
+          "name": "Track Journey Progress",
+          "description": "Enables a manager to track the overall progress of a journey, monitoring task completion and milestones."
+        },
+        {
+          "name": "View Team Journeys",
+          "description": "Enables a manager to view journeys associated with specific teams, facilitating team management and coordination."
+        },
+        {
+          "name": "Track Team Member Progress",
+          "description": "Allows a manager to track the progress of individual team members within a journey, ensuring accountability and performance."
+        },
+        {
+          "name": "Monitor Overall Journey Progress",
+          "description": "Allows a manager to monitor the overall progress of all journeys, providing a comprehensive view of the organization’s projects and their statuses."
+        },
+        {
+          "name": "Generate Reports",
+          "description": "Enables a manager to generate detailed reports on journeys, tasks, and user performance, aiding in data-driven decision making."
+        }
+      ]
+    }
+  ]
+}
