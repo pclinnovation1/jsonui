@@ -7,9 +7,13 @@ from controllers.eligibility_batch_process_controller import eligibility_batch_p
 from controllers.review_period_controller import review_period_bp
 from controllers.performance_role_controller import performance_role_bp
 from controllers.performance_process_flow_controller import process_flow_bp
+from controllers.performance_template_controller import performance_template_bp
 from controllers.performance_document_type_controller import performance_document_type_bp
+from controllers.questionnaire_controller import questionnaire_bp
 from controllers.feedback_template_controller import feedback_template_bp
 from controllers.check_in_template_controller import check_in_template_bp
+from controllers.my_performance_controller import my_performance_bp
+from controllers.performance_template_connection_controller import performance_template_connection_bp
 
 app = Flask(__name__)
 
@@ -18,10 +22,15 @@ app.register_blueprint(eligibility_profile_bp, url_prefix='/eligibility_profiles
 app.register_blueprint(eligibility_batch_process_bp, url_prefix='/eligibility_batch_process')
 app.register_blueprint(review_period_bp, url_prefix='/review_periods')
 app.register_blueprint(performance_role_bp, url_prefix='/performance_roles')
+app.register_blueprint(performance_template_bp, url_prefix='/performance_templates')
 app.register_blueprint(process_flow_bp, url_prefix='/performance_process_flows')
 app.register_blueprint(performance_document_type_bp, url_prefix='/performance_document_types')
+app.register_blueprint(questionnaire_bp, url_prefix='/questionnaires')
 app.register_blueprint(feedback_template_bp, url_prefix='/feedback_templates')
 app.register_blueprint(check_in_template_bp, url_prefix='/check_in_templates')
+app.register_blueprint(my_performance_bp, url_prefix='/my_performances')
+app.register_blueprint(performance_template_connection_bp, url_prefix='/performance_template_connections')
+
 
 
 if __name__ == '__main__':  

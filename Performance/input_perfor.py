@@ -18,7 +18,7 @@
     },
     "eligibility_criteria": {
       "personal": {
-        "gender": "Male",
+        "gender": "Male",  
         "disabled": "No",
         "postal_code_ranges": "All",
         "opted_for_medicare": "No",
@@ -131,17 +131,15 @@
 5.http://127.0.0.1:5000/feedback_templates/create
 
   
-    {
-  "Name": "Template A",
-  "Comments": "Comments for Template A",
-  "Status": "Active",
-  "Template type": "Type A",
-  "Include in performance document": "Yes",
-  "Questionnaire": [
-    "Question A1",
-    "Question A2"
-  ]
+  {
+  "name": "Template A",
+  "comments": "Comments for Template A",
+  "status": "Active",
+  "template_type": "Type A",
+  "include_in_performance_document": "Yes",
+  "questionnaire_name": "Employee Engagement Survey"
 }
+
 
 
 
@@ -159,7 +157,7 @@
 
 
 
-7.  http://127.0.0.1:5000/check_in_template/add
+7.  http://127.0.0.1:5000/check_in_templates/add
 
 
    {
@@ -217,3 +215,114 @@
             }
         ]
 }
+
+
+
+
+9. http://127.0.0.1:5000/questionnaires/add
+
+  {
+  "name": "Employee Engagement Survey",
+  "description": "A survey to measure employee engagement levels.",
+  "questions": [
+    {
+      "question_name": "Job Satisfaction",
+      "question_description": "How satisfied are you with your current job?"
+    },
+    {
+      "question_name": "Work-Life Balance",
+      "question_description": "How do you rate your work-life balance?"
+    }
+  ],
+  "creation_date": "2023-06-01"
+}
+
+
+
+
+
+10.  http://127.0.0.1:5000/performance_templates/create
+
+    
+	{
+  "general": {
+    "template_type": "Type A",
+    "name": "Template A",
+    "comments": "Comments for Template A",
+    "from_date": "2023-01-01",
+    "to_date": "2024-01-01",
+    "status": "Active",
+    "document_type": "Type A",
+    "eligibility_profile": [
+      "Eligibility profile 12",
+      "Eligibility profile 10"
+    ],
+    "participant": {
+      "role": "Role A",
+      "minimum_number_of_participants_required_per_role": 1,
+      "maximum_number_of_participants_required_per_role": 5
+    }
+  },
+  "process": {
+    "process_flow": "Flow A",
+    "rating_calculations": "Calculation A",
+    "processing_options": "Option A",
+    "minimum_characters_limit_for_evalution_comments": 10,
+    "maximum_characters_limit_for_evalution_comments": 200,
+    "participant_options": "Option A"
+  },
+  "structure": {
+    "sections": {
+      "section_name": "Section A",
+      "sequence_number": 1,
+      "section_processing": {
+        "ratings": "Ratings A",
+        "weighting": "Weighting A",
+        "additional_information": "Additional Info A"
+      }
+    },
+    "processing_by_role": {
+      "role": "Role A",
+      "share_rating": "Yes",
+      "share_comments": "Yes",
+      "update_profile": "Yes"
+    }
+  },
+  "document_periods": {
+    "name": "Period A",
+    "review_period": "Annual",
+    "performance_document_start_date": "2023-01-01",
+    "performance_document_end_date": "2023-12-31",
+    "short_name": "A23"
+  },
+  "goal_plan_name": "Annual Performance Plan 2",
+  "document_types_for_interim_evaluations": {
+    "document_type": "Type A"
+  }
+}
+
+
+11.http://127.0.0.1:5000/performance_template_connections/create
+
+
+   {
+  "name": "PT1",
+  "review_period": "2024",
+  "performance_document_types": "Annual Review"
+}
+
+
+12.    http://127.0.0.1:5000/my_performances/create_goal
+
+
+  {
+    "employee_name": "John Doe",
+    "performance_document_name": "Performance Document 2023",
+    "name": "PT1"
+}
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 
 
-# feedback_templates/routes.py
 
 from flask import Blueprint, request, jsonify
 from pymongo import MongoClient
+from datetime import datetime
 import config
 
 feedback_template_bp = Blueprint('feedback_template_bp', __name__)
@@ -12,6 +12,7 @@ feedback_template_bp = Blueprint('feedback_template_bp', __name__)
 client = MongoClient(config.MONGODB_URI)
 db = client[config.DATABASE_NAME]
 feedback_templates_collection = db[config.FEEDBACK_TEMPLATE_COLLECTION_NAME]
+questionnaires_collection = db[config.QUESTIONNAIRE_COLLECTION_NAME]
 
 # Helper function to convert keys to lowercase and replace spaces with underscores
 def lowercase_keys(data):
@@ -28,6 +29,15 @@ def create_feedback_template():
     data = request.json
     data = lowercase_keys(data)  # Convert keys to lowercase and replace spaces with underscores
 
+    # Fetch the questions from the P_Questionnaires collection
+    questionnaire_name = data.get('questionnaire_name')
+    if questionnaire_name:
+        questionnaire = questionnaires_collection.find_one({'name': questionnaire_name})
+        if questionnaire:
+            data['questions'] = questionnaire.get('questions', [])
+        else:
+            return jsonify({'error': 'Questionnaire not found'}), 404
+
     result = feedback_templates_collection.insert_one(data)
     new_feedback_template = feedback_templates_collection.find_one({'_id': result.inserted_id})
     new_feedback_template['_id'] = str(new_feedback_template['_id'])
@@ -38,6 +48,15 @@ def create_feedback_template():
 def update_feedback_template(template_name):
     data = request.json
     data = lowercase_keys(data)  # Convert keys to lowercase and replace spaces with underscores
+
+    # Fetch the questions from the P_Questionnaires collection
+    questionnaire_name = data.get('questionnaire_name')
+    if questionnaire_name:
+        questionnaire = questionnaires_collection.find_one({'name': questionnaire_name})
+        if questionnaire:
+            data['questions'] = questionnaire.get('questions', [])
+        else:
+            return jsonify({'error': 'Questionnaire not found'}), 404
 
     result = feedback_templates_collection.update_one({'name': template_name}, {'$set': data})
     if result.matched_count:

@@ -10,7 +10,14 @@ PERFORMANCE_DOCUMENT_TYPE_COLLECTION_NAME = "P_PerformanceDocumentTypes"
 FEEDBACK_TEMPLATE_COLLECTION_NAME = "P_FeedbackTemplates" 
 PERFORMANCE_PROCESS_FLOW_COLLECTION_NAME = "P_PerformanceProcessFlows"
 CHECK_IN_TEMPLATE_COLLECTION_NAME = "P_CheckInTemplates"
-                                        
+QUESTIONNAIRE_COLLECTION_NAME = "P_Questionnaires"
+PERFORMANCE_TEMPLATE_COLLECTION_NAME = "P_PerformanceTemplates"
+MY_PERFORMANCE_COLLECTION_NAME = "P_Performance_document"                                        
+EMPLOYEE_DETAILS_COLLECTION_NAME = "s_employeedetails_2"
+GOAL_PLANS_COLLECTION_NAME = "GOL_GoalPlans"
+PERFORMANCE_TEMPLATE_CONNECTION_COLLECTION_NAME = "P_Performance_template_connection"
+
+
 
 
 
