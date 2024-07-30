@@ -1,0 +1,15 @@
+Based on the goal plan '{goal_plan_name}', which includes goals like {goal_list}, and considering the department '{department}', generate new personalized goals. Each goal should have:
+
+1. A clear and concise goal name.
+2. A brief description explaining the goal.
+3. A list of specific subpoints/targets for achieving the goal.
+
+Please structure each goal as follows:
+
+Goal Name: [Appropriate goal name]
+Description: [Appropriate description]
+Subpoints/Targets:
+1. [Subpoint 1]
+2. [Subpoint 2]
+3. [Subpoint 3]
+...
