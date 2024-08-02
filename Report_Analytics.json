@@ -1,0 +1,155 @@
+{
+    "instructions":[
+        {
+            "import_instruction":"Always collect data from the API calling /viewComplianceStatus. Show data for different assignment_type courses such that assignment_type=Mandatory and assignment_type=Role Essential",
+            "field_name": "'person_name','department','course_name','due_date','completion_date','compliance_status'",
+            "description":"Before generating reports and charts, familiarise yourself with the structure and content of your data. Fetch data from the provided compliance status API and always show in tabular format."
+            
+        },
+        {
+            "report":"'overall_compliance_report','trend_analysis','employee_performance','correlation_analysis','performance_analysis'",
+            "description":"Before generating reports, familiarise yourself with the prompt structure and content of your data. Knowing the columns and the type of data each column holds will help you formulate precise and effective prompts. Always generate tabular data format."
+        },
+        {
+            "report":"overall_compliance_report",
+            "prompt_description": [
+                {
+                    "completion_date_range":"Generate a compliance report using the data"
+                },
+                {
+                    "course_wise_compliance_report":"Provide a course-wise compliance report"
+                },
+                {
+                    "course_wise_report":"Show a course-wise breakdown of compliance and non-compliance"
+                },
+                {
+                    "overdue_assignment":"List all courses that were completed after the due date"
+                },
+                {
+                    "employee_wise_compliance_report":"Generate a compliance report for individual employees"
+                }
+            ]
+        },
+        {
+            "report":"trend_analysis",
+            "prompt_description": [
+                {
+                    "monthly_completion_trend":"Analyse the trend of course completion rates over the pastyear"
+                },
+                {
+                    "annual_compliance_trend":"Generate a trend analysis of annual compliance rates"
+                },
+                {
+                    "course_popularity":"Rank courses by the number of participants"
+                },
+                {
+                    "employee_performance":"Identify top-performing employees based on the number of compliant courses"
+                }
+            ]
+        },
+        {
+            "report":"correlation_analysis",
+            "prompt_description":[
+                {
+                    "completion_vs_duedate_correlation": "Analyse the correlation between completion dates and due dates"
+                },
+                {
+                    "course_wise_correlation_analysis":"Provide a correlation analysis of completion dates and due dates by courses"
+                }
+            ]
+        },
+        {
+            "report":"performance_analysis",
+            "prompt_description":[
+                {
+                    "top_performing_courses":"Identify the top performing courses based on compliance rates"
+                },
+                {
+                    "low_performing_courses":"Identify the low performing courses based on compliance rates"
+                }
+            ]
+        },
+        {
+            "visualize_charts":"'bar chart', 'pie chart', 'line chart', 'histogram chart'",
+            "description":"The model can generate various types of charts to help visualise data effectively."
+        },
+        {
+            "chart": "bar chart",
+            "prompt_description": [
+                {
+                    "overall_compliance":"Create a bar chart showing the number of compliant and non-compliant users"
+                },
+                {
+                    "course_wise_compliance":"Create a bar chart displaying the compliance status by Course"
+                },
+                {
+                    "course_completion_by_assignment_type":"Generate a bar chart showing the number of course completions by assignment type"
+                },
+                {
+                    "monthly_compliance_counts":"Create a bar chart illustrating monthly counts of compliant and non-compliant users"
+                },
+                {
+                    "course_completion_performance":"Show a bar chart comparing the completion performance for different courses"
+                },
+                {
+                    "average_completion_time_per_course":"Display the average completion time for each course using a bar chart"
+                }
+            ]
+        
+        },
+        {
+            "chart": "pie chart",
+            "prompt_description": [
+                {
+                    "overall_complianc_percentage":"Generate a pie chart displaying the percentage of compliant and non-compliant users"
+                },
+                {
+                    "course_wise_compliance_percentage":"Create a pie chart showing the percentage of compliant and non-compliant users for each course"
+                },
+                {
+                    "assignment_type_distribution":"Create a pie chart showing the distribution of different assignment types"
+                }
+            ]
+        },
+        {
+            "chart": "line chart",
+            "prompt_description": [
+                {
+                    "trend_course_completion_over_time":"Create a line chart showing the trend of course completion over time"
+                },
+                {
+                    "monthly_compliance_trends":"Generate a line chart displaying the monthly trend of compliance and non-compliance"
+                },
+                {
+                    "annual_completion_rates":"Generate a line chart showing annual course completion rates"
+                }
+            ]
+        },
+        {
+            "chart": "line chart",
+            "prompt_description": [
+                {
+                    "trend_course_completion_over_time":"Create a line chart showing the trend of course completion over time"
+                },
+                {
+                    "monthly_compliance_trends":"Generate a line chart displaying the monthly trend of compliance and non-compliance"
+                },
+                {
+                    "annual_completion_rates":"Generate a line chart showing annual course completion rates"
+                }
+            ]
+        },
+        {
+            "chart": "histogram",
+            "prompt_description": [
+                {
+                    "compliance_date_completion":"Create a histogram displaying the distribution of course completion dates"
+                },
+                {
+                    "due_date_distribution":"Generate a histogram showing the distribution of due dates for courses"
+                }
+            ]
+        }
+        
+    ]
+}
