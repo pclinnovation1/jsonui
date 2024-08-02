@@ -1,9 +1,11 @@
+
 import json
 from flask import Flask, request, jsonify
 import os
 from dotenv import load_dotenv
-from test import call_generic_function, register_user, login_user, token_required, collection_permission_required
 from leaveapplications import setup_routes
+from test import call_generic_function, register_user, login_user, token_required, collection_permission_required
+
 app = Flask(__name__)
 setup_routes(app)
 load_dotenv()
@@ -17,14 +19,14 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 @app.route('/items/wrapper', methods=['POST'])
 @token_required
 @collection_permission_required(config)
-def execute_action(current_user):
+def execute_action(current_user, allowed_employees):
     try:
         data = request.json
-        action = data.get('function', [])
+        action = data.get('function')
         operation_config = config.get(action)
         if not operation_config:
             return jsonify({'error': f"Operation '{action}' not supported"}), 400
-        result = call_generic_function(operation_config, data)
+        result = call_generic_function(operation_config, data, allowed_employees)
         return jsonify(result), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -52,8 +54,6 @@ def login():
 
     result, status = login_user(data, app.config['SECRET_KEY'])
     return jsonify(result), status
-
-
 
 if __name__ == '__main__':
     app.run(debug=True, port=3001)
