@@ -1,92 +1,116 @@
-from flask import Flask, Blueprint, request, jsonify
+
+
+from flask import request, jsonify, Blueprint
 from pymongo import MongoClient
 import config
 
-# MongoDB connection
+# Establish connection to MongoDB
 client = MongoClient(config.MONGODB_URI)
 db = client[config.DATABASE_NAME]
-employee_details_collection = db[config.EMPLOYEE_DETAIL_COLLECTION_NAME]
+collection = db[config.EMPLOYEE_DETAIL_COLLECTION_NAME]
 
 organizational_chart_blueprint = Blueprint('organizational_chart', __name__)
 
-# List of organizational chart fields
-organizational_chart_fields = [
-    "business_unit", "cost_centre", "cost_centre_code", "department", "job_code",
-    "job_family", "job_title", "legal_entity", "local_job_code", "location",
-    "manager_name", "manager_person_number", "organization_number", "organization_unit",
-    "parent_unit", "roles_list", "team_manager", "tk10_code", "working_as_manager",
-    "business_title"
-]
+def append_to_hierarchy(hierarchy, person, current_level):
+    hierarchy.append({
+        "level": current_level,
+        "person_name": person.get("person_name"),
+        "job_title": person.get("job_title"),
+        "department": person.get("department"),
+        "organization_unit": person.get("organization_unit"),
+        "manager_name": person.get("manager_name")
+    })
 
 @organizational_chart_blueprint.route('/view', methods=['POST'])
-def view_organizational_chart():
-    data = request.get_json()
-    person_name = data.get('person_name')
-    fields = data.get('fields', ["all"])
+def access_organizational_chart():
+    try:
+        # Extract data from the request
+        data = request.get_json()
+        person_name = data.get('person_name')
+        levels_above = data.get('levels_above')
+        levels_below = data.get('levels_below')
 
-    if not person_name:
-        return jsonify({"error": "Missing required fields"}), 400
+        # Validate the input data
+        if not person_name:
+            return jsonify({"error": "person_name is required"}), 400
 
-    # Fetch the employee details
-    person = employee_details_collection.find_one({"person_name": person_name})
-    if not person:
-        return jsonify({"error": "Person not found"}), 404
+        # Fetch employee details from MongoDB
+        employee = collection.find_one({"person_name": person_name})
+        if not employee:
+            return jsonify({"error": "Employee not found"}), 404
 
-    # Extract specified fields or all fields if "all" is specified
-    if "all" in fields:
-        selected_fields = {field: person.get(field, "") for field in organizational_chart_fields}
-    else:
-        selected_fields = {field: person.get(field, "") for field in fields if field in organizational_chart_fields}
+        # Helper function to fetch hierarchy above
+        def get_hierarchy_above(person_name, levels=None, current_level=1):
+            hierarchy = []
+            current_person = collection.find_one({"person_name": person_name})
+            while current_person and (levels is None or current_level <= levels):
+                manager_name = current_person.get("manager_name")
+                if manager_name:
+                    manager = collection.find_one({"person_name": manager_name})
+                    if manager:
+                        append_to_hierarchy(hierarchy, manager, current_level)
+                        current_person = manager
+                        current_level += 1
+                    else:
+                        break
+                else:
+                    break
+            return hierarchy
 
-    return jsonify(selected_fields), 200
+        # Helper function to fetch hierarchy below
+        def get_hierarchy_below(person_name, levels=None, current_level=1):
+            hierarchy = []
+            direct_reports = list(collection.find({"manager_name": person_name}))
+            for report in direct_reports:
+                append_to_hierarchy(hierarchy, report, current_level)
+                if levels is None or current_level < levels:
+                    hierarchy.extend(get_hierarchy_below(report.get("person_name"), levels, current_level + 1))
+            return hierarchy
 
-@organizational_chart_blueprint.route('/update', methods=['POST'])
-def update_organizational_chart():
-    data = request.get_json()
-    person_name = data.get('person_name')
-    update_fields = data.get('update_fields')
+        # Fetch hierarchy above the employee
+        hierarchy_above = get_hierarchy_above(person_name, levels_above)
 
-    if not person_name or not update_fields:
-        return jsonify({"error": "Missing required fields"}), 400
+        # Fetch hierarchy below the employee
+        hierarchy_below = get_hierarchy_below(person_name, levels_below)
 
-    # Ensure only organizational chart fields are updated
-    update_fields = {k: v for k, v in update_fields.items() if k in organizational_chart_fields}
+        # Construct the response
+        response = {
+            "employee_details": {
+                "person_name": employee.get("person_name"),
+                "person_number": employee.get("person_number"),
+                "job_title": employee.get("job_title"),
+                "department": employee.get("department"),
+                "manager_name": employee.get("manager_name"),
+                "organization_unit": employee.get("organization_unit"),
+                "location": employee.get("location")
+            },
+            "levels_above": hierarchy_above,
+            "levels_below": hierarchy_below
+        }
 
-    # Update the employee details
-    result = employee_details_collection.update_one(
-        {"person_name": person_name},
-        {"$set": update_fields}
-    )
+        return jsonify(response), 200
 
-    if result.matched_count == 0:
-        return jsonify({"error": "Person not found"}), 404
-
-    return jsonify({"message": "Organizational chart updated successfully"}), 200
-
-@organizational_chart_blueprint.route('/delete', methods=['POST'])
-def delete_organizational_chart():
-    data = request.get_json()
-    person_name = data.get('person_name')
-    fields = data.get('fields', ["all"])
-
-    if not person_name or not fields:
-        return jsonify({"error": "Missing required fields"}), 400
-
-    # Prepare the update document for deletion
-    if "all" in fields:
-        update_document = {"$unset": {field: "" for field in organizational_chart_fields}}
-    else:
-        update_document = {"$unset": {field: "" for field in fields if field in organizational_chart_fields}}
-
-    # Delete the specified fields
-    result = employee_details_collection.update_one(
-        {"person_name": person_name},
-        update_document
-    )
-
-    if result.matched_count == 0:
-        return jsonify({"error": "Person not found"}), 404
-
-    return jsonify({"message": "Selected fields deleted successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
+
+
+
+# 5.
+# i) view
+# http://127.0.0.1:5000/organizational_chart/view
+
+# for manual levels 
+
+# {
+#   "person_name": "Mauri Salovaara",
+#   "levels_above": 8,
+#   "levels_below": 3
+# }
+
+# or by default all level for above and below
+
+# {
+#   "person_name": "Mauri Salovaara"
+# }

@@ -96,3 +96,39 @@ def delete_personal_info():
     return jsonify({"message": "Selected fields deleted successfully"}), 200
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
