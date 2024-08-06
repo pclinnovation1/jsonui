@@ -38,6 +38,12 @@ def view_personal_report():
     person = employee_details_collection.find_one({"person_name": person_name}, {field: 1 for field in personal_report_fields})
     if not person:
         return jsonify({"error": "Person not found"}), 404
+    
+    # ## send email
+    # queue_email = {
+    #     "person_name":person_name,
+        
+    # }
 
     # Add default empty string for missing fields
     personal_report = {field: person.get(field, "") for field in personal_report_fields}
