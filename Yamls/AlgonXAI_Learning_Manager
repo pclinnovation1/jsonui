@@ -1,0 +1,1816 @@
+openapi: 3.1.0
+info:
+  title: My Team - Learning Management API
+  description: API to manage catalog resources within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for catalog resources management
+
+paths:
+  /Course/view:
+    post:
+      operationId: viewCourse
+      summary: Views course details from the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                general_information.basic_information.title:
+                  type: string
+                  description: The course number to filter the courses.
+      responses:
+        "200":
+          description: Course details retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        general_information:
+                          type: object
+                          properties:
+                            basic_information:
+                              type: object
+                              properties:
+                                title:
+                                  type: string
+                                syllabus:
+                                  type: string
+                                short_description:
+                                  type: string
+                                publish_start_date:
+                                  type: string
+                                  format: date
+                                publish_end_date:
+                                  type: string
+                                  format: date
+                                course_number:
+                                  type: string
+                            other_details:
+                              type: object
+                              properties:
+                                minimum_expected_effort:
+                                  type: string
+                                maximum_expected_effort:
+                                  type: string
+                                currency:
+                                  type: string
+                                minimum_price:
+                                  type: number
+                                maximum_price:
+                                  type: number
+                                branding_image:
+                                  type: string
+                                trailer:
+                                  type: string
+                            comments:
+                              type: object
+                              properties:
+                                override_conversation_system_setup_configuration:
+                                  type: boolean
+                        related_materials:
+                          type: object
+                          properties:
+                            visibility:
+                              type: string
+                            attachment:
+                              type: string
+                        learning_item_additional_attributes:
+                          type: object
+                          properties:
+                            topic:
+                              type: string
+                        default_offering_attributes:
+                          type: object
+                          properties:
+                            training_supplier_or_instructor:
+                              type: object
+                              properties:
+                                facilitator_type:
+                                  type: string
+                            pricing:
+                              type: object
+                              properties:
+                                currency:
+                                  type: string
+                                add_line_item:
+                                  type: object
+                                  properties:
+                                    line_item:
+                                      type: string
+                                    price:
+                                      type: number
+                                    required:
+                                      type: boolean
+                                    remove:
+                                      type: boolean
+                            payment:
+                              type: object
+                              properties:
+                                payment_type:
+                                  type: string
+                            capacity_rules:
+                              type: object
+                              properties:
+                                minimum_capacity:
+                                  type: number
+                                maximum_capacity:
+                                  type: number
+                                waitlist_mode:
+                                  type: string
+                                allow_joining_the_waitlist_from_self_service:
+                                  type: boolean
+                        default_assignment_rules:
+                          type: object
+                          properties:
+                            learning_assignment_rules:
+                              type: object
+                              properties:
+                                initial_assignment_status:
+                                  type: string
+                                validity_period_starts:
+                                  type: string
+                                  format: date
+                                validity_period_expires:
+                                  type: string
+                                  format: date
+                        timestamps:
+                          type: object
+                          properties:
+                            creation_date:
+                              type: string
+                              format: date-time
+                            last_update_date:
+                              type: string
+                              format: date-time
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Course not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Course not found.
+
+  /course/assign_to_existing_employee:
+    post:
+      operationId: assignCoourse
+      summary: assign a course to an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - employee_name
+                - course_name
+              properties:
+                employee_name:
+                  type: string
+                course_name:
+                  type: string
+      responses:
+        "200":
+          description: Learning items successfully assigned.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /Course/Assigned/view:
+   post:
+    operationId: viewCourses
+    summary: Views assigned courses of an employee.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                properties:
+                  person_name:
+                    type: string
+                    description: Name of the employee
+                    example: "Ravi Kumar"
+                required:
+                  - person_name
+    responses:
+      "200":
+        description: Successfully retrieved the courses assigned to the employee.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                courses:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      course_title:
+                        type: string
+                      person_name:
+                        type: string
+                      course_start_date:
+                        type: string
+                        format: date
+                      course_end_date:
+                        type: string
+                        format: date
+      "400":
+        description: Missing person_name in request body.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Missing person_name in request body       
+
+  /course/reassign:
+    post:
+      operationId: reassignCoursesForAnEmployee
+      summary: Reassigns courses for an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - employee_name
+              properties:
+                employee_name:
+                  type: string
+                  description: Name of the employee
+      responses:
+        "200":
+          description: Successfully reassigned the courses for the employee.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Successfully reassigned the courses for the employee.
+        "400":
+          description: Missing employee_name in request body.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing employee_name in request body
+ 
+  
+  /Learning/ExternalLearning/add:
+    post:
+      operationId: recordExternalLearning
+      summary: Records details of external learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - completion_details
+                      - learning_item_details
+                      - learners
+                    properties:
+                      completion_details:
+                        type: object
+                        properties:
+                          start_date:
+                            type: string
+                            format: date
+                          completion_date:
+                            type: string
+                            format: date
+                          actual_effort_in_hours:
+                            type: number
+                          score_achieved:
+                            type: number
+                          context_segment:
+                            type: string
+                      attachments:
+                        type: array
+                        items:
+                          type: string
+                      learning_item_details:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                          url:
+                            type: string
+                          expected_training_hours:
+                            type: number
+                          cost:
+                            type: number
+                          currency:
+                            type: string
+                          description:
+                            type: string
+                          topic:
+                            type: string
+                          context_segment:
+                            type: string
+                      learners:
+                        type: object
+                        properties:
+                          selection_type:
+                            type: string
+                          select_a_person:
+                            type: string
+                          note_to_learners:
+                            type: string
+                      justification:
+                        type: string
+      responses:
+        "200":
+          description: External learning recorded successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Learning/ExternalLearning/view:
+    post:
+      operationId: viewExternalLearning
+      summary: Retrieves recorded external learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    Title:
+                      type: string
+                    Topic:
+                      type: string
+                    Start_Date:
+                      type: string
+                      format: date
+                    Completion_Date:
+                      type: string
+                      format: date
+      responses:
+        "200":
+          description: Successfully retrieved external learning.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Completion_Details:
+                          type: object
+                          properties:
+                            Start_Date:
+                              type: string
+                              format: date
+                            Completion_Date:
+                              type: string
+                              format: date
+                            Actual_Effort_in_Hours:
+                              type: number
+                            Score_Achieved:
+                              type: number
+                            Context_Segment:
+                              type: string
+                        Attachments:
+                          type: array
+                          items:
+                            type: string
+                        Learning_Item_Details:
+                          type: object
+                          properties:
+                            Title:
+                              type: string
+                            URL:
+                              type: string
+                            Expected_Training_Hours:
+                              type: number
+                            Cost:
+                              type: number
+                            Currency:
+                              type: string
+                            Description:
+                              type: string
+                            Topic:
+                              type: string
+                            Context_Segment:
+                              type: string
+                        Justification:
+                          type: string
+                        Actions:
+                          type: object
+                          properties:
+                            Record:
+                              type: boolean
+        "404":
+          description: External learning records not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  
+
+  /Learning/ExternalLearning/update:
+    post:
+      operationId: updateExternalLearning
+      summary: Updates records of external learning based on a query.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - title
+                  properties:
+                    learning_item_details.title:
+                      type: string
+                      description: The title of the external learning record to update.
+                      example: Advanced Data Science
+                update_data:
+                  type: object
+                  properties:
+                    person_name:
+                      type: string
+                      description: The name of the person.
+                      example: John Doe
+                    completion_details.start_date:
+                      type: string
+                      format: date
+                      description: The start date of the external learning.
+                      example: 2024-01-01
+                    completion_details.completion_date:
+                      type: string
+                      format: date
+                      description: The completion date of the external learning.
+                      example: 2024-06-01
+                    completion_details.actual_effort_in_hours:
+                      type: number
+                      description: The actual effort in hours spent on the external learning.
+                      example: 40
+                    completion_details.score_achieved:
+                      type: number
+                      description: The score achieved in the external learning.
+                      example: 85
+                    completion_details.context_segment:
+                      type: string
+                      description: The context segment of the external learning.
+                      example: Technical Skills
+                    learning_item_details.title:
+                      type: string
+                      description: The title of the external learning.
+                      example: Advanced Data Science
+                    learning_item_details.url:
+                      type: string
+                      description: The URL of the external learning.
+                      example: https://example.com/course
+                    learning_item_details.expected_training_hours:
+                      type: number
+                      description: The expected training hours for the external learning.
+                      example: 50
+                    learning_item_details.cost:
+                      type: number
+                      description: The cost of the external learning.
+                      example: 1000
+                    learning_item_details.currency:
+                      type: string
+                      description: The currency of the cost.
+                      example: USD
+                    learning_item_details.description:
+                      type: string
+                      description: A description of the external learning.
+                      example: A comprehensive course on advanced data science techniques.
+                    learning_item_details.topic:
+                      type: string
+                      description: The topic of the external learning.
+                      example: Data Science
+                    justification:
+                      type: string
+                      description: The justification for the external learning.
+                      example: Required for project X
+      responses:
+        "200":
+          description: External learning records updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: External learning records updated successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: External learning records not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: External learning records not found.
+
+  /Catalog/Video/add:
+    post:
+      operationId: publishVideo
+      summary: Publishes a video to the learning platform.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - Video
+                      - Title
+                    properties:
+                      Video:
+                        type: string
+                      Title:
+                        type: string
+                      Description:
+                        type: string
+                      Visibility:
+                        type: array
+                        items:
+                          type: string
+                      RelatedMaterials:
+                        type: array
+                        items:
+                          type: string
+      responses:
+        "200":
+          description: Video successfully published.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Catalog/Video/view:
+    post:
+      operationId: viewVideos
+      summary: Views published videos.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    limit:
+                      type: integer
+                      description: "Specify the number of videos to retrieve (1, 2, or all). Use -1 to retrieve all videos."
+      responses:
+        "200":
+          description: Successfully retrieved videos.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Video:
+                          type: string
+                        Title:
+                          type: string
+                        Description:
+                          type: string
+                        Visibility:
+                          type: array
+                          items:
+                            type: string
+                        RelatedMaterials:
+                          type: array
+                          items:
+                            type: string
+        "404":
+          description: No videos found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string  
+
+  /Catalog/Video/update:
+    post:
+      operationId: updateVideo
+      summary: Updates existing video details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - title
+                  properties:
+                    title:
+                      type: string
+                      description: The title of the video to update.
+                      example: Existing Video Title
+                update_data:
+                  type: object
+                  required:
+                    - title
+                    - start_date
+                    - end_date
+                    - description
+                    - content
+                  properties:
+                    title:
+                      type: string
+                      description: The new title for the Video.
+                      example: Updated Video Title
+                    start_date:
+                      type: string
+                      format: date
+                      description: The start date for the Video.
+                      example: 2024-01-01
+                    end_date:
+                      type: string
+                      format: date
+                      description: The end date for the Video.
+                      example: 2024-12-31
+                    description:
+                      type: string
+                      description: A description for the Video.
+                      example: This is the updated description of the Video.
+                    content:
+                      type: string
+                      description: The content of the Video.
+                      example: Updated content for the Video.
+      responses:
+        "200":
+          description: Video details successfully updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Video details successfully updated.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+   
+  /Catalog/Video/delete:
+    post:
+      operationId: deleteVideo
+      summary: Delete video from the catalog resources based on a query.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                      nullable: true
+                    start_date:
+                      type: string
+                      format: date
+                      nullable: true
+                    end_date:
+                      type: string
+                      format: date
+                      nullable: true
+                    description:
+                      type: string
+                      nullable: true
+                    content:
+                      type: string
+                      nullable: true
+      responses:
+        "200":
+          description: Videos successfully deleted.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+
+  /Learning/AuthorLearning/Journey/add:
+    post:
+      operationId: authorLearningJourney
+      summary: Creates a new learning journey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - title
+                      - cover_art
+                      - description
+                      - sections
+                      - learning_journey_privacy
+                    properties:
+                      title:
+                        type: string
+                      cover_art:
+                        type: string
+                      description:
+                        type: string
+                      sections:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            section_title:
+                              type: string
+                            section_description:
+                              type: string
+                            section_media:
+                              type: string
+                      learning_journey_privacy:
+                        type: string
+                      related_materials:
+                        type: array
+                        items:
+                          type: string
+      responses:
+        "200":
+          description: Learning journey successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Learning/AuthorLearning/Journey/view:
+    post:
+      operationId: viewAuthorLearningJourney
+      summary: Retrieves existing learning journeys.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                    cover_art:
+                      type: string
+                    description:
+                      type: string
+                    sections:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          section_title:
+                            type: string
+                          section_description:
+                            type: string
+                          section_media:
+                            type: string
+                    learning_journey_privacy:
+                      type: string
+                    related_materials:
+                      type: array
+                      items:
+                        type: string
+      responses:
+        "200":
+          description: Successfully retrieved learning journeys.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        cover_art:
+                          type: string
+                        description:
+                          type: string
+                        sections:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              section_title:
+                                type: string
+                              section_description:
+                                type: string
+                              section_media:
+                                type: string
+                        learning_journey_privacy:
+                          type: string
+                        related_materials:
+                          type: array
+                          items:
+                            type: string
+        "404":
+          description: Learning journeys not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+ 
+  /Learning/AuthorLearning/Journey/update:
+    post:
+      operationId: updateAuthorLearningJourney
+      summary: Updates existing learning journeys after confirmation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - title
+                  properties:
+                    title:
+                      type: string
+                      description: The title of the learning journey to update.
+                update_data:
+                  type: object
+                  properties:
+                    cover_art:
+                      type: string
+                      description: The cover art URL for the learning journey.
+                    description:
+                      type: string
+                      description: The description of the learning journey.
+                    sections.section_title:
+                      type: string
+                      description: The title of the section.
+                    sections.section_description:
+                      type: string
+                      description: The description of the section.
+                    sections.section_media:
+                      type: string
+                      description: The media URL of the section.
+                    learning_journey_privacy:
+                      type: string
+                      description: The privacy setting of the learning journey.
+                    related_materials:
+                      type: array
+                      items:
+                        type: string
+                      description: The updated list of related materials.
+      responses:
+        "200":
+          description: Learning journey details successfully updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Learning journey details successfully updated.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Learning journey not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Learning journey not found.
+
+  /Learning/Community/add:
+    post:
+      operationId: addCommunity
+      summary: Adds a new community.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      community_details:
+                        type: object
+                        required:
+                          - title
+                          - branding_image
+                          - description
+                          - trailer
+                          - published_date
+                          - tags
+                        properties:
+                          title:
+                            type: string
+                          branding_image:
+                            type: string
+                          description:
+                            type: string
+                          trailer:
+                            type: string
+                          published_date:
+                            type: string
+                            format: date-time
+                          tags:
+                            type: array
+                            items:
+                              type: string
+                      visibility:
+                        type: object
+                        properties:
+                          privacy:
+                            type: string
+                          member_contributions:
+                            type: string
+                      actions:
+                        type: object
+                        properties:
+                          rate_learning:
+                            type: boolean
+                          comments:
+                            type: boolean
+                          recommend:
+                            type: boolean
+                          report:
+                            type: boolean
+                          add_to_journey:
+                            type: boolean
+                      related_materials:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            title:
+                              type: string
+                            url:
+                              type: string
+                            type:
+                              type: string
+                      members:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            role:
+                              type: string
+      responses:
+        "200":
+          description: Community added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Learning/Community/view:
+    post:
+      operationId: viewCommunity
+      summary: Retrieves community details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    community_details:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        branding_image:
+                          type: string
+                        description:
+                          type: string
+                        trailer:
+                          type: string
+                        published_date:
+                          type: string
+                          format: date-time
+                        tags:
+                          type: array
+                          items:
+                            type: string
+                    visibility:
+                      type: object
+                      properties:
+                        privacy:
+                          type: string
+                        member_contributions:
+                          type: string
+                    actions:
+                      type: object
+                      properties:
+                        rate_learning:
+                          type: boolean
+                        comments:
+                          type: boolean
+                        recommend:
+                          type: boolean
+                        report:
+                          type: boolean
+                        add_to_journey:
+                          type: boolean
+                    related_materials:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                          url:
+                            type: string
+                          type:
+                            type: string
+                    members:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          role:
+                            type: string
+      responses:
+        "200":
+          description: Successfully retrieved community details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        community_details:
+                          type: object
+                          properties:
+                            title:
+                              type: string
+                            branding_image:
+                              type: string
+                            description:
+                              type: string
+                            trailer:
+                              type: string
+                            published_date:
+                              type: string
+                              format: date-time
+                            tags:
+                              type: array
+                              items:
+                                type: string
+                        visibility:
+                          type: object
+                          properties:
+                            privacy:
+                              type: string
+                            member_contributions:
+                              type: string
+                        actions:
+                          type: object
+                          properties:
+                            rate_learning:
+                              type: boolean
+                            comments:
+                              type: boolean
+                            recommend:
+                              type: boolean
+                            report:
+                              type: boolean
+                            add_to_journey:
+                              type: boolean
+                        related_materials:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              title:
+                                type: string
+                              url:
+                                type: string
+                              type:
+                                type: string
+                        members:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              role:
+                                type: string
+        "404":
+          description: Community details not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /Learning/Community/update:
+    post:
+      operationId: updateCommunity
+      summary: Updates existing community details after confirmation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - community_details.title
+                  properties:
+                    community_details.title:
+                      type: string
+                      description: The title of the community to update.
+                      example: "Existing Community Title"
+                    community_details.branding_image:
+                      type: string
+                      description: The branding image URL for the community.
+                      example: "https://example.com/branding.jpg"
+                    community_details.description:
+                      type: string
+                      description: The description of the community.
+                      example: "This is the updated description of the community."
+                    community_details.trailer:
+                      type: string
+                      description: The trailer URL for the community.
+                      example: "https://example.com/trailer.mp4"
+                    community_details.published_date:
+                      type: string
+                      format: date-time
+                      description: The published date of the community.
+                      example: "2024-01-01T00:00:00Z"
+                    community_details.tags:
+                      type: array
+                      items:
+                        type: string
+                    visibility.privacy:
+                      type: string
+                      description: The privacy setting of the community.
+                      example: "Public"
+                    visibility.member_contributions:
+                      type: string
+                      description: The member contribution setting of the community.
+                      example: "Enabled"
+                update_data:
+                  type: object
+                  properties:
+                    community_details.title:
+                      type: string
+                      description: The new title for the community.
+                      example: "Updated Community Title"
+                    community_details.branding_image:
+                      type: string
+                      description: The branding image URL for the community.
+                      example: "https://example.com/branding.jpg"
+                    community_details.description:
+                      type: string
+                      description: The description of the community.
+                      example: "This is the updated description of the community."
+                    community_details.trailer:
+                      type: string
+                      description: The trailer URL for the community.
+                      example: "https://example.com/trailer.mp4"
+                    community_details.published_date:
+                      type: string
+                      format: date-time
+                      description: The published date of the community.
+                      example: "2024-01-01T00:00:00Z"
+                    community_details.tags:
+                      type: array
+                      items:
+                        type: string
+                    visibility.privacy:
+                      type: string
+                      description: The privacy setting of the community.
+                      example: "Public"
+                    visibility.member_contributions:
+                      type: string
+                      description: The member contribution setting of the community.
+                      example: "Enabled"
+                    actions.rate_learning:
+                      type: boolean
+                      description: Whether rating learning is enabled.
+                    actions.comments:
+                      type: boolean
+                      description: Whether comments are enabled.
+                    actions.recommend:
+                      type: boolean
+                      description: Whether recommending is enabled.
+                    actions.report:
+                      type: boolean
+                      description: Whether reporting is enabled.
+                    actions.add_to_journey:
+                      type: boolean
+                      description: Whether adding to journey is enabled.
+                    related_materials.title:
+                      type: string
+                      description: The title of the related material.
+                    related_materials.url:
+                      type: string
+                      description: The URL of the related material.
+                    related_materials.type:
+                      type: string
+                      description: The type of the related material.
+                    members.name:
+                      type: string
+                      description: The name of the member.
+                    members.role:
+                      type: string
+                      description: The role of the member.
+      responses:
+        "200":
+          description: Community details successfully updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Community details successfully updated.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Community not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Community not found.
+
+  /community/add_member:
+    post:
+      operationId: addEmployee
+      summary: Adds a new employee to the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                community_name:
+                  type: string
+                  description: The name of the employee.
+                name:
+                  type: string
+                  description: The name of the employee.
+
+                role:
+                  type: string
+                  description: The role of the employee.
+              required:
+                - name
+                - role
+      responses:
+        "200":
+          description: Employee added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Employee added successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /course/complete:
+   post:
+    operationId: markCourseCompleted
+    summary: Mark a course as completed for a specific user.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              person_name:
+                type: string
+                description: The name of the user.
+              offering_name:
+                type: string
+                description: The name of the course offering.
+              issued_by:
+                type: string
+                description: The name of the issuer.
+              actual_effort:
+                type: string
+                description: The actual effort spent on the course.
+            required:
+              - person_name
+              - offering_name
+              - issued_by
+              - actual_effort
+    responses:
+      "200":
+        description: Successful response indicating the course was marked as completed.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message indicating the course was marked as completed.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+
+  /certificate/generate:
+    post:
+      operationId: generateCertificate
+      summary: Generates a certificate based on provided details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                recipient_name:
+                  type: string
+                  description: The name of the recipient.
+                  example: Bhupendra Verma
+                course_name:
+                  type: string
+                  description: The name of the course.
+                  example: Manual Handling
+                issued_by:
+                  type: string
+                  description: The name of the issuer.
+                  example: PCL Innovation
+                completed_on:
+                  type: string
+                  format: date
+                  description: The completion date of the course.
+                  example: 2024-06-27
+                actual_effort:
+                  type: string
+                  description: The evaluation of the actual effort.
+                  example: Excellent
+      responses:
+        "200":
+          description: Certificate generated successfully.
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+              examples:
+                certificate:
+                  summary: A generated certificate example
+                  description: An example of a generated certificate in PDF format.
+                  value: "base64-encoded-pdf-string"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "500":
+          description: Server error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Unable to generate certificate.
+
+  /course/recommend:
+    post:
+      operationId: recommendCourse
+      summary: Recommends courses based on job family.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                job_family:
+                  type: string
+                number_of_courses:
+                  type: integer
+                  default: 5
+              required:
+                - job_family
+      responses:
+        "200":
+          description: Courses recommended successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    course_name:
+                      type: string
+                    predicted_rating:
+                      type: number
+                    cosine_similarity:
+                      type: number
+                    combined_score:
+                      type: number
+                    volatility:
+                      type: number
+
+  /course/recommend/view:
+    post:
+      operationId: viewRecommendedCourses
+      summary: View course details based on job family name.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  properties:
+                    job_family:
+                      type: string
+                      description: The name of the job family to filter courses.
+                  required:
+                    - job_family
+      responses:
+        "200":
+          description: Course details fetched successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    course_name:
+                      type: string
+                    predicted_rating:
+                      type: number
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /create_teams_meeting:
+    post:
+      operationId: createTeamsMeeting
+      summary: Create a new Teams meeting.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: The name of the person creating the meeting.
+                subject:
+                  type: string
+                  description: The subject of the meeting.
+                start_time:
+                  type: string
+                  format: date-time
+                  description: The start time of the meeting.
+                end_time:
+                  type: string
+                  format: date-time
+                  description: The end time of the meeting.
+                attendees:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: The name of the attendee.
+                      type:
+                        type: string
+                        description: The type of attendee (required/optional).
+      responses:
+        "200":
+          description: Teams meeting created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Teams meeting created successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /Course/Enrollments_in_offerings/view:
+   post:
+    operationId: viewEnrollments
+    summary: Retrieves the list of enrollments for offering courses.
+    requestBody:
+      required: false
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                properties:
+                  offering_name:
+                    type: string
+                    description: The title of the offering course to filter enrollments.
+                  person_name:
+                    type: string
+                    description: The name of the person to filter enrollments.
+    responses:
+      "200":
+        description: List of enrollments retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  offering_name:
+                    type: string
+                  enrollment_date:
+                    type: string
+                    format: date
+                  offering_number:
+                    type: string
+                  person_name:
+                    type: string
+                  enrolled_status:
+                    type: string
+                  current_status:
+                    type: string
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+
+  
