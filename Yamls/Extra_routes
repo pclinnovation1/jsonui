@@ -1,0 +1,736 @@
+openapi: 3.1.0
+info:
+  title: Employee Details Management API
+  description: API for managing employee details.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for employee details management
+
+paths:
+
+  /scheduler/create-process:
+   post:
+    operationId: addProcess
+    summary: Add a new process.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              process_name:
+                type: string
+                description: Name of the process.
+                example: "Employee Onboarding"
+              template_name:
+                type: string
+                description: Name of the template.
+                example: "Standard Onboarding Template"
+              description:
+                type: string
+                description: Description of the process.
+                example: "This process handles the onboarding of new employees."
+              submission_notes:
+                type: string
+                description: Notes for submission.
+                example: "Please ensure all steps are completed."
+              notify_me_when_this_process_ends:
+                type: boolean
+                description: Notify the user when this process ends.
+                example: true
+              population_filters:
+                type: object
+                description: Filters for the population.
+                additionalProperties:
+                  type: string
+                example: {}
+              process_options:
+                type: object
+                description: Options for the process.
+                additionalProperties:
+                  type: string
+                example: {}
+              advanced_options:
+                type: object
+                description: Advanced options for the process.
+                additionalProperties:
+                  type: string
+                example: {}
+    responses:
+      "200":
+        description: Successful response indicating the process template was added.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message indicating the process template was added.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /add_employee:
+   post:
+    operationId: addEmployeeDetails
+    summary: Add details of a new employee.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              person_number:
+                type: string
+                description: The unique identifier for the employee.
+              a1_certification_valid_until:
+                type: string
+                description: The validity of A1 certification.
+              absence_cal:
+                type: string
+                description: The absence calculation.
+              additional_cost_centers:
+                type: string
+                description: Additional cost centers.
+              allowance:
+                type: number
+                description: The allowance amount.
+              asa_register:
+                type: string
+                description: The ASA register.
+              bank_account:
+                type: string
+                description: The bank account number.
+              base_salary:
+                type: number
+                description: The base salary.
+              benefits:
+                type: number
+                description: The benefits amount.
+              birth_name:
+                type: string
+                description: The birth name of the employee.
+              business_unit:
+                type: string
+                description: The business unit of the employee.
+              cost_centre:
+                type: string
+                description: The cost centre of the employee.
+              cost_centre_code:
+                type: number
+                description: The cost centre code.
+              currency:
+                type: string
+                description: The currency of salary.
+              date_of_birth:
+                type: string
+                format: date
+                description: The birth date of the employee.
+              department:
+                type: string
+                description: The department of the employee.
+              district:
+                type: string
+                description: The district.
+              effective_end_date:
+                type: string
+                description: The end date of effectiveness.
+              effective_start_date:
+                type: string
+                format: date
+                description: The start date of effectiveness.
+              email:
+                type: string
+                description: The email of the employee.
+              emergency_email:
+                type: string
+                description: The emergency email.
+              emergency_name:
+                type: string
+                description: The emergency contact name.
+              emergency_phone:
+                type: string
+                description: The emergency contact phone number.
+              employment_country:
+                type: string
+                description: The country of employment.
+              employment_health_examination:
+                type: string
+                description: Employment health examination details.
+              employment_status:
+                type: string
+                description: The status of employment.
+              employment_type:
+                type: string
+                description: The type of employment.
+              enter_standard_daily_working_hours:
+                type: number
+                description: Standard daily working hours.
+              first_name:
+                type: string
+                description: The first name of the employee.
+              fixed_term_reason:
+                type: string
+                description: The reason for fixed term employment.
+              fte:
+                type: number
+                description: Full-time equivalent.
+              full_time_or_part_time:
+                type: string
+                description: Full-time or part-time status.
+              gender:
+                type: string
+                description: The gender of the employee.
+              given_name:
+                type: string
+                description: The given name of the employee.
+              hk%:
+                type: number
+                description: The HK percentage.
+              home_city:
+                type: string
+                description: The home city of the employee.
+              home_country:
+                type: string
+                description: The home country of the employee.
+              home_district:
+                type: string
+                description: The home district.
+              home_email:
+                type: string
+                description: The home email.
+              home_phone_number:
+                type: string
+                description: The home phone number.
+              home_postal_code:
+                type: string
+                description: The home postal code.
+              home_regin:
+                type: string
+                description: The home region.
+              home_state:
+                type: string
+                description: The home state.
+              home_street_address:
+                type: string
+                description: The home street address.
+              indirect_direct:
+                type: string
+                description: Indirect or direct.
+              job_code:
+                type: string
+                description: The job code.
+              job_family:
+                type: string
+                description: The job family.
+              job_title:
+                type: string
+                description: The job title.
+              last_name:
+                type: string
+                description: The last name of the employee.
+              latest_periodic_health_examination:
+                type: string
+                description: The latest periodic health examination.
+              legal_entity:
+                type: string
+                description: The legal entity.
+              local_job_code:
+                type: string
+                description: The local job code.
+              local_job_code_poland:
+                type: string
+                description: The local job code in Poland.
+              location:
+                type: string
+                description: The location of the employee.
+              manager_name:
+                type: string
+                description: The name of the manager.
+              manager_person_number:
+                type: string
+                description: The person number of the manager.
+              multiplier:
+                type: number
+                description: The multiplier.
+              nationality:
+                type: string
+                description: The nationality of the employee.
+              occupational_healthcare_1:
+                type: string
+                description: Occupational healthcare provider 1.
+              occupational_healthcare_2:
+                type: string
+                description: Occupational healthcare provider 2.
+              oraganisation_number:
+                type: string
+                description: The organisation number.
+              organization_number:
+                type: string
+                description: The organisation number.
+              organization_unit:
+                type: string
+                description: The organisation unit.
+              original_start_date:
+                type: string
+                format: date
+                description: The original start date of employment.
+              overall_salary_per_month:
+                type: number
+                description: The overall salary per month.
+              parent_unit:
+                type: string
+                description: The parent unit.
+              part_time_hours:
+                type: string
+                description: The part-time hours.
+              payroll_area:
+                type: string
+                description: The payroll area.
+              person_name:
+                type: string
+                description: The name of the person.
+              person_type:
+                type: string
+                description: The type of person.
+              place_of_birth:
+                type: string
+                description: The place of birth.
+              post_office:
+                type: string
+                description: The post office.
+              projected_end_date:
+                type: string
+                description: The projected end date.
+              region:
+                type: string
+                description: The region.
+              regular_or_temporary:
+                type: string
+                description: Regular or temporary employment status.
+              residence_permits:
+                type: string
+                description: Residence permits.
+              residence_permits_validity:
+                type: string
+                description: The validity of residence permits.
+              retirement_date:
+                type: string
+                format: date
+                description: The retirement date.
+              role:
+                type: string
+                description: The role of the employee.
+              roles_list:
+                type: string
+                description: The list of roles.
+              salary_basis:
+                type: string
+                description: The basis of salary.
+              salary_class:
+                type: string
+                description: The salary class.
+              salary_effective_date:
+                type: string
+                format: date
+                description: The effective date of the salary.
+              salary_reason:
+                type: string
+                description: The reason for salary.
+              tax_number:
+                type: string
+                description: The tax number.
+              team_manager:
+                type: string
+                description: The team manager.
+              tk10_code:
+                type: string
+                description: The TK10 code.
+              trial_period:
+                type: string
+                description: The trial period.
+              trial_period_ends:
+                type: string
+                description: The end date of the trial period.
+              username:
+                type: string
+                description: The username.
+              work_mobile_number:
+                type: string
+                description: The work mobile number.
+              work_phone_number:
+                type: string
+                description: The work phone number.
+              worker_category:
+                type: string
+                description: The worker category.
+              working_as_manager:
+                type: string
+                description: Working as manager status.
+              working_from_home:
+                type: string
+                description: Working from home status.
+              working_hours_per_week:
+                type: number
+                description: The working hours per week.
+              working_hours_type:
+                type: string
+                description: The type of working hours.
+              business_title:
+                type: string
+                description: The business title.
+              cost_center_code:
+                type: string
+                description: The cost center code.
+              given_names:
+                type: string
+                description: The given names.
+              katri_s_best_guess_Job_name:
+                type: string
+                description: Katri's best guess of the job name.
+              katri_s_guess_bu:
+                type: string
+                description: Katri's guess of the business unit.
+              katri_s_guess_de:
+                type: string
+                description: Katri's guess of the department.
+              location_city:
+                type: string
+                description: The city of the location.
+              solaforce_og:
+                type: string
+                description: Solaforce OG.
+              employment_dff_2:
+                type: string
+                description: Employment DFF 2.
+              part_time_percentage:
+                type: string
+                description: The part-time percentage.
+              payment_commitment_hearing_protectors:
+                type: string
+                description: Payment commitment hearing protectors.
+    responses:
+      "200":
+        description: Successful response indicating the employee details were added.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message indicating the employee details were added.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  
+  /Employee/Details/view:
+    post:
+      operationId: viewEmployeeDetails
+      summary: View employee details based on a query or view all data.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: The name of the employee.
+                  example: "Shreya Umrao"
+                department:
+                  type: string
+                  description: The department of the employee.
+                  example: "Product Development"
+      responses:
+        "200":
+          description: Employee details retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  person_number:
+                    type: string
+                  person_name:
+                    type: string
+                  email:
+                    type: string
+                  first_name:
+                    type: string
+                  last_name:
+                    type: string
+                  given_names:
+                    type: string
+                  birth_name:
+                    type: string
+                  manager_name:
+                    type: string
+                  manager_person_number:
+                    type: string
+                  gender:
+                    type: string
+                  date_of_birth:
+                    type: string
+                    format: date
+                  place_of_birth:
+                    type: string
+                  ssn:
+                    type: string
+                  nationality:
+                    type: string
+                  marital_status:
+                    type: string
+                  denomination_religion:
+                    type: string
+                  health_insurance_company:
+                    type: string
+                  emergency_name:
+                    type: string
+                  emergency_phone:
+                    type: string
+                  emergency_email:
+                    type: string
+                  work_phone_number:
+                    type: string
+                  home_phone_number:
+                    type: string
+                  home_street_address:
+                    type: string
+                  postal_code:
+                    type: string
+                  post_office:
+                    type: string
+                  city:
+                    type: string
+                  region:
+                    type: string
+                  state_province:
+                    type: string
+                  district:
+                    type: string
+                  home_country:
+                    type: string
+                  ai_certification_valid_until:
+                    type: string
+                    format: date
+                  tax_number:
+                    type: string
+                  bank_account:
+                    type: string
+                  occupational_healthcare_1:
+                    type: string
+                  occupational_healthcare_2:
+                    type: string
+                  permits:
+                    type: string
+                  employment_health_examination:
+                    type: string
+                    format: date
+                  latest_periodic_health_examination:
+                    type: string
+                    format: date
+                  health_examination_information:
+                    type: string
+                  type_of_check_up:
+                    type: string
+                  next_check_up:
+                    type: string
+                    format: date
+                  country:
+                    type: string
+                  department:
+                    type: string
+                  employment_type:
+                    type: string
+                  full_time_or_part_time:
+                    type: string
+                  regular_or_temporary:
+                    type: string
+                  working_from_home:
+                    type: string
+                  working_as_manager:
+                    type: string
+                  fixed_term_reason:
+                    type: string
+                  job_title:
+                    type: string
+                  job_code:
+                    type: string
+                  job_family:
+                    type: string
+                  grade:
+                    type: string
+                  salary_basis:
+                    type: string
+                  tk10_code:
+                    type: string
+                  local_job_code:
+                    type: string
+                  fte:
+                    type: number
+                  headcount:
+                    type: number
+                  overall_salary_per_month:
+                    type: number
+                  multiplier:
+                    type: number
+                  cost_centre:
+                    type: string
+                  currency:
+                    type: string
+                  original_start_date:
+                    type: string
+                    format: date
+                  hire_date:
+                    type: string
+                    format: date
+                  projected_end_date:
+                    type: string
+                    format: date
+                  location:
+                    type: string
+                  working_hours_per_week:
+                    type: number
+                  indirect_direct:
+                    type: string
+                  person_type:
+                    type: string
+                  worker_category:
+                    type: string
+                  collective_agreements:
+                    type: string
+                  tarif_pay_group:
+                    type: string
+                  enter_standard_daily_working_hours:
+                    type: number
+                  choose_standard_working_days:
+                    type: string
+                  shift_type:
+                    type: string
+                  shift_hours:
+                    type: string
+                  overtime_eligibility:
+                    type: string
+                  overtime_rates:
+                    type: string
+                  maximum_overtime_hours:
+                    type: number
+                  core_hours:
+                    type: string
+                  flexi_time_bandwidth:
+                    type: string
+                  flexi_time_accumulation_limits:
+                    type: string
+                  effective_start_date:
+                    type: string
+                    format: date
+                  effective_end_date:
+                    type: string
+                    format: date
+                  business_unit:
+                    type: string
+                  legal_employer:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Employee details not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Employee details not found.
+
+  /create_teams_meeting:
+    post:
+      operationId: createTeamsMeeting
+      summary: Create a new Teams meeting.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: The name of the person creating the meeting.
+                subject:
+                  type: string
+                  description: The subject of the meeting.
+                start_time:
+                  type: string
+                  format: date-time
+                  description: The start time of the meeting.
+                end_time:
+                  type: string
+                  format: date-time
+                  description: The end time of the meeting.
+                attendees:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: The name of the attendee.
+                      type:
+                        type: string
+                        description: The type of attendee (required/optional).
+      responses:
+        "200":
+          description: Teams meeting created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Teams meeting created successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
