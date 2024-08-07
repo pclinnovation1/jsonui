@@ -1,0 +1,623 @@
+openapi: 3.1.0
+info:
+  title: Learning Catalog Management API
+  description: API to manage learning communities within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for communities management
+paths:
+  openapi: 3.1.0
+
+paths:
+  /process/create:
+   post:
+    operationId: createProcess
+    summary: Creates a new process to the catalog.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                description: The name of the process.
+                example: "Change Manager 11"
+              description:
+                type: string
+                description: The description of the process.
+                example: "Process to change manager"
+    responses:
+      "200":
+        description: Process created successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Process created successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+  /process/view:
+   post:
+    operationId: viewProcesses
+    summary: View process details from the catalog.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+    responses:
+      "200":
+        description: Processes retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: The name of the process.
+                      description:
+                        type: string
+                        description: The description of the process.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+      "404":
+        description: Process not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Process not found.
+
+
+  /approver/group/create:
+   post:
+    operationId: addApproversGroup
+    summary: Adds a new approvers group.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              approver_name:
+                type: string
+                description: The name of the approver.
+                example: "Demo group"
+              group:
+                type: string
+                description: The name of the approvers group.
+                example: "Product developer Team"
+              allow_empty_groups:
+                type: boolean
+                description: A flag indicating whether empty groups are allowed.
+                example: true
+              approver_member:
+                type: array
+                items:
+                  type: string
+                description: A list of person names for the approvers group.
+                example:
+                  - "Courtney Allison"
+                  - "Cindy Wright"
+    responses:
+      "200":
+        description: Approvers group added successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Approvers group added successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+  /approver/hierarchy/create:
+   post:
+    operationId: addApproversHierarchy
+    summary: Adds a new approvers hierarchy.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              approver_name:
+                type: string
+                description: The name of the approver.
+              department:
+                type: string
+                description: The name of the department.
+              route_using:
+                type: integer
+                description: The method or criteria used for routing.
+              approval_chain_of:
+                type: string
+                description: The entity for which the approval chain is defined.
+              start_with:
+                type: integer
+                description: The starting point of the approval chain.
+              number_of_levels:
+                type: integer
+                description: The number of levels in the approval chain.
+              top_approver:
+                type: integer
+                description: The top-level approver number in the hierarchy.
+    responses:
+      "200":
+        description: Approvers hierarchy added successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Approvers hierarchy added successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+  /approver/representative/create:
+   post:
+    operationId: createApproverRepresentative
+    summary: Creates a new approver representative.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              approver_name:
+                type: string
+                description: The name of the approver.
+              representative_type:
+                type: string
+                description: The type of representative.
+                example: "HR"
+              representative_of:
+                type: string
+                description: The entity the representative is associated with.
+                example: "Employee"
+              approver_member:
+                type: array
+                items:
+                  type: string
+                description: The list of approvers' name.
+                example: "John Doe"
+    responses:
+      "200":
+        description: Approver representative created successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Approver representative created successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+  /approver/view:
+   post:
+    operationId: viewApprovers
+    summary: View approvers details from the catalog.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+    responses:
+      "200":
+        description: Approver details retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+      "404":
+        description: Approver not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Approver not found.
+
+  /condition/create:
+   post:
+    operationId: createConditions
+    summary: Create conditions for a specified process.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              process_name:
+                type: string
+                description: The name of the process for which the conditions are being created.
+                example: "Course Approval"
+              conditions:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    condition:
+                      type: string
+                      description: The condition to be evaluated.
+                    condition_type:
+                      type: string
+                      description: The type of the condition.
+                      enum:
+                        - 'all'
+                        - 'na'
+                        - 'or'
+                        - 'in'
+                    condition_operator:
+                      type: string
+                      description: The operator for the condition.
+                      enum:
+                        - '<'
+                        - '>'
+                        - '<='
+                        - '>='
+                        - 'between'
+                        - '=='
+                        - '!='
+                        - 'in'
+    responses:
+      "200":
+        description: Conditions created successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Conditions created successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+
+  /condition/view:
+   post:
+    operationId: viewConditions
+    summary: View conditions for a specified process.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+    responses:
+      "200":
+        description: Conditions retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                conditions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      process_name:
+                        type: string
+                        description: The name of the process.
+                      condition:
+                        type: string
+                        description: The condition to be evaluated.
+                      condition_type:
+                        type: string
+                        description: The type of the condition.
+                      condition_operator:
+                        type: string
+                        description: The operator for the condition.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+      "404":
+        description: Conditions not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Conditions not found.
+
+  /approval_rule/create:
+   post:
+    operationId: addApprovalRules
+    summary: Add approval rules for a process.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              process_name:
+                type: string
+                description: The name of the process for which approval rules are being added.
+                example: "Change Manager 11"
+              conditions:
+                type: array
+                description: List of conditions with their respective approvers.
+                items:
+                  type: object
+                  properties:
+                    condition_id:
+                      type: integer
+                      description: The ID of the condition(always starts from 1).
+                      example: "1"
+                    approvers:
+                      type: array
+                      description: List of approver names for the condition.
+                      items:
+                        type: string
+                      example: ["John Doe", "Demo representative"]
+    responses:
+      "200":
+        description: Approval rules added successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Approval rules added successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+
+  /transaction/create:
+   post:
+    operationId: addTransaction
+    summary: Add a transaction for a specified process.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              process_name:
+                type: string
+                description: The name of the process for which the transaction is being added.
+                example: "Change Manager 11"
+              transaction_fields:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    description: List of values for the transaction fields.
+                    items:
+                      type: string
+                    example: ["6", "Team Lead", "IT"]
+              field_type:
+                type: array
+                description: List of field titles corresponding to the values.
+                items:
+                  type: string
+                example: ["experience", "current_position", "department"]
+    responses:
+      "200":
+        description: Transaction added successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Transaction added successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+  /transaction/reminders:
+   post:
+    operationId: sendTransactionReminders
+    summary: Send reminders for a specified process.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              process_name:
+                type: string
+                description: The name of the process for which the reminders are being sent.
+                example: "Change Manager 11"
+    responses:
+      "200":
+        description: Reminders sent successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Reminders sent successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+
+  /transaction/view:
+   post:
+    operationId: viewTransactions
+    summary: View transaction details from the catalog.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+    responses:
+      "200":
+        description: Transactions details retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+      "404":
+        description: Transaction not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Transaction not found.
