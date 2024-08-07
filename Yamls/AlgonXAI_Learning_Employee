@@ -1,0 +1,1313 @@
+openapi: 3.1.0
+info:
+  title: Me Learning Management API
+  description: API to manage catalog resources within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for catalog resources management
+
+paths:
+  /Learning/ExternalLearning/add:
+    post:
+      operationId: recordExternalLearning
+      summary: Records details of external learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - completion_details
+                      - learning_item_details
+                      - learners
+                    properties:
+                      completion_details:
+                        type: object
+                        properties:
+                          start_date:
+                            type: string
+                            format: date
+                          completion_date:
+                            type: string
+                            format: date
+                          actual_effort_in_hours:
+                            type: number
+                          score_achieved:
+                            type: number
+                          context_segment:
+                            type: string
+                      attachments:
+                        type: array
+                        items:
+                          type: string
+                      learning_item_details:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                          url:
+                            type: string
+                          expected_training_hours:
+                            type: number
+                          cost:
+                            type: number
+                          currency:
+                            type: string
+                          description:
+                            type: string
+                          topic:
+                            type: string
+                          context_segment:
+                            type: string
+                      learners:
+                        type: object
+                        properties:
+                          selection_type:
+                            type: string
+                          select_a_person:
+                            type: string
+                          note_to_learners:
+                            type: string
+                      justification:
+                        type: string
+      responses:
+        "200":
+          description: External learning recorded successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Learning/ExternalLearning/view:
+    post:
+      operationId: viewExternalLearning
+      summary: Retrieves recorded external learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    Title:
+                      type: string
+                    Topic:
+                      type: string
+                    Start_Date:
+                      type: string
+                      format: date
+                    Completion_Date:
+                      type: string
+                      format: date
+                limit:
+                  type: integer
+                  description: Number of records to retrieve (use 0 to retrieve all records).
+                  example: 1
+      responses:
+        "200":
+          description: Successfully retrieved external learning.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        person_name:
+                          type: string
+                        start_date:
+                          type: string
+                          format: date
+                        completion_date:
+                          type: string
+                          format: date
+                        actual_effort_in_hours:
+                          type: number
+                        score_achieved:
+                          type: number
+                        context_segment:
+                          type: string
+                        attachments:
+                          type: array
+                          items:
+                            type: string
+                        learning_item_details:
+                          type: object
+                          properties:
+                            title:
+                              type: string
+                            url:
+                              type: string
+                            expected_training_hours:
+                              type: number
+                            cost:
+                              type: number
+                            currency:
+                              type: string
+                            description:
+                              type: string
+                            topic:
+                              type: string
+                            context_segment:
+                              type: string
+                        justification:
+                          type: string
+        "404":
+          description: External learning records not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /Learning/ExternalLearning/update:
+    post:
+      operationId: updateExternalLearning
+      summary: Updates records of external learning based on a query.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - title
+                  properties:
+                    learning_item_details.title:
+                      type: string
+                      description: The title of the external learning record to update.
+                      example: Advanced Data Science
+                update_data:
+                  type: object
+                  properties:
+                    person_name:
+                      type: string
+                      description: The name of the person.
+                      example: John Doe
+                    completion_details.start_date:
+                      type: string
+                      format: date
+                      description: The start date of the external learning.
+                      example: 2024-01-01
+                    completion_details.completion_date:
+                      type: string
+                      format: date
+                      description: The completion date of the external learning.
+                      example: 2024-06-01
+                    completion_details.actual_effort_in_hours:
+                      type: number
+                      description: The actual effort in hours spent on the external learning.
+                      example: 40
+                    completion_details.score_achieved:
+                      type: number
+                      description: The score achieved in the external learning.
+                      example: 85
+                    completion_details.context_segment:
+                      type: string
+                      description: The context segment of the external learning.
+                      example: Technical Skills
+                    learning_item_details.title:
+                      type: string
+                      description: The title of the external learning.
+                      example: Advanced Data Science
+                    learning_item_details.url:
+                      type: string
+                      description: The URL of the external learning.
+                      example: https://example.com/course
+                    learning_item_details.expected_training_hours:
+                      type: number
+                      description: The expected training hours for the external learning.
+                      example: 50
+                    learning_item_details.cost:
+                      type: number
+                      description: The cost of the external learning.
+                      example: 1000
+                    learning_item_details.currency:
+                      type: string
+                      description: The currency of the cost.
+                      example: USD
+                    learning_item_details.description:
+                      type: string
+                      description: A description of the external learning.
+                      example: A comprehensive course on advanced data science techniques.
+                    learning_item_details.topic:
+                      type: string
+                      description: The topic of the external learning.
+                      example: Data Science
+                    justification:
+                      type: string
+                      description: The justification for the external learning.
+                      example: Required for project X
+      responses:
+        "200":
+          description: External learning records updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: External learning records updated successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: External learning records not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: External learning records not found.
+  
+  /Learning/NoncatalogLearning/add:
+    post:
+      operationId: requestNoncatalogLearning
+      summary: Requests non-catalog learning.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - start_date
+                      - due_date
+                      - context_segment
+                      - learning_item_details
+                    properties:
+                      start_date:
+                        type: string
+                        format: date
+                      due_date:
+                        type: string
+                        format: date
+                      context_segment:
+                        type: string
+                      learning_item_details:
+                        type: object
+                        required:
+                          - title
+                          - url
+                          - cost
+                          - expected_training_hours
+                          - currency
+                          - description
+                          - topic
+                          - context_segment
+                          - justification
+                        properties:
+                          title:
+                            type: string
+                          url:
+                            type: string
+                          cost:
+                            type: number
+                          expected_training_hours:
+                            type: number
+                          currency:
+                            type: string
+                          description:
+                            type: string
+                          topic:
+                            type: string
+                          context_segment:
+                            type: string
+                          justification:
+                            type: string
+      responses:
+        "200":
+          description: Non-catalog learning successfully requested.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Learning/NoncatalogLearning/update:
+    post:
+      operationId: updateNoncatalogLearning
+      summary: Updates non-catalog learning records based on a query.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - learning_item_details.title
+                  properties:
+                    learning_item_details.title:
+                      type: string
+                      description: The title of the non-catalog learning record to update.
+                      example: Advanced Noncatalog Learning
+                update_data:
+                  type: object
+                  properties:
+                    person_name:
+                      type: string
+                      description: The name of the person.
+                      example: John Doe
+                    start_date:
+                      type: string
+                      format: date
+                      description: The start date of the non-catalog learning.
+                      example: 2024-01-01
+                    due_date:
+                      type: string
+                      format: date
+                      description: The due date of the non-catalog learning.
+                      example: 2024-06-01
+                    context_segment:
+                      type: string
+                      description: The context segment of the non-catalog learning.
+                      example: Technical Skills
+                    learning_item_details:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          description: The title of the learning item.
+                          example: Advanced Data Science
+                        url:
+                          type: string
+                          description: The URL of the learning item.
+                          example: https://example.com/course
+                        cost:
+                          type: number
+                          description: The cost of the learning item.
+                          example: 1000
+                        expected_training_hours:
+                          type: number
+                          description: The expected training hours for the learning item.
+                          example: 50
+                        currency:
+                          type: string
+                          description: The currency of the cost.
+                          example: USD
+                        description:
+                          type: string
+                          description: A description of the learning item.
+                          example: A comprehensive course on advanced data science techniques.
+                        topic:
+                          type: string
+                          description: The topic of the learning item.
+                          example: Data Science
+                        context_segment:
+                          type: string
+                          description: The context segment of the learning item.
+                          example: Technical Skills
+                        justification:
+                          type: string
+                          description: The justification for the learning item.
+                          example: Required for project X
+      responses:
+        "200":
+          description: Non-catalog learning records updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Non-catalog learning records updated successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Non-catalog learning records not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Non-catalog learning records not found.
+
+  /Learning/NoncatalogLearning/view:
+    post:
+      operationId: viewNoncatalogLearning
+      summary: Retrieves non-catalog learning requests.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    Title:
+                      type: string
+                    Topic:
+                      type: string
+                    Start_Date:
+                      type: string
+                      format: date
+                    Due_Date:
+                      type: string
+                      format: date
+      responses:
+        "200":
+          description: Successfully retrieved non-catalog learning requests.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Request_Details:
+                          type: object
+                          properties:
+                            Start_Date:
+                              type: string
+                              format: date
+                            Due_Date:
+                              type: string
+                              format: date
+                            Context_Segment:
+                              type: string
+                        Attachments:
+                          type: array
+                          items:
+                            type: string
+                        Learning_Item_Details:
+                          type: object
+                          properties:
+                            Title:
+                              type: string
+                            URL:
+                              type: string
+                            Expected_Training_Hours:
+                              type: number
+                            Cost:
+                              type: number
+                            Currency:
+                              type: string
+                            Description:
+                              type: string
+                            Topic:
+                              type: string
+                            Context_Segment:
+                              type: string
+                        Justification:
+                          type: string
+                        Actions:
+                          type: object
+                          properties:
+                            Submit:
+                              type: boolean
+        "404":
+          description: Non-catalog learning requests not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /Learning/Community/view:
+    post:
+      operationId: viewCommunity
+      summary: Retrieves community details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    community_details:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        branding_image:
+                          type: string
+                        description:
+                          type: string
+                        trailer:
+                          type: string
+                        published_date:
+                          type: string
+                          format: date-time
+                        tags:
+                          type: array
+                          items:
+                            type: string
+                    actions:
+                      type: object
+                      properties:
+                        rate_learning:
+                          type: boolean
+                        comments:
+                          type: boolean
+                        recommend:
+                          type: boolean
+                        report:
+                          type: boolean
+                        add_to_journey:
+                          type: boolean
+                    related_materials:
+                      type: array
+                      items:
+                        type: string
+                    members:
+                      type: array
+                      items:
+                        type: object
+      responses:
+        "200":
+          description: Successfully retrieved community details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        community_details:
+                          type: object
+                          properties:
+                            title:
+                              type: string
+                            branding_image:
+                              type: string
+                            description:
+                              type: string
+                            trailer:
+                              type: string
+                            published_date:
+                              type: string
+                              format: date-time
+                            tags:
+                              type: array
+                              items:
+                                type: string
+                        actions:
+                          type: object
+                          properties:
+                            rate_learning:
+                              type: boolean
+                            comments:
+                              type: boolean
+                            recommend:
+                              type: boolean
+                            report:
+                              type: boolean
+                            add_to_journey:
+                              type: boolean
+                        related_materials:
+                          type: array
+                          items:
+                            type: string
+                        members:
+                          type: array
+                          items:
+                            type: object
+        "404":
+          description: Community details not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /Course/Assigned/view:
+    post:
+      operationId: viewCourses
+      summary: Views assigned courses of an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - employee_name
+              properties:
+                employee_name:
+                  type: string
+                  description: Name of the employee
+      responses:
+        "200":
+          description: Successfully retrieved the courses assigned to the employee.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  courses:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        course_title:
+                          type: string
+                        person_name:
+                          type: string
+                        course_start_date:
+                          type: string
+                          format: date
+                        course_end_date:
+                          type: string
+                          format: date
+        "400":
+          description: Missing employee_name in request body.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing employee_name in request body
+
+  /Course/Offering/view:
+   post:
+    operationId: viewCourse
+    summary: Views details of a course.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                properties:
+                  course_name:
+                    type: string
+                    description: Name of the course.
+                    example: "Advanced Data Analysis"
+                  offering_name:
+                    type: string
+                    description: Title of the course offering.
+                    example: "Advanced Data Science Workshop"
+    responses:
+      "200":
+        description: Course details retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                records:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      _id:
+                        type: string
+                      offering_number:
+                        type: string
+                      general_information.basic_information.title:
+                        type: string
+                      general_information.basic_information.description:
+                        type: string
+                      general_information.basic_information.offering_type:
+                        type: string
+                      general_information.offering_details.offering_start_date:
+                        type: string
+                      general_information.offering_details.offering_end_date:
+                        type: string
+                      general_information.offering_details.primary_classroom:
+                        type: string
+                      general_information.offering_details.language:
+                        type: string
+                      general_information.offering_details.facilitator_type:
+                        type: string
+                      general_information.offering_details.offering_coordinator:
+                        type: string
+                      general_information.offering_details.comments:
+                        type: string
+                      related_materials.attachments:
+                        type: array
+                        items:
+                          type: string
+                      capacity_rules.booked_seats:
+                        type: integer
+                      capacity_rules.maximum_capacity:
+                        type: integer
+                      capacity_rules.minimum_capacity:
+                        type: integer
+                      capacity_rules.capacity_rules_description:
+                        type: string
+                      pricing.price:
+                        type: number
+                      pricing.currency:
+                        type: string
+                      payment.payment_type:
+                        type: string
+                      additional_attributes.topic:
+                        type: string
+                      additional_attributes.has_evaluation:
+                        type: boolean
+                      additional_attributes.expected_effort:
+                        type: integer
+                      statistics.active_learners:
+                        type: integer
+                      statistics.completed_learners:
+                        type: integer
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+
+
+  /course/enroll_in_offering_courses:
+    post:
+      operationId: enrollEmployee
+      summary: Enrolls an employee in offering courses.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - offering_title
+                - enrollment_date
+                - person_name
+              properties:
+                offering_title:
+                  type: string
+                enrollment_date:
+                  type: string
+                  format: date
+                offering_number:
+                  type: string
+                person_name:
+                  type: string
+      responses:
+        "200":
+          description: Employee successfully enrolled in offering courses.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Course/Enrollments_in_offerings/view:
+   post:
+    operationId: viewEnrollments
+    summary: Retrieves the list of enrollments for offering courses.
+    requestBody:
+      required: false
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                properties:
+                  offering_name:
+                    type: string
+                    description: The title of the offering course to filter enrollments.
+                  person_name:
+                    type: string
+                    description: The name of the person to filter enrollments.
+    responses:
+      "200":
+        description: List of enrollments retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  offering_name:
+                    type: string
+                  enrollment_date:
+                    type: string
+                    format: date
+                  offering_number:
+                    type: string
+                  person_name:
+                    type: string
+                  enrolled_status:
+                    type: string
+                  current_status:
+                    type: string
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+
+  /course/withdraw_from_offering_courses:
+    post:
+      operationId: withdrawEmployee
+      summary: Withdraws an employee from a course offering.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - offering_title
+                - person_name
+              properties:
+                offering_title:
+                  type: string
+                person_name:
+                  type: string
+      responses:
+        "200":
+          description: Employee withdrawn successfully and waitlist updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Employee withdrawn successfully and waitlist updated.
+        "400":
+          description: Invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  offerings:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        offering_name:
+                          type: string
+                        person_name:
+                          type: string
+        "404":
+          description: Offering or employee not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Catalog/Video/add:
+    post:
+      operationId: addVideo
+      summary: Adds new video details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - title
+                      - start_date
+                      - end_date
+                      - description
+                      - content
+                    properties:
+                      title:
+                        type: string
+                      start_date:
+                        type: string
+                        format: date
+                      end_date:
+                        type: string
+                        format: date
+                      description:
+                        type: string
+                      content:
+                        type: string
+      responses:
+        "200":
+          description: Content details successfully added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /Catalog/Video/view:
+    post:
+      operationId: viewVideos
+      summary: Views published videos.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: object
+                  properties:
+                    limit:
+                      type: integer
+                      description: "Specify the number of videos to retrieve (1, 2, or all). Use -1 to retrieve all videos."
+      responses:
+        "200":
+          description: Successfully retrieved videos.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Video:
+                          type: string
+                        Title:
+                          type: string
+                        Description:
+                          type: string
+                        Visibility:
+                          type: array
+                          items:
+                            type: string
+                        RelatedMaterials:
+                          type: array
+                          items:
+                            type: string
+        "404":
+          description: No videos found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /Catalog/Video/update:
+    post:
+      operationId: updateVideo
+      summary: Updates existing video details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - title
+                  properties:
+                    title:
+                      type: string
+                      description: The title of the video to update.
+                      example: Existing Video Title
+                update_data:
+                  type: object
+                  required:
+                    - title
+                    - start_date
+                    - end_date
+                    - description
+                    - content
+                  properties:
+                    title:
+                      type: string
+                      description: The new title for the Video.
+                      example: Updated Video Title
+                    start_date:
+                      type: string
+                      format: date
+                      description: The start date for the Video.
+                      example: 2024-01-01
+                    end_date:
+                      type: string
+                      format: date
+                      description: The end date for the Video.
+                      example: 2024-12-31
+                    description:
+                      type: string
+                      description: A description for the Video.
+                      example: This is the updated description of the Video.
+                    content:
+                      type: string
+                      description: The content of the Video.
+                      example: Updated content for the Video.
+      responses:
+        "200":
+          description: Video details successfully updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Video details successfully updated.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+  
+  /Catalog/Video/delete:
+    post:
+      operationId: deleteVideo
+      summary: Delete video from the catalog resources based on a query.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                      nullable: true
+                    start_date:
+                      type: string
+                      format: date
+                      nullable: true
+                    end_date:
+                      type: string
+                      format: date
+                      nullable: true
+                    description:
+                      type: string
+                      nullable: true
+                    content:
+                      type: string
+                      nullable: true
+      responses:
+        "200":
+          description: Videos successfully deleted.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /course/recommend:
+    post:
+      operationId: recommendCourse
+      summary: Recommends courses based on job family.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                job_family:
+                  type: string
+                number_of_courses:
+                  type: integer
+                  default: 5
+              required:
+                - job_family
+      responses:
+        "200":
+          description: Courses recommended successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    course_name:
+                      type: string
+                    predicted_rating:
+                      type: number
+                    cosine_similarity:
+                      type: number
+                    combined_score:
+                      type: number
+                    volatility:
+                      type: number
+
+  /course/recommend/view:
+    post:
+      operationId: viewRecommendedCourses
+      summary: View course details based on job family name.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  properties:
+                    job_family:
+                      type: string
+                      description: The name of the job family to filter courses.
+                  required:
+                    - job_family
+      responses:
+        "200":
+          description: Course details fetched successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    course_name:
+                      type: string
+                    predicted_rating:
+                      type: number
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
