@@ -1,0 +1,1829 @@
+openapi: 3.1.0
+info:
+  title: Learning Catalog Management API
+  description: API to manage learning communities within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for communities management
+paths:
+  openapi: 3.1.0
+
+paths:
+  /goal/create:
+    post:
+      operationId: addGoal
+      summary: Add goal details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                basic_info:
+                  type: object
+                  properties:
+                    goal_name:
+                      type: string
+                      description: Name of the goal.
+                    description:
+                      type: string
+                      description: Description of the goal.
+                    start_date:
+                      type: string
+                      format: date
+                      description: Start date of the goal.
+                    target_completion_date:
+                      type: string
+                      format: date
+                      description: Target completion date of the goal.
+                    category:
+                      type: string
+                      description: Category of the goal.
+                    success_criteria:
+                      type: string
+                      description: Success criteria for the goal.
+                    status:
+                      type: string
+                      description: Status of the goal.
+                    level:
+                      type: string
+                      description: Level of the goal.
+                    subtype:
+                      type: string
+                      description: Subtype of the goal.
+                measurements:
+                  type: object
+                  properties:
+                    measurement_name:
+                      type: string
+                      description: Name of the measurement.
+                    unit_of_measure:
+                      type: string
+                      description: Unit of measure.
+                    start_date:
+                      type: string
+                      format: date
+                      description: Start date of the measurement.
+                    end_date:
+                      type: string
+                      format: date
+                      description: End date of the measurement.
+                    comments:
+                      type: string
+                      description: Comments on the measurement.
+                    target_type:
+                      type: string
+                      description: Target type.
+                    target_value:
+                      type: string
+                      description: Target value.
+                    actual_value:
+                      type: string
+                      description: Actual value.
+                tasks:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name of the task.
+                    type:
+                      type: string
+                      description: Type of the task.
+                    status:
+                      type: string
+                      description: Status of the task.
+                    priority:
+                      type: string
+                      description: Priority of the task.
+                    comments:
+                      type: string
+                      description: Comments on the task.
+                    completion_percentage:
+                      type: string
+                      description: Completion percentage of the task.
+                    start_date:
+                      type: string
+                      format: date
+                      description: Start date of the task.
+                    target_completion_date:
+                      type: string
+                      format: date
+                      description: Target completion date of the task.
+                    related_link:
+                      type: string
+                      description: Related link.
+                library_info:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      description: Status of the library info.
+                    type:
+                      type: string
+                      description: Type of the library info.
+                    available_to:
+                      type: string
+                      description: Availability of the library info.
+                    legal_employer:
+                      type: string
+                      description: Legal employer.
+                    business_unit:
+                      type: string
+                      description: Business unit.
+                    department:
+                      type: string
+                      description: Department.
+                    external_id:
+                      type: string
+                      description: External ID.
+                eligibility_name:
+                  type: string
+                  description: Name of the eligibility profile.
+              required:
+                - basic_info
+                - measurements
+                - tasks
+                - library_info
+                - eligibility_name
+      responses:
+        "200":
+          description: Goal details added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Goal details added successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+ 
+  /goal/view:
+    post:
+      operationId: viewGoals
+      summary: View goal details based on query.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: array
+                  description: Query to filter goals. If empty, all goals will be returned.
+                  items:
+                    type: object
+                    properties:
+                      goal_name:
+                        type: string
+                        description: Name of the goal
+      responses:
+        "200":
+          description: List of goals based on the query.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    basic_info:
+                      type: object
+                      properties:
+                        goal_name:
+                          type: string
+                          description: Name of the goal
+                        description:
+                          type: string
+                          description: Description of the goal
+                        start_date:
+                          type: string
+                          format: date
+                          description: Start date of the goal
+                        target_completion_date:
+                          type: string
+                          format: date
+                          description: Target completion date of the goal
+                        category:
+                          type: string
+                          description: Category of the goal
+                        success_criteria:
+                          type: string
+                          description: Success criteria for the goal
+                        status:
+                          type: string
+                          description: Status of the goal
+                        level:
+                          type: string
+                          description: Level of the goal
+                        subtype:
+                          type: string
+                          description: Subtype of the goal
+                    measurements:
+                      type: object
+                      properties:
+                        measurement_name:
+                          type: string
+                          description: Name of the measurement
+                        unit_of_measure:
+                          type: string
+                          description: Unit of measure
+                        start_date:
+                          type: string
+                          format: date
+                          description: Start date of the measurement
+                        end_date:
+                          type: string
+                          format: date
+                          description: End date of the measurement
+                        comments:
+                          type: string
+                          description: Comments on the measurement
+                        target_type:
+                          type: string
+                          description: Target type
+                        target_value:
+                          type: string
+                          description: Target value
+                        actual_value:
+                          type: string
+                          description: Actual value
+                    tasks:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          description: Name of the task
+                        type:
+                          type: string
+                          description: Type of the task
+                        status:
+                          type: string
+                          description: Status of the task
+                        priority:
+                          type: string
+                          description: Priority of the task
+                        comments:
+                          type: string
+                          description: Comments on the task
+                        completion_percentage:
+                          type: string
+                          description: Completion percentage of the task
+                        start_date:
+                          type: string
+                          format: date
+                          description: Start date of the task
+                        target_completion_date:
+                          type: string
+                          format: date
+                          description: Target completion date of the task
+                        related_link:
+                          type: string
+                          description: Related link
+                    library_info:
+                      type: object
+                      properties:
+                        status:
+                          type: string
+                          description: Status of the library info
+                        type:
+                          type: string
+                          description: Type of the library info
+                        available_to:
+                          type: string
+                          description: Availability of the library info
+                        legal_employer:
+                          type: string
+                          description: Legal employer
+                        business_unit:
+                          type: string
+                          description: Business unit
+                        department:
+                          type: string
+                          description: Department
+                        external_id:
+                          type: string
+                          description: External ID
+                    eligibility_name:
+                      type: string
+                      description: Name of the eligibility profile
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid query in request body.
+
+  /Goals/update:
+    post:
+      operationId: updateGoals
+      summary: Update goals based on a query.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  required:
+                    - name
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the goal to update.
+                      example: "Increase Sales"
+                    category:
+                      type: string
+                      description: The category of the goal to update.
+                      example: "Sales"
+                update_data:
+                  type: object
+                  properties:
+                    description:
+                      type: string
+                      description: The new description of the goal.
+                    start_date:
+                      type: string
+                      format: date
+                      description: The new start date of the goal.
+                    end_date:
+                      type: string
+                      format: date
+                      description: The new end date of the goal.
+                    success_criteria:
+                      type: string
+                      description: The new success criteria of the goal.
+                    priority:
+                      type: string
+                      description: The new priority of the goal.
+                    level:
+                      type: string
+                      description: The new level of the goal.
+                    related_link:
+                      type: string
+                      description: The new realted link of the goal.
+                    library_info.status:
+                      type: string
+                      description: The new status of library info of the goal.
+                    library_info.type:
+                      type: string
+                      description: The new type of library info of the goal.
+                    library_info.available_to:
+                      type: string
+                      description: The new available_to of library info of the goal.
+                    measurements.measurement_name:
+                      type: string
+                      description: The new measurement name.
+                      example: "Revenue Growth"
+                    measurements.unit_of_measure:
+                      type: string
+                      description: The new unit of measure.
+                      example: "Percentage"
+                    measurements.start_date:
+                      type: string
+                      format: date
+                      description: The new start date for measurements.
+                      example: "2024-02-01"
+                    measurements.end_date:
+                      type: string
+                      format: date
+                      description: The new end date for measurements.
+                      example: "2024-04-30"
+                    measurements.comments:
+                      type: string
+                      description: The new comments for measurements.
+                      example: "Monitor monthly"
+                    measurements.target_type:
+                      type: string
+                      description: The new target type.
+                      example: "Threshold"
+                    measurements.target_value:
+                      type: number
+                      description: The new target value.
+                      example: 30
+                    measurements.actual_value:
+                      type: number
+                      description: The new actual value.
+                      example: 20
+                    tasks.name:
+                      type: string
+                      description: The new task name.
+                      example: "Explore new markets"
+                    tasks.type:
+                      type: string
+                      description: The new task type.
+                      example: "Research"
+                    tasks.status:
+                      type: string
+                      description: The new task status.
+                      example: "Pending"
+                    tasks.priority:
+                      type: string
+                      description: The new task priority.
+                      example: "High"
+                    tasks.comments:
+                      type: string
+                      description: The new comments for the task.
+                      example: "Focus on emerging markets"
+                    tasks.completion_percentage:
+                      type: number
+                      description: The new completion percentage.
+                      example: 10
+                    tasks.start_date:
+                      type: string
+                      format: date
+                      description: The new start date for the task.
+                      example: "2024-02-05"
+                    tasks.end_date:
+                      type: string
+                      format: date
+                      description: The new end date for the task.
+                      example: "2024-03-31"
+                    tasks.related_link:
+                      type: string
+                      description: The new related link for the task.
+                      example: "http://example.com/new-markets"
+      responses:
+        "200":
+          description: Goals updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Goals updated successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Goals not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Goals not found.
+
+  /goal_plan/create:
+    post:
+      operationId: addGoalPlan
+      summary: Create a new goal plan.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                details:
+                  type: object
+                  properties:
+                    goal_plan_name:
+                      type: string
+                      description: Name of the goal plan.
+                    review_period:
+                      type: string
+                      description: Review period of the goal plan.
+                    description:
+                      type: string
+                      description: Description of the goal plan.
+                    allow_updates_to_goals_by:
+                      type: string
+                      description: Who is allowed to update goals.
+                    actions_for_workers_and_managers_on_hr_assigned_goals:
+                      type: string
+                      description: Actions for workers and managers on HR assigned goals.
+                    performance_document_types:
+                      type: string
+                      description: Types of performance documents.
+                    evaluation_type:
+                      type: string
+                      description: Type of evaluation.
+                    goal_weights:
+                      type: string
+                      description: How goals are weighted.
+                    maximum_goals_for_this_goal_plan:
+                      type: string
+                      description: Maximum number of goals for this goal plan.
+                    start_date:
+                      type: string
+                      format: date
+                      description: Start date of the goal plan.
+                    end_date:
+                      type: string
+                      format: date
+                      description: End date of the goal plan.
+                    updated_by:
+                      type: string
+                      description: Who updated the goal plan.
+                goals:
+                  type: array
+                  items:
+                    type: string
+                  description: List of goals.
+                eligibility_profiles:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: Name of the eligibility profile.
+                included_workers:
+                  type: array
+                  items:
+                    type: string
+                  description: List of included workers.
+                excluded_workers:
+                  type: array
+                  items:
+                    type: string
+                  description: List of excluded workers.
+              required:
+                - details
+                - goals
+                - eligibility_profiles
+                - included_workers
+                - excluded_workers
+      responses:
+        "200":
+          description: Goal plan created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Goal plan created successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /DevelopmentPlan/add:
+    post:
+      operationId: addDevelopmentPlan
+      summary: Add a Development plan with actions and comments.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      plan_id:
+                        type: string
+                        description: Unique identifier for the training plan.
+                      plan_name:
+                        type: string
+                        description: Name of the training plan.
+                      description:
+                        type: string
+                        description: Detailed description of the training plan.
+                      start_date:
+                        type: string
+                        format: date
+                        description: Start date of the training plan.
+                      end_date:
+                        type: string
+                        format: date
+                        description: End date of the training plan.
+                      status:
+                        type: string
+                        description: Current status of the training plan.
+                      progress_percentage:
+                        type: integer
+                        description: Progress percentage of the training plan.
+                      actions:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            description:
+                              type: string
+                              description: Description of the action.
+                            due_date:
+                              type: string
+                              format: date
+                              description: Due date of the action.
+                            status:
+                              type: string
+                              description: Status of the action.
+                            progress_percentage:
+                              type: integer
+                              description: Progress percentage of the action.
+                            comments:
+                              type: string
+                              description: Comments on the action.
+                      comments:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            comment:
+                              type: string
+                              description: The comment text.
+                            comment_date:
+                              type: string
+                              format: date
+                              description: Date of the comment.
+      responses:
+        "200":
+          description: Development plan added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Development plan added successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Not found.
+
+  /DevelopmentPlan/view:
+   post:
+    operationId: viewDevelopmentPlan
+    summary: Retrieves Development plan details based on the query.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                properties:
+                  plan_name:
+                    type: string
+                  description:
+                    type: string
+                  start_date:
+                    type: string
+                    format: date
+                  end_date:
+                    type: string
+                    format: date
+                  status:
+                    type: string
+                  progress_percentage:
+                    type: number
+                  "actions.description":
+                    type: string
+                  "actions.due_date":
+                    type: string
+                    format: date
+                  "actions.status":
+                    type: string
+                  "actions.progress_percentage":
+                    type: number
+              
+    responses:
+      "200":
+        description: Development plan details retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      plan_id:
+                        type: string
+                      plan_name:
+                        type: string
+                      description:
+                        type: string
+                      start_date:
+                        type: string
+                        format: date
+                      end_date:
+                        type: string
+                        format: date
+                      status:
+                        type: string
+                      progress_percentage:
+                        type: number
+                      actions:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            description:
+                              type: string
+                            due_date:
+                              type: string
+                              format: date
+                            status:
+                              type: string
+                            progress_percentage:
+                              type: number
+                            comments:
+                              type: string
+                      comments:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            comment:
+                              type: string
+                            comment_date:
+                              type: string
+                              format: date
+                      created_at:
+                        type: string
+                        format: date-time
+                      updated_at:
+                        type: string
+                        format: date-time
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+      "404":
+        description: Development plan not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Development plan not found.
+
+  /DevelopmentPlan/update:
+   post:
+    operationId: updateDevelopmentPlan
+    summary: Updates existing Development plan details based on a query.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                required:
+                  - plan_name
+                properties:
+                  plan_name:
+                    type: string
+                    description: The name of the development plan to update.
+                    example: Advanced Training Program
+              update_data:
+                type: object
+                properties:
+                  plan_name:
+                    type: string
+                    description: The updated name of the development plan.
+                    example: Updated Training Program
+                  description:
+                    type: string
+                    description: The updated description of the development plan.
+                    example: This plan focuses on advanced skill development.
+                  start_date:
+                    type: string
+                    format: date
+                    description: The updated start date of the development plan.
+                  end_date:
+                    type: string
+                    format: date
+                    description: The updated end date of the development plan.
+                    example: 2024-12-31
+                  status:
+                    type: string
+                    description: The updated status of the development plan.
+                    example: In Progress
+                  progress_percentage:
+                    type: number
+                    description: The updated progress percentage of the development plan.
+                    example: 60
+                  actions:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        description:
+                          type: string
+                          description: The updated action description.
+                          example: Complete Module 1
+                        due_date:
+                          type: string
+                          format: date
+                          description: The updated due date for the action.
+                          example: 2024-02-01
+                        status:
+                          type: string
+                          description: The updated status of the action.
+                          example: Completed
+                        progress_percentage:
+                          type: number
+                          description: The updated progress percentage of the action.
+                          example: 100
+                  comments:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        comment:
+                          type: string
+                          description: The updated comment.
+                          example: Great progress so far.
+                        comment_date:
+                          type: string
+                          format: date
+                          description: The date of the comment.
+                          example: 2024-03-01
+    responses:
+      "200":
+        description: Development plan details updated successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Development plan details updated successfully.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+      "404":
+        description: Development plan not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Development plan not found.
+
+  /PerformanceReview/add:
+    post:
+      operationId: addPerformanceReview
+      summary: Add performance review details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      person_name:
+                        type: string
+                      manager_name:
+                        type: string
+                      review_period:
+                        type: string
+                      review_date:
+                        type: string
+                        format: date
+                      status:
+                        type: string
+                      overall_rating:
+                        type: number
+                      self_assessment:
+                        type: object
+                        properties:
+                          self_rating:
+                            type: number
+                          self_comments:
+                            type: string
+                          goals_assessment:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                goal_name:
+                                  type: string
+                                self_goal_rating:
+                                  type: number
+                                self_goal_comments:
+                                  type: string
+                          competencies_assessment:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                competency_name:
+                                  type: string
+                                self_competency_rating:
+                                  type: number
+                                self_competency_comments:
+                                  type: string
+                      key_accomplishments:
+                        type: string
+                      challenges:
+                        type: string
+                      development_needs:
+                        type: string
+      responses:
+        "200":
+          description: Performance review added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Performance review added successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Not found.
+
+  /PerformanceReview/view:
+    post:
+      operationId: viewPerformanceReview
+      summary: View Performance review details.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  properties:
+                    person_name:
+                      type: string
+                    manager_name:
+                      type: string
+                    review_period:
+                      type: string
+                    review_date:
+                      type: string
+                      format: date
+                    status:
+                      type: string
+      responses:
+        "200":
+          description: Successfully retrieved performance review details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        person_name:
+                          type: string
+                        manager_name:
+                          type: string
+                        review_period:
+                          type: string
+                        review_date:
+                          type: string
+                          format: date
+                        status:
+                          type: string
+                        overall_rating:
+                          type: number
+                        self_assessment:
+                          type: object
+                          properties:
+                            self_rating:
+                              type: number
+                            self_comments:
+                              type: string
+                            goals_assessment:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  goal_name:
+                                    type: string
+                                  self_goal_rating:
+                                    type: number
+                                  self_goal_comments:
+                                    type: string
+                            competencies_assessment:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  competency_name:
+                                    type: string
+                                  self_competency_rating:
+                                    type: number
+                                  self_competency_comments:
+                                    type: string
+                        key_accomplishments:
+                          type: string
+                        challenges:
+                          type: string
+                        development_needs:
+                          type: string
+                        manager_assessment:
+                          type: object
+                          properties:
+                            manager_comments:
+                              type: string
+                            goals_evaluation:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  goal_name:
+                                    type: string
+                                  manager_goal_rating:
+                                    type: number
+                                  manager_goal_comments:
+                                    type: string
+                            competencies_evaluation:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  competency_name:
+                                    type: string
+                                  manager_competency_rating:
+                                    type: number
+                                  manager_competency_comments:
+                                    type: string
+                        development_plans:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              plan_name:
+                                type: string
+                              plan_status:
+                                type: string
+                              created_at:
+                                type: string
+                                format: date-time
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Performance review details not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Performance review details not found.
+
+  /Feedback/add:
+    post:
+      operationId: addFeedback
+      summary: Add feedback details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - feedback_name
+                      - from_person_name
+                      - to_person_name
+                      - manager_name
+                      - feedback_type
+                    properties:
+                      feedback_name:
+                        type: string
+                      from_person_name:
+                        type: string
+                      to_person_name:
+                        type: string
+                      manager_name:
+                        type: string
+                      feedback_type:
+                        type: string
+                        enum:
+                          - peer
+                          - manager
+                          - self
+      responses:
+        "200":
+          description: Feedback added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Feedback added successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Not found.
+
+  /Feedback/view:
+   post:
+    operationId: viewFeedback
+    summary: View feedback details based on a query.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                properties:
+                  feedback_name:
+                    type: string
+                    description: The name of the feedback.
+                  from_person_name:
+                    type: string
+                    description: The name of the person giving the feedback.
+                  to_person_name:
+                    type: string
+                    description: The name of the person receiving the feedback.
+                  manager_name:
+                    type: string
+                    description: The name of the manager associated with the feedback.
+                  feedback_date:
+                    type: string
+                    format: date
+                    description: The date the feedback was given.
+                  status:
+                    type: string
+                    description: The status of the feedback.
+    responses:
+      "200":
+        description: Feedback details retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      feedback_id:
+                        type: string
+                      feedback_name:
+                        type: string
+                      from_person_name:
+                        type: string
+                      to_person_name:
+                        type: string
+                      manager_name:
+                        type: string
+                      feedback_type:
+                        type: string
+                      feedback_content:
+                        type: string
+                      feedback_date:
+                        type: string
+                        format: date
+                      requested:
+                        type: boolean
+                      status:
+                        type: string
+                      created_at:
+                        type: string
+                        format: date-time
+                      updated_at:
+                        type: string
+                        format: date-time
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid request data.
+      "404":
+        description: Feedback not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Feedback not found.
+
+  /goal/assign:
+    post:
+      operationId: assignGoal
+      summary: Assign a goal to an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal_plan_name:
+                  type: string
+                  description: Name of the goal plan.
+                  example: "Annual Performance Plan 2024"
+                name:
+                  type: string
+                  description: Name of the employee.
+                  example: "Ankit"
+                goal_name:
+                  type: string
+                  description: Name of the goal.
+                  example: "Imp"
+                type:
+                  type: string
+                  description: Type of the goal.
+                  example: "performance"
+              required:
+                - goal_plan_name
+                - name
+                - goal_name
+                - type
+      responses:
+        "200":
+          description: Goal assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  comments:
+                    type: array
+                    items:
+                      type: string
+                    description: List of comments.
+                    example: []
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: The creation timestamp.
+                    example: "2024-07-31 07:11:25"
+                  feedback:
+                    type: array
+                    items:
+                      type: string
+                    description: List of feedback.
+                    example: []
+                  goal_name:
+                    type: string
+                    description: Name of the goal.
+                    example: "Imp"
+                  goal_plan_assigned:
+                    type: string
+                    description: Status of the goal plan assignment.
+                    example: "N/A"
+                  goal_type:
+                    type: string
+                    description: Type of the goal.
+                    example: "performance"
+                  measurement:
+                    type: string
+                    description: Measurement details.
+                    example: "None"
+                  name:
+                    type: string
+                    description: Name of the employee assigned to the goal.
+                    example: "Ankit"
+                  progress:
+                    type: string
+                    description: Progress status.
+                    example: "Not started"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /goal/mass_assign:
+    post:
+      operationId: massAssignGoals
+      summary: Mass assign goals to multiple employees.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal_plan_assigned:
+                  type: string
+                  description: Status of the goal plan assignment.
+                  example: "N/A"
+                goal_name:
+                  type: string
+                  description: Name of the goal.
+                  example: "Effective time management 1"
+                progress:
+                  type: string
+                  description: Progress status.
+                  example: "Not started"
+                measurement:
+                  type: string
+                  description: Measurement details.
+                  example: "None"
+                comments:
+                  type: array
+                  items:
+                    type: string
+                  description: List of comments.
+                  example: []
+                feedback:
+                  type: array
+                  items:
+                    type: string
+                  description: List of feedback.
+                  example: []
+                updated_by:
+                  type: string
+                  description: Name of the person who updated the goal assignment.
+                  example: "You"
+                employee_names:
+                  type: array
+                  items:
+                    type: string
+                  description: List of employee names to whom the goals are assigned.
+                  example: ["Shreya Umrao", "Vishal Meena"]
+              required:
+                - goal_plan_assigned
+                - goal_name
+                - progress
+                - measurement
+                - comments
+                - feedback
+                - updated_by
+                - employee_names
+      responses:
+        "200":
+          description: Goals assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Success message.
+                    example: Goals successfully assigned to 32 employees
+                  my_goals:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        comments:
+                          type: array
+                          items:
+                            type: string
+                          description: List of comments.
+                          example: []
+                        created_at:
+                          type: string
+                          format: date-time
+                          description: The creation timestamp.
+                        feedback:
+                          type: array
+                          items:
+                            type: string
+                          description: List of feedback.
+                        goal_name:
+                          type: string
+                          description: Name of the goal.
+                        goal_plan_assigned:
+                          type: string
+                          description: Status of the goal plan assignment.
+                        goal_type:
+                          type: string
+                          description: Type of the goal.
+                        measurement:
+                          type: string
+                          description: Measurement details.
+                        name:
+                          type: string
+                          description: Name of the employee assigned to the goal.
+                        progress:
+                          type: string
+                          description: Progress status.
+                        updated_by:
+                          type: string
+                          description: Name of the person who updated the goal assignment.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /goal/assign:
+    post:
+      operationId: assignGoals
+      summary: Assign goals to employees.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal_plan_name:
+                  type: string
+                  description: Name of the goal plan.
+                  example: "Annual Performance Plan 2024"
+                type:
+                  type: string
+                  description: Type of the goal.
+                  example: "performance"
+              required:
+                - goal_plan_name
+                - type
+      responses:
+        "200":
+          description: Goals assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Success message.
+                    example: Goals successfully assigned
+                  my_goals:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        comments:
+                          type: array
+                          items:
+                            type: string
+                          description: List of comments.
+                          example: []
+                        created_at:
+                          type: string
+                          format: date-time
+                          description: The creation timestamp.
+                        feedback:
+                          type: array
+                          items:
+                            type: string
+                          description: List of feedback.
+                        goal_name:
+                          type: string
+                          description: Name of the goal.
+                        goal_plan_assigned:
+                          type: string
+                          description: Status of the goal plan assignment.
+                        goal_type:
+                          type: string
+                          description: Type of the goal.
+                        measurement:
+                          type: string
+                          description: Measurement details.
+                        name:
+                          type: string
+                          description: Name of the employee assigned to the goal.
+                        progress:
+                          type: string
+                          description: Progress status.
+                        updated_by:
+                          type: string
+                          description: Name of the person who updated the goal assignment.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /goal/goal_offering:
+    post:
+      operationId: offerGoal
+      summary: Offer a goal to an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the person.
+                  example: "AP"
+                goal_plan_assigned:
+                  type: string
+                  description: Status of the goal plan assignment.
+                  example: "N/A"
+                goal_name:
+                  type: string
+                  description: Name of the goal.
+                  example: "Run"
+              required:
+                - name
+                - goal_plan_assigned
+                - goal_name
+      responses:
+        "200":
+          description: Goal offered successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  goal_name:
+                    type: string
+                    description: Name of the goal.
+                  goal_plan_assigned:
+                    type: string
+                    description: Status of the goal plan assignment.
+                  person_name:
+                    type: string
+                    description: Name of the person.
+                  status:
+                    type: string
+                    description: Status of the goal offering.
+                  timestamp:
+                    type: string
+                    format: date-time
+                    description: Timestamp of the goal offering.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /goal/process_goal:
+    post:
+      operationId: processGoal
+      summary: Process a goal for an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Name of the person.
+                  example: "AP"
+                goal_name:
+                  type: string
+                  description: Name of the goal.
+                  example: "Run"
+                goal_plan_assigned:
+                  type: string
+                  description: Status of the goal plan assignment.
+                  example: "N/A"
+                status:
+                  type: string
+                  description: Status of the goal.
+                  example: "approved"
+              required:
+                - person_name
+                - goal_name
+                - goal_plan_assigned
+                - status
+      responses:
+        "200":
+          description: Goal processed successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  goal_name:
+                    type: string
+                    description: Name of the goal.
+                    example: "Run"
+                  message:
+                    type: string
+                    description: Success message.
+                    example: Goal processed
+                  person_name:
+                    type: string
+                    description: Name of the person.
+                    example: "AP"
+                  status:
+                    type: string
+                    description: Status of the goal.
+                    example: "approved"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /smart_goal/check_smart:
+    post:
+      operationId: checkSmart
+      summary: Check if a goal is SMART.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal_name:
+                  type: string
+                  description: Name of the goal to check.
+                  example: "Increase Sales by 20%"
+              required:
+                - goal_name
+      responses:
+        "200":
+          description: Goal SMART status.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  goal_name:
+                    type: string
+                    description: Name of the goal.
+                    example: "Increase Sales by 20%"
+                  status:
+                    type: string
+                    description: Status of the goal.
+                    example: "SMART"
+                  issues:
+                    type: array
+                    items:
+                      type: string
+                    description: List of issues if the goal is not SMART.
+                  suggestions:
+                    type: array
+                    items:
+                      type: string
+                    description: List of suggestions to make the goal SMART.
+                  error:
+                    type: string
+                    description: Error message if the goal is not found.
+                    example: "Goal not found"
+        "404":
+          description: Goal not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+                    example: "Goal not found"
