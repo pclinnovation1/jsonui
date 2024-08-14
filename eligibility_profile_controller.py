@@ -1,6 +1,9 @@
+
+
+
 from flask import Blueprint, request, jsonify
 from pymongo import MongoClient
-from bson.objectid import ObjectId
+from datetime import datetime
 import config
 
 eligibility_profile_bp = Blueprint('eligibility_profile_bp', __name__)
@@ -8,53 +11,82 @@ eligibility_profile_bp = Blueprint('eligibility_profile_bp', __name__)
 # MongoDB client setup
 client = MongoClient(config.MONGODB_URI)
 db = client[config.DATABASE_NAME]
-eligibility_profile_collection = db[config.ELIGIBILITY_PROFILES_COLLECTION_NAME]
+profile_collection = db[config.ELIGIBILITY_PROFILE_COLLECTION_NAME]
 
-@eligibility_profile_bp.route('/', methods=['POST'])
-def create_eligibility_profile():
-    data = request.json
-
-    # Validate and insert the eligibility profile data into MongoDB
-    eligibility_profile_id = eligibility_profile_collection.insert_one(data).inserted_id
-    new_eligibility_profile = eligibility_profile_collection.find_one({'_id': eligibility_profile_id})
-    new_eligibility_profile['_id'] = str(new_eligibility_profile['_id'])
-
-    # Return the newly created eligibility profile
-    return jsonify(new_eligibility_profile), 201
-
-@eligibility_profile_bp.route('/', methods=['GET'])
-def get_eligibility_profiles():
-    # Retrieve all eligibility profiles from the database
-    eligibility_profiles = list(eligibility_profile_collection.find())
-    for eligibility_profile in eligibility_profiles:
-        eligibility_profile['_id'] = str(eligibility_profile['_id'])
-    return jsonify(eligibility_profiles), 200
-
-@eligibility_profile_bp.route('/<eligibility_profile_id>', methods=['GET'])
-def get_eligibility_profile(eligibility_profile_id):
-    # Retrieve a specific eligibility profile by ID
-    eligibility_profile = eligibility_profile_collection.find_one({'_id': ObjectId(eligibility_profile_id)})
-    if eligibility_profile:
-        eligibility_profile['_id'] = str(eligibility_profile['_id'])
-        return jsonify(eligibility_profile), 200
+# Helper function to convert keys to lowercase and replace spaces with underscores
+def lowercase_keys(data):
+    if isinstance(data, dict):
+        return {k.lower().replace(' ', '_'): lowercase_keys(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [lowercase_keys(item) for item in data]
     else:
-        return jsonify({'error': 'Eligibility profile not found'}), 404
+        return data
 
-@eligibility_profile_bp.route('/<eligibility_profile_id>', methods=['PUT'])
-def update_eligibility_profile(eligibility_profile_id):
+# Route to create a new profile
+@eligibility_profile_bp.route('/create', methods=['POST'])
+def create_profile():
     data = request.json
-    result = eligibility_profile_collection.update_one({'_id': ObjectId(eligibility_profile_id)}, {'$set': data})
+    data = lowercase_keys(data)  # Convert keys to lowercase and replace spaces with underscores
+
+    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
+    updated_by = data.get("updated_by", "Unknown")  # Capture updated_by from the request data
+    data["updated_date"] = current_time  # Set updated_date
+    data["updated_by"] = updated_by  # Set updated_by
+
+    if isinstance(data, list):
+        for profile in data:
+            profile["updated_date"] = current_time  # Set updated_date
+            profile["updated_by"] = updated_by  # Set updated_by
+        inserted_ids = profile_collection.insert_many(data).inserted_ids
+        new_profiles = [profile_collection.find_one({'_id': _id}) for _id in inserted_ids]
+    else:
+        profile_id = profile_collection.insert_one(data).inserted_id
+        new_profiles = [profile_collection.find_one({'_id': profile_id})]
+
+    for profile in new_profiles:
+        profile['_id'] = str(profile['_id'])
+
+    return jsonify(new_profiles), 201
+
+# Route to get all profiles
+@eligibility_profile_bp.route('/view', methods=['POST'])
+def get_profiles():
+    profiles = list(profile_collection.find())
+    for profile in profiles:
+        profile['_id'] = str(profile['_id'])
+    return jsonify(profiles), 200
+
+# Route to get a specific profile by name
+@eligibility_profile_bp.route('/view/<profile_name>', methods=['POST'])
+def get_profile(profile_name):
+    profile = profile_collection.find_one({'profile_name': profile_name})
+    if profile:
+        profile['_id'] = str(profile['_id'])
+        return jsonify(profile), 200
+    else:
+        return jsonify({'error': 'Profile not found'}), 404
+
+# Route to update a specific profile by name
+@eligibility_profile_bp.route('/update/<profile_name>', methods=['POST'])
+def update_profile(profile_name):
+    data = request.json
+    data = lowercase_keys(data)  # Convert keys to lowercase and replace spaces with underscores
+    data['updated_date'] = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')  # Add the updated_date field with the current date and time
+    data['updated_by'] = data.get("updated_by", "Unknown")  # Capture updated_by from the request data
+
+    result = profile_collection.update_one({'profile_name': profile_name}, {'$set': data})
     if result.matched_count:
-        updated_eligibility_profile = eligibility_profile_collection.find_one({'_id': ObjectId(eligibility_profile_id)})
-        updated_eligibility_profile['_id'] = str(updated_eligibility_profile['_id'])
-        return jsonify(updated_eligibility_profile), 200
+        updated_profile = profile_collection.find_one({'profile_name': profile_name})
+        updated_profile['_id'] = str(updated_profile['_id'])
+        return jsonify(updated_profile), 200
     else:
-        return jsonify({'error': 'Eligibility profile not found'}), 404
+        return jsonify({'error': 'Profile not found'}), 404
 
-@eligibility_profile_bp.route('/<eligibility_profile_id>', methods=['DELETE'])
-def delete_eligibility_profile(eligibility_profile_id):
-    result = eligibility_profile_collection.delete_one({'_id': ObjectId(eligibility_profile_id)})
+# Route to delete a specific profile by name
+@eligibility_profile_bp.route('/delete/<profile_name>', methods=['POST'])
+def delete_profile(profile_name):
+    result = profile_collection.delete_one({'profile_name': profile_name})
     if result.deleted_count:
-        return jsonify({'message': 'Eligibility profile deleted successfully'}), 200
+        return jsonify({'message': 'Profile deleted successfully'}), 200
     else:
-        return jsonify({'error': 'Eligibility profile not found'}), 404
+        return jsonify({'error': 'Profile not found'}), 404
