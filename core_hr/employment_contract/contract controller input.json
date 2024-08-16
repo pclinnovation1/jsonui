@@ -1,0 +1,122 @@
+
+http://127.0.0.1:5000//create_contract
+
+
+//input:
+
+{
+    "contract_type": "Permanent",
+    "person_name": "Mika Aalto",
+    "base_salary": 4500,
+    "salary_basis": "Monthly",
+    "termination_conditions": "Standard termination conditions apply.",
+    "start_date": "2024-01-01",
+    "probation_period": {
+        "duration_in_months": 6,
+        "conditions": "During the probation period, either party may terminate the employment with one month's notice."
+    }
+}
+
+
+//output
+
+{
+    "contract": {
+        "_id": "66bc8d6ef251f04eb30d36f1",
+        "base_salary": 4500,
+        "contract_type": "Permanent",
+        "created_at": "Wed, 14 Aug 2024 10:56:46 GMT",
+        "department": "Manufacturing technology",
+        "email": "new.email@orasgroup.com",
+        "employment_type": "Blue-collar",
+        "job_title": "Maintaning - Tool maker",
+        "location": "Rauma",
+        "manager_name": "Mauri Salovaara",
+        "person_name": "Mika Aalto",
+        "person_number": "FI662",
+        "probation_period": {
+            "conditions": "During the probation period, either party may terminate the employment with one month's notice.",
+            "duration_in_months": 6
+        },
+        "salary_basis": "Monthly",
+        "start_date": "2024-01-01",
+        "template_name": "Permanent",
+        "termination_conditions": "Standard termination conditions apply.",
+        "updated_at": "Wed, 14 Aug 2024 10:56:46 GMT"
+    },
+    "message": "Contract created successfully.",
+    "pdf_data": {
+        "base_salary": 4500,
+        "contract_type": "Permanent",
+        "created_at": "Wed, 14 Aug 2024 10:56:46 GMT",
+        "department": "Manufacturing technology",
+        "email": "new.email@orasgroup.com",
+        "employment_type": "Blue-collar",
+        "job_title": "Maintaning - Tool maker",
+        "location": "Rauma",
+        "manager_name": "Mauri Salovaara",
+        "person_name": "Mika Aalto",
+        "person_number": "FI662",
+        "probation_period": {
+            "conditions": "During the probation period, either party may terminate the employment with one month's notice.",
+            "duration_in_months": 6
+        },
+        "salary_basis": "Monthly",
+        "start_date": "2024-01-01",
+        "template_name": "Permanent",
+        "termination_conditions": "Standard termination conditions apply.",
+        "updated_at": "2024-08-06 19:56:08"
+    }
+}
+
+
+
+http://127.0.0.1:5000//update_contract
+
+
+{
+    "person_name": "Mika Aalto",
+    "contract_type": "Permanent",
+    "base_salary": 11000,
+    "employment_type":"Blue-collar",
+    "termination_conditions": "Updated termination conditions.",
+    "probation_period": {
+        "duration_in_months": 10,
+        "conditions": "During the probation period, either party may terminate the employment with one week's notice."
+    }
+}
+
+
+
+output:
+
+
+{
+    "message": "Contract updated successfully.",
+    "pdf_data": {
+        "base_salary": 11000,
+        "contract_type": "Permanent",
+        "department": "Manufacturing technology",
+        "employment_type": "Blue-collar",
+        "job_title": "Maintaning - Tool maker",
+        "location": "Rauma",
+        "manager_name": "Mauri Salovaara",
+        "person_name": "Mika Aalto",
+        "probation_period": {
+            "conditions": "During the probation period, either party may terminate the employment with one week's notice.",
+            "duration_in_months": 10
+        },
+        "salary_basis": "Monthly",
+        "start_date": "2024-01-01",
+        "termination_conditions": "Updated termination conditions."
+    }
+}
+
+
+http://127.0.0.1:5000//upload_signed_pdf
+Content-Type: multipart/form-data
+{
+    "person_name": "John Doe",
+    "template_name": "Permanent",
+    "file": <signed_contract.pdf>
+}
