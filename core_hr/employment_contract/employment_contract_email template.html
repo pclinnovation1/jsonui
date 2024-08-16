@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employment Contract</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; background-color: #f9f9f9; padding: 20px;">
+    <table style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border: 1px solid #dddddd; border-radius: 8px; width: 100%;">
+        <tr>
+            <td>
+                <h2 style="color: #4CAF50; margin-bottom: 20px;">Employment Contract</h2>
+                <p style="margin-bottom: 10px;">Dear <strong>{{pdf_data['person_name']}}</strong>,</p>
+                <p style="margin-bottom: 20px;">We are pleased to offer you the position of <strong>{{pdf_data['job_title']}}</strong> at our company. Please find your employment contract attached to this email.</p>
+                
+                <h3 style="margin-bottom: 15px;">Contract Details:</h3>
+                <ul style="list-style-type: none; padding: 0; margin-bottom: 20px;">
+                    {% for key, value in pdf_data.items() %}
+                        {% if key not in ['person_name', 'template_name', 'created_at', 'email', 'person_number'] %}
+                            <li style="margin-bottom: 10px;"><strong>{{ key.replace('_', ' ').title() }}:</strong> 
+                                {% if key == 'probation_period' %}
+                                    {{ value['duration_in_months'] }} months ({{ value['conditions'] }})
+                                {% else %}
+                                    {{ value }}
+                                {% endif %}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <p style="margin-bottom: 20px;">Please review the attached contract, sign it, and return a signed copy to HR by <strong>{{ return_date }}</strong>.</p>
+
+                <h3 style="margin-bottom: 15px;">Support:</h3>
+                <p style="margin-bottom: 20px;">If you have any questions or need further assistance, please do not hesitate to contact us at <a href="mailto:{{ hr_email }}">{{ hr_email }}</a>.</p>
+
+                <p style="margin-bottom: 20px;">We look forward to having you on our team!</p>
+
+                <p style="margin-bottom: 5px;">Best regards,</p>
+                <p>{{ company_name }} HR Department<br>{{ hr_contact_name }}<br>{{ company_email }}</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

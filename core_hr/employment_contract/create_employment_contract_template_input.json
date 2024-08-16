@@ -1,0 +1,35 @@
+http://127.0.0.1:5000//create_template
+
+
+{
+  "template_name": "Permanent Employment Contract",
+  "description": "Template for permanent employment contracts.",
+  "common": {
+    "contract_type": "required",
+    "person_name": "required",
+    "person_number": "required",
+    "job_title": "required",
+    "start_date": "required",
+    "base_salary": "required",
+    "salary_basis": "required",
+    "employment_type": "required",
+    "termination_conditions": "required",
+    "manager_name": "required",
+    "department": "required",
+    "location": "required",
+    "created_at": "required",
+    "updated_at": "required"
+  },
+  "specific": {
+    "end_date": "NA",
+    "working_hours_per_week": "NA",
+    "part_time_percentage": "NA",
+    "pro-rated_benefits": "NA",
+    "part_time_schedule": "NA",
+    "probation_period": "required",
+    "rental_company": "NA",
+    "hourly_rate": "NA",
+    "project_rate": "NA",
+    "payment_terms": "NA"
+  }
+}
