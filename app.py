@@ -14,6 +14,8 @@ from controllers.my_performance_controller import my_performance_bp
 from controllers.performance_template_connection_controller import performance_template_connection_bp
 from controllers.competency_controller import competency_bp
 from controllers.participant_feedback_controller import participant_feedback_template_bp
+from controllers.overall_performance_controller import overall_performance_bp
+
 
 app = Flask(__name__)
 
@@ -67,6 +69,8 @@ app.register_blueprint(process_flow_bp, url_prefix='/performance_process_flows')
 
 
 app.register_blueprint(participant_feedback_template_bp, url_prefix='/participant_feedback')
+
+app.register_blueprint(overall_performance_bp, url_prefix='/overall_performance')
 
 if __name__ == '__main__':  
     app.run(debug=True)
