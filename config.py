@@ -22,4 +22,10 @@ COMPETENCY_COLLECTION_NAME = "P_Competency"
 
 
 
+SMTP_CONFIG = {
+    "username": "piyushbirkh@gmail.com",
+    "password": "teazyfbjjcietwrt",
+    "server": "smtp.gmail.com",
+    "port": 587
+}
 

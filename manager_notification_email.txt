@@ -1,0 +1,17 @@
+Dear {manager_name},
+
+You are required to review and provide your feedback on the following sections of the performance document for your team member:
+
+Competencies:
+{competencies}
+
+Feedback Questions:
+{feedbacks}
+
+Overall Summary:
+{summary}
+
+Please complete your review at your earliest convenience.
+
+Best regards,
+HR Team
