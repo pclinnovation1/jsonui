@@ -1,0 +1,491 @@
+openapi: 3.1.0
+info:
+  title: Leave Calculations API
+  description: API for calculating leave accruals.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for leave calculations
+paths:
+  /invoice/process:
+   post:
+    operationId: processInvoice
+    summary: Process an invoice image.
+    requestBody:
+      required: true
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              image:
+                type: string
+                format: binary
+                description: The image file of the invoice to be processed.
+            required:
+              - image
+    responses:
+      "200":
+        description: Successful response with the generated code.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Generated_code_is:
+                  type: string
+                  description: The generated code based on the processed invoice.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /leave/application/apply:
+    post:
+      operationId: submitLeaveApplication
+      summary: Submit a leave application and update leave balances.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Full name of the employee (First and Last name).
+                  example: John Doe
+                leave_type:
+                  type: string
+                  description: Old type of leave.
+                  example: annual_leave
+                start_date:
+                  type: string
+                  format: date
+                  description: Old start date of the leave.
+                  example: 2024-01-15
+                end_date:
+                  type: string
+                  format: date
+                  description: Old end date of the leave.
+                  example: 2024-01-10
+                duration:
+                  type: integer
+                  description: duration of absence
+                  example: 5
+                reason_for_absence:
+                  type: string
+                  description: New reason for absence.
+                  example: Medical reasons
+      responses:
+        "200":
+          description: Leave application submitted successfully and leave balance updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Confirmation message
+        "400":
+          description: Invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        "404":
+          description: Employee not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        "500":
+          description: Could not connect to database or error inserting data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /leave/application/view:
+    post:
+      operationId: viewLeaveApplication
+      summary: View leave applications based on provided filters.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Full name of the employee (First and Last name).
+                leave_type:
+                  type: string
+                  description: Type of leave.
+                start_date:
+                  type: string
+                  format: date
+                  description: Start date of the leave.
+                end_date:
+                  type: string
+                  format: date
+                  description: End date of the leave.
+              required: []  # No required fields, all are optional
+      responses:
+        "200":
+          description: Leave applications retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  leave_applications:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        person_name:
+                          type: string
+                        leave_type:
+                          type: string
+                        start_date:
+                          type: string
+                          format: date
+                        end_date:
+                          type: string
+                          format: date
+                        duration:
+                          type: number
+                        reason_for_absence:
+                          type: string
+                        status:
+                          type: string
+        "400":
+          description: Invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        "404":
+          description: No leave applications found or employee not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  message:
+                    type: string
+
+ 
+  /leave/application/edit:
+   post:
+    operationId: editLeaveApplication
+    summary: Edit an existing leave application based on provided filters and updates.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              person_name:
+                type: string
+                description: Full name of the employee (First and Last name).
+                example: John Doe
+              old_leave_type:
+                type: string
+                description: Old type of leave.
+                example: annual_leave
+              old_start_date:
+                type: string
+                format: date
+                description: Old start date of the leave.
+                example: 2024-01-01
+              old_end_date:
+                type: string
+                format: date
+                description: Old end date of the leave.
+                example: 2024-01-10
+              new_start_date:
+                type: string
+                format: date
+                description: New start date of the leave.
+                example: 2024-01-02
+              new_end_date:
+                type: string
+                format: date
+                description: New end date of the leave.
+                example: 2024-01-12
+              new_leave_type:
+                type: string
+                description: New type of leave.
+                example: sick_leave
+              new_reason_for_absence:
+                type: string
+                description: New reason for absence.
+                example: Medical reasons
+            required:
+              - new_start_date
+              - new_end_date
+              - new_leave_type
+              - new_reason_for_absence
+    responses:
+      "200":
+        description: Leave application updated successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: Leave application updated successfully
+      "400":
+        description: Invalid input data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Invalid Employee_Name. Please provide both first and last names.
+      "404":
+        description: Leave application not found or no matching leave application found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Leave application not found
+                message:
+                  type: string
+                  example: No matching leave application found
+      "500":
+        description: Could not connect to database or error updating data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Internal Server Error
+  
+  /leave/application/withdraw:
+    post:
+      operationId: withdrawLeaveApplication
+      summary: Withdraw a leave application.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: The name of the person withdrawing the leave.
+                  example: "Shreya Umrao"
+                leave_type:
+                  type: string
+                  description: The type of leave being withdrawn.
+                  example: "Sick Leave"
+                start_date:
+                  type: string
+                  format: date
+                  description: The start date of the leave.
+                  example: "2024-08-08"
+                end_date:
+                  type: string
+                  format: date
+                  description: The end date of the leave.
+                  example: "2024-08-16"
+              required:
+                - person_name
+                - leave_type
+                - start_date
+                - end_date
+      responses:
+        "200":
+          description: Leave application withdrawn successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Leave application withdrawn successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+
+  /leave/balance/view:
+    post:
+      operationId: getLeaveBalance
+      summary: Get leave balances for an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Full name of the employee (First and Last name).
+                  example: John Doe
+      responses:
+        "200":
+          description: Leave balances retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  employee_name:
+                    type: string
+                    example: John Doe
+                  leave_balances:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Leave_Type:
+                          type: string
+                          example: annual_leave
+                        Leave_Balance:
+                          type: number
+                          example: 15
+        "400":
+          description: Missing or invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing Employee_Name in request body
+        "404":
+          description: Employee not found or no leave balances found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: No employee found with the specified name
+        "500":
+          description: Could not connect to database or error retrieving data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Error retrieving data: ..."
+
+  /leave/balance/edit:
+    post:
+      operationId: modifyLeaveBalance
+      summary: Modify leave balances for an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Full name of the employee (First and Last name).
+                  example: John Doe
+                modifications:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      leave_type:
+                        type: string
+                        description: Type of leave to be modified.
+                        example: annual_leave
+                      change:
+                        type: number
+                        description: Change in the leave balance (positive or negative).
+                        example: -2
+      responses:
+        "200":
+          description: Leave balances updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Leave balances updated successfully
+        "400":
+          description: Invalid input data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid Employee_Name. Please provide both first and last names.
+        "404":
+          description: Employee not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Employee not found
+        "500":
+          description: Could not connect to database or error modifying data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
