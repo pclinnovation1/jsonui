@@ -10,6 +10,58 @@ paths:
   openapi: 3.1.0
 
 paths:
+  /insert_template:
+    post:
+      operationId: insertTemplate
+      summary: Insert an email template for notifications.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                template_name:
+                  type: string
+                  description: The name of the email template.
+                subject:
+                  type: string
+                  description: The subject of the email.
+                body:
+                  type: string
+                  description: The HTML body content of the email.
+      responses:
+        "200":
+          description: Template added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Success message indicating the template was added successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message indicating the nature of the invalid request data.
+        "404":
+          description: Template not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message indicating the template was not found.
+  
   /process/create:
    post:
     operationId: createProcess
@@ -21,7 +73,7 @@ paths:
           schema:
             type: object
             properties:
-              name:
+              process_name:
                 type: string
                 description: The name of the process.
                 example: "Change Manager 11"
@@ -29,6 +81,9 @@ paths:
                 type: string
                 description: The description of the process.
                 example: "Process to change manager"
+              email_template:
+                type: string
+                description: The template of the email.
     responses:
       "200":
         description: Process created successfully.
@@ -263,50 +318,78 @@ paths:
                   example: Invalid request data.
 
   /approver/view:
-   post:
-    operationId: viewApprovers
-    summary: View approvers details from the catalog.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              query:
+    post:
+      operationId: viewApprovers
+      summary: View approver details from the catalog.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: object
+                  description: The query object to filter approver records.
+      responses:
+        "200":
+          description: Approver details retrieved successfully.
+          content:
+            application/json:
+              schema:
                 type: object
-    responses:
-      "200":
-        description: Approver details retrieved successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                items:
-                  type: array
+                properties:
                   items:
-                    type: object
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
-      "404":
-        description: Approver not found.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Approver not found.
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        approver_id:
+                          type: string
+                          description: The ID of the approver.
+                          example: "66cf22322d2bb5bb3d2ac3fc"
+                        approver_name:
+                          type: string
+                          description: The name of the approver.
+                          example: "Head_of_Finance"
+                        type:
+                          type: string
+                          description: The type of approver.
+                          example: "representative"
+                        representative_type:
+                          type: string
+                          description: The type of representative.
+                          example: "individual"
+                        representative_of:
+                          type: string
+                          description: The department or entity the representative is associated with.
+                          example: "finance_department"
+                        approver_member:
+                          type: array
+                          description: List of approver members.
+                          items:
+                            type: string
+                            example: "Mikko Nieminen"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+        "404":
+          description: Approver not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Approver not found.
 
   /condition/create:
    post:
@@ -488,93 +571,76 @@ paths:
 
 
   /transaction/create:
-   post:
-    operationId: addTransaction
-    summary: Add a transaction for a specified process.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              process_name:
-                type: string
-                description: The name of the process for which the transaction is being added.
-                example: "Change Manager 11"
-              transaction_fields:
+    post:
+      operationId: addTransaction
+      summary: Add a transaction for a specified process.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                transaction_name:
+                  type: string
+                  description: The name of the transaction being created.
+                  example: "Fun Friday"
+                process_name:
+                  type: string
+                  description: The name of the process for which the transaction is being added.
+                  example: "Finance Department"
+                transaction_fields:
+                  type: object
+                  properties:
+                    value:
+                      type: array
+                      description: List of values for the transaction fields.
+                      items:
+                        type: number
+                      example: [450]
+                field_type:
+                  type: array
+                  description: List of field types corresponding to the values.
+                  items:
+                    type: string
+                  example: ["amount"]
+                general_info:
+                  type: object
+                  properties:
+                    person_name:
+                      type: string
+                      description: The name of the person associated with the transaction.
+                      example: "Erja Tetri"
+                    description:
+                      type: string
+                      description: A description of the transaction.
+                      example: "This is fun friday expense"
+                    amount:
+                      type: string
+                      description: The amount associated with the transaction.
+                      example: "450"
+      responses:
+        "200":
+          description: Transaction added successfully.
+          content:
+            application/json:
+              schema:
                 type: object
                 properties:
-                  value:
-                    type: array
-                    description: List of values for the transaction fields.
-                    items:
-                      type: string
-                    example: ["6", "Team Lead", "IT"]
-              field_type:
-                type: array
-                description: List of field titles corresponding to the values.
-                items:
-                  type: string
-                example: ["experience", "current_position", "department"]
-    responses:
-      "200":
-        description: Transaction added successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Transaction added successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
+                  message:
+                    type: string
+                    example: "Transaction added successfully."
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid request data."
 
-  /transaction/reminders:
-   post:
-    operationId: sendTransactionReminders
-    summary: Send reminders for a specified process.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              process_name:
-                type: string
-                description: The name of the process for which the reminders are being sent.
-                example: "Change Manager 11"
-    responses:
-      "200":
-        description: Reminders sent successfully.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Reminders sent successfully.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  example: Invalid request data.
 
   /transaction/view:
    post:
