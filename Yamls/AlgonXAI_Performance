@@ -1,0 +1,1490 @@
+openapi: 3.1.0
+info:
+  title: Learning Catalog Management API
+  description: API to manage learning communities within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for communities management
+paths:
+  openapi: 3.1.0
+
+paths:
+  /performance_document_types/add:
+    post:
+      operationId: addPerformanceDocumentType
+      summary: Add a new performance document type.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the performance document type.
+                  example: "Annual Performance Review"
+                description:
+                  type: string
+                  description: The description of the performance document type.
+                  example: "A comprehensive review document used for evaluating employee performance on an annual basis. This document includes goal setting, competency assessment, and overall performance rating."
+                status:
+                  type: string
+                  description: The status of the performance document type.
+                  example: "Active"
+                start_date:
+                  type: string
+                  format: date
+                  description: The start date of the performance document type.
+                  example: "2024-07-24"
+                end_date:
+                  type: string
+                  format: date
+                  description: The end date of the performance document type.
+                  example: "2050-12-31"
+              required:
+                - name
+                - description
+                - status
+                - start_date
+                - end_date
+      responses:
+        "200":
+          description: Performance document type added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the performance document type.
+                    example: "Annual Performance Review"
+                  description:
+                    type: string
+                    description: The description of the performance document type.
+                    example: "A comprehensive review document used for evaluating employee performance on an annual basis. This document includes goal setting, competency assessment, and overall performance rating."
+                  status:
+                    type: string
+                    description: The status of the performance document type.
+                    example: "Active"
+                  start_date:
+                    type: object
+                    properties:
+                      $date:
+                        type: string
+                        format: date-time
+                        example: "2024-07-24T00:00:00.000Z"
+                  end_date:
+                    type: object
+                    properties:
+                      $date:
+                        type: string
+                        format: date-time
+                        example: "2050-12-31T00:00:00.000Z"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /questionnaires/add:
+    post:
+      operationId: addQuestionnaire
+      summary: Add a new questionnaire.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the questionnaire.
+                  example: "Employee Engagement Survey Q1 2024"
+                description:
+                  type: string
+                  description: A description of the questionnaire.
+                  example: "A survey designed to gather feedback on employee engagement and satisfaction within the organization for Q1 2024."
+                questions:
+                  type: array
+                  description: A list of questions included in the questionnaire.
+                  items:
+                    type: object
+                    properties:
+                      question_name:
+                        type: string
+                        description: The name of the question.
+                        example: "Career Growth Opportunities"
+                      question_description:
+                        type: string
+                        description: The description of the question.
+                        example: "How satisfied are you with the career growth opportunities provided by the company?"
+              required:
+                - name
+                - description
+                - questions
+      responses:
+        "200":
+          description: Questionnaire added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the questionnaire.
+                    example: "Employee Engagement Survey Q1 2024"
+                  description:
+                    type: string
+                    description: A description of the questionnaire.
+                    example: "A survey designed to gather feedback on employee engagement and satisfaction within the organization for Q1 2024."
+                  questions:
+                    type: array
+                    description: A list of questions included in the questionnaire.
+                    items:
+                      type: object
+                      properties:
+                        question_name:
+                          type: string
+                          description: The name of the question.
+                          example: "Career Growth Opportunities"
+                        question_description:
+                          type: string
+                          description: The description of the question.
+                          example: "How satisfied are you with the career growth opportunities provided by the company?"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /feedback_templates/create:
+    post:
+      operationId: createFeedbackTemplate
+      summary: Create a new feedback template.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the feedback template.
+                  example: "Mid-Year Review Template"
+                comments:
+                  type: string
+                  description: Comments about the feedback template.
+                  example: "This template is used for conducting the mid-year performance review, including self-assessment and manager feedback."
+                status:
+                  type: string
+                  description: The status of the feedback template.
+                  example: "Active"
+                template_type:
+                  type: string
+                  description: The type of the feedback template.
+                  example: "Performance Review"
+                include_in_performance_document:
+                  type: string
+                  description: Indicates whether to include this template in the performance document.
+                  example: "Yes"
+                questionnaire_name:
+                  type: string
+                  description: The name of the associated questionnaire.
+                  example: "Employee Engagement Survey Q1 2024"
+              required:
+                - name
+                - comments
+                - status
+                - template_type
+                - include_in_performance_document
+                - questionnaire_name
+      responses:
+        "200":
+          description: Feedback template created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the feedback template.
+                    example: "Mid-Year Review Template"
+                  comments:
+                    type: string
+                    description: Comments about the feedback template.
+                    example: "This template is used for conducting the mid-year performance review, including self-assessment and manager feedback."
+                  status:
+                    type: string
+                    description: The status of the feedback template.
+                    example: "Active"
+                  template_type:
+                    type: string
+                    description: The type of the feedback template.
+                    example: "Performance Review"
+                  include_in_performance_document:
+                    type: string
+                    description: Indicates whether to include this template in the performance document.
+                    example: "Yes"
+                  questionnaire_name:
+                    type: string
+                    description: The name of the associated questionnaire.
+                    example: "Employee Engagement Survey Q1 2024"
+                  questions:
+                    type: array
+                    description: A list of questions included in the associated questionnaire.
+                    items:
+                      type: object
+                      properties:
+                        question_name:
+                          type: string
+                          description: The name of the question.
+                          example: "Career Growth Opportunities"
+                        question_description:
+                          type: string
+                          description: The description of the question.
+                          example: "How satisfied are you with the career growth opportunities provided by the company?"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /check_in_templates/add:
+    post:
+      operationId: addCheckInTemplate
+      summary: Add a new check-in template.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                template_type:
+                  type: string
+                  description: The type of the check-in template.
+                  example: "Annual Review"
+                name:
+                  type: string
+                  description: The name of the check-in template.
+                  example: "2023 Annual Performance Review Template"
+                comments:
+                  type: string
+                  description: Comments about the check-in template.
+                  example: "This template is used for conducting the 2023 annual performance review, including self-assessment, peer reviews, and manager evaluations."
+                status:
+                  type: string
+                  description: The status of the check-in template.
+                  example: "Active"
+                from_date:
+                  type: object
+                  properties:
+                    $date:
+                      type: string
+                      format: date-time
+                      description: The start date for the check-in template.
+                      example: "2024-01-01T00:00:00.000Z"
+                to_date:
+                  type: object
+                  properties:
+                    $date:
+                      type: string
+                      format: date-time
+                      description: The end date for the check-in template.
+                      example: "2025-01-01T00:00:00.000Z"
+                review_period:
+                  type: string
+                  description: The review period for the check-in template.
+                  example: "Mid year review"
+                include_in_performance_document:
+                  type: string
+                  description: Indicates whether to include this template in the performance document.
+                  example: "Yes"
+                check_in_content:
+                  type: array
+                  description: A list of content areas to include in the check-in.
+                  items:
+                    type: string
+                    example: "Goal Progress Updates"
+                eligibility_profiles:
+                  type: array
+                  description: A list of eligibility profiles associated with the check-in template.
+                  items:
+                    type: string
+                    example: "Standard Eligibility 1"
+              required:
+                - template_type
+                - name
+                - comments
+                - status
+                - from_date
+                - to_date
+                - review_period
+                - include_in_performance_document
+                - check_in_content
+                - eligibility_profiles
+      responses:
+        "200":
+          description: Check-in template added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  template_type:
+                    type: string
+                    description: The type of the check-in template.
+                    example: "Annual Review"
+                  name:
+                    type: string
+                    description: The name of the check-in template.
+                    example: "2023 Annual Performance Review Template"
+                  comments:
+                    type: string
+                    description: Comments about the check-in template.
+                    example: "This template is used for conducting the 2023 annual performance review, including self-assessment, peer reviews, and manager evaluations."
+                  status:
+                    type: string
+                    description: The status of the check-in template.
+                    example: "Active"
+                  from_date:
+                    type: object
+                    properties:
+                      $date:
+                        type: string
+                        format: date-time
+                        example: "2024-01-01T00:00:00.000Z"
+                  to_date:
+                    type: object
+                    properties:
+                      $date:
+                        type: string
+                        format: date-time
+                        example: "2025-01-01T00:00:00.000Z"
+                  review_period:
+                    type: string
+                    description: The review period for the check-in template.
+                    example: "Mid year review"
+                  include_in_performance_document:
+                    type: string
+                    description: Indicates whether to include this template in the performance document.
+                    example: "Yes"
+                  check_in_content:
+                    type: array
+                    description: A list of content areas to include in the check-in.
+                    items:
+                      type: string
+                      example: "Goal Progress Updates"
+                  eligibility_profiles:
+                    type: array
+                    description: A list of eligibility profiles associated with the check-in template.
+                    items:
+                      type: string
+                      example: "Standard Eligibility 1"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /add_competency/add:
+    post:
+      operationId: addCompetency
+      summary: Add a new competency.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the competency.
+                  example: "Problem Solving"
+                description:
+                  type: string
+                  description: A description of the competency.
+                  example: "Ability to analyze issues, identify solutions, and implement effective action plans."
+                ratingScale:
+                  type: object
+                  description: The rating scale for the competency.
+                  properties:
+                    min:
+                      type: integer
+                      description: The minimum rating value.
+                      example: 1
+                    max:
+                      type: integer
+                      description: The maximum rating value.
+                      example: 5
+                    descriptions:
+                      type: object
+                      description: The descriptions for each rating value.
+                      additionalProperties:
+                        type: string
+              required:
+                - name
+                - description
+                - ratingScale
+      responses:
+        "200":
+          description: Competency added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the competency.
+                    example: "Problem Solving"
+                  description:
+                    type: string
+                    description: A description of the competency.
+                    example: "Ability to analyze issues, identify solutions, and implement effective action plans."
+                  ratingScale:
+                    type: object
+                    description: The rating scale for the competency.
+                    properties:
+                      min:
+                        type: integer
+                        description: The minimum rating value.
+                        example: 1
+                      max:
+                        type: integer
+                        description: The maximum rating value.
+                        example: 5
+                      descriptions:
+                        type: object
+                        description: The descriptions for each rating value.
+                        additionalProperties:
+                          type: string
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: The timestamp when the competency was created.
+                    example: "2024-08-12 19:16:42"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /overall_performance/create_overall_performance_template:
+    post:
+      operationId: createOverallPerformanceTemplate
+      summary: Create a new overall performance template.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the performance evaluation template.
+                  example: "Mid-Year Performance Evaluation Template"
+                description:
+                  type: string
+                  description: A description of the performance evaluation template.
+                  example: "This template is used for the mid-year performance evaluation, focusing on key areas such as leadership, communication, and feedback collection."
+                competencies:
+                  type: array
+                  description: A list of competencies to be evaluated in the template.
+                  items:
+                    type: string
+                  example: ["Problem Solving", "Teamwork and Collaboration"]
+                feedbacks:
+                  type: string
+                  description: The feedback template associated with the performance evaluation.
+                  example: "Mid-Year Review Template"
+                check_ins:
+                  type: string
+                  description: The check-in template associated with the performance evaluation.
+                  example: "2023 Annual Performance Review Template"
+              required:
+                - name
+                - description
+                - competencies
+                - feedbacks
+                - check_ins
+      responses:
+        "200":
+          description: Overall performance template created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: object
+                    properties:
+                      $oid:
+                        type: string
+                        example: "66c87aedf7ceffa6021ec9d9"
+                  overall_summary_and_ratings:
+                    type: object
+                    properties:
+                      summary:
+                        type: string
+                        description: A summary of the employee's overall performance.
+                        example: "This section summarizes the employee's overall performance throughout the evaluation period, highlighting key areas of success and opportunities for improvement."
+                      employee_actual_rating:
+                        type: object
+                        properties:
+                          rating_scale:
+                            type: integer
+                            example: 5
+                          rating:
+                            type: integer
+                            example: 0
+                          rating_description:
+                            type: string
+                            example: ""
+                          comments:
+                            type: string
+                            example: ""
+                      employee_calculated_rating:
+                        type: object
+                        properties:
+                          rating_scale:
+                            type: integer
+                            example: 5
+                          rating:
+                            type: integer
+                            example: 0
+                          rating_description:
+                            type: string
+                            example: ""
+                      manager_actual_rating:
+                        type: object
+                        properties:
+                          rating_scale:
+                            type: integer
+                            example: 5
+                          rating:
+                            type: integer
+                            example: 0
+                          rating_description:
+                            type: string
+                            example: ""
+                          comments:
+                            type: string
+                            example: ""
+                      manager_calculated_rating:
+                        type: object
+                        properties:
+                          rating_scale:
+                            type: integer
+                            example: 5
+                          rating:
+                            type: integer
+                            example: 0
+                          rating_description:
+                            type: string
+                            example: ""
+                      achievements_and_contributions:
+                        type: object
+                        properties:
+                          achievements:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                achievement_name:
+                                  type: string
+                                  example: ""
+                                description:
+                                  type: string
+                                  example: ""
+                                date:
+                                  type: string
+                                  example: ""
+                          contributions:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                contribution_name:
+                                  type: string
+                                  example: ""
+                                description:
+                                  type: string
+                                  example: ""
+                                date:
+                                  type: string
+                                  example: ""
+                                achievement_name:
+                                  type: string
+                                  example: ""
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /participant_feedback/add_participant_feedback_template:
+    post:
+      operationId: addParticipantFeedbackTemplate
+      summary: Add a new participant feedback template.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                template_name:
+                  type: string
+                  description: The name of the feedback template.
+                  example: "Manager Feedback Template"
+                description:
+                  type: string
+                  description: A description of the feedback template.
+                  example: "Template for manager feedback"
+                status:
+                  type: string
+                  description: The status of the feedback template.
+                  example: "Active"
+                questions:
+                  type: array
+                  description: A list of questions included in the feedback template.
+                  items:
+                    type: object
+                    properties:
+                      question_name:
+                        type: string
+                        description: The name of the question.
+                        example: "Team Leadership"
+                      question_description:
+                        type: string
+                        description: The description of the question.
+                        example: "How effectively does the manager lead the team?"
+              required:
+                - template_name
+                - description
+                - status
+                - questions
+      responses:
+        "200":
+          description: Participant feedback template created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  template_name:
+                    type: string
+                    description: The name of the feedback template.
+                    example: "Manager Feedback Template"
+                  description:
+                    type: string
+                    description: A description of the feedback template.
+                    example: "Template for manager feedback"
+                  status:
+                    type: string
+                    description: The status of the feedback template.
+                    example: "Active"
+                  questions:
+                    type: array
+                    description: A list of questions included in the feedback template.
+                    items:
+                      type: object
+                      properties:
+                        question_name:
+                          type: string
+                          description: The name of the question.
+                          example: "Team Leadership"
+                        question_description:
+                          type: string
+                          description: The description of the question.
+                          example: "How effectively does the manager lead the team?"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /performance_templates/create:
+    post:
+      operationId: createPerformanceTemplate
+      summary: Create a new performance template.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the performance evaluation template.
+                  example: "Mid-Year Performance Evaluation Template"
+                description:
+                  type: string
+                  description: A description of the performance evaluation template.
+                  example: "This template is used for the mid-year performance evaluation, focusing on key areas such as leadership, communication, and feedback collection."
+                competencies:
+                  type: array
+                  description: A list of competencies to be evaluated in the template.
+                  items:
+                    type: string
+                  example: ["Problem Solving", "Teamwork and Collaboration"]
+                feedbacks:
+                  type: string
+                  description: The feedback template associated with the performance evaluation.
+                  example: "Mid-Year Review Template"
+                check_ins:
+                  type: string
+                  description: The check-in template associated with the performance evaluation.
+                  example: "2023 Annual Performance Review Template"
+              required:
+                - name
+                - description
+                - competencies
+                - feedbacks
+                - check_ins
+      responses:
+        "200":
+          description: Performance template created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the performance evaluation template.
+                    example: "Mid-Year Performance Evaluation Template"
+                  description:
+                    type: string
+                    description: A description of the performance evaluation template.
+                    example: "This template is used for the mid-year performance evaluation, focusing on key areas such as leadership, communication, and feedback collection."
+                  competencies:
+                    type: array
+                    description: A list of competencies included in the template.
+                    items:
+                      type: object
+                      properties:
+                        _id:
+                          type: object
+                          properties:
+                            $oid:
+                              type: string
+                              example: "66ba124251ae6945ce61d1c8"
+                        name:
+                          type: string
+                          description: The name of the competency.
+                          example: "Problem Solving"
+                        description:
+                          type: string
+                          description: A description of the competency.
+                          example: "Ability to analyze issues, identify solutions, and implement effective action plans."
+                        ratingScale:
+                          type: object
+                          properties:
+                            min:
+                              type: integer
+                              example: 1
+                            max:
+                              type: integer
+                              example: 5
+                            descriptions:
+                              type: object
+                              additionalProperties:
+                                type: string
+                        created_at:
+                          type: string
+                          format: date-time
+                          example: "2024-08-12 19:16:42"
+                  feedbacks:
+                    type: array
+                    description: A list of feedback templates included in the performance template.
+                    items:
+                      type: object
+                      properties:
+                        _id:
+                          type: object
+                          properties:
+                            $oid:
+                              type: string
+                              example: "66ba099a7163b9e1dcf6681b"
+                        name:
+                          type: string
+                          example: "Mid-Year Review Template"
+                        comments:
+                          type: string
+                          example: "This template is used for conducting the mid-year performance review, including self-assessment and manager feedback."
+                        status:
+                          type: string
+                          example: "Active"
+                        template_type:
+                          type: string
+                          example: "Performance Review"
+                        include_in_performance_document:
+                          type: string
+                          example: "Yes"
+                        questionnaire_name:
+                          type: string
+                          example: "Employee Engagement Survey Q1 2024"
+                        questions:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              question_name:
+                                type: string
+                                example: "Career Growth Opportunities"
+                              question_description:
+                                type: string
+                                example: "How satisfied are you with the career growth opportunities provided by the company?"
+                  check_ins:
+                    type: array
+                    description: A list of check-in templates included in the performance template.
+                    items:
+                      type: object
+                      properties:
+                        _id:
+                          type: object
+                          properties:
+                            $oid:
+                              type: string
+                              example: "66ba0d587163b9e1dcf6681c"
+                        template_type:
+                          type: string
+                          example: "Annual Review"
+                        name:
+                          type: string
+                          example: "2023 Annual Performance Review Template"
+                        comments:
+                          type: string
+                          example: "This template is used for conducting the 2023 annual performance review, including self-assessment, peer reviews, and manager evaluations."
+                        status:
+                          type: string
+                          example: "Active"
+                        from_date:
+                          type: object
+                          properties:
+                            $date:
+                              type: string
+                              format: date-time
+                              example: "2024-01-01T00:00:00.000Z"
+                        to_date:
+                          type: object
+                          properties:
+                            $date:
+                              type: string
+                              format: date-time
+                              example: "2025-01-01T00:00:00.000Z"
+                        review_period:
+                          type: string
+                          example: "Mid year review"
+                        include_in_performance_document:
+                          type: string
+                          example: "Yes"
+                        check_in_content:
+                          type: array
+                          items:
+                            type: string
+                        eligibility_profiles:
+                          type: array
+                          items:
+                            type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /performance_template_connections/create:
+    post:
+      operationId: createPerformanceTemplateConnection
+      summary: Create a new performance template connection.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the performance evaluation template.
+                  example: "Mid-Year Performance Evaluation Template"
+                review_period:
+                  type: string
+                  description: The review period for the performance template.
+                  example: "Mid year review"
+                performance_document_types:
+                  type: string
+                  description: The type of performance document associated with the template.
+                  example: "Annual Performance Review"
+              required:
+                - name
+                - review_period
+                - performance_document_types
+      responses:
+        "200":
+          description: Performance template connection created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the performance evaluation template.
+                    example: "Mid-Year Performance Evaluation Template"
+                  review_period:
+                    type: string
+                    description: The review period for the performance template.
+                    example: "Mid year review"
+                  performance_document_types:
+                    type: string
+                    description: The type of performance document associated with the template.
+                    example: "Annual Performance Review"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /my_performances/create_goal:
+    post:
+      operationId: createGoal
+      summary: Create a new goal in a performance document.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                employee_name:
+                  type: string
+                  description: The name of the employee for whom the goal is being created.
+                  example: "John Doe"
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document.
+                  example: "Performance Document mid year 1"
+                name:
+                  type: string
+                  description: The name of the performance evaluation template.
+                  example: "Mid-Year Performance Evaluation Template"
+              required:
+                - employee_name
+                - performance_document_name
+                - name
+      responses:
+        "200":
+          description: Goal created successfully in the performance document.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  person_name:
+                    type: string
+                    description: The name of the employee.
+                    example: "John Doe"
+                  performance_document_name:
+                    type: string
+                    description: The name of the performance document.
+                    example: "Performance Document mid year 1"
+                  goals:
+                    type: array
+                    description: List of goals.
+                    items:
+                      type: string
+                  description:
+                    type: string
+                    description: Description of the performance evaluation template.
+                    example: "This template is used for the mid-year performance evaluation, focusing on key areas such as leadership, communication, and feedback collection."
+                  competencies:
+                    type: array
+                    description: List of competencies included in the performance evaluation template.
+                    items:
+                      type: object
+                      properties:
+                        _id:
+                          type: string
+                          example: "66ba124251ae6945ce61d1c8"
+                        name:
+                          type: string
+                          example: "Problem Solving"
+                        description:
+                          type: string
+                          example: "Ability to analyze issues, identify solutions, and implement effective action plans."
+                        ratingScale:
+                          type: object
+                          properties:
+                            min:
+                              type: integer
+                              example: 1
+                            max:
+                              type: integer
+                              example: 5
+                            descriptions:
+                              type: object
+                              additionalProperties:
+                                type: string
+                        created_at:
+                          type: string
+                          format: date-time
+                          example: "2024-08-12 19:16:42"
+                        employee_rating:
+                          type: string
+                          nullable: true
+                          example: null
+                        manager_rating:
+                          type: string
+                          nullable: true
+                          example: null
+                  feedbacks:
+                    type: array
+                    description: List of feedback templates included in the performance document.
+                    items:
+                      type: object
+                      properties:
+                        _id:
+                          type: string
+                          example: "66ba099a7163b9e1dcf6681b"
+                        name:
+                          type: string
+                          example: "Mid-Year Review Template"
+                        comments:
+                          type: string
+                          example: "This template is used for conducting the mid-year performance review, including self-assessment and manager feedback."
+                        status:
+                          type: string
+                          example: "Active"
+                        template_type:
+                          type: string
+                          example: "Performance Review"
+                        include_in_performance_document:
+                          type: string
+                          example: "Yes"
+                        questionnaire_name:
+                          type: string
+                          example: "Employee Engagement Survey Q1 2024"
+                        questions:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              question_name:
+                                type: string
+                                example: "Career Growth Opportunities"
+                              question_description:
+                                type: string
+                                example: "How satisfied are you with the career growth opportunities provided by the company?"
+                  checkins:
+                    type: array
+                    description: List of check-in templates included in the performance document.
+                    items:
+                      type: object
+                      properties:
+                        _id:
+                          type: string
+                          example: "66ba0d587163b9e1dcf6681c"
+                        template_type:
+                          type: string
+                          example: "Annual Review"
+                        name:
+                          type: string
+                          example: "2023 Annual Performance Review Template"
+                        comments:
+                          type: string
+                          example: "This template is used for conducting the 2023 annual performance review, including self-assessment, peer reviews, and manager evaluations."
+                        status:
+                          type: string
+                          example: "Active"
+                        from_date:
+                          type: string
+                          format: date-time
+                          example: "2024-01-01T00:00:00"
+                        to_date:
+                          type: string
+                          format: date-time
+                          example: "2025-01-01T00:00:00"
+                        review_period:
+                          type: string
+                          example: "Mid year review"
+                        include_in_performance_document:
+                          type: string
+                          example: "Yes"
+                        check_in_content:
+                          type: array
+                          items:
+                            type: string
+                        eligibility_profiles:
+                          type: array
+                          items:
+                            type: string
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /eligible_employee/create:
+    post:
+      operationId: createEligibleEmployee
+      summary: Create a new eligible employee entry.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document.
+                  example: "Annual Performance Review 1"
+                eligibility_profiles:
+                  type: array
+                  description: List of eligibility profiles.
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: The name of the eligibility profile.
+                        example: "Custom Eligibility"
+                included_workers:
+                  type: array
+                  description: List of workers to be included.
+                  items:
+                    type: string
+                    example: "John Doe"
+                excluded_workers:
+                  type: array
+                  description: List of workers to be excluded.
+                  items:
+                    type: string
+                    example: "Christy Torres"
+              required:
+                - performance_document_name
+                - eligibility_profiles
+                - included_workers
+                - excluded_workers
+      responses:
+        "200":
+          description: Eligible employee entry created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                    example: "66cc50365bc822679b56a399"
+                  combined_employees:
+                    type: array
+                    description: List of all combined employees.
+                    items:
+                      type: string
+                      example: "Aman"
+                  employees:
+                    type: array
+                    description: List of eligible employees.
+                    items:
+                      type: string
+                      example: "Aman"
+                  exclude:
+                    type: array
+                    description: List of excluded employees.
+                    items:
+                      type: string
+                      example: "Christy Torres"
+                  include:
+                    type: array
+                    description: List of included employees.
+                    items:
+                      type: string
+                      example: "Jane Smith"
+                  performance_document_name:
+                    type: string
+                    description: The name of the performance document.
+                    example: "Annual Performance Review 1"
+                  profile_name:
+                    type: string
+                    description: The name of the eligibility profile.
+                    example: "Custom Eligibility"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /assign_performance/assign_performance_documents:
+    post:
+      operationId: assignPerformanceDocuments
+      summary: Assign performance documents to employees.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document to assign.
+                  example: "Annual Performance Review"
+              required:
+                - performance_document_name
+      responses:
+        "200":
+          description: Performance documents assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  assigned_documents:
+                    type: array
+                    description: List of assigned documents with their IDs and employee names.
+                    items:
+                      type: object
+                      properties:
+                        assigned_document_id:
+                          type: string
+                          description: The ID of the assigned performance document.
+                          example: "66cc5c72afecce91e69d7039"
+                        employee_name:
+                          type: string
+                          description: The name of the employee to whom the document is assigned.
+                          example: "Aman"
+                  message:
+                    type: string
+                    description: Success message indicating performance documents were assigned.
+                    example: "Performance documents assigned successfully"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /peer/assign_peers:
+    post:
+      operationId: assignPeers
+      summary: Assign peers to an employee for performance review.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document.
+                  example: "Annual Performance Review"
+                employee_name:
+                  type: string
+                  description: The name of the employee who is being reviewed.
+                  example: "Aman"
+                assigned_peers:
+                  type: array
+                  description: List of peers to be assigned for the performance review.
+                  items:
+                    type: string
+                    example: "Piyush"
+              required:
+                - performance_document_name
+                - employee_name
+                - assigned_peers
+      responses:
+        "200":
+          description: Peers assigned successfully and notified.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  assigned_peers:
+                    type: array
+                    description: List of peers who have been assigned.
+                    items:
+                      type: string
+                      example: "Piyush"
+                  employee_name:
+                    type: string
+                    description: The name of the employee who is being reviewed.
+                    example: "Aman"
+                  message:
+                    type: string
+                    description: Success message indicating peers were assigned and notified.
+                    example: "Peers assigned and notified successfully"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /notify/send_feedback_form:
+    post:
+      operationId: sendFeedbackForm
+      summary: Send a feedback form to an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document for which the feedback form is being sent.
+                  example: "Annual Performance Review"
+                employee_name:
+                  type: string
+                  description: The name of the employee to whom the feedback form will be sent.
+                  example: "Karen Washington"
+              required:
+                - performance_document_name
+                - employee_name
+      responses:
+        "200":
+          description: Feedback form notification sent successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Success message indicating that the feedback form was sent.
+                    example: "Feedback form sent to employee successfully."
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid request data."
+
+  /notify_manager/send_manager_feedback_form:
+    post:
+      operationId: sendManagerFeedbackForm
+      summary: Send a manager feedback form to an employee's manager.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document for which the manager feedback form is being sent.
+                  example: "Annual Performance Review"
+                employee_name:
+                  type: string
+                  description: The name of the employee whose manager will receive the feedback form.
+                  example: "Aman"
+              required:
+                - performance_document_name
+                - employee_name
+      responses:
+        "200":
+          description: Manager feedback form notification sent successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Success message indicating that the manager feedback form was sent.
+                    example: "Manager feedback form sent to the employee's manager successfully."
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid request data."
