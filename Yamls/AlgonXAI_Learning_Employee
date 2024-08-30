@@ -108,23 +108,23 @@ paths:
             schema:
               type: object
               properties:
-                filter:
+                query:
                   type: object
                   properties:
-                    Title:
+                    learning_item_details.title:
                       type: string
-                    Topic:
+                      description: The title of the external course or learning
+                    learning_item_details.topic:
                       type: string
-                    Start_Date:
+                      description: The topic of the external course or learning
+                    completion_details.start_date:
                       type: string
                       format: date
-                    Completion_Date:
+                      description: The start date of the external course or learning
+                    completion_details.completion_date:
                       type: string
                       format: date
-                limit:
-                  type: integer
-                  description: Number of records to retrieve (use 0 to retrieve all records).
-                  example: 1
+                      description: The date of completion of the external course or learning
       responses:
         "200":
           description: Successfully retrieved external learning.
@@ -146,8 +146,6 @@ paths:
                         completion_date:
                           type: string
                           format: date
-                        actual_effort_in_hours:
-                          type: number
                         score_achieved:
                           type: number
                         context_segment:
@@ -156,26 +154,19 @@ paths:
                           type: array
                           items:
                             type: string
-                        learning_item_details:
-                          type: object
-                          properties:
-                            title:
-                              type: string
-                            url:
-                              type: string
-                            expected_training_hours:
-                              type: number
-                            cost:
-                              type: number
-                            currency:
-                              type: string
-                            description:
-                              type: string
-                            topic:
-                              type: string
-                            context_segment:
-                              type: string
-                        justification:
+                        learning_item_details.title:
+                          type: string
+                        learning_item_details.url:
+                          type: string
+                        learning_item_details.expected_training_hours:
+                          type: number
+                        learning_item_details.cost:
+                          type: number
+                        learning_item_details.currency:
+                          type: string
+                        learning_item_details.description:
+                          type: string
+                        learning_item_details.topic:
                           type: string
         "404":
           description: External learning records not found.
@@ -210,10 +201,6 @@ paths:
                 update_data:
                   type: object
                   properties:
-                    person_name:
-                      type: string
-                      description: The name of the person.
-                      example: John Doe
                     completion_details.start_date:
                       type: string
                       format: date
@@ -236,10 +223,6 @@ paths:
                       type: string
                       description: The context segment of the external learning.
                       example: Technical Skills
-                    learning_item_details.title:
-                      type: string
-                      description: The title of the external learning.
-                      example: Advanced Data Science
                     learning_item_details.url:
                       type: string
                       description: The URL of the external learning.
@@ -403,10 +386,6 @@ paths:
                 update_data:
                   type: object
                   properties:
-                    person_name:
-                      type: string
-                      description: The name of the person.
-                      example: John Doe
                     start_date:
                       type: string
                       format: date
@@ -421,45 +400,38 @@ paths:
                       type: string
                       description: The context segment of the non-catalog learning.
                       example: Technical Skills
-                    learning_item_details:
-                      type: object
-                      properties:
-                        title:
-                          type: string
-                          description: The title of the learning item.
-                          example: Advanced Data Science
-                        url:
-                          type: string
-                          description: The URL of the learning item.
-                          example: https://example.com/course
-                        cost:
-                          type: number
-                          description: The cost of the learning item.
-                          example: 1000
-                        expected_training_hours:
-                          type: number
-                          description: The expected training hours for the learning item.
-                          example: 50
-                        currency:
-                          type: string
-                          description: The currency of the cost.
-                          example: USD
-                        description:
-                          type: string
-                          description: A description of the learning item.
-                          example: A comprehensive course on advanced data science techniques.
-                        topic:
-                          type: string
-                          description: The topic of the learning item.
-                          example: Data Science
-                        context_segment:
-                          type: string
-                          description: The context segment of the learning item.
-                          example: Technical Skills
-                        justification:
-                          type: string
-                          description: The justification for the learning item.
-                          example: Required for project X
+                    learning_item_details.url:
+                      type: string
+                      description: The URL of the learning item.
+                      example: https://example.com/course
+                    learning_item_details.cost:
+                      type: number
+                      description: The cost of the learning item.
+                      example: 1000
+                    learning_item_details.expected_training_hours:
+                      type: number
+                      description: The expected training hours for the learning item.
+                      example: 50
+                    learning_item_details.currency:
+                      type: string
+                      description: The currency of the cost.
+                      example: USD
+                    learning_item_details.description:
+                      type: string
+                      description: A description of the learning item.
+                      example: A comprehensive course on advanced data science techniques.
+                    learning_item_details.topic:
+                      type: string
+                      description: The topic of the learning item.
+                      example: Data Science
+                    learning_item_details.context_segment:
+                      type: string
+                      description: The context segment of the learning item.
+                      example: Technical Skills
+                    learning_item_details.justification:
+                      type: string
+                      description: The justification for the learning item.
+                      example: Required for project X
       responses:
         "200":
           description: Non-catalog learning records updated successfully.
@@ -503,19 +475,23 @@ paths:
             schema:
               type: object
               properties:
-                filter:
+                query:
                   type: object
                   properties:
-                    Title:
+                    learning_item_details.title:
                       type: string
-                    Topic:
+                      description: The title of the non-catalog learning or courses
+                    learning_item_details.topic:
                       type: string
-                    Start_Date:
+                      description: The topic of the non-catalog learning or courses
+                    start_date:
                       type: string
                       format: date
-                    Due_Date:
+                      description: The start date of the non-catalog learning or courses
+                    due_date:
                       type: string
                       format: date
+                      description: The due date of the non-catalog learning or courses
       responses:
         "200":
           description: Successfully retrieved non-catalog learning requests.
@@ -529,47 +505,36 @@ paths:
                     items:
                       type: object
                       properties:
-                        Request_Details:
-                          type: object
-                          properties:
-                            Start_Date:
-                              type: string
-                              format: date
-                            Due_Date:
-                              type: string
-                              format: date
-                            Context_Segment:
-                              type: string
-                        Attachments:
+                        request_details.start_date:
+                          type: string
+                          format: date
+                        request_details.due_date:
+                          type: string
+                          format: date
+                        request_details.context_segment:
+                          type: string
+                        attachments:
                           type: array
                           items:
                             type: string
-                        Learning_Item_Details:
-                          type: object
-                          properties:
-                            Title:
-                              type: string
-                            URL:
-                              type: string
-                            Expected_Training_Hours:
-                              type: number
-                            Cost:
-                              type: number
-                            Currency:
-                              type: string
-                            Description:
-                              type: string
-                            Topic:
-                              type: string
-                            Context_Segment:
-                              type: string
-                        Justification:
+                        learning_item_details.title:
                           type: string
-                        Actions:
-                          type: object
-                          properties:
-                            Submit:
-                              type: boolean
+                        learning_item_details.url:
+                          type: string
+                        learning_item_details.expected_training_hours:
+                          type: number
+                        learning_item_details.cost:
+                          type: number
+                        learning_item_details.currency:
+                          type: string
+                        learning_item_details.description:
+                          type: string
+                        learning_item_details.topic:
+                          type: string
+                        learning_item_details.context_segment:
+                          type: string
+                        justification:
+                          type: string
         "404":
           description: Non-catalog learning requests not found.
           content:
@@ -599,15 +564,6 @@ paths:
                       properties:
                         title:
                           type: string
-                        branding_image:
-                          type: string
-                        description:
-                          type: string
-                        trailer:
-                          type: string
-                        published_date:
-                          type: string
-                          format: date-time
                         tags:
                           type: array
                           items:
@@ -681,10 +637,6 @@ paths:
                           type: array
                           items:
                             type: string
-                        members:
-                          type: array
-                          items:
-                            type: object
         "404":
           description: Community details not found.
           content:
@@ -706,11 +658,16 @@ paths:
             schema:
               type: object
               required:
-                - employee_name
+                - query
               properties:
-                employee_name:
-                  type: string
-                  description: Name of the employee
+                query:
+                  type: object
+                  required:
+                    - person_name
+                  properties:
+                    person_name:
+                      type: string
+                      description: Name of the employee
       responses:
         "200":
           description: Successfully retrieved the courses assigned to the employee.
@@ -767,6 +724,10 @@ paths:
                     type: string
                     description: Title of the course offering.
                     example: "Advanced Data Science Workshop"
+                  general_information.offering_details.facilitator_type:
+                    type: string
+                    description: Title of the course offering.
+                    example: "Advanced Data Science Workshop"
     responses:
       "200":
         description: Course details retrieved successfully.
@@ -780,8 +741,6 @@ paths:
                   items:
                     type: object
                     properties:
-                      _id:
-                        type: string
                       offering_number:
                         type: string
                       general_information.basic_information.title:
@@ -863,8 +822,6 @@ paths:
                 enrollment_date:
                   type: string
                   format: date
-                offering_number:
-                  type: string
                 person_name:
                   type: string
       responses:
@@ -1062,12 +1019,12 @@ paths:
             schema:
               type: object
               properties:
-                filter:
+                query:
                   type: object
                   properties:
-                    limit:
-                      type: integer
-                      description: "Specify the number of videos to retrieve (1, 2, or all). Use -1 to retrieve all videos."
+                    title:
+                      type: string
+                      description: The title of the video
       responses:
         "200":
           description: Successfully retrieved videos.
@@ -1134,10 +1091,6 @@ paths:
                     - description
                     - content
                   properties:
-                    title:
-                      type: string
-                      description: The new title for the Video.
-                      example: Updated Video Title
                     start_date:
                       type: string
                       format: date
@@ -1194,21 +1147,7 @@ paths:
                   properties:
                     title:
                       type: string
-                      nullable: true
-                    start_date:
-                      type: string
-                      format: date
-                      nullable: true
-                    end_date:
-                      type: string
-                      format: date
-                      nullable: true
-                    description:
-                      type: string
-                      nullable: true
-                    content:
-                      type: string
-                      nullable: true
+                      description: The title of the video to be deleted
       responses:
         "200":
           description: Videos successfully deleted.
@@ -1310,4 +1249,55 @@ paths:
                 properties:
                   error:
                     type: string
-
+ 
+  /course/feedback:
+    post:
+      operationId: addCourseFeedback
+      summary: Add feedback to a course by an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: The name of the person providing feedback.
+                course_name:
+                  type: string
+                  description: The name of the course for which feedback is provided.
+                comment:
+                  type: string
+                  description: The feedback comment provided by the person.
+                rating:
+                  type: integer
+                  description: The rating provided by the person for the course, typically on a scale of 1 to 5.
+                  minimum: 1
+                  maximum: 5
+              required:
+                - person_name
+                - course_name
+                - comment
+                - rating
+      responses:
+        "200":
+          description: Feedback added successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Feedback added successfully.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
