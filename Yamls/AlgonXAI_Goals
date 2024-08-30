@@ -1,0 +1,924 @@
+openapi: 3.1.0
+info:
+  title: Learning Catalog Management API
+  description: API to manage learning communities within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for communities management
+paths:
+  openapi: 3.1.0
+
+paths:
+  /goal/create:
+   post:
+    operationId: createGoal
+    summary: Create a new goal with detailed information.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              basic_info:
+                type: object
+                properties:
+                  goal_name:
+                    type: string
+                    description: The name of the goal.
+                    example: "Increase Q4 Revenue by 20%"
+                  description:
+                    type: string
+                    description: A detailed description of the goal.
+                  start_date:
+                    type: string
+                    format: date
+                    description: The start date of the goal.
+                    example: "2024-10-01"
+                  target_completion_date:
+                    type: string
+                    format: date
+                    description: The target completion date for the goal.
+                    example: "2024-12-31"
+                  category:
+                    type: string
+                    description: The category of the goal.
+                    example: "Revenue Growth"
+                  success_criteria:
+                    type: string
+                    description: The success criteria for the goal.
+                    example: "Revenue reports showing a 20% increase by the end of Q4."
+                  status:
+                    type: string
+                    description: The current status of the goal.
+                    example: "In Progress"
+                  level:
+                    type: string
+                    description: The level at which the goal is set (e.g., Company, Team, Individual).
+                    example: "Team"
+                  subtype:
+                    type: string
+                    description: The subtype of the goal.
+                    example: "Strategic"
+              measurements:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    measurement_name:
+                      type: string
+                      description: The name of the measurement.
+                      example: "Revenue Growth Rate"
+                    unit_of_measure:
+                      type: string
+                      description: The unit of measure for the measurement.
+                      example: "Percentage"
+                    start_date:
+                      type: string
+                      format: date
+                      description: The start date for the measurement.
+                      example: "2024-10-01"
+                    end_date:
+                      type: string
+                      format: date
+                      description: The end date for the measurement.
+                      example: "2024-12-31"
+                    comments:
+                      type: string
+                      description: Comments related to the measurement.
+                      example: "Measure revenue growth monthly."
+                    target_type:
+                      type: string
+                      description: The type of target for the measurement.
+                      example: "Absolute"
+                    target_value:
+                      type: string
+                      description: The target value for the measurement.
+                      example: "20%"
+                    actual_value:
+                      type: string
+                      description: The actual value achieved for the measurement.
+                      example: "0%"
+              tasks:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the task.
+                      example: "Optimize Sales Strategies"
+                    type:
+                      type: string
+                      description: The type of task.
+                      example: "Sales"
+                    status:
+                      type: string
+                      description: The status of the task.
+                      example: "Not Started"
+                    priority:
+                      type: string
+                      description: The priority of the task.
+                      example: "High"
+                    comments:
+                      type: array
+                      items:
+                        type: string
+                      description: Comments related to the task.
+                      example: ["Revise sales pitches", "Train sales team on new strategies"]
+                    completion_percentage:
+                      type: string
+                      description: The completion percentage of the task.
+                      example: "0%"
+                    start_date:
+                      type: string
+                      format: date
+                      description: The start date of the task.
+                      example: "2024-10-01"
+                    target_completion_date:
+                      type: string
+                      format: date
+                      description: The target completion date of the task.
+                      example: "2024-11-15"
+                    related_link:
+                      type: array
+                      items:
+                        type: string
+                      description: Related links for the task.
+                      example: []
+              library_info:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the goal in the library.
+                    example: "Active"
+                  type:
+                    type: string
+                    description: The type of the goal in the library.
+                    example: "Revenue Goal"
+                  available_to:
+                    type: string
+                    description: Who the goal is available to.
+                    example: "Sales Team"
+                  legal_employer:
+                    type: string
+                    description: The legal employer associated with the goal.
+                    example: "ABC Corp"
+                  business_unit:
+                    type: string
+                    description: The business unit associated with the goal.
+                    example: "Sales"
+                  department:
+                    type: string
+                    description: The department associated with the goal.
+                    example: "Revenue Operations"
+                  external_id:
+                    type: string
+                    description: The external ID for the goal.
+                    example: "REV-Q4-2024"
+              employees:
+                type: array
+                items:
+                  type: string
+                description: A list of employees assigned to the goal.
+                example:
+                  - "John Doe"
+                  - "Jane Smith"
+                  - "Alex Johnson"
+              eligibility_name:
+                type: string
+                description: The name of the eligibility profile.
+                example: "Eligibility Profile 10"
+    responses:
+      "200":
+        description: Goal created successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message.
+                  example: "Goal created successfully"
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+ 
+ 
+  /Goals/view:
+    post:
+      operationId: viewGoals
+      summary: View goal details based on query.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: array
+                  description: Query to filter goals. If empty, all goals will be returned.
+                  items:
+                    type: object
+                    properties:
+                      goal_name:
+                        type: string
+                        description: Name of the goal
+      responses:
+        "200":
+          description: List of goals based on the query.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    basic_info:
+                      type: object
+                      properties:
+                        goal_name:
+                          type: string
+                          description: Name of the goal
+                        description:
+                          type: string
+                          description: Description of the goal
+                        start_date:
+                          type: string
+                          format: date
+                          description: Start date of the goal
+                        target_completion_date:
+                          type: string
+                          format: date
+                          description: Target completion date of the goal
+                        category:
+                          type: string
+                          description: Category of the goal
+                        success_criteria:
+                          type: string
+                          description: Success criteria for the goal
+                        status:
+                          type: string
+                          description: Status of the goal
+                        level:
+                          type: string
+                          description: Level of the goal
+                        subtype:
+                          type: string
+                          description: Subtype of the goal
+                    measurements:
+                      type: object
+                      properties:
+                        measurement_name:
+                          type: string
+                          description: Name of the measurement
+                        unit_of_measure:
+                          type: string
+                          description: Unit of measure
+                        start_date:
+                          type: string
+                          format: date
+                          description: Start date of the measurement
+                        end_date:
+                          type: string
+                          format: date
+                          description: End date of the measurement
+                        comments:
+                          type: string
+                          description: Comments on the measurement
+                        target_type:
+                          type: string
+                          description: Target type
+                        target_value:
+                          type: string
+                          description: Target value
+                        actual_value:
+                          type: string
+                          description: Actual value
+                    tasks:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          description: Name of the task
+                        type:
+                          type: string
+                          description: Type of the task
+                        status:
+                          type: string
+                          description: Status of the task
+                        priority:
+                          type: string
+                          description: Priority of the task
+                        comments:
+                          type: string
+                          description: Comments on the task
+                        completion_percentage:
+                          type: string
+                          description: Completion percentage of the task
+                        start_date:
+                          type: string
+                          format: date
+                          description: Start date of the task
+                        target_completion_date:
+                          type: string
+                          format: date
+                          description: Target completion date of the task
+                        related_link:
+                          type: string
+                          description: Related link
+                    library_info:
+                      type: object
+                      properties:
+                        status:
+                          type: string
+                          description: Status of the library info
+                        type:
+                          type: string
+                          description: Type of the library info
+                        available_to:
+                          type: string
+                          description: Availability of the library info
+                        legal_employer:
+                          type: string
+                          description: Legal employer
+                        business_unit:
+                          type: string
+                          description: Business unit
+                        department:
+                          type: string
+                          description: Department
+                        external_id:
+                          type: string
+                          description: External ID
+                    eligibility_name:
+                      type: string
+                      description: Name of the eligibility profile
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid query in request body.
+
+  /goal/goal_offering:
+    post:
+      operationId: offerGoal
+      summary: Offer a goal to an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the person.
+                  example: "AP"
+                goal_plan_assigned:
+                  type: string
+                  description: Status of the goal plan assignment.
+                  example: "N/A"
+                goal_name:
+                  type: string
+                  description: Name of the goal.
+                  example: "Run"
+              required:
+                - name
+                - goal_plan_assigned
+                - goal_name
+      responses:
+        "200":
+          description: Goal offered successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  goal_name:
+                    type: string
+                    description: Name of the goal.
+                  goal_plan_assigned:
+                    type: string
+                    description: Status of the goal plan assignment.
+                  person_name:
+                    type: string
+                    description: Name of the person.
+                  status:
+                    type: string
+                    description: Status of the goal offering.
+                  timestamp:
+                    type: string
+                    format: date-time
+                    description: Timestamp of the goal offering.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+  
+
+
+  /goal/assign:
+    post:
+      operationId: assignGoal
+      summary: Assign a goal to an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal_plan_name:
+                  type: string
+                  description: Name of the goal plan.
+                  example: "Annual Performance Plan 2024"
+                name:
+                  type: string
+                  description: Name of the employee.
+                  example: "Ankit"
+                goal_name:
+                  type: string
+                  description: Name of the goal.
+                  example: "Imp"
+                type:
+                  type: string
+                  description: Type of the goal.
+                  example: "performance"
+              required:
+                - goal_plan_name
+                - name
+                - goal_name
+                - type
+      responses:
+        "200":
+          description: Goal assigned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  comments:
+                    type: array
+                    items:
+                      type: string
+                    description: List of comments.
+                    example: []
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: The creation timestamp.
+                    example: "2024-07-31 07:11:25"
+                  feedback:
+                    type: array
+                    items:
+                      type: string
+                    description: List of feedback.
+                    example: []
+                  goal_name:
+                    type: string
+                    description: Name of the goal.
+                    example: "Imp"
+                  goal_plan_assigned:
+                    type: string
+                    description: Status of the goal plan assignment.
+                    example: "N/A"
+                  goal_type:
+                    type: string
+                    description: Type of the goal.
+                    example: "performance"
+                  measurement:
+                    type: string
+                    description: Measurement details.
+                    example: "None"
+                  name:
+                    type: string
+                    description: Name of the employee assigned to the goal.
+                    example: "Ankit"
+                  progress:
+                    type: string
+                    description: Progress status.
+                    example: "Not started"
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid request data.
+
+  /goal/mass_assign:
+   post:
+    operationId: massAssignGoal
+    summary: Mass assign goals to eligible employees.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              goal_plan_name:
+                type: string
+                description: The name of the goal plan.
+              goal_name:
+                type: string
+                description: The name of the goal to be assigned.
+              eligibility_name:
+                type: string
+                description: The name of the eligibility profile. Leave blank if not applicable.
+              type:
+                type: string
+                description: The type of the goal.
+            required:
+              - goal_plan_name
+              - goal_name
+              - eligibility_name
+              - type
+    responses:
+      "200":
+        description: Goals successfully assigned.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message.
+                  example: "Goals successfully assigned"
+                my_goals:
+                  type: array
+                  description: A list of goals assigned to the employee(s).
+                  items:
+                    type: object
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /smart_goal/check_smart:
+    post:
+      operationId: checkSmart
+      summary: Check if a goal is SMART.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal_name:
+                  type: string
+                  description: Name of the goal to check.
+                  example: "Increase Sales by 20%"
+              required:
+                - goal_name
+      responses:
+        "200":
+          description: Goal SMART status.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  goal_name:
+                    type: string
+                    description: Name of the goal.
+                    example: "Increase Sales by 20%"
+                  status:
+                    type: string
+                    description: Status of the goal.
+                    example: "SMART"
+                  issues:
+                    type: array
+                    items:
+                      type: string
+                    description: List of issues if the goal is not SMART.
+                  suggestions:
+                    type: array
+                    items:
+                      type: string
+                    description: List of suggestions to make the goal SMART.
+                  error:
+                    type: string
+                    description: Error message if the goal is not found.
+                    example: "Goal not found"
+        "404":
+          description: Goal not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+                    example: "Goal not found"
+
+  /goal/assign_on_combined_employee_list:
+   post:
+    operationId: assignGoals
+    summary: Assign goals based on a combined employee list.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              goal_plan_name:
+                type: string
+                description: The name of the goal plan.
+                example: "Annual Performance Plan 2024"
+              type:
+                type: string
+                description: The type of the goal plan.
+                example: "performance"
+            required:
+              - goal_plan_name
+              - type
+    responses:
+      "200":
+        description: Goals successfully assigned.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message.
+                  example: "Goals successfully assigned"
+                my_goals:
+                  type: array
+                  items:
+                    type: object
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+  
+  /goal/assign_on_goal_eligibility:
+   post:
+    operationId: assignGoalsOnEligibility
+    summary: Assign goals based on goal eligibility.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              goal_plan_name:
+                type: string
+                description: The name of the goal plan.
+                example: "Annual Performance Plan 2024"
+              type:
+                type: string
+                description: The type of the goal plan.
+                example: "performance"
+            required:
+              - goal_plan_name
+              - type
+    responses:
+      "200":
+        description: Goals successfully assigned.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message.
+                  example: "Goals successfully assigned"
+                my_goals:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      _id:
+                        type: string
+                        description: The unique identifier for the goal.
+                      comments:
+                        type: array
+                        items:
+                          type: string
+                      created_at:
+                        type: string
+                        description: The date and time when the goal was created.
+                        example: "2024-08-12 08:22:36"
+                      feedback:
+                        type: array
+                        items:
+                          type: string
+                      goal_name:
+                        type: string
+                        description: The name of the goal.
+                        example: "Improve Customer Satisfaction 1"
+                      goal_plan_assigned:
+                        type: string
+                        description: The goal plan this goal is assigned to.
+                        example: "Annual Performance Plan 2024"
+                      goal_type:
+                        type: string
+                        description: The type of the goal.
+                        example: "performance"
+                      measurement:
+                        type: string
+                        description: The measurement criteria for the goal.
+                        example: "None"
+                      name:
+                        type: string
+                        description: The name of the employee assigned to the goal.
+                        example: "Ankit Pipare"
+                      progress:
+                        type: string
+                        description: The progress status of the goal.
+                        example: "Not started"
+                      updated_by:
+                        type: string
+                        description: The person who last updated the goal.
+                        example: "Admin"
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
+
+  /goal_plan/create:
+   post:
+    operationId: createGoalPlan
+    summary: Create a new goal plan with associated goals, eligibility profiles, and worker lists.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              details:
+                type: object
+                properties:
+                  goal_plan_name:
+                    type: string
+                    description: The name of the goal plan.
+                    example: "Annual Performance Plan 2024 1"
+                  review_period:
+                    type: string
+                    description: The review period for the goal plan.
+                    example: "Annual 2024"
+                  description:
+                    type: string
+                    description: Description of the goal plan.
+                    example: "Updated yearly performance goals"
+                  allow_updates_to_goals_by:
+                    type: string
+                    description: Who can update the goals.
+                    example: "Employee, Manager"
+                  actions_for_workers_and_managers_on_hr_assigned_goals:
+                    type: string
+                    description: Actions allowed for workers and managers on HR-assigned goals.
+                    example: "Review, Comment"
+                  performance_document_types:
+                    type: string
+                    description: Types of performance documents associated with the goal plan.
+                    example: "Annual Review"
+                  evaluation_type:
+                    type: string
+                    description: The type of evaluation used in the goal plan.
+                    example: "360 Review"
+                  goal_weights:
+                    type: string
+                    description: The method of weighting goals.
+                    example: "Weight by priority"
+                  maximum_goals_for_this_goal_plan:
+                    type: string
+                    description: The maximum number of goals allowed for this plan.
+                    example: "10"
+                  start_date:
+                    type: string
+                    format: date
+                    description: The start date of the goal plan.
+                    example: "2024-01-01"
+                  end_date:
+                    type: string
+                    format: date
+                    description: The end date of the goal plan.
+                    example: "2024-12-31"
+              goals:
+                type: array
+                items:
+                  type: string
+                description: A list of goals associated with the goal plan.
+                example:
+                  - "Increase Sales 1"
+                  - "Improve Customer Satisfaction 1"
+              eligibility_profiles:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the eligibility profile.
+                      example: "Eligibility Profile 3"
+                    employees_name:
+                      type: array
+                      items:
+                        type: string
+                      description: A list of employee names included in the eligibility profile.
+                      example:
+                        - "Ruchi"
+                        - "Dan Agarwal"
+                        - "Christy Torres"
+              included_workers:
+                type: array
+                items:
+                  type: string
+                description: A list of workers included in the goal plan.
+                example:
+                  - "Jane Smith"
+                  - "John Doe"
+              excluded_workers:
+                type: array
+                items:
+                  type: string
+                description: A list of workers excluded from the goal plan.
+                example:
+                  - "Christy Torres"
+              combined_employees:
+                type: array
+                items:
+                  type: string
+                description: A combined list of all employees involved in the goal plan.
+                example:
+                  - "Jane Smith"
+                  - "Ruchi"
+                  - "Dan Agarwal"
+                  - "John Doe"
+    responses:
+      "200":
+        description: Goal plan created successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message.
+                  example: "Goal plan created successfully"
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message.
