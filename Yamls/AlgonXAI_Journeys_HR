@@ -1243,5 +1243,3 @@ paths:
                 error:
                   type: string
                   description: Error message.
-
-
