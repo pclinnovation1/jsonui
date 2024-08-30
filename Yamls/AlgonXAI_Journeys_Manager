@@ -1088,58 +1088,7 @@ paths:
               properties:
                 error:
                   type: string
-                  description: Error message.
-
-  
-  /submit_feedback:
-   post:
-    operationId: submitFeedback
-    summary: Submit feedback for a specific task in a journey for a user.
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              person_name:
-                type: string
-                description: The name of the user.
-              journey_title:
-                type: string
-                description: The title of the journey.
-              task_name:
-                type: string
-                description: The name of the task for which feedback is being submitted.
-              feedback:
-                type: string
-                description: The feedback for the task.
-            required:
-              - person_name
-              - journey_title
-              - task_name
-              - feedback
-    responses:
-      "200":
-        description: Successful response indicating feedback submission.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                message:
-                  type: string
-                  description: Success message indicating feedback submission.
-      "400":
-        description: Invalid request data.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                error:
-                  type: string
-                  description: Error message.
+                  description: Error message.  
 
   /view_team_journeys:
    post:
