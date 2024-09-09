@@ -1,0 +1,42 @@
+{
+  "instructions": [
+    {
+      "step": 1,
+      "function": "createProcess",
+      "description": "Start by creating a new process using the 'createProcess' function. This function requires the process name and description."
+    },
+    {
+      "step": 2,
+      "options": [
+        {
+          "function": "addApproversGroup",
+          "description": "Create an approvers group using the 'addApproversGroup' function. This includes specifying the group name, whether empty groups are allowed, and a list of email addresses."
+        },
+        {
+          "function": "createApproversHierarchy",
+          "description": "Create an approvers hierarchy using the 'createApproversHierarchy' function. This requires details about the department, routing, approval chain, and top approver."
+        },
+        {
+          "function": "createApproversRepresentative",
+          "description": "Create an approvers representative using the 'createApproversRepresentative' function. This includes specifying the representative type, representative of, and email addresses."
+        }
+      ],
+      "description": "Next, set up approvers by either creating an approvers group, hierarchy, or a representative."
+    },
+    {
+      "step": 3,
+      "function": "createConditions",
+      "description": "Define the conditions for approval using the 'createConditions' function. This requires specifying the process name and a list of conditions with their types and operators."
+    },
+    {
+      "step": 4,
+      "function": "createApprovalRules",
+      "description": "Create the approval rules for the process using the 'createApprovalRules' function. This involves linking conditions to approvers."
+    },
+    {
+      "step": 5,
+      "function": "createTransaction",
+      "description": "Make transactions for any process using the 'createTransaction' function. This function requires the process name, transaction fields, and field types."
+    }
+  ]
+}
