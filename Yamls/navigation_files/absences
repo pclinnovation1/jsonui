@@ -1,0 +1,38 @@
+{
+  "navigation": [
+    {
+      "section": "Leave Application Management",
+      "functions": [
+        {
+          "name": "Apply for Leave",
+          "description": "Allows an employee to apply for leave, submitting requests for time off and specifying leave details."
+        },
+        {
+          "name": "View Leave Applications",
+          "description": "Enables an employee to view submitted leave applications, tracking the status and details of leave requests."
+        },
+        {
+          "name": "Edit Leave Application",
+          "description": "Allows an employee to edit existing leave applications, making changes to leave dates and details as needed."
+        },
+        {
+          "name": "Withdraw Leave Application",
+          "description": "Enables an employee to withdraw a previously submitted leave application, canceling the request if necessary."
+        }
+      ]
+    },
+    {
+      "section": "Leave Balance Management",
+      "functions": [
+        {
+          "name": "View Leave Balance",
+          "description": "Enables a user to view their current leave balance, helping them manage their available leave days."
+        },
+        {
+          "name": "Edit Leave Balance",
+          "description": "Allows a user to edit their leave balance, making adjustments to the available leave days as necessary."
+        }
+      ]
+    }
+  ]
+}
