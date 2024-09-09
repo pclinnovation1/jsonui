@@ -1,0 +1,165 @@
+{
+  "navigation": [
+    {
+      "section": "External Learning Management",
+      "functions": [
+        {
+          "name": "Add External Learning",
+          "description": "Allows a manager to add new external learning experiences, capturing relevant details for tracking and reporting."
+        },
+        {
+          "name": "View External Learning",
+          "description": "Enables a manager to view details of external learning experiences, including courses and training programs."
+        },
+        {
+          "name": "Update External Learning",
+          "description": "Allows a manager to update the details of existing external learning experiences, such as modifying dates or descriptions."
+        }
+      ]
+    },
+    {
+      "section": "Non-Catalog Learning Management",
+      "functions": [
+        {
+          "name": "Add Non-Catalog Learning",
+          "description": "Allows a manager to add new non-catalog learning experiences, capturing details not found in the standard course catalog."
+        },
+        {
+          "name": "View Non-Catalog Learning",
+          "description": "Enables a manager to view details of non-catalog learning experiences, tracking various informal learning activities."
+        },
+        {
+          "name": "Update Non-Catalog Learning",
+          "description": "Allows a manager to update the details of existing non-catalog learning experiences, such as adding new information or changes."
+        }
+      ]
+    },
+    {
+      "section": "Author Learning Management",
+      "functions": [
+        {
+          "name": "Add Author Learning Journey",
+          "description": "Allows a manager to create a new learning journey authored by them, defining its objectives, tasks, and participants."
+        },
+        {
+          "name": "View Author Learning Journey",
+          "description": "Enables a manager to view details of their authored learning journeys, including progress and participant information."
+        },
+        {
+          "name": "Update Author Learning Journey",
+          "description": "Allows a manager to update the details of an existing learning journey they authored, such as modifying tasks, dates, or participants."
+        }
+      ]
+    },
+    {
+      "section": "Community Learning",
+      "functions": [
+        {
+          "name": "Add Community Learning",
+          "description": "Allows a manager to add new learning activities and resources to the community, fostering collaborative learning."
+        },
+        {
+          "name": "View Community Learning",
+          "description": "Enables a manager to view learning activities and resources shared within the community, facilitating collaborative learning."
+        },
+        {
+          "name": "Update Community Learning",
+          "description": "Allows a manager to update details of existing community learning activities, ensuring the information is current and accurate."
+        },
+        {
+          "name": "Add Community Member",
+          "description": "Enables a manager to add new members to the learning community, enhancing collaboration and knowledge sharing."
+        }
+      ]
+    },
+    {
+      "section": "Course Management",
+      "functions": [
+        {
+          "name": "View Courses",
+          "description": "Allows a manager to view details of available courses, including descriptions, schedules, and enrollment options."
+        },
+        {
+          "name": "Assign Course to Employee",
+          "description": "Enables a manager to assign courses to existing employees, facilitating their professional development."
+        },
+        {
+          "name": "View Assigned Courses",
+          "description": "Allows a manager to view courses that have been assigned to employees, helping them manage and track learning progress."
+        },
+        {
+          "name": "Reassign Course",
+          "description": "Enables a manager to reassign courses to different employees as needed, ensuring appropriate learning allocation."
+        },
+        {
+          "name": "Enroll in Course Offerings",
+          "description": "Allows a manager to enroll employees in available course offerings, registering them for courses that match their learning goals."
+        },
+        {
+          "name": "View Enrollments in Offerings",
+          "description": "Enables a manager to view current enrollments in course offerings, keeping track of learning commitments."
+        },
+        {
+          "name": "Withdraw from Offering Courses",
+          "description": "Allows a manager to withdraw employees from course offerings they are enrolled in, updating their learning schedule as needed."
+        }
+      ]
+    },
+    {
+      "section": "Catalog Management",
+      "functions": [
+        {
+          "name": "Add Video to Catalog",
+          "description": "Allows a manager to add new video resources to the learning catalog, expanding available learning materials."
+        },
+        {
+          "name": "View Catalog Videos",
+          "description": "Enables a manager to view video resources available in the learning catalog, accessing various educational videos."
+        },
+        {
+          "name": "Update Catalog Video",
+          "description": "Allows a manager to update details of existing video resources in the catalog, ensuring the information is current and accurate."
+        },
+        {
+          "name": "Delete Catalog Video",
+          "description": "Enables a manager to delete video resources from the learning catalog, removing outdated or irrelevant materials."
+        }
+      ]
+    },
+    {
+      "section": "Course Recommendations",
+      "functions": [
+        {
+          "name": "Recommend Course",
+          "description": "Allows a manager to recommend courses to employees, sharing valuable learning resources and opportunities."
+        },
+        {
+          "name": "View Recommended Courses",
+          "description": "Enables a manager to view courses that have been recommended to employees, exploring suggested learning paths."
+        }
+      ]
+    },
+    {
+      "section": "Course Completion and Certification",
+      "functions": [
+        {
+          "name": "Complete Course",
+          "description": "Allows a manager to mark a course as completed for employees, updating their learning records and achievements."
+        },
+        {
+          "name": "Generate Certificate",
+          "description": "Enables a manager to generate certificates for employees who have completed courses, recognizing their accomplishments."
+        }
+      ]
+    },
+    {
+      "section": "Team Collaboration",
+      "functions": [
+        {
+          "name": "Create Teams Meeting",
+          "description": "Allows a manager to create a Teams meeting for collaborative learning sessions, enhancing team engagement and interaction."
+        }
+      ]
+    }
+  ]
+}
