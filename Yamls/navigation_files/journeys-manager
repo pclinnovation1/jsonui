@@ -1,0 +1,109 @@
+{
+  "navigation": [
+    {
+      "section": "Journey Management",
+      "functions": [
+        {
+          "name": "Create Journey",
+          "description": "Allows a user to create a new journey, defining its objectives, tasks, and participants."
+        },
+        {
+          "name": "View Journey",
+          "description": "Enables a user to view details of existing journeys, including progress and participant information."
+        },
+        {
+          "name": "Update Journey",
+          "description": "Allows a user to update the details of an existing journey, such as modifying tasks, dates, or participants."
+        },
+        {
+          "name": "Delete Journey",
+          "description": "Enables a user to delete a journey that is no longer needed, removing all associated tasks and data."
+        },
+        {
+          "name": "View Journeys of User",
+          "description": "Allows a user to view all journeys they are involved in, providing an overview of their involvement and progress."
+        },
+        {
+          "name": "View Journey by Name",
+          "description": "Enables a user to search and view a specific journey by its name, providing targeted information."
+        },
+        {
+          "name": "Unassign Journey",
+          "description": "Allows a user to unassign a journey from a user or team, freeing them from the journey's commitments."
+        },
+        {
+          "name": "Unassign Journey for Team",
+          "description": "Enables a user to unassign a journey for a specific team, reallocating their responsibilities."
+        }
+      ]
+    },
+    {
+      "section": "Task Management",
+      "functions": [
+        {
+          "name": "Create Task",
+          "description": "Allows a user to create new tasks within a journey, specifying task details and assignments."
+        },
+        {
+          "name": "View Task",
+          "description": "Enables a user to view details of tasks within a journey, including their status and assigned users."
+        },
+        {
+          "name": "Update Task",
+          "description": "Allows a user to update the details of existing tasks, such as changing the task description or deadlines."
+        },
+        {
+          "name": "Delete Task",
+          "description": "Enables a user to delete tasks that are no longer relevant or required within a journey."
+        },
+        {
+          "name": "Add Task to Journey",
+          "description": "Allows a user to add tasks to an existing journey, expanding the scope and objectives."
+        }
+      ]
+    },
+    {
+      "section": "Team Management",
+      "functions": [
+        {
+          "name": "Add Team",
+          "description": "Enables a user to add a new team, defining its members and objectives."
+        },
+        {
+          "name": "Add User to Team in Journey",
+          "description": "Allows a user to add a user to a team within a journey, integrating them into team-specific tasks and roles."
+        },
+        {
+          "name": "Add User to Journey",
+          "description": "Allows a user to add a user to a journey, assigning them specific tasks and responsibilities."
+        },
+        {
+          "name": "View Team Journeys",
+          "description": "Enables a user to view journeys associated with specific teams, facilitating team management and coordination."
+        }
+      ]
+    },
+    {
+      "section": "Progress Tracking",
+      "functions": [
+        {
+          "name": "Track Journey Progress",
+          "description": "Enables a user to track the overall progress of a journey, monitoring task completion and milestones."
+        },
+        {
+          "name": "Track Team Member Progress",
+          "description": "Allows a user to track the progress of individual team members within a journey, ensuring accountability and performance."
+        }
+      ]
+    },
+    {
+      "section": "Reporting and Activities",
+      "functions": [
+        {
+          "name": "Show Journey Activities",
+          "description": "Allows a user to view all activities related to a journey, providing insights into ongoing and completed tasks."
+        }
+      ]
+    }
+  ]
+}
