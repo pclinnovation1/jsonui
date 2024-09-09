@@ -1,0 +1,115 @@
+{
+  "navigation": [
+    {
+      "section": "External Learning Management",
+      "functions": [
+        {
+          "name": "Add External Learning",
+          "description": "Allows a user to add new external learning experiences, capturing relevant details for tracking and reporting."
+        },
+        {
+          "name": "View External Learning",
+          "description": "Enables a user to view details of their external learning experiences, including courses and training programs."
+        },
+        {
+          "name": "Update External Learning",
+          "description": "Allows a user to update the details of existing external learning experiences, such as modifying dates or descriptions."
+        }
+      ]
+    },
+    {
+      "section": "Non-Catalog Learning Management",
+      "functions": [
+        {
+          "name": "Add Non-Catalog Learning",
+          "description": "Allows a user to add new non-catalog learning experiences, capturing details not found in the standard course catalog."
+        },
+        {
+          "name": "View Non-Catalog Learning",
+          "description": "Enables a user to view details of their non-catalog learning experiences, tracking various informal learning activities."
+        },
+        {
+          "name": "Update Non-Catalog Learning",
+          "description": "Allows a user to update the details of existing non-catalog learning experiences, such as adding new information or changes."
+        }
+      ]
+    },
+    {
+      "section": "Community Learning",
+      "functions": [
+        {
+          "name": "View Community Learning",
+          "description": "Allows a user to view learning activities and resources shared within the community, facilitating collaborative learning."
+        }
+      ]
+    },
+    {
+      "section": "Course Management",
+      "functions": [
+        {
+          "name": "View Assigned Courses",
+          "description": "Enables a user to view courses that have been assigned to them, helping them manage their learning schedule."
+        },
+        {
+          "name": "View Course Offerings",
+          "description": "Allows a user to view available course offerings, exploring different options for their learning needs."
+        },
+        {
+          "name": "Enroll in Course Offerings",
+          "description": "Allows a user to enroll in available course offerings, registering for courses that match their learning goals."
+        },
+        {
+          "name": "View Enrollments in Offerings",
+          "description": "Enables a user to view their current enrollments in course offerings, keeping track of their learning commitments."
+        },
+        {
+          "name": "Withdraw from Offering Courses",
+          "description": "Allows a user to withdraw from course offerings they are enrolled in, updating their learning schedule as needed."
+        }
+      ]
+    },
+    {
+      "section": "Catalog Management",
+      "functions": [
+        {
+          "name": "Add Video to Catalog",
+          "description": "Allows a user to add new video resources to the learning catalog, expanding available learning materials."
+        },
+        {
+          "name": "View Catalog Videos",
+          "description": "Enables a user to view video resources available in the learning catalog, accessing various educational videos."
+        },
+        {
+          "name": "Update Catalog Video",
+          "description": "Allows a user to update details of existing video resources in the catalog, ensuring the information is current and accurate."
+        },
+        {
+          "name": "Delete Catalog Video",
+          "description": "Enables a user to delete video resources from the learning catalog, removing outdated or irrelevant materials."
+        }
+      ]
+    },
+    {
+      "section": "Course Recommendations",
+      "functions": [
+        {
+          "name": "Recommend Course",
+          "description": "Allows a user to recommend courses to others, sharing valuable learning resources and opportunities."
+        },
+        {
+          "name": "View Recommended Courses",
+          "description": "Enables a user to view courses that have been recommended to them, exploring suggested learning paths."
+        }
+      ]
+    },
+    {
+      "section": "Course Completion",
+      "functions": [
+        {
+          "name": "Complete Course",
+          "description": "Allows a user to mark a course as completed, updating their learning records and achievements."
+        }
+      ]
+    }
+  ]
+}
