@@ -1,0 +1,39 @@
+{
+  "navigation": [
+    {
+      "section": "User Journey Management",
+      "functions": [
+        {
+          "name": "View Journeys of User",
+          "description": "Allows a user to view all the journeys they are part of, providing a comprehensive list of their involvement in various tasks and projects."
+        },
+        {
+          "name": "Track Journey Progress",
+          "description": "Enables users to track their progress within a journey, offering insights into completed, ongoing, and pending tasks to ensure they stay on track."
+        }
+      ]
+    },
+    {
+      "section": "Task Management",
+      "functions": [
+        {
+          "name": "Complete Task",
+          "description": "Allows users to mark specific tasks within a journey as completed, updating their status and contributing to the overall progress of the journey."
+        },
+        {
+          "name": "Show My Tasks",
+          "description": "Displays a list of tasks assigned to the user, helping them to manage their workload and prioritize their activities effectively."
+        }
+      ]
+    },
+    {
+      "section": "Team Management",
+      "functions": [
+        {
+          "name": "Show Team Journey Tasks and Report",
+          "description": "Provides an overview of the tasks and reports related to the team within a journey, facilitating team collaboration and monitoring team performance."
+        }
+      ]
+    }
+  ]
+}
