@@ -1,0 +1,2 @@
+This Flask API is designed to manage employee probation periods, including starting, extending, and ending probation periods for employees. It integrates MongoDB to store probation and employee data, and includes dynamic retrieval of employee and manager information. The system sends email notifications to employees, managers, and direct reports when probation periods are initiated, extended, or ended.
+The API uses MongoDB to store records related to employees, managers, probation periods, and their updates. 
