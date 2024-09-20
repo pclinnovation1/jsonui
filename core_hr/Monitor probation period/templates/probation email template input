@@ -1,0 +1,19 @@
+http://127.0.0.1:5000/insert_template
+
+
+{
+  "template_name": "probation_employee_email",
+  "subject": "Probation Period Notification",
+  "body": "<!DOCTYPE html><html><head><title>Probation Period - {{ data.action_type }}</title></head><body style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #333333; background-color: #f9f9f9; padding: 20px;\"><div style=\"max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border: 1px solid #dddddd; border-radius: 8px;\"><h2 style=\"color: #0a5275; font-size: 24px;\">Probation Period - {{ data.action_type }}</h2><div style=\"margin-bottom: 20px;\"><p style=\"margin-bottom: 10px;\">Dear <strong>{{ data.person_name }}</strong>,</p><p style=\"margin-bottom: 10px;\">This is to notify you that your probation period has been {{ data.action_type | lower }} with the following details:</p><ul style=\"list-style-type: none; padding: 0; margin: 0;\">{% for label, value in data.items() if label not in [\"person_name\", \"action_type\"] %}<li style=\"margin-bottom: 10px;\"><strong>{{ label.replace('_', ' ').title() }}:</strong> {{ value if value else 'N/A' }}</li>{% endfor %}</ul><p style=\"margin-top: 20px;\">If you have any questions or require further assistance, please do not hesitate to contact HR or your Manager.</p></div><div style=\"margin-top: 30px; font-size: 14px; color: #666666;\"><p style=\"margin-bottom: 5px;\">Best regards,</p><p style=\"margin-bottom: 0;\">HR Department<br>payrollcloudcorp.com</p></div></div></body></html>"
+}
+
+
+
+
+{
+  "template_name": "probation_manager_email",
+  "subject": "Employee Probation Period Notification",
+  "body": "<!DOCTYPE html><html><head><title>Employee Probation Period - {{ data.action_type }}</title></head><body style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #333333; background-color: #f9f9f9; padding: 20px;\"><div style=\"max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border: 1px solid #dddddd; border-radius: 8px;\"><h2 style=\"color: #0a5275;\">Employee Probation Period - {{ data.action_type }}</h2><div style=\"margin-bottom: 20px;\"><p>Dear <strong>{{ data.person_name }}</strong>,</p><p>This is to notify you that <strong>{{ data.employee_name }}</strong>'s probation period has been {{ data.action_type | lower }} with the following details:</p><ul style=\"list-style-type: none; padding: 0;\">{% for label, value in data.items() %}{% if label != 'person_name' and label != 'action_type' and label != 'employee_name' %}<li style=\"margin-bottom: 10px;\"><strong>{{ label | replace('_', ' ') | capitalize }}:</strong> {{ value }}</li>{% endif %}{% endfor %}</ul><p>Please ensure that all necessary actions are taken regarding this employee's probation period.</p><p>If you have any questions or require further assistance, please do not hesitate to contact HR.</p></div><div style=\"margin-top: 30px; font-size: 14px; color: #666666;\"><p>Best regards,</p><p>HR Department<br>payrollcloudcorp.com</p></div></div></body></html>"
+}
+
+
