@@ -1,0 +1,1063 @@
+Human_Resources:
+  - graph:
+      title: Age Band Diversity
+      description: This report displays the percentage of workers in the organization by calculated age band..
+      data_points:
+        - Age Band
+        - Worker Count
+        - Gender
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Custom Date Range
+        - Specific Age Bands
+        - Specific Genders
+
+
+  - graph:
+      title: Assignment Details
+      description: Provides current assignment information for a selection of workers.
+      data_points:
+        - Assignment Status
+        - Worker Name
+        - Assignment Start Date
+        - Assignment End Date
+        - Job Title
+        - Employment Type
+        - Assignment Duration
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Assignments Only
+        - Specific Departments
+        - Specific Job Titles
+        - Specific Locations
+
+
+  - graph:
+      title: Assignment Headcount by Department
+      description: This report will be a matrix displaying the sum of the assignment headcount by department and system person type.
+      data_points:
+        - Department
+        - Headcount
+        - Person Type
+        - Employment Type
+        - Contract Type
+      breakdown_options:
+        - Location
+        - Job Title
+        - Employment Type
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+
+
+  - graph:
+      title: Department Details
+      description: Lists the active departments (HCM organizations).
+      data_points:
+        - Department Name
+        - Worker Count
+        - Department Type
+      breakdown_options:
+        - Location
+      filters:
+        - Active Departments Only
+        - Specific Departments
+
+
+  - graph:
+      title: Employee Contract Department
+      description: Provides information of worker and their contract counts by status.
+      data_points:
+        - Contract Status
+        - Employee Name
+        - Contract Start Date
+        - Contract End Date
+        - Contract Duration
+      breakdown_options:
+        - Department
+        - Job Title
+      filters:
+        - Specific Departments
+        - Specific Job Titles
+        - Specific Contract Types
+        - Contract Status
+
+
+  - graph:
+      title: Employee Ethnicity
+      description: This report displays the percentage of workers by their ethnicity.
+      data_points:
+        - Ethnicity
+        - Worker Count
+        - Gender
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Ethnic Groups
+
+
+  - graph:
+      title: Gender Diversity
+      description: This report displays the percentage of workers by gender.
+      data_points:
+        - Gender
+        - Worker Count
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Genders
+
+
+  - graph:
+      title: Grade by Gender
+      description: This report displays the split between the gender counts for the selected grades.
+      data_points:
+        - Gender
+        - Grade
+        - Worker Count
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Grades
+        - Specific Genders
+
+
+  - graph:
+      title: Grade Details
+      description: Lists the active salary grades.
+      data_points:
+        - Grade
+        - Worker Count
+        - Salary Range
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Job Title
+      filters:
+        - Active Grades Only
+        - Specific Grades
+        - Specific Salary Ranges
+
+
+  - graph:
+      title: Head Count
+      description: Provides the headcount by employment category and system person type.
+      data_points:
+        - Employment Category
+        - Person Type
+        - Headcount
+        - Full-Time/Part-Time Status
+        - Contract Type
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Employment Categories
+        - Specific Person Types
+
+
+  - graph:
+      title: Headcount Activity
+      description: Provides the turnover in the organization along with the other headcount metrics.
+      data_points:
+        - Turnover Rate
+        - Headcount
+        - Hires
+        - Terminations
+        - Net Headcount Change
+        - Date
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Custom Date Range
+        - Specific Departments
+        - Specific Job Titles
+
+
+  - graph:
+      title: Headcount Activity Period End Details
+      description: Details of the workers during the end of the period.
+      data_points:
+        - Worker Name
+        - Period End Date
+        - Employment Status
+        - Department
+        - Job Title
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Departments
+        - Specific Job Titles
+
+
+  - graph:
+      title: Headcount Activity Period Start Details
+      description: Details of the workers during the start of the period.
+      data_points:
+        - Worker Name
+        - Period Start Date
+        - Employment Status
+        - Department
+        - Job Title
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Departments
+        - Specific Job Titles
+
+
+  - graph:
+      title: Headcount and Mobility by Department
+      description: Provides the full time and part time employee headcount, the contingent headcount, the number of vacant openings, the headcount of pending workers and future terminations and those workers currently absent.
+      data_points:
+        - Department
+        - Headcount
+        - Worker Status
+        - Vacancies
+        - Future Terminations
+        - Pending Workers
+        - Absent Workers
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Departments
+        - Specific Job Titles
+        - Specific Worker Status
+
+
+  - graph:
+      title: Headcount by Age Profile
+      description: This report displays the headcount by various age bands of the employees.
+      data_points:
+        - Age Band
+        - Headcount
+        - Gender
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Custom Date Range
+        - Specific Age Bands
+        - Specific Genders
+
+
+  - graph:
+      title: Headcount by Employee Category and Person Type
+      description: Provides the counts for each of the Person Types like Employee, Contingent Workers, etc., against all the Employment Categories in the organization.
+      data_points:
+        - Employee Category
+        - Person Type
+        - Headcount
+        - Employment Type
+        - Contract Type
+        - Contingent Status
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Employment Categories
+        - Specific Person Types
+
+
+  - graph:
+      title: Headcount by Employee Category and Person Type Details
+      description: This report is a detailed report invoked from the Headcount by Employment Category and Person Type on drill down.
+      data_points:
+        - Employee Category
+        - Person Type
+        - Worker Name
+        - Employment Type
+        - Contract Type
+        - Contingent Status
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Employment Categories
+        - Specific Person Types
+        - Specific Worker Names
+
+
+  - graph:
+      title: Headcount KPI
+      description: Displays the hires, terminations, and promotions key metrics.
+      data_points:
+        - Hires
+        - Terminations
+        - Promotions
+        - Net Headcount Change
+        - Rehires
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Job Titles
+
+
+  - graph:
+      title: Headcount KPI Hire Details
+      description: This report displays the hire details.
+      data_points:
+        - Hire Date
+        - Worker Name
+        - Department
+        - Hire Type
+        - Employment Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Departments
+        - Specific Job Titles
+
+
+  - graph:
+      title: Headcount KPI Promotion Details
+      description: This report displays the promotion details.
+      data_points:
+        - Promotion Date
+        - Worker Name
+        - Department
+        - Previous Job Title
+        - New Job Title
+        - Promotion Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Departments
+        - Specific Job Titles
+
+
+  - graph:
+      title: Headcount KPI Termination Details
+      description: This report displays the termination details.
+      data_points:
+        - Termination Date
+        - Worker Name
+        - Department
+        - Termination Reason
+        - Termination Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Terminated Employees Only
+        - Custom Date Range
+        - Specific Termination Reasons
+
+
+  - graph:
+      title: Headcount KPI Workforce Assignment
+      description: Displays the headcount, FTE, part-time, female employee percentage, and female manager percentage key metrics.
+      data_points:
+        - Headcount
+        - FTE
+        - Female Percentage
+        - Part-Time Count
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Departments
+
+
+  - graph:
+      title: Headcount KPI Workforce Assignment Female Employee Details
+      description: This report displays the female employee details.
+      data_points:
+        - Worker Name
+        - Department
+        - Female Percentage
+        - Job Title
+        - Employment Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Female Employees Only
+        - Specific Departments
+
+
+  - graph:
+      title: Headcount KPI Workforce Assignment Female Manager Details
+      description: This report displays the female manager details.
+      data_points:
+        - Worker Name
+        - Department
+        - Manager Percentage
+        - Manager Role
+        - Manager Level
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Female Employees Only
+        - Active Employees Only
+        - Specific Departments
+        - Specific Manager Levels
+
+
+  - graph:
+      title: Headcount KPI Workforce Assignment FTE Details
+      description: This report displays the FTE details.
+      data_points:
+        - Worker Name
+        - Department
+        - FTE Count
+        - Job Title
+        - FTE Status
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific FTE Ranges
+
+
+  - graph:
+      title: Headcount KPI Workforce Assignment Headcount Details
+      description: This report displays the headcount details.
+      data_points:
+        - Worker Name
+        - Department
+        - Headcount
+        - Employment Type
+        - Contract Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Departments
+        - Specific Job Titles
+
+
+  - graph:
+      title: Headcount KPI Workforce Assignment Part-Time Details
+      description: This report displays the part-time details.
+      data_points:
+        - Worker Name
+        - Department
+        - Part-Time Count
+        - Job Title
+        - Part-Time Status
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Part-Time Employees Only
+        - Specific Departments
+        - Specific Part-Time Status
+
+
+  - graph:
+      title: Headcount Trend
+      description: This report displays the trend across the Headcount, FTE, and Contingent workers for the selected year. The headcount will be displayed by months of the year.
+      data_points:
+        - Date
+        - Headcount
+        - FTE
+        - Contingent Worker Count
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Worker Types
+
+
+  - graph:
+      title: Job Details
+      description: Lists the active HCM jobs.
+      data_points:
+        - Job Title
+        - Worker Count
+        - Job Category
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Jobs Only
+        - Specific Job Categories
+
+
+  - graph:
+      title: Joiners and Leavers
+      description: This report displays the new hires and terminations for the selected year by each month.
+      data_points:
+        - Date
+        - Hires
+        - Terminations
+        - Net Employee Change
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Reasons for Termination
+
+
+  - graph:
+      title: Joiners by Age Band and Gender
+      description: This report displays the count of new hires by calculated age band and split by gender.
+      data_points:
+        - Age Band
+        - Gender
+        - Hires
+        - Job Title
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Age Bands
+        - Specific Genders
+
+
+  - graph:
+      title: Joiners by Grade and Gender
+      description: This report displays the count of new hires by grade and split by gender.
+      data_points:
+        - Grade
+        - Gender
+        - Hires
+        - Job Title
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Grades
+        - Specific Genders
+
+
+  - graph:
+      title: Joiners Detail
+      description: Details of hire headcounts.
+      data_points:
+        - Worker Name
+        - Department
+        - Hire Date
+        - Employment Type
+        - Contract Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Job Titles
+
+
+  - graph:
+      title: Leavers by Age Band and Gender
+      description: This report displays the count of terminations by calculated age band and split by gender.
+      data_points:
+        - Age Band
+        - Gender
+        - Terminations
+        - Job Title
+        - Termination Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Terminated Employees Only
+        - Custom Date Range
+        - Specific Age Bands
+        - Specific Genders
+
+
+  - graph:
+      title: Leavers by Grade and Gender
+      description: This report displays the terminations by grade and split by gender.
+      data_points:
+        - Grade
+        - Gender
+        - Terminations
+        - Job Title
+        - Termination Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Terminated Employees Only
+        - Custom Date Range
+        - Specific Grades
+        - Specific Genders
+
+
+  - graph:
+      title: Length of Service Diversity
+      description: This report displays the percentage of workers in the organization by length of service band.
+      data_points:
+        - Length of Service
+        - Worker Count
+        - Employment Type
+        - Contract Type
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Length of Service Bands
+
+
+  - graph:
+      title: Locations Details
+      description: Provides details of the locations setup in the organization.
+      data_points:
+        - Location
+        - Worker Count
+        - Location Type
+      breakdown_options:
+        - Department
+        - Job Title
+      filters:
+        - Active Locations Only
+        - Specific Location Types
+
+
+  - graph:
+      title: Monthly Turnover and Termination Trend
+      description: Displays the monthly turnover trend in the organization. Can be analyzed by using key turnover metrics like Termination Headcount, etc.
+      data_points:
+        - Date
+        - Turnover
+        - Terminations
+        - Net Turnover
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Custom Date Range
+        - Specific Departments
+        - Specific Turnover Reasons
+
+
+  - graph:
+      title: Position Details
+      description: Lists the active HCM positions.
+      data_points:
+        - Position Title
+        - Worker Count
+        - Position Status
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Positions Only
+        - Specific Position Status
+
+
+  - graph:
+      title: Position Incumbents
+      description: Analysis accessed by the Position Incumbents Dashboard. Provides a list of positions and the incumbents in each one as of a defined date.
+      data_points:
+        - Position Title
+        - Incumbent Name
+        - Date
+        - Incumbent Status
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Active Positions Only
+        - Custom Date Range
+        - Specific Incumbent Status
+
+
+  - graph:
+      title: Position Occupancy
+      description: Analysis accessed by the Position Occupancy Dashboard. Provides a list of positions and the incumbents in each one as of a defined date.
+      data_points:
+        - Position Title
+        - Incumbent Name
+        - Occupancy Status
+        - Position Status
+      breakdown_options:
+        - Department
+        - Location
+        - Job Title
+      filters:
+        - Custom Date Range
+        - Active Positions Only
+        - Specific Position Status
+
+
+
+  - graph:
+      title: Promotions by Age Band and Gender
+      description: This report displays the count of promotions by calculated age band and split by gender.
+      data_points:
+        - Age Band
+        - Gender
+        - Promotions
+        - Job Title
+        - Promotion Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Age Bands
+        - Specific Genders
+
+
+  - graph:
+      title: Promotions by Grade and Gender
+      description: This report displays the promotions by grade and split by gender.
+      data_points:
+        - Grade
+        - Gender
+        - Promotions
+        - Job Title
+        - Promotion Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Custom Date Range
+        - Specific Grades
+        - Specific Genders
+
+
+  - graph:
+      title: Team Diversity
+      description: This analysis provides an overview of the employee diversity and their respective headcount.
+      data_points:
+        - Gender
+        - Ethnicity
+        - Age Band
+        - Employment Type
+        - Headcount
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Ethnicities
+
+
+  - graph:
+      title: Team Diversity Details
+      description: This report is a detailed report displaying the worker details invoked from Team Diversity.
+      data_points:
+        - Worker Name
+        - Gender
+        - Ethnicity
+        - Age Band
+        - Employment Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Active Employees Only
+        - Full-Time Employees Only
+        - Specific Departments
+        - Specific Ethnicities
+
+
+  - graph:
+      title: Terminations Overview
+      description: This report provides an overview of the terminated workers in the organization.
+      data_points:
+        - Termination Date
+        - Worker Name
+        - Department
+        - Termination Reason
+        - Termination Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Terminated Employees Only
+        - Custom Date Range
+        - Specific Termination Reasons
+
+
+  - graph:
+      title: Terminations Worker Details
+      description: This report is a detailed report displaying the worker details based on the termination overview.
+      data_points:
+        - Worker Name
+        - Termination Date
+        - Department
+        - Termination Reason
+        - Termination Type
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Terminated Employees Only
+        - Custom Date Range
+        - Specific Departments
+
+
+  - graph:
+      title: Turnover Analysis
+      description: Displays the termination statistics by various attributes like business unit, location, grade, and so on.
+      data_points:
+        - Termination Count
+        - Grade
+        - Department
+        - Termination Type
+        - Termination Reason
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Custom Date Range
+        - Specific Departments
+        - Specific Grades
+        - Specific Termination Reasons
+
+
+  - graph:
+      title: Turnover by Termination Category and Reason
+      description: Provides information on the terminations to understand whether it was voluntary or involuntary. Also gives an insight into the various reasons due to which the terminations occurred.
+      data_points:
+        - Termination Category
+        - Termination Reason
+        - Worker Name
+        - Termination Date
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Terminated Employees Only
+        - Custom Date Range
+        - Specific Termination Categories
+
+
+  - graph:
+      title: Turnover Involuntary Worker Details
+      description: Details of the workers that have been terminated involuntarily.
+      data_points:
+        - Worker Name
+        - Termination Date
+        - Termination Reason
+        - Job Title
+        - Department
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Involuntary Terminations Only
+        - Custom Date Range
+        - Specific Termination Reasons
+
+
+  - graph:
+      title: Turnover Voluntary Worker Details
+      description: Details of the workers that have been terminated voluntarily.
+      data_points:
+        - Worker Name
+        - Termination Date
+        - Termination Reason
+        - Job Title
+        - Department
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Voluntary Terminations Only
+        - Custom Date Range
+        - Specific Termination Reasons
+
+
+  - graph:
+      title: Turnover Worker Details
+      description: Details of the workers that have been terminated, either voluntary or involuntary.
+      data_points:
+        - Worker Name
+        - Termination Date
+        - Termination Category
+        - Termination Reason
+        - Job Title
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Custom Date Range
+        - Specific Departments
+        - Specific Termination Categories
+        - Specific Termination Reasons
+
+  - graph:
+      title: Workers Detailed Report
+      description: This is a detailed report displaying data from multiple subject areas. The information in this report is sourced from Worker Assignment, Work Relationship, and Salary Details Real Time subject areas.
+      data_points:
+        - Worker Name
+        - Assignment Details
+        - Salary Details
+        - Employment Type
+        - Contract Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Custom Date Range
+        - Specific Departments
+        - Specific Worker Types
+        - Specific Job Titles
+
+
+  - graph:
+      title: Workforce Event Details
+      description: Displays the worker details like person number, business unit, department, etc., for a specific HR action, year, or month.
+      data_points:
+        - Worker Name
+        - Department
+        - Event Type
+        - Event Date
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Custom Date Range
+        - Specific Events
+        - Specific Event Types
+
+
+  - graph:
+      title: Workforce Events by Month
+      description: This report provides an overview of the various events headcount trends in the organization, like hires, promotions, transfers, terminations, rehires, etc. The counts are viewed for one year grouped by Months.
+      data_points:
+        - Date
+        - Event Type
+        - Worker Count
+        - Event Count by Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Custom Date Range
+        - Specific Events
+        - Specific Event Types
+
+
+  - graph:
+      title: Workforce Events by Quarter
+      description: This report provides an overview of the various event headcount trends in the organization like hires, promotions, transfers, terminations, rehires, etc. The counts are viewed for one year grouped by quarter.
+      data_points:
+        - Quarter
+        - Event Type
+        - Worker Count
+        - Event Count by Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Custom Date Range
+        - Specific Events
+        - Specific Event Types
+
+
+  - graph:
+      title: Workforce Events by Year
+      description: This report provides an overview of the various event headcount trends in the organization like hires, promotions, transfers, terminations, rehires, etc. The counts are viewed for the last 3 years grouped by year.
+      data_points:
+        - Year
+        - Event Type
+        - Worker Count
+        - Event Count by Type
+      breakdown_options:
+        - Department
+        - Location
+      filters:
+        - Custom Date Range
+        - Specific Events
+        - Specific Event Types
+
+
+  - graph:
+      title: Workforce Mobility
+      description: Workforce assignment changes in the last 12 months and future assignment changes.
+      data_points:
+        - Worker Name
+        - Assignment Change Date
+        - Department
+        - New Job Title
+        - Old Job Title
+      breakdown_options:
+        - Location
+        - Job Title
+      filters:
+        - Custom Date Range
+        - Specific Departments
+        - Specific Assignment Change Types
+
