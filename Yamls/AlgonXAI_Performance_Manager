@@ -1,0 +1,280 @@
+openapi: 3.1.0
+info:
+  title: Learning Catalog Management API
+  description: API to manage learning communities within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for communities management
+paths:
+  openapi: 3.1.0
+
+paths:
+  /remaining_reviews/remaining_performance_reviews:
+    post:
+      operationId: getRemainingPerformanceReviews
+      summary: Retrieve remaining performance reviews based on manager name.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                manager_name:
+                  type: string
+                  description: The name of the manager whose remaining reviews need to be fetched.
+      responses:
+        "200":
+          description: Remaining performance reviews retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  remaining_reviews:
+                    type: array
+                    description: A list of remaining performance reviews for the manager.
+                    items:
+                      type: object
+                      properties:
+                        employee_name:
+                          type: string
+                          description: The name of the employee whose review is pending.
+                        performance_document_name:
+                          type: string
+                          description: The name of the performance document for the review.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+        "404":
+          description: Manager not found or no remaining reviews found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message when no remaining reviews are found for the manager.
+
+  /performance_review_details/fetch_performance_review_details:
+    post:
+      operationId: fetchPerformanceReviewDetails
+      summary: Retrieve detailed performance review data for an employee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document.
+                employee_name:
+                  type: string
+                  description: The name of the employee whose performance review details are being fetched.
+                template_name:
+                  type: string
+                  description: The name of the performance evaluation template.
+              required:
+                - performance_document_name
+                - employee_name
+                - template_name
+      responses:
+        "200":
+          description: Performance review details retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  achievements_and_contributions:
+                    type: object
+                    properties:
+                      achievements:
+                        type: array
+                        items:
+                          type: string
+                      contributions:
+                        type: array
+                        items:
+                          type: string
+                  competencies:
+                    type: object
+                    description: Competency ratings for the employee.
+                    additionalProperties:
+                      type: number
+                  employee_name:
+                    type: string
+                    description: The name of the employee.
+                  feedbacks:
+                    type: object
+                    description: Peer and manager feedback on various performance areas.
+                    additionalProperties:
+                      type: string
+                  goals:
+                    type: object
+                    description: Performance goals and ratings for the employee.
+                    additionalProperties:
+                      type: number
+                  overall_summary:
+                    type: object
+                    description: Manager comments and ratings for the employee.
+                    properties:
+                      manager_comments:
+                        type: string
+                      manager_rating:
+                        type: number
+                  performance_document_name:
+                    type: string
+                    description: The name of the performance document.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message for invalid request data.
+        "404":
+          description: Performance review not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message when the performance review is not found.
+
+  /manager_review/submit_manager_review:
+   post:
+    operationId: submitManagerReview
+    summary: Submit manager review with performance document details, goals, competencies, feedbacks, and achievements.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              performance_document_name:
+                type: string
+                description: The name of the performance document.
+              employee_name:
+                type: string
+                description: The name of the employee being reviewed.
+              template_name:
+                type: string
+                description: The performance evaluation template used.
+              goals:
+                type: array
+                description: Goals and their metrics.
+                items:
+                  type: object
+                  properties:
+                    goal_name:
+                      type: string
+                      description: The name of the goal.
+                    manager_rating:
+                      type: number
+                      description: Manager's rating for the goal.
+              competencies:
+                type: array
+                description: Competencies evaluated with ratings.
+                items:
+                  type: object
+                  properties:
+                    competency_name:
+                      type: string
+                      description: The name of the competency.
+                    manager_rating:
+                      type: number
+                      description: Manager's rating for the competency.
+              feedbacks:
+                type: array
+                description: Feedback items for the employee evaluation.
+                items:
+                  type: object
+                  properties:
+                    feedback_name:
+                      type: string
+                      description: The name of the feedback category.
+                    manager_feedback:
+                      type: string
+                      description: Manager's feedback for the employee.
+              overall_summary:
+                type: object
+                description: Overall summary of the employee's performance.
+                properties:
+                  manager_rating:
+                    type: number
+                    description: Manager's rating of the employee.
+                  manager_comments:
+                    type: string
+                    description: Manager's comments on the employee's overall performance.
+              achievements_and_contributions:
+                type: object
+                properties:
+                  achievements:
+                    type: array
+                    description: A list of achievements by the employee.
+                    items:
+                      type: object
+                      properties:
+                        achievement_name:
+                          type: string
+                          description: The name of the achievement.
+                        description:
+                          type: string
+                          description: A description of the achievement.
+                        date:
+                          type: string
+                          description: The date the achievement was completed.
+                  contributions:
+                    type: array
+                    description: A list of contributions made by the employee.
+                    items:
+                      type: object
+                      properties:
+                        contribution_name:
+                          type: string
+                          description: The name of the contribution.
+                        description:
+                          type: string
+                          description: A description of the contribution.
+                        date:
+                          type: string
+                          description: The date the contribution was completed.
+    responses:
+      "200":
+        description: Manager review submitted successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: "Manager review submitted successfully."
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: "Invalid request data."
