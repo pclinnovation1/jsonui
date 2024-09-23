@@ -1,0 +1,438 @@
+openapi: 3.1.0
+info:
+  title: Learning Catalog Management API
+  description: API to manage learning communities within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for communities management
+paths:
+  openapi: 3.1.0
+
+paths:
+  /remaining_reviews/remaining_peer_reviews:
+    post:
+      operationId: getRemainingPeerReviews
+      summary: Retrieve remaining peer reviews based on the peer's name.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                peer_name:
+                  type: string
+                  description: The name of the peer whose remaining reviews need to be fetched.
+      responses:
+        "200":
+          description: Remaining peer reviews retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  remaining_reviews:
+                    type: array
+                    description: A list of remaining peer reviews for the given peer.
+                    items:
+                      type: object
+                      properties:
+                        employee_name:
+                          type: string
+                          description: The name of the employee whose review is pending.
+                        performance_document_name:
+                          type: string
+                          description: The name of the performance document for the review.
+                        performance_document_type:
+                          type: string
+                          description: The type of performance document associated with the review.
+                        review_period:
+                          type: string
+                          description: The review period for which the peer review is pending.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+                    example: "Invalid request data."
+        "404":
+          description: Peer not found or no remaining reviews found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message when no remaining reviews are found for the peer.
+                    example: "No remaining reviews found for the specified peer."
+
+  /performance_review_details/fetch_peer_feedback_questions:
+    post:
+      operationId: fetchPeerFeedbackQuestions
+      summary: Retrieve peer feedback questions based on performance document and template.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document.
+                employee_name:
+                  type: string
+                  description: The name of the employee for whom the feedback questions are requested.
+                template_name:
+                  type: string
+                  description: The name of the performance evaluation template.
+              required:
+                - performance_document_name
+                - employee_name
+                - template_name
+      responses:
+        "200":
+          description: Peer feedback questions retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  employee_name:
+                    type: string
+                    description: The name of the employee.
+                  peer_feedback_questions:
+                    type: array
+                    description: A list of peer feedback questions.
+                    items:
+                      type: object
+                      properties:
+                        question_description:
+                          type: string
+                          description: The description or text of the peer feedback question.
+                        question_name:
+                          type: string
+                          description: The short name of the peer feedback question.
+                  performance_document_name:
+                    type: string
+                    description: The name of the performance document.
+        "400":
+          description: Invalid request data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+                    example: "Invalid request data. Please check the input format."
+        "404":
+          description: Performance document or template not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message when the performance document or template is not found.
+
+  
+  
+  /remaining_reviews/fetch_employee_performance_reviews:
+   post:
+    operationId: fetchEmployeePerformanceReviews
+    summary: Fetch the remaining employee performance reviews.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              employee_name:
+                type: string
+                description: The name of the employee whose remaining reviews you want to fetch.
+    responses:
+      "200":
+        description: Remaining performance reviews fetched successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                remaining_reviews:
+                  type: array
+                  description: A list of remaining performance reviews for the employee.
+                  items:
+                    type: object
+                    properties:
+                      employee_name:
+                        type: string
+                        description: The name of the employee being reviewed.
+                      performance_document_name:
+                        type: string
+                        description: The name of the performance document for the review.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: "Invalid request data."
+
+  /manager_review/submit_employee_review:
+    post:
+      operationId: submitEmployeeReview
+      summary: Submit employee review for a performance document
+      description: Endpoint to submit ratings, feedbacks, achievements, and contributions for a given employee's performance document.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                performance_document_name:
+                  type: string
+                  description: Name of the performance document to update.
+                employee_name:
+                  type: string
+                  description: Name of the employee being reviewed.
+                template_name:
+                  type: string
+                  description: Name of the performance review template.
+                goals:
+                  type: array
+                  description: Employee ratings for employee goals.
+                  items:
+                    type: object
+                    properties:
+                      goal_name:
+                        type: string
+                        description: The name of the goal.
+                      rating:
+                        type: number
+                        description: Employee's rating for the goal.
+                competencies:
+                  type: array
+                  description: Employee ratings for employee competencies.
+                  items:
+                    type: object
+                    properties:
+                      competency_name:
+                        type: string
+                        description: The name of the competency.
+                      competency_rating:
+                        type: number
+                        description: Employee's rating for the competency.
+                feedbacks:
+                  type: array
+                  description: Employee feedback on employee performance.
+                  items:
+                    type: object
+                    properties:
+                      feedback_name:
+                        type: string
+                        description: Name of the feedback category.
+                      feedback:
+                        type: string
+                        description: Employee's feedback for the employee.
+                overall_summary:
+                  type: object
+                  description: Overall Employee rating and comments on employee performance.
+                  properties:
+                    employee_rating:
+                      type: number
+                      description: Overall manager rating.
+                    employee_comments:
+                      type: string
+                      description: Employee comments on overall performance.
+      responses:
+        '200':
+          description: Review submitted successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Employee review submitted successfully."
+        '400':
+          description: Bad request. Error due to invalid input or missing required fields.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Missing required parameters: performance_document_name, employee_name, or template_name"
+        '404':
+          description: Not found. Error due to missing or incomplete performance document or template.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Performance document not found."
+
+
+  /performance_review_details/fetch_employee_details:
+   post:
+    operationId: fetchEmployeePerformanceDetails
+    summary: Retrieve performance details of an employee for a given document and template.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              performance_document_name:
+                type: string
+                description: The name of the performance document.
+              employee_name:
+                type: string
+                description: The name of the employee.
+              template_name:
+                type: string
+                description: The template name used for the performance review.
+    responses:
+      "200":
+        description: Employee performance details retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                competencies:
+                  type: object
+                  description: A list of competencies and their ratings.
+                  additionalProperties:
+                    type: number
+                    nullable: true
+                employee_name:
+                  type: string
+                  description: The name of the employee.
+                feedbacks:
+                  type: object
+                  description: A set of feedback categories and their corresponding responses.
+                  additionalProperties:
+                    type: string
+                    nullable: true
+                goals:
+                  type: object
+                  description: A set of employee goals and their ratings.
+                  additionalProperties:
+                    type: number
+                overall_summary:
+                  type: object
+                  description: The overall summary of the employee's performance.
+                  properties:
+                    employee_comments:
+                      type: string
+                      description: The employee's comments on their performance.
+                    employee_rating:
+                      type: number
+                      description: The employee's self-assessed rating.
+                performance_document_name:
+                  type: string
+                  description: The name of the performance document.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: "Invalid request data."
+
+  /manager_review/submit_peer_feedback:
+   post:
+    operationId: submitPeerFeedback
+    summary: Submit peer feedback for an employee's performance review.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              performance_document_name:
+                type: string
+                description: The name of the performance document.
+              employee_name:
+                type: string
+                description: The name of the employee for whom feedback is being submitted.
+              peer_name:
+                type: string
+                description: The name of the peer providing the feedback.
+              template_name:
+                type: string
+                description: The name of the performance evaluation template.
+              feedbacks:
+                type: array
+                description: The peer feedback provided for the employee.
+                items:
+                  type: object
+                  properties:
+                    feedback_name:
+                      type: string
+                      description: Name of the feedback area.
+                    feedback:
+                      type: string
+                      description: Feedback on the specific performance area.
+            required:
+              - performance_document_name
+              - employee_name
+              - peer_name
+              - template_name
+              - feedbacks
+    responses:
+      "200":
+        description: Peer feedback submitted successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Success message indicating that the peer feedback was submitted.
+      "400":
+        description: Invalid request data.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message indicating invalid input.
+      "404":
+        description: Performance document, template, or peer not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: Error message indicating that the specified document, template was not found.
