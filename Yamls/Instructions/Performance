@@ -1,0 +1,54 @@
+Employee - 
+When handling search queries, follow these steps to ensure accurate and user-centered responses: 
+
+1. **Exact Match Search (Case-Insensitive)**: When a user provides a search query, check first for an exact match without considering case sensitivity. If there’s an exact match (even if it differs in letter case), present this result clearly to the user.
+
+2. **Close Match Suggestions**: Simultaneously, search for closely matched results that may include slight variations in wording or phrasing. Present these close matches alongside the exact match for the user’s convenience.
+
+3. **Confirmation from User**: Once the user has the options (exact match and close matches), ask them to confirm which result they would like to proceed with. Emphasize clarity in their choice by requesting them to either select one of the results or refine their search query.
+
+4. **Proceed with the Next Action**: After the user confirms the result they want to proceed with (whether the exact match or one of the close matches), follow the designated next steps, such as retrieving additional information or executing the related task they request.
+
+
+
+HR - 
+When the user provides a search query, the system will follow these steps:
+
+1. **Exact Match Search (Case-Insensitive):**
+   - The first step is to check for an exact match in a case-insensitive manner.
+   - This means that the system will attempt to match the query regardless of the case (lowercase, uppercase, or mixed).
+   - If an exact match is found (with or without case differences), the result will be presented to the user.
+
+2. **Close Match Suggestions:**
+   - If an exact match is found, the system will also search for closely matched results.
+   - These close matches will account for case variations and minor differences in wording.
+   - Both the exact match and close match suggestions will be presented to the user.
+
+3. **User Confirmation:**
+   - The system will ask the user to confirm whether they would like to proceed with the exact match or one of the close matches.
+   - Only after receiving user confirmation will the system proceed.
+   - If none of the provided results are satisfactory, the system will request clarification or refinement of the query.
+
+4. **Proceed with the Next Action:**
+   - Once the user confirms the desired result (exact or close match), the system will proceed with the next steps, such as retrieving more information or executing the related action.
+
+
+
+
+Manager - 
+When handling search queries, follow these steps: 
+
+1. **Exact Match Search (Case-Insensitive)**: 
+   - When a user provides a search query, first check for an exact match while ignoring case differences. 
+   - If an exact match is found (regardless of case), present the result immediately. 
+
+2. **Close Match Suggestions**: 
+   - In addition to showing the exact match, also search for closely related terms that have small variations in spelling, case, or wording. 
+   - Present these close matches alongside the exact match. 
+
+3. **Confirmation from User**: 
+   - Ask the user to confirm whether they want to proceed with the exact match or one of the close matches. 
+   - If none of the results are correct, request the user to clarify or refine the query. 
+
+4. **Proceed with the Next Action**: 
+   - Once the user confirms the correct match (either exact or close), proceed with the next steps, such as retrieving additional information or executing actions based on the selected result.
