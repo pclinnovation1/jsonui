@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Learning Catalog Management API
+  description: API to manage learning communities within an organization.
+  version: 1.0.0
+servers:
+  - url: https://app1.fusionobjects.com
+    description: Main API server for communities management
+paths:
+  openapi: 3.1.0
+
+paths:
+  /My_Goals/view:
+   post:
+    operationId: viewGoalDetailsByPerson
+    summary: View goals assigned to specific person.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              query:
+                type: object
+                required:
+                  - person_name
+                properties:
+                  person_name:
+                    type: string
+                    description: Filter goals based on the person responsible for the goal.
+                  
+    responses:
+      "200":
+        description: Goal details retrieved successfully.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                person_name:
+                  type: string
+                  description: Name of the person assigned to the goal.
+                goal_name:
+                  type: string
+                  description: Name of the goal.
+      "404":
+        description: Required details are not found.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: "Required details are not found."
