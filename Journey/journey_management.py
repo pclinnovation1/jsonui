@@ -19,6 +19,12 @@ eligibility_profile_collection = db[config.eligibility_profile_collection]
 email_queue = db[config.email_queue]
 
 
+# Function to queue an email for sending.
+# This function accepts a dictionary 'data' containing email information such as 'person_name', 
+# 'from_email', 'template_name', 'data', and optionally 'attachments'.
+# It constructs an email record with a status of "pending" and inserts it into the 'email_queue' collection.
+# If the insertion is successful, it returns a message and the ID of the queued email.
+# In case of an exception, it logs the error and returns a failure message.
 def queue_email(data):
     try:
         email_data = {
@@ -41,6 +47,12 @@ def queue_email(data):
         print("Exception in queue_email:", str(e))
         return {"message": "Exception occurred while inserting email data into the queue"}, False
 
+# Function to queue an email for sending.
+# This function accepts a dictionary 'data' containing email information such as 'person_name', 
+# 'from_email', 'template_name', 'data', and optionally 'attachments'.
+# It constructs an email record with a status of "pending" and inserts it into the 'email_queue' collection.
+# If the insertion is successful, it returns a message and the ID of the queued email.
+# In case of an exception, it logs the error and returns a failure message.
 def send_overdue_email(journey_data):
     
     task_list_html = "".join(
@@ -61,6 +73,7 @@ def send_overdue_email(journey_data):
         }
     }
     queue_email(email_data)
+
 
 def get_collection_schema(collection):
     """Retrieve the schema of the collection, excluding the '_id' field."""
@@ -224,6 +237,17 @@ def create_task(data):
     except errors.PyMongoError as e:
         return {"error": f"Error inserting data: {e}"}, 500
 
+# Function to add a user to a specific journey.
+# This function checks if the user, along with their manager and HR, has already been assigned to the journey. 
+# It ensures that the user is not already in progress before assigning the journey.
+# 
+# - If the user or the user’s manager or HR is already assigned and "In Progress" in the journey, 
+#   it returns a message indicating the user is already added.
+# - If not, it calls the 'assign_onboarding_journey_with_manager_and_hr' function to assign the journey.
+# - After assignment, it updates the journey's "updated_by" and "updated_at" fields.
+# 
+# Optional: It includes commented-out logic for sending an email notification to the user once assigned.
+# Returns a success message if the user is added successfully or an error message in case of exceptions.
 def add_user_to_journey(journey_title, user, data):
     try:
         # Retrieve employee details
@@ -320,7 +344,17 @@ def add_user_to_journey(journey_title, user, data):
         return {'message': 'User added successfully and journey assigned'}, 200
     except Exception as e:
         return {'error': str(e)}, 500
-    
+
+# Function to assign an onboarding journey to an employee, their manager, and HR.
+# This function first checks the eligibility of the employee, manager, and HR for the journey and individual tasks.
+# 
+# - It retrieves the journey and employee details, including the employee's manager and HR.
+# - It checks if the employee, manager, or HR are eligible for the journey and specific tasks.
+# - It assigns tasks to the employee, manager, or HR depending on the task's performer role (either 'employee', 'manager', or 'HR').
+# - For each eligible entity (employee, manager, or HR), it updates the journey document in the database to include the assigned tasks.
+#
+# The function returns a success message if the journey is assigned or a failure message if none of the parties are assigned.
+# Returns appropriate error messages if the journey or employee is not found, or if there are eligibility issues.
 def assign_onboarding_journey_with_manager_and_hr(journey_title, person_name):
     try:
         # Find the journey
@@ -456,7 +490,16 @@ def assign_onboarding_journey_with_manager_and_hr(journey_title, person_name):
 
     except Exception as e:
         return {'error': str(e)}, 500
-   
+
+# Function to add a new task to an existing journey.
+# This function checks if the journey and the new task exist in the respective collections.
+# It adds the new task, along with its eligibility profiles, to the journey's tasks array.
+# - If the task already exists in the journey, it returns a message indicating that the task is already present.
+# - If the task is successfully added, it updates the journey's "updated_by" and "updated_at" fields.
+# 
+# Optionally, the function includes commented-out logic for assigning the new task to individual users in the journey 
+# based on their eligibility, which can be implemented if needed.
+# Returns a success message if the task is added successfully or an error message in case of exceptions.
 def add_task_to_journeyf(journey_title, new_task_name, new_eligibility_profiles,updated_by):
     try:
         # Fetch the journey details
@@ -510,6 +553,15 @@ def add_task_to_journeyf(journey_title, new_task_name, new_eligibility_profiles,
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to assign onboarding journeys to employees whose start date is today.
+# This function:
+# 1. Finds unique employees in the 'employee_collection' whose 'effective_start_date' is today.
+# 2. Iterates through each employee and assigns an appropriate onboarding journey if they don't already have one.
+# 3. For each employee, it also checks the manager and HR to ensure they haven't already been assigned the journey.
+# 4. Calls the 'assign_onboarding_journey_with_manager_and_hr' function to assign tasks to the employee, manager, and HR.
+# 5. Optionally (commented-out code), sends onboarding emails to employees notifying them of their assigned tasks.
+# 
+# Returns a success message if journeys are assigned to all eligible employees or an error message if no onboarding journeys are found.
 def assign_onboarding_journeys_for_today():
     today = datetime.now().strftime('%Y-%m-%d')
     print(today)
@@ -630,6 +682,16 @@ def assign_onboarding_journeys_for_today():
             return {"error": f"No onboarding journey found"}, 404 
     return {"message": "Journeys assigned for all employees starting today"}, 200
 
+# Function to assign offboarding journeys to employees whose end date is today.
+# This function:
+# 1. Finds unique employees in the 'employee_collection' whose 'effective_end_date' is today.
+# 2. Iterates through each employee and assigns an appropriate offboarding journey if they don't already have one.
+# 3. For each employee, it also checks the manager and HR to ensure they haven't already been assigned the journey.
+# 4. Calls the 'assign_onboarding_journey_with_manager_and_hr' function (which handles both onboarding and offboarding assignment)
+#    to assign tasks to the employee, manager, and HR.
+# 5. Optionally (commented-out code), sends offboarding emails to employees notifying them of their assigned tasks.
+# 
+# Returns a success message if journeys are assigned to all eligible employees or an error message if no offboarding journeys are found.
 def assign_offboarding_journeys_for_today():
     today = datetime.now().strftime('%Y-%m-%d')
     print(today)
@@ -753,6 +815,15 @@ def assign_offboarding_journeys_for_today():
             return {"error": f"No onboarding journey found"}, 404 
     return {"message": "Journeys Offbaording assigned for all employees ending today"}, 200
 
+# Function to unassign a user from a journey and remove their tasks.
+# This function:
+# 1. Verifies that the employee exists in the 'employee_collection'.
+# 2. Checks if the user is assigned to the journey either by 'person_name' or through task 'action_name'.
+# 3. If the user is assigned, it removes the user and their tasks from the journey.
+# 4. Updates the journey with 'updated_by' and 'updated_at' fields to record who performed the unassignment.
+# 5. Optionally (commented-out code), it also handles sending email notifications to the user and their manager or HR about the unassignment.
+#
+# Returns a success message if the user is successfully unassigned, or an error message if there is an issue.
 def unassign_journey_from_user(journey_title, person_name,updated_by):
     try:
         # Find the journey and check if the user is assigned to it
@@ -825,6 +896,14 @@ def unassign_journey_from_user(journey_title, person_name,updated_by):
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to remove an employee and clean up their associated journeys.
+# This function:
+# 1. Verifies if the employee exists in the 'employee_collection'.
+# 2. Unassigns the employee from all journeys they are part of by calling the 'unassign_journey_from_user' function.
+#    It iterates through each journey the employee is part of and removes them from the journey.
+# 3. Optionally (commented-out code), it removes the employee from the 'employee_collection' after cleanup.
+#
+# Returns a success message if the employee is unassigned from all journeys, or an error message if there is an issue.
 def remove_employee_and_cleanup_journeys(person_name,updated_by): 
     try:
         # Step 1: Check if the employee exists in the employee collection
@@ -852,6 +931,15 @@ def remove_employee_and_cleanup_journeys(person_name,updated_by):
     except Exception as e:
         return {"error": str(e)}, 500
 
+# Function to mark a task as completed for a user in a specific journey.
+# This function:
+# 1. Finds the journey and checks if the user with the specified action_name and task_name is part of it.
+# 2. Ensures that the user and task exist in the journey, handling cases where there are multiple user entries.
+# 3. Calculates the time status of the task, determining if it was completed on time or late.
+# 4. Updates the task status to "Completed" and records the time status (e.g., "Completed on time" or "Completed X day(s) late").
+# 5. Optionally (commented-out code), sends an email notification to the user about the task completion.
+#
+# Returns a success message if the task is marked as completed, or an error message if the task is already completed or if there are issues.
 def complete_task(person_name, journey_title, task_name, action_name):
     try:
         # Find the journey and ensure the user with the specific action_name is part of it
@@ -975,6 +1063,15 @@ def complete_task(person_name, journey_title, task_name, action_name):
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to update the status of users in all journeys based on their task completion status.
+# This function:
+# 1. Fetches all journeys from the 'journey_collection'.
+# 2. Iterates through each journey and checks the status of each user's tasks.
+# 3. If all tasks for a user are marked as 'Completed', the user's status is updated to 'Completed'.
+# 4. If any tasks are still in progress, the user's status remains 'In Progress'.
+# 5. Updates the journey in the database with the modified user status.
+#
+# Returns a success message if the statuses are updated successfully, or an error message if there is an issue.
 def update_status_for_completed_tasks():
     try:
         # Fetch all journeys
@@ -999,6 +1096,14 @@ def update_status_for_completed_tasks():
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to update a task's details in the task collection.
+# This function:
+# 1. Updates the specified task in the 'task_collection' based on the 'task_name' and the provided 'update_data'.
+# 2. Additionally, it updates the 'updated_at' field with the current timestamp after the task is updated.
+# 3. Optionally (commented-out code), it can notify users assigned to the task via email.
+#    The function retrieves all journeys where the task is assigned and sends email notifications to the users.
+#
+# Returns a success message if the task is updated, or an error message if the task is not found or if there is an issue.
 def update_task(task_name, update_data):
     try:
         # Update the task in the JRN_task collection
@@ -1071,6 +1176,14 @@ def update_task(task_name, update_data):
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to update a journey's details such as category, description, and update information.
+# This function:
+# 1. Updates the specified journey in the 'journey_collection' based on the provided 'journey_title', 'category', 'description', and 'updated_by'.
+# 2. Additionally, it updates the 'updated_at' field with the current timestamp and records who performed the update via 'updated_by'.
+# 3. Optionally (commented-out code), the function can notify users assigned to the journey via email about the update.
+#    It retrieves the users in the journey and sends notification emails to them.
+#
+# Returns a success message if the journey is updated, or an error message if the journey is not found or if there is an issue.
 def update_journey(journey_title, category, description, updated_by):
     try:
         updated_data={'updated_by':updated_by,
@@ -1120,6 +1233,13 @@ def update_journey(journey_title, category, description, updated_by):
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to delete a journey from the journey collection.
+# This function:
+# 1. Deletes the journey specified by the 'journey_title' from the 'journey_collection'.
+# 2. If the journey is not found, it returns an error message.
+# 3. If the journey is successfully deleted, it returns a success message.
+#
+# Returns a success message if the journey is deleted, or an error message if the journey is not found or if there is an issue.
 def delete_journey(journey_title):
     try:
         result = journey_collection.delete_one({'journey_name': journey_title})
@@ -1132,6 +1252,14 @@ def delete_journey(journey_title):
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to delete a task from the task collection and remove it from all journeys.
+# This function:
+# 1. Checks if the task exists in the 'task_collection'. If not, it returns a message indicating the task was not found.
+# 2. If the task exists, it deletes the task from the 'task_collection'.
+# 3. Removes the task from the 'tasks' array in all journeys that include it in the 'journey_collection'.
+# 4. Updates the 'updated_by' and 'updated_at' fields in the journeys to record who performed the deletion and the timestamp.
+#
+# Returns a success message if the task is deleted and removed from journeys, or an error message if an issue occurs.
 def delete_task(task_name,updated_by):
     try:
         result1 = task_collection.find_one({'task_name': task_name})
@@ -1153,7 +1281,17 @@ def delete_task(task_name,updated_by):
         return {'message': 'Task deleted successfully'}, 200
     except Exception as e:
         return {'error': str(e)}, 500
- 
+
+# Function to submit feedback for a specific task in a journey.
+# This function:
+# 1. Finds the journey document and retrieves the 'users' array containing user and task data.
+# 2. Locates all entries for the user specified by 'person_name', checking if the user has performed the given task.
+# 3. Selects the most recent (last) user entry if multiple exist.
+# 4. Finds the specific task in the selected user entry and verifies if the task exists.
+# 5. Checks if the feedback has already been submitted for the task. If so, it returns a message indicating feedback was already submitted.
+# 6. Updates the feedback for the task in the last user entry.
+#
+# Returns a success message if feedback is submitted, or an error message if any issues arise (e.g., user or task not found).
 def submit_feedback(person_name, journey_title, task_name, action_name, feedback):
     try:
         # Step 1: Find the journey document and retrieve users array
@@ -1214,6 +1352,14 @@ def submit_feedback(person_name, journey_title, task_name, action_name, feedback
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to remove a specific task from a journey.
+# This function:
+# 1. Fetches the journey details from the 'journey_collection' based on the provided 'journey_title'.
+# 2. Uses the '$pull' operator to remove the task with the matching 'task_name' from the 'tasks' array in the journey.
+# 3. Updates the 'updated_at' field to record the current time and the 'updated_by' field to record who performed the removal.
+# 4. If the task is not found or cannot be removed, it returns an error message.
+#
+# Returns a success message if the task is removed from the journey, or an error message if the journey or task is not found or if any issue occurs.
 def remove_task_from_journey(journey_title, task_name_to_remove, updated_by):
     try:
         # Step 1: Fetch the journey details
@@ -1241,6 +1387,16 @@ def remove_task_from_journey(journey_title, task_name_to_remove, updated_by):
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to update the time status of tasks in all journeys based on the current date.
+# This function:
+# 1. Fetches all journeys from the 'journey_collection'.
+# 2. Iterates through each user and their tasks in the journey, checking the 'task_due_date'.
+# 3. If the task is completed, it skips the update.
+# 4. If the current date is before or equal to the task's due date, it sets the 'time_status' to "On time".
+#    If the task is overdue, it calculates how many days overdue and updates the 'time_status' accordingly.
+# 5. Performs bulk updates for tasks where the 'time_status' has changed.
+#
+# Returns a success message if time statuses are updated, or an error message if any issues occur.
 def update_time_status():
     try:
         current_date = datetime.now().date()
@@ -1272,6 +1428,15 @@ def update_time_status():
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to send notifications for overdue tasks in all journeys.
+# This function:
+# 1. Fetches all journeys from the 'journey_collection'.
+# 2. Iterates through each user in the journey and checks their tasks.
+# 3. For tasks that are not completed and are past their due date, it calculates how many days they are overdue.
+# 4. If there are overdue tasks for a user, it gathers the task details and sends an email notification to the user.
+# 5. Emails are only sent to users who have overdue tasks.
+#
+# Returns a success message if notifications are sent, or an error message if an issue occurs.
 def send_overdue_task_notifications():
     try:
         # Get the current date
@@ -1311,6 +1476,15 @@ def send_overdue_task_notifications():
     except Exception as e:
         return {"error": str(e)}, 500
 
+# Function to add an eligibility profile to a journey.
+# This function:
+# 1. Fetches the journey details from the 'journey_collection' based on the provided 'journey_title'.
+# 2. Checks if the eligibility profile exists in the 'eligibility_profile_collection'.
+# 3. Verifies whether the profile is already added to the journey's 'eligibility_profiles' array to avoid duplication.
+# 4. If the profile is not already present, it uses '$addToSet' to add the profile and updates the 'updated_at' and 'updated_by' fields.
+# 5. Returns an error if the profile cannot be added, or if the profile is already present.
+#
+# Returns a success message if the eligibility profile is added to the journey, or an error message if the profile or journey is not found, or if there is an issue.
 def add_eligibility_profile(journey_title, eligibility_profile_to_add, updated_by):
     try:
         # Step 1: Fetch the journey details
@@ -1347,6 +1521,14 @@ def add_eligibility_profile(journey_title, eligibility_profile_to_add, updated_b
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to remove an eligibility profile from a journey.
+# This function:
+# 1. Fetches the journey details from the 'journey_collection' based on the provided 'journey_title'.
+# 2. Checks if the eligibility profile exists in the journey's 'eligibility_profiles' array.
+# 3. If the profile is found, it uses '$pull' to remove the profile and updates the 'updated_at' and 'updated_by' fields.
+# 4. Returns an error if the profile does not exist or cannot be removed.
+#
+# Returns a success message if the eligibility profile is removed from the journey, or an error message if the profile or journey is not found, or if there is an issue.
 def remove_eligibility_profile(journey_title, eligibility_profile_to_remove, updated_by):
     try:
         # Step 1: Fetch the journey details
@@ -1378,6 +1560,15 @@ def remove_eligibility_profile(journey_title, eligibility_profile_to_remove, upd
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to add an eligibility profile to a specific task within a journey.
+# This function:
+# 1. Fetches the journey and verifies that the task exists in the 'tasks' array of the journey.
+# 2. Checks if the eligibility profile exists in the 'eligibility_profile_collection'.
+# 3. Adds the eligibility profile to the specific task's 'eligibility_profiles' array using '$addToSet' to avoid duplicates.
+# 4. Updates the 'updated_at' and 'updated_by' fields to track when and by whom the profile was added.
+# 5. Returns an error if the journey, task, or profile is not found, or if the update fails.
+#
+# Returns a success message if the eligibility profile is added to the task, or an error message if there is an issue.
 def add_task_eligibility_profile(journey_title, task_name, eligibility_profile_to_add, updated_by):
     try:
         # Step 1: Find the journey and ensure the task exists
@@ -1419,6 +1610,14 @@ def add_task_eligibility_profile(journey_title, task_name, eligibility_profile_t
     except Exception as e:
         return {'error': str(e)}, 500
 
+# Function to remove an eligibility profile from a specific task within a journey.
+# This function:
+# 1. Fetches the journey and ensures the task exists within the 'tasks' array of the journey.
+# 2. Uses '$pull' to remove the eligibility profile from the specific task's 'eligibility_profiles' array.
+# 3. Updates the 'updated_at' and 'updated_by' fields to track when and by whom the profile was removed.
+# 4. Returns an error if the journey, task, or profile is not found, or if the update fails.
+#
+# Returns a success message if the eligibility profile is removed from the task, or an error message if there is an issue.
 def remove_task_eligibility_profile(journey_title, task_name, eligibility_profile_to_remove, updated_by):
     try:
         # Step 1: Find the journey and ensure the task exists

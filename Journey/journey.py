@@ -27,6 +27,9 @@ app = Flask(__name__)
 journey_bp = Blueprint('journey_bp', __name__)
 
 #HR or Manager
+# Route to handle creating a new journey
+# This function receives a POST request with journey details in the request body.
+# It calls the 'create_journey' function from 'journey_management.py' to handle
 @app.route('/create_journey', methods=['POST'])
 def create_new_journey():
     data = request.json
@@ -47,6 +50,7 @@ def create_task_route():
     return jsonify(result), status_code
 
 #HR or manager
+#Adds a user to a journey
 @app.route('/add_user_to_journey', methods=['POST'])
 def add_user():
     data = request.json
@@ -58,6 +62,7 @@ def add_user():
     return jsonify(result), status_code
 
 #HR or manager
+#Adds a task to a journey
 @app.route('/add_task_to_journey', methods=['POST'])
 def add_task_to_journey():
     try:
@@ -83,18 +88,32 @@ def add_task_to_journey():
         return jsonify({"error": str(e)}), 500
 
 #scheduler
+# Route to assign onboarding journeys for today's date.
+# This route handles a POST request and triggers the function 
+# 'assign_onboarding_journeys_for_today' from 'journey_management.py', 
+# which contains the logic to assign onboarding journeys to users.
+# Returns a JSON response indicating the result of the operation.
 @app.route('/assign_onboarding_journeys_for_today', methods=['POST'])
 def assign_onboarding_journeys_for_today_route():
     result, status_code = assign_onboarding_journeys_for_today()
     return jsonify(result), status_code
 
 #scheduler
+# Route to assign offboarding journeys for today's date.
+# This route handles a POST request and triggers the function 
+# 'assign_offboarding_journeys_for_today' from 'journey_management.py', 
+# which contains the logic to assign offboarding journeys to users.
+# Returns a JSON response indicating the result of the operation.
 @app.route('/assign_offboarding_journeys_for_today', methods=['POST'])
 def assign_offboarding_journeys_for_today_route():
     result, status_code = assign_offboarding_journeys_for_today()
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to unassign a journey from a user. Intended for HR or Manager.
+# This route handles a POST request and calls the 'unassign_journey_from_user' function 
+# from 'journey_management.py', which handles the logic of removing a journey assignment 
+# from a specific user in the database.
+# Returns a JSON response with the result of the unassignment operation.
 @app.route('/unassign_journey', methods=['POST'])
 def unassign_journey():
     data = request.json
@@ -111,7 +130,11 @@ def unassign_journey():
     
     return jsonify(response), status_code
 
-#HR or Manager
+# Route to remove an employee from the system. Intended for HR or Manager.
+# This route handles a POST request and calls the 'remove_employee' function 
+# from 'journey_management.py', which handles the logic of removing an employee's record 
+# from the database.
+# Returns a JSON response indicating the success or failure of the removal operation.
 @app.route('/remove_employee', methods=['POST'])
 def remove_employee():
     data = request.get_json()
@@ -123,7 +146,12 @@ def remove_employee():
     response, status_code = remove_employee_and_cleanup_journeys(person_name,updated_by)
     return jsonify(response), status_code
 
-#employee manager or hr anyone can use
+
+# Route to mark a task as complete. Can be used by an employee, manager, or HR.
+# This route handles a POST request and calls the 'complete_task' function 
+# from 'journey_management.py', which updates the status of a specific task in the journey 
+# to "completed" in the database.
+# Returns a JSON response with the result of the completion operation.
 @app.route('/complete_task', methods=['POST'])
 def complete_task_route():
     data = request.json
@@ -138,13 +166,21 @@ def complete_task_route():
     result, status_code = complete_task(person_name, journey_title, task_name,action_name)
     return jsonify(result), status_code
 
-#scheduler
+# Route to update the status of all completed tasks. Intended for a scheduler.
+# This route handles a POST request and calls the 'update_status_for_completed_tasks' function 
+# from 'journey_management.py', which automatically updates the status of all tasks marked as 
+# completed in the system. It is typically triggered by a scheduled job.
+# Returns a JSON response indicating the result of the status update operation.
 @app.route('/update_status_for_completed_tasks', methods=['POST'])
 def run_update_status_for_completed_tasks():
     result, status_code = update_status_for_completed_tasks()
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to update the details of a task. Intended for HR or Manager.
+# This route handles a POST request and calls the 'update_task' function 
+# from 'journey_management.py', which updates the details of a specific task 
+# (such as its name, due date, or status) in the journey.
+# Returns a JSON response with the result of the update operation.
 @app.route('/update_task', methods=['POST'])
 def update_task_route():
     data = request.json
@@ -157,7 +193,11 @@ def update_task_route():
     result, status_code = update_task(task_name, update_data)
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to update the details of a journey. Intended for HR or Manager.
+# This route handles a POST request and calls the 'update_journey' function 
+# from 'journey_management.py', which updates the details of a journey 
+# (such as its name, description, tasks, etc.) in the database.
+# Returns a JSON response with the result of the update operation.
 @app.route('/update_journey', methods=['POST'])
 def update_existing_journey():
     data = request.json
@@ -173,7 +213,10 @@ def update_existing_journey():
     result, status_code = update_journey(journey_title, category, description, updated_by)
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to delete a journey from the system. Intended for HR or Manager.
+# This route handles a POST request and calls the 'delete_journey' function 
+# from 'journey_management.py', which removes a specific journey from the database.
+# Returns a JSON response indicating the success or failure of the deletion operation.
 @app.route('/delete_journey', methods=['POST'])
 def delete_existing_journey():
     data = request.json
@@ -185,7 +228,11 @@ def delete_existing_journey():
     result, status_code = delete_journey(journey_title)
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to delete a task from a journey. Intended for HR or Manager.
+# This route handles a POST request and calls the 'delete_task' function 
+# from 'journey_management.py', which removes a specific task from a journey 
+# in the database.
+# Returns a JSON response indicating the success or failure of the task deletion operation.
 @app.route('/delete_task', methods=['POST'])
 def delete_task_route():
     data = request.json
@@ -229,19 +276,31 @@ def remove_task_from_journey_route():
 
     return jsonify(result), status_code
 
-#scheduler
+# Route to update the time status of tasks. Intended for a scheduler.
+# This route handles a POST request and calls the 'update_time_status' function 
+# from 'journey_management.py', which automatically updates the time-based status 
+# (e.g., overdue, on-time) of tasks in the system. Typically triggered by a scheduled job.
+# Returns a JSON response indicating the result of the time status update operation.
 @app.route('/update_time_status', methods=['POST'])
 def update_time_status_route():
     result, status_code = update_time_status()
     return jsonify(result), status_code
 
-#scheduler
+# Route to send notifications for overdue tasks. Intended for a scheduler.
+# This route handles a POST request and calls the 'send_overdue_task_notifications' function 
+# from 'journey_management.py', which identifies overdue tasks and sends notifications 
+# to the relevant users. Typically triggered by a scheduled job.
+# Returns a JSON response indicating the result of the notification-sending process.
 @app.route('/send_overdue_task_notifications', methods=['POST'])
 def send_overdue_task_notifications2():
     result, status_code = send_overdue_task_notifications()
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to add an eligibility profile to a journey. Intended for HR or Manager.
+# This route handles a POST request and calls the 'add_eligibility_profile_to_journey' function 
+# from 'journey_management.py', which adds a specified eligibility profile 
+# to the journey in the database.
+# Returns a JSON response indicating the success or failure of the operation.
 @app.route('/add_eligibility_profile_to_j',methods=['POST'])
 def add_eligibility_profile_to_j():
     data = request.json
@@ -256,7 +315,11 @@ def add_eligibility_profile_to_j():
     result, status_code = add_eligibility_profile(journey_title, eligibility_profile_to_add, updated_by)
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to remove an eligibility profile from a journey. Intended for HR or Manager.
+# This route handles a POST request and calls the 'remove_eligibility_profile_from_journey' function 
+# from 'journey_management.py', which removes a specified eligibility profile 
+# from the journey in the database.
+# Returns a JSON response indicating the success or failure of the removal operation.
 @app.route('/remove_eligibility_profile_j',methods=['POST'])
 def remove_eligibility_profile_j():
     data = request.json
@@ -271,7 +334,11 @@ def remove_eligibility_profile_j():
     result, status_code = remove_eligibility_profile(journey_title, eligibility_profile_to_remove, updated_by)
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to add an eligibility profile to a task. Intended for HR or Manager.
+# This route handles a POST request and calls the 'add_task_eligibility_profile' function 
+# from 'journey_management.py', which adds a specified eligibility profile 
+# to a task within a journey in the database.
+# Returns a JSON response indicating the success or failure of the operation.
 @app.route('/add_eligibility_profile_to_t',methods=['POST'])
 def add_eligibility_profile_to_t():
     data = request.json
@@ -287,7 +354,11 @@ def add_eligibility_profile_to_t():
     result, status_code = add_task_eligibility_profile(journey_title, task_name, eligibility_profile_to_add, updated_by)
     return jsonify(result), status_code
 
-#HR or Manager
+# Route to remove an eligibility profile from a task. Intended for HR or Manager.
+# This route handles a POST request and calls the 'remove_task_eligibility_profile' function 
+# from 'journey_management.py', which removes a specified eligibility profile 
+# from a task within a journey in the database.
+# Returns a JSON response indicating the success or failure of the removal operation.
 @app.route('/remove_eligibility_profile_t',methods=['POST'])
 def remove_eligibility_profile_t():
     data = request.json
