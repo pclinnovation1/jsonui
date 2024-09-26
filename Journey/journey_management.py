@@ -74,6 +74,120 @@ def send_overdue_email(journey_data):
     }
     queue_email(email_data)
 
+#ok
+def send_email_to_employee_j(journey_data):
+    task_names_formatted = "<br>".join([f"• {task['task_name']}" for task in journey_data['tasks']])
+    email_data = {
+        "person_name": journey_data['person_name'],
+        "from_email": "journey_department",
+        "template_name": "journey_assigned_e",  # Ensure this template exists
+        "data": {
+            "person_name": journey_data['person_name'],
+            "journey_name": journey_data['journey_name'],
+            "tasks":task_names_formatted,
+            "company_name": config.others['company_name']
+        }
+    }
+    queue_email(email_data)
+
+#ok
+def send_email_to_manager_j(journey_data):
+    task_names_formatted = "<br>".join([f"• {task['task_name']}" for task in journey_data['tasks']])
+    email_data = {
+        "person_name": journey_data['manager_name'],
+        "from_email": "journey_department",
+        "template_name": "journey_assigned_m",  # Ensure this template exists
+        "data": {
+            "manager_name": journey_data['manager_name'],
+            "person_name": journey_data['person_name'],
+            "journey_name": journey_data['journey_name'],
+            "tasks":task_names_formatted,
+            "company_name": config.others['company_name']
+        }
+    }
+    queue_email(email_data)
+
+#ok
+def send_email_to_hr_j(journey_data):
+    task_names_formatted = "<br>".join([f"• {task['task_name']}" for task in journey_data['tasks']])
+    email_data = {
+        "person_name": journey_data['hr_name'],
+        "from_email": "journey_department",
+        "template_name": "journey_assigned_h",  # Ensure this template exists
+        "data": {
+            "hr_name": journey_data['hr_name'],
+            "person_name": journey_data['person_name'],
+            "journey_name": journey_data['journey_name'],
+            "tasks":task_names_formatted,
+            "company_name": config.others['company_name']
+        }
+    }
+    queue_email(email_data)
+
+#ok
+def send_email_to_employee_uj(journey_data):
+    email_data = {
+        "person_name": journey_data['person_name'],
+        "from_email": "journey_department",
+        "template_name": "journey_assigned_uj",  # Ensure this template exists
+        "data": {
+            "person_name": journey_data['person_name'],
+            "journey_name": journey_data['journey_name'],
+            "company_name": config.others['company_name']
+        }
+    }
+    queue_email(email_data)   
+
+#ok
+def send_email_task_completion(journey_data):
+    email_data = {
+        "person_name": journey_data['person_name'],
+        "from_email": "journey_department",
+        "template_name": "journey_task_completed",  # Ensure this template exists
+        "data": {
+            "person_name": journey_data['person_name'],
+            "task_completed_by":journey_data['task_completed_by'],
+            "journey_name": journey_data['journey_name'],
+            "task_name": journey_data['task_name'],
+            "time_status": journey_data['time_status'],
+            "company_name": config.others['company_name']
+        }
+    }
+    queue_email(email_data) 
+
+#ok
+def send_email_journey_completion(journey_data):
+    email_data = {
+        "person_name": journey_data['person_name'],
+        "from_email": "journey_department",
+        "template_name": "journey_completion_notification",  # Ensure this template exists
+        "data": {
+            "person_name": journey_data['person_name'],
+            "journey_name": journey_data['journey_name'],
+            "completion_date": journey_data['completion_date'],
+            "company_name": config.others['company_name']
+        }
+    }
+    queue_email(email_data)
+
+#ok
+def send_email_feedback_submission(journey_data):
+    email_data = {
+        "person_name": journey_data['person_name'],
+        "from_email": "journey_department",
+        "template_name": "feedback_submission_notification",  # Ensure this template exists
+        "data": {
+            "person_name": journey_data['person_name'],
+            "journey_name": journey_data['journey_name'],
+            "task_name": journey_data['task_name'],
+            "feedback": journey_data['feedback'],
+            "company_name": config.others['company_name']
+        }
+    }
+    queue_email(email_data)
+
+# ----------------------------------------------------------------------------------
+
 
 def get_collection_schema(collection):
     """Retrieve the schema of the collection, excluding the '_id' field."""
@@ -138,7 +252,7 @@ def data_validation_against_schema(collection, data):
     return True
 
 def hr_name_fetch(employee):
-    return employee.get('hr_name', '')
+    return employee.get('hr_name','Markus Kirvesoja')
 # -------------------------------------------------------------------
 
 def create_journey(data):
@@ -305,41 +419,15 @@ def add_user_to_journey(journey_title, user, data):
         if status_code != 200:
             return journey_response, status_code
 
-        # # Extract the assigned tasks from the response
-        # assigned_task_list = journey_response.get('assigned_tasks', {})
-
-        # # Prepare email data
-        # employee_email = employee.get('email', '')
-        # manager_name = employee.get('manager_name', '')
-        # company_name = config.others['company_name']
-        # # Prepare the task list for the email
-        # task_list_html = "".join(f"<li>{task['task_name']} (Due: {task['task_due_date']})</li>" for task in assigned_task_list)
 
         journey_collection.update_one(
             {
                 'journey_name': journey_title
             },
-            {'$set': {"updated_by": data.get('updated_by'),
+            {'$set': {"updated_by": data.get('updated_by','Admin'),
                        "updated_at":current_time}}
         )
         
-        # if employee_email:
-        #     # Send email notification to the employee
-        #     email_data = {
-        #         "to_email": employee_email,
-        #         "from_email": config.SMTP_CONFIG['from_email'],
-        #         "template_name": config['templates']['user_added_to_journey'],  # Ensure this template exists in your email template collection
-        #         "data": {
-        #             "person_name": user['person_name'],
-        #             "company_name": company_name,
-        #             "journey_name": journey_title,
-        #             "start_date": datetime.now().strftime('%Y-%m-%d'),
-        #             "task_list": task_list_html,
-        #             "manager_name": manager_name,
-        #             "action_name": user['person_name']
-        #         }
-        #     }
-        #     send_email(email_data)
 
         return {'message': 'User added successfully and journey assigned'}, 200
     except Exception as e:
@@ -386,7 +474,7 @@ def assign_onboarding_journey_with_manager_and_hr(journey_title, person_name):
                 continue
                 # return {'error': f'Task {task['task_name']} not found in task collection'}, 404
 
-            task_due_date = datetime.now() + timedelta(days=task_info['duration'])
+            task_due_date = datetime.now() + timedelta(days=task_info['duration(days)'])
             performer = task_info.get('performer').lower()
 
             # Check eligibility based on the performer
@@ -465,6 +553,12 @@ def assign_onboarding_journey_with_manager_and_hr(journey_title, person_name):
                     'tasks': employee_tasks  # Employee tasks
                 }}}
             )
+            prep_data={
+                        "person_name": person_name,
+                        "journey_name": journey_title,
+                        'tasks': employee_tasks
+                        }
+            send_email_to_employee_j(prep_data)
         if manager_tasks:
             result = journey_collection.update_one(
                 {'journey_name': journey_title},
@@ -474,6 +568,13 @@ def assign_onboarding_journey_with_manager_and_hr(journey_title, person_name):
                     'tasks': manager_tasks  # Employee tasks
                 }}}
             )
+            prep_data={
+                        "manager_name":manager_name,
+                        "person_name": person_name,
+                        "journey_name": journey_title,
+                        'tasks': manager_tasks
+                        }
+            send_email_to_manager_j(prep_data)
         if hr_tasks:    
             result = journey_collection.update_one(
                 {'journey_name': journey_title},
@@ -483,7 +584,13 @@ def assign_onboarding_journey_with_manager_and_hr(journey_title, person_name):
                     'tasks': hr_tasks  # Employee tasks
                 }}}
             )
-
+            prep_data={
+                        "hr_name":hr_name,
+                        "person_name": person_name,
+                        "journey_name": journey_title,
+                        'tasks': hr_tasks
+                        }
+            send_email_to_hr_j(prep_data)
         if employee_tasks or manager_tasks or hr_tasks:
             return {"message": f"journey assigned to {person_name}, manager, and HR (if applicable)"}, 200
         return {"message": f"no journey assign"}, 501
@@ -539,14 +646,6 @@ def add_task_to_journeyf(journey_title, new_task_name, new_eligibility_profiles,
 
         else:
             return {'message': f'Task "{new_task_name}" already exists in the journey'}, 403
-
-        # Optionally, you can assign the new task to individual users or teams here
-        # Example for assigning the task to users
-        # for user in journey.get('users', []):
-        #     if not check_employee_eligibility_for_task(user['person_name'], journey_title, new_task_name):
-        #         print(f"User {user['person_name']} is not eligible for task {new_task_name}")
-        #         continue  # Skip the user if not eligible
-        #     assign_task_to_user(journey_title, user['person_name'], new_task_name)
 
         return {'message': 'New task added successfully'}, 200
 
@@ -648,36 +747,6 @@ def assign_onboarding_journeys_for_today():
         )
             else:
                 continue
-
-            # Fetch the list of tasks assigned to the employee
-           
-            # assigned_tasks = journey_response.get('assigned_tasks', {})
-
-  
-            # task_list_html = "".join(f"<li>{task['task_name']} (Due: {task['task_due_date']})</li>" for task in assigned_tasks)
-            # action_name = person_name
-            # # for task in assigned_tasks:
-            # #     action_name = task['action_name']
-
-            # # # Prepare the email data
-            # # print(action_name)
-            # email_data = {
-            #     "to_email": employee_email,
-            #     "from_email": config.SMTP_CONFIG['from_email'],
-            #     "template_name": config['templates']['onboarding_journey_assigned_today'],
-            #     "data": {
-            #         "person_name": person_name,
-            #         "company_name": config.others['company_name'],
-            #         "journey_name": journey['name'],
-            #         "start_date": start_date,
-            #         "task_list": task_list_html,
-            #         "manager_name": manager_name,
-            #         "action_name":person_name
-            #     }
-            # }
-
-            # # Send the onboarding email
-            # send_email(email_data)
         if not onboarding_journey_found:
             return {"error": f"No onboarding journey found"}, 404 
     return {"message": "Journeys assigned for all employees starting today"}, 200
@@ -777,40 +846,6 @@ def assign_offboarding_journeys_for_today():
         )            
             else:
                 continue
-
-
-
-            # # Fetch the list of tasks assigned to the employee
-           
-            # assigned_tasks = journey_response.get('assigned_tasks', {})
-
-  
-            # task_list_html = "".join(f"<li>{task['task_name']} (Due: {task['task_due_date']})</li>" for task in assigned_tasks)
-
-
-
-            # # Prepare the email data
-           
-            # last_working_day = datetime.now().strftime('%Y-%m-%d')  # Replace with the actual last working day
-            # exit_interview_date = (datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d')  # Example exit interview date
-
-            # email_data = {
-            #     "to_email": employee_email,
-            #     "from_email": config.SMTP_CONFIG['from_email'],
-            #     "template_name": config['templates']['employee_offboarding'],
-            #     "data": {
-            #         "person_name": person_name,
-            #         "company_name": config.others['company_name'],
-            #         "last_working_day": last_working_day,
-            #         "exit_interview_date": exit_interview_date,
-            #         "task_list": task_list_html,
-            #         "manager_name": manager_name,
-            #         "action_name":person_name
-            #     }
-            # }
-
-            # # Send the onboarding email
-            # send_email(email_data)
         if not onboarding_journey_found:
             return {"error": f"No onboarding journey found"}, 404 
     return {"message": "Journeys Offbaording assigned for all employees ending today"}, 200
@@ -824,15 +859,14 @@ def assign_offboarding_journeys_for_today():
 # 5. Optionally (commented-out code), it also handles sending email notifications to the user and their manager or HR about the unassignment.
 #
 # Returns a success message if the user is successfully unassigned, or an error message if there is an issue.
-def unassign_journey_from_user(journey_title, person_name,updated_by):
+def unassign_journey_from_user(journey_title, person_name, updated_by):
     try:
-        # Find the journey and check if the user is assigned to it
-        # journey = journey_collection.find_one({'name': journey_title, 'users.person_name': person_name})
-        
+        # Find the employee record
         employee = employee_collection.find_one({'person_name': person_name})
         if not employee:
             return {"error": f"Employee {person_name} not found in the employee collection"}, 404
 
+        # Find the journey where the user is part of the users list or tasks action_name
         journey = journey_collection.find_one({
             'journey_name': journey_title,
             '$or': [
@@ -843,58 +877,62 @@ def unassign_journey_from_user(journey_title, person_name,updated_by):
         if not journey:
             return {'error': f'User {person_name} not found in journey {journey_title}'}, 200
 
-        # Remove the user from the journey
-        result = journey_collection.update_one(
+        # Check if the user exists in the journey's users list
+        users_list = journey.get('users', [])
+        if not users_list:
+            return {'error': 'No users found in the journey'}, 404
+
+        # Find all entries that match person_name and tasks.action_name == person_name
+        matching_users = [i for i, user in enumerate(users_list) 
+                          if user.get('person_name') == person_name and 
+                          any(task.get('action_name') == person_name for task in user.get('tasks', []))]
+
+        # If no matching user found
+        if not matching_users:
+            return {'error': f'User {person_name} not found in the journey with matching action name'}, 404
+
+        # Get the index of the last matching user
+        last_user_index = matching_users[-1]
+
+        # First: Unset the last matching user using the index
+        result_unset = journey_collection.update_one(
             {'journey_name': journey_title},
-            {'$pull': {'users': {'person_name': person_name}},
-            '$set': {
-                    'updated_by': updated_by,  # Set the current user who performed the action
-                    'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Set the current timestamp
-                }}
+            {
+                '$unset': {f'users.{last_user_index}': 1},  # Unset (remove) the user at the found index
+                '$set': {
+                    'updated_by': updated_by,
+                    'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                }
+            }
         )
 
-         # Remove the user from the journey
-        result = journey_collection.update_one(
-            {'journey_name': journey_title},
-            {'$pull': {'users': {'tasks.action_name': person_name}},
-            '$set': {
-                    'updated_by': updated_by,  # Set the current user who performed the action
-                    'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Set the current timestamp
-                }}
-        )
-        if result.modified_count == 0:
+        if result_unset.modified_count == 0:
             return {'error': 'Failed to unassign the user from the journey'}, 500
 
-        # # Get employee email, manager name, and HR name
-        # employee = employee_collection.find_one({'person_name': person_name})
-        # if employee:
-        #     employee_email = employee.get('email', '')
-        #     manager_name = employee.get('manager_name', '')
-            
-        #     hr_name = hr_name_fetch(employee)
-        #     print(manager_name+" "+hr_name)
-        #     remove_task_and_cleanup_user(journey_title, person_name, manager_name, action_name=person_name)
-        #     remove_task_and_cleanup_user(journey_title, person_name, hr_name, action_name=person_name)
+        # Second: Clean up the array by pulling the null values
+        result_pull = journey_collection.update_one(
+            {'journey_name': journey_title},
+            {
+                '$pull': {'users': None}  # Remove any null values left in the users array
+            }
+        )
 
-        #     if employee_email:
-        #         email_data = {
-        #             "to_email": employee_email,
-        #             "from_email": config.SMTP_CONFIG['from_email'],
-        #             "template_name": config['templates']['user_unassigned_from_journey'],
-        #             "data": {
-        #                 "person_name": person_name,
-        #                 "company_name": config.others['company_name'],
-        #                 "journey_name": journey_title,
-        #                 "manager_name": manager_name,
-        #                 "action_name":person_name
-        #             }
-        #         }
-        #         send_email(email_data)
+        if result_pull.modified_count == 0:
+            return {'error': 'Failed to clean up the user array after unassigning'}, 500
 
+        # Prepare data for email notification
+        prep_data = {
+            "person_name": person_name,
+            "journey_name": journey_title
+        }
+
+        # Send email to notify the employee
+        send_email_to_employee_uj(prep_data)
         return {'message': f'User {person_name} successfully unassigned from journey {journey_title} and related tasks removed for manager and HR'}, 200
 
     except Exception as e:
         return {'error': str(e)}, 500
+
 
 # Function to remove an employee and clean up their associated journeys.
 # This function:
@@ -922,10 +960,6 @@ def remove_employee_and_cleanup_journeys(person_name,updated_by):
                 if status_code != 200:
                     return {"error": f"Failed to unassign journey {journey_name} for employee {person_name}: {response.get('error')}"}, 500
 
-        # Step 3: Remove the employee from the employee collection
-        # result = employee_collection.delete_one({'person_name': person_name})
-        # if result.deleted_count == 0:
-        #     return {"error": f"Failed to remove employee {person_name} from the employee collection"}, 500  
         return {"message": f"Employee {person_name} removed successfully and unassigned from all journeys and teams"}, 200
     
     except Exception as e:
@@ -980,28 +1014,6 @@ def complete_task(person_name, journey_title, task_name, action_name):
         if not task:
             return {'error': 'Task not found'}, 404
 
-        # # Ensure the user exists in the journey with the correct action_name
-        # user = next(
-        #     (user for user in journey.get('users', []) 
-        #      if user.get('person_name') == person_name and 
-        #         any(task.get('action_name') == action_name for task in user.get('tasks', []))
-        #     ), 
-        #     None
-        # )
-        
-        # if not user:
-        #     return {'error': 'User not found in the journey'}, 404
-
-        # # Ensure the task exists for the user with the correct action_name
-        # task = next(
-        #     (task for task in user.get('tasks', []) 
-        #      if task.get('task_name') == task_name and task['action_name'] == action_name), 
-        #     None
-        # )
-        
-        # if not task:
-        #     return {'error': 'Task not found'}, 404
-
         # Calculate time status
         due_date = datetime.strptime(task['task_due_date'], '%Y-%m-%d')
         current_date = datetime.now()
@@ -1030,34 +1042,17 @@ def complete_task(person_name, journey_title, task_name, action_name):
         print(result)
         if result.modified_count == 0:
             return {'error': 'Task is already mark completed'}, 500
-        
-        # # Retrieve the employee's email and manager name for notification
-        # employee = employee_collection.find_one({'person_name': person_name})
-        # if not employee:
-        #     return {'error': 'Employee not found'}, 404
-        
-        # employee_email = employee.get('email', '')
-        # manager_name1 = employee.get('manager_name', '')
-
-        # # Send email notification
-        # email = {
-        #     "to_email": employee_email,
-        #     "from_email": config.SMTP_CONFIG['from_email'],
-        #     "template_name": config['templates']['task_complete'],
-        #     "data": {
-        #         "journey_title":journey_title,
-        #         "person_name": person_name,
-        #         "task_name": task_name,
-        #         "completion_date": current_date.strftime('%B %d, %Y'),  # Format the date
-        #         "task_status": time_status,
-        #         "manager_name": manager_name1,
-        #         "action_name":action_name,
-        #         "company_name":config.others['company_name']
-        #     }
-        # }
-        # # Uncomment to send the email
-        # send_email(email)
-
+        # Prepare data for email
+        if action_name!=person_name:
+            prep_data = {
+                "person_name": action_name,
+                "task_completed_by":person_name,
+                "journey_name": journey_title,
+                "task_name": task_name,
+                "time_status": time_status
+            }
+            # Send an email to notify the action_name (assignee) of task completion
+            send_email_task_completion(prep_data)
         return {'message': 'Task marked as completed'}, 200
 
     except Exception as e:
@@ -1084,6 +1079,14 @@ def update_status_for_completed_tasks():
                     tasks = user.get('tasks', [])
                     if tasks and all(task['status'] == 'Completed' for task in tasks):
                         user['status'] = 'Completed'
+                        # Prepare data for email notification
+                        prep_data = {
+                            "person_name": user['person_name'],
+                            "journey_name": journey['journey_name'],
+                            "completion_date": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        }
+                        # Send an email notifying the user that their journey is completed
+                        send_email_journey_completion(prep_data)
                     else:
                         user['status'] = 'In Progress'
                 # Update the journey with the new user status
@@ -1095,7 +1098,7 @@ def update_status_for_completed_tasks():
         return {'message': 'Statuses updated successfully'}, 200
     except Exception as e:
         return {'error': str(e)}, 500
-
+    
 # Function to update a task's details in the task collection.
 # This function:
 # 1. Updates the specified task in the 'task_collection' based on the 'task_name' and the provided 'update_data'.
@@ -1120,56 +1123,6 @@ def update_task(task_name, update_data):
 
         if result.matched_count == 0:
             return {'error': 'Task not found'}, 404
-
-        # # Get the task details
-        # task = task_collection.find_one({'task_name': task_name})
-        # if task is None:
-        #     return {'error': f'Task {task_name} not found after update'}, 404
-        
-        # updated_at = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        # updated_by = update_data.get('updated_by', 'System')
-
-        # # Find all journeys where this task is assigned
-        # journeys = journey_collection.find({'users.tasks.task_name': task_name})
-
-        # for journey in journeys:
-        #     # Notify individual users
-        #     for user in journey['users']:
-        #         user_tasks = [t for t in user.get('tasks', []) if t['task_name'] == task_name]
-                
-        #         if user_tasks:
-        #             person_name = user.get('person_name', None)
-        #             if not person_name:
-        #                 continue  # Skip if person_name is not available
-
-        #             employee = employee_collection.find_one({'person_name': person_name})
-        #             if employee is None:
-        #                 continue  # Skip if employee record is not found
-
-        #             employee_email = employee.get('email', None)
-        #             if not employee_email:
-        #                 continue  # Skip if employee email is not available
-
-        #             # Prepare the email for each user assigned to the task
-        #             action_name = person_name
-        #             for task in user_tasks:
-        #                 action_name=task['action_name']
-
-        #             email = {
-        #                 "to_email": employee_email,
-        #                 "from_email": config.SMTP_CONFIG['from_email'],
-        #                 "template_name": config['templates']['task_updated'],
-        #                 "data": {
-        #                     "journey_name":journey['name'],
-        #                     "task_name": task_name,
-        #                     "person_name": person_name,
-        #                     "updated_by": updated_by,
-        #                     "update_date": update_date,
-        #                     "company_name": config.others['company_name'],
-        #                     "action_name":action_name
-        #                 }
-        #             }
-        #             send_email(email)
 
   
         return {'message': 'Task updated successfully and notifications sent'}, 200
@@ -1199,35 +1152,6 @@ def update_journey(journey_title, category, description, updated_by):
 
         if result.matched_count == 0:
             return {'error': 'Journey not found'}, 404
-
-        # # Fetch the journey after update
-        # journey = journey_collection.find_one({'name': journey_title})
-        # users = journey.get('users', [])
-
-        # # Notify each user in the journey
-        # for user in users:
-        #     employee = employee_collection.find_one({'person_name': user['person_name']})
-        #     tasks = user.get('tasks', [])
-        #     action_name = user['person_name']
-        #     for task in tasks:
-        #             action_name = task.get('action_name', user['person_name'])
-        #     if employee:
-        #         employee_email = employee.get('email', '')
-        #         # print(employee_email)
-        #         if employee_email:
-        #             email_data = {
-        #                 "to_email": employee_email,
-        #                 "from_email": config.SMTP_CONFIG['from_email'],
-        #                 "template_name": config['templates']['journey_updated'],  # Ensure this template exists in your email template collection
-        #                 "data": {
-        #                     "person_name": user['person_name'],
-        #                     "journey_name": journey_title,
-        #                     "updated_at": update_data['updated_at'],
-        #                     "company_name": config.others['company_name'],
-        #                     "action_name":action_name
-        #                 }
-        #             }
-        #             send_email(email_data)
 
         return {'message': 'Journey updated successfully and notifications sent'}, 200
     except Exception as e:
@@ -1346,6 +1270,17 @@ def submit_feedback(person_name, journey_title, task_name, action_name, feedback
 
         if result.modified_count == 0:
             return {'error': 'Failed to submit feedback'}, 500
+
+        # Step 7: Prepare data for sending email
+        prep_data = {
+            "person_name": action_name,  # The person responsible for the task (assignee)
+            "journey_name": journey_title,
+            "task_name": task_name,
+            "feedback": feedback
+        }
+
+        # Step 8: Send an email notification regarding the feedback submission
+        send_email_feedback_submission(prep_data)    
 
         return {'message': 'Feedback submitted successfully'}, 200
 

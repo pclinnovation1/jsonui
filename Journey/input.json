@@ -1,0 +1,330 @@
+1. http://127.0.0.1:5003/create
+
+"name": "BC eligibility_criteria"
+
+{
+  "eligibility_profile_definition": {
+    "name": "BC eligibility_criteria",
+    "description": "Oras_testing",
+    "assignment_to_use": "Primary",
+    "status": "Active",
+    "view_hierarchy": "Flat",
+    "profile_type": "Employee",
+    "profile_usage": "BC"
+  },
+  "eligibility_criteria": {
+    "personal": {
+      "gender": "N/A",
+      "disabled": "N/A",
+      "postal_code_ranges": "N/A",
+      "opted_for_medicare": "N/A",
+      "leave_of_absence": "N/A",
+      "termination_reason": "N/A",
+      "qualification": "N/A",
+      "competency": "N/A",
+      "marital_status": "N/A",
+      "religion": "N/A",
+      "home_location": "N/A",
+      "person_type": "N/A",
+      "service_areas": "N/A",
+      "uses_tobacco": "N/A"
+    },
+    "employment": {
+      "assignment_status": "N/A",
+      "hourly_or_salaried": "N/A",
+      "assignment_category": "N/A",
+      "grade": "N/A",
+      "job": "N/A",
+      "position": "N/A",
+      "payroll": "N/A",
+      "salary_basis": "N/A",
+      "department": "N/A",
+      "legal_entities": "N/A",
+      "performance_rating": "N/A",
+      "quartile_in_range": "N/A",
+      "work_location": "N/A",
+      "range_of_scheduled_hours": "N/A",
+      "people_manager": "N/A",
+      "job_function": "N/A",
+      "job_family": "N/A",
+      "hire_date": "N/A",
+      "probation_period": "N/A",
+      "business_unit": "N/A",
+      "country": "N/A",
+      "location": "N/A",
+      "employment_type":"Blue collar"
+    },
+    "derived_factors": {
+      "age": "N/A",
+      "length_of_service": "N/A",
+      "compensation": "N/A",
+      "hours_worked": "N/A",
+      "full_time_equivalent": "N/A",
+      "combined_age_and_length_of_service": "N/A"
+    },
+    "other": {
+      "benefit_groups": "N/A",
+      "health_coverage_selected": "N/A",
+      "participation_in_another_plan": "N/A",
+      "formula": "N/A",
+      "user_defined_criteria": "N/A"
+    },
+    "labor_relations": {
+      "bargaining_unit": "N/A",
+      "labor_union_member": "N/A",
+      "union": "N/A",
+      "collective_agreement": "N/A"
+    }
+  }
+}
+
+"name": "WC eligibility_criteria"
+
+{
+  "eligibility_profile_definition": {
+    "name": "WC eligibility_criteria",
+    "description": "Oras_testing",
+    "assignment_to_use": "Primary",
+    "status": "Active",
+    "view_hierarchy": "Flat",
+    "profile_type": "Employee",
+    "profile_usage": "WC"
+  },
+  "eligibility_criteria": {
+    "personal": {
+      "gender": "N/A",
+      "disabled": "N/A",
+      "postal_code_ranges": "N/A",
+      "opted_for_medicare": "N/A",
+      "leave_of_absence": "N/A",
+      "termination_reason": "N/A",
+      "qualification": "N/A",
+      "competency": "N/A",
+      "marital_status": "N/A",
+      "religion": "N/A",
+      "home_location": "N/A",
+      "person_type": "N/A",
+      "service_areas": "N/A",
+      "uses_tobacco": "N/A"
+    },
+    "employment": {
+      "assignment_status": "N/A",
+      "hourly_or_salaried": "N/A",
+      "assignment_category": "N/A",
+      "grade": "N/A",
+      "job": "N/A",
+      "position": "N/A",
+      "payroll": "N/A",
+      "salary_basis": "N/A",
+      "department": "N/A",
+      "legal_entities": "N/A",
+      "performance_rating": "N/A",
+      "quartile_in_range": "N/A",
+      "work_location": "N/A",
+      "range_of_scheduled_hours": "N/A",
+      "people_manager": "N/A",
+      "job_function": "N/A",
+      "job_family": "N/A",
+      "hire_date": "N/A",
+      "probation_period": "N/A",
+      "business_unit": "N/A",
+      "country": "N/A",
+      "location": "N/A",
+      "employment_type":"White collar"
+    },
+    "derived_factors": {
+      "age": "N/A",
+      "length_of_service": "N/A",
+      "compensation": "N/A",
+      "hours_worked": "N/A",
+      "full_time_equivalent": "N/A",
+      "combined_age_and_length_of_service": "N/A"
+    },
+    "other": {
+      "benefit_groups": "N/A",
+      "health_coverage_selected": "N/A",
+      "participation_in_another_plan": "N/A",
+      "formula": "N/A",
+      "user_defined_criteria": "N/A"
+    },
+    "labor_relations": {
+      "bargaining_unit": "N/A",
+      "labor_union_member": "N/A",
+      "union": "N/A",
+      "collective_agreement": "N/A"
+    }
+  }
+}
+
+2. http://127.0.0.1:5003/create_task
+
+"task_name": "People guidelines"
+
+ {
+    "task_name": "People guidelines",
+    "task_type": "Message + External URL",
+    "performer": "Employee",
+    "task_subtype": "",
+    "owner": "Employee",
+    "description": "Review relevant people guidelines.",
+    "instructions": "See relevant guidelines from IMS document storage. If you travel for business, read also travel policy and guidelines.",
+    "task_link": "",
+    "duration": 2,
+    "time_unit": "hours"
+  }
+ 
+3. http://127.0.0.1:5003/create_journey
+
+{
+  "journey_name": "Onboarding White Collar",
+  "category": "onboarding",
+  "description": "This journey ensures a seamless integration of new hires into the organization by providing essential training, resources, and support. New hires will feel welcomed, understand their roles, and quickly become productive members of the team.",
+  "eligibility_profiles": ["BC eligibility_criteria"],
+  "tasks": [
+    {
+      "task_name": "Welcome Message To New Employee",
+      "eligibility_profiles": []
+    },
+    {
+      "task_name": "Link to company page, presentation, welcome video",
+      "eligibility_profiles": []
+    },
+    {
+      "task_name": "Introduce mission, vision, values, organizational charts",
+      "eligibility_profiles": []
+    }
+  ],
+  "users": [
+  ]
+}
+
+4.http://127.0.0.1:5003/add_user_to_journey
+
+{
+    "journey_name": "New Journeybfdb",
+    "users": {
+        "person_name": "Mantas Sapalas"
+    }
+}
+
+5.http://127.0.0.1:5003/add_task_to_journey
+
+{
+    "journey_name":"New Journeybfdb",
+    "task_name":"Request a Badge",
+    "eligibility_profiles": []
+}
+
+6.http://127.0.0.1:5003/assign_onboarding_journeys_for_today
+
+7.http://127.0.0.1:5003/assign_offboarding_journeys_for_today
+
+8.http://127.0.0.1:5003/unassign_journey
+
+{
+    "journey_name": "New Journeybfdb",
+    "person_name": "Mika Aalto"
+}
+
+9.http://127.0.0.1:5003/remove_employee
+
+{
+    "person_name":"Mauri Salovaara"
+}
+
+10.http://127.0.0.1:5003/complete_task
+
+{
+  "person_name": "Mauri Salovaara",
+  "journey_name": "New Journeybfdb",
+  "task_name": "Request a Badge",
+  "action_name":"Mika Aalto"
+}
+
+11.http://127.0.0.1:5003/update_status_for_completed_tasks
+
+12.http://127.0.0.1:5003/update_task
+
+{
+  "task_name": "Employment Health check",
+  "update_data": {
+    "instructions": "Complete all necessary health checks as part of the employment process.2"
+  }
+}
+
+13.http://127.0.0.1:5003/update_journey
+
+{
+  "journey_name": "Onboarding Blue Collar",
+  "description": "jkaca"
+}
+
+14.http://127.0.0.1:5003/delete_journey
+
+{
+  "journey_name": "New Journeybfdb"
+}
+
+15.http://127.0.0.1:5003/delete_task
+
+{
+  "task_name": "Check Status 2"
+}
+
+16.http://127.0.0.1:5003/submit_feedback
+
+{
+  "person_name": "Mika Aalto",
+  "journey_name": "Badge Request",
+  "task_name": "Oras Group - MT meetings",
+  "feedback": "Great work on the tasdaedsadk",
+  "action_name":"Mika Aalto"
+}
+
+17.http://127.0.0.1:5003/remove_task_from_journey
+
+{
+  "journey_name": "Onboarding Blue Collar",
+  "task_name": "Authorization policy"
+}
+
+18.http://127.0.0.1:5003/update_time_status
+
+19.http://127.0.0.1:5003/send_overdue_task_notifications
+
+20.http://127.0.0.1:5003/add_eligibility_profile_to_j
+
+{
+    "journey_name": "Onboarding Blue Collar",
+    "eligibility_profile": "ORAS_Sales_SN",
+    "updated_by": "Admin"
+}
+
+21.http://127.0.0.1:5003/remove_eligibility_profile_j
+
+{
+    "journey_name": "Onboarding Blue Collar",
+    "eligibility_profile": "ORAS_Sales_SN",
+    "updated_by": "Admin"
+}
+
+22.http://127.0.0.1:5003/add_eligibility_profile_to_t
+
+{
+    "journey_name": "Badge Request",
+    "task_name": "Request a Badge",
+    "eligibility_profile": "ORAS_Sales_SN",
+    "updated_by": "Admin"
+}
+
+23.http://127.0.0.1:5003/remove_eligibility_profile_t
+
+{
+    "journey_name": "Badge Request",
+    "task_name": "Request a Badge",
+    "eligibility_profile": "ORAS_Sales_SN",
+    "updated_by": "Admin"
+}
+
+
+

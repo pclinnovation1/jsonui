@@ -134,7 +134,6 @@ def check_employee_eligibility_for_JRN(person_name, journey_name):
         return True  # or return another appropriate value based on your logic
     eligibility_profiles = []
     combined_employees = set()
-    print("hi")
     for profile_name in eligibility_profile_names:
         profile_data = eligibility_profile_collection.find_one({"eligibility_profile_definition.name": profile_name})
         if profile_data:
