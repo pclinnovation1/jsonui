@@ -1,0 +1,5167 @@
+{
+	"info": {
+		"_postman_id": "5de6dfe2-e0dc-4afa-95b8-94bdcf531895",
+		"name": "FinancialAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37976763"
+	},
+	"item": [
+		{
+			"name": "invoices",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/invoices?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bankAccountUserRules",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/bankAccountUserRules?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"bankAccountUserRules"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashBankAccounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/cashBankAccounts?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"cashBankAccounts"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashBankBranches",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/cashBankBranches?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"cashBankBranches"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashBanks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/cashBanks?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"cashBanks"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashBankAccountTransfers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/cashBankAccountTransfers?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"cashBankAccountTransfers"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "collectionsDelinquencies",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/collectionsDelinquencies?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"collectionsDelinquencies"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "collectionStrategies",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/collectionStrategies?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"collectionStrategies"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditAndCollectionsDataPoints",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/creditAndCollectionsDataPoints?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"creditAndCollectionsDataPoints"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dataSecurities",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/dataSecurities?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"dataSecurities"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "debitAuthorizations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/debitAuthorizations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"debitAuthorizations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "erpBusinessEvents",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/erpBusinessEvents?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"erpBusinessEvents"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashExternalTransactions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/cashExternalTransactions?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"cashExternalTransactions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedDATAActBalances",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/fedDATAActBalances?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"fedDATAActBalances"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedDATAActFileSequences",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/fedDATAActFileSequences?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"fedDATAActFileSequences"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedUSSGLAccounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/fedUSSGLAccounts?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"fedUSSGLAccounts"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesIncomeTaxTypes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/payablesIncomeTaxTypes?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"payablesIncomeTaxTypes"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoiceHolds",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/invoiceHolds?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"invoiceHolds"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesInvoiceTolerances",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/payablesInvoiceTolerances?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"payablesInvoiceTolerances"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journalBatches",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/journalBatches?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"journalBatches"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partyFiscalClassifications",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/partyFiscalClassifications?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"partyFiscalClassifications"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partyTaxProfiles",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/partyTaxProfiles?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"partyTaxProfiles"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesAndProcurementOptions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/payablesAndProcurementOptions?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"payablesAndProcurementOptions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesCalendarTypes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/payablesCalendarTypes?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"payablesCalendarTypes"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesDistributionSets",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/payablesDistributionSets?expand=all&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"payablesDistributionSets"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesIncomeTaxRegions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/latest/payablesIncomeTaxRegions?expand=all&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"",
+						"fscmRestApi",
+						"resources",
+						"latest",
+						"payablesIncomeTaxRegions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesInvoiceHolds",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesInvoiceHolds"
+			},
+			"response": []
+		},
+		{
+			"name": "payablesOptions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesOptions?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payablesOptions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesPayments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesPayments?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payablesPayments"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentProcessRequests",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/paymentProcessRequests?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"paymentProcessRequests"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesPaymentTerms",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesPaymentTerms?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payablesPaymentTerms"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receiptMethodAssignments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receiptMethodAssignments?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"receiptMethodAssignments"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receiptMethods",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receiptMethods?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"receiptMethods"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receivablesAdjustments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesAdjustments?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"receivablesAdjustments"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receivablesCreditMemos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesCreditMemos?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"receivablesCreditMemos"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receivablesCustomerAccountActivities",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesCustomerAccountActivities?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"receivablesCustomerAccountActivities"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receivablesCustomerAccountSiteActivities",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesCustomerAccountSiteActivities?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"receivablesCustomerAccountSiteActivities"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receivablesInvoices",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesInvoices?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"receivablesInvoices"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "standardReceipts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/standardReceipts?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"standardReceipts"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxAuthorityProfiles",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxAuthorityProfiles?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxAuthorityProfiles"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxExemptions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxExemptions?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxExemptions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxIntendedUses",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxIntendedUses?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxIntendedUses"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxProductCategories",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxProductCategories?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxProductCategories"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxRegistrations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxRegistrations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxRegistrations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesTaxReportingEntities",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesTaxReportingEntities?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payablesTaxReportingEntities"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxTransactionBusinessCategories",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxTransactionBusinessCategories?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxTransactionBusinessCategories"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thirdPartyFiscalClassifications",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/thirdPartyFiscalClassifications?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"thirdPartyFiscalClassifications"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thirdPartyTaxReportingCodeAssociations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/thirdPartyTaxReportingCodeAssociations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"thirdPartyTaxReportingCodeAssociations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactionTaxLines",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/transactionTaxLines?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"transactionTaxLines"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withholdingTaxLines",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/withholdingTaxLines?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"withholdingTaxLines"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountCombinationsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/accountCombinationsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"accountCombinationsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountCombinationsShorthandAliasesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/accountCombinationsShorthandAliasesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"accountCombinationsShorthandAliasesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountingCalendarsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/accountingCalendarsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"accountingCalendarsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountingPeriodStatusLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/accountingPeriodStatusLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"accountingPeriodStatusLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountingPeriodsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/accountingPeriodsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"accountingPeriodsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fixedAssetBooksLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fixedAssetBooksLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fixedAssetBooksLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashBankAccountsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/cashBankAccountsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"cashBankAccountsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashBankBranchesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/cashBankBranchesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"cashBankBranchesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashBanksLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/cashBanksLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"cashBanksLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chartOfAccountsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/chartOfAccountsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"chartOfAccountsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "controlBudgetPeriodsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/controlBudgetPeriodsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"controlBudgetPeriodsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "controlBudgetsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/controlBudgetsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"controlBudgetsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "currencyConversionTypesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/currencyConversionTypesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"currencyConversionTypesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customerAccountSitesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/customerAccountSitesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"customerAccountSitesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dataAccessSetLedgersLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/dataAccessSetLedgersLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"dataAccessSetLedgersLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dataAccessSetsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/dataAccessSetsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"dataAccessSetsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlexFndDffDescriptiveFlexfieldContexts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/FlexFndDffDescriptiveFlexfieldContexts?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"FlexFndDffDescriptiveFlexfieldContexts"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesDistributionSetsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesDistributionSetsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payablesDistributionSetsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "documentFiscalClassificationsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/documentFiscalClassificationsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"documentFiscalClassificationsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedBudgetControlTreeLabelsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedBudgetControlTreeLabelsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedBudgetControlTreeLabelsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedBudgetControlTreeNodesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedBudgetControlTreeNodesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedBudgetControlTreeNodesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedBudgetControlTreeVersionsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedBudgetControlTreeVersionsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedBudgetControlTreeVersionsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedBudgetControlTreesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedBudgetControlTreesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedBudgetControlTreesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedDATAActBalancesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedDATAActBalancesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedDATAActBalancesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedClosingSegmentsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedClosingSegmentsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedClosingSegmentsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedDATAActCalculationDateRangesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedDATAActCalculationDateRangesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedDATAActCalculationDateRangesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedLedgerGroupTreesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedLedgerGroupTreesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedLedgerGroupTreesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedNaturalAccountValueSetsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedNaturalAccountValueSetsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedNaturalAccountValueSetsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedTreasuryAccountSymbolsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedTreasuryAccountSymbolsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedTreasuryAccountSymbolsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fedUSSGLAccountsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fedUSSGLAccountsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"fedUSSGLAccountsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finBusinessUnitsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/finBusinessUnitsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"finBusinessUnitsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inputTaxClassificationsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/inputTaxClassificationsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"inputTaxClassificationsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "intercompanyCustomerSuppliersLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/intercompanyCustomerSuppliersLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"intercompanyCustomerSuppliersLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "intercompanyOrganizationsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/intercompanyOrganizationsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"intercompanyOrganizationsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "intercompanyTransactionTypesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/intercompanyTransactionTypesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"intercompanyTransactionTypesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesInvoiceHoldsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesInvoiceHoldsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payablesInvoiceHoldsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jointVentureSLASupportingReferencesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/jointVentureSLASupportingReferencesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"jointVentureSLASupportingReferencesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journalCategoriesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalCategoriesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"journalCategoriesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journalSourcesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalSourcesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"journalSourcesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ledgersLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/ledgersLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"ledgersLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "legalEntitiesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/legalEntitiesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"legalEntitiesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "legalJurisdictionsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/legalJurisdictionsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"legalJurisdictionsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "legalReportingUnitsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/legalReportingUnitsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"legalReportingUnitsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outputTaxClassificationsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/outputTaxClassificationsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"outputTaxClassificationsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentCodesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/paymentCodesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"paymentCodesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disbursementPaymentMethodsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/disbursementPaymentMethodsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"disbursementPaymentMethodsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentProcessProfilesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/paymentProcessProfilesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"paymentProcessProfilesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payablesPaymentTermsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/payablesPaymentTermsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payablesPaymentTermsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "preferredCurrenciesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/preferredCurrenciesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"preferredCurrenciesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productTypesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/productTypesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"productTypesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "memoLinesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/memoLinesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"memoLinesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentTermsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/paymentTermsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"paymentTermsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactionSourcesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/transactionSourcesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"transactionSourcesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactionTypesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/transactionTypesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"transactionTypesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxClassifications",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxClassifications?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxClassifications"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxIntendedUsesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxIntendedUsesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxIntendedUsesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxRatesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxRatesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxRatesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taxRegimesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/taxRegimesLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"taxRegimesLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withholdingTaxGroupsLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/withholdingTaxGroupsLOV?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"withholdingTaxGroupsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workflowUsers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Payrollcloud#123",
+						"username": "Daikan.jonson"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eqay-dev1.fa.em1.ukg.oraclecloud.com/fscmRestApi/resources/11.13.18.05/workflowUsers?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"eqay-dev1",
+						"fa",
+						"em1",
+						"ukg",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"fscmRestApi",
+						"resources",
+						"11.13.18.05",
+						"workflowUsers"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
