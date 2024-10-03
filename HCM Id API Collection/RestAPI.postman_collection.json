@@ -1,0 +1,3113 @@
+{
+	"info": {
+		"_postman_id": "134bc5da-15eb-4844-b0cd-5707f2969755",
+		"name": "RestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37976763"
+	},
+	"item": [
+		{
+			"name": "emps",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/emps?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"emps"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "offset",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "PersonId=300000002442308",
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "FirstName",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "locations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/locations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"locations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "q",
+							"value": "LocationId=300000001982628",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grades",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/grades?onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"grades"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/organizations?onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"organizations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all",
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "OrganizationId",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "ClassificationCode!=DEPARTMENT",
+							"disabled": true
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bussiness",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/hcmBusinessUnitsLOV?expand=all&limit=1&onlyData=true&q=BusinessUnitId=300000002421555",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"hcmBusinessUnitsLOV"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "q",
+							"value": "BusinessUnitId=300000002421555"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/jobs?onlyData=true&expand=all",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"jobs"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "offset",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "JobId=300000002069834",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/workers?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"workers"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publicworkers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/publicWorkers?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"publicWorkers"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "fields",
+							"value": "DisplayName;assignments:AssignmentName,BusinessUnitName,DepartmentName",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "FirstName=Timo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publicworkers Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/publicWorkers?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"publicWorkers"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "fields",
+							"value": "DisplayName;assignments:AssignmentName,BusinessUnitName,DepartmentName",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "PersonId: 300000002421899",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publicworkers Copy 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/salaries?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"salaries"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "fields",
+							"value": "DisplayName;assignments:AssignmentName,BusinessUnitName,DepartmentName",
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "DisplayName",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salary",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/salaries?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"salaries"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "absences",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/absences?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"absences"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allocatedChecklists",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/allocatedChecklists?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"allocatedChecklists"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "areasOfResponsibility",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/areasOfResponsibility?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"areasOfResponsibility"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "business Process Approval Attachments Comments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/businessProcessApprovalAttachmentsComments?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"businessProcessApprovalAttachmentsComments"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "costings",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/costings?expand=all&limit=3&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"costings"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Development Goal Assigned Person Approval Details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/devGoalPersonDetails?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"devGoalPersonDetails"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "document Delivery Preferences",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/documentDeliveryPreferences?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"documentDeliveryPreferences"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document Records",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/documentRecords?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"documentRecords"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Element Entries",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/elementEntries?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"elementEntries"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eligibility Objects",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/eligibilityObjects?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"eligibilityObjects"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "email Addr Migrations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/emailAddrMigrations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"emailAddrMigrations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "explore Goals",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/exploreGoals?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"exploreGoals"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "givenFeedbacks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/givenFeedbacks?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"givenFeedbacks"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flexfield Context",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/recruitingCEFlexFields?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"recruitingCEFlexFields"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flowInstances",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/flowInstances?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"flowInstances"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flowPatterns",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/flowPatterns?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"flowPatterns"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goalPlanAssignees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/goalPlanAssignees?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"goalPlanAssignees"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goalPlanGoalWeights",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/goalPlanGoalWeights?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"goalPlanGoalWeights"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gradeRates",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/gradeRates?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"gradeRates"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hcmContacts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/hcmContacts?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"hcmContacts"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dataLoadDataSets",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/dataLoadDataSets?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"dataLoadDataSets"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobFamilies",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/jobFamilies?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"jobFamilies"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journeyAllocations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/journeyAllocations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"journeyAllocations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journeyTaskLibrary",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/journeyTaskLibrary?onlyData=true&expand=all",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"journeyTaskLibrary"
+					],
+					"query": [
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journeys",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/journeys?onlyData=true&expand=all&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"journeys"
+					],
+					"query": [
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libGoalTaskTranslations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/libGoalTaskTranslations?onlyData=true&expand=all&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"libGoalTaskTranslations"
+					],
+					"query": [
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libGoalTranslations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/libGoalTranslations?onlyData=true&expand=all&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"libGoalTranslations"
+					],
+					"query": [
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libraryGoals",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/libraryGoals?onlyData=true&expand=all&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"libraryGoals"
+					],
+					"query": [
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "locationsV2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/locationsV2?onlyData=true&expand=all&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"locationsV2"
+					],
+					"query": [
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myTeamDetails",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/myTeamDetails?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"myTeamDetails"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payrollRelationships",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/payrollRelationships?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"payrollRelationships"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "performanceEvaluations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/performanceEvaluations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"performanceEvaluations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "personNotes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/personNotes?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"personNotes"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "personNotesVisibilityOptions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/personNotesVisibilityOptions?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"personNotesVisibilityOptions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "planBalances",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/planBalances?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"planBalances"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recruitingOppMktSettings",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/recruitingOppMktSettings?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"recruitingOppMktSettings"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "questionnaireInstructions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/questionnaireInstructions?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"questionnaireInstructions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "questionnaires",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/questionnaires?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"questionnaires"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "questions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/questions?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"questions"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recruitingRACConfigurations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/recruitingRACConfigurations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"recruitingRACConfigurations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workerJourneys",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/workerJourneys?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"workerJourneys"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "selfDetails",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/selfDetails?expand=all&onlyData=true&limit=1",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"selfDetails"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recruitingUISourceTrackings",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/recruitingUISourceTrackings?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"recruitingUISourceTrackings"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "talentPersonProfiles",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/talentPersonProfiles?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"talentPersonProfiles"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "talentRatings",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/talentRatings?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"talentRatings"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "talentReviewMeetingTemplates",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/talentReviewMeetingTemplates?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"talentReviewMeetingTemplates"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "targetDateMigrations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/targetDateMigrations?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"targetDateMigrations"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "timeAttributes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/timeAttributes?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"timeAttributes"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "timeRecordGroups",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/timeRecordGroups?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"timeRecordGroups"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "timeRecords",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/timeRecords?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"timeRecords"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactionSecurityProfilesLOV",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/timeEventRequests"
+			},
+			"response": []
+		},
+		{
+			"name": "userAccounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/userAccounts?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"userAccounts"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userTableDetailValues",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/userTableDetailValues?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"userTableDetailValues"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userTableDetails",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/userTableDetails?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"userTableDetails"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "timeEventRequests",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/timeEventRequests"
+			},
+			"response": []
+		},
+		{
+			"name": "performanceGoals",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "Welcome#12345",
+						"username": "Vishal.Meena@payrollcloudcorp.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/performanceGoals?expand=all&limit=1&onlyData=true",
+					"protocol": "https",
+					"host": [
+						"iaihgs-dev1",
+						"fa",
+						"ocs",
+						"oraclecloud",
+						"com"
+					],
+					"path": [
+						"hcmRestApi",
+						"resources",
+						"11.13.18.05",
+						"performanceGoals"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "all"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "onlyData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
