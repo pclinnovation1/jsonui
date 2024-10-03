@@ -100,3 +100,7 @@ def data_validation_against_schema(collection, data):
     if schema and not validate_data_schema2(schema, data):
         return False
     return True
+
+
+def hr_name_fetch(employee):
+    return employee.get('hr_name', '')
