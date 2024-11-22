@@ -1,0 +1,14 @@
+Dear {peer_name},
+
+You have been selected to provide feedback for your colleague, {employee_name}.
+
+Below are the questions you need to answer:
+
+{feedback_questions}
+
+Please fill out the feedback form at your earliest convenience by clicking the button below:
+
+[Submit Feedback]({feedback_form_link})
+
+Thank you,
+Your HR Team

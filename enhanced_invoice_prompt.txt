@@ -1,0 +1,35 @@
+Extract the following details from the invoice text and provide them in a structured JSON format for each item. If any information is missing, please indicate it as "Not Provided".
+Ensure that the values for all names of a parameter are consistent. For example, if "property_reference" can also be named as ["Property Reference", "Reference Number", "Property ID", "Property Ref"], the values should be the same for each synonym or name. Do this for all parameters. Display all parameters in the output, even if they appear more than once with their corresponding other names:
+
+Desired JSON format:
+{
+  "property_reference": "value",
+  "supplier_name": "value",
+  "demand_date": "value",
+  "amount_due": "value",
+  "balance_brought_forward": "value",
+  "account_balance": "value",
+  "due_date": "value",
+  "business_unit": "value",
+  "unique_code": "value",
+  "sender_address": "value",
+  "receiver_address": "value",
+  "invoice_type": "value"
+}
+
+Definitions:
+- Property Reference: A unique identifier for the property, often referred to as Property Reference, Reference Number, Property ID, Property Ref. For example, "0030845002700A".
+- Supplier Name: The name of the supplier, which can also be named as Supplier Name, Vendor Name, Service Provider, Supplier, Vendor. For example, "Sefton Metropolitan Borough Council".
+- Demand Date: The date the demand was issued, which can be known as Demand Date, Date of Demand, Invoice Date, Billing Date. For example, "31-JAN-2024".
+- Amount Due: The total amount due, referred to as Amount Due, Total Due, Due Amount, Outstanding Amount, Balance Due. For example, "0.00".
+- Balance Brought Forward: The balance brought forward from a previous period, known as Balance Brought Forward, Previous Balance, Carried Forward Balance, Outstanding Balance. For example, "0.00".
+- Account Balance: The current account balance, known as Account Balance, Current Balance, Balance. For example, "0.00".
+- Due Date: The due date for payment, which can be known as Due Date, Payment Due Date, Deadline, Payment Deadline. For example, "31-JAN-2024".
+- Business Unit: The business unit responsible, referred to as Business Unit, Department, Division, Unit. For example, "Council Tax Department".
+- Unique Code: A unique code for reference, referred to as Unique Code, Reference Code, ID Code, Code. For example, "91076957".
+- Sender's Address: The address of the sender, known as Sender's Address, From Address, Origin Address, Return Address. For example, it wil start with company name like "The Riverside Group, People's cloud, etc" and then the address of the company. And it will be always at the top of page. 
+- Receiver's Address: The address of the receiver, known as Receiver's Address, Receiver's Reference, Mailing Address, Shipping Address, Delivery Address, Destination Address, Postal Address. For example, "1 Birstall Boulevard, Estuary Commerce Park, Liverpool, L24 8RF".
+- Invoice Type: The type of invoice, referred to as Invoice Type, Type of Invoice, Billing Type, Invoice Category. For example, Electricity bill, Gas bill, Water bill, Internet service bill,  Annual leasehold payment, Landlord ground rent invoice, Annual council tax bill, Monthly council tax installment, Office supplies invoice, Business insurance premium, Marketing services bill, Professional services fee, Software subscription for business
+
+Invoice Text:
+{{ extracted_text }}

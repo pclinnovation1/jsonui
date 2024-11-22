@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Feedback for {{ employee_name }}</title>
+</head>
+<body>
+    <h1>Manager Feedback for {{ employee_name }}</h1>
+    <form action="{{ url_for('notify_performance_bp.submit_manager_feedback', form_id=form_id) }}" method="POST">
+        
+        <!-- Competencies Section -->
+        <h2>Competencies</h2>
+        {% for comp in competencies %}
+            <div>
+                <label>{{ comp.name }}:</label>
+                <p>{{ comp.description }}</p>
+                <label>Rate (1-5):</label>
+                <input type="number" name="competencies[{{ comp._id }}][manager_rating]" min="1" max="5" required>
+            </div>
+            <br>
+        {% endfor %}
+        
+        <!-- Feedback Questions Section -->
+        <h2>Feedback Questions</h2>
+        {% for q in feedbacks.questions %}
+            <div>
+                <label>{{ q.question_name }}:</label>
+                <p>{{ q.question_description }}</p>
+                <textarea name="feedbacks[{{ q._id }}][manager_feedback]" rows="4" cols="50" required></textarea>
+            </div>
+            <br>
+        {% endfor %}
+        
+        <!-- Overall Summary Section -->
+        <h2>Overall Summary</h2>
+        <label>Rate (1-5):</label>
+        <input type="number" name="overall_summary[manager_actual_rating]" min="1" max="5" required>
+        <br>
+        <label>Comments:</label>
+        <textarea name="overall_summary[manager_comments]" rows="4" cols="50" required></textarea>
+
+        <br><br>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
