@@ -1,8 +1,8 @@
 {
     "api": {
-        "username": "satveer@payrollcloudcorp.com",
-        "password": "Payroll#123",
-        "url": "https://fa-excl-test-saasfaprod1.fa.ocs.oraclecloud.com",
+        "username": "cbxc",
+        "password": "bxhcbx ",
+        "url": "c vhxa v",
         "limit": 500,
         "onlyData": true
     },
@@ -14,8 +14,8 @@
     },
     
     "mongodb": {
-        "uri": "mongodb://DDS_user:DDS_pass@172.191.245.199:27017/DDS",
-        "database_name": "DDS",
+        "uri": "xz nx ",
+        "database_name": " hx "
         "API_performance_goals": "API_performance_goals",
         "API_salary": "API_salary",
         "API_emps": "API_emps",
