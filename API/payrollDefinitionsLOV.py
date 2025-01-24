@@ -1,0 +1,84 @@
+import json
+import requests
+from flask import Flask, jsonify
+from pymongo import MongoClient
+import concurrent.futures
+
+# Flask App initialization
+app = Flask(__name__)
+
+# Load configuration file
+with open("config.json", "r") as config_file:
+    CONFIG = json.load(config_file)
+
+# MongoDB Configuration
+MONGODB_URI = CONFIG["mongodb"]["uri"]
+DATABASE_NAME = CONFIG["mongodb"]["database_name"]
+COLLECTION_NAME = CONFIG["mongodb"]["API_payrollDefinitionsLOV"]
+
+# Initialize MongoDB Client
+client = MongoClient(MONGODB_URI)
+db = client[DATABASE_NAME]
+collection = db[COLLECTION_NAME]
+
+# Function to map payrollDefinitionsLOV data
+CONFIGURATION_MAPPING_PAYROLL_DEFINITIONS = {
+    "effective_start_date": "EffectiveStartDate",
+    "effective_end_date": "EffectiveEndDate",
+    "payroll_name": "PayrollName",
+    "reporting_name": "ReportingName",
+    "legislative_data_group_name": "LegislativeDataGroupName",
+    "consolidation_set_name": "ConsolidationSetName",
+    "period_type": "PeriodType"
+}
+
+def map_payroll_definitions_data(payroll_definition_item):
+    return {key: payroll_definition_item.get(value, None) for key, value in CONFIGURATION_MAPPING_PAYROLL_DEFINITIONS.items()}
+
+# Function to fetch payrollDefinitionsLOV data
+def fetch_payroll_definitions():
+    payroll_definitions = []
+    api_config = CONFIG["api"]
+    offsets = list(range(
+        CONFIG["offsets"]["range_start"],
+        CONFIG["offsets"]["range_end"],
+        CONFIG["offsets"]["step"]
+    ))
+
+    def fetch_payroll_definitions_chunk(offset):
+        url = f"{api_config['url']}/hcmRestApi/resources/11.13.18.05/payrollDefinitionsLOV?limit={api_config['limit']}&offset={offset}&onlyData=true"
+        response = requests.get(url, auth=(api_config['username'], api_config['password']))
+        response.raise_for_status()
+        return response.json().get('items', [])
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        for future in concurrent.futures.as_completed([executor.submit(fetch_payroll_definitions_chunk, offset) for offset in offsets]):
+            payroll_definitions.extend(future.result())
+
+    return payroll_definitions
+
+def generate_report3():
+    try:
+        # Fetch payrollDefinitionsLOV data
+        payroll_definitions_data = fetch_payroll_definitions()
+
+        mapped_data = []
+        
+        # Map payrollDefinitionsLOV data
+        for payroll_definition in payroll_definitions_data:
+            mapped_data.append(map_payroll_definitions_data(payroll_definition))
+
+        # If mapped data is not empty, insert it into MongoDB
+        if mapped_data:
+            collection.insert_many(mapped_data)
+            message = f"Inserted {len(mapped_data)} payroll definitions records successfully."
+        else:
+            message = "No payroll definitions records found."
+
+        print(message)
+        return message
+
+    except requests.RequestException as e:
+        return jsonify({"error": f"Error fetching data: {e}"}), 500
+    except Exception as e:
+        return jsonify({"error": f"An error occurred: {e}"}), 500

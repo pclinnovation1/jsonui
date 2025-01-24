@@ -1,21 +1,45 @@
-import requests,json
+import requests
 import concurrent.futures
+from datetime import datetime, MINYEAR
+from flask import Flask, jsonify
+from pymongo import MongoClient
+import warnings
+import json
+import re
 
-# Global variable to store the fetched data
-fetched_data = []
-data_fetched = False  # Flag to track if the data has already been fetched
+# Flask App initialization
+app = Flask(__name__)
 
-# Configuration mapping as before
-CONFIGURATION_MAPPING = { 
-    "assignment_id": "AssignmentId",
-    "salary_id": "SalaryId",
-    "salary_basis_id": "SalaryBasisId",
-    "salary_frequency_code": "SalaryFrequencyCode",
-    "salary_basis_type": "SalaryBasisType",
+# Load configuration file
+with open("config.json", "r") as config_file:
+    CONFIG = json.load(config_file)
+
+# MongoDB Configuration
+MONGODB_URI = CONFIG["mongodb"]["uri"]
+DATABASE_NAME = CONFIG["mongodb"]["database_name"]
+COLLECTION_NAME = CONFIG["mongodb"]["API_salary"]
+
+# Initialize MongoDB Client
+client = MongoClient(MONGODB_URI)
+db = client[DATABASE_NAME]
+collection = db[COLLECTION_NAME]
+
+# Configurations
+CONFIGURATION_MAPPING_EMP = {
+    "person_id": "PersonId",
+    "person_name": "DisplayName",
+    "person_number": "PersonNumber"
+}
+
+CONFIGURATION_MAPPING_SALARY = {
     "currency": "CurrencyCode",
     "salary_effective_date": "DateFrom",
-    "date_to": "DateTo",
     "base_salary": "SalaryAmount",
+    "person_number": "PersonNumber",
+    "person_name": "PersonDisplayName",
+    "salary_frequency_code": "SalaryFrequencyCode",
+    "salary_basis_type": "SalaryBasisType",
+    "salary_end_date": "DateTo",
     "adjustment_amount": "AdjustmentAmount",
     "adjustment_percentage": "AdjustmentPercentage",
     "annual_salary": "AnnualSalary",
@@ -25,33 +49,19 @@ CONFIGURATION_MAPPING = {
     "compa_ratio": "CompaRatio",
     "range_position": "RangePosition",
     "salary_range_minimum": "SalaryRangeMinimum",
-    "salary_range_mid_point": "SalaryRangeMidPoint",
+    "salary_range_midpoint": "SalaryRangeMidPoint",
     "salary_range_maximum": "SalaryRangeMaximum",
-    "search_date": "SearchDate",
-    "frequency": "FrequencyName",
-    "assignment_number": "AssignmentNumber",
-    "display_name": "DisplayName",
-    "action_id": "ActionId",
-    "action_reason_id": "ActionReasonId",
-    "action_code": "ActionCode",
-    "action_reason_code": "ActionReasonCode",
-    "action_reason": "ActionReason",
-    "action_name": "ActionName",
-    "salary_basis": "Code",
-    "legal_employer": "LegalEmployerName",
+    "frequency_name": "FrequencyName",
+    "code": "Code",
+    "legal_employer_name": "LegalEmployerName",
     "grade_ladder_name": "GradeLadderName",
-    "grade_code": "GradeName",
+    "grade_name": "GradeName",
     "grade_step_name": "GradeStepName",
     "geography_name": "GeographyName",
     "geography_type_name": "GeographyTypeName",
-    "grade_id": "GradeId",
-    "last_update_date": "LastUpdateDate",
-    "last_updated_by": "LastUpdatedBy",
-    "created_by": "CreatedBy",
-    "creation_date": "CreationDate",
     "fte": "FTEValue",
-    "next_sal_review_date": "NextSalReviewDate",
-    "assignment_type": "AssignmentType",
+    "next_salary_review_date": "NextSalReviewDate",
+    "salary_basis_name": "SalaryBasisName",
     "amount_decimal_precision": "AmountDecimalPrecision",
     "salary_amount_scale": "SalaryAmountScale",
     "amount_rounding_code": "AmountRoundingCode",
@@ -60,121 +70,213 @@ CONFIGURATION_MAPPING = {
     "work_at_home": "WorkAtHome",
     "quartile_meaning": "QuartileMeaning",
     "quintile_meaning": "QuintileMeaning",
-    "legislative_data_group_Id": "LegislativeDataGroupId",
     "has_future_salary": "hasFutureSalary",
     "multiple_components": "MultipleComponents",
     "component_usage": "ComponentUsage",
     "pending_transaction_exists": "PendingTransactionExists",
     "range_error_warning": "RangeErrorWarning",
     "payroll_factor": "PayrollFactor",
-    "multiplier": "SalaryFactor",
+    "salary_factor": "SalaryFactor",
     "payroll_frequency_code": "PayrollFrequencyCode",
-    "person_id": "PersonId",
-    "business_title": "BusinessTitle",
-    "person_number": "PersonNumber",
-    "person_name": "PersonDisplayName",
-    "grade_code": "GradeCode",
-    "salary_components": "salaryComponents",
-    "salary_pay_rate_components": "salaryPayRateComponents",
-    "salary_simple_components": "salarySimpleComponents"
+    "salary_transaction_status": "SalaryTransactionStatus"
 }
 
-# Function to map API data to configuration
-def map_data_to_configuration(data):
-    mapped_data = {}
-    for key, value in CONFIGURATION_MAPPING.items():
-        mapped_data[key] = data.get(value, None)
-    return mapped_data
+CONFIGURATION_MAPPING_ASSIGNMENTS = {
+    "assignment_id": "AssignmentId",
+    "effective_start_date": "EffectiveStartDate",
+    "effective_end_date": "EffectiveEndDate",
+}
 
-# Function to fetch and store salary data
-def fetch_and_store_salary_data():
-    global fetched_data, data_fetched  # Access global variables
+# Function to map data
+def map_data(data, config):
+    return {key: data.get(value, None) for key, value in config.items()}
 
-    if data_fetched:
-        return fetched_data  # Return data if already fetched
+def map_assignment_data(data):
+    """
+    Map the assignment data and fetch the one with the latest EffectiveStartDate.
+    """
+    latest_assignment = None
+    latest_work_relationship = None
+    latest_start_date = datetime.min
 
-    total_data = []  # List to store all the salary data
-    limit = 50  # Fetch 50 items at a time
-    offsets = list(range(0, 3000, limit))
+    for work_relationship in data.get("workRelationships", []):
+        for assignment in work_relationship.get("assignments", []):
+            start_date_str = assignment.get("EffectiveStartDate")
+            
+            # Check for missing or invalid dates
+            if start_date_str:
+                try:
+                    start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
+                except ValueError:
+                    # Skip this assignment if date is invalid
+                    print(f"Invalid date format: {start_date_str}")
+                    continue
 
-    # Function to fetch salary data with offset and limit
-    def fetch_salary_data(offset, limit=50):
-        username = 'Vishal.Meena@payrollcloudcorp.com'
-        password = 'Welcome#12345'
-        url = f'https://iaihgs-dev1.fa.ocs.oraclecloud.com/hcmRestApi/resources/11.13.18.05/salaries?limit={limit}&offset={offset}&expand=all'
+                # Compare to find the latest date
+                if start_date > latest_start_date:
+                    latest_start_date = start_date
+                    latest_work_relationship = work_relationship
+                    latest_assignment = assignment
+            else:
+                print("Missing EffectiveStartDate in assignment.")
+    
+    # Map work relationship data and assignment data
+    if latest_assignment and latest_work_relationship:
 
-        try:
-            response = requests.get(url, auth=(username, password))
-            response.raise_for_status()
-            return response.json().get('items', [])
-        except requests.exceptions.RequestException as e:
-            return {"error": str(e)}
+        assignment_data = map_data(latest_assignment, CONFIGURATION_MAPPING_ASSIGNMENTS)
 
-    # Use ThreadPoolExecutor to fetch data in parallel
-    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-        futures = [executor.submit(fetch_salary_data, offset, limit) for offset in offsets]
+        # Combine data
+        return {**assignment_data}
 
+    return {}
+
+def map_employee_data(data):
+    """
+    Map the employee data to the configuration.
+    """
+    return {key: data.get(value, None) for key, value in CONFIGURATION_MAPPING_EMP.items()}
+
+# Function to map data to configuration
+def map_data_to_configuration(data, config):
+    return {key: data.get(value, None) for key, value in config.items()}
+
+# Function to fetch latest salary for assignment IDs
+def fetch_latest_salary_for_assignments(assignment_ids):
+    total_salaries = []
+    fetched_assignment_ids = set()  # To track which assignment IDs returned salaries
+    missing_assignment_ids = set()  # To track missing assignment IDs
+    api_config = CONFIG["api"]
+    offsets = list(range(
+        CONFIG["offsets"]["range_start"],
+        CONFIG["offsets"]["range_end"],
+        CONFIG["offsets"]["step"]
+    ))
+
+    def fetch(assignment_id):
+        url = f'{api_config['url']}/hcmRestApi/resources/11.13.18.05/salaries?limit={api_config['limit']}&expand=all&onlyData=true&q=AssignmentId="{assignment_id}"'
+        response = requests.get(url, auth=(api_config['username'], api_config['password']))
+        response.raise_for_status()
+        return response.json().get('items', [])
+
+    # Fetch salaries concurrently
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        futures = {executor.submit(fetch, assignment_id): assignment_id for assignment_id in assignment_ids}
         for future in concurrent.futures.as_completed(futures):
-            data = future.result()
-            if isinstance(data, dict) and "error" in data:
-                return {"error": f"Error fetching data: {data['error']}"}
-            total_data.extend(data)
+            assignment_id = futures[future]
+            try:
+                result = future.result()
+                if result:  # Salaries returned
+                    total_salaries.extend(result)
+                    fetched_assignment_ids.add(assignment_id)
+                else:
+                    missing_assignment_ids.add(assignment_id)
+            except Exception as e:
+                print(f"Failed to fetch salary for Assignment ID {assignment_id}: {e}")
+                missing_assignment_ids.add(assignment_id)
 
-    # Map the fetched API data to configuration
-    fetched_data = [map_data_to_configuration(item) for item in total_data]
-    data_fetched = True  # Mark the data as fetched
+    # Process salaries to find the latest one for each assignment
+    latest_salaries = {}
+    for salary in total_salaries:
+        assignment_id = salary.get("AssignmentId")
+        if assignment_id:
+            date_from = datetime.strptime(salary["DateFrom"], "%Y-%m-%d")
+            # Compare and store the latest salary based on "DateFrom"
+            if assignment_id not in latest_salaries or date_from > datetime.strptime(latest_salaries[assignment_id]["salary_effective_date"], "%Y-%m-%d"):
+                latest_salaries[assignment_id] = map_data_to_configuration(salary, CONFIGURATION_MAPPING_SALARY)
 
-    return fetched_data
+    # Print missing assignment IDs
+    if missing_assignment_ids:
+        print(f"Missing Assignment IDs: {missing_assignment_ids}")
+        print(f"Total missing salaries: {len(missing_assignment_ids)}")
 
-# Function to query the fetched data and select specific fields
-def query_salary_data(query_params=None, select_fields=None):
-    global fetched_data
-    filtered_data = fetched_data  # Use the fetched data
+    return latest_salaries
 
-    # If query_params is provided, apply the filtering logic
-    if query_params:
-        for param, value in query_params.items():
-            if value:  # Filter only if a value is provided
-                filtered_data = [item for item in filtered_data if str(item.get(param, '')).lower() == str(value).lower()]
+# Fetch worker data with work relationships and assignments
+def fetch_workers_with_assignments():
+    total_data = []
+    api_config = CONFIG["api"]
+    offsets = list(range(
+        CONFIG["offsets"]["range_start"],
+        CONFIG["offsets"]["range_end"],
+        CONFIG["offsets"]["step"]
+    ))
 
-    # If select_fields is provided, return only the requested fields
-    if select_fields:
-        # Create a list of filtered data with only the specified fields
-        filtered_data = [{field: item.get(field, None) for field in select_fields} for item in filtered_data]
+    def fetch_worker_chunk(offset):
+        url = f"{api_config['url']}/hcmRestApi/resources/11.13.18.05/workers?limit={api_config['limit']}&offset={offset}&expand=workRelationships.assignments&onlyData=true"
+        response = requests.get(url, auth=(api_config['username'], api_config['password']))
+        response.raise_for_status()
+        return response.json().get('items', [])
 
-    return filtered_data
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        for future in concurrent.futures.as_completed([executor.submit(fetch_worker_chunk, offset) for offset in offsets]):
+            total_data.extend(future.result())
 
-# Function to clear the fetched data
-def clear_fetched_data():
-    global fetched_data, data_fetched
-    fetched_data = []  # Clear the data
-    data_fetched = False  # Reset the flag
-    return "Data cleared successfully."
+    return total_data
 
-if __name__ == "__main__":
-    # Fetch and store salary data
-    data = fetch_and_store_salary_data()
-    print("Data fetched successfully.")
+# Process worker data and extract latest assignment only
+def process_worker_data(workers_data):
+    combined_data = []
 
-    # Example 1: No query parameters, return all data with all fields
-    filtered_data = query_salary_data()  # No query params, no specific fields
-    print(f"Filtered Data (All Data): {filtered_data}")
+    for worker in workers_data:
+        # Process work relationships
+        work_relationships = worker.get("workRelationships", [])    
+        # Map the latest assignment
+        latest_assignment = map_assignment_data({"workRelationships": work_relationships})
+        # Create a flattened document with employee, work_relationship, and latest_assignment
+        combined_data.append({
+            **latest_assignment  # Add latest assignment
+        })
 
-    # Example 2: No query parameters, but select specific fields
-    selected_fields = ['salary_components']
-    filtered_data = query_salary_data(select_fields=selected_fields)  # No query params, only specific fields
-    print(f"Filtered Data (Selected Fields): {filtered_data}")
+    return combined_data
 
-    # # Example 3: Run a query and get all fields (no select_fields provided)
-    # query_params = {'assignment_id': '123'}
-    # filtered_data = query_salary_data(query_params)  # Query params provided, return all fields
-    # print(f"Filtered Data (With Query, All Fields): {filtered_data}")
+# Generate report
+def generate_report3():
+    try:
+        # Step 1: Fetch workers data
+        workers_data = fetch_workers_with_assignments()
+        print(f"Fetched {len(workers_data)} workers.")
+    
+        # Step 2: Process and map data
+        processed_data = process_worker_data(workers_data)
+        print(f"Processed {len(processed_data)} records with latest assignments.")
+        
 
-    # # Example 4: Run a query and get only specific fields
-    # filtered_data = query_salary_data(query_params, select_fields=selected_fields)
-    # print(f"Filtered Data (With Query and Selected Fields): {filtered_data}")
+        # Step 2: Extract assignment IDs
+        assignment_ids = [emp["assignment_id"] for emp in processed_data if emp.get("assignment_id")]
+        print(f"Extracted {len(assignment_ids)} assignment IDs")
 
-    # Clear the data after all queries are completed
-    clear_fetched_data()
-    print("Data cleared.")
 
+        # Step 3: Fetch latest salaries
+        latest_salaries = fetch_latest_salary_for_assignments(assignment_ids)
+        print(f"Fetched {len(latest_salaries)} latest salaries")
+
+        # Combine employee data with latest salaries
+        for emp in processed_data:
+            assignment_id = emp.get("assignment_id")
+            if assignment_id and assignment_id in latest_salaries:
+                emp.update(latest_salaries[assignment_id])
+
+        # Keys to exclude
+        keys_to_exclude = {"assignment_id", "effective_start_date", "effective_end_date", "person_id"}
+
+        # Filter out the keys from processed data
+        def filter_excluded_keys(data):
+            return {key: value for key, value in data.items() if key not in keys_to_exclude}
+
+        # Filter processed data before writing to the file
+        filtered_data = [filter_excluded_keys(emp) for emp in processed_data]
+        
+        # Step 3: Insert into MongoDB
+        if filtered_data:
+            collection.insert_many(filtered_data)
+            print(f"Inserted {len(filtered_data)} records into MongoDB.")
+
+        return f"{len(processed_data)} worker records with latest assignments inserted successfully."
+       
+        
+    except requests.RequestException as e:
+        print(f"Error during API call: {e}")
+        return "Failed to generate report due to API error."
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return "Failed to generate report due to an internal error."

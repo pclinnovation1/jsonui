@@ -1,0 +1,81 @@
+import json
+import requests
+from flask import Flask, jsonify
+from pymongo import MongoClient
+import concurrent.futures
+
+# Flask App initialization
+app = Flask(__name__)
+
+# Load configuration file
+with open("config.json", "r") as config_file:
+    CONFIG = json.load(config_file)
+
+# MongoDB Configuration
+MONGODB_URI = CONFIG["mongodb"]["uri"]
+DATABASE_NAME = CONFIG["mongodb"]["database_name"]
+COLLECTION_NAME = CONFIG["mongodb"]["API_payrollStatutoryUnitsLOV"]
+
+# Initialize MongoDB Client
+client = MongoClient(MONGODB_URI)
+db = client[DATABASE_NAME]
+collection = db[COLLECTION_NAME]
+
+# Function to map payrollStatutoryUnitsLOV data
+CONFIGURATION_MAPPING_PAYROLL_STATUTORY_UNITS = {
+    "effective_start_date": "EffectiveStartDate",
+    "effective_end_date": "EffectiveEndDate",
+    "payroll_statutory_unit_name": "PayrollStatutoryUnitName",
+    "legislation_code": "LegislationCode"
+}
+
+def map_payroll_statutory_units_data(statutory_unit_item):
+    return {key: statutory_unit_item.get(value, None) for key, value in CONFIGURATION_MAPPING_PAYROLL_STATUTORY_UNITS.items()}
+
+# Function to fetch payrollStatutoryUnitsLOV data
+def fetch_payroll_statutory_units():
+    payroll_statutory_units = []
+    api_config = CONFIG["api"]
+    offsets = list(range(
+        CONFIG["offsets"]["range_start"],
+        CONFIG["offsets"]["range_end"],
+        CONFIG["offsets"]["step"]
+    ))
+
+    def fetch_payroll_statutory_units_chunk(offset):
+        url = f"{api_config['url']}/hcmRestApi/resources/11.13.18.05/payrollStatutoryUnitsLOV?limit={api_config['limit']}&offset={offset}&onlyData=true"
+        response = requests.get(url, auth=(api_config['username'], api_config['password']))
+        response.raise_for_status()
+        return response.json().get('items', [])
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        for future in concurrent.futures.as_completed([executor.submit(fetch_payroll_statutory_units_chunk, offset) for offset in offsets]):
+            payroll_statutory_units.extend(future.result())
+
+    return payroll_statutory_units
+
+def generate_report3():
+    try:
+        # Fetch payrollStatutoryUnitsLOV data
+        payroll_statutory_units_data = fetch_payroll_statutory_units()
+
+        mapped_data = []
+        
+        # Map payrollStatutoryUnitsLOV data
+        for statutory_unit in payroll_statutory_units_data:
+            mapped_data.append(map_payroll_statutory_units_data(statutory_unit))
+
+        # If mapped data is not empty, insert it into MongoDB
+        if mapped_data:
+            collection.insert_many(mapped_data)
+            message = f"Inserted {len(mapped_data)} payroll statutory units records successfully."
+        else:
+            message = "No payroll statutory units records found."
+
+        print(message)
+        return message
+
+    except requests.RequestException as e:
+        return jsonify({"error": f"Error fetching data: {e}"}), 500
+    except Exception as e:
+        return jsonify({"error": f"An error occurred: {e}"}), 500

@@ -1,0 +1,24 @@
+API_searchGoals:
+    goal_name: Name of the performance or development goal.
+    Person_name: Display name of the worker to whom the performance or development goal is assigned.
+    person_number: Person number of the worker who's assigned the performance or development goal.
+    worker_assignment_name: Name of the assignment of the worker who's assigned the performance goal.
+    worker_assignment_number: Unique assignment number for a worker assignment.
+    description: Description of the performance or development goal.
+    start_date: Start date of the performance or development goal.
+    target_completion_date: Target completion date of the performance or development goal.
+    actual_completion_date: Actual completion date of the performance or development goal.
+    job_name: Name of the job of the worker who's assigned the performance or development goal.
+    manager_name: Display name of the manager.
+    status_code: Status code of the performance or development goal that indicates its status.
+    department: Name of the department associated with the performance or development goal.
+    business_unit: Name of the business unit associated with the performance or development goal.
+    location_name: Unique identifier for the location.
+    goal_type_code: Code that indicates whether the goal is a performance or development goal.
+    perf_goal_type: Indicates whether the performance goal is an individual or organizational goal.
+    manager_type: Manager's relationship type with the worker who's assigned the performance or development goal.
+    status_code_meaning: Indicates whether the performance or development goal hasn't yet started, is in progress, or completed.
+
+
+
+

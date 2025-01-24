@@ -1,0 +1,47 @@
+{
+    "api": {
+        "username": "satveer@payrollcloudcorp.com",
+        "password": "Payroll#123",
+        "url": "https://fa-excl-test-saasfaprod1.fa.ocs.oraclecloud.com",
+        "limit": 500,
+        "onlyData": true
+    },
+
+    "offsets": {
+        "range_start": 0,
+        "range_end": 1500,
+        "step": 500
+    },
+    
+    "mongodb": {
+        "uri": "mongodb://DDS_user:DDS_pass@172.191.245.199:27017/DDS",
+        "database_name": "DDS",
+        "API_performance_goals": "API_performance_goals",
+        "API_salary": "API_salary",
+        "API_emps": "API_emps",
+        "API_absence": "API_absence",
+        "API_absence_plan_balances": "API_absence_plan_balances",
+        "API_perfEvaluations_PerDoc": "API_perfEvaluations_PerDoc",
+        "API_goal_plan_assignees": "API_goal_plan_assignees",
+        "API_goal_plan": "API_goal_plan",
+        "API_journeys": "API_journeys",
+        "API_journeyTaskLibrary": "API_journeyTaskLibrary",
+        "API_workerJourneys": "API_workerJourneys",
+        "API_eligible_options_lov": "API_eligible_options_lov",
+        "API_relatedFlowSubmissions": "API_relatedFlowSubmissions",
+        "API_searchGoals": "API_searchGoals" ,
+        "API_elementEntries": "API_elementEntries",
+        "API_flowInstances": "API_flowInstances",
+        "API_flowInstancesLOV": "API_flowInstancesLOV",
+        "API_flowPatterns": "API_flowPatterns",
+        "API_organizationPaymentMethodsLOV": "API_organizationPaymentMethodsLOV",
+        "API_payrollBalanceDefinitionsLOV": "API_payrollBalanceDefinitionsLOV",
+        "API_payrollDefinitionsLOV": "API_payrollDefinitionsLOV",
+        "API_payrollDocumentRecords": "API_payrollDocumentRecords",
+        "API_payrollElementDefinitionsLOV": "API_payrollElementDefinitionsLOV",
+        "API_payrollInputValuesLOV": "API_payrollInputValuesLOV",
+        "API_payrollRelationships": "API_payrollRelationships",
+        "API_payrollStatutoryUnitsLOV": "API_payrollStatutoryUnitsLOV",
+        "API_payrollTimeDefinitionsLOV": "API_payrollTimeDefinitionsLOV"
+    }
+}

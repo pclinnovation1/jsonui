@@ -1,0 +1,135 @@
+API_searchGoals:
+    goal_name: Name of the performance or development goal.
+    Person_name: Display name of the worker to whom the performance or development goal is assigned.
+    person_number: Person number of the worker who's assigned the performance or development goal.
+    worker_assignment_name: Name of the assignment of the worker who's assigned the performance goal.
+    worker_assignment_number: Unique assignment number for a worker assignment.
+    description: Description of the performance or development goal.
+    start_date: Start date of the performance or development goal.
+    target_completion_date: Target completion date of the performance or development goal.
+    actual_completion_date: Actual completion date of the performance or development goal.
+    job_name: Name of the job of the worker who's assigned the performance or development goal.
+    manager_name: Display name of the manager.
+    status_code: Status code of the performance or development goal that indicates its status.
+    department: Name of the department associated with the performance or development goal.
+    business_unit: Name of the business unit associated with the performance or development goal.
+    location_name: Unique identifier for the location.
+    goal_type_code: Code that indicates whether the goal is a performance or development goal.
+    perf_goal_type: Indicates whether the performance goal is an individual or organizational goal.
+    manager_type: Manager's relationship type with the worker who's assigned the performance or development goal.
+    status_code_meaning: Indicates whether the performance or development goal hasn't yet started, is in progress, or completed.
+    goal_plan_name: Name of the goal plan.
+    review_period_name: review period of goal plan of the performance goal is associated with.
+
+API_eligible_options_lov:
+    component_name: Name of the option, such as Quarterly Spot Bonus Award.
+    start_date: Earliest date allowed. For example, when the Start Date Code is User Entered Date, the Start Date shows the current date or the effective date selected in the When section.
+    end_date: Latest date allowed, such as the payroll element eligibility end date or 31-Dec-4712.
+    start_date_code: Payment start date code, such as User chooses date.
+    end_date_code: Payment end date code, such as Specified date.
+    start_date_rule: Indicates that the start date can be overridden.
+    end_date_rule: Indicates that the end date can be overridden.
+    person_number: Unique identifier for the person.
+    effective_date: Date used to find the eligible plans that are in effect.
+    assignment_number: Assignment number for the specified assignment.
+    pool_id_to_consume: Unique identifier for the budget pool linked to the individual compensation plan option.
+    input_currency_code: Input currency code of the payroll element linked to the individual compensation plan option.
+    processing_type: Processing type of the option, such as Recurring or Nonrecurring.
+    multiple_entries_allowed_flag: Indicates whether multiple entries of the same payroll element are allowed. The default value is No.
+    requires_attachment: Indicates that an attachment is required for submission.
+    non_monetary_uom: Code of the unit of measurement when the data type of the primary input value isn't money.
+    grant_type: Code for the stock grant type.
+    trading_symbol: Trading symbol for the share type of the nonmonetary option.
+
+API_journeys:
+    level: Level of a journey template.
+    level_value: Value of journey template level such as global or personal.
+    category: Category code for the event. Values are from ORA_PER_ONB_CONTENT_SBTYP_EVNT lookup. For example, Insight.
+    sub_category: Subcategory of the worker journey.
+    name: Name of the journey task.
+    code: Code for the journey template.
+    country_code: Code of the country for which the journey template is applicable.
+
+API_workerJourneys:
+    category: Category code of the journey.
+    instance: Instance of the allocated journey to identify if the same journey is allocated to the worker multiple times.
+    name: Name of the journey.
+    journey_display_name: Display name of the journey.
+    country_code: Code of the country to which the journey is applicable.
+    person_number: Person number of the person worker journey assigned
+    status: Status code of the worker journey.
+    allocation_date: Date on which the journey is initiated.
+    completion_date: Date on which the journey is completed.
+    archive_offset_days: Duration after which the completed assigned journeys will be archived.
+    purge_offset_days: The duration after which all archived journeys will be purged.
+    completion_criteria: Criteria to complete an assigned journey.
+    completion_offset_days: Number of days after which the journey should be marked as complete.
+
+API_perfEvaluations_PerDoc:
+    person_number: Unique person identifier of the worker in a performance document.
+    performance_document_name: Name of a performance document.
+    name: Name of a performance evaluation.
+    start_date: Start date of the performance document.
+    end_date: End date of the performance document.
+    status_code: Code that represents the status of a performance document.
+    template_type_code: Code that represents the type of template of a performance document.
+    eval_status: Status of the performance document.
+
+API_goal_plan:
+    goal_plan_name: Name of the goal plan.
+    description: Description of the goal plan..
+    enable_weighting_flag: Indicates whether weights are enabled for the goals in the goal plan..
+    end_date: End date of the goal plan..
+    evaluation_type: Specifies the type of evaluation in the performance document template. Goal plans that have the same evaluation type as that defined in the performance template are automatically added as evaluation topics.
+    goal_access_level_code: Code that specifies the roles that can access the goals in the goal plan.
+    goal_plan_active_code: Indicates if the goal plan is active or inactive. Valid values are A and I.
+    primary_goal_plan_flag: Indicates if the goal plan is the primary goal plan.
+    start_date: Start date of the goal plan.
+    evaluation_type_meaning: Description of the evaluation type.
+    goal_access_level_meaning: Description of the goal access level code. This value is validated against HCM_LOOKUPS with the lookup type HRG_GOAL_ACCESS_LEVELS.
+    goal_plan_active_code_meaning: Description of the goal plan active indicator. This value is validated against HCM_LOOKUPS with lookup type ACTIVE_INACTIVE.
+    assignees: Number of goal plan assignees.
+    nbr_of_pd_consumed: Number of performance documents in which the performance goal is included.
+
+API_goal_plan_assignees:
+    goal_plan_name: Name of the assigned goal plan.
+    department: Name of the department of the person assigned to the goal plan.
+    assignment_name: Assignment name of the person assigned to the goal plan.
+    assignment_number: Assignment number of the person assigned to the goal plan.
+    person_name: Display name of the person assigned to the goal plan.
+    person_number: Person number of the person assigned to the goal plan.
+    job_name: Job name of the person assigned to the goal plan.
+    position_name: Position name of the person assigned to the goal plan.
+    location_name: Location name of the person assigned to the goal plan.
+    business_unit: Business unit name of the person assigned to the goal plan.
+    manager_name: Name of the manager of the person assigned to the goal plan.
+
+API_absence_plan_balances:
+    plan_name: Name of the absence plan.
+    plan_type: Type of absence plan used to record an absence, such as Accrual or Donation.
+    plan_status: Status of the plan, such as 'A' for Active or 'V' for Inactive.
+    plan_status_meaning: Meaning of the plan status, such as Active or Inactive.
+    plan_display_status_flag: Indicates whether the plan balance can be displayed to users. If true, the balance can be displayed; otherwise, it cannot.
+    enrollment_start_date: Date on which the person is enrolled in the plan.
+    enrollment_end_date: Date on which the plan enrollment ends.
+    balance_as_of_balance_calculation_date: Remaining plan balance amount for a person as of the balance calculation date.
+    balance_calculation_date: Date on which the accrual is run to calculate the balance for the person.
+    plan_unit_of_measure: Unique identifier for a unit of measure associated with the absence plan, such as 'D' for Days or 'H' for Hours.
+    unit_of_measure_meaning: Meaning of the unit of measure, such as Days or Hours.
+    enroll_positive_balance_flag: Indicates whether the disburse checkbox is enabled in the absence plan.
+    plan_type_code: Code representing the type of the absence plan.
+    ceiling_amount: Maximum allowable balance amount for the absence plan.
+    effective_start_date: Start date for the effective period of the absence plan.
+    effective_end_date: End date for the effective period of the absence plan.
+    level: Level of detail expected in the response, such as balance summary or balance detail.
+    plan_enrollment_status: Status of the plan enrollment as of the current date, such as Active or Inactive.
+    assignment_name: Name of the worker's assignment associated with the plan.
+    assignment_number: Number of the worker's assignment associated with the plan.
+    formatted_balance: Remaining plan balance amount for a person as of the balance calculation date, formatted for user preferences.
+    plan_period_start_date: Start date of the plan period.
+    plan_period_end_date: End date of the plan period.
+    formatted_ceiling_amount: Formatted display of the ceiling amount for the absence plan.
+    recipient_alias_name: Alias name of the recipient for a donation or similar transaction.
+    multi_year_carry_over_flag: Indicates whether the plan allows multi-year carryover. If true, multiple years of carryover will be displayed; otherwise, only one year.
+    sys_effective_date: Effective date of the query.
+    transfer_rule: Rule governing the transfer of the absence plan balance after a global transfer transaction.
